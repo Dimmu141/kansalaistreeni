@@ -1,0 +1,107 @@
+package fi.kansalaisuuskoe.domain
+
+enum class ContentStatus { DEMO, EDITORIAL, OFFICIALLY_SOURCED, OFFICIAL }
+enum class Difficulty { EASY, MEDIUM, HARD }
+enum class StudyLanguage(val tag: String) { FINNISH("fi"), SWEDISH("sv") }
+data class AnswerOption(val id: String, val text: String)
+data class VocabularyItem(val term: String, val meaning: String, val swedish: String? = null)
+data class Source(val title: String, val url: String)
+data class Topic(val id: String, val title: String, val description: String, val order: Int, val translations: Map<String, TopicTranslation> = emptyMap()) {
+    fun titleFor(language: String) = translations[language]?.title ?: title
+    fun descriptionFor(language: String) = translations[language]?.description ?: description
+}
+data class TopicTranslation(val title: String, val description: String)
+data class Question(
+    val id: String,
+    val revision: Int,
+    val topicId: String,
+    val text: String,
+    val options: List<AnswerOption>,
+    val correctOptionId: String,
+    val explanation: String,
+    val easyExplanation: String?,
+    val vocabulary: List<VocabularyItem>,
+    val source: Source,
+    val language: String,
+    val difficulty: Difficulty,
+    val tags: List<String>,
+    val status: ContentStatus,
+    val translations: Map<String, QuestionTranslation> = emptyMap(),
+)
+data class QuestionTranslation(
+    val text: String,
+    val options: List<AnswerOption>,
+    val explanation: String,
+)
+data class QuestionAttempt(
+    val id: String,
+    val questionId: String,
+    val revision: Int,
+    val topicId: String,
+    val selectedOptionId: String,
+    val correct: Boolean,
+    val answeredAt: Long,
+    val language: String = "fi",
+)
+data class UserQuestionProgress(
+    val questionId: String,
+    val revision: Int,
+    val attempts: Int = 0,
+    val correctAnswers: Int = 0,
+    val consecutiveCorrect: Int = 0,
+    val mastery: Int = 0,
+    val lastAnswered: Long? = null,
+    val nextReview: Long? = null,
+)
+data class AnswerResult(
+    val attempt: QuestionAttempt,
+    val progress: UserQuestionProgress,
+    val eligibleForMastery: Boolean,
+)
+enum class RecommendationKind { REVIEW, NEW_QUESTIONS, WAIT_FOR_REVIEW }
+data class StudyRecommendation(val kind: RecommendationKind, val questionCount: Int, val nextReviewAt: Long?)
+data class TopicProgress(
+    val topic: Topic,
+    val questionCount: Int,
+    val studiedCount: Int,
+    val mastery: Int,
+    val dueCount: Int,
+)
+data class LearningSummary(
+    val mastery: Int,
+    val answered: Int,
+    val accuracy: Int?,
+    val studiedCount: Int,
+    val totalQuestions: Int,
+    val dueCount: Int,
+    val streak: Int,
+    val topics: List<TopicProgress>,
+    val weakest: TopicProgress?,
+    val strongest: TopicProgress?,
+)
+data class LearningSnapshot(
+    val topics: List<Topic> = emptyList(),
+    val questions: List<Question> = emptyList(),
+    val progress: List<UserQuestionProgress> = emptyList(),
+    val attempts: List<QuestionAttempt> = emptyList(),
+)
+
+/** Historical accuracy stays scoped even when an imported package removes a question. */
+fun LearningSnapshot.forLanguage(language: StudyLanguage): LearningSnapshot {
+    val available = questions.filter { it.language == language.tag }
+    val ids = available.map { it.id }.toSet()
+    val topicIds = available.map { it.topicId }.toSet()
+    return copy(
+        questions = available,
+        topics = topics.filter { it.id in topicIds },
+        progress = progress.filter { it.questionId in ids },
+        attempts = attempts.filter { it.language == language.tag },
+    )
+}
+
+fun List<Question>.contentStatus(): ContentStatus = when {
+    isEmpty() || any { it.status == ContentStatus.DEMO } -> ContentStatus.DEMO
+    all { it.status == ContentStatus.OFFICIAL } -> ContentStatus.OFFICIAL
+    all { it.status == ContentStatus.OFFICIALLY_SOURCED } -> ContentStatus.OFFICIALLY_SOURCED
+    else -> ContentStatus.EDITORIAL
+}

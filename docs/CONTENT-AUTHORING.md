@@ -1,0 +1,75 @@
+# Content authoring and local imports
+
+The app now accepts a local JSON content package through **Settings → Study material → Choose a content file**. Selection and preview do not change installed content. The learner must choose **Replace study material** to commit the reviewed file.
+
+This is an offline import mechanism, not an editorial approval system. Valid JSON, an HTTPS link or an `OFFICIAL` label cannot establish factual accuracy, authenticity or permission to reuse material. Review those independently before distributing a package. No official exam format or threshold is defined here.
+
+## Package format
+
+Use `app/src/main/assets/demo-content.json` as the complete, runnable example. It is schema version 1, package version 4, with 12 Finnish and 12 Swedish questions, all DEMO. It must remain labelled DEMO unless actual content review justifies a different provenance.
+
+```json
+{
+  "schemaVersion": 1,
+  "packageId": "your-stable-package-id",
+  "version": 1,
+  "status": "EDITORIAL",
+  "topics": [],
+  "questions": []
+}
+```
+
+The empty arrays above illustrate the envelope only; a valid package needs at least one topic and question. Every question's `topicId` must refer to a topic in the package. A full package replaces the whole current dataset; it does not append questions. Omitted questions leave practice and the review queue.
+
+Topics contain `id`, `title`, `description`, `order`, and optional `translations`, a language-tag map to `{ "title": "...", "description": "..." }`. Topic IDs use lowercase letters, digits and hyphens.
+
+Questions contain `id`, `revision`, `topicId`, `text`, `options`, `correctOptionId`, `explanation`, optional `easyExplanation`, optional `vocabulary`, `source`, `language`, `difficulty`, `tags`, `status`, and optional `translations`.
+
+- `options` contains at least two `{ "id": "...", "text": "..." }` objects. Exactly one option ID matches `correctOptionId`; option IDs are unique within a question.
+- `vocabulary` contains `{ "term": "...", "meaning": "...", "swedish": "..." }`. `term` is Finnish and `meaning` is English. Swedish questions show `swedish` as the main term, with Finnish and English meanings; omit the Swedish field only if unavailable. Easier Finnish explanations appear only for Finnish questions.
+- `source` contains a nonblank `title` and a valid HTTPS `url`. Link validity and content accuracy are separate editorial checks.
+- `difficulty` is `EASY`, `MEDIUM` or `HARD`.
+- Provenance is `DEMO`, `EDITORIAL`, `OFFICIALLY_SOURCED` or `OFFICIAL`. `OFFICIALLY_SOURCED` means app-authored material reviewed against official sources; it does not mean an official exam question. `OFFICIAL` is reserved for authentic official learning content whose origin, rights and attribution have been reviewed. A DEMO package may contain only DEMO questions.
+- The importer accepts `fi`, `sv`, or mixed packages. The saved study-language choice filters questions, topics, review and statistics. Missing-language packages show an empty state, with no fallback. Use distinct stable IDs for independently practised language variants, such as `democracy-1-fi` and `democracy-1-sv`. Question translation maps supply supporting explanations after answering; they do not create independently scored questions.
+
+## Update rules and progress
+
+Topic reading and vocabulary views derive from the installed questions in v0.8; the schema remains version 1. A topic lesson presents the existing explanations and their sources, rather than a separately authored course. Vocabulary entries merge identical native terms, English meanings and alternate terms while retaining all question contexts. Swedish browsing skips entries without `swedish`; it never silently substitutes Finnish. Search/filter results update with imports. These views make no learning-history writes.
+
+An exercise selects up to ten matching words in shuffled order and saves their IDs, source question revisions, position and reveal state. Restoring after a source revision changes shows a restart message rather than attaching a saved reveal to revised material. This is an unscored recall exercise, not vocabulary spaced repetition. Dedicated authored lessons and separate word mastery can be added when reviewed content and learner evidence justify them.
+
+1. Keep the package ID stable for successive versions. Increase its positive integer `version` for every material update, including topic-only changes. Downgrades and changed material at the installed version are rejected. Reselecting the same material produces a disabled, already-installed preview, even when JSON formatting differs or the material was restored from a backup. Every persisted topic/question field is compared. Question and option order remain meaningful; topic array order is normalized by explicit `order`, preserving array order for ties. Whitespace and JSON object-key order are not material updates.
+2. Keep question IDs globally stable across packages. Do not reuse an ID for an unrelated question or change its language. Language changes are rejected even with a higher revision; retained attempt history also protects removed IDs. Shared IDs retain progress when the practised content and revision are unchanged, including translation-only updates.
+3. Increase a question's positive integer `revision` whenever practised content or factual fields change, including the native explanation, sources or tags. Supporting-translation-only edits may retain the revision. A revision increase starts current mastery at zero.
+4. If a removed, previously answered question returns, give it a revision higher than every saved attempt for that ID. This prevents old progress from silently attaching to replacement content. The app cannot compare a removed question's old text because historical attempts do not retain full payloads.
+5. New/revised questions start unpractised. Unchanged questions keep scores and dates. Removed questions no longer contribute to current mastery. All attempts remain in lifetime accuracy and calendar-day streaks for their saved language. Learning history does not transfer between languages.
+
+Preview reports new, revised, translation-only, unchanged and removed question counts. It includes every incoming question, expandable answers/explanations and source references. An update of topic labels alone leaves question progress intact. Imported content may change the overall score by changing the number of questions, without changing any retained question's mastery.
+
+Confirmation checks the installed package identity/version/hash inside the same transaction as the update. A content update between preview and confirmation invalidates the preview; the learner must select the file again. Answers saved after preview are retained. Import failure leaves the current package intact. A newer or different imported package is not overwritten by the bundled demo at restart.
+
+An already-installed reimport makes no material, metadata or progress changes, so harmless reformatting cannot invalidate a pending update/backup preview. The file hash still identifies the installed transaction baseline; it is not an authenticity signature. Package-level provenance is a validated declaration rather than persisted learning data. Changing that envelope label alone cannot promote the installed questions: their individual statuses must actually change through a versioned material update and the usual editorial process.
+
+## Preparing a test update
+
+Copy the bundled JSON to a separate file, increase its package version to 5, and change a topic description. Keep all question payloads unchanged. The preview should show 24 unchanged questions, zero revised/new/removed questions, and 12 questions in each language. Existing progress remains after confirmation.
+
+For a revision test, change one explanation and increase that question's revision to 2. The preview should show one revised question and 23 unchanged questions. That revised question starts unpractised; previous attempts remain in its language history.
+
+These are test fixtures, not reviewed study material. Do not redistribute altered demo files as official content.
+
+## File handling
+
+Files must be UTF-8 JSON and at most 2 MiB. A UTF-8 byte order mark is accepted; invalid UTF-8 and oversize streams are rejected. The limit is checked on bytes actually read, rather than trusting provider size metadata. Files are opened with Android's [Storage Access Framework](https://developer.android.com/training/data-storage/shared/documents-files), without broad storage permission. The app reads the selected document once and retains the parsed preview in memory. It does not modify the source file or persist a file URI permission.
+
+Activity recreation retains the preview through its ViewModel. After process death, choose the file again; unfinished previews are intentionally not persisted. Import is atomic, but process death during a write and storage fault injection still need dedicated tests. A user-supplied provenance label remains an assertion; no signature verification, trusted-content catalogue or remote updater is included.
+
+## Supporting translations in v0.6
+
+All bundled FI/SV demo variants include `translations.en` with translated text/options and an English explanation. The app shows only the supporting explanation, after answering and when enabled in Settings. Questions and their original explanation remain in the study language. An imported question without English support shows an explicit message instead of substituting other content.
+
+A **translation-only** change requires a new package version but may keep the question revision. The importer compares every other question field against the installed version. If text, options, answer key, source, explanation, vocabulary, tags, difficulty, status or base language also changes, the usual revision rules still apply. The preview counts translation-only updates separately; they keep mastery and review schedules. Increasing the revision deliberately still resets current mastery.
+
+Translation language tags must be valid and differ from the base language, and option IDs must remain aligned. Blank vocabulary, blank easy explanations and source URLs with embedded credentials are rejected.
+
+See [Content review](CONTENT-REVIEW.md) for source checks and fingerprints. Changing a supporting translation preserves learning progress but still requires a fresh editorial review entry. Machine validation cannot approve factual or linguistic quality.
