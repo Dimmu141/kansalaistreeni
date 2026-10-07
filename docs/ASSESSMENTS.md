@@ -4,7 +4,7 @@ Version 0.11 adds a mixed-topic self-check through Home or Topics → Practice a
 
 ## Learner flow
 
-The exercise uses the selected Finnish or Swedish study language. It draws at most 20 questions from installed material; the bundled demo has 12 questions per language. Topic groups and their questions are shuffled, then sampled in rounds so a large topic does not crowd out smaller topics. A topic with few questions can still be underrepresented; this is not an official coverage blueprint.
+The exercise uses the selected Finnish or Swedish study language. It draws at most 20 questions from installed material; the bundled demo has 30 questions per language. Topic groups and their questions are shuffled, then sampled in rounds so a large topic does not crowd out smaller topics. A topic with few questions can still be underrepresented; this is not an official coverage blueprint.
 
 Choose an answer to save it automatically. Next remains disabled until the current choice is saved. Previous lets you change earlier answers. Back leaves without losing saved choices or position; resume from the assessment list after closing the app. One unfinished exercise per language is resumed instead of silently replaced. Finnish and Swedish exercises/history are separate.
 
@@ -32,4 +32,6 @@ Since v0.13, **completed and unfinished assessments are included in new version 
 
 ## Verification
 
-Domain tests cover balanced sampling, language filtering, arbitrary answer counts, answer changes, invalid inputs, deferred results, actual accuracy/topic totals, immutable completion and compatible mistake practice. Device tests cover saved-session reopening, concurrent starts, language separation, content/backup changes, unchanged learning data, legacy schema migration, real navigation, recreation, source/explanation expansion, saved answer edits, language-pinned follow-up and write-failure retry. Portability adds validation, roundtrip/reopening, stale-preview, atomic rollback, preview/recreation and legacy-preservation checks. Current runtime evidence and limitations are recorded in `VERIFICATION-0.14.0.md`; earlier assessment checks remain in `VERIFICATION-0.11.0.md`.
+Domain tests cover balanced sampling, language filtering, arbitrary answer counts, answer changes, invalid inputs, deferred results, actual accuracy/topic totals, immutable completion and compatible mistake practice. Device tests cover saved-session reopening, concurrent starts, language separation, content/backup changes, unchanged learning data, legacy schema migration, real navigation, recreation, source/explanation expansion, saved answer edits, language-pinned follow-up and write-failure retry. Portability adds validation, roundtrip/reopening, stale-preview, atomic rollback, preview/recreation and legacy-preservation checks. Current runtime evidence and limitations are recorded in `VERIFICATION-0.15.0.md`; earlier assessment checks remain in `VERIFICATION-0.11.0.md`.
+
+Topic snapshots store original topic labels and translations, alongside question explanations. They deliberately omit standalone reading lessons; current installed lessons are stored once in study material and included in backups.

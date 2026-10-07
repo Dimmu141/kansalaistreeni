@@ -26,7 +26,7 @@ Current learning correctness is checked against the restored answer key. Histori
 
 Export reconstructs the installed content package. Individual question provenance stays unchanged. The package envelope is conservatively DEMO for all-demo material and EDITORIAL otherwise because Room does not retain its original envelope status. Restoration hashes the canonical material package. Reselecting the original unchanged material after restore remains safe: same-version comparison uses complete persisted content, not JSON byte identity. Actual edits still need appropriate package/question revisions.
 
-No Room migration is needed: existing schema v5 already stores assessments. Confirmation checks the material/history/assessment baseline inside the same transaction as replacement. Version 1 deliberately excludes assessments from that baseline because it cannot overwrite them.
+Authored lessons are included in installed study material starting in v0.15. Room migration 5→6 adds the lesson column without deleting existing data. Backups containing authored lessons require v0.15 or newer; older app versions reject unknown fields rather than preserve this addition. Old backups without lessons remain readable. Confirmation checks the material/history/assessment baseline inside the same transaction as replacement. Version 1 deliberately excludes assessments from that baseline because it cannot overwrite them.
 
 ## Privacy and recovery boundaries
 

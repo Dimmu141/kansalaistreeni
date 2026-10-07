@@ -59,7 +59,8 @@ class AssessmentRepository(private val database: LearningDatabase) {
             val queue = Assessments.queue(material.map { it.model() }, language.tag)
             require(queue.isNotEmpty()) { "No questions in selected study language" }
             val topics = learning.topics().filter { t -> queue.any { it.topicId == t.id } }.map {
-                TopicDto(it.id, it.title, it.description, it.sortOrder, requireNotNull(ContentCodec.topicTranslationsAdapter.fromJson(it.translations)))
+                // Results need original labels and question explanations, not a copy of every lesson.
+                it.dto().copy(lessons = emptyMap())
             }
             val payload = AssessmentPayload(topics, queue.map { q -> material.first { it.id == q.id } })
             val id = UUID.randomUUID().toString()

@@ -112,7 +112,7 @@
     <string name="vocabulary_english">English: %1$s</string>
     <string name="vocabulary_swedish">Swedish: %1$s</string>
     <string name="source_title">Background source</string>
-    <string name="source_note">An app-authored practice question. A source does not make it official test material.</string>
+    <string name="source_note">A source reference does not make this practice material official test material.</string>
     <string name="show_summary">Show summary</string>
     <string name="next_question">Next question</string>
     <string name="date_time_pattern">d MMM yyyy \&apos;at\&apos; HH:mm</string>
@@ -178,13 +178,13 @@
     <string name="vocabulary_finnish">Finnish: %1$s</string>
     <string name="import_languages">Questions by language: Finnish %1$d · Swedish %2$d</string>
     <string name="import_study_scope">The study language filters the questions you see. If the package does not include your selected language, change it in Settings.</string>
-    <string name="explanation_language_note">Questions and the original explanation stay in your study language. You can also show an English explanation after answering.</string>
+    <string name="explanation_language_note">Questions and reading material stay in your study language. English support appears alongside reading material and after answering, when available.</string>
     <string name="explanation_study_only">Study language only</string>
     <string name="explanation_also_english">Also in English</string>
     <string name="explanation_english_title">Explanation in English</string>
     <string name="explanation_missing">This question has no English explanation. Read the explanation in your study language.</string>
     <string name="import_translated">Translation-only changes</string>
-    <string name="official_material_snapshot">Official learning material was unavailable when checked on 6 October 2026. This app works offline, so this information does not update automatically. Source: Finnish Immigration Service citizenship FAQ.</string>
+    <string name="official_material_snapshot">Official learning material was unavailable when checked on 7 October 2026. This app works offline, so this information does not update automatically. Source: Finnish Immigration Service citizenship FAQ.</string>
     <string name="recap_next_step">What next?</string>
     <string name="recap_all_correct">You answered everything correctly. Let the learning settle and review later. This result does not predict whether you will pass the test.</string>
     <string name="recap_mistakes_note">You can read explanations for the questions you missed below. Reading an explanation does not change your mastery or review schedule.</string>
@@ -316,4 +316,9 @@
     <string name="assessment_delete_cancel">Keep assessment</string>
     <string name="assessment_delete_error">Could not delete the assessment. Your saved data is unchanged. You can try again.</string>
     <string name="assessment_delete_stale">The assessment has changed. Nothing was deleted. Review its details and choose deletion again.</string>
+    <string name="import_lesson">Lesson: %1$s · %2$s</string>
+    <string name="import_lessons_title">Lessons in this file</string>
+    <string name="language_swedish">Svenska · Swedish</string>
+    <string name="lesson_english_missing">This section has no English explanation. Read it in your study language.</string>
+    <string name="import_changed_lessons">Added, changed or removed lesson language versions</string>
 </resources>

@@ -47,7 +47,7 @@ class RepositoryTest {
         val c = ContentCodec.parse(seed())
         val questions = repository.snapshot.first().questions
         questions.take(2).forEachIndexed { index, q -> repository.answer(q, q.correctOptionId, "old-$index", 1000) }
-        repository.importContent(json(c.copy(version = 5, questions = c.questions.drop(1).map { if (it.id == questions[1].id) it.copy(revision = 2) else it })))
+        repository.importContent(json(c.copy(version = c.version + 1, questions = c.questions.drop(1).map { if (it.id == questions[1].id) it.copy(revision = 2) else it })))
         val exported = repository.exportBackup(2000)
         val preview = repository.prepareRestore(exported)
         repository.restoreBackup(preview)
@@ -116,7 +116,7 @@ class RepositoryTest {
         val result = repository.answer(q, q.correctOptionId, "translation-history", 1000)
         val updated = c.copy(version = c.version + 1, questions = c.questions.map { it.copy(translations = emptyMap()) })
         val preview = repository.prepareImport(json(updated))
-        assertEquals(24, preview.changes.translated)
+        assertEquals(60, preview.changes.translated)
         repository.confirmImport(preview)
         database.close(); open()
         val saved = repository.snapshot.first()
@@ -206,7 +206,7 @@ class RepositoryTest {
     private lateinit var database: LearningDatabase
     private lateinit var repository: LearningRepository
     private val name = "repository-verification.db"
-    private fun open() { database = Room.databaseBuilder(context, LearningDatabase::class.java, name).addMigrations(LearningDatabase.MIGRATION_1_2, LearningDatabase.MIGRATION_2_3, LearningDatabase.MIGRATION_3_4, LearningDatabase.MIGRATION_4_5).build(); repository = LearningRepository(database) }
+    private fun open() { database = Room.databaseBuilder(context, LearningDatabase::class.java, name).addMigrations(LearningDatabase.MIGRATION_1_2, LearningDatabase.MIGRATION_2_3, LearningDatabase.MIGRATION_3_4, LearningDatabase.MIGRATION_4_5, LearningDatabase.MIGRATION_5_6).build(); repository = LearningRepository(database) }
     private fun seed() = context.assets.open("demo-content.json").bufferedReader().use { it.readText() }
     private fun json(c: ContentPackageDto) = Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(c)
     @Before fun before() = runBlocking { context.deleteDatabase(name); open(); repository.importContent(seed()) }
@@ -282,7 +282,7 @@ class RepositoryTest {
         try { repository.importContent(json(changed)); fail("Unversioned question accepted") } catch (_: IllegalArgumentException) { }
         assertEquals(c.version, database.learningDao().metadata()!!.version)
         try { repository.importContent(json(c.copy(questions = c.questions.reversed()))); fail("Unversioned package accepted") } catch (_: IllegalArgumentException) { }
-        assertEquals(24, repository.snapshot.first().questions.size)
+        assertEquals(60, repository.snapshot.first().questions.size)
     }
     @Test fun invalidAnswerDoesNotWriteAttemptOrProgress() = runBlocking {
         val q = repository.snapshot.first().questions.first()
@@ -321,7 +321,7 @@ class RepositoryTest {
             if (i == 0) q.copy(revision = 2, explanation = "Päivitetty selitys.") else q
         } + c.questions.last().copy(id = "brand-new"))
         val preview = repository.prepareImport(json(next))
-        assertEquals(ContentChanges(1, 1, 22, 1), preview.changes)
+        assertEquals(ContentChanges(1, 1, c.questions.size - 2, 1), preview.changes)
         assertEquals(before, repository.snapshot.first())
         // An answer after preview is retained; only changes to content invalidate confirmation.
         val later = original[2]
@@ -331,7 +331,7 @@ class RepositoryTest {
         val saved = repository.snapshot.first()
         assertEquals(3, saved.attempts.size)
         assertEquals(2, LearningEngine.summarize(saved, 2000).studiedCount)
-        assertEquals(2, LearningEngine.summarize(saved, 2000).mastery)
+        assertEquals(1, LearningEngine.summarize(saved, 2000).mastery)
         repository.initialize(context)
         assertEquals(c.version + 1, database.learningDao().metadata()!!.version)
     }
@@ -392,7 +392,7 @@ class RepositoryTest {
         assertNotEquals(ContentFile.hash(seed()), ContentFile.hash(compact))
         val preview = repository.prepareImport(compact)
         assertTrue(preview.alreadyInstalled)
-        assertEquals(ContentChanges(0, 0, 24, 0), preview.changes)
+        assertEquals(ContentChanges(0, 0, 60, 0), preview.changes)
         repository.confirmImport(preview)
         repository.importContent("\n  $compact\n")
         assertEquals(metadata, repository.installedContent().metadata)
@@ -467,8 +467,8 @@ class RepositoryTest {
         val c = ContentCodec.parse(seed())
         val next = c.copy(packageId = "sv-demo", questions = c.questions.filter { it.language == "sv" })
         val preview = repository.prepareImport(json(next))
-        assertEquals(12, preview.changes.unchanged)
-        assertEquals(12, preview.changes.removed)
+        assertEquals(30, preview.changes.unchanged)
+        assertEquals(30, preview.changes.removed)
         repository.confirmImport(preview)
         val q = repository.snapshot.first().questions.first()
         repository.answer(q, q.correctOptionId, "swedish", 1000)

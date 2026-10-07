@@ -41,6 +41,25 @@ class ReviewGateTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify(self.content, self.ledger)
 
+    def test_lesson_and_easy_text_changes_require_review(self):
+        for field in ("body", "easyBody"):
+            changed = copy.deepcopy(self.content)
+            changed["topics"][0]["lessons"]["fi"]["sections"][0][field] = "Unreviewed wording"
+            with self.assertRaises(ValueError):
+                verify(changed, self.ledger)
+
+    def test_missing_lesson_and_section_evidence_fail(self):
+        for ledger in (dict(self.ledger, lessonReviews=self.ledger["lessonReviews"][1:]), copy.deepcopy(self.ledger)):
+            if len(ledger["lessonReviews"]) == len(self.ledger["lessonReviews"]):
+                ledger["lessonReviews"][0]["sections"][0]["sources"] = []
+            with self.assertRaises(ValueError):
+                verify(self.content, ledger)
+
+    def test_lesson_review_cannot_claim_human_approval(self):
+        self.ledger["lessonReviews"][0]["publicationApproved"] = True
+        with self.assertRaises(ValueError):
+            verify(self.content, self.ledger)
+
 
 if __name__ == "__main__":
     unittest.main()

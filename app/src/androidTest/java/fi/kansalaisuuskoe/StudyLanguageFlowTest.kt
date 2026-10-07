@@ -25,7 +25,7 @@ class StudyLanguageFlowTest {
         rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); text(value).performClick()
     }
     @Before fun setup() = runBlocking {
-        app.container.database.clearAllTables(); repository.initialize(app)
+        app.container.database.clearAllTables(); repository.initialize(app); repository.installRegressionContent()
         app.container.settings.setInterfaceLanguage(InterfaceLanguage.ENGLISH)
         app.container.settings.setStudyLanguage(StudyLanguage.FINNISH)
         app.container.settings.setExplanation(ExplanationPreference.STUDY_LANGUAGE)
@@ -88,7 +88,7 @@ class StudyLanguageFlowTest {
     @Test fun finnishOnlyImportShowsAnHonestSwedishEmptyState() {
         chooseSwedish()
         runBlocking {
-            val seed = ContentCodec.parse(app.assets.open("demo-content.json").bufferedReader().use { it.readText() })
+            val seed = ContentCodec.parse(regressionContentJson())
             val json = Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(seed.copy(version = seed.version + 1, questions = seed.questions.filter { it.language == "fi" }))
             repository.confirmImport(repository.prepareImport(json))
         }

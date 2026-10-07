@@ -3,7 +3,17 @@ package fi.kansalaisuuskoe.domain
 import java.text.Normalizer
 import java.util.Locale
 
-data class TopicLesson(val topic: Topic, val ideas: List<Question>)
+data class TopicLesson(val topic: Topic, val ideas: List<Question>, val authored: AuthoredLesson? = null, val english: AuthoredLesson? = null) {
+    fun contentStatus(): ContentStatus {
+        val statuses = ideas.map { it.status } + listOfNotNull(authored?.status, english?.status)
+        return when {
+            statuses.isEmpty() || ContentStatus.DEMO in statuses -> ContentStatus.DEMO
+            statuses.all { it == ContentStatus.OFFICIAL } -> ContentStatus.OFFICIAL
+            statuses.all { it == ContentStatus.OFFICIALLY_SOURCED } -> ContentStatus.OFFICIALLY_SOURCED
+            else -> ContentStatus.EDITORIAL
+        }
+    }
+}
 data class VocabularyEntry(
     val id: String,
     val term: String,
@@ -18,7 +28,7 @@ object LearningContent {
     fun lesson(snapshot: LearningSnapshot, topicId: String, language: StudyLanguage): TopicLesson? {
         val topic = snapshot.topics.find { it.id == topicId } ?: return null
         val ideas = snapshot.questions.filter { it.topicId == topicId && it.language == language.tag }
-        return if (ideas.isEmpty()) null else TopicLesson(topic, ideas)
+        return if (ideas.isEmpty()) null else TopicLesson(topic, ideas, topic.lessons[language.tag], topic.lessons["en"])
     }
 
     fun vocabulary(snapshot: LearningSnapshot, language: StudyLanguage): List<VocabularyEntry> {

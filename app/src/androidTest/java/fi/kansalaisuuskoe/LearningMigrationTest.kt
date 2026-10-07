@@ -30,8 +30,7 @@ class LearningMigrationTest {
 
     private fun createLegacyDatabase(packageId: String, schemaVersion: Int, language: String): String {
         context.deleteDatabase(name)
-        val seed = context.assets.open("demo-content.json").bufferedReader().use { it.readText() }
-        val current = ContentCodec.parse(seed)
+        val current = ContentCodec.parse(regressionContentJson())
         val content = current.copy(version = 1, questions = current.questions.filter { it.language == language }, topics = current.topics.map { it.copy(translations = emptyMap()) })
         val legacyJson = Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(content)
         val schemaJson = InstrumentationRegistry.getInstrumentation().context.assets
@@ -77,6 +76,14 @@ class LearningMigrationTest {
                 put("lastAnswered", 1003L); put("nextReview", if (schemaVersion == 1) 1003L + 14 * 86_400_000L else 1000L + 86_400_000L)
             })
             if (schemaVersion >= 2) db.insertOrThrow("learning_rules", null, ContentValues().apply { put("slot", 1); put("version", LearningEngine.RULES_VERSION) })
+            if (schemaVersion >= 5) {
+                val questions = content.questions.take(2)
+                val payload = AssessmentPayload(content.topics, questions, mapOf(questions.first().id to questions.first().correctOptionId), 1)
+                db.insertOrThrow("assessments", null, ContentValues().apply {
+                    put("id", "legacy-assessment"); put("language", language); put("startedAt", 1000L)
+                    put("payload", Moshi.Builder().build().adapter(AssessmentPayload::class.java).toJson(payload))
+                })
+            }
             db.version = schemaVersion
         }
         return content.questions.first().id
@@ -85,11 +92,11 @@ class LearningMigrationTest {
     private fun verifyUpgrade(packageId: String, schemaVersion: Int = 1, language: String = "fi") = runBlocking {
         val questionId = createLegacyDatabase(packageId, schemaVersion, language)
         val opened = Room.databaseBuilder(context, LearningDatabase::class.java, name)
-            .addMigrations(LearningDatabase.MIGRATION_1_2, LearningDatabase.MIGRATION_2_3, LearningDatabase.MIGRATION_3_4, LearningDatabase.MIGRATION_4_5).build().also { database = it }
+            .addMigrations(LearningDatabase.MIGRATION_1_2, LearningDatabase.MIGRATION_2_3, LearningDatabase.MIGRATION_3_4, LearningDatabase.MIGRATION_4_5, LearningDatabase.MIGRATION_5_6).build().also { database = it }
         val repository = LearningRepository(opened)
         repository.initialize(context)
         val snapshot = repository.snapshot.first()
-        assertEquals(if (packageId == "fi-civics-demo") 24 else 12, snapshot.questions.size)
+        assertEquals(if (packageId == "fi-civics-demo") 60 else 12, snapshot.questions.size)
         assertTrue(snapshot.attempts.all { it.language == language })
         assertEquals(4, snapshot.attempts.size)
         assertEquals(listOf("legacy-0", "legacy-1", "legacy-2", "legacy-3"), snapshot.attempts.map { it.id })
@@ -116,7 +123,7 @@ class LearningMigrationTest {
         repository.initialize(context)
         assertEquals(5, repository.snapshot.first().attempts.size)
         assertEquals(reviewed.progress, repository.snapshot.first().progress.single())
-        assertEquals(5, opened.openHelper.readableDatabase.version)
+        assertEquals(6, opened.openHelper.readableDatabase.version)
     }
 
     @Test fun bundledContentUpgradeRecalculatesWithoutLosingHistory() {
@@ -134,6 +141,15 @@ class LearningMigrationTest {
         val repository = AssessmentRepository(requireNotNull(database))
         assertTrue(repository.sessions.first().isEmpty())
         val id = repository.start(fi.kansalaisuuskoe.domain.StudyLanguage.FINNISH, 5000)
-        assertEquals(12, repository.get(id)?.questions?.size)
+        assertEquals(20, repository.get(id)?.questions?.size)
+    }
+    @Test fun schemaFivePreservesSavedAssessmentWhileAddingAuthoredLessons() = runBlocking {
+        verifyUpgrade("fi-civics-demo", 5)
+        val saved = AssessmentRepository(requireNotNull(database)).get("legacy-assessment")!!
+        assertEquals(1, saved.position); assertEquals(1, saved.answeredCount)
+        assertEquals(2, saved.questions.size); assertNull(saved.finishedAt)
+        assertTrue(saved.topics.all { it.lessons.isEmpty() })
+        val repository = LearningRepository(requireNotNull(database))
+        assertTrue(repository.snapshot.first().topics.all { it.lessons.size == 3 })
     }
 }

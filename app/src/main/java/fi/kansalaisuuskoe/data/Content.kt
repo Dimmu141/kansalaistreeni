@@ -9,8 +9,16 @@ import java.net.URI
 @JsonClass(generateAdapter = true)
 data class ContentPackageDto(val schemaVersion: Int, val packageId: String, val version: Int, val status: String, val topics: List<TopicDto>, val questions: List<QuestionDto>)
 @JsonClass(generateAdapter = true)
-data class TopicDto(val id: String, val title: String, val description: String, val order: Int, val translations: Map<String, TopicTranslationDto> = emptyMap()) {
-    fun model() = Topic(id, title, description, order, translations.mapValues { (_, t) -> TopicTranslation(t.title, t.description) })
+data class TopicDto(val id: String, val title: String, val description: String, val order: Int, val translations: Map<String, TopicTranslationDto> = emptyMap(), val lessons: Map<String, LessonDto> = emptyMap()) {
+    fun model() = Topic(id, title, description, order, translations.mapValues { (_, t) -> TopicTranslation(t.title, t.description) }, lessons.mapValues { (_, lesson) -> lesson.model() })
+}
+@JsonClass(generateAdapter = true)
+data class LessonDto(val id: String, val revision: Int, val introduction: String, val status: String, val sections: List<LessonSectionDto>) {
+    fun model() = AuthoredLesson(id, revision, introduction, ContentStatus.valueOf(status), sections.map { it.model() })
+}
+@JsonClass(generateAdapter = true)
+data class LessonSectionDto(val id: String, val title: String, val body: String, val sources: List<SourceDto>, val easyBody: String? = null) {
+    fun model() = LessonSection(id, title, body, easyBody, sources.map { Source(it.title, it.url) })
 }
 @JsonClass(generateAdapter = true)
 data class TopicTranslationDto(val title: String, val description: String)
@@ -45,6 +53,7 @@ object ContentCodec {
     private val moshi = Moshi.Builder().build()
     val questionAdapter = moshi.adapter(QuestionDto::class.java)
     val topicTranslationsAdapter = moshi.adapter<Map<String, TopicTranslationDto>>(Types.newParameterizedType(Map::class.java, String::class.java, TopicTranslationDto::class.java))
+    val lessonsAdapter = moshi.adapter<Map<String, LessonDto>>(Types.newParameterizedType(Map::class.java, String::class.java, LessonDto::class.java))
     private val packageAdapter = moshi.adapter(ContentPackageDto::class.java)
     fun parse(json: String): ContentPackageDto = requireNotNull(packageAdapter.fromJson(json)).also(::validate)
 
@@ -61,6 +70,27 @@ object ContentCodec {
             topic.translations.forEach { (language, translation) ->
                 require(language.matches(Regex("[a-z]{2,3}(-[A-Za-z0-9]{2,8})*")) && translation.title.isNotBlank() && translation.description.isNotBlank()) { "Invalid topic translation" }
             }
+            topic.lessons.forEach { (language, lesson) ->
+                require(language in setOf("fi", "sv", "en")) { "Unsupported lesson language" }
+                require(lesson.id.isNotBlank() && lesson.revision > 0 && lesson.introduction.isNotBlank() && lesson.sections.isNotEmpty())
+                ContentStatus.valueOf(lesson.status)
+                if (content.status == "DEMO") require(lesson.status == "DEMO")
+                require(lesson.sections.map { it.id }.distinct().size == lesson.sections.size) { "Duplicate lesson section" }
+                lesson.sections.forEach { section ->
+                    require(section.id.isNotBlank() && section.title.isNotBlank() && section.body.isNotBlank())
+                    require(section.easyBody == null || (language == "fi" && section.easyBody.isNotBlank()))
+                    require(section.sources.isNotEmpty()) { "Lesson sections need sources" }
+                    section.sources.forEach { validateSource(it) }
+                }
+            }
+            // Supporting translations must describe the same sections as the study-language lesson.
+            val english = topic.lessons["en"]
+            if (english != null) {
+                require(topic.lessons.keys.any { it == "fi" || it == "sv" }) { "English support needs a native lesson" }
+                topic.lessons.filterKeys { it != "en" }.values.forEach { native ->
+                    require(native.id == english.id && native.sections.map { it.id } == english.sections.map { it.id }) { "Misaligned lesson translation" }
+                }
+            }
         }
         content.questions.forEach { q ->
             require(q.id.isNotBlank() && q.revision > 0 && q.topicId in topics)
@@ -75,13 +105,17 @@ object ContentCodec {
             ContentStatus.valueOf(q.status)
             Difficulty.valueOf(q.difficulty)
             if (content.status == "DEMO") require(q.status == "DEMO")
-            val uri = URI(q.source.url)
-            require(q.source.title.isNotBlank() && uri.scheme == "https" && !uri.host.isNullOrBlank() && uri.userInfo == null) { "Source must use HTTPS without credentials" }
+            validateSource(q.source)
             q.translations.forEach { (language, t) ->
                 require(language.matches(Regex("[a-z]{2,3}(-[A-Za-z0-9]{2,8})*")) && language != q.language && t.text.isNotBlank() && t.explanation.isNotBlank())
                 require(t.options.map { it.id }.toSet() == q.options.map { it.id }.toSet() && t.options.size == q.options.size)
                 require(t.options.all { it.text.isNotBlank() })
             }
         }
+    }
+
+    private fun validateSource(source: SourceDto) {
+        val uri = URI(source.url)
+        require(source.title.isNotBlank() && uri.scheme == "https" && !uri.host.isNullOrBlank() && uri.userInfo == null) { "Source must use HTTPS without credentials" }
     }
 }

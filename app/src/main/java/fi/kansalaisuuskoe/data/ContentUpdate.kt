@@ -41,6 +41,7 @@ class PreparedContent internal constructor(
     val alreadyInstalled: Boolean,
     internal val hash: String,
     internal val baseline: ContentMetadata?,
+    val changedLessonVariants: Int = 0,
 )
 
 /** Question IDs are global across packages. Reintroduced studied IDs require a new revision. */
@@ -58,6 +59,17 @@ object ContentUpdates {
             }
         }
         val existing = installed.questions.associateBy { it.id }
+        val previousTopics = installed.topics.associateBy { it.id }
+        content.topics.forEach { topic ->
+            topic.lessons.filterKeys { it != "en" }.forEach { (language, lesson) ->
+                previousTopics[topic.id]?.lessons?.get(language)?.let { before ->
+                    if (before.id == lesson.id && (lesson.revision < before.revision ||
+                            (lesson != before && lesson.revision <= before.revision))) {
+                        throw ContentImportException(ImportProblem.REVISION)
+                    }
+                }
+            }
+        }
         content.questions.forEach { question ->
             val before = existing[question.id]
             val historical = historicalRevisions[question.id] ?: 0
@@ -76,7 +88,10 @@ object ContentUpdates {
         val translated = content.questions.count { q -> existing[q.id]?.let { q != it && q.copy(translations = it.translations) == it } == true }
         val incomingIds = content.questions.map { it.id }.toSet()
         val removed = existing.keys.count { it !in incomingIds }
+        val incomingLessons = content.topics.flatMap { topic -> topic.lessons.map { (language, lesson) -> "${topic.id}:$language" to lesson } }.toMap()
+        val previousLessons = installed.topics.flatMap { topic -> topic.lessons.map { (language, lesson) -> "${topic.id}:$language" to lesson } }.toMap()
+        val lessonChanges = (incomingLessons.keys + previousLessons.keys).count { incomingLessons[it] != previousLessons[it] }
         return PreparedContent(content, ContentChanges(added, content.questions.size - added - unchanged - translated, unchanged, removed, translated),
-            sameVersion && sameMaterial, hash, old)
+            sameVersion && sameMaterial, hash, old, lessonChanges)
     }
 }

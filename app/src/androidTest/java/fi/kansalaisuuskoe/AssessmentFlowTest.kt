@@ -42,7 +42,7 @@ class AssessmentFlowTest {
         rule.waitUntil(15_000) { runBlocking { assessments.sessions.first().isNotEmpty() } }
         val id = runBlocking { assessments.sessions.first().single().id }
         val initial = saved(id)
-        assertEquals(12, initial.questions.size)
+        assertEquals(20, initial.questions.size)
         val first = initial.questions.first()
         await(first.text)
         click("Next question") // Disabled until an answer is saved.
@@ -73,7 +73,7 @@ class AssessmentFlowTest {
             click(if (index == initial.questions.lastIndex) "Finish and view result" else "Next question")
         }
         await("Assessment result")
-        text("Correct 11 / 12 · 91 %").assertIsDisplayed()
+        text("Correct 19 / 20 · 95 %").assertIsDisplayed()
         assertTrue(runBlocking { learning.snapshot.first().attempts.isEmpty() })
         assertTrue(runBlocking { learning.snapshot.first().progress.isEmpty() })
         val description = "Question explanation: ${mistake.text}"
@@ -84,24 +84,24 @@ class AssessmentFlowTest {
         val english = mistake.translations.getValue("en").explanation
         rule.onNode(hasScrollAction()).performScrollToNode(hasText(english)); text(english).assertIsDisplayed()
         rule.activityRule.scenario.recreate(); await("Hide explanation")
-        assertEquals(11, Assessments.result(saved(id)).correct)
+        assertEquals(19, Assessments.result(saved(id)).correct)
         click("Practise mistakes · 1 question"); await(mistake.text)
         click(mistake.options.first { it.id == mistake.correctOptionId }.text); click("Check answer")
         await("Correct"); click("Show summary"); await("Practice complete")
         val snapshot = runBlocking { learning.snapshot.first() }
         assertEquals(listOf(mistake.id), snapshot.attempts.map { it.questionId })
         assertEquals(25, snapshot.progress.single().mastery)
-        assertEquals(11, Assessments.result(saved(id)).correct)
+        assertEquals(19, Assessments.result(saved(id)).correct)
         click("Return to your learning path"); await("Your learning path")
         click("Practice assessment"); click("View result and explanations"); await("Assessment result")
-        text("Correct 11 / 12 · 91 %").assertIsDisplayed()
+        text("Correct 19 / 20 · 95 %").assertIsDisplayed()
     }
 
     @Test fun swedishAssessmentAndFollowUpKeepTheirLanguageWhenPreferenceChanges() {
         runBlocking {
             val content = ContentCodec.parse(app.assets.open("demo-content.json").bufferedReader().use { it.readText() })
             val selected = content.questions.filter { it.language == "sv" }.take(3) + content.questions.first { it.language == "fi" }
-            learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(content.copy(version = 5, questions = selected)))
+            learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(content.copy(version = content.version + 1, questions = selected)))
             app.container.settings.setStudyLanguage(StudyLanguage.SWEDISH)
             app.container.settings.setInterfaceLanguage(InterfaceLanguage.FINNISH)
         }
@@ -151,7 +151,7 @@ class AssessmentFlowTest {
         val question = runBlocking {
             val content = ContentCodec.parse(app.assets.open("demo-content.json").bufferedReader().use { it.readText() })
             val one = content.questions.first { it.id == "demo-emergency" }
-            learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(content.copy(version = 5, questions = listOf(one))))
+            learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(content.copy(version = content.version + 1, questions = listOf(one))))
             one.model()
         }
         await("Your learning path"); click("Practice assessment"); click("Start assessment"); await(question.text)

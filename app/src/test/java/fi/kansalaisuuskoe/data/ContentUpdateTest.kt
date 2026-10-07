@@ -12,12 +12,12 @@ class ContentUpdateTest {
         val next = content.copy(version = content.version + 1, questions = content.questions.map {
             if (it.id == q.id) it.copy(translations = mapOf("en" to translation)) else it
         })
-        assertEquals(ContentChanges(0, 0, 23, 0, 1), prepare(next).changes)
+        assertEquals(ContentChanges(0, 0, content.questions.size - 1, 0, 1), prepare(next).changes)
         assertEquals(q.revision, next.questions.first().revision)
     }
     @Test fun `translation removal is a supporting change`() {
         val next = content.copy(version = content.version + 1, questions = content.questions.map { it.copy(translations = emptyMap()) })
-        assertEquals(ContentChanges(0, 0, 0, 0, 24), prepare(next).changes)
+        assertEquals(ContentChanges(0, 0, 0, 0, content.questions.size), prepare(next).changes)
     }
     @Test fun `translation edits cannot disguise a changed answer key`() {
         val q = content.questions.first()
@@ -38,11 +38,11 @@ class ContentUpdateTest {
         val next = content.copy(version = content.version + 1, questions = content.questions.dropLast(1).mapIndexed { i, q ->
             if (i == 0) q.copy(revision = q.revision + 1, explanation = "Uusi selitys.") else q
         } + content.questions.last().copy(id = "new-question"))
-        assertEquals(ContentChanges(1, 1, 22, 1), prepare(next).changes)
+        assertEquals(ContentChanges(1, 1, content.questions.size - 2, 1), prepare(next).changes)
     }
     @Test fun `topic only updates keep every question unchanged`() {
         val next = content.copy(version = content.version + 1, topics = content.topics.map { it.copy(title = "Uusi aihe") })
-        assertEquals(ContentChanges(0, 0, 24, 0), prepare(next).changes)
+        assertEquals(ContentChanges(0, 0, content.questions.size, 0), prepare(next).changes)
     }
     @Test fun `unchanged material produces a no op preview`() {
         assertTrue(prepare(content, "old").alreadyInstalled)
@@ -50,7 +50,7 @@ class ContentUpdateTest {
     @Test fun `different file hashes with identical stored material produce a no op`() {
         val result = prepare(content)
         assertTrue(result.alreadyInstalled)
-        assertEquals(ContentChanges(0, 0, 24, 0), result.changes)
+        assertEquals(ContentChanges(0, 0, content.questions.size, 0), result.changes)
     }
     @Test fun `same version changes to question fields remain rejected even with the old hash`() {
         val q = content.questions.first()
@@ -124,7 +124,7 @@ class ContentUpdateTest {
         val next = content.copy(packageId = "replacement")
         val result = prepare(next)
         assertFalse(result.alreadyInstalled)
-        assertEquals(ContentChanges(0, 0, 24, 0), result.changes)
+        assertEquals(ContentChanges(0, 0, content.questions.size, 0), result.changes)
     }
     @Test fun `utf8 content and optional byte order mark are read`() {
         assertEquals("kysymys ä", ContentFile.read(ByteArrayInputStream("\uFEFFkysymys ä".toByteArray())))

@@ -16,10 +16,10 @@ class StudyLanguageTest {
         listOf(LearningEngine.answer(fi, fi.correctOptionId, null, now - 660_000), LearningEngine.answer(sv, sv.options.first().id, null, now - 660_000)),
         listOf(attempt(fi, true), attempt(sv, false)))
 
-    @Test fun `each language has twelve demo questions and all six topics`() {
+    @Test fun `each language has thirty demo questions and all six topics`() {
         StudyLanguage.entries.forEach {
             val scoped = snapshot().forLanguage(it)
-            assertEquals(12, scoped.questions.size)
+            assertEquals(30, scoped.questions.size)
             assertEquals(6, scoped.topics.size)
             assertTrue(scoped.questions.all { q -> q.language == it.tag })
         }
@@ -27,7 +27,7 @@ class StudyLanguageTest {
     @Test fun `accuracy and mastery do not leak between languages`() {
         val finnish = LearningEngine.summarize(snapshot().forLanguage(StudyLanguage.FINNISH), now)
         val swedish = LearningEngine.summarize(snapshot().forLanguage(StudyLanguage.SWEDISH), now)
-        assertEquals(1, finnish.answered); assertEquals(100, finnish.accuracy); assertEquals(2, finnish.mastery)
+        assertEquals(1, finnish.answered); assertEquals(100, finnish.accuracy); assertEquals(1, finnish.mastery)
         assertEquals(1, swedish.answered); assertEquals(0, swedish.accuracy); assertEquals(0, swedish.mastery)
         assertEquals(1, finnish.studiedCount); assertEquals(1, swedish.studiedCount)
     }
@@ -39,7 +39,7 @@ class StudyLanguageTest {
         val scoped = snapshot().forLanguage(StudyLanguage.SWEDISH)
         assertTrue(LearningEngine.recommendedQueue(scoped, now).all { it.language == "sv" })
         assertTrue(LearningEngine.learningQueue(scoped, now, "democracy").all { it.language == "sv" })
-        assertEquals(2, LearningEngine.summarize(scoped, now).topics.first().questionCount)
+        assertEquals(5, LearningEngine.summarize(scoped, now).topics.first().questionCount)
     }
     @Test fun `removed question history retains its language and accuracy`() {
         val scoped = snapshot().copy(questions = listOf(fi)).forLanguage(StudyLanguage.SWEDISH)

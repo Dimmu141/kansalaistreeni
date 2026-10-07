@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageId": "fi-civics-demo",
-  "version": 4,
+  "version": 5,
   "status": "DEMO",
   "topics": [
     {
@@ -13,6 +13,150 @@
         "en": {
           "title": "Society and democracy",
           "description": "Parliament, decision-making and participation."
+        },
+        "sv": {
+          "title": "Samhälle och demokrati",
+          "description": "Riksdagen, beslut och deltagande."
+        }
+      },
+      "lessons": {
+        "fi": {
+          "id": "democracy-basics",
+          "revision": 1,
+          "introduction": "Lue aiheen perusasiat ja tutustu sanastoon. Harjoittele sitten kysymyksillä. Tämä on alustavaa harjoitusmateriaalia. Lukeminen ei muuta osaamisarviota.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "decisions",
+              "title": "Lait syntyvät eduskunnassa",
+              "body": "Eduskunnan 200 kansanedustajaa päättävät laeista. Hallitus valmistelee lakiesityksiä, mutta valmistelu ja hyväksyminen ovat eri tehtäviä.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ],
+              "easyBody": "Eduskunta päättää laeista. Hallitus tekee ehdotuksia."
+            },
+            {
+              "id": "participation",
+              "title": "Äänestäminen",
+              "body": "Eduskuntavaaleissa äänestävät Suomen kansalaiset, jotka ovat vaalipäivänä vähintään 18-vuotiaita. Eduskunnan tavallinen vaalikausi on neljä vuotta.",
+              "sources": [
+                {
+                  "title": "Finlex: Vaalilaki, 2 §",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714"
+                },
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ],
+              "easyBody": "Eduskuntavaaleissa äänestämiseen tarvitaan Suomen kansalaisuus ja 18 vuoden ikä."
+            },
+            {
+              "id": "courts",
+              "title": "Riippumattomat tuomioistuimet",
+              "body": "Tuomioistuimet käyttävät tuomiovaltaa. Niiden riippumattomuus erottaa oikeusasioiden ratkaisemisen poliittisesta päätöksenteosta.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ],
+              "easyBody": "Tuomioistuimet ratkaisevat oikeusasioita riippumattomasti."
+            }
+          ]
+        },
+        "sv": {
+          "id": "democracy-basics",
+          "revision": 1,
+          "introduction": "Läs om ämnets grunder och bekanta dig med orden. Öva sedan med frågor. Detta är preliminärt övningsmaterial. Läsning ändrar inte din kunskapsbedömning.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "decisions",
+              "title": "Lagarna stiftas i riksdagen",
+              "body": "Riksdagens 200 ledamöter beslutar om lagarna. Regeringen bereder lagförslag; beredning och godkännande är olika uppgifter.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "participation",
+              "title": "Att rösta",
+              "body": "Finska medborgare som är minst 18 år på valdagen får rösta i riksdagsval. Den vanliga valperioden är fyra år.",
+              "sources": [
+                {
+                  "title": "Finlex: Vaalilaki, 2 §",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714"
+                },
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "courts",
+              "title": "Oberoende domstolar",
+              "body": "Domstolarna utövar den dömande makten. Deras oberoende skiljer rättskipningen från politiskt beslutsfattande.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            }
+          ]
+        },
+        "en": {
+          "id": "democracy-basics",
+          "revision": 1,
+          "introduction": "Read the basics and explore the vocabulary, then practise with questions. This is provisional practice material. Reading does not change your mastery estimate.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "decisions",
+              "title": "Parliament decides on laws",
+              "body": "Parliament’s 200 members decide on laws. Preparing a proposal and approving a law are different tasks.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "participation",
+              "title": "Voting",
+              "body": "Parliamentary voters must be Finnish citizens aged 18 by election day. Parliament’s usual term is four years.",
+              "sources": [
+                {
+                  "title": "Finlex: Vaalilaki, 2 §",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714"
+                },
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "courts",
+              "title": "Independent courts",
+              "body": "Independent courts exercise judicial authority. Deciding legal cases is separate from political decision-making.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            }
+          ]
         }
       }
     },
@@ -25,6 +169,138 @@
         "en": {
           "title": "Rights and responsibilities",
           "description": "Equality and fundamental rights."
+        },
+        "sv": {
+          "title": "Rättigheter och skyldigheter",
+          "description": "Likabehandling och grundläggande rättigheter."
+        }
+      },
+      "lessons": {
+        "fi": {
+          "id": "rights-basics",
+          "revision": 1,
+          "introduction": "Lue aiheen perusasiat ja tutustu sanastoon. Harjoittele sitten kysymyksillä. Tämä on alustavaa harjoitusmateriaalia. Lukeminen ei muuta osaamisarviota.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "everyone",
+              "title": "Oikeudet kuuluvat ihmisille",
+              "body": "Yhdenvertaisuus ja uskonnonvapaus suojaavat ihmisiä. Jokainen saa kuulua uskonnolliseen yhdyskuntaan tai olla kuulumatta siihen.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ],
+              "easyBody": "Ihmiset ovat yhdenvertaisia. Sinun ei tarvitse kuulua uskontoon."
+            },
+            {
+              "id": "privacy",
+              "title": "Koti, viestit ja opetus",
+              "body": "Yksityiselämän suoja turvaa kotia ja luottamuksellisia viestejä. Perustuslaki turvaa myös oikeuden maksuttomaan perusopetukseen.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ],
+              "easyBody": "Kotisi ja viestisi ovat suojattuja. Perusopetus on maksutonta."
+            },
+            {
+              "id": "duties",
+              "title": "Myös velvollisuuksia",
+              "body": "Suomessa asuvien ja oleskelevien on noudatettava Suomen lakeja. Kansalaisuus ei vapauta tästä velvollisuudesta.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Lait ja oikeudet",
+                  "url": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights"
+                }
+              ],
+              "easyBody": "Kaikkien Suomessa olevien täytyy noudattaa Suomen lakeja."
+            }
+          ]
+        },
+        "sv": {
+          "id": "rights-basics",
+          "revision": 1,
+          "introduction": "Läs om ämnets grunder och bekanta dig med orden. Öva sedan med frågor. Detta är preliminärt övningsmaterial. Läsning ändrar inte din kunskapsbedömning.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "everyone",
+              "title": "Rättigheter för alla",
+              "body": "Likabehandling och religionsfrihet skyddar människor. Var och en får tillhöra eller stå utanför ett religiöst samfund.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "privacy",
+              "title": "Hem, meddelanden och utbildning",
+              "body": "Skyddet för privatlivet omfattar hemmet och förtroliga meddelanden. Grundlagen tryggar även rätten till avgiftsfri grundläggande utbildning.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "duties",
+              "title": "Också skyldigheter",
+              "body": "Alla som bor eller vistas i Finland måste följa Finlands lagar, oavsett medborgarskap.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Lait ja oikeudet",
+                  "url": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights"
+                }
+              ]
+            }
+          ]
+        },
+        "en": {
+          "id": "rights-basics",
+          "revision": 1,
+          "introduction": "Read the basics and explore the vocabulary, then practise with questions. This is provisional practice material. Reading does not change your mastery estimate.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "everyone",
+              "title": "Rights for everyone",
+              "body": "Equality and religious freedom protect people. You may belong to a religious community or choose not to.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "privacy",
+              "title": "Home, messages and education",
+              "body": "Privacy protection covers the home and confidential messages. The Constitution also guarantees free basic education.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "duties",
+              "title": "Responsibilities too",
+              "body": "Residents and visitors must follow Finnish law, regardless of citizenship.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Lait ja oikeudet",
+                  "url": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights"
+                }
+              ]
+            }
+          ]
         }
       }
     },
@@ -37,6 +313,138 @@
         "en": {
           "title": "Finnish history",
           "description": "Independence and Finland's path to the EU."
+        },
+        "sv": {
+          "title": "Finlands historia",
+          "description": "Självständigheten och Finlands väg till EU."
+        }
+      },
+      "lessons": {
+        "fi": {
+          "id": "history-basics",
+          "revision": 1,
+          "introduction": "Lue aiheen perusasiat ja tutustu sanastoon. Harjoittele sitten kysymyksillä. Tämä on alustavaa harjoitusmateriaalia. Lukeminen ei muuta osaamisarviota.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "before-independence",
+              "title": "Ennen itsenäisyyttä",
+              "body": "Suurin osa Suomen alueesta kuului Ruotsiin. Vuonna 1809 Suomi siirtyi Venäjän keisarikuntaan autonomiseksi suuriruhtinaskunnaksi.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Suomen historiaa",
+                  "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+                }
+              ],
+              "easyBody": "Suomi oli ensin osa Ruotsia. Vuonna 1809 Suomesta tuli osa Venäjää."
+            },
+            {
+              "id": "democratic-change",
+              "title": "Äänioikeus ja itsenäisyys",
+              "body": "Yleinen ja yhtäläinen äänioikeus, myös naisille, säädettiin 1906. Ensimmäiset eduskuntavaalit pidettiin 1907. Suomi julistautui itsenäiseksi 6. joulukuuta 1917.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Suomen historiaa",
+                  "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+                }
+              ],
+              "easyBody": "Naiset saivat äänioikeuden 1906. Suomi itsenäistyi 1917."
+            },
+            {
+              "id": "europe",
+              "title": "Osaksi Euroopan unionia",
+              "body": "Suomi liittyi Euroopan unioniin vuonna 1995. Tämä ajankohta on eri asia kuin Suomen itsenäistyminen.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Suomen historiaa",
+                  "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+                }
+              ],
+              "easyBody": "Suomi liittyi EU:hun 1995. Suomi oli jo itsenäinen valtio."
+            }
+          ]
+        },
+        "sv": {
+          "id": "history-basics",
+          "revision": 1,
+          "introduction": "Läs om ämnets grunder och bekanta dig med orden. Öva sedan med frågor. Detta är preliminärt övningsmaterial. Läsning ändrar inte din kunskapsbedömning.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "before-independence",
+              "title": "Före självständigheten",
+              "body": "Största delen av Finland tillhörde Sverige. År 1809 blev Finland ett autonomt storfurstendöme i det ryska kejsardömet.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Suomen historiaa",
+                  "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+                }
+              ]
+            },
+            {
+              "id": "democratic-change",
+              "title": "Rösträtt och självständighet",
+              "body": "Allmän och lika rösträtt, också för kvinnor, infördes 1906. Val följde 1907. Finland förklarade sig självständigt den 6 december 1917.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Suomen historiaa",
+                  "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+                }
+              ]
+            },
+            {
+              "id": "europe",
+              "title": "Medlem i Europeiska unionen",
+              "body": "Finland gick med i Europeiska unionen 1995. EU-medlemskapet och självständigheten är olika händelser.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Suomen historiaa",
+                  "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+                }
+              ]
+            }
+          ]
+        },
+        "en": {
+          "id": "history-basics",
+          "revision": 1,
+          "introduction": "Read the basics and explore the vocabulary, then practise with questions. This is provisional practice material. Reading does not change your mastery estimate.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "before-independence",
+              "title": "Before independence",
+              "body": "Most of Finland belonged to Sweden. In 1809 it became an autonomous Grand Duchy in the Russian Empire.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Suomen historiaa",
+                  "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+                }
+              ]
+            },
+            {
+              "id": "democratic-change",
+              "title": "Voting rights and independence",
+              "body": "Equal suffrage including women was introduced in 1906, followed by elections in 1907. Finland declared independence on 6 December 1917.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Suomen historiaa",
+                  "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+                }
+              ]
+            },
+            {
+              "id": "europe",
+              "title": "Joining the European Union",
+              "body": "Finland joined the European Union in 1995, long after becoming independent.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Suomen historiaa",
+                  "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+                }
+              ]
+            }
+          ]
         }
       }
     },
@@ -49,6 +457,138 @@
         "en": {
           "title": "Working life",
           "description": "Employment contracts and safety at work."
+        },
+        "sv": {
+          "title": "Arbetsliv",
+          "description": "Arbetsavtal och säkerhet i arbetet."
+        }
+      },
+      "lessons": {
+        "fi": {
+          "id": "work-basics",
+          "revision": 1,
+          "introduction": "Lue aiheen perusasiat ja tutustu sanastoon. Harjoittele sitten kysymyksillä. Tämä on alustavaa harjoitusmateriaalia. Lukeminen ei muuta osaamisarviota.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "agreement",
+              "title": "Sovi työn ehdoista",
+              "body": "Työsopimuksessa sovitaan tehtävistä, palkasta ja työajasta. Sopimus voi olla suullinen, mutta kirjallinen sopimus helpottaa ehtojen tarkistamista.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Työsopimus ja työsuhteen ehdot",
+                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
+                }
+              ],
+              "easyBody": "Sopikaa työstä, palkasta ja työajasta. Kirjallinen sopimus auttaa muistamaan ehdot."
+            },
+            {
+              "id": "orientation",
+              "title": "Opettele turvalliset työtavat",
+              "body": "Työnantajan pitää opastaa uusi työntekijä tehtäviin ja turvallisuusohjeisiin. Työntekijän pitää noudattaa annettuja ohjeita.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+                }
+              ],
+              "easyBody": "Työnantaja opastaa sinua. Noudata turvallisuusohjeita."
+            },
+            {
+              "id": "safety",
+              "title": "Turvavälineet ja vaarat",
+              "body": "Työnantaja maksaa tarvittavat turvavälineet. Ilmoita havaitsemastasi vaarasta esihenkilölle tai työsuojeluvaltuutetulle, jotta puute voidaan korjata.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+                }
+              ],
+              "easyBody": "Käytä turvavälineitä. Kerro vaarasta heti esihenkilölle tai työsuojeluvaltuutetulle."
+            }
+          ]
+        },
+        "sv": {
+          "id": "work-basics",
+          "revision": 1,
+          "introduction": "Läs om ämnets grunder och bekanta dig med orden. Öva sedan med frågor. Detta är preliminärt övningsmaterial. Läsning ändrar inte din kunskapsbedömning.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "agreement",
+              "title": "Avtala om villkoren",
+              "body": "Arbetsavtalet anger uppgifter, lön och arbetstid. Ett muntligt avtal är möjligt, men skriftliga villkor är lättare att kontrollera.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Työsopimus ja työsuhteen ehdot",
+                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
+                }
+              ]
+            },
+            {
+              "id": "orientation",
+              "title": "Lär dig säkra arbetssätt",
+              "body": "Arbetsgivaren ska introducera uppgifterna och säkerhetsanvisningarna. Arbetstagaren ska följa anvisningarna.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+                }
+              ]
+            },
+            {
+              "id": "safety",
+              "title": "Utrustning och risker",
+              "body": "Arbetsgivaren betalar nödvändig skyddsutrustning. Anmäl risker till chefen eller arbetarskyddsfullmäktigen så att brister kan åtgärdas.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+                }
+              ]
+            }
+          ]
+        },
+        "en": {
+          "id": "work-basics",
+          "revision": 1,
+          "introduction": "Read the basics and explore the vocabulary, then practise with questions. This is provisional practice material. Reading does not change your mastery estimate.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "agreement",
+              "title": "Agree on the terms",
+              "body": "An employment contract sets duties, pay and working hours. Written terms are easier to check, though an oral contract is possible.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Työsopimus ja työsuhteen ehdot",
+                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
+                }
+              ]
+            },
+            {
+              "id": "orientation",
+              "title": "Learn safe working methods",
+              "body": "The employer must introduce duties and safety instructions. The employee must follow those instructions.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+                }
+              ]
+            },
+            {
+              "id": "safety",
+              "title": "Equipment and hazards",
+              "body": "The employer pays for required safety equipment. Report hazards to your supervisor or safety representative so they can be addressed.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+                }
+              ]
+            }
+          ]
         }
       }
     },
@@ -61,6 +601,138 @@
         "en": {
           "title": "Everyday life in Finland",
           "description": "Services and everyday safety."
+        },
+        "sv": {
+          "title": "Vardagen i Finland",
+          "description": "Tjänster och säkerhet i vardagen."
+        }
+      },
+      "lessons": {
+        "fi": {
+          "id": "everyday-basics",
+          "revision": 1,
+          "introduction": "Lue aiheen perusasiat ja tutustu sanastoon. Harjoittele sitten kysymyksillä. Tämä on alustavaa harjoitusmateriaalia. Lukeminen ei muuta osaamisarviota.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "emergency",
+              "title": "Hätätilanteessa 112",
+              "body": "Soita 112 todellisessa, kiireellisessä hätätilanteessa. Vastaa päivystäjän kysymyksiin, noudata ohjeita ja lopeta puhelu vasta saatuasi luvan.",
+              "sources": [
+                {
+                  "title": "Hätäkeskuslaitos: Hätäilmoituksen tekeminen",
+                  "url": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
+                }
+              ],
+              "easyBody": "Soita hätätilanteessa 112. Kuuntele ohjeet ja odota lupaa lopettaa puhelu."
+            },
+            {
+              "id": "library",
+              "title": "Kirjasto on avoin kaikille",
+              "body": "Kirjastossa voit lukea, opiskella ja lainata aineistoa. Lainaamiseen tarvitaan kirjastokortti. Ensimmäinen kortti on maksuton.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Kirjastot",
+                  "url": "https://infofinland.fi/fi/leisure/libraries"
+                }
+              ],
+              "easyBody": "Kirjastossa voit lukea ja opiskella. Saat ensimmäisen kirjastokortin ilmaiseksi."
+            },
+            {
+              "id": "return",
+              "title": "Huolehdi lainoista",
+              "body": "Tarkista eräpäivä. Palauta tai uusi laina ajoissa, jos uusiminen on mahdollista. Myöhässä palautetusta lainasta voi tulla maksu.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Kirjastot",
+                  "url": "https://infofinland.fi/fi/leisure/libraries"
+                }
+              ],
+              "easyBody": "Palauta kirja ajoissa tai uusi laina, jos voit. Myöhästyminen voi maksaa."
+            }
+          ]
+        },
+        "sv": {
+          "id": "everyday-basics",
+          "revision": 1,
+          "introduction": "Läs om ämnets grunder och bekanta dig med orden. Öva sedan med frågor. Detta är preliminärt övningsmaterial. Läsning ändrar inte din kunskapsbedömning.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "emergency",
+              "title": "Vid nödsituationer: 112",
+              "body": "Ring 112 i en verklig, brådskande nödsituation. Svara på operatörens frågor, följ anvisningarna och avsluta först när du får tillstånd.",
+              "sources": [
+                {
+                  "title": "Hätäkeskuslaitos: Hätäilmoituksen tekeminen",
+                  "url": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
+                }
+              ]
+            },
+            {
+              "id": "library",
+              "title": "Biblioteket är öppet för alla",
+              "body": "På biblioteket kan du läsa, studera och låna material. Du behöver ett bibliotekskort för att låna. Det första kortet är gratis.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Kirjastot",
+                  "url": "https://infofinland.fi/fi/leisure/libraries"
+                }
+              ]
+            },
+            {
+              "id": "return",
+              "title": "Ta hand om dina lån",
+              "body": "Kontrollera förfallodagen. Lämna tillbaka eller förnya lånet i tid om det går. Försenade lån kan medföra en avgift.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Kirjastot",
+                  "url": "https://infofinland.fi/fi/leisure/libraries"
+                }
+              ]
+            }
+          ]
+        },
+        "en": {
+          "id": "everyday-basics",
+          "revision": 1,
+          "introduction": "Read the basics and explore the vocabulary, then practise with questions. This is provisional practice material. Reading does not change your mastery estimate.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "emergency",
+              "title": "In an emergency: 112",
+              "body": "Call 112 for a real, urgent emergency. Answer the operator’s questions, follow instructions and end the call only with permission.",
+              "sources": [
+                {
+                  "title": "Hätäkeskuslaitos: Hätäilmoituksen tekeminen",
+                  "url": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
+                }
+              ]
+            },
+            {
+              "id": "library",
+              "title": "Libraries are open to everyone",
+              "body": "Libraries offer reading, study and borrowing. A card is needed to borrow material; the first card is free.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Kirjastot",
+                  "url": "https://infofinland.fi/fi/leisure/libraries"
+                }
+              ]
+            },
+            {
+              "id": "return",
+              "title": "Look after your loans",
+              "body": "Check the due date. Return or renew on time when renewal is possible. Overdue loans can incur a fee.",
+              "sources": [
+                {
+                  "title": "InfoFinland: Kirjastot",
+                  "url": "https://infofinland.fi/fi/leisure/libraries"
+                }
+              ]
+            }
+          ]
         }
       }
     },
@@ -73,6 +745,138 @@
         "en": {
           "title": "Culture and society",
           "description": "Languages and freedom of expression."
+        },
+        "sv": {
+          "title": "Kultur och samhälle",
+          "description": "Språk och att uttrycka åsikter."
+        }
+      },
+      "lessons": {
+        "fi": {
+          "id": "culture-basics",
+          "revision": 1,
+          "introduction": "Lue aiheen perusasiat ja tutustu sanastoon. Harjoittele sitten kysymyksillä. Tämä on alustavaa harjoitusmateriaalia. Lukeminen ei muuta osaamisarviota.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "languages",
+              "title": "Kielet ja kulttuuri",
+              "body": "Suomi ja ruotsi ovat kansalliskielet. Saamelaiset tunnistetaan alkuperäiskansaksi, jolla on oikeus ylläpitää ja kehittää omaa kieltään ja kulttuuriaan.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ],
+              "easyBody": "Kansalliskielet ovat suomi ja ruotsi. Saamelaisilla on oikeus omaan kieleen ja kulttuuriin."
+            },
+            {
+              "id": "expression",
+              "title": "Sananvapaus",
+              "body": "Sananvapaus suojaa tietojen ja mielipiteiden ilmaisemista ja vastaanottamista. Sen käytöstä säädetään tarkemmin lailla.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ],
+              "easyBody": "Saat ilmaista mielipiteesi. Laissa on tarkemmat säännöt."
+            },
+            {
+              "id": "together",
+              "title": "Yhdessä vaikuttaminen",
+              "body": "Kokoontumisvapaus suojaa kokouksia ja mielenosoituksia. Yhdistymisvapauteen kuuluu oikeus liittyä yhdistykseen tai olla liittymättä.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ],
+              "easyBody": "Saat osallistua kokouksiin. Saat liittyä yhdistykseen tai päättää olla liittymättä."
+            }
+          ]
+        },
+        "sv": {
+          "id": "culture-basics",
+          "revision": 1,
+          "introduction": "Läs om ämnets grunder och bekanta dig med orden. Öva sedan med frågor. Detta är preliminärt övningsmaterial. Läsning ändrar inte din kunskapsbedömning.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "languages",
+              "title": "Språk och kultur",
+              "body": "Finska och svenska är nationalspråken. Samerna erkänns som urfolk med rätt att bevara och utveckla sitt språk och sin kultur.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "expression",
+              "title": "Yttrandefrihet",
+              "body": "Yttrandefriheten skyddar uttryckande och mottagande av information och åsikter. Närmare regler finns i lag.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "together",
+              "title": "Att påverka tillsammans",
+              "body": "Mötesfriheten skyddar möten och demonstrationer. Föreningsfriheten omfattar rätten att gå med i en förening eller att avstå.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            }
+          ]
+        },
+        "en": {
+          "id": "culture-basics",
+          "revision": 1,
+          "introduction": "Read the basics and explore the vocabulary, then practise with questions. This is provisional practice material. Reading does not change your mastery estimate.",
+          "status": "DEMO",
+          "sections": [
+            {
+              "id": "languages",
+              "title": "Languages and culture",
+              "body": "Finnish and Swedish are national languages. The Sámi are recognised as an indigenous people with language and cultural rights.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "expression",
+              "title": "Freedom of expression",
+              "body": "Freedom of expression protects sharing and receiving information and opinions. Its exercise is regulated by law.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            },
+            {
+              "id": "together",
+              "title": "Participating together",
+              "body": "Freedom of assembly protects meetings and demonstrations. Freedom of association includes choosing to join an association or not.",
+              "sources": [
+                {
+                  "title": "Finlex: Suomen perustuslaki",
+                  "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+                }
+              ]
+            }
+          ]
         }
       }
     }
@@ -1603,6 +2407,2184 @@
             }
           ],
           "explanation": "Freedom of expression protects expression. Its exercise is regulated in more detail by law."
+        }
+      }
+    },
+    {
+      "id": "demo-term",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Kuinka pitkä eduskunnan vaalikausi tavallisesti on?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Neljä vuotta"
+        },
+        {
+          "id": "b",
+          "text": "Kaksi vuotta"
+        },
+        {
+          "id": "c",
+          "text": "Kuusi vuotta"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Kansanedustajat valitaan neljäksi vuodeksi. Ennenaikaiset vaalit ovat mahdollisia.",
+      "vocabulary": [
+        {
+          "term": "vaalikausi",
+          "meaning": "electoral term",
+          "swedish": "valperiod"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "How long is Parliament’s usual term?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Four years"
+            },
+            {
+              "id": "b",
+              "text": "Two years"
+            },
+            {
+              "id": "c",
+              "text": "Six years"
+            }
+          ],
+          "explanation": "Members are elected for four years; early elections are possible."
+        }
+      },
+      "easyExplanation": "Eduskunta valitaan yleensä neljäksi vuodeksi."
+    },
+    {
+      "id": "demo-term-sv",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Hur lång är riksdagens valperiod vanligtvis?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Fyra år"
+        },
+        {
+          "id": "b",
+          "text": "Två år"
+        },
+        {
+          "id": "c",
+          "text": "Sex år"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Riksdagsledamöterna väljs för fyra år. Förtida val är möjliga.",
+      "vocabulary": [
+        {
+          "term": "vaalikausi",
+          "meaning": "electoral term",
+          "swedish": "valperiod"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "How long is Parliament’s usual term?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Four years"
+            },
+            {
+              "id": "b",
+              "text": "Two years"
+            },
+            {
+              "id": "c",
+              "text": "Six years"
+            }
+          ],
+          "explanation": "Members are elected for four years; early elections are possible."
+        }
+      }
+    },
+    {
+      "id": "demo-voting",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Kuka saa äänestää eduskuntavaaleissa?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Jokainen Suomessa asuva 16-vuotias"
+        },
+        {
+          "id": "b",
+          "text": "Suomen kansalainen, joka täyttää viimeistään vaalipäivänä 18 vuotta"
+        },
+        {
+          "id": "c",
+          "text": "Vain työssä käyvä Suomen kansalainen"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Eduskuntavaaleissa äänioikeus on Suomen kansalaisella, joka on vaalipäivänä vähintään 18-vuotias.",
+      "vocabulary": [
+        {
+          "term": "äänioikeus",
+          "meaning": "right to vote",
+          "swedish": "rösträtt"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Vaalilaki, 2 §",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who may vote in parliamentary elections?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Every 16-year-old living in Finland"
+            },
+            {
+              "id": "b",
+              "text": "A Finnish citizen who turns 18 by election day"
+            },
+            {
+              "id": "c",
+              "text": "Only employed Finnish citizens"
+            }
+          ],
+          "explanation": "Finnish citizens aged 18 by election day may vote in parliamentary elections."
+        }
+      },
+      "easyExplanation": "Saat äänestää eduskuntavaaleissa, jos olet Suomen kansalainen ja vaalipäivänä vähintään 18-vuotias."
+    },
+    {
+      "id": "demo-voting-sv",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Vem får rösta i riksdagsval?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Alla 16-åringar som bor i Finland"
+        },
+        {
+          "id": "b",
+          "text": "En finsk medborgare som fyller 18 år senast på valdagen"
+        },
+        {
+          "id": "c",
+          "text": "Bara finska medborgare som arbetar"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "En finsk medborgare som är minst 18 år på valdagen får rösta i riksdagsval.",
+      "vocabulary": [
+        {
+          "term": "äänioikeus",
+          "meaning": "right to vote",
+          "swedish": "rösträtt"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Vaalilaki, 2 §",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who may vote in parliamentary elections?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Every 16-year-old living in Finland"
+            },
+            {
+              "id": "b",
+              "text": "A Finnish citizen who turns 18 by election day"
+            },
+            {
+              "id": "c",
+              "text": "Only employed Finnish citizens"
+            }
+          ],
+          "explanation": "Finnish citizens aged 18 by election day may vote in parliamentary elections."
+        }
+      }
+    },
+    {
+      "id": "demo-courts",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Kuka käyttää Suomessa tuomiovaltaa?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Eduskunnan puhemies"
+        },
+        {
+          "id": "b",
+          "text": "Kunnanvaltuusto"
+        },
+        {
+          "id": "c",
+          "text": "Riippumattomat tuomioistuimet"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Tuomiovaltaa käyttävät riippumattomat tuomioistuimet. Eduskunta käyttää lainsäädäntövaltaa.",
+      "vocabulary": [
+        {
+          "term": "tuomioistuin",
+          "meaning": "court",
+          "swedish": "domstol"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who exercises judicial authority in Finland?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The Speaker of Parliament"
+            },
+            {
+              "id": "b",
+              "text": "Municipal councils"
+            },
+            {
+              "id": "c",
+              "text": "Independent courts"
+            }
+          ],
+          "explanation": "Independent courts exercise judicial authority; Parliament makes laws."
+        }
+      },
+      "easyExplanation": "Tuomioistuimet ratkaisevat oikeusasioita. Ne ovat riippumattomia."
+    },
+    {
+      "id": "demo-courts-sv",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Vem utövar den dömande makten i Finland?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Riksdagens talman"
+        },
+        {
+          "id": "b",
+          "text": "Kommunfullmäktige"
+        },
+        {
+          "id": "c",
+          "text": "Oberoende domstolar"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Oberoende domstolar utövar den dömande makten. Riksdagen stiftar lagarna.",
+      "vocabulary": [
+        {
+          "term": "tuomioistuin",
+          "meaning": "court",
+          "swedish": "domstol"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who exercises judicial authority in Finland?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The Speaker of Parliament"
+            },
+            {
+              "id": "b",
+              "text": "Municipal councils"
+            },
+            {
+              "id": "c",
+              "text": "Independent courts"
+            }
+          ],
+          "explanation": "Independent courts exercise judicial authority; Parliament makes laws."
+        }
+      }
+    },
+    {
+      "id": "demo-privacy",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Mikä kuuluu yksityiselämän suojaan?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oman kodin ja luottamuksellisten viestien suoja"
+        },
+        {
+          "id": "b",
+          "text": "Oikeus lukea kaikkien yksityiset viestit"
+        },
+        {
+          "id": "c",
+          "text": "Oikeus välttää kaikkia lakeja"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Perustuslaki suojaa yksityiselämää, kotirauhaa ja luottamuksellisia viestejä. Rajoituksista säädetään lailla.",
+      "vocabulary": [
+        {
+          "term": "kotirauha",
+          "meaning": "protection of the home",
+          "swedish": "hemfrid"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What does privacy protection include?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Protection of the home and confidential messages"
+            },
+            {
+              "id": "b",
+              "text": "Reading everyone’s private messages"
+            },
+            {
+              "id": "c",
+              "text": "Exemption from all laws"
+            }
+          ],
+          "explanation": "The Constitution protects private life, the home and confidential messages. Restrictions are regulated by law."
+        }
+      },
+      "easyExplanation": "Kotisi ja yksityiset viestisi ovat suojattuja. Laissa voidaan säätää rajoituksista."
+    },
+    {
+      "id": "demo-privacy-sv",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Vad omfattar skyddet för privatlivet?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Skydd för hemmet och förtroliga meddelanden"
+        },
+        {
+          "id": "b",
+          "text": "Rätten att läsa allas privata meddelanden"
+        },
+        {
+          "id": "c",
+          "text": "Rätten att slippa följa lagar"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Grundlagen skyddar privatlivet, hemfriden och förtroliga meddelanden. Begränsningar regleras i lag.",
+      "vocabulary": [
+        {
+          "term": "kotirauha",
+          "meaning": "protection of the home",
+          "swedish": "hemfrid"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What does privacy protection include?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Protection of the home and confidential messages"
+            },
+            {
+              "id": "b",
+              "text": "Reading everyone’s private messages"
+            },
+            {
+              "id": "c",
+              "text": "Exemption from all laws"
+            }
+          ],
+          "explanation": "The Constitution protects private life, the home and confidential messages. Restrictions are regulated by law."
+        }
+      }
+    },
+    {
+      "id": "demo-basic-education",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Mihin opetukseen jokaisella on perustuslain mukaan oikeus maksutta?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Kaikkiin yksityisiin kursseihin"
+        },
+        {
+          "id": "b",
+          "text": "Perusopetukseen"
+        },
+        {
+          "id": "c",
+          "text": "Kaikkeen ajokoulutukseen"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Perustuslaki turvaa oikeuden maksuttomaan perusopetukseen.",
+      "vocabulary": [
+        {
+          "term": "perusopetus",
+          "meaning": "basic education",
+          "swedish": "grundläggande utbildning"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which education does the Constitution guarantee free of charge?",
+          "options": [
+            {
+              "id": "a",
+              "text": "All private courses"
+            },
+            {
+              "id": "b",
+              "text": "Basic education"
+            },
+            {
+              "id": "c",
+              "text": "All driving lessons"
+            }
+          ],
+          "explanation": "The Constitution guarantees the right to free basic education."
+        }
+      },
+      "easyExplanation": "Perusopetus on maksutonta."
+    },
+    {
+      "id": "demo-basic-education-sv",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Vilken undervisning har alla enligt grundlagen rätt till utan avgift?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Alla privata kurser"
+        },
+        {
+          "id": "b",
+          "text": "Grundläggande utbildning"
+        },
+        {
+          "id": "c",
+          "text": "All körundervisning"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Grundlagen tryggar rätten till avgiftsfri grundläggande utbildning.",
+      "vocabulary": [
+        {
+          "term": "perusopetus",
+          "meaning": "basic education",
+          "swedish": "grundläggande utbildning"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which education does the Constitution guarantee free of charge?",
+          "options": [
+            {
+              "id": "a",
+              "text": "All private courses"
+            },
+            {
+              "id": "b",
+              "text": "Basic education"
+            },
+            {
+              "id": "c",
+              "text": "All driving lessons"
+            }
+          ],
+          "explanation": "The Constitution guarantees the right to free basic education."
+        }
+      }
+    },
+    {
+      "id": "demo-follow-law",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Keiden täytyy noudattaa Suomen lakeja Suomessa?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Vain Suomen kansalaisten"
+        },
+        {
+          "id": "b",
+          "text": "Vain täysi-ikäisten työntekijöiden"
+        },
+        {
+          "id": "c",
+          "text": "Kaikkien Suomessa asuvien tai oleskelevien"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Suomen lakeja täytyy noudattaa myös silloin, kun ei ole Suomen kansalainen.",
+      "vocabulary": [
+        {
+          "term": "velvollisuus",
+          "meaning": "obligation",
+          "swedish": "skyldighet"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Lait ja oikeudet",
+        "url": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who must follow Finnish law in Finland?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only Finnish citizens"
+            },
+            {
+              "id": "b",
+              "text": "Only adult employees"
+            },
+            {
+              "id": "c",
+              "text": "Everyone living or staying in Finland"
+            }
+          ],
+          "explanation": "People living or staying in Finland must follow Finnish law, regardless of citizenship."
+        }
+      },
+      "easyExplanation": "Kaikkien Suomessa olevien täytyy noudattaa Suomen lakeja."
+    },
+    {
+      "id": "demo-follow-law-sv",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Vilka måste följa Finlands lagar i Finland?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bara finska medborgare"
+        },
+        {
+          "id": "b",
+          "text": "Bara vuxna arbetstagare"
+        },
+        {
+          "id": "c",
+          "text": "Alla som bor eller vistas i Finland"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Finlands lagar gäller också personer som inte är finska medborgare.",
+      "vocabulary": [
+        {
+          "term": "velvollisuus",
+          "meaning": "obligation",
+          "swedish": "skyldighet"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Lait ja oikeudet",
+        "url": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who must follow Finnish law in Finland?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only Finnish citizens"
+            },
+            {
+              "id": "b",
+              "text": "Only adult employees"
+            },
+            {
+              "id": "c",
+              "text": "Everyone living or staying in Finland"
+            }
+          ],
+          "explanation": "People living or staying in Finland must follow Finnish law, regardless of citizenship."
+        }
+      }
+    },
+    {
+      "id": "demo-sweden",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Mihin valtakuntaan suurin osa Suomen alueesta kuului ennen vuotta 1809?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ruotsiin"
+        },
+        {
+          "id": "b",
+          "text": "Tanskaan"
+        },
+        {
+          "id": "c",
+          "text": "Itsenäiseen Suomeen"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Suurin osa Suomen alueesta kuului pitkään Ruotsin valtakuntaan.",
+      "vocabulary": [
+        {
+          "term": "valtakunta",
+          "meaning": "kingdom or realm",
+          "swedish": "rike"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Suomen historiaa",
+        "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which kingdom included most of Finland before 1809?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Sweden"
+            },
+            {
+              "id": "b",
+              "text": "Denmark"
+            },
+            {
+              "id": "c",
+              "text": "Independent Finland"
+            }
+          ],
+          "explanation": "Most of Finland belonged to Sweden for centuries."
+        }
+      },
+      "easyExplanation": "Suurin osa Suomesta oli ennen vuotta 1809 osa Ruotsia."
+    },
+    {
+      "id": "demo-sweden-sv",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Vilket rike tillhörde största delen av Finlands område före 1809?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sverige"
+        },
+        {
+          "id": "b",
+          "text": "Danmark"
+        },
+        {
+          "id": "c",
+          "text": "Ett självständigt Finland"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Största delen av Finlands område tillhörde länge det svenska riket.",
+      "vocabulary": [
+        {
+          "term": "valtakunta",
+          "meaning": "kingdom or realm",
+          "swedish": "rike"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Suomen historiaa",
+        "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which kingdom included most of Finland before 1809?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Sweden"
+            },
+            {
+              "id": "b",
+              "text": "Denmark"
+            },
+            {
+              "id": "c",
+              "text": "Independent Finland"
+            }
+          ],
+          "explanation": "Most of Finland belonged to Sweden for centuries."
+        }
+      }
+    },
+    {
+      "id": "demo-autonomy",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Mikä Suomen asema oli Venäjän keisarikunnassa vuosina 1809–1917?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Itsenäinen tasavalta"
+        },
+        {
+          "id": "b",
+          "text": "Autonominen suuriruhtinaskunta"
+        },
+        {
+          "id": "c",
+          "text": "Euroopan unionin jäsen"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Suomi oli autonominen osa Venäjän keisarikuntaa. Autonomia tarkoitti sisäistä itsehallintoa.",
+      "vocabulary": [
+        {
+          "term": "autonomia",
+          "meaning": "autonomy or self-government",
+          "swedish": "autonomi"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Suomen historiaa",
+        "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What was Finland’s status in the Russian Empire from 1809 to 1917?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Independent republic"
+            },
+            {
+              "id": "b",
+              "text": "Autonomous Grand Duchy"
+            },
+            {
+              "id": "c",
+              "text": "Member of the European Union"
+            }
+          ],
+          "explanation": "Finland was an autonomous Grand Duchy within the Russian Empire, with internal self-government."
+        }
+      },
+      "easyExplanation": "Suomi oli osa Venäjää. Suomi sai hoitaa monia omia asioitaan."
+    },
+    {
+      "id": "demo-autonomy-sv",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Vilken ställning hade Finland i det ryska kejsardömet 1809–1917?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Självständig republik"
+        },
+        {
+          "id": "b",
+          "text": "Autonomt storfurstendöme"
+        },
+        {
+          "id": "c",
+          "text": "Medlem i Europeiska unionen"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Finland var en autonom del av det ryska kejsardömet, med inre självstyre.",
+      "vocabulary": [
+        {
+          "term": "autonomia",
+          "meaning": "autonomy or self-government",
+          "swedish": "autonomi"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Suomen historiaa",
+        "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What was Finland’s status in the Russian Empire from 1809 to 1917?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Independent republic"
+            },
+            {
+              "id": "b",
+              "text": "Autonomous Grand Duchy"
+            },
+            {
+              "id": "c",
+              "text": "Member of the European Union"
+            }
+          ],
+          "explanation": "Finland was an autonomous Grand Duchy within the Russian Empire, with internal self-government."
+        }
+      }
+    },
+    {
+      "id": "demo-suffrage",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Minä vuonna Suomessa säädettiin yleinen ja yhtäläinen äänioikeus, myös naisille?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1809"
+        },
+        {
+          "id": "b",
+          "text": "1995"
+        },
+        {
+          "id": "c",
+          "text": "1906"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Vuoden 1906 uudistus toi yleisen ja yhtäläisen äänioikeuden myös naisille. Ensimmäiset eduskuntavaalit pidettiin 1907.",
+      "vocabulary": [
+        {
+          "term": "yhtäläinen",
+          "meaning": "equal",
+          "swedish": "lika"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Suomen historiaa",
+        "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "When did Finland introduce universal and equal suffrage, including women?",
+          "options": [
+            {
+              "id": "a",
+              "text": "1809"
+            },
+            {
+              "id": "b",
+              "text": "1995"
+            },
+            {
+              "id": "c",
+              "text": "1906"
+            }
+          ],
+          "explanation": "The reform was in 1906; the first parliamentary elections followed in 1907."
+        }
+      },
+      "easyExplanation": "Myös naiset saivat äänioikeuden vuonna 1906."
+    },
+    {
+      "id": "demo-suffrage-sv",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Vilket år infördes allmän och lika rösträtt i Finland, också för kvinnor?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1809"
+        },
+        {
+          "id": "b",
+          "text": "1995"
+        },
+        {
+          "id": "c",
+          "text": "1906"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Reformen 1906 gav allmän och lika rösträtt också åt kvinnor. Det första riksdagsvalet hölls 1907.",
+      "vocabulary": [
+        {
+          "term": "yhtäläinen",
+          "meaning": "equal",
+          "swedish": "lika"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Suomen historiaa",
+        "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "When did Finland introduce universal and equal suffrage, including women?",
+          "options": [
+            {
+              "id": "a",
+              "text": "1809"
+            },
+            {
+              "id": "b",
+              "text": "1995"
+            },
+            {
+              "id": "c",
+              "text": "1906"
+            }
+          ],
+          "explanation": "The reform was in 1906; the first parliamentary elections followed in 1907."
+        }
+      }
+    },
+    {
+      "id": "demo-oral-contract",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Voiko työsopimus Suomessa olla suullinen?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Kyllä"
+        },
+        {
+          "id": "b",
+          "text": "Ei koskaan"
+        },
+        {
+          "id": "c",
+          "text": "Vain yhden päivän ajan"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Työsopimus voi olla suullinen. Kirjallinen sopimus helpottaa sovittujen ehtojen tarkistamista.",
+      "vocabulary": [
+        {
+          "term": "suullinen",
+          "meaning": "oral",
+          "swedish": "muntlig"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Työsopimus ja työsuhteen ehdot",
+        "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Can an employment contract in Finland be oral?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Yes"
+            },
+            {
+              "id": "b",
+              "text": "Never"
+            },
+            {
+              "id": "c",
+              "text": "Only for one day"
+            }
+          ],
+          "explanation": "An employment contract can be oral. A written contract makes the agreed terms easier to check."
+        }
+      },
+      "easyExplanation": "Työsopimus voi olla suullinen. Kirjallisesta sopimuksesta näet, mitä sovittiin."
+    },
+    {
+      "id": "demo-oral-contract-sv",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Kan ett arbetsavtal i Finland vara muntligt?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ja"
+        },
+        {
+          "id": "b",
+          "text": "Aldrig"
+        },
+        {
+          "id": "c",
+          "text": "Bara för en dag"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Ett arbetsavtal kan vara muntligt. Ett skriftligt avtal gör villkoren lättare att kontrollera.",
+      "vocabulary": [
+        {
+          "term": "suullinen",
+          "meaning": "oral",
+          "swedish": "muntlig"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Työsopimus ja työsuhteen ehdot",
+        "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Can an employment contract in Finland be oral?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Yes"
+            },
+            {
+              "id": "b",
+              "text": "Never"
+            },
+            {
+              "id": "c",
+              "text": "Only for one day"
+            }
+          ],
+          "explanation": "An employment contract can be oral. A written contract makes the agreed terms easier to check."
+        }
+      }
+    },
+    {
+      "id": "demo-orientation",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Mitä työnantajan pitää tehdä, kun työntekijä aloittaa uuden työn?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Antaa työntekijän opetella vaaralliset koneet yksin"
+        },
+        {
+          "id": "b",
+          "text": "Perehdyttää työntekijä tehtäviin ja turvallisiin työtapoihin"
+        },
+        {
+          "id": "c",
+          "text": "Antaa turvallisuusohjeet vain pyynnöstä"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Työnantajan pitää perehdyttää työntekijä tehtäviin ja työpaikan turvallisuusohjeisiin.",
+      "vocabulary": [
+        {
+          "term": "perehdytys",
+          "meaning": "induction or orientation",
+          "swedish": "introduktion"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+        "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What must an employer do when an employee starts a new job?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Leave the employee to learn dangerous machinery alone"
+            },
+            {
+              "id": "b",
+              "text": "Introduce the duties and safe working methods"
+            },
+            {
+              "id": "c",
+              "text": "Provide safety instructions only on request"
+            }
+          ],
+          "explanation": "The employer must provide induction into duties and workplace safety."
+        }
+      },
+      "easyExplanation": "Työnantaja näyttää, miten työ tehdään turvallisesti."
+    },
+    {
+      "id": "demo-orientation-sv",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Vad ska arbetsgivaren göra när en arbetstagare börjar ett nytt arbete?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Låta arbetstagaren lära sig farliga maskiner ensam"
+        },
+        {
+          "id": "b",
+          "text": "Introducera arbetsuppgifterna och säkra arbetssätt"
+        },
+        {
+          "id": "c",
+          "text": "Ge säkerhetsanvisningar bara på begäran"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Arbetsgivaren ska introducera arbetsuppgifterna och säkerhetsanvisningarna.",
+      "vocabulary": [
+        {
+          "term": "perehdytys",
+          "meaning": "induction or orientation",
+          "swedish": "introduktion"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+        "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What must an employer do when an employee starts a new job?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Leave the employee to learn dangerous machinery alone"
+            },
+            {
+              "id": "b",
+              "text": "Introduce the duties and safe working methods"
+            },
+            {
+              "id": "c",
+              "text": "Provide safety instructions only on request"
+            }
+          ],
+          "explanation": "The employer must provide induction into duties and workplace safety."
+        }
+      }
+    },
+    {
+      "id": "demo-protective-equipment",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Kuka maksaa työssä tarvittavat turvavälineet?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Työntekijä aina"
+        },
+        {
+          "id": "b",
+          "text": "Työntekijän perhe"
+        },
+        {
+          "id": "c",
+          "text": "Työnantaja"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Työnantaja maksaa työssä tarvittavat turvavälineet. Työntekijän pitää käyttää määrättyjä välineitä.",
+      "vocabulary": [
+        {
+          "term": "turvaväline",
+          "meaning": "safety equipment",
+          "swedish": "skyddsutrustning"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+        "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who pays for safety equipment required at work?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Always the employee"
+            },
+            {
+              "id": "b",
+              "text": "The employee’s family"
+            },
+            {
+              "id": "c",
+              "text": "The employer"
+            }
+          ],
+          "explanation": "The employer pays for required safety equipment. Employees must use the prescribed equipment."
+        }
+      },
+      "easyExplanation": "Työnantaja maksaa turvavälineet. Käytä niitä ohjeiden mukaan."
+    },
+    {
+      "id": "demo-protective-equipment-sv",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Vem betalar den skyddsutrustning som behövs i arbetet?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Alltid arbetstagaren"
+        },
+        {
+          "id": "b",
+          "text": "Arbetstagarens familj"
+        },
+        {
+          "id": "c",
+          "text": "Arbetsgivaren"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Arbetsgivaren betalar den skyddsutrustning som behövs. Arbetstagaren ska använda den föreskrivna utrustningen.",
+      "vocabulary": [
+        {
+          "term": "turvaväline",
+          "meaning": "safety equipment",
+          "swedish": "skyddsutrustning"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+        "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who pays for safety equipment required at work?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Always the employee"
+            },
+            {
+              "id": "b",
+              "text": "The employee’s family"
+            },
+            {
+              "id": "c",
+              "text": "The employer"
+            }
+          ],
+          "explanation": "The employer pays for required safety equipment. Employees must use the prescribed equipment."
+        }
+      }
+    },
+    {
+      "id": "demo-emergency-call",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "Milloin lopetat hätäpuhelun?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Kun hätäkeskuspäivystäjä antaa luvan"
+        },
+        {
+          "id": "b",
+          "text": "Heti, kun olet sanonut osoitteesi"
+        },
+        {
+          "id": "c",
+          "text": "Aina minuutin kuluttua"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Vastaa kysymyksiin ja noudata ohjeita. Lopeta puhelu vasta, kun päivystäjä antaa luvan.",
+      "vocabulary": [
+        {
+          "term": "hätäkeskuspäivystäjä",
+          "meaning": "emergency operator",
+          "swedish": "nödcentralsoperatör"
+        }
+      ],
+      "source": {
+        "title": "Hätäkeskuslaitos: Hätäilmoituksen tekeminen",
+        "url": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "When should you end an emergency call?",
+          "options": [
+            {
+              "id": "a",
+              "text": "When the operator gives permission"
+            },
+            {
+              "id": "b",
+              "text": "Immediately after giving your address"
+            },
+            {
+              "id": "c",
+              "text": "Always after one minute"
+            }
+          ],
+          "explanation": "Answer the questions, follow instructions and end the call only with the operator’s permission."
+        }
+      },
+      "easyExplanation": "Kuuntele ohjeet. Lopeta puhelu vasta, kun saat luvan."
+    },
+    {
+      "id": "demo-emergency-call-sv",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "När avslutar du ett nödsamtal?",
+      "options": [
+        {
+          "id": "a",
+          "text": "När nödcentralsoperatören ger tillstånd"
+        },
+        {
+          "id": "b",
+          "text": "Så snart du har sagt adressen"
+        },
+        {
+          "id": "c",
+          "text": "Alltid efter en minut"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Svara på frågorna och följ anvisningarna. Avsluta samtalet först när operatören ger tillstånd.",
+      "vocabulary": [
+        {
+          "term": "hätäkeskuspäivystäjä",
+          "meaning": "emergency operator",
+          "swedish": "nödcentralsoperatör"
+        }
+      ],
+      "source": {
+        "title": "Hätäkeskuslaitos: Hätäilmoituksen tekeminen",
+        "url": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "When should you end an emergency call?",
+          "options": [
+            {
+              "id": "a",
+              "text": "When the operator gives permission"
+            },
+            {
+              "id": "b",
+              "text": "Immediately after giving your address"
+            },
+            {
+              "id": "c",
+              "text": "Always after one minute"
+            }
+          ],
+          "explanation": "Answer the questions, follow instructions and end the call only with the operator’s permission."
+        }
+      }
+    },
+    {
+      "id": "demo-library-fee",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "Maksaako ensimmäinen kirjastokortti?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aina kymmenen euroa"
+        },
+        {
+          "id": "b",
+          "text": "Ei, ensimmäinen kortti on maksuton"
+        },
+        {
+          "id": "c",
+          "text": "Se riippuu kansalaisuudesta"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Ensimmäinen kirjastokortti on maksuton. Kadonneen kortin uusimisesta voidaan periä maksu.",
+      "vocabulary": [
+        {
+          "term": "maksuton",
+          "meaning": "free of charge",
+          "swedish": "avgiftsfri"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Kirjastot",
+        "url": "https://infofinland.fi/fi/leisure/libraries"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Does the first library card cost anything?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Always ten euros"
+            },
+            {
+              "id": "b",
+              "text": "No, the first card is free"
+            },
+            {
+              "id": "c",
+              "text": "It depends on citizenship"
+            }
+          ],
+          "explanation": "The first library card is free. Replacing a lost card can cost money."
+        }
+      },
+      "easyExplanation": "Ensimmäinen kortti on ilmainen. Jos kadotat kortin, uusi kortti voi maksaa."
+    },
+    {
+      "id": "demo-library-fee-sv",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "Kostar det första bibliotekskortet?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Alltid tio euro"
+        },
+        {
+          "id": "b",
+          "text": "Nej, det första kortet är gratis"
+        },
+        {
+          "id": "c",
+          "text": "Det beror på medborgarskapet"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Det första bibliotekskortet är gratis. Ett nytt kort som ersätter ett borttappat kan kosta.",
+      "vocabulary": [
+        {
+          "term": "maksuton",
+          "meaning": "free of charge",
+          "swedish": "avgiftsfri"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Kirjastot",
+        "url": "https://infofinland.fi/fi/leisure/libraries"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Does the first library card cost anything?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Always ten euros"
+            },
+            {
+              "id": "b",
+              "text": "No, the first card is free"
+            },
+            {
+              "id": "c",
+              "text": "It depends on citizenship"
+            }
+          ],
+          "explanation": "The first library card is free. Replacing a lost card can cost money."
+        }
+      }
+    },
+    {
+      "id": "demo-library-return",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "Miten vältät kirjastolainan myöhästymismaksun?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Säilyttämällä kirjan aina kotona"
+        },
+        {
+          "id": "b",
+          "text": "Hankkimalla uuden kirjastokortin"
+        },
+        {
+          "id": "c",
+          "text": "Palauttamalla tai uusimalla lainan ajoissa"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Palauta laina viimeistään eräpäivänä tai uusi se ajoissa, jos uusiminen on mahdollista.",
+      "vocabulary": [
+        {
+          "term": "eräpäivä",
+          "meaning": "due date",
+          "swedish": "förfallodag"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Kirjastot",
+        "url": "https://infofinland.fi/fi/leisure/libraries"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "How can you avoid a library overdue fee?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Keep the book at home indefinitely"
+            },
+            {
+              "id": "b",
+              "text": "Get a new library card"
+            },
+            {
+              "id": "c",
+              "text": "Return or renew the loan on time"
+            }
+          ],
+          "explanation": "Return a loan by its due date or renew it on time when renewal is available."
+        }
+      },
+      "easyExplanation": "Palauta kirja ajoissa. Voit myös uusia lainan, jos kirjasto sallii sen."
+    },
+    {
+      "id": "demo-library-return-sv",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "Hur undviker du en förseningsavgift för ett bibliotekslån?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Genom att alltid behålla boken hemma"
+        },
+        {
+          "id": "b",
+          "text": "Genom att skaffa ett nytt bibliotekskort"
+        },
+        {
+          "id": "c",
+          "text": "Genom att lämna tillbaka eller förnya lånet i tid"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Lämna tillbaka lånet senast på förfallodagen eller förnya det i tid, om det går.",
+      "vocabulary": [
+        {
+          "term": "eräpäivä",
+          "meaning": "due date",
+          "swedish": "förfallodag"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Kirjastot",
+        "url": "https://infofinland.fi/fi/leisure/libraries"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "How can you avoid a library overdue fee?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Keep the book at home indefinitely"
+            },
+            {
+              "id": "b",
+              "text": "Get a new library card"
+            },
+            {
+              "id": "c",
+              "text": "Return or renew the loan on time"
+            }
+          ],
+          "explanation": "Return a loan by its due date or renew it on time when renewal is available."
+        }
+      }
+    },
+    {
+      "id": "demo-assembly",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Mikä oikeus suojaa osallistumista kokouksiin ja mielenosoituksiin?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Kokoontumisvapaus"
+        },
+        {
+          "id": "b",
+          "text": "Omaisuuden suoja"
+        },
+        {
+          "id": "c",
+          "text": "Äänioikeus eduskuntavaaleissa"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Kokoontumisvapaus suojaa kokousten ja mielenosoitusten järjestämistä ja niihin osallistumista. Käytännön säännöistä säädetään lailla.",
+      "vocabulary": [
+        {
+          "term": "kokoontumisvapaus",
+          "meaning": "freedom of assembly",
+          "swedish": "mötesfrihet"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which right protects participation in meetings and demonstrations?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Freedom of assembly"
+            },
+            {
+              "id": "b",
+              "text": "Property protection"
+            },
+            {
+              "id": "c",
+              "text": "Parliamentary voting rights"
+            }
+          ],
+          "explanation": "Freedom of assembly protects organising and attending meetings and demonstrations. Its exercise is regulated by law."
+        }
+      },
+      "easyExplanation": "Saat osallistua kokouksiin ja mielenosoituksiin. Laissa on tarkemmat säännöt."
+    },
+    {
+      "id": "demo-assembly-sv",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Vilken rättighet skyddar deltagande i möten och demonstrationer?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mötesfriheten"
+        },
+        {
+          "id": "b",
+          "text": "Egendomsskyddet"
+        },
+        {
+          "id": "c",
+          "text": "Rösträtten i riksdagsval"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Mötesfriheten skyddar rätten att ordna och delta i möten och demonstrationer. Praktiska regler finns i lag.",
+      "vocabulary": [
+        {
+          "term": "kokoontumisvapaus",
+          "meaning": "freedom of assembly",
+          "swedish": "mötesfrihet"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which right protects participation in meetings and demonstrations?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Freedom of assembly"
+            },
+            {
+              "id": "b",
+              "text": "Property protection"
+            },
+            {
+              "id": "c",
+              "text": "Parliamentary voting rights"
+            }
+          ],
+          "explanation": "Freedom of assembly protects organising and attending meetings and demonstrations. Its exercise is regulated by law."
+        }
+      }
+    },
+    {
+      "id": "demo-association",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Voiko ihminen päättää olla kuulumatta yhdistykseen?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ei, jokaisen on liityttävä johonkin yhdistykseen"
+        },
+        {
+          "id": "b",
+          "text": "Kyllä, yhdistymisvapaus sisältää myös tämän oikeuden"
+        },
+        {
+          "id": "c",
+          "text": "Vain jos työnantaja antaa luvan"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Yhdistymisvapaus sisältää oikeuden kuulua tai olla kuulumatta yhdistykseen.",
+      "vocabulary": [
+        {
+          "term": "yhdistymisvapaus",
+          "meaning": "freedom of association",
+          "swedish": "föreningsfrihet"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "May a person choose not to belong to an association?",
+          "options": [
+            {
+              "id": "a",
+              "text": "No, everyone must join an association"
+            },
+            {
+              "id": "b",
+              "text": "Yes, freedom of association includes this right"
+            },
+            {
+              "id": "c",
+              "text": "Only with the employer’s permission"
+            }
+          ],
+          "explanation": "Freedom of association includes the right to belong or not to belong to an association."
+        }
+      },
+      "easyExplanation": "Saat liittyä yhdistykseen. Saat myös päättää, ettet liity."
+    },
+    {
+      "id": "demo-association-sv",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Får en person välja att inte tillhöra en förening?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nej, alla måste gå med i en förening"
+        },
+        {
+          "id": "b",
+          "text": "Ja, föreningsfriheten omfattar också denna rätt"
+        },
+        {
+          "id": "c",
+          "text": "Bara med arbetsgivarens tillstånd"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Föreningsfriheten innebär rätt att tillhöra eller inte tillhöra en förening.",
+      "vocabulary": [
+        {
+          "term": "yhdistymisvapaus",
+          "meaning": "freedom of association",
+          "swedish": "föreningsfrihet"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "May a person choose not to belong to an association?",
+          "options": [
+            {
+              "id": "a",
+              "text": "No, everyone must join an association"
+            },
+            {
+              "id": "b",
+              "text": "Yes, freedom of association includes this right"
+            },
+            {
+              "id": "c",
+              "text": "Only with the employer’s permission"
+            }
+          ],
+          "explanation": "Freedom of association includes the right to belong or not to belong to an association."
+        }
+      }
+    },
+    {
+      "id": "demo-sami",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Mikä ryhmä mainitaan perustuslaissa alkuperäiskansana?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Kaikki Euroopan unionin kansalaiset"
+        },
+        {
+          "id": "b",
+          "text": "Kaikki suomenkieliset"
+        },
+        {
+          "id": "c",
+          "text": "Saamelaiset"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Perustuslaki tunnistaa saamelaiset alkuperäiskansaksi ja turvaa oikeuden ylläpitää ja kehittää omaa kieltä ja kulttuuria.",
+      "vocabulary": [
+        {
+          "term": "alkuperäiskansa",
+          "meaning": "indigenous people",
+          "swedish": "urfolk"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which group does the Constitution recognise as an indigenous people?",
+          "options": [
+            {
+              "id": "a",
+              "text": "All European Union citizens"
+            },
+            {
+              "id": "b",
+              "text": "All Finnish speakers"
+            },
+            {
+              "id": "c",
+              "text": "The Sámi"
+            }
+          ],
+          "explanation": "The Constitution recognises the Sámi as an indigenous people and protects their language and culture."
+        }
+      },
+      "easyExplanation": "Saamelaiset ovat alkuperäiskansa. Heillä on oikeus omaan kieleen ja kulttuuriin."
+    },
+    {
+      "id": "demo-sami-sv",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Vilken grupp nämns i grundlagen som ett urfolk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Alla medborgare i Europeiska unionen"
+        },
+        {
+          "id": "b",
+          "text": "Alla finskspråkiga"
+        },
+        {
+          "id": "c",
+          "text": "Samerna"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Grundlagen erkänner samerna som urfolk och tryggar rätten att bevara och utveckla det egna språket och kulturen.",
+      "vocabulary": [
+        {
+          "term": "alkuperäiskansa",
+          "meaning": "indigenous people",
+          "swedish": "urfolk"
+        }
+      ],
+      "source": {
+        "title": "Finlex: Suomen perustuslaki",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "provisional-pilot"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which group does the Constitution recognise as an indigenous people?",
+          "options": [
+            {
+              "id": "a",
+              "text": "All European Union citizens"
+            },
+            {
+              "id": "b",
+              "text": "All Finnish speakers"
+            },
+            {
+              "id": "c",
+              "text": "The Sámi"
+            }
+          ],
+          "explanation": "The Constitution recognises the Sámi as an indigenous people and protects their language and culture."
         }
       }
     }

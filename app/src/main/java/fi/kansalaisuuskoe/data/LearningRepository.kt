@@ -78,7 +78,7 @@ class LearningRepository(private val database: LearningDatabase) {
             dao.deleteProgress()
             dao.deleteQuestions()
             dao.deleteTopics()
-            dao.insertTopics(content.topics.map { TopicEntity(it.id, it.title, it.description, it.order, ContentCodec.topicTranslationsAdapter.toJson(it.translations)) })
+            dao.insertTopics(content.topics.map { TopicEntity(it.id, it.title, it.description, it.order, ContentCodec.topicTranslationsAdapter.toJson(it.translations), ContentCodec.lessonsAdapter.toJson(it.lessons)) })
             dao.insertQuestions(content.questions.map { QuestionEntity(it.id, it.revision, ContentCodec.questionAdapter.toJson(it)) })
             dao.insertAttempts(attempts.map { it.entity() })
             progress.forEach { dao.saveProgress(ProgressEntity.from(it)) }
@@ -120,7 +120,7 @@ class LearningRepository(private val database: LearningDatabase) {
     }
 
     private suspend fun installed() = InstalledContent(dao.metadata(), dao.topics().map {
-        TopicDto(it.id, it.title, it.description, it.sortOrder, requireNotNull(ContentCodec.topicTranslationsAdapter.fromJson(it.translations)))
+        it.dto()
     }, dao.questions().map { requireNotNull(ContentCodec.questionAdapter.fromJson(it.payload)) })
 
     private suspend fun prepare(content: ContentPackageDto, hash: String): PreparedContent {
@@ -135,7 +135,7 @@ class LearningRepository(private val database: LearningDatabase) {
             val content = preview.content
             dao.deleteQuestions()
             dao.deleteTopics()
-            dao.insertTopics(content.topics.map { TopicEntity(it.id, it.title, it.description, it.order, ContentCodec.topicTranslationsAdapter.toJson(it.translations)) })
+            dao.insertTopics(content.topics.map { TopicEntity(it.id, it.title, it.description, it.order, ContentCodec.topicTranslationsAdapter.toJson(it.translations), ContentCodec.lessonsAdapter.toJson(it.lessons)) })
             dao.insertQuestions(content.questions.map { QuestionEntity(it.id, it.revision, ContentCodec.questionAdapter.toJson(it)) })
             dao.saveMetadata(ContentMetadata(packageId = content.packageId, version = content.version, hash = preview.hash))
         }

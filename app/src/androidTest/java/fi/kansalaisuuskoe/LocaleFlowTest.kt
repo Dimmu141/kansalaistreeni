@@ -33,7 +33,7 @@ class LocaleFlowTest {
 
     @Before fun resetDemoState() = runBlocking {
         app.container.database.clearAllTables()
-        repository.initialize(app)
+        repository.initialize(app); repository.installRegressionContent()
         app.container.settings.setInterfaceLanguage(InterfaceLanguage.FINNISH)
         app.container.settings.setStudyLanguage(fi.kansalaisuuskoe.domain.StudyLanguage.FINNISH)
         app.container.settings.setExplanation(fi.kansalaisuuskoe.data.ExplanationPreference.STUDY_LANGUAGE)

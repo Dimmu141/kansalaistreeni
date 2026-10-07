@@ -65,6 +65,31 @@ def verify(content, ledger):
         sv = swedish[key]
         if fi["correctOptionId"] != sv["correctOptionId"] or fi["topicId"] != sv["topicId"] or fi["translations"]["en"] != sv["translations"]["en"]:
             raise ValueError(f"Bilingual answer key or English support mismatch: {key}")
+    lessons = {(t["id"], language): lesson for t in content["topics"] for language, lesson in t.get("lessons", {}).items()}
+    lesson_reviews = {(r["topicId"], r["language"]): r for r in ledger.get("lessonReviews", [])}
+    if len(lesson_reviews) != len(ledger.get("lessonReviews", [])) or lessons.keys() != lesson_reviews.keys():
+        raise ValueError("Every authored lesson needs exactly one source review")
+    for key, lesson in lessons.items():
+        review = lesson_reviews[key]
+        if lesson["status"] != "DEMO" or review["sha256"] != fingerprint(lesson):
+            raise ValueError(f"Lesson changed after source review: {key}")
+        if review["publicationApproved"] or review["reviewType"] != "ASSISTANT_SOURCE_CHECK" or date.fromisoformat(review["checkedAt"]) > date.today():
+            raise ValueError(f"Invalid lesson review: {key}")
+        checks = {s["sectionId"]: s for s in review["sections"]}
+        if len(checks) != len(review["sections"]) or set(checks) != {s["id"] for s in lesson["sections"]}:
+            raise ValueError(f"Missing or duplicate section review: {key}")
+        for section in lesson["sections"]:
+            references = checks[section["id"]]["sources"]
+            if not references or sorted(s["sourceUrl"] for s in references) != sorted(s["url"] for s in section["sources"]):
+                raise ValueError(f"Missing lesson source evidence: {key}")
+            for reference in references:
+                evidence = urlparse(reference["evidenceUrl"])
+                if not reference["claim"] or not reference["locator"] or evidence.scheme != "https" or evidence.username or evidence.hostname not in {"www.finlex.fi", "infofinland.fi", "www.suomi.fi"}:
+                    raise ValueError(f"Invalid lesson source evidence: {key}")
+    for topic in content["topics"]:
+        variants = topic.get("lessons", {})
+        if variants and (set(variants) != {"fi", "sv", "en"} or len({(lesson["id"], tuple(s["id"] for s in lesson["sections"])) for lesson in variants.values()}) != 1):
+            raise ValueError("Bundled lesson variants must align in FI, SV and EN")
 
 
 def main():
@@ -76,10 +101,12 @@ def main():
         raise ValueError("Bundled content exceeds the import limit")
     content = read_json(path)
     if args.fingerprints:
-        print(json.dumps({q["id"]: fingerprint(q) for q in content["questions"]}, indent=2))
+        hashes = {q["id"]: fingerprint(q) for q in content["questions"]}
+        hashes.update({f"lesson:{t['id']}:{language}": fingerprint(lesson) for t in content["topics"] for language, lesson in t.get("lessons", {}).items()})
+        print(json.dumps(hashes, indent=2))
         return
     verify(content, read_json(ROOT / "docs/source-review.json"))
-    print(f"Content review ledger passed: {len(content['questions'])} DEMO variants, package v{content['version']}; human publication approval remains pending.")
+    print(f"Content review ledger passed: {len(content['questions'])} DEMO questions, {sum(len(t.get('lessons', {})) for t in content['topics'])} lesson variants, package v{content['version']}; human publication approval remains pending.")
 
 
 if __name__ == "__main__":

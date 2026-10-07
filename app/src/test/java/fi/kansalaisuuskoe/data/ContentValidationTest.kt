@@ -33,11 +33,11 @@ class ContentValidationTest {
     private fun content() = ContentCodec.parse(File("src/main/assets/demo-content.json").readText())
     @Test fun `seed is valid sourced demo across all topics with variable options`() {
         val c = content()
-        assertEquals(24, c.questions.size)
-        assertEquals(mapOf("fi" to 12, "sv" to 12), c.questions.groupingBy { it.language }.eachCount())
+        assertEquals(60, c.questions.size)
+        assertEquals(mapOf("fi" to 30, "sv" to 30), c.questions.groupingBy { it.language }.eachCount())
         assertEquals(6, c.topics.size)
         assertTrue(c.questions.all { it.status == "DEMO" && (it.language == "sv" || it.easyExplanation != null) })
-        assertTrue(c.topics.all { t -> c.questions.count { it.topicId == t.id } == 4 })
+        assertTrue(c.topics.all { t -> c.questions.count { it.topicId == t.id } == 10 })
         assertEquals(setOf(3, 4), c.questions.map { it.options.size }.toSet())
         assertTrue(c.questions.all { it.model().source.url.startsWith("https://") })
     }
@@ -75,7 +75,7 @@ class ContentValidationTest {
         assertEquals("Society and democracy", topic.titleFor("en"))
         assertEquals("Parliament, decision-making and participation.", topic.descriptionFor("en"))
         assertEquals(topic.title, topic.titleFor("fi"))
-        assertEquals(topic.description, topic.descriptionFor("sv"))
+        assertEquals("Riksdagen, beslut och deltagande.", topic.descriptionFor("sv"))
     }
     @Test fun `old content without topic translations still parses`() {
         val c = content()

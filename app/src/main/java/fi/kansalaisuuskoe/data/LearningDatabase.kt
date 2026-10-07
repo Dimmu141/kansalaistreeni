@@ -9,8 +9,10 @@ import kotlinx.coroutines.flow.Flow
 @Entity(tableName = "topics")
 data class TopicEntity(@PrimaryKey val id: String, val title: String, val description: String, val sortOrder: Int,
     @ColumnInfo(defaultValue = "'{}'") val translations: String = "{}",
+    @ColumnInfo(defaultValue = "'{}'") val lessons: String = "{}",
 ) {
-    fun model() = TopicDto(id, title, description, sortOrder, requireNotNull(ContentCodec.topicTranslationsAdapter.fromJson(translations))).model()
+    fun model() = dto().model()
+    fun dto() = TopicDto(id, title, description, sortOrder, requireNotNull(ContentCodec.topicTranslationsAdapter.fromJson(translations)), requireNotNull(ContentCodec.lessonsAdapter.fromJson(lessons)))
 }
 @Entity(tableName = "questions")
 data class QuestionEntity(@PrimaryKey val id: String, val revision: Int, val payload: String)
@@ -64,11 +66,16 @@ interface LearningDao {
     @Query("DELETE FROM question_progress") suspend fun deleteProgress()
     @Query("DELETE FROM attempts") suspend fun deleteAttempts()
 }
-@Database(entities = [TopicEntity::class, QuestionEntity::class, ContentMetadata::class, AttemptEntity::class, ProgressEntity::class, LearningRulesEntity::class, AssessmentEntity::class], version = 5, exportSchema = true)
+@Database(entities = [TopicEntity::class, QuestionEntity::class, ContentMetadata::class, AttemptEntity::class, ProgressEntity::class, LearningRulesEntity::class, AssessmentEntity::class], version = 6, exportSchema = true)
 abstract class LearningDatabase : RoomDatabase() {
     abstract fun learningDao(): LearningDao
     abstract fun assessmentDao(): AssessmentDao
     companion object {
+        val MIGRATION_5_6 = object : Migration(5, 6) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE `topics` ADD COLUMN `lessons` TEXT NOT NULL DEFAULT '{}'")
+            }
+        }
         val MIGRATION_4_5 = object : Migration(4, 5) {
             override fun migrate(db: SupportSQLiteDatabase) {
                 db.execSQL("CREATE TABLE IF NOT EXISTS `assessments` (`id` TEXT NOT NULL, `language` TEXT NOT NULL, `startedAt` INTEGER NOT NULL, `finishedAt` INTEGER, `payload` TEXT NOT NULL, PRIMARY KEY(`id`))")

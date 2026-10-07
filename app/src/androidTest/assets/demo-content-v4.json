@@ -1,0 +1,1610 @@
+{
+  "schemaVersion": 1,
+  "packageId": "fi-civics-demo",
+  "version": 4,
+  "status": "DEMO",
+  "topics": [
+    {
+      "id": "democracy",
+      "title": "Yhteiskunta ja demokratia",
+      "description": "Eduskunta, päätöksenteko ja vaikuttaminen.",
+      "order": 0,
+      "translations": {
+        "en": {
+          "title": "Society and democracy",
+          "description": "Parliament, decision-making and participation."
+        }
+      }
+    },
+    {
+      "id": "rights",
+      "title": "Oikeudet ja velvollisuudet",
+      "description": "Yhdenvertaisuus ja perusoikeudet.",
+      "order": 1,
+      "translations": {
+        "en": {
+          "title": "Rights and responsibilities",
+          "description": "Equality and fundamental rights."
+        }
+      }
+    },
+    {
+      "id": "history",
+      "title": "Suomen historia",
+      "description": "Itsenäistyminen ja Suomen tie Eurooppaan.",
+      "order": 2,
+      "translations": {
+        "en": {
+          "title": "Finnish history",
+          "description": "Independence and Finland's path to the EU."
+        }
+      }
+    },
+    {
+      "id": "work",
+      "title": "Työelämä",
+      "description": "Työsopimus ja turvallinen työ.",
+      "order": 3,
+      "translations": {
+        "en": {
+          "title": "Working life",
+          "description": "Employment contracts and safety at work."
+        }
+      }
+    },
+    {
+      "id": "everyday",
+      "title": "Arki Suomessa",
+      "description": "Palvelut ja turvallisuus arjessa.",
+      "order": 4,
+      "translations": {
+        "en": {
+          "title": "Everyday life in Finland",
+          "description": "Services and everyday safety."
+        }
+      }
+    },
+    {
+      "id": "culture",
+      "title": "Kulttuuri ja yhteiskunta",
+      "description": "Kielet ja mielipiteen ilmaiseminen.",
+      "order": 5,
+      "translations": {
+        "en": {
+          "title": "Culture and society",
+          "description": "Languages and freedom of expression."
+        }
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "demo-parliament",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Kuka käyttää Suomessa lainsäädäntövaltaa?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tasavallan presidentti"
+        },
+        {
+          "id": "b",
+          "text": "Eduskunta"
+        },
+        {
+          "id": "c",
+          "text": "Valtioneuvosto"
+        },
+        {
+          "id": "d",
+          "text": "Korkein oikeus"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Eduskunta säätää lait. Hallitus valmistelee lakiesityksiä.",
+      "easyExplanation": "Eduskunta päättää Suomen laeista.",
+      "vocabulary": [
+        {
+          "term": "lainsäädäntövalta",
+          "meaning": "power to make laws",
+          "swedish": "lagstiftande makt"
+        }
+      ],
+      "source": {
+        "title": "Suomen perustuslaki, 3 §",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who exercises legislative power in Finland?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The President of the Republic"
+            },
+            {
+              "id": "b",
+              "text": "Parliament"
+            },
+            {
+              "id": "c",
+              "text": "The Government"
+            },
+            {
+              "id": "d",
+              "text": "The Supreme Court"
+            }
+          ],
+          "explanation": "Parliament makes laws. The Government prepares legislative proposals."
+        }
+      }
+    },
+    {
+      "id": "demo-members",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Kuinka monta kansanedustajaa Suomen eduskunnassa on?",
+      "options": [
+        {
+          "id": "a",
+          "text": "100"
+        },
+        {
+          "id": "b",
+          "text": "150"
+        },
+        {
+          "id": "c",
+          "text": "200"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Eduskunnassa on 200 kansanedustajaa.",
+      "easyExplanation": "Eduskuntaan valitaan 200 ihmistä.",
+      "vocabulary": [
+        {
+          "term": "kansanedustaja",
+          "meaning": "member of parliament",
+          "swedish": "riksdagsledamot"
+        }
+      ],
+      "source": {
+        "title": "Suomen perustuslaki, 24 §",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "How many members does Finland's Parliament have?",
+          "options": [
+            {
+              "id": "a",
+              "text": "100"
+            },
+            {
+              "id": "b",
+              "text": "150"
+            },
+            {
+              "id": "c",
+              "text": "200"
+            }
+          ],
+          "explanation": "Finland's Parliament has 200 members."
+        }
+      }
+    },
+    {
+      "id": "demo-equality",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Mitä yhdenvertaisuus lain edessä tarkoittaa?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ihmiset ovat samanarvoisia lain edessä"
+        },
+        {
+          "id": "b",
+          "text": "Laki koskee vain kansalaisia"
+        },
+        {
+          "id": "c",
+          "text": "Varallisuus määrää oikeudet"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Perustuslaki turvaa ihmisten yhdenvertaisuuden.",
+      "easyExplanation": "Laki on sama kaikille.",
+      "vocabulary": [
+        {
+          "term": "yhdenvertaisuus",
+          "meaning": "equality",
+          "swedish": "jämlikhet"
+        }
+      ],
+      "source": {
+        "title": "Suomen perustuslaki, 6 §",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What does equality before the law mean?",
+          "options": [
+            {
+              "id": "a",
+              "text": "People are equal before the law"
+            },
+            {
+              "id": "b",
+              "text": "The law applies only to citizens"
+            },
+            {
+              "id": "c",
+              "text": "Wealth determines rights"
+            }
+          ],
+          "explanation": "The Constitution protects equality before the law."
+        }
+      }
+    },
+    {
+      "id": "demo-religion",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Voiko ihminen Suomessa olla kuulumatta uskonnolliseen yhdyskuntaan?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ei koskaan"
+        },
+        {
+          "id": "b",
+          "text": "Vain eläkeläisenä"
+        },
+        {
+          "id": "c",
+          "text": "Kyllä"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Uskonnonvapaus sisältää oikeuden olla kuulumatta uskonnolliseen yhdyskuntaan.",
+      "easyExplanation": "Sinun ei tarvitse kuulua uskonnolliseen yhteisöön.",
+      "vocabulary": [
+        {
+          "term": "uskonnonvapaus",
+          "meaning": "freedom of religion",
+          "swedish": "religionsfrihet"
+        }
+      ],
+      "source": {
+        "title": "Suomen perustuslaki, 11 §",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Can a person in Finland choose not to belong to a religious community?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Never"
+            },
+            {
+              "id": "b",
+              "text": "Only after retirement"
+            },
+            {
+              "id": "c",
+              "text": "Yes"
+            }
+          ],
+          "explanation": "Freedom of religion includes the right not to belong to a religious community."
+        }
+      }
+    },
+    {
+      "id": "demo-independence",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Minä vuonna Suomi julistautui itsenäiseksi?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1809"
+        },
+        {
+          "id": "b",
+          "text": "1917"
+        },
+        {
+          "id": "c",
+          "text": "1945"
+        },
+        {
+          "id": "d",
+          "text": "1995"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Suomi julistautui itsenäiseksi 6. joulukuuta 1917.",
+      "easyExplanation": "Suomesta tuli itsenäinen maa vuonna 1917.",
+      "vocabulary": [
+        {
+          "term": "itsenäisyys",
+          "meaning": "independence",
+          "swedish": "självständighet"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Suomen historiaa",
+        "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "In which year did Finland declare independence?",
+          "options": [
+            {
+              "id": "a",
+              "text": "1809"
+            },
+            {
+              "id": "b",
+              "text": "1917"
+            },
+            {
+              "id": "c",
+              "text": "1945"
+            },
+            {
+              "id": "d",
+              "text": "1995"
+            }
+          ],
+          "explanation": "Finland declared independence on 6 December 1917."
+        }
+      }
+    },
+    {
+      "id": "demo-eu",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Minä vuonna Suomi liittyi Euroopan unioniin?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1995"
+        },
+        {
+          "id": "b",
+          "text": "1917"
+        },
+        {
+          "id": "c",
+          "text": "2002"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Suomesta tuli Euroopan unionin jäsen vuonna 1995.",
+      "easyExplanation": "Suomi liittyi EU:hun vuonna 1995.",
+      "vocabulary": [
+        {
+          "term": "jäsenyys",
+          "meaning": "membership",
+          "swedish": "medlemskap"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Suomen historiaa",
+        "url": "https://infofinland.fi/fi/information-about-finland/finnish-history"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "In which year did Finland join the European Union?",
+          "options": [
+            {
+              "id": "a",
+              "text": "1995"
+            },
+            {
+              "id": "b",
+              "text": "1917"
+            },
+            {
+              "id": "c",
+              "text": "2002"
+            }
+          ],
+          "explanation": "Finland joined the European Union in 1995."
+        }
+      }
+    },
+    {
+      "id": "demo-contract",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Mikä asiakirja sisältää työntekijän ja työnantajan sopimat työehdot?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Kirjastokortti"
+        },
+        {
+          "id": "b",
+          "text": "Passi"
+        },
+        {
+          "id": "c",
+          "text": "Työsopimus"
+        },
+        {
+          "id": "d",
+          "text": "Ajokortti"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Työsopimuksessa sovitaan esimerkiksi työtehtävistä, palkasta ja työajasta.",
+      "easyExplanation": "Työsopimus kertoo, mitä työtä teet ja paljonko saat palkkaa.",
+      "vocabulary": [
+        {
+          "term": "työsopimus",
+          "meaning": "employment contract",
+          "swedish": "arbetsavtal"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Työsopimus ja työsuhteen ehdot",
+        "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which document contains the employment terms agreed by an employee and employer?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A library card"
+            },
+            {
+              "id": "b",
+              "text": "A passport"
+            },
+            {
+              "id": "c",
+              "text": "An employment contract"
+            },
+            {
+              "id": "d",
+              "text": "A driving licence"
+            }
+          ],
+          "explanation": "An employment contract sets out agreed terms such as duties, pay and working hours."
+        }
+      }
+    },
+    {
+      "id": "demo-safety",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Mitä työntekijän pitää tehdä havaitessaan vaaran työpaikalla?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Odottaa seuraavaan kuukauteen"
+        },
+        {
+          "id": "b",
+          "text": "Ilmoittaa siitä heti esihenkilölle tai työsuojeluvaltuutetulle"
+        },
+        {
+          "id": "c",
+          "text": "Pitää asia omana tietonaan"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Turvallisuuspuutteista pitää ilmoittaa. Työnantaja vastaa turvallisista työoloista.",
+      "easyExplanation": "Kerro vaarasta heti työpaikalla.",
+      "vocabulary": [
+        {
+          "term": "työturvallisuus",
+          "meaning": "safety at work",
+          "swedish": "arbetssäkerhet"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Työturvallisuus ja työsuojelu",
+        "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What should an employee do when they notice a danger at work?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Wait until next month"
+            },
+            {
+              "id": "b",
+              "text": "Report it immediately to their supervisor or occupational safety representative"
+            },
+            {
+              "id": "c",
+              "text": "Keep it to themselves"
+            }
+          ],
+          "explanation": "Employees should report safety problems. The employer is responsible for safe working conditions."
+        }
+      }
+    },
+    {
+      "id": "demo-emergency",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "Mihin numeroon soitat kiireellisessä hätätilanteessa Suomessa?",
+      "options": [
+        {
+          "id": "a",
+          "text": "112"
+        },
+        {
+          "id": "b",
+          "text": "118"
+        },
+        {
+          "id": "c",
+          "text": "010"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Soita numeroon 112, kun tarvitset kiireellistä apua hätätilanteessa.",
+      "easyExplanation": "Hätänumero on 112.",
+      "vocabulary": [
+        {
+          "term": "hätätilanne",
+          "meaning": "emergency",
+          "swedish": "nödsituation"
+        }
+      ],
+      "source": {
+        "title": "Suomi.fi / Hätäkeskuslaitos: Hätäilmoituksen tekeminen",
+        "url": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which number do you call in an urgent emergency in Finland?",
+          "options": [
+            {
+              "id": "a",
+              "text": "112"
+            },
+            {
+              "id": "b",
+              "text": "118"
+            },
+            {
+              "id": "c",
+              "text": "010"
+            }
+          ],
+          "explanation": "Call 112 when you need urgent help in an emergency."
+        }
+      }
+    },
+    {
+      "id": "demo-library",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "Mitä tarvitset yleensä kirjojen lainaamiseen yleisestä kirjastosta?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Suomen kansalaisuuden"
+        },
+        {
+          "id": "b",
+          "text": "Oman tietokoneen"
+        },
+        {
+          "id": "c",
+          "text": "Kirjastokortin"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Kirjastokortilla voi lainata kirjoja. Ensimmäinen kortti on maksuton.",
+      "easyExplanation": "Saat kirjastosta kortin. Kortilla voit lainata kirjoja.",
+      "vocabulary": [
+        {
+          "term": "kirjastokortti",
+          "meaning": "library card",
+          "swedish": "bibliotekskort"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Kirjastot",
+        "url": "https://infofinland.fi/fi/leisure/libraries"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What do you usually need to borrow books from a public library?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Finnish citizenship"
+            },
+            {
+              "id": "b",
+              "text": "Your own computer"
+            },
+            {
+              "id": "c",
+              "text": "A library card"
+            }
+          ],
+          "explanation": "You can borrow books with a library card. The first card is free."
+        }
+      }
+    },
+    {
+      "id": "demo-languages",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Mitkä ovat Suomen kansalliskielet?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Suomi ja englanti"
+        },
+        {
+          "id": "b",
+          "text": "Suomi ja ruotsi"
+        },
+        {
+          "id": "c",
+          "text": "Ruotsi ja norja"
+        },
+        {
+          "id": "d",
+          "text": "Suomi ja saksa"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Suomen kansalliskielet ovat suomi ja ruotsi.",
+      "easyExplanation": "Suomella on kaksi kansalliskieltä: suomi ja ruotsi.",
+      "vocabulary": [
+        {
+          "term": "kansalliskieli",
+          "meaning": "national language",
+          "swedish": "nationalspråk"
+        }
+      ],
+      "source": {
+        "title": "Suomen perustuslaki, 17 §",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What are Finland's national languages?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Finnish and English"
+            },
+            {
+              "id": "b",
+              "text": "Finnish and Swedish"
+            },
+            {
+              "id": "c",
+              "text": "Swedish and Norwegian"
+            },
+            {
+              "id": "d",
+              "text": "Finnish and German"
+            }
+          ],
+          "explanation": "Finland's national languages are Finnish and Swedish."
+        }
+      }
+    },
+    {
+      "id": "demo-expression",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Mitä sananvapaus suojaa?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Vain viranomaisten puhetta"
+        },
+        {
+          "id": "b",
+          "text": "Oikeutta rikkoa kaikkia lakeja"
+        },
+        {
+          "id": "c",
+          "text": "Oikeutta ilmaista ja vastaanottaa tietoja ja mielipiteitä"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Sananvapaus suojaa ilmaisua. Sen käytöstä säädetään tarkemmin lailla.",
+      "easyExplanation": "Saat kertoa mielipiteesi. Myös silloin pitää noudattaa lakia.",
+      "vocabulary": [
+        {
+          "term": "sananvapaus",
+          "meaning": "freedom of expression",
+          "swedish": "yttrandefrihet"
+        }
+      ],
+      "source": {
+        "title": "Suomen perustuslaki, 12 §",
+        "url": "https://www.finlex.fi/fi/lainsaadanto/1999/731"
+      },
+      "language": "fi",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What does freedom of expression protect?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only statements by authorities"
+            },
+            {
+              "id": "b",
+              "text": "The right to break any law"
+            },
+            {
+              "id": "c",
+              "text": "The right to express and receive information and opinions"
+            }
+          ],
+          "explanation": "Freedom of expression protects expression. Its exercise is regulated in more detail by law."
+        }
+      }
+    },
+    {
+      "id": "demo-parliament-sv",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Vem utövar den lagstiftande makten i Finland?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Republikens president"
+        },
+        {
+          "id": "b",
+          "text": "Riksdagen"
+        },
+        {
+          "id": "c",
+          "text": "Statsrådet"
+        },
+        {
+          "id": "d",
+          "text": "Högsta domstolen"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Riksdagen stiftar lagarna. Regeringen bereder lagförslag.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "lainsäädäntövalta",
+          "meaning": "power to make laws",
+          "swedish": "lagstiftande makt"
+        }
+      ],
+      "source": {
+        "title": "Finlands grundlag, 3 §",
+        "url": "https://www.finlex.fi/sv/lagstiftning/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Who exercises legislative power in Finland?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The President of the Republic"
+            },
+            {
+              "id": "b",
+              "text": "Parliament"
+            },
+            {
+              "id": "c",
+              "text": "The Government"
+            },
+            {
+              "id": "d",
+              "text": "The Supreme Court"
+            }
+          ],
+          "explanation": "Parliament makes laws. The Government prepares legislative proposals."
+        }
+      }
+    },
+    {
+      "id": "demo-members-sv",
+      "revision": 1,
+      "topicId": "democracy",
+      "text": "Hur många ledamöter har Finlands riksdag?",
+      "options": [
+        {
+          "id": "a",
+          "text": "100"
+        },
+        {
+          "id": "b",
+          "text": "150"
+        },
+        {
+          "id": "c",
+          "text": "200"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Riksdagen har 200 ledamöter.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "kansanedustaja",
+          "meaning": "member of parliament",
+          "swedish": "riksdagsledamot"
+        }
+      ],
+      "source": {
+        "title": "Finlands grundlag, 24 §",
+        "url": "https://www.finlex.fi/sv/lagstiftning/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "democracy",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "How many members does Finland's Parliament have?",
+          "options": [
+            {
+              "id": "a",
+              "text": "100"
+            },
+            {
+              "id": "b",
+              "text": "150"
+            },
+            {
+              "id": "c",
+              "text": "200"
+            }
+          ],
+          "explanation": "Finland's Parliament has 200 members."
+        }
+      }
+    },
+    {
+      "id": "demo-equality-sv",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Vad betyder likhet inför lagen?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Alla människor är lika inför lagen"
+        },
+        {
+          "id": "b",
+          "text": "Lagen gäller bara medborgare"
+        },
+        {
+          "id": "c",
+          "text": "Förmögenheten avgör rättigheterna"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Grundlagen tryggar alla människors likhet inför lagen.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "yhdenvertaisuus",
+          "meaning": "equality",
+          "swedish": "jämlikhet"
+        }
+      ],
+      "source": {
+        "title": "Finlands grundlag, 6 §",
+        "url": "https://www.finlex.fi/sv/lagstiftning/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What does equality before the law mean?",
+          "options": [
+            {
+              "id": "a",
+              "text": "People are equal before the law"
+            },
+            {
+              "id": "b",
+              "text": "The law applies only to citizens"
+            },
+            {
+              "id": "c",
+              "text": "Wealth determines rights"
+            }
+          ],
+          "explanation": "The Constitution protects equality before the law."
+        }
+      }
+    },
+    {
+      "id": "demo-religion-sv",
+      "revision": 1,
+      "topicId": "rights",
+      "text": "Kan en person i Finland välja att inte tillhöra ett religiöst samfund?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aldrig"
+        },
+        {
+          "id": "b",
+          "text": "Bara som pensionär"
+        },
+        {
+          "id": "c",
+          "text": "Ja"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Religionsfriheten omfattar rätten att inte tillhöra något religiöst samfund.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "uskonnonvapaus",
+          "meaning": "freedom of religion",
+          "swedish": "religionsfrihet"
+        }
+      ],
+      "source": {
+        "title": "Finlands grundlag, 11 §",
+        "url": "https://www.finlex.fi/sv/lagstiftning/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "rights",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Can a person in Finland choose not to belong to a religious community?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Never"
+            },
+            {
+              "id": "b",
+              "text": "Only after retirement"
+            },
+            {
+              "id": "c",
+              "text": "Yes"
+            }
+          ],
+          "explanation": "Freedom of religion includes the right not to belong to a religious community."
+        }
+      }
+    },
+    {
+      "id": "demo-independence-sv",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Vilket år förklarade sig Finland självständigt?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1809"
+        },
+        {
+          "id": "b",
+          "text": "1917"
+        },
+        {
+          "id": "c",
+          "text": "1945"
+        },
+        {
+          "id": "d",
+          "text": "1995"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Finland förklarade sig självständigt den 6 december 1917.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "itsenäisyys",
+          "meaning": "independence",
+          "swedish": "självständighet"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Om Finlands historia",
+        "url": "https://infofinland.fi/sv/information-about-finland/finnish-history"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "In which year did Finland declare independence?",
+          "options": [
+            {
+              "id": "a",
+              "text": "1809"
+            },
+            {
+              "id": "b",
+              "text": "1917"
+            },
+            {
+              "id": "c",
+              "text": "1945"
+            },
+            {
+              "id": "d",
+              "text": "1995"
+            }
+          ],
+          "explanation": "Finland declared independence on 6 December 1917."
+        }
+      }
+    },
+    {
+      "id": "demo-eu-sv",
+      "revision": 1,
+      "topicId": "history",
+      "text": "Vilket år blev Finland medlem i Europeiska unionen?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1995"
+        },
+        {
+          "id": "b",
+          "text": "1917"
+        },
+        {
+          "id": "c",
+          "text": "2002"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Finland blev medlem i Europeiska unionen år 1995.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "jäsenyys",
+          "meaning": "membership",
+          "swedish": "medlemskap"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Om Finlands historia",
+        "url": "https://infofinland.fi/sv/information-about-finland/finnish-history"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "history",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "In which year did Finland join the European Union?",
+          "options": [
+            {
+              "id": "a",
+              "text": "1995"
+            },
+            {
+              "id": "b",
+              "text": "1917"
+            },
+            {
+              "id": "c",
+              "text": "2002"
+            }
+          ],
+          "explanation": "Finland joined the European Union in 1995."
+        }
+      }
+    },
+    {
+      "id": "demo-contract-sv",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Vilket dokument innehåller de anställningsvillkor som arbetstagaren och arbetsgivaren har kommit överens om?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bibliotekskort"
+        },
+        {
+          "id": "b",
+          "text": "Pass"
+        },
+        {
+          "id": "c",
+          "text": "Arbetsavtal"
+        },
+        {
+          "id": "d",
+          "text": "Körkort"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "I arbetsavtalet kommer man överens om till exempel arbetsuppgifter, lön och arbetstid.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "työsopimus",
+          "meaning": "employment contract",
+          "swedish": "arbetsavtal"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Arbetsavtal och anställningsvillkor",
+        "url": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which document contains the employment terms agreed by an employee and employer?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A library card"
+            },
+            {
+              "id": "b",
+              "text": "A passport"
+            },
+            {
+              "id": "c",
+              "text": "An employment contract"
+            },
+            {
+              "id": "d",
+              "text": "A driving licence"
+            }
+          ],
+          "explanation": "An employment contract sets out agreed terms such as duties, pay and working hours."
+        }
+      }
+    },
+    {
+      "id": "demo-safety-sv",
+      "revision": 1,
+      "topicId": "work",
+      "text": "Vad ska en arbetstagare göra om hen upptäcker en fara på arbetsplatsen?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Vänta till nästa månad"
+        },
+        {
+          "id": "b",
+          "text": "Genast meddela chefen eller arbetarskyddsfullmäktige"
+        },
+        {
+          "id": "c",
+          "text": "Hålla saken för sig själv"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Säkerhetsbrister ska anmälas. Arbetsgivaren ansvarar för säkra arbetsförhållanden.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "työturvallisuus",
+          "meaning": "safety at work",
+          "swedish": "arbetssäkerhet"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Arbetssäkerhet och arbetarskydd",
+        "url": "https://infofinland.fi/sv/work-and-enterprise/during-employment/health-and-safety-at-work"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "work",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What should an employee do when they notice a danger at work?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Wait until next month"
+            },
+            {
+              "id": "b",
+              "text": "Report it immediately to their supervisor or occupational safety representative"
+            },
+            {
+              "id": "c",
+              "text": "Keep it to themselves"
+            }
+          ],
+          "explanation": "Employees should report safety problems. The employer is responsible for safe working conditions."
+        }
+      }
+    },
+    {
+      "id": "demo-emergency-sv",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "Vilket nummer ringer du i en brådskande nödsituation i Finland?",
+      "options": [
+        {
+          "id": "a",
+          "text": "112"
+        },
+        {
+          "id": "b",
+          "text": "118"
+        },
+        {
+          "id": "c",
+          "text": "010"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Ring 112 när du behöver brådskande hjälp i en nödsituation.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "hätätilanne",
+          "meaning": "emergency",
+          "swedish": "nödsituation"
+        }
+      ],
+      "source": {
+        "title": "Suomi.fi / Nödcentralsverket: Gör ett nödmeddelande",
+        "url": "https://www.suomi.fi/service/gor-ett-nodmeddelande-nodcentralsverket/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "Which number do you call in an urgent emergency in Finland?",
+          "options": [
+            {
+              "id": "a",
+              "text": "112"
+            },
+            {
+              "id": "b",
+              "text": "118"
+            },
+            {
+              "id": "c",
+              "text": "010"
+            }
+          ],
+          "explanation": "Call 112 when you need urgent help in an emergency."
+        }
+      }
+    },
+    {
+      "id": "demo-library-sv",
+      "revision": 1,
+      "topicId": "everyday",
+      "text": "Vad behöver du vanligtvis för att låna böcker på ett allmänt bibliotek?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Finskt medborgarskap"
+        },
+        {
+          "id": "b",
+          "text": "En egen dator"
+        },
+        {
+          "id": "c",
+          "text": "Ett bibliotekskort"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Med ett bibliotekskort kan du låna böcker. Det första kortet är gratis.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "kirjastokortti",
+          "meaning": "library card",
+          "swedish": "bibliotekskort"
+        }
+      ],
+      "source": {
+        "title": "InfoFinland: Bibliotek",
+        "url": "https://infofinland.fi/sv/leisure/libraries"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "everyday",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What do you usually need to borrow books from a public library?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Finnish citizenship"
+            },
+            {
+              "id": "b",
+              "text": "Your own computer"
+            },
+            {
+              "id": "c",
+              "text": "A library card"
+            }
+          ],
+          "explanation": "You can borrow books with a library card. The first card is free."
+        }
+      }
+    },
+    {
+      "id": "demo-languages-sv",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Vilka är Finlands nationalspråk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Finska och engelska"
+        },
+        {
+          "id": "b",
+          "text": "Finska och svenska"
+        },
+        {
+          "id": "c",
+          "text": "Svenska och norska"
+        },
+        {
+          "id": "d",
+          "text": "Finska och tyska"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Finlands nationalspråk är finska och svenska.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "kansalliskieli",
+          "meaning": "national language",
+          "swedish": "nationalspråk"
+        }
+      ],
+      "source": {
+        "title": "Finlands grundlag, 17 §",
+        "url": "https://www.finlex.fi/sv/lagstiftning/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What are Finland's national languages?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Finnish and English"
+            },
+            {
+              "id": "b",
+              "text": "Finnish and Swedish"
+            },
+            {
+              "id": "c",
+              "text": "Swedish and Norwegian"
+            },
+            {
+              "id": "d",
+              "text": "Finnish and German"
+            }
+          ],
+          "explanation": "Finland's national languages are Finnish and Swedish."
+        }
+      }
+    },
+    {
+      "id": "demo-expression-sv",
+      "revision": 1,
+      "topicId": "culture",
+      "text": "Vad skyddar yttrandefriheten?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bara myndigheternas uttalanden"
+        },
+        {
+          "id": "b",
+          "text": "Rätten att bryta mot alla lagar"
+        },
+        {
+          "id": "c",
+          "text": "Rätten att uttrycka och ta emot information och åsikter"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Yttrandefriheten skyddar rätten att uttrycka sig. Närmare bestämmelser om hur den används finns i lag.",
+      "easyExplanation": null,
+      "vocabulary": [
+        {
+          "term": "sananvapaus",
+          "meaning": "freedom of expression",
+          "swedish": "yttrandefrihet"
+        }
+      ],
+      "source": {
+        "title": "Finlands grundlag, 12 §",
+        "url": "https://www.finlex.fi/sv/lagstiftning/1999/731"
+      },
+      "language": "sv",
+      "difficulty": "EASY",
+      "tags": [
+        "culture",
+        "demo"
+      ],
+      "status": "DEMO",
+      "translations": {
+        "en": {
+          "text": "What does freedom of expression protect?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only statements by authorities"
+            },
+            {
+              "id": "b",
+              "text": "The right to break any law"
+            },
+            {
+              "id": "c",
+              "text": "The right to express and receive information and opinions"
+            }
+          ],
+          "explanation": "Freedom of expression protects expression. Its exercise is regulated in more detail by law."
+        }
+      }
+    }
+  ]
+}

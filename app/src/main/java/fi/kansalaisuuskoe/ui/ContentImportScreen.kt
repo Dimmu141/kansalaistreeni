@@ -14,6 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import fi.kansalaisuuskoe.R
 import fi.kansalaisuuskoe.data.ContentFile
@@ -75,6 +76,7 @@ internal fun ContentImportBody(state: ContentImportState, select: () -> Unit, di
                     StatRow(preview.changes.translated.toString(), stringResource(R.string.import_translated))
                     StatRow(preview.changes.unchanged.toString(), stringResource(R.string.import_unchanged))
                     StatRow(preview.changes.removed.toString(), stringResource(R.string.import_removed))
+                    StatRow(preview.changedLessonVariants.toString(), stringResource(R.string.import_changed_lessons))
                 }
             }
             item { Text(stringResource(R.string.import_progress_note), style = MaterialTheme.typography.bodyMedium) }
@@ -84,6 +86,34 @@ internal fun ContentImportBody(state: ContentImportState, select: () -> Unit, di
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Button(onClick = confirm, enabled = !state.busy && !preview.alreadyInstalled, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.import_confirm)) }
                     OutlinedButton(onClick = discard, enabled = !state.busy, modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)) { Text(stringResource(R.string.import_discard)) }
+                }
+            }
+            if (preview.content.topics.any { it.lessons.isNotEmpty() }) item { Heading(stringResource(R.string.import_lessons_title)) }
+            preview.content.topics.forEach { topic ->
+                topic.lessons.forEach { (language, dto) ->
+                    item(key = "lesson:${topic.id}:$language") {
+                        var expanded by remember(topic.id, language, dto.revision) { mutableStateOf(false) }
+                        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                            val languageLabel = stringResource(when (language) {
+                                "fi" -> R.string.language_finnish
+                                "sv" -> R.string.language_swedish
+                                else -> R.string.language_english
+                            })
+                            val label = stringResource(R.string.import_lesson, topic.title, languageLabel)
+                            val expansion = stringResource(if (expanded) R.string.recap_expanded else R.string.recap_collapsed)
+                            TextButton({ expanded = !expanded }, Modifier.fillMaxWidth().heightIn(min = 56.dp).semantics { stateDescription = expansion }) { Text(label) }
+                            if (expanded) {
+                                ContentNotice(ContentStatus.valueOf(dto.status), compact = true)
+                                StudyText(dto.introduction, language, MaterialTheme.typography.bodyLarge)
+                                dto.sections.forEach { section ->
+                                    Heading(section.title)
+                                    StudyText(section.body, language, MaterialTheme.typography.bodyLarge)
+                                    section.easyBody?.let { StudyText(it, "fi", MaterialTheme.typography.bodyLarge) }
+                                    section.sources.forEach { SourceReference(fi.kansalaisuuskoe.domain.Source(it.title, it.url), ContentStatus.valueOf(dto.status)) }
+                                }
+                            }
+                        }
+                    }
                 }
             }
             item { Heading(stringResource(R.string.import_questions_title), stringResource(R.string.import_questions_note)) }

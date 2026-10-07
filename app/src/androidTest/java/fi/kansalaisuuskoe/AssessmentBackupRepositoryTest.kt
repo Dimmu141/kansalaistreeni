@@ -44,7 +44,7 @@ class AssessmentBackupRepositoryTest {
         val learningBefore = learning.snapshot.first()
         val backup = learning.exportBackup(3000)
         val content = ContentCodec.parse(context.assets.open("demo-content.json").bufferedReader().use { it.readText() })
-        learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(content.copy(version = 5, questions = content.questions.map { it.copy(revision = 2, text = it.text + " changed") })))
+        learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(content.copy(version = content.version + 1, questions = content.questions.map { it.copy(revision = 2, text = it.text + " changed") })))
         val q = learning.snapshot.first().questions.first()
         learning.answer(q, q.correctOptionId, "newer", 4000)
         val preview = learning.prepareRestore(backup)
@@ -54,13 +54,13 @@ class AssessmentBackupRepositoryTest {
         database.close(); open()
         assertEquals(expected, assessments.sessions.first())
         assertEquals(learningBefore, learning.snapshot.first())
-        assertEquals(11, Assessments.result(assessments.get(finished)!!).correct)
+        assertEquals(19, Assessments.result(assessments.get(finished)!!).correct)
         assertEquals(unfinished, assessments.start(StudyLanguage.SWEDISH, 5000))
         val old = assessments.get(unfinished)!!
         assertEquals(1, old.position); assertEquals(1, old.answeredCount)
         old.questions.filter { it.id !in old.answers }.forEach { assessments.select(unfinished, it.id, it.correctOptionId) }
         assessments.finish(unfinished, 6000)
-        assertEquals(12, Assessments.result(assessments.get(unfinished)!!).correct)
+        assertEquals(20, Assessments.result(assessments.get(unfinished)!!).correct)
         assertTrue(learning.snapshot.first().attempts.isEmpty())
     }
     @Test fun emptyV2BackupReplacesAllAssessmentHistoryOnlyAfterConfirmation() = runBlocking {

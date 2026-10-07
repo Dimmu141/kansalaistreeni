@@ -22,7 +22,7 @@ class AssessmentRepositoryTest {
     private lateinit var assessments: AssessmentRepository
     private fun open() {
         database = Room.databaseBuilder(context, LearningDatabase::class.java, name)
-            .addMigrations(LearningDatabase.MIGRATION_4_5).build()
+            .addMigrations(LearningDatabase.MIGRATION_4_5, LearningDatabase.MIGRATION_5_6).build()
         learning = LearningRepository(database); assessments = AssessmentRepository(database)
     }
     @Before fun setup() = runBlocking { context.deleteDatabase(name); open(); learning.initialize(context) }
@@ -56,7 +56,7 @@ class AssessmentRepositoryTest {
         complete(id)
         assessments.finish(id, 9000)
         val result = Assessments.result(requireNotNull(assessments.get(id)))
-        assertEquals(11, result.correct); assertEquals(12, result.total)
+        assertEquals(19, result.correct); assertEquals(20, result.total)
         assertEquals(2000L, assessments.get(id)?.finishedAt)
         assertEquals(before, learning.snapshot.first())
         assertNotEquals(id, assessments.start(StudyLanguage.FINNISH, 3000))
@@ -82,7 +82,7 @@ class AssessmentRepositoryTest {
         complete(id)
         val saved = assessments.get(id)!!
         val seed = ContentCodec.parse(context.assets.open("demo-content.json").bufferedReader().use { it.readText() })
-        val revised = seed.copy(version = 5, questions = seed.questions.map { it.copy(revision = 2, text = it.text + " (revised)") })
+        val revised = seed.copy(version = seed.version + 1, questions = seed.questions.map { it.copy(revision = 2, text = it.text + " (revised)") })
         learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(revised))
         assertEquals(saved, assessments.get(id))
         assertTrue(Assessments.practiceMistakes(saved, learning.snapshot.first().questions).isEmpty())
@@ -102,7 +102,7 @@ class AssessmentRepositoryTest {
         assertEquals(saved, assessments.get(id))
         assertEquals(id, assessments.start(StudyLanguage.FINNISH))
         complete(id)
-        assertEquals(11, Assessments.result(assessments.get(id)!!).correct)
+        assertEquals(19, Assessments.result(assessments.get(id)!!).correct)
         assertTrue(Assessments.practiceMistakes(assessments.get(id)!!, learning.snapshot.first().questions).isEmpty())
     }
     @Test fun completedSessionRejectsAnswerChangesAndFollowUpUsesOrdinaryLearningRules() = runBlocking {

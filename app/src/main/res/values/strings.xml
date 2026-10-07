@@ -112,7 +112,7 @@
     <string name="vocabulary_english">Englanti: %1$s</string>
     <string name="vocabulary_swedish">Ruotsi: %1$s</string>
     <string name="source_title">Taustalähde</string>
-    <string name="source_note">Sovelluksen laatima harjoituskysymys. Lähde ei tee kysymyksestä virallista koemateriaalia.</string>
+    <string name="source_note">Lähdemerkintä ei tee harjoitusmateriaalista virallista koemateriaalia.</string>
     <string name="show_summary">Näytä yhteenveto</string>
     <string name="next_question">Seuraava kysymys</string>
     <string name="date_time_pattern">d.M.yyyy \&apos;klo\&apos; HH.mm</string>
@@ -178,13 +178,13 @@
     <string name="vocabulary_finnish">Suomeksi: %1$s</string>
     <string name="import_languages">Kysymyksiä kielittäin: suomi %1$d · ruotsi %2$d</string>
     <string name="import_study_scope">Opiskelukieli rajaa näkyvät kysymykset. Jos paketista puuttuu valitsemasi kieli, voit vaihtaa kieltä asetuksissa.</string>
-    <string name="explanation_language_note">Kysymykset ja alkuperäinen selitys pysyvät opiskelukielellä. Englanninkielisen tukiselityksen voi näyttää vastaamisen jälkeen.</string>
+    <string name="explanation_language_note">Kysymykset ja lukutekstit pysyvät opiskelukielellä. Englanninkieliset tukitekstit näkyvät lukutekstien yhteydessä ja vastaamisen jälkeen, kun ne ovat saatavilla.</string>
     <string name="explanation_study_only">Vain opiskelukielellä</string>
     <string name="explanation_also_english">Lisäksi englanniksi</string>
     <string name="explanation_english_title">Selitys englanniksi</string>
     <string name="explanation_missing">Tähän kysymykseen ei ole englanninkielistä selitystä. Lue selitys opiskelukielellä.</string>
     <string name="import_translated">Vain käännökset muuttuvat</string>
-    <string name="official_material_snapshot">Virallista oppimateriaalia ei ollut saatavilla, kun tieto tarkistettiin 6.10.2026. Tämä sovellus toimii ilman verkkoyhteyttä, joten tieto ei päivity automaattisesti. Lähde: Maahanmuuttoviraston kansalaisuutta koskevat usein kysytyt kysymykset.</string>
+    <string name="official_material_snapshot">Virallista oppimateriaalia ei ollut saatavilla, kun tieto tarkistettiin 7.10.2026. Tämä sovellus toimii ilman verkkoyhteyttä, joten tieto ei päivity automaattisesti. Lähde: Maahanmuuttoviraston kansalaisuutta koskevat usein kysytyt kysymykset.</string>
     <string name="recap_next_step">Mitä seuraavaksi?</string>
     <string name="recap_all_correct">Vastasit kaikkiin oikein. Anna opitun asettua ja kertaa myöhemmin. Tämä tulos ei ennusta kokeen läpäisyä.</string>
     <string name="recap_mistakes_note">Voit lukea väärin menneiden kysymysten selitykset alla. Pelkkä selityksen lukeminen ei muuta osaamisarviota tai kertausaikaa.</string>
@@ -316,4 +316,9 @@
     <string name="assessment_delete_cancel">Säilytä harjoituskoe</string>
     <string name="assessment_delete_error">Harjoituskokeen poistaminen epäonnistui. Tallennetut tietosi ovat ennallaan. Voit yrittää uudelleen.</string>
     <string name="assessment_delete_stale">Harjoituskoe on muuttunut. Mitään ei poistettu. Tarkista tiedot ja valitse poistaminen uudelleen.</string>
+    <string name="import_lesson">Oppitunti: %1$s · %2$s</string>
+    <string name="import_lessons_title">Oppitunnit tässä tiedostossa</string>
+    <string name="language_swedish">Svenska · ruotsi</string>
+    <string name="lesson_english_missing">Tälle osiolle ei ole englanninkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
+    <string name="import_changed_lessons">Lisätyt, muutetut tai poistetut oppituntien kieliversiot</string>
 </resources>

@@ -30,6 +30,7 @@ class LearningFlowTest {
         val app = rule.activity.application as CitizenshipApplication
         app.container.database.clearAllTables()
         repository.initialize(app)
+        repository.installRegressionContent()
         app.container.settings.setTheme(ThemePreference.LIGHT)
         app.container.settings.setEasyFinnish(true)
         app.container.settings.setInterfaceLanguage(InterfaceLanguage.FINNISH)

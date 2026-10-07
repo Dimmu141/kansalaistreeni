@@ -6,11 +6,15 @@ enum class StudyLanguage(val tag: String) { FINNISH("fi"), SWEDISH("sv") }
 data class AnswerOption(val id: String, val text: String)
 data class VocabularyItem(val term: String, val meaning: String, val swedish: String? = null)
 data class Source(val title: String, val url: String)
-data class Topic(val id: String, val title: String, val description: String, val order: Int, val translations: Map<String, TopicTranslation> = emptyMap()) {
+data class Topic(val id: String, val title: String, val description: String, val order: Int, val translations: Map<String, TopicTranslation> = emptyMap(), val lessons: Map<String, AuthoredLesson> = emptyMap()) {
     fun titleFor(language: String) = translations[language]?.title ?: title
     fun descriptionFor(language: String) = translations[language]?.description ?: description
 }
 data class TopicTranslation(val title: String, val description: String)
+
+/** Localized reading material. Reading alone never counts as a scored answer. */
+data class AuthoredLesson(val id: String, val revision: Int, val introduction: String, val status: ContentStatus, val sections: List<LessonSection>)
+data class LessonSection(val id: String, val title: String, val body: String, val easyBody: String?, val sources: List<Source>)
 data class Question(
     val id: String,
     val revision: Int,

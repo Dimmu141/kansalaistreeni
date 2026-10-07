@@ -23,7 +23,7 @@ class LearningContentFlowTest {
     private fun snapshot() = runBlocking { app.container.learning.snapshot.first() }
     private fun search(value: String) { rule.onNode(hasSetTextAction()).performTextReplacement(value); rule.waitForIdle() }
     @Before fun reset() = runBlocking {
-        app.container.database.clearAllTables(); app.container.learning.initialize(app)
+        app.container.database.clearAllTables(); app.container.learning.initialize(app); app.container.learning.installRegressionContent()
         app.container.settings.setInterfaceLanguage(InterfaceLanguage.ENGLISH)
         app.container.settings.setStudyLanguage(StudyLanguage.FINNISH)
         app.container.settings.setExplanation(ExplanationPreference.ALSO_ENGLISH)
@@ -99,7 +99,7 @@ class LearningContentFlowTest {
     }
     @Test fun importedVocabularyReplacesBrowseResultsWithoutChangingHistory() {
         openWords(); search("power"); await("lainsäädäntövalta")
-        val content = ContentCodec.parse(app.assets.open("demo-content.json").bufferedReader().use { it.readText() })
+        val content = ContentCodec.parse(regressionContentJson())
         val revised = content.copy(version = content.version + 1, questions = content.questions.map {
             if (it.id == "demo-parliament") it.copy(revision = it.revision + 1, vocabulary = listOf(VocabularyDto("hallinto", "governance", "förvaltning"))) else it
         })
@@ -109,7 +109,7 @@ class LearningContentFlowTest {
         assertTrue(snapshot().attempts.isEmpty())
     }
     @Test fun importedPackageWithoutSwedishVocabularyShowsHonestEmptyState() {
-        val content = ContentCodec.parse(app.assets.open("demo-content.json").bufferedReader().use { it.readText() })
+        val content = ContentCodec.parse(regressionContentJson())
         val revised = content.copy(version = content.version + 1, questions = content.questions.map {
             if (it.language == "sv") it.copy(revision = it.revision + 1, vocabulary = emptyList()) else it
         })

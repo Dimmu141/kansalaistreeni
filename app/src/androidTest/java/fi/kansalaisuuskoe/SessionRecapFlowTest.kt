@@ -22,7 +22,7 @@ class SessionRecapFlowTest {
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
     private fun click(value: String) { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); text(value).performClick() }
     @Before fun reset() = runBlocking {
-        app.container.database.clearAllTables(); app.container.learning.initialize(app)
+        app.container.database.clearAllTables(); app.container.learning.initialize(app); app.container.learning.installRegressionContent()
         app.container.settings.setInterfaceLanguage(InterfaceLanguage.ENGLISH)
         app.container.settings.setStudyLanguage(StudyLanguage.FINNISH)
         app.container.settings.setExplanation(ExplanationPreference.ALSO_ENGLISH)
