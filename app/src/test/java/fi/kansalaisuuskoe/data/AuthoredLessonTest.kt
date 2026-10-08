@@ -10,13 +10,15 @@ class AuthoredLessonTest {
     private val content = ContentCodec.parse(File("src/main/assets/demo-content.json").readText())
     private val topic = content.topics.first()
     private val lesson = topic.lessons.getValue("fi")
-    private val installed = InstalledContent(ContentMetadata(packageId = content.packageId, version = content.version, hash = "old"), content.topics, content.questions)
+    private val installed = InstalledContent(ContentMetadata(packageId = content.packageId, version = content.version, hash = "old"), content.topics, content.questions, content.objectives)
     private fun withLesson(value: LessonDto, language: String = "fi") = content.copy(topics = listOf(topic.copy(lessons = topic.lessons + (language to value))) + content.topics.drop(1))
     private fun rejects(block: () -> Unit) { try { block(); fail("Invalid lesson accepted") } catch (_: IllegalArgumentException) { } }
     private fun prepare(next: ContentPackageDto) = ContentUpdates.prepare(next, "new", installed, emptyMap())
 
-    @Test fun `all topics have aligned independently authored bilingual lessons and English support`() {
-        content.topics.forEach { t ->
+    @Test fun `topics with lessons have aligned independently authored bilingual lessons and English support`() {
+        // v0.17 step 3 keeps the lessons of the four retained topic IDs; new topics get lessons with the content expansion.
+        assertEquals(listOf("democracy", "rights", "history", "culture"), content.topics.filter { it.lessons.isNotEmpty() }.map { it.id })
+        content.topics.filter { it.lessons.isNotEmpty() }.forEach { t ->
             assertEquals(setOf("fi", "sv", "en"), t.lessons.keys)
             val native = t.lessons.getValue("fi")
             assertEquals(3, native.sections.size)
@@ -69,10 +71,10 @@ class AuthoredLessonTest {
     }
     @Test fun `preview reports lesson additions removals and unchanged material`() {
         val removed = content.copy(version = content.version + 1, topics = content.topics.map { it.copy(lessons = emptyMap()) })
-        assertEquals(18, prepare(removed).changedLessonVariants)
+        assertEquals(content.topics.sumOf { it.lessons.size }, prepare(removed).changedLessonVariants)
         assertEquals(0, prepare(content).changedLessonVariants)
         val previous = installed.copy(topics = installed.topics.map { it.copy(lessons = emptyMap()) }, metadata = installed.metadata!!.copy(version = content.version - 1))
-        assertEquals(18, ContentUpdates.prepare(content, "new", previous, emptyMap()).changedLessonVariants)
+        assertEquals(content.topics.sumOf { it.lessons.size }, ContentUpdates.prepare(content, "new", previous, emptyMap()).changedLessonVariants)
     }
     @Test fun `missing native lesson never substitutes English or other study language`() {
         val nativeTopic = topic.model().copy(lessons = topic.model().lessons - "sv")

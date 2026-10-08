@@ -89,12 +89,12 @@ class StudyLanguageFlowTest {
         // The bundled package has Swedish topic names; the older regression package falls back to Finnish.
         runBlocking { app.container.database.clearAllTables(); repository.initialize(app) }
         chooseSwedish()
-        text("Topics").performClick(); await("Samhälle och demokrati")
-        text("Society and democracy").assertDoesNotExist()
+        text("Topics").performClick(); await("Demokrati och beslutsfattande")
+        text("Democracy and decision-making").assertDoesNotExist()
         runBlocking { app.container.settings.setStudyLanguage(StudyLanguage.FINNISH) }
         // Finnish study keeps the interface language (English here) for topic names.
-        await("Society and democracy")
-        text("Samhälle och demokrati").assertDoesNotExist()
+        await("Democracy and decision-making")
+        text("Demokrati och beslutsfattande").assertDoesNotExist()
     }
     @Test fun finnishOnlyImportShowsAnHonestSwedishEmptyState() {
         chooseSwedish()

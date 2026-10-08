@@ -81,6 +81,7 @@ internal fun ContentImportBody(state: ContentImportState, select: () -> Unit, di
                     StatRow(preview.changes.added.toString(), stringResource(R.string.import_added))
                     StatRow(preview.changes.revised.toString(), stringResource(R.string.import_revised))
                     StatRow(preview.changes.translated.toString(), stringResource(R.string.import_translated))
+                    StatRow(preview.changes.reclassified.toString(), stringResource(R.string.import_reclassified))
                     StatRow(preview.changes.unchanged.toString(), stringResource(R.string.import_unchanged))
                     StatRow(preview.changes.removed.toString(), stringResource(R.string.import_removed))
                     StatRow(preview.changedLessonVariants.toString(), stringResource(R.string.import_changed_lessons))

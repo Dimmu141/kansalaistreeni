@@ -26,9 +26,14 @@ def read_json(path):
     return json.loads(path.read_text(encoding="utf-8-sig"), object_pairs_hook=unique_object)
 
 
+CLASSIFICATION = ("topicId", "objectiveIds")
+
+
 def fingerprint(question):
-    # Includes translation wording. Structural validation is also run by JVM tests.
-    text = json.dumps(question, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    # Includes translation wording. Structural validation is also run by JVM tests. Classification
+    # is excluded: moving a question to another topic or objective does not change the reviewed facts.
+    reviewed = {key: value for key, value in question.items() if key not in CLASSIFICATION}
+    text = json.dumps(reviewed, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 

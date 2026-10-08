@@ -22,10 +22,13 @@ class LearningBackupTest {
         rejected(backup.copy(schemaVersion = 3)); rejected(backup.copy(format = "other")); rejected(backup.copy(exportedAt = -1))
     }
     @Test fun `duplicate attempt tokens are rejected rather than merged`() { rejected(backup.copy(attempts = listOf(attempt, attempt))) }
-    @Test fun `current answers must match option correctness and topic`() {
+    @Test fun `current answers must match option correctness`() {
         rejected(backup.copy(attempts = listOf(attempt.copy(selectedOptionId = "missing"))))
         rejected(backup.copy(attempts = listOf(attempt.copy(correct = false))))
-        rejected(backup.copy(attempts = listOf(attempt.copy(topicId = "other"))))
+    }
+    @Test fun `an attempt keeps the topic it was answered under after reclassification`() {
+        val moved = backup.copy(attempts = listOf(attempt.copy(topicId = "retired-topic")))
+        assertEquals(moved, BackupCodec.parse(BackupCodec.encode(moved)))
     }
     @Test fun `language changes and future revisions are rejected`() {
         rejected(backup.copy(attempts = listOf(attempt.copy(language = "sv"))))

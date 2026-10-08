@@ -35,9 +35,9 @@ class ContentValidationTest {
         val c = content()
         assertEquals(60, c.questions.size)
         assertEquals(mapOf("fi" to 30, "sv" to 30), c.questions.groupingBy { it.language }.eachCount())
-        assertEquals(6, c.topics.size)
+        assertEquals(listOf("democracy", "rights", "equality", "laws", "history", "culture", "safety", "digital"), c.topics.sortedBy { it.order }.map { it.id })
         assertTrue(c.questions.all { it.status == "DEMO" && (it.language == "sv" || it.easyExplanation != null) })
-        assertTrue(c.topics.all { t -> c.questions.count { it.topicId == t.id } == 10 })
+        assertTrue(c.questions.all { q -> q.objectiveIds.isNotEmpty() && q.objectiveIds.all { id -> c.objectives.any { it.id == id } } })
         assertEquals(setOf(3, 4), c.questions.map { it.options.size }.toSet())
         assertTrue(c.questions.all { it.model().source.url.startsWith("https://") })
     }
@@ -72,10 +72,10 @@ class ContentValidationTest {
     }
     @Test fun `translated topic labels retain original fallback`() {
         val topic = content().topics.first().model()
-        assertEquals("Society and democracy", topic.titleFor("en"))
-        assertEquals("Parliament, decision-making and participation.", topic.descriptionFor("en"))
+        assertEquals("Democracy and decision-making", topic.titleFor("en"))
+        assertEquals("Parliament, elections, the President, the Government and municipalities.", topic.descriptionFor("en"))
         assertEquals(topic.title, topic.titleFor("fi"))
-        assertEquals("Riksdagen, beslut och deltagande.", topic.descriptionFor("sv"))
+        assertEquals("Riksdagen, val, presidenten, regeringen och kommunerna.", topic.descriptionFor("sv"))
     }
     @Test fun `old content without topic translations still parses`() {
         val c = content()

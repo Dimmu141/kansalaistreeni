@@ -33,7 +33,13 @@ object ContentFile {
         .digest(json.toByteArray(Charsets.UTF_8)).joinToString("") { "%02x".format(it) }
 }
 
-data class ContentChanges(val added: Int, val revised: Int, val unchanged: Int, val removed: Int, val translated: Int = 0)
+data class ContentChanges(val added: Int, val revised: Int, val unchanged: Int, val removed: Int, val translated: Int = 0, val reclassified: Int = 0)
+
+/**
+ * What a learner practises: everything except supporting translations and classification. Moving a
+ * question to another topic or objective therefore keeps its revision, mastery and review date.
+ */
+internal fun QuestionDto.practised() = copy(translations = emptyMap(), topicId = "", objectiveIds = emptyList())
 data class InstalledContent(val metadata: ContentMetadata?, val topics: List<TopicDto>, val questions: List<QuestionDto>, val objectives: List<ObjectiveDto> = emptyList())
 class PreparedContent internal constructor(
     val content: ContentPackageDto,
@@ -76,8 +82,8 @@ object ContentUpdates {
             // Language variants are separate learning items, never a revision of the same ID.
             if (before != null && before.language != question.language) throw ContentImportException(ImportProblem.REVISION)
             if (historicalLanguages[question.id]?.any { it != question.language } == true) throw ContentImportException(ImportProblem.REVISION)
-            // Supporting translations cannot change the practised text, answer key or facts.
-            val learningChanged = before != null && question.copy(translations = before.translations) != before
+            // Supporting translations and reclassification cannot change the practised text, answer key or facts.
+            val learningChanged = before != null && question.practised() != before.practised()
             if ((before != null && (question.revision < before.revision || (learningChanged && question.revision <= before.revision))) ||
                 question.revision < historical || (before == null && question.revision <= historical)) {
                 throw ContentImportException(ImportProblem.REVISION)
@@ -86,12 +92,13 @@ object ContentUpdates {
         val added = content.questions.count { it.id !in existing }
         val unchanged = content.questions.count { it == existing[it.id] }
         val translated = content.questions.count { q -> existing[q.id]?.let { q != it && q.copy(translations = it.translations) == it } == true }
+        val reclassified = content.questions.count { q -> existing[q.id]?.let { q != it && q.copy(translations = it.translations) != it && q.practised() == it.practised() } == true }
         val incomingIds = content.questions.map { it.id }.toSet()
         val removed = existing.keys.count { it !in incomingIds }
         val incomingLessons = content.topics.flatMap { topic -> topic.lessons.map { (language, lesson) -> "${topic.id}:$language" to lesson } }.toMap()
         val previousLessons = installed.topics.flatMap { topic -> topic.lessons.map { (language, lesson) -> "${topic.id}:$language" to lesson } }.toMap()
         val lessonChanges = (incomingLessons.keys + previousLessons.keys).count { incomingLessons[it] != previousLessons[it] }
-        return PreparedContent(content, ContentChanges(added, content.questions.size - added - unchanged - translated, unchanged, removed, translated),
+        return PreparedContent(content, ContentChanges(added, content.questions.size - added - unchanged - translated - reclassified, unchanged, removed, translated, reclassified),
             sameVersion && sameMaterial, hash, old, lessonChanges)
     }
 }

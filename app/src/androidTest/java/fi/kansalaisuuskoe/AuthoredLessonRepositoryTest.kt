@@ -43,9 +43,10 @@ class AuthoredLessonRepositoryTest {
         assertEquals(60, after.questions.size)
         assertEquals(before.attempts, after.attempts); assertEquals(before.progress, after.progress)
         assertEquals(assessment, assessments.get(id)); assertEquals(12, assessment.questions.size)
-        assertEquals(before.questions, after.questions.filter { it.id in before.questions.map { q -> q.id } })
-        assertTrue(after.topics.all { it.lessons.keys == setOf("fi", "sv", "en") })
-        assertEquals(5, learning.installedContent().metadata?.version)
+        fun practised(q: Question) = q.copy(topicId = "", objectiveIds = emptyList())
+        assertEquals(before.questions.map(::practised), after.questions.filter { it.id in before.questions.map { q -> q.id } }.map(::practised))
+        assertTrue(after.topics.filter { it.lessons.isNotEmpty() }.all { it.lessons.keys == setOf("fi", "sv", "en") })
+        assertEquals(seed().version, learning.installedContent().metadata?.version)
     }
     @Test fun lessonOnlyImportPersistsAcrossReopenAndPortableBackupWithoutTouchingLearning() = runBlocking {
         val q = learning.snapshot.first().questions.first()

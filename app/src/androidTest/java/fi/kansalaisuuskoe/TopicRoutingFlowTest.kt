@@ -41,11 +41,12 @@ class TopicRoutingFlowTest {
             .map { it.copy(topicId = topicId, revision = it.revision + 1) }
         val updated = content.copy(packageId = "topic-routing-$topicId",
             topics = content.topics.map { if (it.id == original.id) it.copy(id = topicId) else it },
+            objectives = content.objectives.map { if (it.topicId == original.id) it.copy(topicId = topicId) else it },
             questions = content.questions.filter { it.topicId != original.id } + questions)
         runBlocking { app.container.learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(updated)) }
         await("Your learning path")
         rule.onNodeWithText("Topics").performClick()
-        click("Society and democracy")
+        click("Democracy and decision-making")
         click("Practise this topic")
         questions.forEachIndexed { index, question ->
             await(question.text)

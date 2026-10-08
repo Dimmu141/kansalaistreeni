@@ -61,6 +61,16 @@ class ReviewGateTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify(self.content, self.ledger)
 
+    def test_reclassification_keeps_the_source_review(self):
+        first = self.content["questions"][0]
+        target = next(t["id"] for t in self.content["topics"] if t["id"] != first["topicId"])
+        # Both language variants move together; the bilingual check requires matching topics.
+        for question in self.content["questions"]:
+            if question["id"].removesuffix("-sv") == first["id"]:
+                question["topicId"] = target
+                question["objectiveIds"] = [self.content["objectives"][-1]["id"]]
+        verify(self.content, self.ledger)
+
     def test_translation_change_requires_new_review(self):
         self.content["questions"][0]["translations"]["en"]["explanation"] = "Wrong fact."
         with self.assertRaises(ValueError):

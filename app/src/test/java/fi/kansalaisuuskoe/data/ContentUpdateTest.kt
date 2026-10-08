@@ -15,6 +15,22 @@ class ContentUpdateTest {
         assertEquals(ContentChanges(0, 0, content.questions.size - 1, 0, 1), prepare(next).changes)
         assertEquals(q.revision, next.questions.first().revision)
     }
+    @Test fun `moving a question to another topic keeps its revision and is counted as reclassified`() {
+        val q = content.questions.first()
+        val target = content.topics.first { it.id != q.topicId }.id
+        val next = content.copy(version = content.version + 1, questions = content.questions.map { if (it.id == q.id) it.copy(topicId = target) else it })
+        assertEquals(ContentChanges(0, 0, content.questions.size - 1, 0, 0, 1), prepare(next).changes)
+        // Classification plus a supporting translation edit is still only a reclassification.
+        val both = content.copy(version = content.version + 1, questions = content.questions.map {
+            if (it.id == q.id) it.copy(topicId = target, translations = emptyMap()) else it
+        })
+        assertEquals(ContentChanges(0, 0, content.questions.size - 1, 0, 0, 1), prepare(both).changes)
+    }
+    @Test fun `reclassification cannot disguise a changed question`() {
+        val q = content.questions.first()
+        val changed = q.copy(topicId = content.topics.first { it.id != q.topicId }.id, text = "Changed question?")
+        rejects(ImportProblem.REVISION) { prepare(content.copy(version = content.version + 1, questions = listOf(changed))) }
+    }
     @Test fun `translation removal is a supporting change`() {
         val next = content.copy(version = content.version + 1, questions = content.questions.map { it.copy(translations = emptyMap()) })
         assertEquals(ContentChanges(0, 0, 0, 0, content.questions.size), prepare(next).changes)
@@ -28,7 +44,7 @@ class ContentUpdateTest {
         rejects(ImportProblem.VERSION) { prepare(content.copy(questions = content.questions.map { it.copy(translations = emptyMap()) })) }
     }
     private val content = ContentCodec.parse(File("src/main/assets/demo-content.json").readText())
-    private val installed = InstalledContent(ContentMetadata(packageId = content.packageId, version = content.version, hash = "old"), content.topics, content.questions)
+    private val installed = InstalledContent(ContentMetadata(packageId = content.packageId, version = content.version, hash = "old"), content.topics, content.questions, content.objectives)
     private fun prepare(next: ContentPackageDto, hash: String = "new", history: Map<String, Int> = emptyMap()) = ContentUpdates.prepare(next, hash, installed, history)
     private fun rejects(problem: ImportProblem, block: () -> Unit) {
         try { block(); fail("Invalid update accepted") } catch (e: ContentImportException) { assertEquals(problem, e.problem) }

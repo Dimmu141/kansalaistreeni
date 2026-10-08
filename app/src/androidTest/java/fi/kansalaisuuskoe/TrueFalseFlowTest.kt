@@ -48,7 +48,7 @@ class TrueFalseFlowTest {
 
         await("Your learning path")
         rule.onNodeWithText("Topics").performClick()
-        click("Society and democracy"); click("Practise this topic")
+        click("Democracy and decision-making"); click("Practise this topic")
 
         await(statements[0].text)
         rule.onNodeWithText("Statement. Is it true or false?").assertIsDisplayed()

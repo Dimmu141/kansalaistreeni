@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageId": "fi-civics-demo",
-  "version": 5,
+  "version": 6,
   "officialMaterialStatus": {
     "checkedAt": "2026-10-07",
     "sourceUrl": "https://migri.fi/ukk-suomen-kansalaisuus",
@@ -11,7 +11,7 @@
   "reviews": [
     {
       "questionId": "demo-parliament",
-      "sha256": "ad61371f10246a29cf8817d1d5b9c209351b5e27894198da2d5f763a22a74e03",
+      "sha256": "1191e98d2e94ecb7dd693ad647c950b7353601ed8e46625751d3f32d3f95e94e",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution sections 3 and 70",
@@ -19,11 +19,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'democracy', objectives dem-powers. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-members",
-      "sha256": "73e3c419b5a6dd99f110ecf611dafb3a94bf65c545a993f9d631d2d047564fc8",
+      "sha256": "9e74a8e695f068e7a4129795c16bd43bf5d055f7eda33f7a6ac5d938c1117046",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 24",
@@ -31,11 +31,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'democracy', objectives dem-parliament. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-equality",
-      "sha256": "36de1c47e0c8773b2283a0d5f542be2a7d68dd5a2ab50c969514fb4b5f563aff",
+      "sha256": "0eec808586c8bc621002cbc551714ee18e87a78a7c737136664d3bd550540c45",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 6",
@@ -43,11 +43,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'equality', objectives eq-law. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-religion",
-      "sha256": "da3b531dd1bb1b541404d16e64d7940e5706e956a30c7d33f28c9aa909f017e2",
+      "sha256": "4842b7277ef2d38fcae0b36eab6c1afc657438408448451752ae60d647b49c24",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 11",
@@ -55,11 +55,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'rights', objectives rights-religion. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-independence",
-      "sha256": "57dbade8030a03d941c12289ec6a9cbca4f68bc03bc054152074870c3e2313ab",
+      "sha256": "f9160cb9f46c704ae957664264134296c2fb203ef6c6eb9ea870be4473df1837",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "locator": "Finland as part of the Russian Empire / important events",
@@ -67,11 +67,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'history', objectives hist-independence. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-eu",
-      "sha256": "d9e206a54b7e939c15c96db796d0e36d943c91632fc34bbf3cadcd01fcb5b222",
+      "sha256": "5da6a378e2a4fa70fc3cd0cb1949ff11271c3b1d3391c22294f05d3ea02d1002",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "locator": "Part of Europe / important events",
@@ -79,11 +79,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'history', objectives hist-integration. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-contract",
-      "sha256": "20c4960044a9681d1f5d5f2485fcc4893fc75848407339ff28545e40daeffafb",
+      "sha256": "4f018d3f94ac46b56236a8d592fa81d69d3fae71f4ad6d164b5cfbb3810ed606",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Contents of an employment contract",
@@ -91,11 +91,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'laws', objectives law-employment. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-safety",
-      "sha256": "8bef7a2f018491e6a5a71bd51a235ee1704168a74622fad480cfd956bf99d5f6",
+      "sha256": "1919e2598f597a77b4312d1c5ae3bf5c50e0574bc2f6a909c71cef4013f5189f",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Dangerous situations at work; employer responsibilities",
@@ -103,11 +103,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'laws', objectives law-work-safety. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-emergency",
-      "sha256": "84bd9b6a1ba9bc59bf5fdc818dffbabaf5b28bc4a5c946faf900b2e522b09375",
+      "sha256": "e295ed88f74a6b3f5ab88690107dd3fa017319beb164ee9ef1c53198ce17f976",
       "sourceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
       "evidenceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
       "locator": "Emergency number 112 / when to call",
@@ -115,11 +115,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'safety', objectives safe-112. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-library",
-      "sha256": "f520ab724f98a0664f9c2094603b8afbe47f2b4c5cda9424781d45d83c7c9a5e",
+      "sha256": "ef57a24bd49bca496851efca27e66dc4a7dcca095242f2dc0a38b845abd651fa",
       "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "locator": "Library card",
@@ -127,11 +127,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'culture', objectives cult-services. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-languages",
-      "sha256": "dbda5fd895603778ba0b06d1645931d843c73ecabbc2240e3f251ce643518c6b",
+      "sha256": "e305ee5b9ce3053333457c277057883db8df9633085b07dc2ee63a0b3541f29b",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 17",
@@ -139,11 +139,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'culture', objectives cult-languages. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-expression",
-      "sha256": "2c682189292ed46859a3347e148290c9eefb17bfdd225ddcef3694d2bc9fe27f",
+      "sha256": "35ce2880f82680d21142e718fa7b72a5db03e55494b9f9d8871312f834fd6ef7",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 12",
@@ -151,11 +151,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'rights', objectives rights-expression. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-parliament-sv",
-      "sha256": "b67d17833bfbd4ad729128895baa5ea579d2a009b087367cb2f4ca9a4b92b2e3",
+      "sha256": "95543fc40f34815ff4a8b87a81a4aa2ca5ecef27f391e84d74879c687b2db38c",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/swe/1999/19990074.pdf",
       "locator": "Constitution sections 3 and 70",
@@ -163,11 +163,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'democracy', objectives dem-powers. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-members-sv",
-      "sha256": "0523d67a1ec221dc725cd23c736aff6dbff8d256889ac00e98b8993de0b0d60f",
+      "sha256": "c1de94d610a43755ed85fa00f6ea3329e176898e114d16c9934eb3896241b75f",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/swe/1999/19990074.pdf",
       "locator": "Constitution section 24",
@@ -175,11 +175,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'democracy', objectives dem-parliament. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-equality-sv",
-      "sha256": "78135fd75caac7f39fa076cff1e376cb49af8e6331d76ec6c474f2e0517c463b",
+      "sha256": "65a57fd5a1a58e699bcd83a4e2d049d6c3061c6cb35b75b25141f455319374c7",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/swe/1999/19990074.pdf",
       "locator": "Constitution section 6",
@@ -187,11 +187,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'equality', objectives eq-law. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-religion-sv",
-      "sha256": "75f5ec40286a20fb0eb3e43f4002e46a8f9f48440de668bfd2ad6997cb1eb284",
+      "sha256": "bc1432600e54a314f2ec95a0f36ce591298a17b5421be0ef43fa1b34592fd298",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/swe/1999/19990074.pdf",
       "locator": "Constitution section 11",
@@ -199,11 +199,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'rights', objectives rights-religion. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-independence-sv",
-      "sha256": "b10e9ca30db7e2fbfbf5c28932f3cecafc520b9dc5736e549f2e747043aa3b82",
+      "sha256": "6167b7c7e9316b811587a66b459c1dc97eb154aa0c715e849f8852e176ca0114",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/finnish-history",
       "locator": "Finland as part of the Russian Empire / important events",
@@ -211,11 +211,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'history', objectives hist-independence. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-eu-sv",
-      "sha256": "61c95e06e0f8bcf8df6f94a456e995e0ef04fea891e304f6b632c04cc4e2f20e",
+      "sha256": "1aa0f305958a136b56d775c07ad2af8b00b3b6fa3c63db5cdac5eb9bb3cdcc26",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/finnish-history",
       "locator": "Part of Europe / important events",
@@ -223,11 +223,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'history', objectives hist-integration. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-contract-sv",
-      "sha256": "045ae4b2e413384ac764d1bf24ce2c621116dbeb0b09ee2c3015a87797a9bfda",
+      "sha256": "61d7597675694168ee4416c94b4d4ea2eba70a5590b9c0e5fcadb09f8678b382",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Contents of an employment contract",
@@ -235,11 +235,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'laws', objectives law-employment. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-safety-sv",
-      "sha256": "d02696b01d38ea6f255e0e09c062f87d1c27371d3402254d40e2600fce269455",
+      "sha256": "07597afd964e23936f05f8637d28b3ddfadb4ba5fe2b87f893e36e04a9ac8d51",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Dangerous situations at work; employer responsibilities",
@@ -247,11 +247,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'laws', objectives law-work-safety. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-emergency-sv",
-      "sha256": "b0bb1d0d9f07997083198b51451b12140aad33eb8e76a6877ca7d887152d7fc5",
+      "sha256": "846007c2fae800b15c03aaeb4c413b7ee20815cdf7ad43f06f5fe84cd49eb225",
       "sourceUrl": "https://www.suomi.fi/service/gor-ett-nodmeddelande-nodcentralsverket/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
       "evidenceUrl": "https://www.suomi.fi/service/gor-ett-nodmeddelande-nodcentralsverket/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
       "locator": "Emergency number 112 / when to call",
@@ -259,11 +259,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'safety', objectives safe-112. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-library-sv",
-      "sha256": "4a3f45b4d3fee5f5dfa47f530020dd12ead3729c79c2581ec63d3b6d794cf711",
+      "sha256": "69aa1e95031fc86e0a2eb2cd2e887e6e7795eee24b58e0b57c740cff363c6ad4",
       "sourceUrl": "https://infofinland.fi/sv/leisure/libraries",
       "evidenceUrl": "https://infofinland.fi/sv/leisure/libraries",
       "locator": "Library card",
@@ -271,11 +271,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. v0.17 reclassification: topic 'culture', objectives cult-services. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-languages-sv",
-      "sha256": "0ae326b9e8d6bf18f1cc8033b11eccae4f7f07dc22c6271a8d38a914b8b11341",
+      "sha256": "ebc8b64849d1762cdebafe2e86e8128f430127d5c0cee16246fdde73340724e5",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/swe/1999/19990074.pdf",
       "locator": "Constitution section 17",
@@ -283,11 +283,11 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'culture', objectives cult-languages. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-expression-sv",
-      "sha256": "5357ca6442ce7aa5b267b7370d7e51a3cca07660a99a0ee65ab320f119644f4f",
+      "sha256": "830ed1f14befa1b53c471432f84ce30daf5eceba65010395d91a268c7f93d1e3",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/swe/1999/19990074.pdf",
       "locator": "Constitution section 12",
@@ -295,15 +295,15 @@
       "checkedAt": "2026-10-06",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit."
+      "notes": "Short FI/SV explanations, easy Finnish and English support are app-authored demo paraphrases. Specialist language review is pending. Finlex's consolidated HTML did not expose the statute text to this fetch; these sections were read in the original statute PDF. This is not a comprehensive current-law audit. v0.17 reclassification: topic 'rights', objectives rights-expression. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date."
     },
     {
       "questionId": "demo-term",
-      "sha256": "882d32ed798dbc658a1057210f8978d5ffd0d8cc1324a0a95c9f4a1bef3d0f7f",
+      "sha256": "c1c9cc6aa4a4520d7c11cb9a7ab8ca424d392be6e6835987425ce595aac694c8",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'democracy', objectives dem-parliament. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution sections 24 and 26: term and early elections",
@@ -311,11 +311,11 @@
     },
     {
       "questionId": "demo-term-sv",
-      "sha256": "f3cfd38c05074101e893372945e3f655e2ae257b7510290f9f7d92142b28fc53",
+      "sha256": "ec7784530696035656858aa0ee9a7de23021dfb0fce224d69f931eec235afc70",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'democracy', objectives dem-parliament. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution sections 24 and 26: term and early elections",
@@ -323,11 +323,11 @@
     },
     {
       "questionId": "demo-voting",
-      "sha256": "71405d80bd0d45aca0095b151bc05632a90cfa255b8d64ab096b2d3cb7f92de7",
+      "sha256": "7fa4fcfd51f3091df2ae650640ae3ccd0e572a504da1409da7b8ec5b6037f93f",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'democracy', objectives dem-elections. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1998/714",
       "evidenceUrl": "https://www.finlex.fi/fi/lainsaadanto/1998/714",
       "locator": "Election Act section 2: parliamentary voting eligibility",
@@ -335,11 +335,11 @@
     },
     {
       "questionId": "demo-voting-sv",
-      "sha256": "8561e44e5b3a988cf312abd4ccc33396a50ffd307e89e096c9769167ff9927ec",
+      "sha256": "1c32bf4a152e630c439fe2068afa28fe0b75094ce5c728747e52fc60dd69f2f8",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'democracy', objectives dem-elections. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1998/714",
       "evidenceUrl": "https://www.finlex.fi/fi/lainsaadanto/1998/714",
       "locator": "Election Act section 2: parliamentary voting eligibility",
@@ -347,11 +347,11 @@
     },
     {
       "questionId": "demo-courts",
-      "sha256": "35347179d660a16dba6be61177c54db710405a9a08ae57f4dd94368f59047a78",
+      "sha256": "f511c5992a4182173a590493608043f27473ab99f7e0dcbb5edbd21e2ad2de13",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'democracy', objectives dem-powers. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 3: independent courts",
@@ -359,11 +359,11 @@
     },
     {
       "questionId": "demo-courts-sv",
-      "sha256": "d60b5ca88dc410045453bbf5e4f718cd3b4b37c6051c1d7b34780a326b60742b",
+      "sha256": "4de410694611a3eb039526fe4ecf6bbac23b4c42ef6eedee6dac3cc02575b861",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'democracy', objectives dem-powers. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 3: independent courts",
@@ -371,11 +371,11 @@
     },
     {
       "questionId": "demo-privacy",
-      "sha256": "323ffd374e04e57c6812d7d06a64e0e59e0f19538919c8d9e541388d4d4e590a",
+      "sha256": "ff88919df13e67aace5d595736689706b2f1728a85b09af991f9601188da6261",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'rights', objectives rights-privacy. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 10: private life and confidential communications",
@@ -383,11 +383,11 @@
     },
     {
       "questionId": "demo-privacy-sv",
-      "sha256": "d81f27827eb451cce156429278b59f1fb1694309d02d0b172e20e99bb3b60c69",
+      "sha256": "83fdb001ec207787f31483496634f97f36d92e5e608b01c24d49fe72580b280d",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'rights', objectives rights-privacy. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 10: private life and confidential communications",
@@ -395,11 +395,11 @@
     },
     {
       "questionId": "demo-basic-education",
-      "sha256": "174fbbc133194befe3bad3dae5a2bda2e039c8624ae5db76bbd04e6784ed83cd",
+      "sha256": "a27853a6f4aad4e6abe60674eb6abbc67a1e45538123e1ad2d6fae26be99f21a",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'rights', objectives rights-education. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 16: free basic education",
@@ -407,11 +407,11 @@
     },
     {
       "questionId": "demo-basic-education-sv",
-      "sha256": "1e5f1487aa5ef3cd3f3ca52342a1839bce859da5b1bd0ba62889221648795ae3",
+      "sha256": "33b2f11aa5eb65b8b7da3cb8b4f1764dff107a40a6f011666c50ff10a6459c48",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'rights', objectives rights-education. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 16: free basic education",
@@ -419,11 +419,11 @@
     },
     {
       "questionId": "demo-follow-law",
-      "sha256": "41c27953e3151c5781751c781058572dad5e0dafaa338445eeedbed4863f0221",
+      "sha256": "dcc2040e72209f021ab01e7202e6b7f43c92bac213056921c41291f21b5c80e9",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'laws', objectives law-everyone. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "locator": "Obligations: everyone living or staying in Finland must follow Finnish law",
@@ -431,11 +431,11 @@
     },
     {
       "questionId": "demo-follow-law-sv",
-      "sha256": "20c4f6f05f253db41423f40b1a10f8cfe7962b0427be3ad93ff91789dc2186f0",
+      "sha256": "8c02f8db03458d4f8d3c69ca6188f460f54d165e6a5838e70f271e4d3067716a",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'laws', objectives law-everyone. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "locator": "Obligations: everyone living or staying in Finland must follow Finnish law",
@@ -443,11 +443,11 @@
     },
     {
       "questionId": "demo-sweden",
-      "sha256": "25f971f593da3f4f94ea1d6ec631af833349fe59790f263f7c5b40ac7d2145c1",
+      "sha256": "3b9afdaa4b944912cb3dc3bb8f385f23723ba20d1ac914126de92aed0bce917b",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'history', objectives hist-sweden. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "locator": "Eastern part of Sweden 1323–1809",
@@ -455,11 +455,11 @@
     },
     {
       "questionId": "demo-sweden-sv",
-      "sha256": "15d407fc849cb2e555f46f03c09f6dccd8bfa36a66dfb402363f90ed5bc57c40",
+      "sha256": "508ea273fd5423c2825b6d4e437aa6d5974ba21eeb088347ce4540a164cfde68",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'history', objectives hist-sweden. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "locator": "Eastern part of Sweden 1323–1809",
@@ -467,11 +467,11 @@
     },
     {
       "questionId": "demo-autonomy",
-      "sha256": "c42427ae21dd738b7dfbb7d5f21758e43be1f7a81c3bac44b6e58e4e27133bd3",
+      "sha256": "2271ad26f0c041921ae6eb3b80bafc71a1fb9ffb9ec573b3a699f8260528a0ff",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'history', objectives hist-autonomy. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "locator": "Finland as part of the Russian Empire 1809–1917",
@@ -479,11 +479,11 @@
     },
     {
       "questionId": "demo-autonomy-sv",
-      "sha256": "e7984d6ce737b8deda84c48ca01557af0fafa92f74e754dc91dac9192f72b382",
+      "sha256": "edcceffc6443ae5149b91823fe3c83df33568be5792c5a45fb3f01b845ff9259",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'history', objectives hist-autonomy. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "locator": "Finland as part of the Russian Empire 1809–1917",
@@ -491,11 +491,11 @@
     },
     {
       "questionId": "demo-suffrage",
-      "sha256": "37954b4e3af2afa77d284258cca2898d0254c3d0767a09399633de407e2dd122",
+      "sha256": "d3c599865e061433834a51e0bbcfbad68c6af73fecc783b0bc2490e2176c4e80",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'history', objectives hist-autonomy, eq-gender. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "locator": "Important events: 1906 universal and equal suffrage, also for women",
@@ -503,11 +503,11 @@
     },
     {
       "questionId": "demo-suffrage-sv",
-      "sha256": "7c5fdc1ae3b83a8dbf7584431867ea3c93274f24a201820d7e001368120de627",
+      "sha256": "dfa144ccad78a78d61380b1450151d33a4bf4334fe1314b0c47806379e5c02f3",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'history', objectives hist-autonomy, eq-gender. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "locator": "Important events: 1906 universal and equal suffrage, also for women",
@@ -515,11 +515,11 @@
     },
     {
       "questionId": "demo-oral-contract",
-      "sha256": "5106ee13a8623b3a32b2ec9833c7c824323e892e70ef567032e312441f4159ee",
+      "sha256": "97eb7651a8249beeb9604c1785443938d322a6e64483a822820e0c2b2c1cc381",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'laws', objectives law-employment. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "If the employment contract is oral",
@@ -527,11 +527,11 @@
     },
     {
       "questionId": "demo-oral-contract-sv",
-      "sha256": "c142e1244c43169d6b7f84904532283b9dee6ae2690de32909b3e17eb2b36371",
+      "sha256": "f3a007d9e205fafdda544e517d53f109248fda45518c3b5e4957f839c114d287",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'laws', objectives law-employment. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "If the employment contract is oral",
@@ -539,11 +539,11 @@
     },
     {
       "questionId": "demo-orientation",
-      "sha256": "1758e63afebcd943abf0c8227e7e9b425c92a9079fc9f607208e6a36d0679ff3",
+      "sha256": "bb5e6101ba00ca176958c197295b208c0e72f9245478ccc6a1a3e2d1c7fb2fb0",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'laws', objectives law-employment, law-work-safety. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Occupational safety at the workplace: induction and safety instructions",
@@ -551,11 +551,11 @@
     },
     {
       "questionId": "demo-orientation-sv",
-      "sha256": "41e2d7e159ef87c20dc4f0fc72bb251120281f0c10432c06b515a808035b3be0",
+      "sha256": "d69d560b87e71b7ded06a2e9d3e94f2e197f2e7ff65b8a6e4d1fd07714785568",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'laws', objectives law-employment, law-work-safety. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Occupational safety at the workplace: induction and safety instructions",
@@ -563,11 +563,11 @@
     },
     {
       "questionId": "demo-protective-equipment",
-      "sha256": "e1b6723259ffd2ac9afd3ba8826eaa6179131cd4304627471d31954bc46281ff",
+      "sha256": "bca6abc084b16b324a292fa1cdb2932806bbd79773c582f405eb68db68c0e535",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'laws', objectives law-work-safety. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Occupational safety at the workplace: employer pays for required safety equipment",
@@ -575,11 +575,11 @@
     },
     {
       "questionId": "demo-protective-equipment-sv",
-      "sha256": "3304578bc59fb3202c4d4c2edb35a58f528ea809886e7da51c2a2ff019ca5603",
+      "sha256": "05561535f46b0448f886a514a88bec4cdb93941982cb8e4bfbdbae3a934010db",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'laws', objectives law-work-safety. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Occupational safety at the workplace: employer pays for required safety equipment",
@@ -587,11 +587,11 @@
     },
     {
       "questionId": "demo-emergency-call",
-      "sha256": "bb726aad982b25d4fadae53c0c94b8d5aca4a78551998315e789695e3163a0aa",
+      "sha256": "9e8b0bdec4cba23628e962be83fd4586b86029c6bfbee0350104fd14c9723741",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'safety', objectives safe-112. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
       "evidenceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
       "locator": "When calling 112: answer questions, follow instructions, end only with permission",
@@ -599,11 +599,11 @@
     },
     {
       "questionId": "demo-emergency-call-sv",
-      "sha256": "da2a24a73ec281cbe575497e77a95a2d714dc6f706272d92a8afbfdb3459b8dc",
+      "sha256": "d68d9ebb0660cc1aeae4e5559f5cc25c24b9b3400fc903ab210faa03bf7bb635",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'safety', objectives safe-112. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
       "evidenceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
       "locator": "When calling 112: answer questions, follow instructions, end only with permission",
@@ -611,11 +611,11 @@
     },
     {
       "questionId": "demo-library-fee",
-      "sha256": "2d1986a2483684a928ddce3452d1dff95bcb1b978c50905d061e8b03d5446ef8",
+      "sha256": "528df129cc3485da29ed154a732521bafe8ca7d9e7afd75990eb329de38f4e78",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'culture', objectives cult-services. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "locator": "Library card: first card free, replacement of lost card costs",
@@ -623,11 +623,11 @@
     },
     {
       "questionId": "demo-library-fee-sv",
-      "sha256": "1cee25275e869533d3074a4c635684c4330a1a803223da504e908ef119792b07",
+      "sha256": "b4623a0f0ebc214fd24373ebff70972c49ccbc5632a7fe7df10f775dec92e54e",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'culture', objectives cult-services. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "locator": "Library card: first card free, replacement of lost card costs",
@@ -635,11 +635,11 @@
     },
     {
       "questionId": "demo-library-return",
-      "sha256": "ac8952ef44430e9272eb7ac9d2a2ca24694bf5c41b33b4c3133adfc942d8f262",
+      "sha256": "2e328c30a0a29b8c17b5e319e7de7ce40abc753fb772ce9c98362d096c416c58",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'culture', objectives cult-services. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "locator": "Borrowing material: return or renew on time; overdue fees",
@@ -647,11 +647,11 @@
     },
     {
       "questionId": "demo-library-return-sv",
-      "sha256": "5a6f8374507a54c471a77709e831e36768f79160fa689f409b8104869a5de29a",
+      "sha256": "76dd4c2caa05d6abac836149b3bf38bfc453eb5fb43f7a5cdb92963ab3e57b65",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'culture', objectives cult-services. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "locator": "Borrowing material: return or renew on time; overdue fees",
@@ -659,11 +659,11 @@
     },
     {
       "questionId": "demo-assembly",
-      "sha256": "fc611494f3105f3263184ae38ef2e28982dd7393c0020a6a245b13f253074e21",
+      "sha256": "73ed4c219d52d958020c9422abdf9baa75277791ad5e1ef149063a94d95f728e",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'rights', objectives rights-assembly. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 13: assembly",
@@ -671,11 +671,11 @@
     },
     {
       "questionId": "demo-assembly-sv",
-      "sha256": "24a6e7aad3cdddf683b5a09ee0370a012a5bb01395770a318dcb0a9bbbbf8f3d",
+      "sha256": "62d59d127dc83022a684ae5877625a9ba89de272c0c28d8224a0a4970950ac90",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'rights', objectives rights-assembly. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 13: assembly",
@@ -683,11 +683,11 @@
     },
     {
       "questionId": "demo-association",
-      "sha256": "8da9429336391190c8bc65059ad0c0f9a75b3257a810087c62487ee0f7715ff0",
+      "sha256": "a395978ef4a838b2dd38480837b63806b350ab3854256bb23855e86a0ffd4c1d",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'rights', objectives rights-assembly. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 13: association includes non-membership",
@@ -695,11 +695,11 @@
     },
     {
       "questionId": "demo-association-sv",
-      "sha256": "3371456c126ea4aa4c8022ff4661457fc41941787211bc5b181ca9f39cedfac0",
+      "sha256": "f6c42c58a9618026ad6ca1afd907cc479108288124e98513c0097f2fded0bee8",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'rights', objectives rights-assembly. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 13: association includes non-membership",
@@ -707,11 +707,11 @@
     },
     {
       "questionId": "demo-sami",
-      "sha256": "cd0de950c30111255a30b8a4c373a462fca8895833b8fa59d109c32bbc568b18",
+      "sha256": "6f76470bea04bac92db571f8cc6f83adfc67b153c575e5287dc477716ec7a577",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'culture', objectives cult-minorities. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 17: Sami as an indigenous people and language/culture rights",
@@ -719,11 +719,11 @@
     },
     {
       "questionId": "demo-sami-sv",
-      "sha256": "7da9b224104928f65875bc536a63f1b9056f2aa7610d97f84d9a5c10746c1039",
+      "sha256": "045bf1e934fa5e34737f6d96323be1453e5d5b897215389a339904d53fd69447",
       "checkedAt": "2026-10-07",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
+      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage. v0.17 reclassification: topic 'culture', objectives cult-minorities. The fingerprint now excludes topic and objective classification; the reviewed question content is unchanged since the check date.",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://www.finlex.fi/api/assets/extra/statute-book-of-finland-pdf/fin/1999/19990074.pdf",
       "locator": "Constitution section 17: Sami as an indigenous people and language/culture rights",
@@ -1140,270 +1140,6 @@
               "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
               "locator": "Part of Europe: EU membership 1995",
               "claim": "Finland joined the European Union in 1995, long after becoming independent."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "topicId": "work",
-      "language": "fi",
-      "sha256": "a171e3e074725a06e7f88185a71ba25131af1118bfd79dc24d07cf3d33a8608b",
-      "checkedAt": "2026-10-07",
-      "reviewType": "ASSISTANT_SOURCE_CHECK",
-      "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
-      "sections": [
-        {
-          "sectionId": "agreement",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
-              "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
-              "locator": "Employment contract contents and oral contracts",
-              "claim": "An employment contract sets duties, pay and working hours. Written terms are easier to check, though an oral contract is possible."
-            }
-          ]
-        },
-        {
-          "sectionId": "orientation",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "locator": "Workplace safety activity: induction",
-              "claim": "The employer must introduce duties and safety instructions. The employee must follow those instructions."
-            }
-          ]
-        },
-        {
-          "sectionId": "safety",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "locator": "Required safety equipment and dangerous situations",
-              "claim": "The employer pays for required safety equipment. Report hazards to your supervisor or safety representative so they can be addressed."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "topicId": "work",
-      "language": "sv",
-      "sha256": "db4d0bf6750252642cb0f75e72bc8e38f6d966a4a25085715eb47be6ff9a2b80",
-      "checkedAt": "2026-10-07",
-      "reviewType": "ASSISTANT_SOURCE_CHECK",
-      "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
-      "sections": [
-        {
-          "sectionId": "agreement",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
-              "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
-              "locator": "Employment contract contents and oral contracts",
-              "claim": "An employment contract sets duties, pay and working hours. Written terms are easier to check, though an oral contract is possible."
-            }
-          ]
-        },
-        {
-          "sectionId": "orientation",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "locator": "Workplace safety activity: induction",
-              "claim": "The employer must introduce duties and safety instructions. The employee must follow those instructions."
-            }
-          ]
-        },
-        {
-          "sectionId": "safety",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "locator": "Required safety equipment and dangerous situations",
-              "claim": "The employer pays for required safety equipment. Report hazards to your supervisor or safety representative so they can be addressed."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "topicId": "work",
-      "language": "en",
-      "sha256": "a4b53bc331cd38efad1c9b24ea0726282ea50b040d0434e57cde05801933cb3d",
-      "checkedAt": "2026-10-07",
-      "reviewType": "ASSISTANT_SOURCE_CHECK",
-      "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
-      "sections": [
-        {
-          "sectionId": "agreement",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
-              "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
-              "locator": "Employment contract contents and oral contracts",
-              "claim": "An employment contract sets duties, pay and working hours. Written terms are easier to check, though an oral contract is possible."
-            }
-          ]
-        },
-        {
-          "sectionId": "orientation",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "locator": "Workplace safety activity: induction",
-              "claim": "The employer must introduce duties and safety instructions. The employee must follow those instructions."
-            }
-          ]
-        },
-        {
-          "sectionId": "safety",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
-              "locator": "Required safety equipment and dangerous situations",
-              "claim": "The employer pays for required safety equipment. Report hazards to your supervisor or safety representative so they can be addressed."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "topicId": "everyday",
-      "language": "fi",
-      "sha256": "13b698e2fd8daee64c63a9c38033c8ce899025abf54ad1496322945f0c4801f7",
-      "checkedAt": "2026-10-07",
-      "reviewType": "ASSISTANT_SOURCE_CHECK",
-      "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
-      "sections": [
-        {
-          "sectionId": "emergency",
-          "sources": [
-            {
-              "sourceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
-              "evidenceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
-              "locator": "When to call 112 and operator instructions",
-              "claim": "Call 112 for a real, urgent emergency. Answer the operator’s questions, follow instructions and end the call only with permission."
-            }
-          ]
-        },
-        {
-          "sectionId": "library",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "locator": "Libraries and library card",
-              "claim": "Libraries offer reading, study and borrowing. A card is needed to borrow material; the first card is free."
-            }
-          ]
-        },
-        {
-          "sectionId": "return",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "locator": "Borrowing: return or renew on time",
-              "claim": "Check the due date. Return or renew on time when renewal is possible. Overdue loans can incur a fee."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "topicId": "everyday",
-      "language": "sv",
-      "sha256": "461d13bac838e61c4e69fcb15e7496a6cd30c65d2007d37044721f78dd3a81fb",
-      "checkedAt": "2026-10-07",
-      "reviewType": "ASSISTANT_SOURCE_CHECK",
-      "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
-      "sections": [
-        {
-          "sectionId": "emergency",
-          "sources": [
-            {
-              "sourceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
-              "evidenceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
-              "locator": "When to call 112 and operator instructions",
-              "claim": "Call 112 for a real, urgent emergency. Answer the operator’s questions, follow instructions and end the call only with permission."
-            }
-          ]
-        },
-        {
-          "sectionId": "library",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "locator": "Libraries and library card",
-              "claim": "Libraries offer reading, study and borrowing. A card is needed to borrow material; the first card is free."
-            }
-          ]
-        },
-        {
-          "sectionId": "return",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "locator": "Borrowing: return or renew on time",
-              "claim": "Check the due date. Return or renew on time when renewal is possible. Overdue loans can incur a fee."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "topicId": "everyday",
-      "language": "en",
-      "sha256": "9d46a832a4d4c538fac887d409ec6c169f7c2555457a80b2013a035c5a618b7b",
-      "checkedAt": "2026-10-07",
-      "reviewType": "ASSISTANT_SOURCE_CHECK",
-      "publicationApproved": false,
-      "notes": "App-authored provisional paraphrases, checked against the cited primary material. Finnish, Swedish, English and easy-language specialist review remains pending. This check does not establish official exam coverage.",
-      "sections": [
-        {
-          "sectionId": "emergency",
-          "sources": [
-            {
-              "sourceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
-              "evidenceUrl": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b",
-              "locator": "When to call 112 and operator instructions",
-              "claim": "Call 112 for a real, urgent emergency. Answer the operator’s questions, follow instructions and end the call only with permission."
-            }
-          ]
-        },
-        {
-          "sectionId": "library",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "locator": "Libraries and library card",
-              "claim": "Libraries offer reading, study and borrowing. A card is needed to borrow material; the first card is free."
-            }
-          ]
-        },
-        {
-          "sectionId": "return",
-          "sources": [
-            {
-              "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
-              "locator": "Borrowing: return or renew on time",
-              "claim": "Check the due date. Return or renew on time when renewal is possible. Overdue loans can incur a fee."
             }
           ]
         }

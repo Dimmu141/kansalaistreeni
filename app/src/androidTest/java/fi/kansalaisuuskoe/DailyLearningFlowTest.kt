@@ -70,7 +70,7 @@ class DailyLearningFlowTest {
             val q = repository.snapshot.first().questions.first { it.id == "demo-parliament" }
             repository.answer(q, q.options.first { it.id != q.correctOptionId }.id, "recent-mistake", System.currentTimeMillis())
         }
-        await("Lisää harjoittelua aiheesta: Yhteiskunta ja demokratia.")
+        await("Lisää harjoittelua aiheesta: Demokratia ja päätöksenteko.")
         click("Jatka harjoittelua")
         await("Kuinka monta kansanedustajaa Suomen eduskunnassa on?")
         rule.onNodeWithText("Uusi kysymys aiheesta, joka kaipaa vielä harjoittelua.").assertIsDisplayed()

@@ -108,7 +108,8 @@ object BackupCodec {
                 questions[attempt.questionId]?.let { question ->
                     require(attempt.language == question.language && attempt.revision <= question.revision)
                     if (attempt.revision == question.revision) {
-                        require(attempt.topicId == question.topicId && question.options.any { it.id == attempt.selectedOptionId })
+                        // An attempt keeps the topic it was answered under; reclassification may move the question since.
+                        require(question.options.any { it.id == attempt.selectedOptionId })
                         require(attempt.correct == (attempt.selectedOptionId == question.correctOptionId))
                     }
                 }

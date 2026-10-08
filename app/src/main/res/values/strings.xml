@@ -337,6 +337,7 @@
     </plurals>
     <string name="coverage_empty">Tässä aineistossa ei ole oppimistavoitteita.</string>
     <string name="import_objectives">Oppimistavoitteet: %1$s. %2$s.</string>
+    <string name="import_reclassified">Siirretty toiseen aiheeseen tai tavoitteeseen (edistyminen säilyy)</string>
     <plurals name="objective_count">
         <item quantity="one">%d oppimistavoite</item>
         <item quantity="other">%d oppimistavoitetta</item>

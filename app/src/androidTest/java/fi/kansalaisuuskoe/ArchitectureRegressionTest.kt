@@ -77,6 +77,7 @@ class ArchitectureRegressionTest {
             for (index in 1..30) {
                 repository.importContent(json(base.copy(version = base.version + index,
                     topics = base.topics.map { it.copy(id = "round-$index-${it.id}") },
+                    objectives = base.objectives.map { it.copy(topicId = "round-$index-${it.topicId}") },
                     questions = base.questions.map { it.copy(revision = it.revision + index, topicId = "round-$index-${it.topicId}") })))
                 delay(30)
             }
@@ -105,7 +106,7 @@ class ArchitectureRegressionTest {
         // Other questions make an accidentally selected daily plan observably different.
         val otherTopic = base.topics[1]
         val others = base.questions.filter { it.topicId == otherTopic.id && it.language == "fi" }
-        val content = base.copy(packageId = "architecture-reserved-topic", topics = listOf(topic, otherTopic), questions = questions + others)
+        val content = base.copy(packageId = "architecture-reserved-topic", topics = listOf(topic, otherTopic), questions = (questions + others).map { it.copy(objectiveIds = emptyList()) }, objectives = emptyList())
         ContentCodec.validate(content) // This ID is explicitly accepted by the import contract.
         repository.importContent(json(content))
         val store = ViewModelStore()

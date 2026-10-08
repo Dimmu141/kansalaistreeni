@@ -159,7 +159,7 @@ class ContentImportFlowTest {
         val before = runBlocking { repository.snapshot.first() }
         click("Choose a content file"); await("Review the update")
         click("Lessons in this file")
-        click("Lesson: Yhteiskunta ja demokratia · Suomi · Finnish")
+        click("Lesson: Demokratia ja päätöksenteko · Suomi · Finnish")
         val body = original.topics.first().lessons.getValue("fi").sections.first().body
         rule.onNode(hasScrollAction()).performScrollToNode(hasText(body)); text(body).assertIsDisplayed()
         val easy = original.topics.first().lessons.getValue("fi").sections.first().easyBody!!

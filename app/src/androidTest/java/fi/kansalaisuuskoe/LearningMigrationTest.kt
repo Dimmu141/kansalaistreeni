@@ -109,7 +109,7 @@ class LearningMigrationTest {
         assertEquals(1000L + 86_400_000L, progress.nextReview)
         assertEquals(packageId, opened.learningDao().metadata()!!.packageId)
         if (packageId == "fi-civics-demo") {
-            assertEquals("Society and democracy", snapshot.topics.first().titleFor("en"))
+            assertEquals("Democracy and decision-making", snapshot.topics.first().titleFor("en"))
             assertEquals(ContentCodec.parse(context.assets.open("demo-content.json").bufferedReader().use { it.readText() }).version, opened.learningDao().metadata()!!.version)
         } else {
             // An imported package without translations falls back to its original labels.
@@ -159,6 +159,6 @@ class LearningMigrationTest {
         assertEquals(2, saved.questions.size); assertNull(saved.finishedAt)
         assertTrue(saved.topics.all { it.lessons.isEmpty() })
         val repository = LearningRepository(requireNotNull(database))
-        assertTrue(repository.snapshot.first().topics.all { it.lessons.size == 3 })
+        assertTrue(repository.snapshot.first().topics.filter { it.lessons.isNotEmpty() }.all { it.lessons.size == 3 })
     }
 }

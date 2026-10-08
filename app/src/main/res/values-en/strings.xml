@@ -337,6 +337,7 @@
     </plurals>
     <string name="coverage_empty">This study material has no learning objectives.</string>
     <string name="import_objectives">Learning objectives: %1$s. %2$s.</string>
+    <string name="import_reclassified">Moved to another topic or objective (progress kept)</string>
     <plurals name="objective_count">
         <item quantity="one">%d learning objective</item>
         <item quantity="other">%d learning objectives</item>

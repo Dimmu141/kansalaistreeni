@@ -1,22 +1,22 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "packageId": "fi-civics-demo",
-  "version": 5,
+  "version": 6,
   "status": "DEMO",
   "topics": [
     {
       "id": "democracy",
-      "title": "Yhteiskunta ja demokratia",
-      "description": "Eduskunta, päätöksenteko ja vaikuttaminen.",
+      "title": "Demokratia ja päätöksenteko",
+      "description": "Eduskunta, vaalit, presidentti, hallitus ja kunnat.",
       "order": 0,
       "translations": {
         "en": {
-          "title": "Society and democracy",
-          "description": "Parliament, decision-making and participation."
+          "title": "Democracy and decision-making",
+          "description": "Parliament, elections, the President, the Government and municipalities."
         },
         "sv": {
-          "title": "Samhälle och demokrati",
-          "description": "Riksdagen, beslut och deltagande."
+          "title": "Demokrati och beslutsfattande",
+          "description": "Riksdagen, val, presidenten, regeringen och kommunerna."
         }
       },
       "lessons": {
@@ -162,17 +162,17 @@
     },
     {
       "id": "rights",
-      "title": "Oikeudet ja velvollisuudet",
-      "description": "Yhdenvertaisuus ja perusoikeudet.",
+      "title": "Perus- ja ihmisoikeudet",
+      "description": "Vapaudet, oikeusturva ja lapsen oikeudet.",
       "order": 1,
       "translations": {
         "en": {
-          "title": "Rights and responsibilities",
-          "description": "Equality and fundamental rights."
+          "title": "Fundamental and human rights",
+          "description": "Freedoms, legal protection and children's rights."
         },
         "sv": {
-          "title": "Rättigheter och skyldigheter",
-          "description": "Likabehandling och grundläggande rättigheter."
+          "title": "Grundläggande och mänskliga rättigheter",
+          "description": "Friheter, rättsskydd och barnets rättigheter."
         }
       },
       "lessons": {
@@ -305,18 +305,50 @@
       }
     },
     {
-      "id": "history",
-      "title": "Suomen historia",
-      "description": "Itsenäistyminen ja Suomen tie Eurooppaan.",
+      "id": "equality",
+      "title": "Yhdenvertaisuus ja tasa-arvo",
+      "description": "Syrjinnän kielto, sukupuolten tasa-arvo ja avun saaminen.",
       "order": 2,
       "translations": {
         "en": {
+          "title": "Equality and non-discrimination",
+          "description": "The ban on discrimination, gender equality and getting help."
+        },
+        "sv": {
+          "title": "Likabehandling och jämställdhet",
+          "description": "Diskrimineringsförbudet, jämställdhet mellan könen och var man får hjälp."
+        }
+      }
+    },
+    {
+      "id": "laws",
+      "title": "Lait arjessa",
+      "description": "Työ, verot, asuminen, perhe ja sosiaaliturva.",
+      "order": 3,
+      "translations": {
+        "en": {
+          "title": "Laws in everyday life",
+          "description": "Work, taxes, housing, family and social security."
+        },
+        "sv": {
+          "title": "Lagar i vardagen",
+          "description": "Arbete, skatter, boende, familj och social trygghet."
+        }
+      }
+    },
+    {
+      "id": "history",
+      "title": "Suomen historia",
+      "description": "Ruotsin ajasta itsenäisyyteen, sotiin ja Eurooppaan.",
+      "order": 4,
+      "translations": {
+        "en": {
           "title": "Finnish history",
-          "description": "Independence and Finland's path to the EU."
+          "description": "From Swedish rule to independence, the wars and Europe."
         },
         "sv": {
           "title": "Finlands historia",
-          "description": "Självständigheten och Finlands väg till EU."
+          "description": "Från den svenska tiden till självständigheten, krigen och Europa."
         }
       },
       "lessons": {
@@ -449,306 +481,18 @@
       }
     },
     {
-      "id": "work",
-      "title": "Työelämä",
-      "description": "Työsopimus ja turvallinen työ.",
-      "order": 3,
-      "translations": {
-        "en": {
-          "title": "Working life",
-          "description": "Employment contracts and safety at work."
-        },
-        "sv": {
-          "title": "Arbetsliv",
-          "description": "Arbetsavtal och säkerhet i arbetet."
-        }
-      },
-      "lessons": {
-        "fi": {
-          "id": "work-basics",
-          "revision": 1,
-          "introduction": "Lue aiheen perusasiat ja tutustu sanastoon. Harjoittele sitten kysymyksillä. Tämä on alustavaa harjoitusmateriaalia. Lukeminen ei muuta osaamisarviota.",
-          "status": "DEMO",
-          "sections": [
-            {
-              "id": "agreement",
-              "title": "Sovi työn ehdoista",
-              "body": "Työsopimuksessa sovitaan tehtävistä, palkasta ja työajasta. Sopimus voi olla suullinen, mutta kirjallinen sopimus helpottaa ehtojen tarkistamista.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Työsopimus ja työsuhteen ehdot",
-                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
-                }
-              ],
-              "easyBody": "Sopikaa työstä, palkasta ja työajasta. Kirjallinen sopimus auttaa muistamaan ehdot."
-            },
-            {
-              "id": "orientation",
-              "title": "Opettele turvalliset työtavat",
-              "body": "Työnantajan pitää opastaa uusi työntekijä tehtäviin ja turvallisuusohjeisiin. Työntekijän pitää noudattaa annettuja ohjeita.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
-                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
-                }
-              ],
-              "easyBody": "Työnantaja opastaa sinua. Noudata turvallisuusohjeita."
-            },
-            {
-              "id": "safety",
-              "title": "Turvavälineet ja vaarat",
-              "body": "Työnantaja maksaa tarvittavat turvavälineet. Ilmoita havaitsemastasi vaarasta esihenkilölle tai työsuojeluvaltuutetulle, jotta puute voidaan korjata.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
-                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
-                }
-              ],
-              "easyBody": "Käytä turvavälineitä. Kerro vaarasta heti esihenkilölle tai työsuojeluvaltuutetulle."
-            }
-          ]
-        },
-        "sv": {
-          "id": "work-basics",
-          "revision": 1,
-          "introduction": "Läs om ämnets grunder och bekanta dig med orden. Öva sedan med frågor. Detta är preliminärt övningsmaterial. Läsning ändrar inte din kunskapsbedömning.",
-          "status": "DEMO",
-          "sections": [
-            {
-              "id": "agreement",
-              "title": "Avtala om villkoren",
-              "body": "Arbetsavtalet anger uppgifter, lön och arbetstid. Ett muntligt avtal är möjligt, men skriftliga villkor är lättare att kontrollera.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Työsopimus ja työsuhteen ehdot",
-                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
-                }
-              ]
-            },
-            {
-              "id": "orientation",
-              "title": "Lär dig säkra arbetssätt",
-              "body": "Arbetsgivaren ska introducera uppgifterna och säkerhetsanvisningarna. Arbetstagaren ska följa anvisningarna.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
-                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
-                }
-              ]
-            },
-            {
-              "id": "safety",
-              "title": "Utrustning och risker",
-              "body": "Arbetsgivaren betalar nödvändig skyddsutrustning. Anmäl risker till chefen eller arbetarskyddsfullmäktigen så att brister kan åtgärdas.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
-                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
-                }
-              ]
-            }
-          ]
-        },
-        "en": {
-          "id": "work-basics",
-          "revision": 1,
-          "introduction": "Read the basics and explore the vocabulary, then practise with questions. This is provisional practice material. Reading does not change your mastery estimate.",
-          "status": "DEMO",
-          "sections": [
-            {
-              "id": "agreement",
-              "title": "Agree on the terms",
-              "body": "An employment contract sets duties, pay and working hours. Written terms are easier to check, though an oral contract is possible.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Työsopimus ja työsuhteen ehdot",
-                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment"
-                }
-              ]
-            },
-            {
-              "id": "orientation",
-              "title": "Learn safe working methods",
-              "body": "The employer must introduce duties and safety instructions. The employee must follow those instructions.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
-                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
-                }
-              ]
-            },
-            {
-              "id": "safety",
-              "title": "Equipment and hazards",
-              "body": "The employer pays for required safety equipment. Report hazards to your supervisor or safety representative so they can be addressed.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Työturvallisuus ja työsuojelu",
-                  "url": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "everyday",
-      "title": "Arki Suomessa",
-      "description": "Palvelut ja turvallisuus arjessa.",
-      "order": 4,
-      "translations": {
-        "en": {
-          "title": "Everyday life in Finland",
-          "description": "Services and everyday safety."
-        },
-        "sv": {
-          "title": "Vardagen i Finland",
-          "description": "Tjänster och säkerhet i vardagen."
-        }
-      },
-      "lessons": {
-        "fi": {
-          "id": "everyday-basics",
-          "revision": 1,
-          "introduction": "Lue aiheen perusasiat ja tutustu sanastoon. Harjoittele sitten kysymyksillä. Tämä on alustavaa harjoitusmateriaalia. Lukeminen ei muuta osaamisarviota.",
-          "status": "DEMO",
-          "sections": [
-            {
-              "id": "emergency",
-              "title": "Hätätilanteessa 112",
-              "body": "Soita 112 todellisessa, kiireellisessä hätätilanteessa. Vastaa päivystäjän kysymyksiin, noudata ohjeita ja lopeta puhelu vasta saatuasi luvan.",
-              "sources": [
-                {
-                  "title": "Hätäkeskuslaitos: Hätäilmoituksen tekeminen",
-                  "url": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
-                }
-              ],
-              "easyBody": "Soita hätätilanteessa 112. Kuuntele ohjeet ja odota lupaa lopettaa puhelu."
-            },
-            {
-              "id": "library",
-              "title": "Kirjasto on avoin kaikille",
-              "body": "Kirjastossa voit lukea, opiskella ja lainata aineistoa. Lainaamiseen tarvitaan kirjastokortti. Ensimmäinen kortti on maksuton.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Kirjastot",
-                  "url": "https://infofinland.fi/fi/leisure/libraries"
-                }
-              ],
-              "easyBody": "Kirjastossa voit lukea ja opiskella. Saat ensimmäisen kirjastokortin ilmaiseksi."
-            },
-            {
-              "id": "return",
-              "title": "Huolehdi lainoista",
-              "body": "Tarkista eräpäivä. Palauta tai uusi laina ajoissa, jos uusiminen on mahdollista. Myöhässä palautetusta lainasta voi tulla maksu.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Kirjastot",
-                  "url": "https://infofinland.fi/fi/leisure/libraries"
-                }
-              ],
-              "easyBody": "Palauta kirja ajoissa tai uusi laina, jos voit. Myöhästyminen voi maksaa."
-            }
-          ]
-        },
-        "sv": {
-          "id": "everyday-basics",
-          "revision": 1,
-          "introduction": "Läs om ämnets grunder och bekanta dig med orden. Öva sedan med frågor. Detta är preliminärt övningsmaterial. Läsning ändrar inte din kunskapsbedömning.",
-          "status": "DEMO",
-          "sections": [
-            {
-              "id": "emergency",
-              "title": "Vid nödsituationer: 112",
-              "body": "Ring 112 i en verklig, brådskande nödsituation. Svara på operatörens frågor, följ anvisningarna och avsluta först när du får tillstånd.",
-              "sources": [
-                {
-                  "title": "Hätäkeskuslaitos: Hätäilmoituksen tekeminen",
-                  "url": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
-                }
-              ]
-            },
-            {
-              "id": "library",
-              "title": "Biblioteket är öppet för alla",
-              "body": "På biblioteket kan du läsa, studera och låna material. Du behöver ett bibliotekskort för att låna. Det första kortet är gratis.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Kirjastot",
-                  "url": "https://infofinland.fi/fi/leisure/libraries"
-                }
-              ]
-            },
-            {
-              "id": "return",
-              "title": "Ta hand om dina lån",
-              "body": "Kontrollera förfallodagen. Lämna tillbaka eller förnya lånet i tid om det går. Försenade lån kan medföra en avgift.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Kirjastot",
-                  "url": "https://infofinland.fi/fi/leisure/libraries"
-                }
-              ]
-            }
-          ]
-        },
-        "en": {
-          "id": "everyday-basics",
-          "revision": 1,
-          "introduction": "Read the basics and explore the vocabulary, then practise with questions. This is provisional practice material. Reading does not change your mastery estimate.",
-          "status": "DEMO",
-          "sections": [
-            {
-              "id": "emergency",
-              "title": "In an emergency: 112",
-              "body": "Call 112 for a real, urgent emergency. Answer the operator’s questions, follow instructions and end the call only with permission.",
-              "sources": [
-                {
-                  "title": "Hätäkeskuslaitos: Hätäilmoituksen tekeminen",
-                  "url": "https://www.suomi.fi/palvelut/hatailmoituksen-tekeminen-hatakeskuslaitos/01a571b5-3eb9-4b49-a27e-ec8427737c5b"
-                }
-              ]
-            },
-            {
-              "id": "library",
-              "title": "Libraries are open to everyone",
-              "body": "Libraries offer reading, study and borrowing. A card is needed to borrow material; the first card is free.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Kirjastot",
-                  "url": "https://infofinland.fi/fi/leisure/libraries"
-                }
-              ]
-            },
-            {
-              "id": "return",
-              "title": "Look after your loans",
-              "body": "Check the due date. Return or renew on time when renewal is possible. Overdue loans can incur a fee.",
-              "sources": [
-                {
-                  "title": "InfoFinland: Kirjastot",
-                  "url": "https://infofinland.fi/fi/leisure/libraries"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    },
-    {
       "id": "culture",
-      "title": "Kulttuuri ja yhteiskunta",
-      "description": "Kielet ja mielipiteen ilmaiseminen.",
+      "title": "Kulttuuri, kielet ja yhteiskunta",
+      "description": "Kansalliskielet, vähemmistöt, juhlapäivät ja julkiset palvelut.",
       "order": 5,
       "translations": {
         "en": {
-          "title": "Culture and society",
-          "description": "Languages and freedom of expression."
+          "title": "Culture, languages and society",
+          "description": "National languages, minorities, holidays and public services."
         },
         "sv": {
-          "title": "Kultur och samhälle",
-          "description": "Språk och att uttrycka åsikter."
+          "title": "Kultur, språk och samhälle",
+          "description": "Nationalspråken, minoriteter, högtider och offentliga tjänster."
         }
       },
       "lessons": {
@@ -879,6 +623,590 @@
           ]
         }
       }
+    },
+    {
+      "id": "safety",
+      "title": "Turvallisuus ja hätätilanteet",
+      "description": "Hätänumero, poliisi, paloturvallisuus ja varautuminen.",
+      "order": 6,
+      "translations": {
+        "en": {
+          "title": "Safety and emergencies",
+          "description": "The emergency number, the police, fire safety and preparedness."
+        },
+        "sv": {
+          "title": "Säkerhet och nödsituationer",
+          "description": "Nödnumret, polisen, brandsäkerhet och beredskap."
+        }
+      }
+    },
+    {
+      "id": "digital",
+      "title": "Digitaalinen asiointi",
+      "description": "Sähköinen tunnistautuminen, julkiset verkkopalvelut ja tietoturva.",
+      "order": 7,
+      "translations": {
+        "en": {
+          "title": "Digital services",
+          "description": "Electronic identification, public online services and online safety."
+        },
+        "sv": {
+          "title": "Digitala tjänster",
+          "description": "Elektronisk identifiering, offentliga e-tjänster och datasäkerhet."
+        }
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "id": "dem-powers",
+      "topicId": "democracy",
+      "sourceRef": "Perustuslaki 3 §",
+      "statement": {
+        "fi": "Vallanjako: kuka säätää lait, kuka hallitsee ja kuka tuomitsee",
+        "sv": "Maktfördelningen: vem stiftar lagar, vem styr och vem dömer",
+        "en": "Separation of powers: who makes laws, who governs and who judges"
+      }
+    },
+    {
+      "id": "dem-parliament",
+      "topicId": "democracy",
+      "sourceRef": "Perustuslaki 24 §",
+      "statement": {
+        "fi": "Eduskunnan koko, vaalikausi ja tehtävät",
+        "sv": "Riksdagens storlek, valperiod och uppgifter",
+        "en": "Parliament's size, term and tasks"
+      }
+    },
+    {
+      "id": "dem-elections",
+      "topicId": "democracy",
+      "sourceRef": "Perustuslaki 14 §",
+      "statement": {
+        "fi": "Kuka saa äänestää missäkin vaaleissa",
+        "sv": "Vem får rösta i vilka val",
+        "en": "Who may vote in which elections"
+      }
+    },
+    {
+      "id": "dem-president",
+      "topicId": "democracy",
+      "sourceRef": "Perustuslaki 54 §",
+      "statement": {
+        "fi": "Tasavallan presidentin valinta, toimikausi ja tehtävät",
+        "sv": "Republikens presidents val, mandatperiod och uppgifter",
+        "en": "How the President is elected, the term and the tasks"
+      }
+    },
+    {
+      "id": "dem-government",
+      "topicId": "democracy",
+      "sourceRef": "Perustuslaki 3 ja 61 §",
+      "statement": {
+        "fi": "Parlamentarismi: hallitus tarvitsee eduskunnan luottamuksen",
+        "sv": "Parlamentarism: regeringen behöver riksdagens förtroende",
+        "en": "Parliamentarism: the Government needs Parliament's confidence"
+      }
+    },
+    {
+      "id": "dem-local",
+      "topicId": "democracy",
+      "sourceRef": "Perustuslaki 121 §",
+      "statement": {
+        "fi": "Kunnat ja hyvinvointialueet: itsehallinto, palvelut ja vaalit",
+        "sv": "Kommuner och välfärdsområden: självstyrelse, tjänster och val",
+        "en": "Municipalities and wellbeing services counties: self-government, services and elections"
+      }
+    },
+    {
+      "id": "dem-participation",
+      "topicId": "democracy",
+      "sourceRef": "Perustuslaki 53 §",
+      "statement": {
+        "fi": "Vaikuttaminen vaalien välillä: aloitteet, puolueet ja järjestöt",
+        "sv": "Påverkan mellan valen: initiativ, partier och organisationer",
+        "en": "Influence between elections: initiatives, parties and organisations"
+      }
+    },
+    {
+      "id": "rights-scope",
+      "topicId": "rights",
+      "sourceRef": "Perustuslaki 2 luku",
+      "statement": {
+        "fi": "Perusoikeudet perustuslaissa ja ihmisoikeudet",
+        "sv": "Grundläggande fri- och rättigheter i grundlagen och mänskliga rättigheter",
+        "en": "Basic rights in the Constitution and human rights"
+      }
+    },
+    {
+      "id": "rights-expression",
+      "topicId": "rights",
+      "sourceRef": "Perustuslaki 12 §",
+      "statement": {
+        "fi": "Sananvapaus ja sen lailliset rajat",
+        "sv": "Yttrandefriheten och dess lagliga gränser",
+        "en": "Freedom of expression and its legal limits"
+      }
+    },
+    {
+      "id": "rights-religion",
+      "topicId": "rights",
+      "sourceRef": "Perustuslaki 11 §",
+      "statement": {
+        "fi": "Uskonnon ja omantunnon vapaus",
+        "sv": "Religions- och samvetsfrihet",
+        "en": "Freedom of religion and conscience"
+      }
+    },
+    {
+      "id": "rights-assembly",
+      "topicId": "rights",
+      "sourceRef": "Perustuslaki 13 §",
+      "statement": {
+        "fi": "Kokoontumis- ja yhdistymisvapaus",
+        "sv": "Mötes- och föreningsfrihet",
+        "en": "Freedom of assembly and association"
+      }
+    },
+    {
+      "id": "rights-privacy",
+      "topicId": "rights",
+      "sourceRef": "Perustuslaki 10 §",
+      "statement": {
+        "fi": "Yksityiselämän, kotirauhan ja luottamuksellisen viestin suoja",
+        "sv": "Skydd för privatliv, hemfrid och förtroliga meddelanden",
+        "en": "Protection of private life, home and confidential messages"
+      }
+    },
+    {
+      "id": "rights-education",
+      "topicId": "rights",
+      "sourceRef": "Perustuslaki 16 ja 17 §",
+      "statement": {
+        "fi": "Oikeus maksuttomaan perusopetukseen ja omaan kieleen ja kulttuuriin",
+        "sv": "Rätt till avgiftsfri grundläggande utbildning och till eget språk och egen kultur",
+        "en": "Right to free basic education and to one's own language and culture"
+      }
+    },
+    {
+      "id": "rights-legal",
+      "topicId": "rights",
+      "sourceRef": "Perustuslaki 21 §",
+      "statement": {
+        "fi": "Oikeusturva: oikeudenmukainen oikeudenkäynti, muutoksenhaku ja kantelu",
+        "sv": "Rättsskydd: rättvis rättegång, ändringssökande och klagomål",
+        "en": "Legal protection: fair trial, appeal and complaints"
+      }
+    },
+    {
+      "id": "rights-child",
+      "topicId": "rights",
+      "sourceRef": "Lapsenhuoltolaki 1 §",
+      "statement": {
+        "fi": "Lapsen oikeudet ja ruumiillisen kurituksen kielto",
+        "sv": "Barnets rättigheter och förbudet mot aga",
+        "en": "Children's rights and the ban on corporal punishment"
+      }
+    },
+    {
+      "id": "eq-law",
+      "topicId": "equality",
+      "sourceRef": "Perustuslaki 6 §",
+      "statement": {
+        "fi": "Yhdenvertaisuus lain edessä",
+        "sv": "Jämlikhet inför lagen",
+        "en": "Equality before the law"
+      }
+    },
+    {
+      "id": "eq-grounds",
+      "topicId": "equality",
+      "sourceRef": "Yhdenvertaisuuslaki 8 §",
+      "statement": {
+        "fi": "Syrjintäkiellon perusteet",
+        "sv": "Grunderna i diskrimineringsförbudet",
+        "en": "Grounds covered by the ban on discrimination"
+      }
+    },
+    {
+      "id": "eq-work",
+      "topicId": "equality",
+      "sourceRef": "Tasa-arvolaki 8 §",
+      "statement": {
+        "fi": "Yhdenvertaisuus työelämässä: rekrytointi, palkka ja perhevapaat",
+        "sv": "Jämlikhet i arbetslivet: rekrytering, lön och familjeledigheter",
+        "en": "Equality at work: recruitment, pay and family leave"
+      }
+    },
+    {
+      "id": "eq-gender",
+      "topicId": "equality",
+      "sourceRef": "Tasa-arvolaki 1 §",
+      "statement": {
+        "fi": "Naisten ja miesten tasa-arvo",
+        "sv": "Jämställdhet mellan kvinnor och män",
+        "en": "Equality between women and men"
+      }
+    },
+    {
+      "id": "eq-family",
+      "topicId": "equality",
+      "sourceRef": "Avioliittolaki",
+      "statement": {
+        "fi": "Avioliitto: vapaa tahto, ikäraja ja puolisoiden tasa-arvo",
+        "sv": "Äktenskap: fri vilja, åldersgräns och makarnas jämlikhet",
+        "en": "Marriage: free will, minimum age and equal spouses"
+      }
+    },
+    {
+      "id": "eq-help",
+      "topicId": "equality",
+      "sourceRef": "Yhdenvertaisuusvaltuutettu",
+      "statement": {
+        "fi": "Mistä saa apua syrjintään",
+        "sv": "Var man får hjälp vid diskriminering",
+        "en": "Where to get help with discrimination"
+      }
+    },
+    {
+      "id": "eq-disability",
+      "topicId": "equality",
+      "sourceRef": "Yhdenvertaisuuslaki 15 §",
+      "statement": {
+        "fi": "Saavutettavuus ja kohtuulliset mukautukset",
+        "sv": "Tillgänglighet och skäliga anpassningar",
+        "en": "Accessibility and reasonable accommodation"
+      }
+    },
+    {
+      "id": "law-everyone",
+      "topicId": "laws",
+      "sourceRef": "InfoFinland: Suomen lait",
+      "statement": {
+        "fi": "Suomen lait koskevat kaikkia Suomessa",
+        "sv": "Finlands lagar gäller alla i Finland",
+        "en": "Finnish laws apply to everyone in Finland"
+      }
+    },
+    {
+      "id": "law-employment",
+      "topicId": "laws",
+      "sourceRef": "Työsopimuslaki",
+      "statement": {
+        "fi": "Työsopimus, työehtosopimus ja koeaika",
+        "sv": "Arbetsavtal, kollektivavtal och prövotid",
+        "en": "Employment contract, collective agreement and trial period"
+      }
+    },
+    {
+      "id": "law-work-safety",
+      "topicId": "laws",
+      "sourceRef": "Työturvallisuuslaki",
+      "statement": {
+        "fi": "Työnantajan ja työntekijän velvollisuudet työturvallisuudessa",
+        "sv": "Arbetsgivarens och arbetstagarens skyldigheter för arbetarskyddet",
+        "en": "Employer and employee duties for workplace safety"
+      }
+    },
+    {
+      "id": "law-taxes",
+      "topicId": "laws",
+      "sourceRef": "Verohallinto",
+      "statement": {
+        "fi": "Verokortti, tuloverotus ja verojen käyttö",
+        "sv": "Skattekort, inkomstbeskattning och vad skatterna används till",
+        "en": "Tax card, income tax and what taxes pay for"
+      }
+    },
+    {
+      "id": "law-housing",
+      "topicId": "laws",
+      "sourceRef": "Laki asuinhuoneiston vuokrauksesta",
+      "statement": {
+        "fi": "Vuokrasopimus, vakuus, irtisanominen ja muuttoilmoitus",
+        "sv": "Hyresavtal, deposition, uppsägning och flyttanmälan",
+        "en": "Rental agreement, deposit, notice and moving notification"
+      }
+    },
+    {
+      "id": "law-family",
+      "topicId": "laws",
+      "sourceRef": "Oppivelvollisuuslaki",
+      "statement": {
+        "fi": "Lapsen huolto, elatus ja oppivelvollisuus",
+        "sv": "Vårdnad om barn, underhåll och läroplikt",
+        "en": "Custody, child maintenance and compulsory education"
+      }
+    },
+    {
+      "id": "law-social",
+      "topicId": "laws",
+      "sourceRef": "Kela",
+      "statement": {
+        "fi": "Asumiseen perustuva sosiaaliturva ja julkiset palvelut",
+        "sv": "Bosättningsbaserad social trygghet och offentliga tjänster",
+        "en": "Residence-based social security and public services"
+      }
+    },
+    {
+      "id": "hist-sweden",
+      "topicId": "history",
+      "sourceRef": "InfoFinland: Suomen historiaa",
+      "statement": {
+        "fi": "Suomi osana Ruotsin valtakuntaa vuoteen 1809",
+        "sv": "Finland som en del av det svenska riket fram till 1809",
+        "en": "Finland as part of the Swedish realm until 1809"
+      }
+    },
+    {
+      "id": "hist-autonomy",
+      "topicId": "history",
+      "sourceRef": "InfoFinland: Suomen historiaa",
+      "statement": {
+        "fi": "Autonominen suuriruhtinaskunta 1809–1917 ja vuoden 1906 eduskuntauudistus",
+        "sv": "Det autonoma storfurstendömet 1809–1917 och lantdagsreformen 1906",
+        "en": "The autonomous Grand Duchy 1809–1917 and the 1906 parliamentary reform"
+      }
+    },
+    {
+      "id": "hist-independence",
+      "topicId": "history",
+      "sourceRef": "InfoFinland: Suomen historiaa",
+      "statement": {
+        "fi": "Itsenäisyys 1917, sisällissota 1918 ja tasavalta 1919",
+        "sv": "Självständigheten 1917, inbördeskriget 1918 och republiken 1919",
+        "en": "Independence 1917, the civil war 1918 and the republic 1919"
+      }
+    },
+    {
+      "id": "hist-wars",
+      "topicId": "history",
+      "sourceRef": "InfoFinland: Suomen historiaa",
+      "statement": {
+        "fi": "Talvisota, jatkosota ja Lapin sota",
+        "sv": "Vinterkriget, fortsättningskriget och Lapplandskriget",
+        "en": "The Winter War, the Continuation War and the Lapland War"
+      }
+    },
+    {
+      "id": "hist-postwar",
+      "topicId": "history",
+      "sourceRef": "InfoFinland: Suomen historiaa",
+      "statement": {
+        "fi": "Sodanjälkeinen Suomi ja hyvinvointivaltio",
+        "sv": "Efterkrigstidens Finland och välfärdsstaten",
+        "en": "Post-war Finland and the welfare state"
+      }
+    },
+    {
+      "id": "hist-integration",
+      "topicId": "history",
+      "sourceRef": "InfoFinland: Suomen historiaa",
+      "statement": {
+        "fi": "EU-jäsenyys, euro ja Nato-jäsenyys",
+        "sv": "EU-medlemskapet, euron och Natomedlemskapet",
+        "en": "EU membership, the euro and NATO membership"
+      }
+    },
+    {
+      "id": "cult-languages",
+      "topicId": "culture",
+      "sourceRef": "Perustuslaki 17 §",
+      "statement": {
+        "fi": "Kansalliskielet, kielelliset oikeudet ja Ahvenanmaa",
+        "sv": "Nationalspråken, språkliga rättigheter och Åland",
+        "en": "National languages, language rights and Åland"
+      }
+    },
+    {
+      "id": "cult-minorities",
+      "topicId": "culture",
+      "sourceRef": "Perustuslaki 17 §",
+      "statement": {
+        "fi": "Saamelaiset, romanit ja viittomakieliset",
+        "sv": "Samerna, romerna och de teckenspråkiga",
+        "en": "The Sámi, the Roma and sign-language users"
+      }
+    },
+    {
+      "id": "cult-churches",
+      "topicId": "culture",
+      "sourceRef": "Perustuslaki 76 §",
+      "statement": {
+        "fi": "Kansankirkot ja vapaaehtoinen kirkon jäsenyys",
+        "sv": "Folkkyrkorna och frivilligt kyrkomedlemskap",
+        "en": "The national churches and voluntary church membership"
+      }
+    },
+    {
+      "id": "cult-symbols",
+      "topicId": "culture",
+      "sourceRef": "InfoFinland: Suomalaisia juhlapäiviä",
+      "statement": {
+        "fi": "Juhlapäivät ja kansalliset symbolit",
+        "sv": "Högtider och nationella symboler",
+        "en": "Holidays and national symbols"
+      }
+    },
+    {
+      "id": "cult-services",
+      "topicId": "culture",
+      "sourceRef": "Kirjastolaki",
+      "statement": {
+        "fi": "Kirjastot ja muut julkiset kulttuuripalvelut",
+        "sv": "Bibliotek och andra offentliga kulturtjänster",
+        "en": "Libraries and other public cultural services"
+      }
+    },
+    {
+      "id": "cult-civil",
+      "topicId": "culture",
+      "sourceRef": "InfoFinland: Järjestöt",
+      "statement": {
+        "fi": "Järjestöt ja vapaaehtoistyö yhteiskunnassa",
+        "sv": "Föreningar och frivilligarbete i samhället",
+        "en": "Associations and volunteering in society"
+      }
+    },
+    {
+      "id": "cult-education",
+      "topicId": "culture",
+      "sourceRef": "InfoFinland: Suomalainen koulutusjärjestelmä",
+      "statement": {
+        "fi": "Suomen koulutusjärjestelmä",
+        "sv": "Det finländska utbildningssystemet",
+        "en": "The Finnish education system"
+      }
+    },
+    {
+      "id": "safe-112",
+      "topicId": "safety",
+      "sourceRef": "Hätäkeskuslaitos",
+      "statement": {
+        "fi": "Hätänumero 112 ja hätäpuhelun kulku",
+        "sv": "Nödnumret 112 och hur ett nödsamtal går till",
+        "en": "Emergency number 112 and how the call works"
+      }
+    },
+    {
+      "id": "safe-police",
+      "topicId": "safety",
+      "sourceRef": "Poliisi",
+      "statement": {
+        "fi": "Poliisin tehtävät ja rikosilmoitus",
+        "sv": "Polisens uppgifter och brottsanmälan",
+        "en": "The police's tasks and reporting a crime"
+      }
+    },
+    {
+      "id": "safe-home",
+      "topicId": "safety",
+      "sourceRef": "Pelastuslaki",
+      "statement": {
+        "fi": "Palovaroitin ja paloturvallisuus kotona",
+        "sv": "Brandvarnare och brandsäkerhet hemma",
+        "en": "Smoke alarms and fire safety at home"
+      }
+    },
+    {
+      "id": "safe-warnings",
+      "topicId": "safety",
+      "sourceRef": "Pelastustoimi",
+      "statement": {
+        "fi": "Yleinen vaaramerkki ja viranomaistiedotteet",
+        "sv": "Allmänt farosignal och myndighetsmeddelanden",
+        "en": "The general warning signal and official alerts"
+      }
+    },
+    {
+      "id": "safe-preparedness",
+      "topicId": "safety",
+      "sourceRef": "Asevelvollisuuslaki",
+      "statement": {
+        "fi": "Kotivara, asevelvollisuus ja varautuminen",
+        "sv": "Hemberedskap, värnplikt och beredskap",
+        "en": "Home preparedness, conscription and readiness"
+      }
+    },
+    {
+      "id": "safe-violence",
+      "topicId": "safety",
+      "sourceRef": "InfoFinland: Väkivalta",
+      "statement": {
+        "fi": "Lähisuhdeväkivalta on rikos – mistä saa apua",
+        "sv": "Våld i nära relationer är ett brott – var man får hjälp",
+        "en": "Domestic violence is a crime – where to get help"
+      }
+    },
+    {
+      "id": "safe-traffic",
+      "topicId": "safety",
+      "sourceRef": "Tieliikennelaki",
+      "statement": {
+        "fi": "Liikenteen perussäännöt ja rattijuopumus",
+        "sv": "Grundläggande trafikregler och rattfylleri",
+        "en": "Basic traffic rules and drink-driving"
+      }
+    },
+    {
+      "id": "dig-identification",
+      "topicId": "digital",
+      "sourceRef": "Suomi.fi-tunnistus",
+      "statement": {
+        "fi": "Vahva sähköinen tunnistautuminen ja tunnusten suojaaminen",
+        "sv": "Stark elektronisk identifiering och skydd av koderna",
+        "en": "Strong electronic identification and protecting your codes"
+      }
+    },
+    {
+      "id": "dig-suomifi",
+      "topicId": "digital",
+      "sourceRef": "Suomi.fi",
+      "statement": {
+        "fi": "Suomi.fi-palvelut, Viestit ja valtuudet",
+        "sv": "Suomi.fi-tjänsterna, Meddelanden och fullmakter",
+        "en": "Suomi.fi services, Messages and authorisations"
+      }
+    },
+    {
+      "id": "dig-services",
+      "topicId": "digital",
+      "sourceRef": "Verohallinto, Kela, DVV",
+      "statement": {
+        "fi": "OmaVero, OmaKela ja muuttoilmoitus verkossa",
+        "sv": "MinSkatt, FPA:s e-tjänst och flyttanmälan på nätet",
+        "en": "MyTax, OmaKela and the online moving notification"
+      }
+    },
+    {
+      "id": "dig-health",
+      "topicId": "digital",
+      "sourceRef": "Kanta",
+      "statement": {
+        "fi": "Omakanta: reseptit ja terveystiedot",
+        "sv": "MittKanta: recept och hälsouppgifter",
+        "en": "My Kanta: prescriptions and health records"
+      }
+    },
+    {
+      "id": "dig-scams",
+      "topicId": "digital",
+      "sourceRef": "Poliisi",
+      "statement": {
+        "fi": "Huijaukset ja tietojenkalastelu verkossa",
+        "sv": "Bedrägerier och nätfiske på nätet",
+        "en": "Online scams and phishing"
+      }
+    },
+    {
+      "id": "dig-data",
+      "topicId": "digital",
+      "sourceRef": "Tietosuojavaltuutettu",
+      "statement": {
+        "fi": "Oikeus omiin henkilötietoihin",
+        "sv": "Rätten till egna personuppgifter",
+        "en": "The right to your own personal data"
+      }
     }
   ],
   "questions": [
@@ -949,7 +1277,10 @@
           ],
           "explanation": "Parliament makes laws. The Government prepares legislative proposals."
         }
-      }
+      },
+      "objectiveIds": [
+        "dem-powers"
+      ]
     },
     {
       "id": "demo-members",
@@ -1010,12 +1341,15 @@
           ],
           "explanation": "Finland's Parliament has 200 members."
         }
-      }
+      },
+      "objectiveIds": [
+        "dem-parliament"
+      ]
     },
     {
       "id": "demo-equality",
       "revision": 1,
-      "topicId": "rights",
+      "topicId": "equality",
       "text": "Mitä yhdenvertaisuus lain edessä tarkoittaa?",
       "options": [
         {
@@ -1071,7 +1405,10 @@
           ],
           "explanation": "The Constitution protects equality before the law."
         }
-      }
+      },
+      "objectiveIds": [
+        "eq-law"
+      ]
     },
     {
       "id": "demo-religion",
@@ -1132,7 +1469,10 @@
           ],
           "explanation": "Freedom of religion includes the right not to belong to a religious community."
         }
-      }
+      },
+      "objectiveIds": [
+        "rights-religion"
+      ]
     },
     {
       "id": "demo-independence",
@@ -1201,7 +1541,10 @@
           ],
           "explanation": "Finland declared independence on 6 December 1917."
         }
-      }
+      },
+      "objectiveIds": [
+        "hist-independence"
+      ]
     },
     {
       "id": "demo-eu",
@@ -1262,12 +1605,15 @@
           ],
           "explanation": "Finland joined the European Union in 1995."
         }
-      }
+      },
+      "objectiveIds": [
+        "hist-integration"
+      ]
     },
     {
       "id": "demo-contract",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Mikä asiakirja sisältää työntekijän ja työnantajan sopimat työehdot?",
       "options": [
         {
@@ -1331,12 +1677,15 @@
           ],
           "explanation": "An employment contract sets out agreed terms such as duties, pay and working hours."
         }
-      }
+      },
+      "objectiveIds": [
+        "law-employment"
+      ]
     },
     {
       "id": "demo-safety",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Mitä työntekijän pitää tehdä havaitessaan vaaran työpaikalla?",
       "options": [
         {
@@ -1392,12 +1741,15 @@
           ],
           "explanation": "Employees should report safety problems. The employer is responsible for safe working conditions."
         }
-      }
+      },
+      "objectiveIds": [
+        "law-work-safety"
+      ]
     },
     {
       "id": "demo-emergency",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "safety",
       "text": "Mihin numeroon soitat kiireellisessä hätätilanteessa Suomessa?",
       "options": [
         {
@@ -1453,12 +1805,15 @@
           ],
           "explanation": "Call 112 when you need urgent help in an emergency."
         }
-      }
+      },
+      "objectiveIds": [
+        "safe-112"
+      ]
     },
     {
       "id": "demo-library",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "culture",
       "text": "Mitä tarvitset yleensä kirjojen lainaamiseen yleisestä kirjastosta?",
       "options": [
         {
@@ -1514,7 +1869,10 @@
           ],
           "explanation": "You can borrow books with a library card. The first card is free."
         }
-      }
+      },
+      "objectiveIds": [
+        "cult-services"
+      ]
     },
     {
       "id": "demo-languages",
@@ -1583,12 +1941,15 @@
           ],
           "explanation": "Finland's national languages are Finnish and Swedish."
         }
-      }
+      },
+      "objectiveIds": [
+        "cult-languages"
+      ]
     },
     {
       "id": "demo-expression",
       "revision": 1,
-      "topicId": "culture",
+      "topicId": "rights",
       "text": "Mitä sananvapaus suojaa?",
       "options": [
         {
@@ -1644,7 +2005,10 @@
           ],
           "explanation": "Freedom of expression protects expression. Its exercise is regulated in more detail by law."
         }
-      }
+      },
+      "objectiveIds": [
+        "rights-expression"
+      ]
     },
     {
       "id": "demo-parliament-sv",
@@ -1713,7 +2077,10 @@
           ],
           "explanation": "Parliament makes laws. The Government prepares legislative proposals."
         }
-      }
+      },
+      "objectiveIds": [
+        "dem-powers"
+      ]
     },
     {
       "id": "demo-members-sv",
@@ -1774,12 +2141,15 @@
           ],
           "explanation": "Finland's Parliament has 200 members."
         }
-      }
+      },
+      "objectiveIds": [
+        "dem-parliament"
+      ]
     },
     {
       "id": "demo-equality-sv",
       "revision": 1,
-      "topicId": "rights",
+      "topicId": "equality",
       "text": "Vad betyder likhet inför lagen?",
       "options": [
         {
@@ -1835,7 +2205,10 @@
           ],
           "explanation": "The Constitution protects equality before the law."
         }
-      }
+      },
+      "objectiveIds": [
+        "eq-law"
+      ]
     },
     {
       "id": "demo-religion-sv",
@@ -1896,7 +2269,10 @@
           ],
           "explanation": "Freedom of religion includes the right not to belong to a religious community."
         }
-      }
+      },
+      "objectiveIds": [
+        "rights-religion"
+      ]
     },
     {
       "id": "demo-independence-sv",
@@ -1965,7 +2341,10 @@
           ],
           "explanation": "Finland declared independence on 6 December 1917."
         }
-      }
+      },
+      "objectiveIds": [
+        "hist-independence"
+      ]
     },
     {
       "id": "demo-eu-sv",
@@ -2026,12 +2405,15 @@
           ],
           "explanation": "Finland joined the European Union in 1995."
         }
-      }
+      },
+      "objectiveIds": [
+        "hist-integration"
+      ]
     },
     {
       "id": "demo-contract-sv",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Vilket dokument innehåller de anställningsvillkor som arbetstagaren och arbetsgivaren har kommit överens om?",
       "options": [
         {
@@ -2095,12 +2477,15 @@
           ],
           "explanation": "An employment contract sets out agreed terms such as duties, pay and working hours."
         }
-      }
+      },
+      "objectiveIds": [
+        "law-employment"
+      ]
     },
     {
       "id": "demo-safety-sv",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Vad ska en arbetstagare göra om hen upptäcker en fara på arbetsplatsen?",
       "options": [
         {
@@ -2156,12 +2541,15 @@
           ],
           "explanation": "Employees should report safety problems. The employer is responsible for safe working conditions."
         }
-      }
+      },
+      "objectiveIds": [
+        "law-work-safety"
+      ]
     },
     {
       "id": "demo-emergency-sv",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "safety",
       "text": "Vilket nummer ringer du i en brådskande nödsituation i Finland?",
       "options": [
         {
@@ -2217,12 +2605,15 @@
           ],
           "explanation": "Call 112 when you need urgent help in an emergency."
         }
-      }
+      },
+      "objectiveIds": [
+        "safe-112"
+      ]
     },
     {
       "id": "demo-library-sv",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "culture",
       "text": "Vad behöver du vanligtvis för att låna böcker på ett allmänt bibliotek?",
       "options": [
         {
@@ -2278,7 +2669,10 @@
           ],
           "explanation": "You can borrow books with a library card. The first card is free."
         }
-      }
+      },
+      "objectiveIds": [
+        "cult-services"
+      ]
     },
     {
       "id": "demo-languages-sv",
@@ -2347,12 +2741,15 @@
           ],
           "explanation": "Finland's national languages are Finnish and Swedish."
         }
-      }
+      },
+      "objectiveIds": [
+        "cult-languages"
+      ]
     },
     {
       "id": "demo-expression-sv",
       "revision": 1,
-      "topicId": "culture",
+      "topicId": "rights",
       "text": "Vad skyddar yttrandefriheten?",
       "options": [
         {
@@ -2408,7 +2805,10 @@
           ],
           "explanation": "Freedom of expression protects expression. Its exercise is regulated in more detail by law."
         }
-      }
+      },
+      "objectiveIds": [
+        "rights-expression"
+      ]
     },
     {
       "id": "demo-term",
@@ -2469,7 +2869,10 @@
           "explanation": "Members are elected for four years; early elections are possible."
         }
       },
-      "easyExplanation": "Eduskunta valitaan yleensä neljäksi vuodeksi."
+      "easyExplanation": "Eduskunta valitaan yleensä neljäksi vuodeksi.",
+      "objectiveIds": [
+        "dem-parliament"
+      ]
     },
     {
       "id": "demo-term-sv",
@@ -2529,7 +2932,10 @@
           ],
           "explanation": "Members are elected for four years; early elections are possible."
         }
-      }
+      },
+      "objectiveIds": [
+        "dem-parliament"
+      ]
     },
     {
       "id": "demo-voting",
@@ -2590,7 +2996,10 @@
           "explanation": "Finnish citizens aged 18 by election day may vote in parliamentary elections."
         }
       },
-      "easyExplanation": "Saat äänestää eduskuntavaaleissa, jos olet Suomen kansalainen ja vaalipäivänä vähintään 18-vuotias."
+      "easyExplanation": "Saat äänestää eduskuntavaaleissa, jos olet Suomen kansalainen ja vaalipäivänä vähintään 18-vuotias.",
+      "objectiveIds": [
+        "dem-elections"
+      ]
     },
     {
       "id": "demo-voting-sv",
@@ -2650,7 +3059,10 @@
           ],
           "explanation": "Finnish citizens aged 18 by election day may vote in parliamentary elections."
         }
-      }
+      },
+      "objectiveIds": [
+        "dem-elections"
+      ]
     },
     {
       "id": "demo-courts",
@@ -2711,7 +3123,10 @@
           "explanation": "Independent courts exercise judicial authority; Parliament makes laws."
         }
       },
-      "easyExplanation": "Tuomioistuimet ratkaisevat oikeusasioita. Ne ovat riippumattomia."
+      "easyExplanation": "Tuomioistuimet ratkaisevat oikeusasioita. Ne ovat riippumattomia.",
+      "objectiveIds": [
+        "dem-powers"
+      ]
     },
     {
       "id": "demo-courts-sv",
@@ -2771,7 +3186,10 @@
           ],
           "explanation": "Independent courts exercise judicial authority; Parliament makes laws."
         }
-      }
+      },
+      "objectiveIds": [
+        "dem-powers"
+      ]
     },
     {
       "id": "demo-privacy",
@@ -2832,7 +3250,10 @@
           "explanation": "The Constitution protects private life, the home and confidential messages. Restrictions are regulated by law."
         }
       },
-      "easyExplanation": "Kotisi ja yksityiset viestisi ovat suojattuja. Laissa voidaan säätää rajoituksista."
+      "easyExplanation": "Kotisi ja yksityiset viestisi ovat suojattuja. Laissa voidaan säätää rajoituksista.",
+      "objectiveIds": [
+        "rights-privacy"
+      ]
     },
     {
       "id": "demo-privacy-sv",
@@ -2892,7 +3313,10 @@
           ],
           "explanation": "The Constitution protects private life, the home and confidential messages. Restrictions are regulated by law."
         }
-      }
+      },
+      "objectiveIds": [
+        "rights-privacy"
+      ]
     },
     {
       "id": "demo-basic-education",
@@ -2953,7 +3377,10 @@
           "explanation": "The Constitution guarantees the right to free basic education."
         }
       },
-      "easyExplanation": "Perusopetus on maksutonta."
+      "easyExplanation": "Perusopetus on maksutonta.",
+      "objectiveIds": [
+        "rights-education"
+      ]
     },
     {
       "id": "demo-basic-education-sv",
@@ -3013,12 +3440,15 @@
           ],
           "explanation": "The Constitution guarantees the right to free basic education."
         }
-      }
+      },
+      "objectiveIds": [
+        "rights-education"
+      ]
     },
     {
       "id": "demo-follow-law",
       "revision": 1,
-      "topicId": "rights",
+      "topicId": "laws",
       "text": "Keiden täytyy noudattaa Suomen lakeja Suomessa?",
       "options": [
         {
@@ -3074,12 +3504,15 @@
           "explanation": "People living or staying in Finland must follow Finnish law, regardless of citizenship."
         }
       },
-      "easyExplanation": "Kaikkien Suomessa olevien täytyy noudattaa Suomen lakeja."
+      "easyExplanation": "Kaikkien Suomessa olevien täytyy noudattaa Suomen lakeja.",
+      "objectiveIds": [
+        "law-everyone"
+      ]
     },
     {
       "id": "demo-follow-law-sv",
       "revision": 1,
-      "topicId": "rights",
+      "topicId": "laws",
       "text": "Vilka måste följa Finlands lagar i Finland?",
       "options": [
         {
@@ -3134,7 +3567,10 @@
           ],
           "explanation": "People living or staying in Finland must follow Finnish law, regardless of citizenship."
         }
-      }
+      },
+      "objectiveIds": [
+        "law-everyone"
+      ]
     },
     {
       "id": "demo-sweden",
@@ -3195,7 +3631,10 @@
           "explanation": "Most of Finland belonged to Sweden for centuries."
         }
       },
-      "easyExplanation": "Suurin osa Suomesta oli ennen vuotta 1809 osa Ruotsia."
+      "easyExplanation": "Suurin osa Suomesta oli ennen vuotta 1809 osa Ruotsia.",
+      "objectiveIds": [
+        "hist-sweden"
+      ]
     },
     {
       "id": "demo-sweden-sv",
@@ -3255,7 +3694,10 @@
           ],
           "explanation": "Most of Finland belonged to Sweden for centuries."
         }
-      }
+      },
+      "objectiveIds": [
+        "hist-sweden"
+      ]
     },
     {
       "id": "demo-autonomy",
@@ -3316,7 +3758,10 @@
           "explanation": "Finland was an autonomous Grand Duchy within the Russian Empire, with internal self-government."
         }
       },
-      "easyExplanation": "Suomi oli osa Venäjää. Suomi sai hoitaa monia omia asioitaan."
+      "easyExplanation": "Suomi oli osa Venäjää. Suomi sai hoitaa monia omia asioitaan.",
+      "objectiveIds": [
+        "hist-autonomy"
+      ]
     },
     {
       "id": "demo-autonomy-sv",
@@ -3376,7 +3821,10 @@
           ],
           "explanation": "Finland was an autonomous Grand Duchy within the Russian Empire, with internal self-government."
         }
-      }
+      },
+      "objectiveIds": [
+        "hist-autonomy"
+      ]
     },
     {
       "id": "demo-suffrage",
@@ -3437,7 +3885,11 @@
           "explanation": "The reform was in 1906; the first parliamentary elections followed in 1907."
         }
       },
-      "easyExplanation": "Myös naiset saivat äänioikeuden vuonna 1906."
+      "easyExplanation": "Myös naiset saivat äänioikeuden vuonna 1906.",
+      "objectiveIds": [
+        "hist-autonomy",
+        "eq-gender"
+      ]
     },
     {
       "id": "demo-suffrage-sv",
@@ -3497,12 +3949,16 @@
           ],
           "explanation": "The reform was in 1906; the first parliamentary elections followed in 1907."
         }
-      }
+      },
+      "objectiveIds": [
+        "hist-autonomy",
+        "eq-gender"
+      ]
     },
     {
       "id": "demo-oral-contract",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Voiko työsopimus Suomessa olla suullinen?",
       "options": [
         {
@@ -3558,12 +4014,15 @@
           "explanation": "An employment contract can be oral. A written contract makes the agreed terms easier to check."
         }
       },
-      "easyExplanation": "Työsopimus voi olla suullinen. Kirjallisesta sopimuksesta näet, mitä sovittiin."
+      "easyExplanation": "Työsopimus voi olla suullinen. Kirjallisesta sopimuksesta näet, mitä sovittiin.",
+      "objectiveIds": [
+        "law-employment"
+      ]
     },
     {
       "id": "demo-oral-contract-sv",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Kan ett arbetsavtal i Finland vara muntligt?",
       "options": [
         {
@@ -3618,12 +4077,15 @@
           ],
           "explanation": "An employment contract can be oral. A written contract makes the agreed terms easier to check."
         }
-      }
+      },
+      "objectiveIds": [
+        "law-employment"
+      ]
     },
     {
       "id": "demo-orientation",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Mitä työnantajan pitää tehdä, kun työntekijä aloittaa uuden työn?",
       "options": [
         {
@@ -3679,12 +4141,16 @@
           "explanation": "The employer must provide induction into duties and workplace safety."
         }
       },
-      "easyExplanation": "Työnantaja näyttää, miten työ tehdään turvallisesti."
+      "easyExplanation": "Työnantaja näyttää, miten työ tehdään turvallisesti.",
+      "objectiveIds": [
+        "law-employment",
+        "law-work-safety"
+      ]
     },
     {
       "id": "demo-orientation-sv",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Vad ska arbetsgivaren göra när en arbetstagare börjar ett nytt arbete?",
       "options": [
         {
@@ -3739,12 +4205,16 @@
           ],
           "explanation": "The employer must provide induction into duties and workplace safety."
         }
-      }
+      },
+      "objectiveIds": [
+        "law-employment",
+        "law-work-safety"
+      ]
     },
     {
       "id": "demo-protective-equipment",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Kuka maksaa työssä tarvittavat turvavälineet?",
       "options": [
         {
@@ -3800,12 +4270,15 @@
           "explanation": "The employer pays for required safety equipment. Employees must use the prescribed equipment."
         }
       },
-      "easyExplanation": "Työnantaja maksaa turvavälineet. Käytä niitä ohjeiden mukaan."
+      "easyExplanation": "Työnantaja maksaa turvavälineet. Käytä niitä ohjeiden mukaan.",
+      "objectiveIds": [
+        "law-work-safety"
+      ]
     },
     {
       "id": "demo-protective-equipment-sv",
       "revision": 1,
-      "topicId": "work",
+      "topicId": "laws",
       "text": "Vem betalar den skyddsutrustning som behövs i arbetet?",
       "options": [
         {
@@ -3860,12 +4333,15 @@
           ],
           "explanation": "The employer pays for required safety equipment. Employees must use the prescribed equipment."
         }
-      }
+      },
+      "objectiveIds": [
+        "law-work-safety"
+      ]
     },
     {
       "id": "demo-emergency-call",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "safety",
       "text": "Milloin lopetat hätäpuhelun?",
       "options": [
         {
@@ -3921,12 +4397,15 @@
           "explanation": "Answer the questions, follow instructions and end the call only with the operator’s permission."
         }
       },
-      "easyExplanation": "Kuuntele ohjeet. Lopeta puhelu vasta, kun saat luvan."
+      "easyExplanation": "Kuuntele ohjeet. Lopeta puhelu vasta, kun saat luvan.",
+      "objectiveIds": [
+        "safe-112"
+      ]
     },
     {
       "id": "demo-emergency-call-sv",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "safety",
       "text": "När avslutar du ett nödsamtal?",
       "options": [
         {
@@ -3981,12 +4460,15 @@
           ],
           "explanation": "Answer the questions, follow instructions and end the call only with the operator’s permission."
         }
-      }
+      },
+      "objectiveIds": [
+        "safe-112"
+      ]
     },
     {
       "id": "demo-library-fee",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "culture",
       "text": "Maksaako ensimmäinen kirjastokortti?",
       "options": [
         {
@@ -4042,12 +4524,15 @@
           "explanation": "The first library card is free. Replacing a lost card can cost money."
         }
       },
-      "easyExplanation": "Ensimmäinen kortti on ilmainen. Jos kadotat kortin, uusi kortti voi maksaa."
+      "easyExplanation": "Ensimmäinen kortti on ilmainen. Jos kadotat kortin, uusi kortti voi maksaa.",
+      "objectiveIds": [
+        "cult-services"
+      ]
     },
     {
       "id": "demo-library-fee-sv",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "culture",
       "text": "Kostar det första bibliotekskortet?",
       "options": [
         {
@@ -4102,12 +4587,15 @@
           ],
           "explanation": "The first library card is free. Replacing a lost card can cost money."
         }
-      }
+      },
+      "objectiveIds": [
+        "cult-services"
+      ]
     },
     {
       "id": "demo-library-return",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "culture",
       "text": "Miten vältät kirjastolainan myöhästymismaksun?",
       "options": [
         {
@@ -4163,12 +4651,15 @@
           "explanation": "Return a loan by its due date or renew it on time when renewal is available."
         }
       },
-      "easyExplanation": "Palauta kirja ajoissa. Voit myös uusia lainan, jos kirjasto sallii sen."
+      "easyExplanation": "Palauta kirja ajoissa. Voit myös uusia lainan, jos kirjasto sallii sen.",
+      "objectiveIds": [
+        "cult-services"
+      ]
     },
     {
       "id": "demo-library-return-sv",
       "revision": 1,
-      "topicId": "everyday",
+      "topicId": "culture",
       "text": "Hur undviker du en förseningsavgift för ett bibliotekslån?",
       "options": [
         {
@@ -4223,12 +4714,15 @@
           ],
           "explanation": "Return a loan by its due date or renew it on time when renewal is available."
         }
-      }
+      },
+      "objectiveIds": [
+        "cult-services"
+      ]
     },
     {
       "id": "demo-assembly",
       "revision": 1,
-      "topicId": "culture",
+      "topicId": "rights",
       "text": "Mikä oikeus suojaa osallistumista kokouksiin ja mielenosoituksiin?",
       "options": [
         {
@@ -4284,12 +4778,15 @@
           "explanation": "Freedom of assembly protects organising and attending meetings and demonstrations. Its exercise is regulated by law."
         }
       },
-      "easyExplanation": "Saat osallistua kokouksiin ja mielenosoituksiin. Laissa on tarkemmat säännöt."
+      "easyExplanation": "Saat osallistua kokouksiin ja mielenosoituksiin. Laissa on tarkemmat säännöt.",
+      "objectiveIds": [
+        "rights-assembly"
+      ]
     },
     {
       "id": "demo-assembly-sv",
       "revision": 1,
-      "topicId": "culture",
+      "topicId": "rights",
       "text": "Vilken rättighet skyddar deltagande i möten och demonstrationer?",
       "options": [
         {
@@ -4344,12 +4841,15 @@
           ],
           "explanation": "Freedom of assembly protects organising and attending meetings and demonstrations. Its exercise is regulated by law."
         }
-      }
+      },
+      "objectiveIds": [
+        "rights-assembly"
+      ]
     },
     {
       "id": "demo-association",
       "revision": 1,
-      "topicId": "culture",
+      "topicId": "rights",
       "text": "Voiko ihminen päättää olla kuulumatta yhdistykseen?",
       "options": [
         {
@@ -4405,12 +4905,15 @@
           "explanation": "Freedom of association includes the right to belong or not to belong to an association."
         }
       },
-      "easyExplanation": "Saat liittyä yhdistykseen. Saat myös päättää, ettet liity."
+      "easyExplanation": "Saat liittyä yhdistykseen. Saat myös päättää, ettet liity.",
+      "objectiveIds": [
+        "rights-assembly"
+      ]
     },
     {
       "id": "demo-association-sv",
       "revision": 1,
-      "topicId": "culture",
+      "topicId": "rights",
       "text": "Får en person välja att inte tillhöra en förening?",
       "options": [
         {
@@ -4465,7 +4968,10 @@
           ],
           "explanation": "Freedom of association includes the right to belong or not to belong to an association."
         }
-      }
+      },
+      "objectiveIds": [
+        "rights-assembly"
+      ]
     },
     {
       "id": "demo-sami",
@@ -4526,7 +5032,10 @@
           "explanation": "The Constitution recognises the Sámi as an indigenous people and protects their language and culture."
         }
       },
-      "easyExplanation": "Saamelaiset ovat alkuperäiskansa. Heillä on oikeus omaan kieleen ja kulttuuriin."
+      "easyExplanation": "Saamelaiset ovat alkuperäiskansa. Heillä on oikeus omaan kieleen ja kulttuuriin.",
+      "objectiveIds": [
+        "cult-minorities"
+      ]
     },
     {
       "id": "demo-sami-sv",
@@ -4586,7 +5095,10 @@
           ],
           "explanation": "The Constitution recognises the Sámi as an indigenous people and protects their language and culture."
         }
-      }
+      },
+      "objectiveIds": [
+        "cult-minorities"
+      ]
     }
   ]
 }

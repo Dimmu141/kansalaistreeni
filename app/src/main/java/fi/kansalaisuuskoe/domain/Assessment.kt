@@ -96,6 +96,6 @@ object Assessments {
     /** A changed or removed item is never silently replaced by a different question. */
     fun practiceMistakes(session: AssessmentSession, current: List<Question>): List<Question> = result(session).mistakes.mapNotNull { old ->
         current.find { it.id == old.id && it.revision == old.revision && it.language == old.language &&
-            it.topicId == old.topicId && it.text == old.text && it.options == old.options && it.correctOptionId == old.correctOptionId }
+            it.text == old.text && it.options == old.options && it.correctOptionId == old.correctOptionId }
     }
 }

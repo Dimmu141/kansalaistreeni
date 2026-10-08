@@ -16,11 +16,12 @@ class StudyLanguageTest {
         listOf(LearningEngine.answer(fi, fi.correctOptionId, null, now - 660_000), LearningEngine.answer(sv, sv.options.first().id, null, now - 660_000)),
         listOf(attempt(fi, true), attempt(sv, false)))
 
-    @Test fun `each language has thirty demo questions and all six topics`() {
+    @Test fun `each language has thirty demo questions and every topic that has questions`() {
         StudyLanguage.entries.forEach {
             val scoped = snapshot().forLanguage(it)
             assertEquals(30, scoped.questions.size)
-            assertEquals(6, scoped.topics.size)
+            assertEquals(scoped.questions.map { q -> q.topicId }.toSet(), scoped.topics.map { t -> t.id }.toSet())
+            assertEquals(7, scoped.topics.size)
             assertTrue(scoped.questions.all { q -> q.language == it.tag })
         }
     }
