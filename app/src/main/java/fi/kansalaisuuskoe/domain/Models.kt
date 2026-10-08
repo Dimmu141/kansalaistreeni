@@ -2,6 +2,15 @@ package fi.kansalaisuuskoe.domain
 
 enum class ContentStatus { DEMO, EDITORIAL, OFFICIALLY_SOURCED, OFFICIAL }
 enum class Difficulty { EASY, MEDIUM, HARD }
+
+/** TRUE_FALSE questions are statements with exactly the fixed option IDs [TRUE_ID] and [FALSE_ID]. */
+enum class QuestionFormat {
+    SINGLE_CHOICE, TRUE_FALSE;
+    companion object {
+        const val TRUE_ID = "true"
+        const val FALSE_ID = "false"
+    }
+}
 enum class StudyLanguage(val tag: String) { FINNISH("fi"), SWEDISH("sv") }
 data class AnswerOption(val id: String, val text: String)
 data class VocabularyItem(val term: String, val meaning: String, val swedish: String? = null)
@@ -31,6 +40,7 @@ data class Question(
     val tags: List<String>,
     val status: ContentStatus,
     val translations: Map<String, QuestionTranslation> = emptyMap(),
+    val format: QuestionFormat = QuestionFormat.SINGLE_CHOICE,
 )
 data class QuestionTranslation(
     val text: String,

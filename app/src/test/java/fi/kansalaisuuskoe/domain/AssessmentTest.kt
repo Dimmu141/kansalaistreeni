@@ -20,6 +20,25 @@ class AssessmentTest {
         assertEquals(queue.size, queue.map { it.id }.distinct().size)
         assertEquals(queue, Assessments.queue(pool, "fi", Random(123)))
     }
+    @Test fun `queue samples both formats at the configured share`() {
+        val statement = q.copy(format = QuestionFormat.TRUE_FALSE)
+        val pool = (0..29).map { q.copy(id = "choice-$it", topicId = if (it % 2 == 0) "one" else "two") } +
+            (0..29).map { statement.copy(id = "statement-$it", topicId = if (it % 2 == 0) "one" else "two") }
+        val queue = Assessments.queue(pool, "fi", Random(7))
+        assertEquals(20, queue.size)
+        assertEquals(6, queue.count { it.format == QuestionFormat.TRUE_FALSE })
+        assertEquals(queue.size, queue.map { it.id }.distinct().size)
+        val half = Assessments.queue(pool, "fi", Random(7), AssessmentMix(questionCount = 10, trueFalseShare = 0.5))
+        assertEquals(5 to 5, half.count { it.format == QuestionFormat.TRUE_FALSE } to half.count { it.format == QuestionFormat.SINGLE_CHOICE })
+    }
+    @Test fun `a missing format is filled from the other without shortening`() {
+        val statements = (0..29).map { q.copy(id = "statement-$it", format = QuestionFormat.TRUE_FALSE) }
+        assertEquals(20, Assessments.queue(statements, "fi", Random(3)).size)
+        val fewStatements = (0..29).map { q.copy(id = "choice-$it") } + statements.take(2)
+        val queue = Assessments.queue(fewStatements, "fi", Random(3))
+        assertEquals(20, queue.size)
+        assertEquals(2, queue.count { it.format == QuestionFormat.TRUE_FALSE })
+    }
     @Test fun `queue uses only requested language and handles empty and small material`() {
         val mixed = questions + q.copy(id = "swedish", language = "sv")
         assertEquals(3, Assessments.queue(mixed, "fi", Random(1)).size)

@@ -58,7 +58,7 @@ class ContentValidationTest {
         ContentCodec.validate(c.copy(questions = listOf(c.questions.first().copy(status = "OFFICIAL"))))
     }
     @Test(expected = IllegalArgumentException::class) fun `unsupported content schema fails validation`() {
-        ContentCodec.validate(content().copy(schemaVersion = 2))
+        ContentCodec.validate(content().copy(schemaVersion = ContentCodec.SCHEMA_VERSION + 1))
     }
     @Test(expected = IllegalArgumentException::class) fun `translations must preserve answer ids`() {
         val c = content()

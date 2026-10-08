@@ -321,4 +321,7 @@
     <string name="language_swedish">Svenska · Swedish</string>
     <string name="lesson_english_missing">This section has no English explanation. Read it in your study language.</string>
     <string name="import_changed_lessons">Added, changed or removed lesson language versions</string>
+    <string name="true_false_true">True</string>
+    <string name="true_false_false">False</string>
+    <string name="true_false_prompt">Statement. Is it true or false?</string>
 </resources>

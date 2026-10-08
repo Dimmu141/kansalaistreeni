@@ -43,6 +43,7 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
                     ContentStatus.OFFICIAL -> stringResource(R.string.question_official)
                 }), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
                 Text(stringResource(R.string.question_position, state.position, state.total), style = MaterialTheme.typography.bodyMedium)
+                if (q.format == QuestionFormat.TRUE_FALSE) Text(stringResource(R.string.true_false_prompt), style = MaterialTheme.typography.bodyMedium)
                 state.dailyReason?.let { reason ->
                     Text(stringResource(when (reason) {
                         DailyQuestionReason.DUE_REVIEW -> R.string.daily_reason_review
@@ -68,7 +69,7 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
                 Surface(color = if (correct) MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.errorContainer, shape = MaterialTheme.shapes.medium) {
                     Column(Modifier.fillMaxWidth().padding(16.dp).semantics { liveRegion = LiveRegionMode.Polite }, verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Text(if (correct) stringResource(R.string.answer_correct) else stringResource(R.string.answer_incorrect), style = MaterialTheme.typography.titleLarge)
-                        Text(stringResource(R.string.correct_answer_value, q.options.first { it.id == q.correctOptionId }.text), style = MaterialTheme.typography.bodyLarge)
+                        Text(stringResource(R.string.correct_answer_value, answerLabel(q, q.correctOptionId)), style = MaterialTheme.typography.bodyLarge)
                         if (state.extraPractice) {
                             Text(stringResource(R.string.extra_practice_title), style = MaterialTheme.typography.titleSmall)
                             Text(stringResource(R.string.extra_practice_note), style = MaterialTheme.typography.bodyMedium)

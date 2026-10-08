@@ -38,6 +38,8 @@ data class QuestionDto(
     val source: SourceDto, val language: String, val difficulty: String,
     val tags: List<String>, val status: String,
     val translations: Map<String, TranslationDto> = emptyMap(),
+    // Absent in schema 1 packages and in payloads stored before v0.17.
+    val format: String = "SINGLE_CHOICE",
 ) {
     fun model() = Question(
         id, revision, topicId, text, options.map { AnswerOption(it.id, it.text) }, correctOptionId,
@@ -46,6 +48,7 @@ data class QuestionDto(
         ContentStatus.valueOf(status), translations.mapValues { (_, value) ->
             QuestionTranslation(value.text, value.options.map { AnswerOption(it.id, it.text) }, value.explanation)
         },
+        QuestionFormat.valueOf(format),
     )
 }
 
@@ -55,10 +58,12 @@ object ContentCodec {
     val topicTranslationsAdapter = moshi.adapter<Map<String, TopicTranslationDto>>(Types.newParameterizedType(Map::class.java, String::class.java, TopicTranslationDto::class.java))
     val lessonsAdapter = moshi.adapter<Map<String, LessonDto>>(Types.newParameterizedType(Map::class.java, String::class.java, LessonDto::class.java))
     private val packageAdapter = moshi.adapter(ContentPackageDto::class.java)
+    // Schema 2 adds question formats. Older apps reject it rather than misreading a true/false item.
+    const val SCHEMA_VERSION = 2
     fun parse(json: String): ContentPackageDto = requireNotNull(packageAdapter.fromJson(json)).also(::validate)
 
     fun validate(content: ContentPackageDto) {
-        require(content.schemaVersion == 1) { "Unsupported content schema" }
+        require(content.schemaVersion in 1..SCHEMA_VERSION) { "Unsupported content schema" }
         require(content.packageId.isNotBlank() && content.version > 0)
         ContentStatus.valueOf(content.status)
         require(content.topics.isNotEmpty() && content.questions.isNotEmpty())
@@ -99,6 +104,13 @@ object ContentCodec {
             require(q.vocabulary.all { it.term.isNotBlank() && it.meaning.isNotBlank() && (it.swedish == null || it.swedish.isNotBlank()) })
             require(q.tags.all { it.isNotBlank() } && q.tags.distinct().size == q.tags.size)
             require(q.options.size >= 2 && q.options.all { it.id.isNotBlank() && it.text.isNotBlank() })
+            when (QuestionFormat.valueOf(q.format)) {
+                QuestionFormat.SINGLE_CHOICE -> Unit
+                QuestionFormat.TRUE_FALSE -> {
+                    require(content.schemaVersion >= 2) { "True/false questions need content schema 2" }
+                    require(q.options.size == 2 && q.options.map { it.id }.toSet() == setOf(QuestionFormat.TRUE_ID, QuestionFormat.FALSE_ID)) { "True/false options must be true and false" }
+                }
+            }
             require(q.options.map { it.id }.distinct().size == q.options.size)
             require(q.options.count { it.id == q.correctOptionId } == 1) { "Missing correct answer" }
             require(q.language in setOf("fi", "sv"))

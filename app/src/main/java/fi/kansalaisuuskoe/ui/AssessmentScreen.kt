@@ -30,7 +30,7 @@ private fun AssessmentStatus(state: AssessmentUiState, retry: () -> Unit) {
 internal fun AssessmentsScreen(state: AssessmentUiState, app: AppUiState, start: () -> Unit, open: (String) -> Unit, retry: () -> Unit, delete: (AssessmentSession) -> Unit) {
     val sessions = state.sessions.filter { it.language == app.settings.studyLanguage.tag }
     val active = sessions.firstOrNull { !it.complete }
-    val count = minOf(Assessments.MAX_QUESTIONS, app.studySnapshot.questions.size)
+    val count = minOf(AssessmentMix.DEFAULT.questionCount, app.studySnapshot.questions.size)
     Page {
         item { Heading(stringResource(R.string.assessment_title), stringResource(R.string.assessment_intro)) }
         item { StudyScope(app) }
@@ -86,6 +86,7 @@ internal fun AssessmentScreen(state: AssessmentUiState, sessionId: String, app: 
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(stringResource(R.string.question_position, session.position + 1, session.questions.size))
+                if (question.format == QuestionFormat.TRUE_FALSE) Text(stringResource(R.string.true_false_prompt), style = MaterialTheme.typography.bodyMedium)
                 Text(stringResource(R.string.assessment_saved_progress, session.answeredCount, session.questions.size), style = MaterialTheme.typography.bodySmall)
                 Text(session.topics.first { it.id == question.topicId }.titleFor(language), style = MaterialTheme.typography.labelLarge)
                 Text(stringResource(question.status.labelResource()), style = MaterialTheme.typography.labelLarge)
@@ -147,9 +148,9 @@ private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, 
                 StudyText(question.text, question.language, MaterialTheme.typography.titleLarge, Modifier.semantics { heading() })
                 Text(stringResource(if (selected.id == correct.id) R.string.answer_correct else R.string.answer_incorrect), style = MaterialTheme.typography.labelLarge)
                 Text(stringResource(R.string.your_answer), style = MaterialTheme.typography.labelLarge)
-                StudyText(selected.text, question.language, MaterialTheme.typography.bodyLarge)
+                AnswerText(question, selected.id, MaterialTheme.typography.bodyLarge)
                 Text(stringResource(R.string.correct_answer_label), style = MaterialTheme.typography.labelLarge)
-                StudyText(correct.text, question.language, MaterialTheme.typography.bodyLarge)
+                AnswerText(question, correct.id, MaterialTheme.typography.bodyLarge)
                 OutlinedButton({ expanded = !expanded }, Modifier.fillMaxWidth().heightIn(min = 56.dp).semantics {
                     stateDescription = expandedLabel
                     contentDescription = readLabel

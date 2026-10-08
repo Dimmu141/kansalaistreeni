@@ -32,6 +32,14 @@ Questions contain `id`, `revision`, `topicId`, `text`, `options`, `correctOption
 - Provenance is `DEMO`, `EDITORIAL`, `OFFICIALLY_SOURCED` or `OFFICIAL`. `OFFICIALLY_SOURCED` means app-authored material reviewed against official sources; it does not mean an official exam question. `OFFICIAL` is reserved for authentic official learning content whose origin, rights and attribution have been reviewed. A DEMO package may contain only DEMO questions.
 - The importer accepts `fi`, `sv`, or mixed packages. The saved study-language choice filters questions, topics, review and statistics. Missing-language packages show an empty state, with no fallback. Use distinct stable IDs for independently practised language variants, such as `democracy-1-fi` and `democracy-1-sv`. Question translation maps supply supporting explanations after answering; they do not create independently scored questions.
 
+## Question formats (content schema 2)
+
+From v0.17 a question may set `format` to `SINGLE_CHOICE` (the default when omitted) or `TRUE_FALSE`. A `TRUE_FALSE` question's `text` is a statement. It must have exactly two options with the IDs `true` and `false`, in either order; `correctOptionId` is one of them. The app shows the answers as two large buttons labelled in the interface language (Oikein/Väärin, True/False), so the option `text` is used only in the import preview. English support translations keep the same two option IDs.
+
+A package that contains any `TRUE_FALSE` question must declare `"schemaVersion": 2`. Schema 1 packages remain valid and every question in them is single choice. Questions installed before v0.17, saved assessment snapshots and backups have no `format` field and read as single choice; their IDs and revisions do not change, so progress is kept. App versions before v0.17 reject schema 2 packages instead of showing a statement as an ordinary choice.
+
+Practice assessments aim for about 30% true/false items and fill from the other format when one is missing. The length and share are set in one place, `AssessmentMix` in `domain/Assessment.kt`; they are practice choices, not the official exam format.
+
 ## Update rules and progress
 
 In v0.15, topics may include an optional `lessons` map keyed by `fi`, `sv`, or supporting `en`. A lesson contains `id`, positive `revision`, `introduction`, `status`, and ordered `sections`. Each section contains a stable `id`, `title`, `body`, one or more HTTPS `sources` (`title`/`url`), and an optional nonblank `easyBody` only for Finnish. English support must use the same lesson ID and ordered section IDs as every native variant. No native lesson is silently replaced by English or the other study language. The bundled demo has three sections per topic in all three variants; imports may omit lessons entirely.

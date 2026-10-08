@@ -71,9 +71,9 @@ internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, ex
                         HorizontalDivider()
                         StudyText(question.text, question.language, MaterialTheme.typography.titleLarge, Modifier.semantics { heading() })
                         Text(stringResource(R.string.your_answer), style = MaterialTheme.typography.labelLarge)
-                        StudyText(selected.text, question.language, MaterialTheme.typography.bodyLarge)
+                        AnswerText(question, selected.id, MaterialTheme.typography.bodyLarge)
                         Text(stringResource(R.string.correct_answer_label), style = MaterialTheme.typography.labelLarge)
-                        StudyText(correct.text, question.language, MaterialTheme.typography.bodyLarge)
+                        AnswerText(question, correct.id, MaterialTheme.typography.bodyLarge)
                         OutlinedButton(onClick = { expanded = !expanded }, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp).semantics {
                             contentDescription = accessibilityLabel
                             stateDescription = expandedLabel

@@ -321,4 +321,7 @@
     <string name="language_swedish">Svenska · ruotsi</string>
     <string name="lesson_english_missing">Tälle osiolle ei ole englanninkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
     <string name="import_changed_lessons">Lisätyt, muutetut tai poistetut oppituntien kieliversiot</string>
+    <string name="true_false_true">Oikein</string>
+    <string name="true_false_false">Väärin</string>
+    <string name="true_false_prompt">Väite. Onko se oikein vai väärin?</string>
 </resources>

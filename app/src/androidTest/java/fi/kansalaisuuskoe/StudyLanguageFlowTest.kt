@@ -46,7 +46,7 @@ class StudyLanguageFlowTest {
     @Test fun swedishLearningRestoresFeedbackAndKeepsFinnishHistorySeparate() {
         chooseSwedish()
         text("Topics").performClick()
-        click("Samhälle och demokrati"); click("Practise this topic")
+        click("Yhteiskunta ja demokratia"); click("Practise this topic")
         await("Vem utövar den lagstiftande makten i Finland?")
         text("Riksdagen").performClick(); click("Check answer")
         await("Correct")
@@ -86,6 +86,8 @@ class StudyLanguageFlowTest {
         assertEquals(1, LearningEngine.due(saved.forLanguage(StudyLanguage.FINNISH), System.currentTimeMillis()).size)
     }
     @Test fun topicNamesFollowTheStudyLanguage() {
+        // The bundled package has Swedish topic names; the older regression package falls back to Finnish.
+        runBlocking { app.container.database.clearAllTables(); repository.initialize(app) }
         chooseSwedish()
         text("Topics").performClick(); await("Samhälle och demokrati")
         text("Society and democracy").assertDoesNotExist()
@@ -104,7 +106,7 @@ class StudyLanguageFlowTest {
         await("No questions in this language yet")
         text("Start learning").assertDoesNotExist()
         text("Topics").performClick(); await("What would you like to learn?")
-        text("Samhälle och demokrati").assertDoesNotExist()
+        text("Yhteiskunta ja demokratia").assertDoesNotExist()
         text("Review").performClick()
         text("Start review · 1 question").assertDoesNotExist()
         text("Progress").performClick()
