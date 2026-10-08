@@ -61,7 +61,7 @@ class ContentImportViewModel(private val repository: LearningRepository) : ViewM
                 repository.confirmImport(preview)
                 mutable.value = ContentImportState(installed = InstalledContent(
                     ContentMetadata(packageId = preview.content.packageId, version = preview.content.version, hash = preview.hash),
-                    preview.content.topics, preview.content.questions), imported = true, busy = true)
+                    preview.content.topics, preview.content.questions, preview.content.objectives), imported = true, busy = true)
             } catch (e: Exception) {
                 failure(e)
                 // A changed database needs a new review. Storage errors keep the preview for retry.

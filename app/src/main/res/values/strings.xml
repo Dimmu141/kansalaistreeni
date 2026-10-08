@@ -324,4 +324,21 @@
     <string name="true_false_true">Oikein</string>
     <string name="true_false_false">Väärin</string>
     <string name="true_false_prompt">Väite. Onko se oikein vai väärin?</string>
+    <string name="coverage_title">Tavoitteiden kattavuus</string>
+    <string name="coverage_intro">Näet, montako kysymystä harjoittelee kutakin oppimistavoitetta. Kun virallinen oppimateriaali julkaistaan, tavoitteita voi verrata siihen.</string>
+    <string name="coverage_summary">%1$s. %2$s.</string>
+    <plurals name="coverage_thin">
+        <item quantity="one">Alle %d kysymys</item>
+        <item quantity="other">Alle %d kysymystä</item>
+    </plurals>
+    <plurals name="coverage_thin_count">
+        <item quantity="one">Alle %1$d kysymyksen tavoitteita: %2$d</item>
+        <item quantity="other">Alle %1$d kysymyksen tavoitteita: %2$d</item>
+    </plurals>
+    <string name="coverage_empty">Tässä aineistossa ei ole oppimistavoitteita.</string>
+    <string name="import_objectives">Oppimistavoitteet: %1$s. %2$s.</string>
+    <plurals name="objective_count">
+        <item quantity="one">%d oppimistavoite</item>
+        <item quantity="other">%d oppimistavoitetta</item>
+    </plurals>
 </resources>

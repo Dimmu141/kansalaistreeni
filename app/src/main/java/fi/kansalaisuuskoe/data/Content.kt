@@ -7,7 +7,7 @@ import fi.kansalaisuuskoe.domain.*
 import java.net.URI
 
 @JsonClass(generateAdapter = true)
-data class ContentPackageDto(val schemaVersion: Int, val packageId: String, val version: Int, val status: String, val topics: List<TopicDto>, val questions: List<QuestionDto>)
+data class ContentPackageDto(val schemaVersion: Int, val packageId: String, val version: Int, val status: String, val topics: List<TopicDto>, val questions: List<QuestionDto>, val objectives: List<ObjectiveDto> = emptyList())
 @JsonClass(generateAdapter = true)
 data class TopicDto(val id: String, val title: String, val description: String, val order: Int, val translations: Map<String, TopicTranslationDto> = emptyMap(), val lessons: Map<String, LessonDto> = emptyMap()) {
     fun model() = Topic(id, title, description, order, translations.mapValues { (_, t) -> TopicTranslation(t.title, t.description) }, lessons.mapValues { (_, lesson) -> lesson.model() })
@@ -19,6 +19,10 @@ data class LessonDto(val id: String, val revision: Int, val introduction: String
 @JsonClass(generateAdapter = true)
 data class LessonSectionDto(val id: String, val title: String, val body: String, val sources: List<SourceDto>, val easyBody: String? = null) {
     fun model() = LessonSection(id, title, body, easyBody, sources.map { Source(it.title, it.url) })
+}
+@JsonClass(generateAdapter = true)
+data class ObjectiveDto(val id: String, val topicId: String, val statement: Map<String, String>, val sourceRef: String? = null) {
+    fun model() = LearningObjective(id, topicId, statement, sourceRef)
 }
 @JsonClass(generateAdapter = true)
 data class TopicTranslationDto(val title: String, val description: String)
@@ -40,6 +44,7 @@ data class QuestionDto(
     val translations: Map<String, TranslationDto> = emptyMap(),
     // Absent in schema 1 packages and in payloads stored before v0.17.
     val format: String = "SINGLE_CHOICE",
+    val objectiveIds: List<String> = emptyList(),
 ) {
     fun model() = Question(
         id, revision, topicId, text, options.map { AnswerOption(it.id, it.text) }, correctOptionId,
@@ -49,6 +54,7 @@ data class QuestionDto(
             QuestionTranslation(value.text, value.options.map { AnswerOption(it.id, it.text) }, value.explanation)
         },
         QuestionFormat.valueOf(format),
+        objectiveIds,
     )
 }
 
@@ -57,12 +63,18 @@ object ContentCodec {
     val questionAdapter = moshi.adapter(QuestionDto::class.java)
     val topicTranslationsAdapter = moshi.adapter<Map<String, TopicTranslationDto>>(Types.newParameterizedType(Map::class.java, String::class.java, TopicTranslationDto::class.java))
     val lessonsAdapter = moshi.adapter<Map<String, LessonDto>>(Types.newParameterizedType(Map::class.java, String::class.java, LessonDto::class.java))
+    val objectiveAdapter = moshi.adapter(ObjectiveDto::class.java)
     private val packageAdapter = moshi.adapter(ContentPackageDto::class.java)
-    // Schema 2 adds question formats. Older apps reject it rather than misreading a true/false item.
+    // Schema 2 adds question formats and learning objectives. Older apps reject it rather than
+    // misreading a true/false item.
     const val SCHEMA_VERSION = 2
     fun parse(json: String): ContentPackageDto = requireNotNull(packageAdapter.fromJson(json)).also(::validate)
 
-    fun validate(content: ContentPackageDto) {
+    /**
+     * [snapshot] validates a saved assessment copy: its questions keep their objective IDs, but the
+     * snapshot does not copy the objective list.
+     */
+    fun validate(content: ContentPackageDto, snapshot: Boolean = false) {
         require(content.schemaVersion in 1..SCHEMA_VERSION) { "Unsupported content schema" }
         require(content.packageId.isNotBlank() && content.version > 0)
         ContentStatus.valueOf(content.status)
@@ -122,6 +134,28 @@ object ContentCodec {
                 require(language.matches(Regex("[a-z]{2,3}(-[A-Za-z0-9]{2,8})*")) && language != q.language && t.text.isNotBlank() && t.explanation.isNotBlank())
                 require(t.options.map { it.id }.toSet() == q.options.map { it.id }.toSet() && t.options.size == q.options.size)
                 require(t.options.all { it.text.isNotBlank() })
+            }
+        }
+        validateObjectives(content, snapshot)
+    }
+
+    private fun validateObjectives(content: ContentPackageDto, snapshot: Boolean) {
+        val topics = content.topics.map { it.id }.toSet()
+        val ids = content.objectives.map { it.id }
+        require(content.schemaVersion >= 2 || content.objectives.isEmpty()) { "Objectives need content schema 2" }
+        require(ids.distinct().size == ids.size) { "Duplicate objective ID" }
+        content.objectives.forEach { objective ->
+            require(objective.id.matches(Regex("[a-z0-9-]+")) && objective.topicId in topics) { "Invalid objective" }
+            require(objective.statement.keys.all { it in setOf("fi", "sv", "en") } && objective.statement.values.all { it.isNotBlank() }) { "Invalid objective statement" }
+            require(objective.statement.containsKey("fi") && objective.statement.containsKey("sv")) { "Objectives need Finnish and Swedish statements" }
+            require(objective.sourceRef == null || objective.sourceRef.isNotBlank())
+        }
+        content.questions.forEach { q ->
+            require(q.objectiveIds.distinct().size == q.objectiveIds.size) { "Duplicate objective reference" }
+            when {
+                snapshot -> Unit
+                content.objectives.isEmpty() -> require(q.objectiveIds.isEmpty()) { "Objective references need an objectives list" }
+                else -> require(q.objectiveIds.isNotEmpty() && q.objectiveIds.all { it in ids }) { "Question ${q.id} needs existing objectives" }
             }
         }
     }

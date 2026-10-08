@@ -40,6 +40,19 @@ A package that contains any `TRUE_FALSE` question must declare `"schemaVersion":
 
 Practice assessments aim for about 30% true/false items and fill from the other format when one is missing. The length and share are set in one place, `AssessmentMix` in `domain/Assessment.kt`; they are practice choices, not the official exam format.
 
+## Learning objectives (content schema 2)
+
+A schema 2 package may list `objectives`. Each has a lowercase `id`, a `topicId`, a `statement` map with Finnish (`fi`) and Swedish (`sv`) text and optional English (`en`), and an optional `sourceRef` such as "Perustuslaki 11 §". When a package lists objectives, every question must list at least one existing objective in `objectiveIds`. A question may also serve an objective in another topic. Packages without objectives stay valid, but then no question may reference one.
+
+```json
+"objectives": [
+  { "id": "rights-religion", "topicId": "rights", "sourceRef": "Perustuslaki 11 §",
+    "statement": { "fi": "Uskonnon ja omantunnon vapaus", "sv": "Religions- och samvetsfrihet", "en": "Freedom of religion and conscience" } }
+]
+```
+
+Objectives are the mapping layer for the official learning material once it is published. They are not the official syllabus. **Settings → Study material → Objective coverage** lists every objective by topic with its question count per study language, and highlights objectives with fewer than three questions in a language the package teaches. The import preview reports the same totals. `python scripts/verify-content.py --write-coverage` regenerates `docs/CONTENT-COVERAGE.md` from the bundled package; the content gate fails when that report is out of date. Objectives are stored in their own table (Room schema 7); the 6→7 migration only adds that table.
+
 ## Update rules and progress
 
 In v0.15, topics may include an optional `lessons` map keyed by `fi`, `sv`, or supporting `en`. A lesson contains `id`, positive `revision`, `introduction`, `status`, and ordered `sections`. Each section contains a stable `id`, `title`, `body`, one or more HTTPS `sources` (`title`/`url`), and an optional nonblank `easyBody` only for Finnish. English support must use the same lesson ID and ordered section IDs as every native variant. No native lesson is silently replaced by English or the other study language. The bundled demo has three sections per topic in all three variants; imports may omit lessons entirely.

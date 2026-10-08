@@ -34,7 +34,7 @@ object ContentFile {
 }
 
 data class ContentChanges(val added: Int, val revised: Int, val unchanged: Int, val removed: Int, val translated: Int = 0)
-data class InstalledContent(val metadata: ContentMetadata?, val topics: List<TopicDto>, val questions: List<QuestionDto>)
+data class InstalledContent(val metadata: ContentMetadata?, val topics: List<TopicDto>, val questions: List<QuestionDto>, val objectives: List<ObjectiveDto> = emptyList())
 class PreparedContent internal constructor(
     val content: ContentPackageDto,
     val changes: ContentChanges,
@@ -51,7 +51,7 @@ object ContentUpdates {
         // File formatting is not a material update. Compare every persisted field; preserve
         // question/option order and tied topic order because they affect the learning flow.
         val sameMaterial = content.topics.sortedBy { it.order } == installed.topics.sortedBy { it.order } &&
-            content.questions == installed.questions
+            content.questions == installed.questions && content.objectives == installed.objectives
         val sameVersion = old?.packageId == content.packageId && old.version == content.version
         if (old?.packageId == content.packageId) {
             if (content.version < old.version || (sameVersion && !sameMaterial)) {

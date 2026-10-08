@@ -17,6 +17,13 @@ data class TopicEntity(@PrimaryKey val id: String, val title: String, val descri
 data class QuestionEntity(@PrimaryKey val id: String, val revision: Int, val payload: String)
 @Entity(tableName = "content_metadata")
 data class ContentMetadata(@PrimaryKey val slot: Int = 1, val packageId: String, val version: Int, val hash: String)
+@Entity(tableName = "objectives")
+data class ObjectiveEntity(@PrimaryKey val id: String, val topicId: String, val sortOrder: Int, val payload: String) {
+    fun dto() = requireNotNull(ContentCodec.objectiveAdapter.fromJson(payload))
+    companion object {
+        fun from(objective: ObjectiveDto, order: Int) = ObjectiveEntity(objective.id, objective.topicId, order, ContentCodec.objectiveAdapter.toJson(objective))
+    }
+}
 @Entity(tableName = "learning_rules")
 data class LearningRulesEntity(@PrimaryKey val slot: Int = 1, val version: Int)
 @Entity(tableName = "attempts", indices = [Index("questionId"), Index("answeredAt")])
@@ -41,6 +48,9 @@ data class ProgressEntity(
 @Dao
 interface LearningDao {
     @Query("SELECT * FROM topics ORDER BY sortOrder, rowid") suspend fun topics(): List<TopicEntity>
+    @Query("SELECT * FROM objectives ORDER BY sortOrder") suspend fun objectives(): List<ObjectiveEntity>
+    @Insert suspend fun insertObjectives(objectives: List<ObjectiveEntity>)
+    @Query("DELETE FROM objectives") suspend fun deleteObjectives()
     @Query("SELECT * FROM question_progress") suspend fun allProgress(): List<ProgressEntity>
     @Query("SELECT * FROM attempts ORDER BY answeredAt, rowid") suspend fun attempts(): List<AttemptEntity>
     @Query("SELECT * FROM attempts WHERE questionId = :id AND revision = :revision ORDER BY answeredAt, rowid") suspend fun questionAttempts(id: String, revision: Int): List<AttemptEntity>
@@ -62,11 +72,17 @@ interface LearningDao {
     @Query("DELETE FROM question_progress") suspend fun deleteProgress()
     @Query("DELETE FROM attempts") suspend fun deleteAttempts()
 }
-@Database(entities = [TopicEntity::class, QuestionEntity::class, ContentMetadata::class, AttemptEntity::class, ProgressEntity::class, LearningRulesEntity::class, AssessmentEntity::class], version = 6, exportSchema = true)
+@Database(entities = [TopicEntity::class, QuestionEntity::class, ContentMetadata::class, AttemptEntity::class, ProgressEntity::class, LearningRulesEntity::class, AssessmentEntity::class, ObjectiveEntity::class], version = 7, exportSchema = true)
 abstract class LearningDatabase : RoomDatabase() {
     abstract fun learningDao(): LearningDao
     abstract fun assessmentDao(): AssessmentDao
     companion object {
+        // Adds the learning-objective table only; existing content, history and assessments are untouched.
+        val MIGRATION_6_7 = object : Migration(6, 7) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("CREATE TABLE IF NOT EXISTS `objectives` (`id` TEXT NOT NULL, `topicId` TEXT NOT NULL, `sortOrder` INTEGER NOT NULL, `payload` TEXT NOT NULL, PRIMARY KEY(`id`))")
+            }
+        }
         val MIGRATION_5_6 = object : Migration(5, 6) {
             override fun migrate(db: SupportSQLiteDatabase) {
                 db.execSQL("ALTER TABLE `topics` ADD COLUMN `lessons` TEXT NOT NULL DEFAULT '{}'")

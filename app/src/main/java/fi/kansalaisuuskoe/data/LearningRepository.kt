@@ -75,7 +75,7 @@ class LearningRepository(private val database: LearningDatabase) {
             // Metadata does not retain the original package-level label. Preserve every question's
             // provenance, and use a conservative envelope instead of asserting official origin.
             val status = if (material.questions.all { it.status == "DEMO" }) "DEMO" else "EDITORIAL"
-            val content = ContentPackageDto(ContentCodec.SCHEMA_VERSION, metadata.packageId, metadata.version, status, material.topics, material.questions)
+            val content = ContentPackageDto(ContentCodec.SCHEMA_VERSION, metadata.packageId, metadata.version, status, material.topics, material.questions, material.objectives)
             BackupCodec.encode(LearningBackup(BackupCodec.FORMAT, BackupCodec.CURRENT_SCHEMA, now, content,
                 dao.attempts().map(BackupAttempt::from), database.assessmentDao().all().map(BackupAssessment::from)))
         }
@@ -100,6 +100,8 @@ class LearningRepository(private val database: LearningDatabase) {
             dao.deleteQuestions()
             dao.deleteTopics()
             dao.insertTopics(content.topics.map { TopicEntity(it.id, it.title, it.description, it.order, ContentCodec.topicTranslationsAdapter.toJson(it.translations), ContentCodec.lessonsAdapter.toJson(it.lessons)) })
+            dao.deleteObjectives()
+            dao.insertObjectives(content.objectives.mapIndexed { index, it -> ObjectiveEntity.from(it, index) })
             dao.insertQuestions(content.questions.map { QuestionEntity(it.id, it.revision, ContentCodec.questionAdapter.toJson(it)) })
             dao.insertAttempts(attempts.map { it.entity() })
             progress.forEach { dao.saveProgress(ProgressEntity.from(it)) }
@@ -142,7 +144,7 @@ class LearningRepository(private val database: LearningDatabase) {
 
     private suspend fun installed() = InstalledContent(dao.metadata(), dao.topics().map {
         it.dto()
-    }, dao.questions().map { requireNotNull(ContentCodec.questionAdapter.fromJson(it.payload)) })
+    }, dao.questions().map { requireNotNull(ContentCodec.questionAdapter.fromJson(it.payload)) }, dao.objectives().map { it.dto() })
 
     private suspend fun prepare(content: ContentPackageDto, hash: String): PreparedContent {
         val history = dao.attempts().groupBy { it.questionId }
@@ -157,6 +159,8 @@ class LearningRepository(private val database: LearningDatabase) {
             dao.deleteQuestions()
             dao.deleteTopics()
             dao.insertTopics(content.topics.map { TopicEntity(it.id, it.title, it.description, it.order, ContentCodec.topicTranslationsAdapter.toJson(it.translations), ContentCodec.lessonsAdapter.toJson(it.lessons)) })
+            dao.deleteObjectives()
+            dao.insertObjectives(content.objectives.mapIndexed { index, it -> ObjectiveEntity.from(it, index) })
             dao.insertQuestions(content.questions.map { QuestionEntity(it.id, it.revision, ContentCodec.questionAdapter.toJson(it)) })
             dao.saveMetadata(ContentMetadata(packageId = content.packageId, version = content.version, hash = preview.hash))
         }

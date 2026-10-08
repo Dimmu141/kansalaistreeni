@@ -324,4 +324,21 @@
     <string name="true_false_true">True</string>
     <string name="true_false_false">False</string>
     <string name="true_false_prompt">Statement. Is it true or false?</string>
+    <string name="coverage_title">Objective coverage</string>
+    <string name="coverage_intro">See how many questions practise each learning objective. When the official learning material is published, the objectives can be compared with it.</string>
+    <string name="coverage_summary">%1$s. %2$s.</string>
+    <plurals name="coverage_thin">
+        <item quantity="one">Fewer than %d question</item>
+        <item quantity="other">Fewer than %d questions</item>
+    </plurals>
+    <plurals name="coverage_thin_count">
+        <item quantity="one">Objectives with fewer than %1$d question: %2$d</item>
+        <item quantity="other">Objectives with fewer than %1$d questions: %2$d</item>
+    </plurals>
+    <string name="coverage_empty">This study material has no learning objectives.</string>
+    <string name="import_objectives">Learning objectives: %1$s. %2$s.</string>
+    <plurals name="objective_count">
+        <item quantity="one">%d learning objective</item>
+        <item quantity="other">%d learning objectives</item>
+    </plurals>
 </resources>

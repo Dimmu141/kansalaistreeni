@@ -40,11 +40,12 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
     val settings = route == "settings"
     val material = route == "material"
     val backup = route == "backup"
+    val coverage = route == "coverage"
     val lesson = route.startsWith("lesson/")
     val vocabulary = route.startsWith("vocabulary")
     val words = route.startsWith("words")
     val assessment = route.startsWith("assessment")
-    val detail = settings || studying || material || backup || lesson || vocabulary || words || assessment
+    val detail = settings || studying || material || coverage || backup || lesson || vocabulary || words || assessment
     fun tab(destination: String) {
         nav.navigate(destination) {
             popUpTo("home") { saveState = true }
@@ -55,7 +56,7 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(when { assessment -> R.string.assessment_title; material -> R.string.material_title; backup -> R.string.backup_nav_title; settings -> R.string.settings_title; studying -> R.string.practice_title; lesson -> R.string.lesson_title; vocabulary -> R.string.vocabulary_browser_title; words -> R.string.words_title; else -> R.string.app_title }), style = MaterialTheme.typography.titleLarge) },
+                title = { Text(stringResource(when { assessment -> R.string.assessment_title; material -> R.string.material_title; coverage -> R.string.coverage_title; backup -> R.string.backup_nav_title; settings -> R.string.settings_title; studying -> R.string.practice_title; lesson -> R.string.lesson_title; vocabulary -> R.string.vocabulary_browser_title; words -> R.string.words_title; else -> R.string.app_title }), style = MaterialTheme.typography.titleLarge) },
                 navigationIcon = {
                     if (detail) IconButton(onClick = { nav.popBackStack() }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.back)) }
                 },
@@ -118,7 +119,12 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                     composable("material") {
                         val importModel: ContentImportViewModel = viewModel(factory = viewModelFactory { initializer { ContentImportViewModel(container.learning) } })
                         val importState by importModel.state.collectAsStateWithLifecycle()
-                        ContentImportScreen(importState, importModel)
+                        ContentImportScreen(importState, importModel) { nav.navigate("coverage") { launchSingleTop = true } }
+                    }
+                    composable("coverage") {
+                        val importModel: ContentImportViewModel = viewModel(factory = viewModelFactory { initializer { ContentImportViewModel(container.learning) } })
+                        val importState by importModel.state.collectAsStateWithLifecycle()
+                        CoverageScreen(importState, importModel::refresh)
                     }
                     composable("study/{mode}?assessmentId={assessmentId}&topicId={topicId}", arguments = listOf(
                         navArgument("assessmentId") { type = NavType.StringType; nullable = true; defaultValue = null },

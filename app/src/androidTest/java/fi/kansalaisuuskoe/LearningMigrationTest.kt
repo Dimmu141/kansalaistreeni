@@ -92,7 +92,7 @@ class LearningMigrationTest {
     private fun verifyUpgrade(packageId: String, schemaVersion: Int = 1, language: String = "fi") = runBlocking {
         val questionId = createLegacyDatabase(packageId, schemaVersion, language)
         val opened = Room.databaseBuilder(context, LearningDatabase::class.java, name)
-            .addMigrations(LearningDatabase.MIGRATION_1_2, LearningDatabase.MIGRATION_2_3, LearningDatabase.MIGRATION_3_4, LearningDatabase.MIGRATION_4_5, LearningDatabase.MIGRATION_5_6).build().also { database = it }
+            .addMigrations(LearningDatabase.MIGRATION_1_2, LearningDatabase.MIGRATION_2_3, LearningDatabase.MIGRATION_3_4, LearningDatabase.MIGRATION_4_5, LearningDatabase.MIGRATION_5_6, LearningDatabase.MIGRATION_6_7).build().also { database = it }
         val repository = LearningRepository(opened)
         repository.initialize(context)
         val snapshot = repository.snapshot.first()
@@ -123,7 +123,7 @@ class LearningMigrationTest {
         repository.initialize(context)
         assertEquals(5, repository.snapshot.first().attempts.size)
         assertEquals(reviewed.progress, repository.snapshot.first().progress.single())
-        assertEquals(6, opened.openHelper.readableDatabase.version)
+        assertEquals(7, opened.openHelper.readableDatabase.version)
     }
 
     @Test fun bundledContentUpgradeRecalculatesWithoutLosingHistory() {
@@ -142,6 +142,15 @@ class LearningMigrationTest {
         assertTrue(repository.sessions.first().isEmpty())
         val id = repository.start(fi.kansalaisuuskoe.domain.StudyLanguage.FINNISH, 5000)
         assertEquals(20, repository.get(id)?.questions?.size)
+    }
+    @Test fun schemaSixPreservesLearningAndAssessmentsWhileAddingObjectives() = runBlocking {
+        verifyUpgrade("fi-civics-demo", 6)
+        val opened = requireNotNull(database)
+        val saved = AssessmentRepository(opened).get("legacy-assessment")!!
+        assertEquals(1, saved.answeredCount); assertNull(saved.finishedAt)
+        val bundled = ContentCodec.parse(context.assets.open("demo-content.json").bufferedReader().use { it.readText() })
+        assertEquals(bundled.objectives.map { it.id }, opened.learningDao().objectives().map { it.dto().id })
+        assertEquals(bundled.objectives, LearningRepository(opened).installedContent().objectives)
     }
     @Test fun schemaFivePreservesSavedAssessmentWhileAddingAuthoredLessons() = runBlocking {
         verifyUpgrade("fi-civics-demo", 5)

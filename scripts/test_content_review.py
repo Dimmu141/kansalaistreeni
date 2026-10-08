@@ -6,6 +6,46 @@ from pathlib import Path
 
 module = runpy.run_path(str(Path(__file__).with_name("verify-content.py")))
 ROOT, read_json, verify = (module[name] for name in ("ROOT", "read_json", "verify"))
+verify_objectives, coverage_markdown = module["verify_objectives"], module["coverage_markdown"]
+
+
+def objective_package():
+    def question(qid, language, refs):
+        return {"id": qid, "language": language, "objectiveIds": refs}
+    return {
+        "packageId": "objectives", "version": 1,
+        "topics": [{"id": "rights", "title": "Oikeudet", "order": 0}],
+        "objectives": [
+            {"id": "wide", "topicId": "rights", "statement": {"fi": "Laaja", "sv": "Bred"}, "sourceRef": "PL 11 §"},
+            {"id": "thin", "topicId": "rights", "statement": {"fi": "Kapea", "sv": "Smal"}},
+        ],
+        "questions": [question(f"q{i}", lang, ["wide"]) for i in range(3) for lang in ("fi", "sv")] + [question("t", "fi", ["thin"])],
+    }
+
+
+class ObjectiveGateTest(unittest.TestCase):
+    def test_valid_objectives_pass_and_report_marks_thin(self):
+        package = objective_package()
+        verify_objectives(package)
+        report = coverage_markdown(package)
+        self.assertIn("| `wide` | Laaja (PL 11 §) | 3 | 3 |  |", report)
+        self.assertIn("| `thin` | Kapea | 1 | 0 | thin |", report)
+        self.assertIn("- Thin objectives: 1", report)
+        self.assertEqual(report, coverage_markdown(objective_package()))
+
+    def test_missing_or_unknown_references_fail(self):
+        for refs in ([], ["missing"], ["wide", "wide"]):
+            package = objective_package()
+            package["questions"][0]["objectiveIds"] = refs
+            with self.assertRaises(ValueError):
+                verify_objectives(package)
+
+    def test_objective_needs_topic_and_both_languages(self):
+        for change in ({"topicId": "missing"}, {"statement": {"fi": "Vain suomeksi"}}):
+            package = objective_package()
+            package["objectives"][0].update(change)
+            with self.assertRaises(ValueError):
+                verify_objectives(package)
 
 
 class ReviewGateTest(unittest.TestCase):

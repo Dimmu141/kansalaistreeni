@@ -19,20 +19,21 @@ import androidx.compose.ui.unit.dp
 import fi.kansalaisuuskoe.R
 import fi.kansalaisuuskoe.data.ContentFile
 import fi.kansalaisuuskoe.domain.ContentStatus
+import fi.kansalaisuuskoe.domain.Coverage
 
 @Composable
-fun ContentImportScreen(state: ContentImportState, model: ContentImportViewModel) {
+fun ContentImportScreen(state: ContentImportState, model: ContentImportViewModel, openCoverage: () -> Unit = {}) {
     val resolver = LocalContext.current.contentResolver
     val picker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         if (uri != null) model.selectDocument {
             requireNotNull(resolver.openInputStream(uri)).use(ContentFile::read)
         }
     }
-    ContentImportBody(state, { picker.launch(arrayOf("application/json", "text/*", "application/octet-stream")) }, model::discard, model::confirm, model::refresh)
+    ContentImportBody(state, { picker.launch(arrayOf("application/json", "text/*", "application/octet-stream")) }, model::discard, model::confirm, model::refresh, openCoverage)
 }
 
 @Composable
-internal fun ContentImportBody(state: ContentImportState, select: () -> Unit, discard: () -> Unit, confirm: () -> Unit, retry: () -> Unit) {
+internal fun ContentImportBody(state: ContentImportState, select: () -> Unit, discard: () -> Unit, confirm: () -> Unit, retry: () -> Unit, openCoverage: () -> Unit = {}) {
     val preview = state.preview
     Page {
         item { Heading(stringResource(R.string.material_title), stringResource(R.string.material_intro)) }
@@ -46,6 +47,7 @@ internal fun ContentImportBody(state: ContentImportState, select: () -> Unit, di
                     installed.metadata?.let { SelectionContainer { Text(stringResource(R.string.package_details, it.packageId, it.version)) } }
                     Text(stringResource(R.string.material_counts, pluralStringResource(R.plurals.topic_count, installed.topics.size, installed.topics.size), pluralStringResource(R.plurals.question_count, installed.questions.size, installed.questions.size)))
                     Text(stringResource(R.string.import_languages, installed.questions.count { it.language == "fi" }, installed.questions.count { it.language == "sv" }))
+                    TextButton(onClick = openCoverage, modifier = Modifier.heightIn(min = 48.dp)) { Text(stringResource(R.string.coverage_title)) }
                 }
             }
         }
@@ -66,6 +68,11 @@ internal fun ContentImportBody(state: ContentImportState, select: () -> Unit, di
             item { Text(stringResource(R.string.material_counts, pluralStringResource(R.plurals.topic_count, preview.content.topics.size, preview.content.topics.size), pluralStringResource(R.plurals.question_count, preview.content.questions.size, preview.content.questions.size))) }
             item { Text(stringResource(R.string.import_languages, preview.content.questions.count { it.language == "fi" }, preview.content.questions.count { it.language == "sv" })) }
             item { Text(stringResource(R.string.import_study_scope), style = MaterialTheme.typography.bodyMedium) }
+            if (preview.content.objectives.isNotEmpty()) item {
+                val objectives = Coverage.report(preview.content.topics.map { it.model() }, preview.content.objectives.map { it.model() }, preview.content.questions.map { it.model() }).flatMap { it.objectives }
+                Text(stringResource(R.string.import_objectives, pluralStringResource(R.plurals.objective_count, objectives.size, objectives.size), thinSummary(objectives.count { it.thin })),
+                    style = MaterialTheme.typography.bodyMedium)
+            }
             item { Text(stringResource(R.string.import_provenance, stringResource(ContentStatus.valueOf(preview.content.status).labelResource())), style = MaterialTheme.typography.bodyMedium) }
             item { Text(stringResource(R.string.import_unverified), style = MaterialTheme.typography.bodyMedium) }
             item { HorizontalDivider() }

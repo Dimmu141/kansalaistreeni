@@ -41,6 +41,7 @@ data class Question(
     val status: ContentStatus,
     val translations: Map<String, QuestionTranslation> = emptyMap(),
     val format: QuestionFormat = QuestionFormat.SINGLE_CHOICE,
+    val objectiveIds: List<String> = emptyList(),
 )
 data class QuestionTranslation(
     val text: String,
