@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-08",
+  "version": "0.16.0",
+  "device": "Citizenship_MVP / Android 16 API 36 / emulator-5556",
+  "fullGate": "passed",
+  "jvm": {
+    "tests": 156,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android": {
+    "tests": 141,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "architectureChecks": 8,
+  "contentGateTests": 9,
+  "sourceFiles": 93,
+  "localizedResourceKeys": 301,
+  "lint": {
+    "debug": [
+      {
+        "id": "OldTargetApi",
+        "severity": "Warning"
+      },
+      {
+        "id": "AndroidGradlePluginVersion",
+        "severity": "Warning"
+      }
+    ],
+    "release": [
+      {
+        "id": "OldTargetApi",
+        "severity": "Warning"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "app/build/outputs/apk/debug/app-debug.apk",
+      "bytes": 14135858,
+      "contentSha256": "01de75816e60b9e27814ed1598bc59458bd4836373d1fc07615bfca76567aaab"
+    },
+    {
+      "path": "app/build/outputs/apk/release/app-release-unsigned.apk",
+      "bytes": 1932862,
+      "contentSha256": "01de75816e60b9e27814ed1598bc59458bd4836373d1fc07615bfca76567aaab"
+    },
+    {
+      "path": "app/build/outputs/bundle/release/app-release.aab",
+      "bytes": 4526449,
+      "contentSha256": "01de75816e60b9e27814ed1598bc59458bd4836373d1fc07615bfca76567aaab"
+    }
+  ],
+  "focusedRegressions": {
+    "ArchitectureRegressionTest": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "TopicRoutingFlowTest": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "nativeMinifiedSmoke": {
+    "versionCode": 16,
+    "versionName": "0.16.0",
+    "phone": "1080x2400 density420",
+    "tablet": "1920x1200 density240",
+    "topicQueue": 5,
+    "correctAnswerSaved": true,
+    "practisedAfterProcessRestart": "1/30",
+    "demoMasteryPercent": 1,
+    "totalAnswers": 1,
+    "accuracyPercent": 100,
+    "reviewsDue": 0,
+    "androidRuntimeCrashes": 0
+  }
+}

@@ -9,7 +9,6 @@ import fi.kansalaisuuskoe.R
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.pluralStringResource
-import androidx.compose.ui.platform.LocalConfiguration
 import fi.kansalaisuuskoe.domain.*
 
 @Composable
@@ -17,7 +16,7 @@ fun HomeScreen(state: AppUiState, onStudy: () -> Unit, onReview: () -> Unit, onT
     val summary = state.summary
     val plan = DailyLearningPlanner.plan(state.studySnapshot, state.now)
     val upToDate = plan.items.isEmpty()
-    val language = LocalConfiguration.current.locales[0].language
+    val language = topicLanguage()
     Page {
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -84,7 +83,7 @@ fun TopicsScreen(state: AppUiState, onVocabulary: () -> Unit, onAssessment: () -
 }
 @Composable
 fun ReviewScreen(state: AppUiState, onReview: () -> Unit, onLearn: () -> Unit) {
-    val language = LocalConfiguration.current.locales[0].language
+    val language = topicLanguage()
     val due = LearningEngine.due(state.studySnapshot, state.now)
     val next = LearningEngine.nextReviewAt(state.studySnapshot, state.now)
     Page {
@@ -114,7 +113,7 @@ fun ReviewScreen(state: AppUiState, onReview: () -> Unit, onLearn: () -> Unit) {
 @Composable
 fun ProgressScreen(state: AppUiState) {
     val s = state.summary
-    val language = LocalConfiguration.current.locales[0].language
+    val language = topicLanguage()
     Page {
         item { Heading(stringResource(R.string.progress_title), stringResource(R.string.progress_subtitle)) }
         item { StudyScope(state) }

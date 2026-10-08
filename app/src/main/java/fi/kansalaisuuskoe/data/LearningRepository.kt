@@ -1,18 +1,39 @@
 package fi.kansalaisuuskoe.data
 
 import android.content.Context
+import androidx.room.deferredTransaction
+import androidx.room.useReaderConnection
 import androidx.room.withTransaction
 import fi.kansalaisuuskoe.domain.*
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.conflate
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 
 class LearningRepository(private val database: LearningDatabase) {
     private val dao = database.learningDao()
-    val snapshot = combine(dao.observeTopics(), dao.observeQuestions(), dao.observeProgress(), dao.observeAttempts()) { topics, questions, progress, attempts ->
-        LearningSnapshot(topics.map { it.model() }, questions.map { requireNotNull(ContentCodec.questionAdapter.fromJson(it.payload)).model() }, progress.map { it.model() }, attempts.map { it.model() })
-    }.flowOn(Dispatchers.Default)
+    val snapshot = database.invalidationTracker.createFlow("topics", "questions", "question_progress", "attempts")
+        // Changes that arrive during a read collapse into one further read of the newest state.
+        .conflate()
+        .map {
+            // A committed write can invalidate several tables. Capture all rows together:
+            // combining independent query flows would expose different database versions.
+            // A deferred reader transaction sees one version without taking the writer lock,
+            // so a large read cannot delay saving an answer.
+            database.useReaderConnection { reader ->
+                reader.deferredTransaction { SnapshotRows(dao.topics(), dao.questions(), dao.allProgress(), dao.attempts()) }
+            }
+        }
+        .map { rows ->
+            // Decode content after releasing the read transaction.
+            LearningSnapshot(rows.topics.map { it.model() },
+                rows.questions.map { requireNotNull(ContentCodec.questionAdapter.fromJson(it.payload)).model() },
+                rows.progress.map { it.model() }, rows.attempts.map { it.model() })
+        }.flowOn(Dispatchers.Default)
+
+    private data class SnapshotRows(val topics: List<TopicEntity>, val questions: List<QuestionEntity>,
+        val progress: List<ProgressEntity>, val attempts: List<AttemptEntity>)
 
     suspend fun initialize(context: Context) = withContext(Dispatchers.IO) {
         val json = context.assets.open("demo-content.json").bufferedReader().use { it.readText() }

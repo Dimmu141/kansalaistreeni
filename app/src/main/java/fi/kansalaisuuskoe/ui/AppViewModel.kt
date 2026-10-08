@@ -40,6 +40,7 @@ class AppViewModel(
             AppUiState(loading = false, snapshot = snapshot, settings = settings, now = now)
         }.catch { e ->
             if (e is CancellationException) throw e
+            Diagnostics.error("Reading learning data", e)
             error.value = R.string.error_read_data
             emit(AppUiState())
         }
@@ -57,6 +58,7 @@ class AppViewModel(
             try { initializeContent() }
             catch (e: Exception) {
                 if (e is CancellationException) throw e
+                Diagnostics.error("Loading study material", e)
                 error.value = R.string.error_load_content
             }
             finally { load.value = false }
@@ -72,6 +74,7 @@ class AppViewModel(
             try { action(); settingsError.value = null }
             catch (e: Exception) {
                 if (e is CancellationException) throw e
+                Diagnostics.error("Saving a setting", e)
                 settingsError.value = R.string.error_save_setting
             }
         }

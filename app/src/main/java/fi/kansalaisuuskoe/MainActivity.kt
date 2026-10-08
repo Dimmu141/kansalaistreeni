@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -22,7 +23,9 @@ class MainActivity : ComponentActivity() {
             })
             val state by model.state.collectAsStateWithLifecycle()
             InterfaceLocale(state.settings.interfaceLanguage) {
-                CitizenshipTheme(state.settings.theme) { CitizenshipApp(state, model, container) }
+                CitizenshipTheme(state.settings.theme) {
+                    CompositionLocalProvider(LocalStudyLanguage provides state.settings.studyLanguage) { CitizenshipApp(state, model, container) }
+                }
             }
         }
     }

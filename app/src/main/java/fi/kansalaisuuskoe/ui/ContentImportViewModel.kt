@@ -76,6 +76,7 @@ class ContentImportViewModel(private val repository: LearningRepository) : ViewM
 
     private fun failure(error: Exception) {
         if (error is CancellationException) throw error
+        Diagnostics.error("Study material import", error)
         val message = when ((error as? ContentImportException)?.problem) {
             ImportProblem.TOO_LARGE -> R.string.import_too_large
             ImportProblem.INVALID -> R.string.import_invalid

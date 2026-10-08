@@ -10,7 +10,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.semantics.*
@@ -81,7 +80,7 @@ internal fun AssessmentScreen(state: AssessmentUiState, sessionId: String, app: 
     }
     val question = session.questions[session.position]
     val selected = session.answers[question.id]
-    val language = LocalConfiguration.current.locales[0].language
+    val language = topicLanguage(session.language)
     val list = key(session.id, question.id) { rememberLazyListState() }
     Page(list) {
         item {
@@ -113,7 +112,7 @@ internal fun AssessmentScreen(state: AssessmentUiState, sessionId: String, app: 
 private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, state: AssessmentUiState, retry: () -> Unit, delete: (AssessmentSession) -> Unit, practice: () -> Unit, leave: () -> Unit) {
     val result = Assessments.result(session)
     val eligible = Assessments.practiceMistakes(session, app.snapshot.questions)
-    val language = LocalConfiguration.current.locales[0].language
+    val language = topicLanguage(session.language)
     Page {
         item { Heading(stringResource(R.string.assessment_result_title), formatReviewTime(requireNotNull(session.finishedAt))) }
         item { Text(stringResource(if (session.language == "sv") R.string.question_language_swedish else R.string.question_language)) }

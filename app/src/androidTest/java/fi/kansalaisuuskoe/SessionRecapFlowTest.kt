@@ -61,7 +61,7 @@ class SessionRecapFlowTest {
             app.container.learning.answer(q, q.options.first { it.id != q.correctOptionId }.id, "earlier-fi", System.currentTimeMillis())
             app.container.settings.setStudyLanguage(StudyLanguage.SWEDISH)
         }
-        await("Study language: Swedish"); text("Topics").performClick(); click("Society and democracy"); click("Practise this topic")
+        await("Study language: Swedish"); text("Topics").performClick(); click("Samhälle och demokrati"); click("Practise this topic")
         await("Vem utövar den lagstiftande makten i Finland?")
         text("Riksdagen").performClick(); click("Check answer"); click("Next question")
         await("Hur många ledamöter har Finlands riksdag?")

@@ -4,7 +4,6 @@ import androidx.room.*
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import fi.kansalaisuuskoe.domain.*
-import kotlinx.coroutines.flow.Flow
 
 @Entity(tableName = "topics")
 data class TopicEntity(@PrimaryKey val id: String, val title: String, val description: String, val sortOrder: Int,
@@ -41,11 +40,8 @@ data class ProgressEntity(
 }
 @Dao
 interface LearningDao {
-    @Query("SELECT * FROM topics ORDER BY sortOrder, rowid") fun observeTopics(): Flow<List<TopicEntity>>
     @Query("SELECT * FROM topics ORDER BY sortOrder, rowid") suspend fun topics(): List<TopicEntity>
-    @Query("SELECT * FROM questions ORDER BY rowid") fun observeQuestions(): Flow<List<QuestionEntity>>
-    @Query("SELECT * FROM question_progress") fun observeProgress(): Flow<List<ProgressEntity>>
-    @Query("SELECT * FROM attempts ORDER BY answeredAt, rowid") fun observeAttempts(): Flow<List<AttemptEntity>>
+    @Query("SELECT * FROM question_progress") suspend fun allProgress(): List<ProgressEntity>
     @Query("SELECT * FROM attempts ORDER BY answeredAt, rowid") suspend fun attempts(): List<AttemptEntity>
     @Query("SELECT * FROM attempts WHERE questionId = :id AND revision = :revision ORDER BY answeredAt, rowid") suspend fun questionAttempts(id: String, revision: Int): List<AttemptEntity>
     @Query("SELECT * FROM questions WHERE id = :id") suspend fun question(id: String): QuestionEntity?

@@ -21,7 +21,7 @@ class AuthoredLessonFlowTest {
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
     private fun show(value: String) { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); rule.onAllNodesWithText(value).onFirst().assertIsDisplayed() }
     private fun click(value: String) { show(value); rule.onAllNodesWithText(value).onFirst().performClick() }
-    private fun openTopic() { await("Your learning path"); text("Topics").performClick(); click("Society and democracy") }
+    private fun openTopic(name: String = "Society and democracy") { await("Your learning path"); text("Topics").performClick(); click(name) }
     @Before fun reset(): Unit = runBlocking {
         app.container.database.clearAllTables(); app.container.learning.initialize(app)
         app.container.settings.setInterfaceLanguage(InterfaceLanguage.ENGLISH)
@@ -44,7 +44,7 @@ class AuthoredLessonFlowTest {
     @Test fun SwedishLessonUsesSwedishWithEnglishSupportAndNoEasyFinnish() {
         runBlocking { app.container.settings.setStudyLanguage(StudyLanguage.SWEDISH) }
         val before = snapshot(); val topic = before.topics.first()
-        openTopic()
+        openTopic("Samhälle och demokrati")
         topic.lessons.getValue("sv").sections.forEach { section -> show(section.body); text("In easy Finnish").assertDoesNotExist() }
         show(topic.lessons.getValue("en").sections.last().body)
         assertEquals(before, snapshot())

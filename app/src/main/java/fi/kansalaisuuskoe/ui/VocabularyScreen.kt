@@ -6,7 +6,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.*
@@ -19,7 +18,7 @@ internal fun VocabularyScreen(state: AppUiState, query: String, topicId: String?
     val entries = remember(state.snapshot.questions, state.settings.studyLanguage) { LearningContent.vocabulary(state.snapshot, state.settings.studyLanguage) }
     val results = remember(entries, query, topicId) { LearningContent.search(entries, query, topicId) }
     val topics = state.studySnapshot.topics.sortedBy { it.order }
-    val locale = LocalConfiguration.current.locales[0].language
+    val locale = topicLanguage()
     var menu by remember { mutableStateOf(false) }
     Page {
         item { Heading(stringResource(R.string.vocabulary_browser_title), stringResource(R.string.vocabulary_intro)) }

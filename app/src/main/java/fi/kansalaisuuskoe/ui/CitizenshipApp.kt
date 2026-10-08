@@ -90,7 +90,7 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                     }
                     composable("lesson/{topicId}") { backStack ->
                         val topicId = backStack.arguments?.getString("topicId").orEmpty()
-                        TopicLessonScreen(state, topicId, { nav.navigate("study/$topicId") }, { nav.navigate("vocabulary/$topicId") })
+                        TopicLessonScreen(state, topicId, { nav.navigate("study/topic?topicId=${Uri.encode(topicId)}") }, { nav.navigate("vocabulary/$topicId") })
                     }
                     listOf("vocabulary", "vocabulary/{topicId}").forEach { destination ->
                         composable(destination) { backStack ->
@@ -120,7 +120,10 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                         val importState by importModel.state.collectAsStateWithLifecycle()
                         ContentImportScreen(importState, importModel)
                     }
-                    composable("study/{mode}?assessmentId={assessmentId}", arguments = listOf(navArgument("assessmentId") { type = NavType.StringType; nullable = true; defaultValue = null })) { backStack ->
+                    composable("study/{mode}?assessmentId={assessmentId}&topicId={topicId}", arguments = listOf(
+                        navArgument("assessmentId") { type = NavType.StringType; nullable = true; defaultValue = null },
+                        navArgument("topicId") { type = NavType.StringType; nullable = true; defaultValue = null },
+                    )) { backStack ->
                         val questionModel: QuestionViewModel = viewModel(viewModelStoreOwner = backStack, factory = viewModelFactory {
                             initializer { QuestionViewModel(container.learning, createSavedStateHandle(), state.settings.studyLanguage, container.assessments) }
                         })

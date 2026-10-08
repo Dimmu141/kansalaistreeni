@@ -32,6 +32,7 @@ class AssessmentViewModel(private val repository: AssessmentRepository) : ViewMo
                 repository.sessions.collect { mutable.value = mutable.value.copy(loading = false, sessions = it) }
             } catch (e: Exception) {
                 if (e is CancellationException) throw e
+                Diagnostics.error("Loading assessments", e)
                 mutable.value = mutable.value.copy(loading = false, error = R.string.assessment_error)
             }
         }
@@ -46,6 +47,7 @@ class AssessmentViewModel(private val repository: AssessmentRepository) : ViewMo
             try { operation(); pending = null }
             catch (e: Exception) {
                 if (e is CancellationException) throw e
+                Diagnostics.error("Assessment change", e)
                 if (e is AssessmentChangedException) pending = null
                 mutable.value = mutable.value.copy(error = if (e is AssessmentChangedException) R.string.assessment_delete_stale else errorResource)
             } finally { mutable.value = mutable.value.copy(busy = false) }

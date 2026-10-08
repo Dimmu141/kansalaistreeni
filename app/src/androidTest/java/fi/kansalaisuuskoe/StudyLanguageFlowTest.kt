@@ -46,7 +46,7 @@ class StudyLanguageFlowTest {
     @Test fun swedishLearningRestoresFeedbackAndKeepsFinnishHistorySeparate() {
         chooseSwedish()
         text("Topics").performClick()
-        click("Society and democracy"); click("Practise this topic")
+        click("Samhälle och demokrati"); click("Practise this topic")
         await("Vem utövar den lagstiftande makten i Finland?")
         text("Riksdagen").performClick(); click("Check answer")
         await("Correct")
@@ -85,6 +85,15 @@ class StudyLanguageFlowTest {
         assertEquals(0, LearningEngine.due(saved.forLanguage(StudyLanguage.SWEDISH), System.currentTimeMillis()).size)
         assertEquals(1, LearningEngine.due(saved.forLanguage(StudyLanguage.FINNISH), System.currentTimeMillis()).size)
     }
+    @Test fun topicNamesFollowTheStudyLanguage() {
+        chooseSwedish()
+        text("Topics").performClick(); await("Samhälle och demokrati")
+        text("Society and democracy").assertDoesNotExist()
+        runBlocking { app.container.settings.setStudyLanguage(StudyLanguage.FINNISH) }
+        // Finnish study keeps the interface language (English here) for topic names.
+        await("Society and democracy")
+        text("Samhälle och demokrati").assertDoesNotExist()
+    }
     @Test fun finnishOnlyImportShowsAnHonestSwedishEmptyState() {
         chooseSwedish()
         runBlocking {
@@ -95,7 +104,7 @@ class StudyLanguageFlowTest {
         await("No questions in this language yet")
         text("Start learning").assertDoesNotExist()
         text("Topics").performClick(); await("What would you like to learn?")
-        text("Society and democracy").assertDoesNotExist()
+        text("Samhälle och demokrati").assertDoesNotExist()
         text("Review").performClick()
         text("Start review · 1 question").assertDoesNotExist()
         text("Progress").performClick()

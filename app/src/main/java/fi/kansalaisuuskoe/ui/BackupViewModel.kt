@@ -61,6 +61,7 @@ class BackupViewModel(private val repository: LearningRepository) : ViewModel() 
 
     private fun failure(error: Exception, fallback: Int) {
         if (error is CancellationException) throw error
+        Diagnostics.error("Backup", error)
         mutable.value = mutable.value.copy(error = when ((error as? BackupException)?.problem) {
             BackupProblem.INVALID -> R.string.backup_invalid
             BackupProblem.TOO_LARGE -> R.string.backup_too_large

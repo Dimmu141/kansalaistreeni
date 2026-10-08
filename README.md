@@ -1,6 +1,6 @@
 # Kansalaisuuskoe — Android learning MVP
 
-A native, offline Android app for practising Finnish civic knowledge. Version **0.15.0** is a working MVP, **not an official citizenship-test preparation course**. The six provisional topics contain 30 Finnish and 30 Swedish demo questions, with three-section standalone lessons in both languages and optional English support. No exam format, pass threshold, time limit, or predicted pass probability is asserted.
+A native, offline Android app for practising Finnish civic knowledge. Version **0.16.0** is a working MVP, **not an official citizenship-test preparation course**. The six provisional topics contain 30 Finnish and 30 Swedish demo questions, with three-section standalone lessons in both languages and optional English support. No exam format, pass threshold, time limit, or predicted pass probability is asserted.
 
 ## Run
 
@@ -39,6 +39,8 @@ Learning data, assessments and settings are stored on the device. New portable b
 
 ## Architecture
 
+The [architecture review](docs/ARCHITECTURE-REVIEW.md) records the 8 October 2026 audit and corrections to snapshot consistency and topic routing. `scripts/verify.ps1` includes the source-level architecture contracts and runtime regressions. `scripts/run-architecture-probes.ps1` runs the focused regression classes; they are permanent tests and must pass.
+
 One `:app` module, with practical package boundaries and manual dependency injection through `AppContainer`:
 
 ```text
@@ -54,7 +56,7 @@ Compose screens → ViewModels + StateFlow → repositories
 - `domain/SessionRecap.kt`: resolves only a lesson's saved attempt IDs, preserving order, excluding other-language/history items and withholding explanations for incompatible revisions. It has no Android dependencies or persistence writes.
 - `data/Content.kt`: Moshi-generated JSON DTOs, domain mapping and validation. `data/ContentUpdate.kt` handles bounded UTF-8 file reading and pure update validation/preview counts. Same-version compatibility compares complete persisted topic/question payloads, so formatting differences and backup reserialization cannot turn unchanged material into a rejected update.
 - `data/LearningDatabase.kt`: Room entities and DAO. Flexible question payloads are stored as JSON; attempts and progress use separate tables. Schemas v1–v6 and non-destructive migrations are included. Schema v4 records the language of each attempt; old supported Finnish history receives `fi`, and still-installed internal Swedish questions are recovered from their payload. Schema v6 adds a JSON lesson column without deleting history or assessments. A separate table records the learning-rule version.
-- `data/LearningRepository.kt`: transactionally imported content, reactive snapshots, and atomic/idempotent answer recording. Attempt tokens prevent double recording after retry or recreation and return original feedback. A rule update replays retained attempts transactionally to rebuild derived progress once.
+- `data/LearningRepository.kt`: transactionally imported content, coherent reactive snapshots captured in one read-only (deferred) transaction on the reader connection, and atomic/idempotent answer recording. Attempt tokens prevent double recording after retry or recreation and return original feedback. A rule update replays retained attempts transactionally to rebuild derived progress once.
 - `data/LearningBackup.kt`: versioned Moshi backup DTOs, bounded strict UTF-8 reading and structural/content/history validation. It imports no derived scores. Repository export takes a consistent snapshot; restore previews capture a content/history/assessment fingerprint and commit only against that baseline.
 - `domain/Assessment.kt`: pure topic-balanced queue selection, answer editing, completion validation, assessment accuracy/topic results and compatible mistake selection. Results require completion; the model has no mastery writes.
 - `data/AssessmentRepository.kt`: Room-backed assessment snapshots, atomic answer/position updates, separate FI/SV resumable sessions, idempotent completion and persistent results. Schema v5 adds a separate assessments table without rewriting existing learning history.
@@ -62,11 +64,12 @@ Compose screens → ViewModels + StateFlow → repositories
 - `data/SettingsRepository.kt`: typed DataStore preferences, including independent saved interface, study and supporting-explanation preferences.
 - `ui/AppViewModel.kt`: loading/error handling and reactive dashboard state; `LearningSnapshot.forLanguage` scopes questions, topics, progress and historical attempts before applying learning rules. Time refreshes every 30 seconds.
 - `ui/ContentImportViewModel.kt` and `ContentImportScreen.kt`: Android document selection, an in-memory review, explicit confirmation, error/retry/cancel states and current-package details. A stale preview is rejected inside the commit transaction.
-- `ui/QuestionViewModel.kt`: stable session queue, study language, selected answer, position and feedback restored with `SavedStateHandle`. Changing a preference cannot switch questions halfway through an existing session.
+- `ui/QuestionViewModel.kt`: stable session queue, study language, selected answer, position and feedback restored with `SavedStateHandle`. `PracticeRequest.kt` separates daily/review/assessment commands from topic IDs. Changing a preference cannot switch questions halfway through an existing session.
 - `ui/TopicLessonScreen.kt`, `VocabularyScreen.kt`, `VocabularyViewModel.kt`, `WordPracticeScreen.kt` and `WordPracticeViewModel.kt`: reading, filtered search and unscored vocabulary recall. Saved state holds small inputs/IDs/revisions rather than entire question payloads.
 - `ui/BackupViewModel.kt` and `BackupScreen.kt`: Storage Access Framework creation/selection, export success/error handling, read-only restore previews, explicit replacement, cancellation and storage retry. Preview survives activity recreation in its ViewModel; after process death the learner selects the file again.
 - `ui/CitizenshipApp.kt`: Navigation Compose and persistent bottom destinations; lessons, vocabulary, word practice, assessments, settings and question practice have back navigation.
 - `ui/Components.kt`, `Theme.kt`, and the screen files: reusable, scrollable Material 3 layouts, bounded content width, semantic headings/radio controls, text feedback and large touch targets.
+- `ui/TopicLanguage.kt`: topic names follow the study language when it is Swedish (the content carries Swedish titles), otherwise the interface language. `ui/Diagnostics.kt` logs the cause of failures that the UI reports as short messages; it never logs answers or content.
 - `ui/StudyText.kt`: language spans on questions, answers and explanations reach native accessibility text, including English support alongside Finnish/Swedish study text.
 - `ui/SessionRecapScreen.kt`: the completion screen and the explanation component shared with question feedback. The onward action appears before optional long explanations.
 - `ui/InterfaceLocale.kt`: applies the saved in-app language through a scoped configuration/resource context on API 26+, retaining navigation, active sessions and the activity-result registry needed by the document picker. It does not change the device language or use Android's system per-app language picker. `values/strings.xml` and `values-en/strings.xml` hold interface copy and plurals; `ReviewTime.kt` formats dates using those resources and the selected locale.
@@ -123,7 +126,7 @@ The full local gate is `scripts/verify.ps1` (Python 3.10+ and the Android toolch
 
 Use a dedicated emulator for instrumentation. Learning-flow tests reset the demo's content, progress and settings. Repository/migration tests use separate databases. Tests cover daily-session selection and pinned queue/reason restoration, learning rules, content validation, safe imports, legacy schema upgrades, FI/EN interfaces, Swedish practice and review, per-language accuracy/mastery, imported language gaps, session restoration and saved preferences. The source check verifies Finnish/English resource and formatting-argument parity.
 
-Runtime verification uses an Android 16/API 36 emulator. Current records are in `docs/VERIFICATION-0.15.0.md`; earlier checks remain in the versioned documents. Physical devices and other OS versions remain unverified. Recovery tests cover database-write failure, backup restore rollback/stale previews, pending saves before/after commit, lesson recaps, vocabulary filters and word practice; the verification reports distinguish deterministic checks from real background-process death and TalkBack checks. Release assembly remains unsigned for distribution.
+Runtime verification uses an Android 16/API 36 emulator. Current records are in `docs/VERIFICATION-0.16.0.md`; earlier checks remain in the versioned documents. Physical devices and other OS versions remain unverified. Recovery tests cover database-write failure, backup restore rollback/stale previews, pending saves before/after commit, lesson recaps, vocabulary filters and word practice; the verification reports distinguish deterministic checks from real background-process death and TalkBack checks. Release assembly remains unsigned for distribution.
 
 The [human content-review checklist](docs/HUMAN-CONTENT-REVIEW.md) and [learner-pilot script](docs/LEARNER-PILOT.md) are prepared. Independent human review, recruitment and learner sessions have not been conducted or approved by these documents.
 

@@ -36,7 +36,7 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
     Page(state = listState) {
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(stringResource(R.string.question_context, topics.find { it.id == q.topicId }?.titleFor(language).orEmpty(), when (q.status) {
+                Text(stringResource(R.string.question_context, topics.find { it.id == q.topicId }?.titleFor(topicLanguage(q.language)).orEmpty(), when (q.status) {
                     ContentStatus.DEMO -> stringResource(R.string.question_demo)
                     ContentStatus.EDITORIAL -> stringResource(R.string.question_editorial)
                     ContentStatus.OFFICIALLY_SOURCED -> stringResource(R.string.question_sourced)

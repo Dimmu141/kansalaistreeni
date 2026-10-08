@@ -11,7 +11,6 @@ import fi.kansalaisuuskoe.R
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.platform.LocalConfiguration
 import fi.kansalaisuuskoe.domain.TopicProgress
 import fi.kansalaisuuskoe.domain.ContentStatus
 
@@ -75,7 +74,7 @@ fun MasteryHero(percent: Int, studied: Int, total: Int) {
 }
 @Composable
 fun TopicRow(progress: TopicProgress, onClick: (() -> Unit)? = null) {
-    val language = LocalConfiguration.current.locales[0].language
+    val language = topicLanguage()
     val body: @Composable () -> Unit = {
         Column(Modifier.fillMaxWidth().padding(vertical = 16.dp, horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(progress.topic.titleFor(language), style = MaterialTheme.typography.titleMedium)

@@ -31,6 +31,7 @@ class WordPracticeViewModel(repository: LearningRepository, private val saved: S
                 render()
             } catch (e: Exception) {
                 if (e is CancellationException) throw e
+                Diagnostics.error("Opening word practice", e)
                 mutable.value = WordPracticeState(loading = false, failed = true)
             }
         }

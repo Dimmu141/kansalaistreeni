@@ -41,18 +41,19 @@ class QuestionViewModel(private val repository: LearningRepository, private val 
         viewModelScope.launch {
             try {
                 mutable.value = QuestionUiState()
-                val assessment = saved.get<String>("assessmentId")?.let { requireNotNull(assessments?.get(it)) }
+                val request = PracticeRequest.fromArguments(saved["mode"], saved["topicId"], saved["assessmentId"])
+                val assessment = (request as? PracticeRequest.Mistakes)?.let { requireNotNull(assessments?.get(it.assessmentId)) }
                 val language = StudyLanguage.entries.firstOrNull { it.tag == (saved.get<String>("study_language") ?: assessment?.language) } ?: studyLanguage
                 saved["study_language"] = language.tag
                 snapshot = repository.snapshot.first { it.questions.isNotEmpty() }.forLanguage(language)
-                val mode = saved.get<String>("mode") ?: "all"
-                val plan = if (mode == "all" && assessment == null) DailyLearningPlanner.plan(snapshot, System.currentTimeMillis()) else null
+                val now = System.currentTimeMillis()
+                val plan = if (request == PracticeRequest.Daily) DailyLearningPlanner.plan(snapshot, now) else null
                 val ids = saved.get<ArrayList<String>>("question_ids") ?: ArrayList(
-                    (when {
-                        assessment != null -> Assessments.practiceMistakes(assessment, snapshot.questions)
-                        mode == "review" -> LearningEngine.due(snapshot, System.currentTimeMillis())
-                        plan != null -> plan.items.map { it.question }
-                        else -> LearningEngine.learningQueue(snapshot, System.currentTimeMillis(), mode)
+                    (when (request) {
+                        is PracticeRequest.Mistakes -> Assessments.practiceMistakes(requireNotNull(assessment), snapshot.questions)
+                        PracticeRequest.Review -> LearningEngine.due(snapshot, now)
+                        PracticeRequest.Daily -> requireNotNull(plan).items.map { it.question }
+                        is PracticeRequest.Topic -> LearningEngine.learningQueue(snapshot, now, request.id)
                     }).map { it.id },
                 ).also {
                     saved["question_ids"] = it
@@ -68,6 +69,7 @@ class QuestionViewModel(private val repository: LearningRepository, private val 
                 if (saved.get<String>("pending_option") != null && !mutable.value.answered) submitPending()
             } catch (e: Exception) {
                 if (e is CancellationException) throw e
+                Diagnostics.error("Opening practice", e)
                 mutable.value = QuestionUiState(loading = false, error = R.string.error_open_practice)
             }
         }
@@ -120,6 +122,7 @@ class QuestionViewModel(private val repository: LearningRepository, private val 
                 mutable.value = mutable.value.copy(saving = false, retryPending = false, answered = true, selected = option, correctCount = saved["correct_count"] ?: 0, extraPractice = saved["extra_practice"] ?: false, nextReview = result.progress.nextReview)
             } catch (e: Exception) {
                 if (e is CancellationException) throw e
+                Diagnostics.error("Saving an answer", e)
                 mutable.value = mutable.value.copy(saving = false, retryPending = true, error = R.string.error_save_answer)
             }
         }

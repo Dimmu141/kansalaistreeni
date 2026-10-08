@@ -8,6 +8,8 @@ $workspace = Split-Path -Parent $PSScriptRoot
 Push-Location $workspace
 try {
     & (Join-Path $PSScriptRoot 'verify-source.ps1')
+    & $Python (Join-Path $PSScriptRoot 'verify-architecture.py')
+    if ($LASTEXITCODE -ne 0) { throw 'Architecture contracts failed' }
     & $Python (Join-Path $PSScriptRoot 'verify-content.py')
     if ($LASTEXITCODE -ne 0) { throw 'Content review gate failed' }
     & $Python (Join-Path $PSScriptRoot 'test_content_review.py')

@@ -6,7 +6,6 @@ import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
@@ -18,7 +17,7 @@ import fi.kansalaisuuskoe.data.ExplanationPreference
 @Composable
 internal fun TopicLessonScreen(state: AppUiState, topicId: String, practise: () -> Unit, vocabulary: () -> Unit) {
     val lesson = LearningContent.lesson(state.snapshot, topicId, state.settings.studyLanguage)
-    val locale = LocalConfiguration.current.locales[0].language
+    val locale = topicLanguage()
     Page {
         if (lesson == null) {
             item { Heading(stringResource(R.string.lesson_unavailable), stringResource(R.string.language_empty_body)) }

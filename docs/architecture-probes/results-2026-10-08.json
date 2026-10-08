@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-08",
+  "applicationCommit": "eb3ae63",
+  "device": "Citizenship_MVP / Android 16 API 36",
+  "scope": "Audit-only probes; unchanged production application; in-memory Room database with synthetic updates.",
+  "tests": 3,
+  "failures": 3,
+  "errors": 0,
+  "skipped": 0,
+  "cases": [
+    {
+      "name": "everyObservedAnswerSnapshotPairsHistoryWithItsProgress",
+      "outcome": "failed",
+      "evidence": "java.lang.AssertionError: Mixed answer snapshots: 21; examples=[history=0, progress=1, history=2, progress=1, history=5, progress=4, history=7, progress=6, history=7, progress=8]"
+    },
+    {
+      "name": "importedTopicNamedReviewStartsItsOwnUnseenQuestions",
+      "outcome": "failed",
+      "evidence": "java.lang.AssertionError: Topic practice should not be interpreted as the due-review command expected:<5> but was:<0>"
+    },
+    {
+      "name": "everyObservedImportedQuestionHasItsMatchingTopic",
+      "outcome": "failed",
+      "evidence": "java.lang.AssertionError: Mixed imported snapshots: 21; examples=[question topic=round-3-democracy, first visible topic=round-4-democracy, question topic=round-5-democracy, first visible topic=round-4-democracy, question topic=round-5-democracy, first visible topic=round-6-democracy, question topic=round-7-democracy, first visible topic=round-6-democracy, question topic=round-7-democracy, first visible topic=round-8-democracy]"
+    }
+  ],
+  "normalSuiteAfterEmulatorRestart": {
+    "jvm": {
+      "tests": 153,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "device": {
+      "tests": 133,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "architectureChecks": {
+    "passed": 8,
+    "failures": 0,
+    "inMemoryForbiddenChangesRejected": 6
+  },
+  "contentGateTests": {
+    "passed": 9,
+    "failures": 0
+  }
+}
