@@ -18,7 +18,7 @@ data class LessonDto(val id: String, val revision: Int, val introduction: String
 }
 @JsonClass(generateAdapter = true)
 data class LessonSectionDto(val id: String, val title: String, val body: String, val sources: List<SourceDto>, val easyBody: String? = null) {
-    fun model() = LessonSection(id, title, body, easyBody, sources.map { Source(it.title, it.url) })
+    fun model() = LessonSection(id, title, body, easyBody, sources.map { Source(it.title, it.url, it.checkedAt) })
 }
 @JsonClass(generateAdapter = true)
 data class ObjectiveDto(val id: String, val topicId: String, val statement: Map<String, String>, val sourceRef: String? = null) {
@@ -31,7 +31,7 @@ data class OptionDto(val id: String, val text: String)
 @JsonClass(generateAdapter = true)
 data class VocabularyDto(val term: String, val meaning: String, val swedish: String? = null)
 @JsonClass(generateAdapter = true)
-data class SourceDto(val title: String, val url: String)
+data class SourceDto(val title: String, val url: String, val checkedAt: String? = null)
 @JsonClass(generateAdapter = true)
 data class TranslationDto(val text: String, val options: List<OptionDto>, val explanation: String)
 @JsonClass(generateAdapter = true)
@@ -45,16 +45,18 @@ data class QuestionDto(
     // Absent in schema 1 packages and in payloads stored before v0.17.
     val format: String = "SINGLE_CHOICE",
     val objectiveIds: List<String> = emptyList(),
+    val validFrom: String? = null,
+    val reviewBy: String? = null,
 ) {
     fun model() = Question(
         id, revision, topicId, text, options.map { AnswerOption(it.id, it.text) }, correctOptionId,
         explanation, easyExplanation, vocabulary.map { VocabularyItem(it.term, it.meaning, it.swedish) },
-        Source(source.title, source.url), language, Difficulty.valueOf(difficulty), tags,
+        Source(source.title, source.url, source.checkedAt), language, Difficulty.valueOf(difficulty), tags,
         ContentStatus.valueOf(status), translations.mapValues { (_, value) ->
             QuestionTranslation(value.text, value.options.map { AnswerOption(it.id, it.text) }, value.explanation)
         },
         QuestionFormat.valueOf(format),
-        objectiveIds,
+        objectiveIds, validFrom, reviewBy,
     )
 }
 
@@ -77,7 +79,8 @@ object ContentCodec {
     fun validate(content: ContentPackageDto, snapshot: Boolean = false) {
         require(content.schemaVersion in 1..SCHEMA_VERSION) { "Unsupported content schema" }
         require(content.packageId.isNotBlank() && content.version > 0)
-        ContentStatus.valueOf(content.status)
+        // No lesson or question may claim stronger provenance than the package it arrives in.
+        val packageStatus = ContentStatus.valueOf(content.status)
         require(content.topics.isNotEmpty() && content.questions.isNotEmpty())
         require(content.topics.map { it.id }.distinct().size == content.topics.size) { "Duplicate topic ID" }
         require(content.questions.map { it.id }.distinct().size == content.questions.size) { "Duplicate question ID" }
@@ -90,8 +93,7 @@ object ContentCodec {
             topic.lessons.forEach { (language, lesson) ->
                 require(language in setOf("fi", "sv", "en")) { "Unsupported lesson language" }
                 require(lesson.id.isNotBlank() && lesson.revision > 0 && lesson.introduction.isNotBlank() && lesson.sections.isNotEmpty())
-                ContentStatus.valueOf(lesson.status)
-                if (content.status == "DEMO") require(lesson.status == "DEMO")
+                require(ContentStatus.valueOf(lesson.status) <= packageStatus) { "Lesson provenance exceeds its package" }
                 require(lesson.sections.map { it.id }.distinct().size == lesson.sections.size) { "Duplicate lesson section" }
                 lesson.sections.forEach { section ->
                     require(section.id.isNotBlank() && section.title.isNotBlank() && section.body.isNotBlank())
@@ -126,10 +128,13 @@ object ContentCodec {
             require(q.options.map { it.id }.distinct().size == q.options.size)
             require(q.options.count { it.id == q.correctOptionId } == 1) { "Missing correct answer" }
             require(q.language in setOf("fi", "sv"))
-            ContentStatus.valueOf(q.status)
             Difficulty.valueOf(q.difficulty)
-            if (content.status == "DEMO") require(q.status == "DEMO")
+            require(ContentStatus.valueOf(q.status) <= packageStatus) { "Question provenance exceeds its package" }
             validateSource(q.source)
+            val validFrom = q.validFrom?.let(::date)
+            val reviewBy = q.reviewBy?.let(::date)
+            require(validFrom == null || reviewBy == null || validFrom < reviewBy) { "Review date must follow validity date" }
+            require(reviewBy == null || q.source.checkedAt?.let(::date)?.let { it <= reviewBy } != false) { "Source check must precede review date" }
             q.translations.forEach { (language, t) ->
                 require(language.matches(Regex("[a-z]{2,3}(-[A-Za-z0-9]{2,8})*")) && language != q.language && t.text.isNotBlank() && t.explanation.isNotBlank())
                 require(t.options.map { it.id }.toSet() == q.options.map { it.id }.toSet() && t.options.size == q.options.size)
@@ -160,7 +165,10 @@ object ContentCodec {
         }
     }
 
+    private fun date(value: String): java.time.LocalDate = java.time.LocalDate.parse(value)
+
     private fun validateSource(source: SourceDto) {
+        source.checkedAt?.let(::date)
         val uri = URI(source.url)
         require(source.title.isNotBlank() && uri.scheme == "https" && !uri.host.isNullOrBlank() && uri.userInfo == null) { "Source must use HTTPS without credentials" }
     }

@@ -6,7 +6,7 @@ This is an offline import mechanism, not an editorial approval system. Valid JSO
 
 ## Package format
 
-Use `app/src/main/assets/demo-content.json` as the complete, runnable example. It is schema version 1, package version 5, with 30 Finnish and 30 Swedish questions, all DEMO. It must remain labelled DEMO unless actual content review justifies a different provenance.
+Use `app/src/main/assets/demo-content.json` as the complete, runnable example. It is schema version 2, package version 7, with 200 Finnish and 200 Swedish questions (25 per topic per language) and a three- to five-section lesson for each of the eight topics. All of it is EDITORIAL: written for the app and checked by the assistant against the cited official pages (`docs/source-review.json`), with human publication approval still pending. Nothing in it is OFFICIAL.
 
 ```json
 {
@@ -27,9 +27,10 @@ Questions contain `id`, `revision`, `topicId`, `text`, `options`, `correctOption
 
 - `options` contains at least two `{ "id": "...", "text": "..." }` objects. Exactly one option ID matches `correctOptionId`; option IDs are unique within a question.
 - `vocabulary` contains `{ "term": "...", "meaning": "...", "swedish": "..." }`. `term` is Finnish and `meaning` is English. Swedish questions show `swedish` as the main term, with Finnish and English meanings; omit the Swedish field only if unavailable. Easier Finnish explanations appear only for Finnish questions.
-- `source` contains a nonblank `title` and a valid HTTPS `url`. Link validity and content accuracy are separate editorial checks.
+- `source` contains a nonblank `title`, a valid HTTPS `url` and an optional `checkedAt` ISO date (`2026-10-08`), the day the page was last checked. The app shows the check date in the source line. Link validity and content accuracy are separate editorial checks.
+- Facts that can change (deadlines, opening hours, amounts, recommendations) set optional `validFrom` and `reviewBy` ISO dates. `validFrom` must precede `reviewBy`, and `checkedAt` cannot be later than `reviewBy`. After `reviewBy` the source line warns that the fact is due for review; the content gate lists overdue items as warnings. Neither field is part of the practised question, but changing them is a material change that needs a revision.
 - `difficulty` is `EASY`, `MEDIUM` or `HARD`.
-- Provenance is `DEMO`, `EDITORIAL`, `OFFICIALLY_SOURCED` or `OFFICIAL`. `OFFICIALLY_SOURCED` means app-authored material reviewed against official sources; it does not mean an official exam question. `OFFICIAL` is reserved for authentic official learning content whose origin, rights and attribution have been reviewed. A DEMO package may contain only DEMO questions.
+- Provenance is `DEMO`, `EDITORIAL`, `OFFICIALLY_SOURCED` or `OFFICIAL`. `OFFICIALLY_SOURCED` means app-authored material reviewed against official sources; it does not mean an official exam question. `OFFICIAL` is reserved for authentic official learning content whose origin, rights and attribution have been reviewed. No question or lesson may claim stronger provenance than its package: a DEMO package holds only DEMO material, and an EDITORIAL package may hold DEMO or EDITORIAL material.
 - The importer accepts `fi`, `sv`, or mixed packages. The saved study-language choice filters questions, topics, review and statistics. Missing-language packages show an empty state, with no fallback. Use distinct stable IDs for independently practised language variants, such as `democracy-1-fi` and `democracy-1-sv`. Question translation maps supply supporting explanations after answering; they do not create independently scored questions.
 
 ## Question formats (content schema 2)

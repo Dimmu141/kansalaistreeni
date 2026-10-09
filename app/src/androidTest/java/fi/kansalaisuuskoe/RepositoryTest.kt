@@ -1,5 +1,6 @@
 package fi.kansalaisuuskoe
 
+import kotlin.math.roundToInt
 import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
@@ -27,7 +28,7 @@ class RepositoryTest {
         val original = repository.snapshot.first()
         val exported = repository.exportBackup(3000)
         val c = ContentCodec.parse(seed())
-        repository.importContent(json(c.copy(version = 7, questions = c.questions.map { it.copy(revision = 2) })))
+        repository.importContent(json(c.copy(version = c.version + 1, questions = c.questions.map { it.copy(revision = it.revision + 1) })))
         repository.answer(repository.snapshot.first().questions.first(), fi.correctOptionId, "later", 4000)
         val beforePreview = repository.snapshot.first()
         val preview = repository.prepareRestore(exported)
@@ -47,7 +48,7 @@ class RepositoryTest {
         val c = ContentCodec.parse(seed())
         val questions = repository.snapshot.first().questions
         questions.take(2).forEachIndexed { index, q -> repository.answer(q, q.correctOptionId, "old-$index", 1000) }
-        repository.importContent(json(c.copy(version = c.version + 1, questions = c.questions.drop(1).map { if (it.id == questions[1].id) it.copy(revision = 2) else it })))
+        repository.importContent(json(c.copy(version = c.version + 1, questions = c.questions.drop(1).map { if (it.id == questions[1].id) it.copy(revision = it.revision + 1) else it })))
         val exported = repository.exportBackup(2000)
         val preview = repository.prepareRestore(exported)
         repository.restoreBackup(preview)
@@ -116,7 +117,7 @@ class RepositoryTest {
         val result = repository.answer(q, q.correctOptionId, "translation-history", 1000)
         val updated = c.copy(version = c.version + 1, questions = c.questions.map { it.copy(translations = emptyMap()) })
         val preview = repository.prepareImport(json(updated))
-        assertEquals(60, preview.changes.translated)
+        assertEquals(400, preview.changes.translated)
         repository.confirmImport(preview)
         database.close(); open()
         val saved = repository.snapshot.first()
@@ -256,7 +257,7 @@ class RepositoryTest {
         val q = repository.snapshot.first().questions.first()
         repository.answer(q, q.correctOptionId, "token", 1000)
         val c = ContentCodec.parse(seed())
-        repository.importContent(json(c.copy(version = c.version + 1, questions = c.questions.map { if (it.id == q.id) it.copy(revision = 2, text = "Päivitetty kysymys?") else it })))
+        repository.importContent(json(c.copy(version = c.version + 1, questions = c.questions.map { if (it.id == q.id) it.copy(revision = it.revision + 1, text = "Päivitetty kysymys?") else it })))
         val current = repository.snapshot.first()
         assertEquals(1, current.attempts.size)
         assertEquals(0, LearningEngine.summarize(current, 1000).mastery)
@@ -282,7 +283,7 @@ class RepositoryTest {
         try { repository.importContent(json(changed)); fail("Unversioned question accepted") } catch (_: IllegalArgumentException) { }
         assertEquals(c.version, database.learningDao().metadata()!!.version)
         try { repository.importContent(json(c.copy(questions = c.questions.reversed()))); fail("Unversioned package accepted") } catch (_: IllegalArgumentException) { }
-        assertEquals(60, repository.snapshot.first().questions.size)
+        assertEquals(400, repository.snapshot.first().questions.size)
     }
     @Test fun invalidAnswerDoesNotWriteAttemptOrProgress() = runBlocking {
         val q = repository.snapshot.first().questions.first()
@@ -318,7 +319,7 @@ class RepositoryTest {
         original.take(2).forEachIndexed { i, q -> repository.answer(q, q.correctOptionId, "before-$i", 1000) }
         val before = repository.snapshot.first()
         val next = c.copy(version = c.version + 1, questions = c.questions.dropLast(1).mapIndexed { i, q ->
-            if (i == 0) q.copy(revision = 2, explanation = "Päivitetty selitys.") else q
+            if (i == 0) q.copy(revision = q.revision + 1, explanation = "Päivitetty selitys.") else q
         } + c.questions.last().copy(id = "brand-new"))
         val preview = repository.prepareImport(json(next))
         assertEquals(ContentChanges(1, 1, c.questions.size - 2, 1), preview.changes)
@@ -331,7 +332,8 @@ class RepositoryTest {
         val saved = repository.snapshot.first()
         assertEquals(3, saved.attempts.size)
         assertEquals(2, LearningEngine.summarize(saved, 2000).studiedCount)
-        assertEquals(1, LearningEngine.summarize(saved, 2000).mastery)
+        // Two current questions at 25 mastery, averaged over all material.
+        assertEquals((50.0 / saved.questions.size).roundToInt(), LearningEngine.summarize(saved, 2000).mastery)
         repository.initialize(context)
         assertEquals(c.version + 1, database.learningDao().metadata()!!.version)
     }
@@ -357,7 +359,7 @@ class RepositoryTest {
         repository.importContent(json(c.copy(version = c.version + 1, questions = c.questions.drop(1))))
         try { repository.prepareImport(json(c.copy(version = c.version + 2))); fail("Historical revision reused") }
         catch (e: ContentImportException) { assertEquals(ImportProblem.REVISION, e.problem) }
-        val next = c.copy(version = c.version + 2, questions = c.questions.map { if (it.id == q.id) it.copy(revision = 2) else it })
+        val next = c.copy(version = c.version + 2, questions = c.questions.map { if (it.id == q.id) it.copy(revision = it.revision + 1) else it })
         repository.confirmImport(repository.prepareImport(json(next)))
         val saved = repository.snapshot.first()
         assertEquals(1, saved.attempts.size)
@@ -392,7 +394,7 @@ class RepositoryTest {
         assertNotEquals(ContentFile.hash(seed()), ContentFile.hash(compact))
         val preview = repository.prepareImport(compact)
         assertTrue(preview.alreadyInstalled)
-        assertEquals(ContentChanges(0, 0, 60, 0), preview.changes)
+        assertEquals(ContentChanges(0, 0, 400, 0), preview.changes)
         repository.confirmImport(preview)
         repository.importContent("\n  $compact\n")
         assertEquals(metadata, repository.installedContent().metadata)
@@ -437,7 +439,8 @@ class RepositoryTest {
             c.copy(topics = c.topics.map { it.copy(description = "Changed topic.") }),
             c.copy(questions = c.questions.map { it.copy(translations = emptyMap()) }),
             c.copy(questions = c.questions.map { it.copy(revision = it.revision + 1, explanation = "Changed fact.") }),
-            c.copy(status = "EDITORIAL", questions = c.questions.map { it.copy(status = "EDITORIAL") }),
+            c.copy(status = "DEMO", questions = c.questions.map { it.copy(status = "DEMO") },
+                topics = c.topics.map { t -> t.copy(lessons = t.lessons.mapValues { (_, l) -> l.copy(status = "DEMO") }) }),
             c.copy(questions = c.questions.reversed()),
         )
         variants.forEach { next ->
@@ -467,8 +470,8 @@ class RepositoryTest {
         val c = ContentCodec.parse(seed())
         val next = c.copy(packageId = "sv-demo", questions = c.questions.filter { it.language == "sv" })
         val preview = repository.prepareImport(json(next))
-        assertEquals(30, preview.changes.unchanged)
-        assertEquals(30, preview.changes.removed)
+        assertEquals(200, preview.changes.unchanged)
+        assertEquals(200, preview.changes.removed)
         repository.confirmImport(preview)
         val q = repository.snapshot.first().questions.first()
         repository.answer(q, q.correctOptionId, "swedish", 1000)

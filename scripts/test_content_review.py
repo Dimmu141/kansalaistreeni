@@ -53,22 +53,25 @@ class ReviewGateTest(unittest.TestCase):
         self.content = read_json(ROOT / "app/src/main/assets/demo-content.json")
         self.ledger = read_json(ROOT / "docs/source-review.json")
 
-    def test_current_demo_passes(self):
+    def test_current_content_passes(self):
         verify(self.content, self.ledger)
 
     def test_answer_change_requires_new_review(self):
-        self.content["questions"][0]["correctOptionId"] = "a"
+        first = self.content["questions"][0]
+        first["correctOptionId"] = next(o["id"] for o in first["options"] if o["id"] != first["correctOptionId"])
         with self.assertRaises(ValueError):
             verify(self.content, self.ledger)
 
     def test_reclassification_keeps_the_source_review(self):
-        first = self.content["questions"][0]
-        target = next(t["id"] for t in self.content["topics"] if t["id"] != first["topicId"])
+        # Two questions swap topic and objectives, so every topic and objective keeps its size.
         # Both language variants move together; the bilingual check requires matching topics.
+        first = self.content["questions"][0]
+        other = next(q for q in self.content["questions"] if q["topicId"] != first["topicId"])
+        moves = {first["id"]: (other["topicId"], other["objectiveIds"]), other["id"].removesuffix("-sv"): (first["topicId"], first["objectiveIds"])}
         for question in self.content["questions"]:
-            if question["id"].removesuffix("-sv") == first["id"]:
-                question["topicId"] = target
-                question["objectiveIds"] = [self.content["objectives"][-1]["id"]]
+            move = moves.get(question["id"].removesuffix("-sv"))
+            if move:
+                question["topicId"], question["objectiveIds"] = move[0], list(move[1])
         verify(self.content, self.ledger)
 
     def test_translation_change_requires_new_review(self):

@@ -99,7 +99,7 @@ class StudyLanguageFlowTest {
     @Test fun finnishOnlyImportShowsAnHonestSwedishEmptyState() {
         chooseSwedish()
         runBlocking {
-            val seed = ContentCodec.parse(regressionContentJson())
+            val seed = regressionContent()
             val json = Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(seed.copy(version = seed.version + 1, questions = seed.questions.filter { it.language == "fi" }))
             repository.confirmImport(repository.prepareImport(json))
         }

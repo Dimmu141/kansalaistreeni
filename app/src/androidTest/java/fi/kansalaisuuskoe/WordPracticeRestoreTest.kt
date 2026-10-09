@@ -47,7 +47,7 @@ class WordPracticeRestoreTest {
         assertEquals(before, repository.snapshot.first())
     }
     @Test fun restoredStudyLanguageDoesNotSwitchWithPreferences() = runBlocking {
-        val saved = SavedStateHandle(mapOf("query" to "power"))
+        val saved = SavedStateHandle(mapOf("query" to "legislative"))
         val first = model(saved, StudyLanguage.SWEDISH)
         assertEquals("lagstiftande makt", first.state.value.word?.term)
         assertEquals(first.state.value, model(copy(saved), StudyLanguage.FINNISH).state.value)

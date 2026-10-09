@@ -31,14 +31,16 @@ class ContentValidationTest {
         ContentCodec.validate(c.copy(questions = listOf(c.questions.first().copy(easyExplanation = " "))))
     }
     private fun content() = ContentCodec.parse(File("src/main/assets/demo-content.json").readText())
-    @Test fun `seed is valid sourced demo across all topics with variable options`() {
+    @Test fun `seed is valid sourced editorial content across all topics`() {
         val c = content()
-        assertEquals(60, c.questions.size)
-        assertEquals(mapOf("fi" to 30, "sv" to 30), c.questions.groupingBy { it.language }.eachCount())
+        assertEquals(400, c.questions.size)
+        assertEquals(mapOf("fi" to 200, "sv" to 200), c.questions.groupingBy { it.language }.eachCount())
         assertEquals(listOf("democracy", "rights", "equality", "laws", "history", "culture", "safety", "digital"), c.topics.sortedBy { it.order }.map { it.id })
-        assertTrue(c.questions.all { it.status == "DEMO" && (it.language == "sv" || it.easyExplanation != null) })
+        assertTrue(c.questions.all { it.status == "EDITORIAL" && (it.language == "sv" || it.easyExplanation != null) })
         assertTrue(c.questions.all { q -> q.objectiveIds.isNotEmpty() && q.objectiveIds.all { id -> c.objectives.any { it.id == id } } })
-        assertEquals(setOf(3, 4), c.questions.map { it.options.size }.toSet())
+        assertEquals(setOf(2, 4), c.questions.map { it.options.size }.toSet())
+        assertTrue(c.questions.filter { it.format == "SINGLE_CHOICE" }.all { it.options.size >= 4 })
+        assertTrue(c.questions.groupingBy { it.topicId }.eachCount().values.all { it == 50 })
         assertTrue(c.questions.all { it.model().source.url.startsWith("https://") })
     }
     @Test(expected = IllegalArgumentException::class) fun `unknown topic fails validation`() {

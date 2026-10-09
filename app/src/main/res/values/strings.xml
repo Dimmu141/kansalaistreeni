@@ -116,6 +116,9 @@
     <string name="show_summary">Näytä yhteenveto</string>
     <string name="next_question">Seuraava kysymys</string>
     <string name="date_time_pattern">d.M.yyyy \&apos;klo\&apos; HH.mm</string>
+    <string name="date_pattern">d.M.yyyy</string>
+    <string name="source_checked">Lähde tarkistettu %1$s</string>
+    <string name="review_overdue">Tämä tieto voi muuttua, ja sen tarkistus on myöhässä. Katso ajantasainen tieto lähteestä.</string>
     <string name="material_title">Oppimateriaali</string>
     <string name="material_intro">Tarkista sisältötiedosto ennen nykyisen materiaalin korvaamista.</string>
     <string name="material_current">Nykyinen materiaali</string>

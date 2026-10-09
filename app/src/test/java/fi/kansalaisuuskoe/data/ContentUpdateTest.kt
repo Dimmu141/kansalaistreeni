@@ -80,8 +80,8 @@ class ContentUpdateTest {
             q.copy(vocabulary = emptyList()),
             q.copy(translations = emptyMap()),
             q.copy(tags = q.tags + "new-tag"),
-            q.copy(difficulty = "HARD"),
-            q.copy(status = "EDITORIAL"),
+            q.copy(difficulty = if (q.difficulty == "HARD") "EASY" else "HARD"),
+            q.copy(status = "DEMO"),
             q.copy(revision = q.revision + 1),
         )
         variants.forEach { changed ->
@@ -116,7 +116,7 @@ class ContentUpdateTest {
         // not an update or an authenticity check of the caller's package-level assertion.
         val result = prepare(content.copy(status = "OFFICIAL"))
         assertTrue(result.alreadyInstalled)
-        assertTrue(result.content.questions.all { it.status == "DEMO" })
+        assertTrue(result.content.questions.all { it.status == "EDITORIAL" })
     }
     @Test fun `package downgrades are rejected`() {
         rejects(ImportProblem.VERSION) { prepare(content.copy(version = content.version - 1)) }
@@ -127,14 +127,14 @@ class ContentUpdateTest {
     @Test fun `removed studied ids cannot reappear at a historical revision`() {
         val removed = installed.copy(questions = content.questions.drop(1))
         rejects(ImportProblem.REVISION) {
-            ContentUpdates.prepare(content.copy(version = content.version + 1), "new", removed, mapOf(content.questions.first().id to 1))
+            ContentUpdates.prepare(content.copy(version = content.version + 1), "new", removed, mapOf(content.questions.first().id to content.questions.first().revision))
         }
     }
     @Test fun `reintroduced question accepts a higher revision and is new to the current package`() {
         val first = content.questions.first()
         val removed = installed.copy(questions = content.questions.drop(1))
-        val next = content.copy(version = content.version + 1, questions = listOf(first.copy(revision = 2)) + content.questions.drop(1))
-        assertEquals(1, ContentUpdates.prepare(next, "new", removed, mapOf(first.id to 1)).changes.added)
+        val next = content.copy(version = content.version + 1, questions = listOf(first.copy(revision = first.revision + 1)) + content.questions.drop(1))
+        assertEquals(1, ContentUpdates.prepare(next, "new", removed, mapOf(first.id to first.revision)).changes.added)
     }
     @Test fun `changing package retains only identical shared questions`() {
         val next = content.copy(packageId = "replacement")

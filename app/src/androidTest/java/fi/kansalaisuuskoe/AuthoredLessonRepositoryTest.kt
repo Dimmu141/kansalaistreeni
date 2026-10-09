@@ -40,11 +40,12 @@ class AuthoredLessonRepositoryTest {
         val before = learning.snapshot.first()
         learning.initialize(context)
         val after = learning.snapshot.first()
-        assertEquals(60, after.questions.size)
+        assertEquals(400, after.questions.size)
         assertEquals(before.attempts, after.attempts); assertEquals(before.progress, after.progress)
         assertEquals(assessment, assessments.get(id)); assertEquals(12, assessment.questions.size)
-        fun practised(q: Question) = q.copy(topicId = "", objectiveIds = emptyList())
-        assertEquals(before.questions.map(::practised), after.questions.filter { it.id in before.questions.map { q -> q.id } }.map(::practised))
+        // v0.17 rewrote the old questions, so each one returns under a higher revision; its history above is untouched.
+        val revisions = after.questions.associate { it.id to it.revision }
+        assertTrue(before.questions.all { q -> (revisions[q.id] ?: 0) > q.revision })
         assertTrue(after.topics.filter { it.lessons.isNotEmpty() }.all { it.lessons.keys == setOf("fi", "sv", "en") })
         assertEquals(seed().version, learning.installedContent().metadata?.version)
     }
@@ -53,7 +54,7 @@ class AuthoredLessonRepositoryTest {
         learning.answer(q, q.correctOptionId, "before-lesson", 1000)
         val before = learning.snapshot.first()
         val preview = learning.prepareImport(json(revised()))
-        assertEquals(before, learning.snapshot.first()); assertEquals(60, preview.changes.unchanged)
+        assertEquals(before, learning.snapshot.first()); assertEquals(400, preview.changes.unchanged)
         learning.confirmImport(preview)
         val updated = learning.snapshot.first()
         assertEquals(before.attempts, updated.attempts); assertEquals(before.progress, updated.progress)
@@ -76,7 +77,7 @@ class AuthoredLessonRepositoryTest {
         assertEquals("Päivitetty oppitunti.", learning.snapshot.first().topics.first().lessons.getValue("fi").introduction)
     }
     @Test fun changedLessonInvalidatesAnEarlierImportAndBackupPreview() = runBlocking {
-        val import = learning.prepareImport(json(seed().copy(version = 7)))
+        val import = learning.prepareImport(json(seed().copy(version = seed().version + 1)))
         val restore = learning.prepareRestore(learning.exportBackup(1000))
         learning.importContent(json(revised()))
         val before = learning.snapshot.first()

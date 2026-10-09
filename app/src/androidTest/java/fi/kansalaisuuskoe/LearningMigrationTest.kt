@@ -96,17 +96,24 @@ class LearningMigrationTest {
         val repository = LearningRepository(opened)
         repository.initialize(context)
         val snapshot = repository.snapshot.first()
-        assertEquals(if (packageId == "fi-civics-demo") 60 else 12, snapshot.questions.size)
+        assertEquals(if (packageId == "fi-civics-demo") 400 else 12, snapshot.questions.size)
         assertTrue(snapshot.attempts.all { it.language == language })
         assertEquals(4, snapshot.attempts.size)
         assertEquals(listOf("legacy-0", "legacy-1", "legacy-2", "legacy-3"), snapshot.attempts.map { it.id })
-        val progress = snapshot.progress.single()
-        assertEquals(questionId, progress.questionId)
-        assertEquals(4, progress.attempts)
-        assertEquals(4, progress.correctAnswers)
-        assertEquals(25, progress.mastery)
-        assertEquals(1, progress.consecutiveCorrect)
-        assertEquals(1000L + 86_400_000L, progress.nextReview)
+        val q = snapshot.questions.first { it.id == questionId }
+        // Bundled v0.17 material revises the legacy questions: their history stays, but current
+        // mastery starts again. Imported packages keep the legacy revision and its score.
+        val revised = q.revision != ContentCodec.parse(regressionContentJson()).questions.first { it.id == questionId }.revision
+        val progress = snapshot.progress.singleOrNull { it.revision == q.revision }
+        if (revised) assertNull(progress) else {
+            requireNotNull(progress)
+            assertEquals(questionId, progress.questionId)
+            assertEquals(4, progress.attempts)
+            assertEquals(4, progress.correctAnswers)
+            assertEquals(25, progress.mastery)
+            assertEquals(1, progress.consecutiveCorrect)
+            assertEquals(1000L + 86_400_000L, progress.nextReview)
+        }
         assertEquals(packageId, opened.learningDao().metadata()!!.packageId)
         if (packageId == "fi-civics-demo") {
             assertEquals("Democracy and decision-making", snapshot.topics.first().titleFor("en"))
@@ -117,12 +124,11 @@ class LearningMigrationTest {
             assertEquals(1, opened.learningDao().metadata()!!.version)
         }
         assertEquals(LearningEngine.RULES_VERSION, opened.learningDao().rulesVersion())
-        val q = snapshot.questions.first { it.id == questionId }
-        val reviewed = repository.answer(q, q.correctOptionId, "due", requireNotNull(progress.nextReview))
-        assertEquals(50, reviewed.progress.mastery)
+        val reviewed = repository.answer(q, q.correctOptionId, "due", progress?.nextReview ?: (1000L + 86_400_000L))
+        assertEquals(if (revised) 25 else 50, reviewed.progress.mastery)
         repository.initialize(context)
         assertEquals(5, repository.snapshot.first().attempts.size)
-        assertEquals(reviewed.progress, repository.snapshot.first().progress.single())
+        assertEquals(reviewed.progress, repository.snapshot.first().progress.single { it.revision == q.revision })
         assertEquals(7, opened.openHelper.readableDatabase.version)
     }
 

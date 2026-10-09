@@ -1,5 +1,6 @@
 package fi.kansalaisuuskoe
 
+import kotlin.math.roundToInt
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -38,7 +39,7 @@ class AuthoredLessonFlowTest {
         show(english)
         rule.activityRule.scenario.recreate(); show(english)
         assertEquals(before, snapshot())
-        click("Vocabulary for this topic"); await("Topic: Democracy and decision-making"); show("5 words")
+        click("Vocabulary for this topic"); await("Topic: Democracy and decision-making"); show("${LearningContent.vocabulary(before, StudyLanguage.FINNISH).count { w -> w.contexts.any { it.topicId == topic.id } }} words")
         assertEquals(before, snapshot())
     }
     @Test fun SwedishLessonUsesSwedishWithEnglishSupportAndNoEasyFinnish() {
@@ -49,23 +50,24 @@ class AuthoredLessonFlowTest {
         show(topic.lessons.getValue("en").sections.last().body)
         assertEquals(before, snapshot())
     }
-    @Test fun preferencesHideSupportAndFullFiveQuestionTopicActuallyCompletes() {
+    @Test fun preferencesHideSupportAndFullTopicActuallyCompletes() {
         runBlocking { app.container.settings.setExplanation(ExplanationPreference.STUDY_LANGUAGE); app.container.settings.setEasyFinnish(false) }
         openTopic(); show(snapshot().topics.first().lessons.getValue("fi").sections.first().body)
         text("In easy Finnish").assertDoesNotExist(); text("Explanation in English").assertDoesNotExist()
         click("Practise this topic")
         val questions = snapshot().questions.filter { it.language == "fi" && it.topicId == "democracy" }
         questions.forEachIndexed { index, q ->
-            await(q.text); click(q.options.first { it.id == q.correctOptionId }.text); click("Check answer")
+            await(q.text); click(rule.activity.answerLabel(q, q.correctOptionId)); click("Check answer")
             await("Correct"); show(q.explanation)
             click(if (index == questions.lastIndex) "Show summary" else "Next question")
         }
         await("Practice complete")
         val result = snapshot().forLanguage(StudyLanguage.FINNISH)
-        assertEquals(5, result.attempts.size); assertTrue(result.attempts.all { it.correct })
+        assertEquals(questions.size, result.attempts.size); assertTrue(result.attempts.all { it.correct })
         val summary = LearningEngine.summarize(result, System.currentTimeMillis())
         assertEquals(100, summary.accuracy); assertEquals(25, summary.topics.first().mastery)
-        assertEquals(4, summary.mastery); assertEquals(0, summary.dueCount)
+        // One correct answer gives each topic question 25 mastery; the rest of the material stays at 0.
+        assertEquals((25.0 * questions.size / result.questions.size).roundToInt(), summary.mastery); assertEquals(0, summary.dueCount)
     }
     @Test fun importingOldStyleReadingFallsBackAndCannotKeepADeletedAuthoredLesson() {
         openTopic(); val before = snapshot()

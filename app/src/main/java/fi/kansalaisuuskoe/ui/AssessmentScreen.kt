@@ -157,10 +157,7 @@ private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, 
                 }) { Text(stringResource(if (expanded) R.string.recap_hide else R.string.recap_read)) }
                 if (expanded) {
                     QuestionExplanation(question, app.settings.easyFinnish, app.settings.explanation)
-                    Text(stringResource(R.string.source_title), style = MaterialTheme.typography.titleMedium)
-                    Text(question.source.title)
-                    SelectionContainer { Text(question.source.url, style = MaterialTheme.typography.bodySmall) }
-                    if (question.status != ContentStatus.OFFICIAL) Text(stringResource(R.string.source_note), style = MaterialTheme.typography.bodySmall)
+                    SourceReference(question)
                 }
             }
         }

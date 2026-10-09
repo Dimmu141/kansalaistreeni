@@ -44,7 +44,7 @@ class AssessmentBackupRepositoryTest {
         val learningBefore = learning.snapshot.first()
         val backup = learning.exportBackup(3000)
         val content = ContentCodec.parse(context.assets.open("demo-content.json").bufferedReader().use { it.readText() })
-        learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(content.copy(version = content.version + 1, questions = content.questions.map { it.copy(revision = 2, text = it.text + " changed") })))
+        learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(content.copy(version = content.version + 1, questions = content.questions.map { it.copy(revision = it.revision + 1, text = it.text + " changed") })))
         val q = learning.snapshot.first().questions.first()
         learning.answer(q, q.correctOptionId, "newer", 4000)
         val preview = learning.prepareRestore(backup)

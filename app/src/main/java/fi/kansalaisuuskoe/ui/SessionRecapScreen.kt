@@ -80,10 +80,7 @@ internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, ex
                         }) { Text(if (expanded) stringResource(R.string.recap_hide) else read) }
                         if (expanded) {
                             QuestionExplanation(question, easyFinnish, explanation)
-                            Text(stringResource(R.string.source_title), style = MaterialTheme.typography.titleMedium)
-                            Text(question.source.title, style = MaterialTheme.typography.bodyMedium)
-                            SelectionContainer { Text(question.source.url, style = MaterialTheme.typography.bodySmall) }
-                            if (question.status != fi.kansalaisuuskoe.domain.ContentStatus.OFFICIAL) Text(stringResource(R.string.source_note), style = MaterialTheme.typography.bodySmall)
+                            SourceReference(question)
                         }
                     }
                 }

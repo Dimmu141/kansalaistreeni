@@ -15,3 +15,8 @@ fun formatReviewTime(time: Long): String {
     val formatter = DateTimeFormatter.ofPattern(stringResource(R.string.date_time_pattern), locale)
     return Instant.ofEpochMilli(time).atZone(ZoneId.systemDefault()).format(formatter)
 }
+
+/** Formats an ISO calendar date from content metadata, such as a source check date. */
+@Composable
+fun formatDate(isoDate: String): String =
+    java.time.LocalDate.parse(isoDate).format(DateTimeFormatter.ofPattern(stringResource(R.string.date_pattern), LocalConfiguration.current.locales[0]))

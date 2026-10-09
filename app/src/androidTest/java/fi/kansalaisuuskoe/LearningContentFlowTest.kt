@@ -99,7 +99,7 @@ class LearningContentFlowTest {
     }
     @Test fun importedVocabularyReplacesBrowseResultsWithoutChangingHistory() {
         openWords(); search("power"); await("lainsäädäntövalta")
-        val content = ContentCodec.parse(regressionContentJson())
+        val content = regressionContent()
         val revised = content.copy(version = content.version + 1, questions = content.questions.map {
             if (it.id == "demo-parliament") it.copy(revision = it.revision + 1, vocabulary = listOf(VocabularyDto("hallinto", "governance", "förvaltning"))) else it
         })
@@ -109,7 +109,7 @@ class LearningContentFlowTest {
         assertTrue(snapshot().attempts.isEmpty())
     }
     @Test fun importedPackageWithoutSwedishVocabularyShowsHonestEmptyState() {
-        val content = ContentCodec.parse(regressionContentJson())
+        val content = regressionContent()
         val revised = content.copy(version = content.version + 1, questions = content.questions.map {
             if (it.language == "sv") it.copy(revision = it.revision + 1, vocabulary = emptyList()) else it
         })

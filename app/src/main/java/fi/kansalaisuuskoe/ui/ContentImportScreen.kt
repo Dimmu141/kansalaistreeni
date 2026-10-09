@@ -117,7 +117,7 @@ internal fun ContentImportBody(state: ContentImportState, select: () -> Unit, di
                                     Heading(section.title)
                                     StudyText(section.body, language, MaterialTheme.typography.bodyLarge)
                                     section.easyBody?.let { StudyText(it, "fi", MaterialTheme.typography.bodyLarge) }
-                                    section.sources.forEach { SourceReference(fi.kansalaisuuskoe.domain.Source(it.title, it.url), ContentStatus.valueOf(dto.status)) }
+                                    section.sources.forEach { SourceReference(fi.kansalaisuuskoe.domain.Source(it.title, it.url, it.checkedAt), ContentStatus.valueOf(dto.status)) }
                                 }
                             }
                         }

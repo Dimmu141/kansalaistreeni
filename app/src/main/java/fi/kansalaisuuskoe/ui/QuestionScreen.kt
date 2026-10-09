@@ -90,14 +90,7 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
                     }
                 }
             }
-            item {
-                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Text(stringResource(R.string.source_title), style = MaterialTheme.typography.titleMedium)
-                    Text(q.source.title, style = MaterialTheme.typography.bodyMedium)
-                    SelectionContainer { Text(q.source.url, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
-                    if (q.status != ContentStatus.OFFICIAL) Text(stringResource(R.string.source_note), style = MaterialTheme.typography.bodySmall)
-                }
-            }
+            item { SourceReference(q) }
             item { Button(onClick = next, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(if (state.position == state.total) stringResource(R.string.show_summary) else stringResource(R.string.next_question)) } }
         }
     }

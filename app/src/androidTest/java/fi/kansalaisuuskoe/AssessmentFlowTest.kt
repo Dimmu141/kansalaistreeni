@@ -25,7 +25,7 @@ class AssessmentFlowTest {
     private fun click(value: String) { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); text(value).performClick() }
     private fun saved(id: String) = runBlocking { assessments.get(id)!! }
     private fun choose(id: String, question: Question, option: String) {
-        click(question.options.first { it.id == option }.text)
+        click(rule.activity.answerLabel(question, option))
         rule.waitUntil(15_000) { saved(id).answers[question.id] == option }
     }
     @Before fun reset() = runBlocking {
@@ -86,7 +86,7 @@ class AssessmentFlowTest {
         rule.activityRule.scenario.recreate(); await("Hide explanation")
         assertEquals(19, Assessments.result(saved(id)).correct)
         click("Practise mistakes · 1 question"); await(mistake.text)
-        click(mistake.options.first { it.id == mistake.correctOptionId }.text); click("Check answer")
+        click(rule.activity.answerLabel(mistake, mistake.correctOptionId)); click("Check answer")
         await("Correct"); click("Show summary"); await("Practice complete")
         val snapshot = runBlocking { learning.snapshot.first() }
         assertEquals(listOf(mistake.id), snapshot.attempts.map { it.questionId })
@@ -118,7 +118,7 @@ class AssessmentFlowTest {
         text("Oikein 2 / 3 · 66 %").assertIsDisplayed()
         runBlocking { app.container.settings.setStudyLanguage(StudyLanguage.FINNISH) }
         click("Harjoittele virheitä · 1 kysymys"); await(questions.first().text)
-        click(questions.first().options.first { it.id == questions.first().correctOptionId }.text)
+        click(rule.activity.answerLabel(questions.first(), questions.first().correctOptionId))
         click("Tarkista vastaus"); await("Oikein")
         val attempts = runBlocking { learning.snapshot.first().attempts }
         assertEquals("sv", attempts.single().language)
@@ -134,7 +134,7 @@ class AssessmentFlowTest {
         val sql = app.container.database.openHelper.writableDatabase
         sql.execSQL("CREATE TRIGGER assessment_write_failure BEFORE INSERT ON assessments BEGIN SELECT RAISE(ABORT, 'verification failure'); END")
         try {
-            click(q.options.first { it.id == q.correctOptionId }.text)
+            click(rule.activity.answerLabel(q, q.correctOptionId))
             rule.onNode(hasScrollAction()).performScrollToNode(hasText("Next question"))
             await("Could not process the assessment. Try again. Previously saved choices are retained.")
             assertTrue(saved(id).answers.isEmpty())
@@ -156,7 +156,7 @@ class AssessmentFlowTest {
         }
         await("Your learning path"); click("Practice assessment"); click("Start assessment"); await(question.text)
         val id = runBlocking { assessments.sessions.first().single().id }
-        assertEquals(3, question.options.size)
+        assertEquals(4, question.options.size)
         text("Saved answers: 0 / 1").assertIsDisplayed()
         choose(id, question, question.correctOptionId)
         text("Saved answers: 1 / 1").assertIsDisplayed()

@@ -55,7 +55,7 @@ class TopicRoutingFlowTest {
                 rule.activityRule.scenario.recreate()
                 await(question.text)
             }
-            click(question.options.first { it.id == question.correctOptionId }.text)
+            click(rule.activity.answerLabel(question.model(), question.correctOptionId))
             click("Check answer")
             await("Correct")
             click(if (index == questions.lastIndex) "Show summary" else "Next question")

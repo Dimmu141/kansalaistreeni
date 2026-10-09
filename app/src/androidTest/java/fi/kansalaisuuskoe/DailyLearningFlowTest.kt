@@ -41,7 +41,7 @@ class DailyLearningFlowTest {
             DailyLearningPlanner.plan(repository.snapshot.first().forLanguage(StudyLanguage.FINNISH), now)
         }
         await("3 kertauskysymystä · 2 uutta kysymystä")
-        rule.onNodeWithText("Demosisältö").assertIsDisplayed()
+        rule.onNodeWithText("Sovellusta varten laadittu materiaali").assertIsDisplayed()
         click("Kertaa kaikki · 7 kysymystä")
         await("Kysymys 1 / 7")
         rule.onNodeWithContentDescription("Takaisin").performClick()
@@ -51,7 +51,7 @@ class DailyLearningFlowTest {
             await(item.question.text)
             rule.onNodeWithText("Kysymys ${index + 1} / 5").assertExists()
             if (index == 0) rule.onNodeWithText("Kertauskysymys · valittu kertausajan perusteella.").assertExists()
-            click(item.question.options.first { it.id == item.question.correctOptionId }.text)
+            click(rule.activity.answerLabel(item.question, item.question.correctOptionId))
             click("Tarkista vastaus")
             await("Oikein")
             click(if (index == 4) "Näytä yhteenveto" else "Seuraava kysymys")
@@ -66,15 +66,18 @@ class DailyLearningFlowTest {
 
     @Test fun weakTopicFocusAndNewTopicReasonRemainReadableAfterRecreation() {
         await("Oma oppimispolkusi")
-        runBlocking {
+        val first = runBlocking {
             val q = repository.snapshot.first().questions.first { it.id == "demo-parliament" }
-            repository.answer(q, q.options.first { it.id != q.correctOptionId }.id, "recent-mistake", System.currentTimeMillis())
+            val now = System.currentTimeMillis()
+            repository.answer(q, q.options.first { it.id != q.correctOptionId }.id, "recent-mistake", now)
+            DailyLearningPlanner.plan(repository.snapshot.first().forLanguage(StudyLanguage.FINNISH), now).items.first().question
         }
+        assertEquals("democracy", first.topicId)
         await("Lisää harjoittelua aiheesta: Demokratia ja päätöksenteko.")
         click("Jatka harjoittelua")
-        await("Kuinka monta kansanedustajaa Suomen eduskunnassa on?")
+        await(first.text)
         rule.onNodeWithText("Uusi kysymys aiheesta, joka kaipaa vielä harjoittelua.").assertIsDisplayed()
-        click("200"); click("Tarkista vastaus")
+        click(rule.activity.answerLabel(first, first.correctOptionId)); click("Tarkista vastaus")
         await("Oikein")
         rule.activityRule.scenario.recreate()
         await("Oikein")

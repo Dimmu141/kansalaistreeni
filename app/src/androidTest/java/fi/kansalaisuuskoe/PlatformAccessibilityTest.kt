@@ -90,18 +90,18 @@ class PlatformAccessibilityTest {
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK))
         try {
             click("Start learning")
-            val question = await("Kuka käyttää Suomessa lainsäädäntövaltaa?")
+            val question = await("Kuka säätää Suomen lait?")
             assertTrue(question.isHeading)
             assertTrue(question.isAccessibilityFocused || question.performAction(AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS))
-            assertSpeechLocale("Kuka käyttää Suomessa lainsäädäntövaltaa?", "fi")
+            assertSpeechLocale("Kuka säätää Suomen lait?", "fi")
             val option = interactiveNode("Eduskunta")
             assertTrue("Answer control must expose its choice state: ${option.className}", option.isCheckable)
             val bounds = Rect(); option.getBoundsInScreen(bounds)
             assertTrue(bounds.height() >= 56 * app.resources.displayMetrics.density)
             click("Eduskunta"); click("Check answer")
             await("Correct answer: Eduskunta")
-            assertSpeechLocale("Eduskunta säätää lait. Hallitus valmistelee lakiesityksiä.", "fi")
-            assertSpeechLocale("Parliament makes laws. The Government prepares legislative proposals.", "en")
+            assertSpeechLocale("Perustuslain mukaan lainsäädäntövaltaa käyttää eduskunta. Hallitus valmistelee lakiesityksiä, mutta eduskunta päättää laeista.", "fi")
+            assertSpeechLocale("Under the Constitution, Parliament exercises legislative power. The Government prepares bills, but Parliament decides on laws.", "en")
             assertEquals(1, runBlocking { app.container.learning.snapshot.first().attempts.size })
         } finally {
             instrumentation.runOnMainSync { activity.finish() }

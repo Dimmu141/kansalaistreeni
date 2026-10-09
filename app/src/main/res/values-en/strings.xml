@@ -116,6 +116,9 @@
     <string name="show_summary">Show summary</string>
     <string name="next_question">Next question</string>
     <string name="date_time_pattern">d MMM yyyy \&apos;at\&apos; HH:mm</string>
+    <string name="date_pattern">d MMM yyyy</string>
+    <string name="source_checked">Source checked %1$s</string>
+    <string name="review_overdue">This fact can change and is overdue for review. Check the source for current information.</string>
     <string name="material_title">Study material</string>
     <string name="material_intro">Review a content file before replacing your current material.</string>
     <string name="material_current">Current material</string>

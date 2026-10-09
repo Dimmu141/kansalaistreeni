@@ -82,7 +82,7 @@ class AssessmentRepositoryTest {
         complete(id)
         val saved = assessments.get(id)!!
         val seed = ContentCodec.parse(context.assets.open("demo-content.json").bufferedReader().use { it.readText() })
-        val revised = seed.copy(version = seed.version + 1, questions = seed.questions.map { it.copy(revision = 2, text = it.text + " (revised)") })
+        val revised = seed.copy(version = seed.version + 1, questions = seed.questions.map { it.copy(revision = it.revision + 1, text = it.text + " (revised)") })
         learning.importContent(Moshi.Builder().build().adapter(ContentPackageDto::class.java).toJson(revised))
         assertEquals(saved, assessments.get(id))
         assertTrue(Assessments.practiceMistakes(saved, learning.snapshot.first().questions).isEmpty())

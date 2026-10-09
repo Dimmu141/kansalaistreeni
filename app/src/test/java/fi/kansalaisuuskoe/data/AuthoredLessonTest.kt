@@ -1,4 +1,4 @@
-package fi.kansalaisuuskoe.data
+﻿package fi.kansalaisuuskoe.data
 
 import com.squareup.moshi.Moshi
 import fi.kansalaisuuskoe.domain.*
@@ -15,17 +15,15 @@ class AuthoredLessonTest {
     private fun rejects(block: () -> Unit) { try { block(); fail("Invalid lesson accepted") } catch (_: IllegalArgumentException) { } }
     private fun prepare(next: ContentPackageDto) = ContentUpdates.prepare(next, "new", installed, emptyMap())
 
-    @Test fun `topics with lessons have aligned independently authored bilingual lessons and English support`() {
-        // v0.17 step 3 keeps the lessons of the four retained topic IDs; new topics get lessons with the content expansion.
-        assertEquals(listOf("democracy", "rights", "history", "culture"), content.topics.filter { it.lessons.isNotEmpty() }.map { it.id })
-        content.topics.filter { it.lessons.isNotEmpty() }.forEach { t ->
+    @Test fun `every topic has aligned independently authored bilingual lessons and English support`() {
+        content.topics.forEach { t ->
             assertEquals(setOf("fi", "sv", "en"), t.lessons.keys)
             val native = t.lessons.getValue("fi")
-            assertEquals(3, native.sections.size)
+            assertTrue(native.sections.size in 3..5)
             t.lessons.forEach { (language, l) ->
                 assertEquals(native.id, l.id)
                 assertEquals(native.sections.map { it.id }, l.sections.map { it.id })
-                assertEquals("DEMO", l.status)
+                assertEquals("EDITORIAL", l.status)
                 assertTrue(l.sections.all { s -> s.sources.isNotEmpty() && (language != "fi" || s.easyBody != null) })
                 assertTrue(l.sections.none { s -> content.questions.any { it.explanation == s.body } })
             }
@@ -38,7 +36,7 @@ class AuthoredLessonTest {
         val old = ContentCodec.parse(json)
         val snapshot = LearningSnapshot(old.topics.map { it.model() }, old.questions.map { it.model() })
         val reading = LearningContent.lesson(snapshot, topic.id, StudyLanguage.FINNISH)!!
-        assertNull(reading.authored); assertEquals(5, reading.ideas.size)
+        assertNull(reading.authored); assertEquals(25, reading.ideas.size)
     }
     @Test fun `unsupported blank duplicate and unsourced lesson content is rejected`() {
         val section = lesson.sections.first()
@@ -54,13 +52,13 @@ class AuthoredLessonTest {
         rejects { ContentCodec.validate(withLesson(topic.lessons.getValue("en").copy(sections = lesson.sections.reversed().map { it.copy(easyBody = null) }), "en")) }
     }
     @Test fun `lesson only update changes package without revising any questions`() {
-        val next = withLesson(lesson.copy(revision = 2, introduction = "Revised lesson introduction.")).copy(version = content.version + 1)
+        val next = withLesson(lesson.copy(revision = lesson.revision + 1, introduction = "Revised lesson introduction.")).copy(version = content.version + 1)
         assertEquals(ContentChanges(0, 0, content.questions.size, 0), prepare(next).changes)
         assertFalse(prepare(next).alreadyInstalled)
         assertEquals(1, prepare(next).changedLessonVariants)
     }
     @Test fun `lesson changes need new package and native lesson revisions`() {
-        rejects { prepare(withLesson(lesson.copy(revision = 2))) }
+        rejects { prepare(withLesson(lesson.copy(revision = lesson.revision + 1))) }
         rejects { prepare(withLesson(lesson.copy(introduction = "Unversioned change")).copy(version = content.version + 1)) }
         rejects { prepare(withLesson(lesson.copy(revision = 0)).copy(version = content.version + 1)) }
     }
@@ -87,7 +85,8 @@ class AuthoredLessonTest {
         val snapshot = LearningSnapshot(content.topics.map { it.model() }, officialQuestions, listOf(UserQuestionProgress(officialQuestions.first().id, 1, mastery = 25)))
         val before = snapshot.copy()
         val lesson = LearningContent.lesson(snapshot, topic.id, StudyLanguage.FINNISH)!!
-        assertEquals(ContentStatus.DEMO, lesson.contentStatus())
+        // The editorial lesson caps the label even when every question claims stronger provenance.
+        assertEquals(ContentStatus.EDITORIAL, lesson.contentStatus())
         assertEquals(before, snapshot)
     }
 }

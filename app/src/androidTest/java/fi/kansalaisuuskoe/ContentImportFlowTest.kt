@@ -43,7 +43,7 @@ class ContentImportFlowTest {
         }
         original = ContentCodec.parse(app.assets.open("demo-content.json").bufferedReader().use { it.readText() })
         selectedJson = json(original.copy(version = original.version + 1, questions = original.questions.mapIndexed { i, q ->
-            if (i == 0) q.copy(revision = 2, explanation = "Päivitetty testiselitys.") else q
+            if (i == 0) q.copy(revision = q.revision + 1, explanation = "Päivitetty testiselitys.") else q
         }))
         renderScreen()
         await("Choose a content file")

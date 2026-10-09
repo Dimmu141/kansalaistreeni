@@ -102,9 +102,94 @@ def coverage_markdown(content):
     return "\n".join(lines).rstrip() + "\n"
 
 
+EVIDENCE_HOSTS = {
+    "www.finlex.fi", "opendata.finlex.fi", "infofinland.fi", "www.suomi.fi", "migri.fi", "www.eduskunta.fi", "stat.fi",
+    "tasa-arvo.fi", "syrjinta.fi", "poliisi.fi", "112.fi", "www.kela.fi", "www.vero.fi", "dvv.fi", "www.kanta.fi",
+    "tietosuoja.fi", "valtioneuvosto.fi", "um.fi", "intermin.fi", "pelastustoimi.fi", "www.oikeusasiamies.fi", "puolustusvoimat.fi",
+    "www.presidentti.fi",
+}
+BUNDLED_STATUSES = {"DEMO", "EDITORIAL"}
+# Distribution targets for the expanded editorial package, per study language.
+FORMAT_SHARE = {"TRUE_FALSE": (0.25, 0.35)}
+DIFFICULTY_SHARE = {"EASY": (0.35, 0.45), "MEDIUM": (0.35, 0.45), "HARD": (0.15, 0.25)}
+MIN_TOPIC_QUESTIONS = 25
+
+
+def check_evidence(url, label):
+    evidence = urlparse(url)
+    if evidence.scheme != "https" or evidence.username or evidence.hostname not in EVIDENCE_HOSTS:
+        raise ValueError(f"Unexpected evidence origin: {label}")
+
+
+def normalize(text):
+    return " ".join("".join(c.lower() if c.isalnum() else " " for c in text).split())
+
+
+def distribution(content):
+    """Per language: question count, format and difficulty counts, per-topic counts."""
+    report = {}
+    for language in sorted({q["language"] for q in content["questions"]}):
+        qs = [q for q in content["questions"] if q["language"] == language]
+        report[language] = {
+            "questions": len(qs),
+            "format": {f: sum(1 for q in qs if q.get("format", "SINGLE_CHOICE") == f) for f in ("SINGLE_CHOICE", "TRUE_FALSE")},
+            "difficulty": {d: sum(1 for q in qs if q["difficulty"] == d) for d in ("EASY", "MEDIUM", "HARD")},
+            "topics": {t["id"]: sum(1 for q in qs if q["topicId"] == t["id"]) for t in sorted(content["topics"], key=lambda t: t["order"])},
+        }
+    return report
+
+
+def verify_quality(content):
+    """Rules for the expanded editorial package; the earlier DEMO package predates them."""
+    seen = {}
+    for q in content["questions"]:
+        fmt = q.get("format", "SINGLE_CHOICE")
+        ids = [o["id"] for o in q["options"]]
+        if fmt == "SINGLE_CHOICE" and len(ids) < 4:
+            raise ValueError(f"Single-choice questions need at least four options: {q['id']}")
+        if fmt == "TRUE_FALSE" and sorted(ids) != ["false", "true"]:
+            raise ValueError(f"True/false options must be true and false: {q['id']}")
+        if len({normalize(o["text"]) for o in q["options"]}) != len(ids):
+            raise ValueError(f"Duplicate answer options: {q['id']}")
+        key = (q["language"], normalize(q["text"]))
+        if key in seen:
+            raise ValueError(f"Duplicate question: {q['id']} repeats {seen[key]}")
+        seen[key] = q["id"]
+        if not q.get("vocabulary") or not q["source"].get("checkedAt"):
+            raise ValueError(f"Question needs vocabulary and a source check date: {q['id']}")
+        if q["language"] == "fi" and not q.get("easyExplanation"):
+            raise ValueError(f"Finnish question needs an easy explanation: {q['id']}")
+    for language, stats in distribution(content).items():
+        total = stats["questions"]
+        for fmt, (low, high) in FORMAT_SHARE.items():
+            if not low <= stats["format"][fmt] / total <= high:
+                raise ValueError(f"{language}: {fmt} share {stats['format'][fmt]}/{total} outside {low:.0%}-{high:.0%}")
+        for level, (low, high) in DIFFICULTY_SHARE.items():
+            if not low <= stats["difficulty"][level] / total <= high:
+                raise ValueError(f"{language}: {level} share {stats['difficulty'][level]}/{total} outside {low:.0%}-{high:.0%}")
+        thin_topics = [t for t, n in stats["topics"].items() if n < MIN_TOPIC_QUESTIONS]
+        if thin_topics:
+            raise ValueError(f"{language}: fewer than {MIN_TOPIC_QUESTIONS} questions in {', '.join(thin_topics)}")
+    thin = [o["id"] for _, o, counts in coverage(content) if any(c < MIN_OBJECTIVE_QUESTIONS for c in counts.values())]
+    if thin:
+        raise ValueError(f"Objectives with fewer than {MIN_OBJECTIVE_QUESTIONS} questions: {', '.join(thin)}")
+    for topic in content["topics"]:
+        variants = topic.get("lessons", {})
+        if set(variants) != {"fi", "sv", "en"} or not 3 <= len(variants["fi"]["sections"]) <= 5:
+            raise ValueError(f"Every topic needs a 3-5 section lesson in FI, SV and EN: {topic['id']}")
+
+
+def overdue_reviews(content, today=None):
+    today = today or date.today()
+    return [q["id"] for q in content["questions"] if q.get("reviewBy") and date.fromisoformat(q["reviewBy"]) < today]
+
+
 def verify(content, ledger):
-    if content["status"] != "DEMO" or any(q["status"] != "DEMO" for q in content["questions"]):
-        raise ValueError("The bundled dataset must remain explicitly DEMO")
+    status = content["status"]
+    if status not in BUNDLED_STATUSES or any(q["status"] != status for q in content["questions"]):
+        raise ValueError("The bundled dataset must be uniformly DEMO or EDITORIAL; it is never official")
+    if any(lesson["status"] != status for t in content["topics"] for lesson in t.get("lessons", {}).values()):
+        raise ValueError("Lesson provenance must match the package")
     if ledger["packageId"] != content["packageId"] or ledger["version"] != content["version"]:
         raise ValueError("Review ledger does not match the content package")
     questions = {q["id"]: q for q in content["questions"]}
@@ -119,29 +204,32 @@ def verify(content, ledger):
             raise ValueError(f"Incomplete source review: {question_id}")
         if date.fromisoformat(review["checkedAt"]) > date.today():
             raise ValueError(f"Future review date: {question_id}")
+        if q["source"].get("checkedAt") and q["source"]["checkedAt"] != review["checkedAt"]:
+            raise ValueError(f"Shown check date differs from the review record: {question_id}")
         if review["publicationApproved"] or review["reviewType"] != "ASSISTANT_SOURCE_CHECK":
-            raise ValueError("Demo source checks must not imply human publication approval")
-        evidence = urlparse(review["evidenceUrl"])
-        if evidence.scheme != "https" or evidence.username or evidence.hostname not in {"www.finlex.fi", "infofinland.fi", "www.suomi.fi"}:
-            raise ValueError(f"Unexpected evidence origin: {question_id}")
+            raise ValueError("Assistant source checks must not imply human publication approval")
+        check_evidence(review["evidenceUrl"], question_id)
         en = q.get("translations", {}).get("en")
         if not en or [o["id"] for o in en["options"]] != [o["id"] for o in q["options"]]:
             raise ValueError(f"Missing or misaligned English support: {question_id}")
     finnish = {q["id"]: q for q in questions.values() if q["language"] == "fi"}
     swedish = {q["id"].removesuffix("-sv"): q for q in questions.values() if q["language"] == "sv"}
     if finnish.keys() != swedish.keys():
-        raise ValueError("Bilingual demo concepts do not match")
+        raise ValueError("Bilingual concepts do not match")
     for key, fi in finnish.items():
         sv = swedish[key]
-        if fi["correctOptionId"] != sv["correctOptionId"] or fi["topicId"] != sv["topicId"] or fi["translations"]["en"] != sv["translations"]["en"]:
-            raise ValueError(f"Bilingual answer key or English support mismatch: {key}")
+        shared = ("correctOptionId", "topicId", "difficulty", "format", "objectiveIds", "validFrom", "reviewBy")
+        if any(fi.get(field) != sv.get(field) for field in shared) or fi["translations"]["en"] != sv["translations"]["en"]:
+            raise ValueError(f"Bilingual answer key, classification or English support mismatch: {key}")
+        if status == "EDITORIAL" and fi["source"]["url"] == sv["source"]["url"]:
+            raise ValueError(f"Swedish variant needs a Swedish source page: {key}")
     lessons = {(t["id"], language): lesson for t in content["topics"] for language, lesson in t.get("lessons", {}).items()}
     lesson_reviews = {(r["topicId"], r["language"]): r for r in ledger.get("lessonReviews", [])}
     if len(lesson_reviews) != len(ledger.get("lessonReviews", [])) or lessons.keys() != lesson_reviews.keys():
         raise ValueError("Every authored lesson needs exactly one source review")
     for key, lesson in lessons.items():
         review = lesson_reviews[key]
-        if lesson["status"] != "DEMO" or review["sha256"] != fingerprint(lesson):
+        if review["sha256"] != fingerprint(lesson):
             raise ValueError(f"Lesson changed after source review: {key}")
         if review["publicationApproved"] or review["reviewType"] != "ASSISTANT_SOURCE_CHECK" or date.fromisoformat(review["checkedAt"]) > date.today():
             raise ValueError(f"Invalid lesson review: {key}")
@@ -153,13 +241,15 @@ def verify(content, ledger):
             if not references or sorted(s["sourceUrl"] for s in references) != sorted(s["url"] for s in section["sources"]):
                 raise ValueError(f"Missing lesson source evidence: {key}")
             for reference in references:
-                evidence = urlparse(reference["evidenceUrl"])
-                if not reference["claim"] or not reference["locator"] or evidence.scheme != "https" or evidence.username or evidence.hostname not in {"www.finlex.fi", "infofinland.fi", "www.suomi.fi"}:
+                if not reference["claim"] or not reference["locator"]:
                     raise ValueError(f"Invalid lesson source evidence: {key}")
+                check_evidence(reference["evidenceUrl"], f"lesson {key}")
     for topic in content["topics"]:
         variants = topic.get("lessons", {})
         if variants and (set(variants) != {"fi", "sv", "en"} or len({(lesson["id"], tuple(s["id"] for s in lesson["sections"])) for lesson in variants.values()}) != 1):
             raise ValueError("Bundled lesson variants must align in FI, SV and EN")
+    if status == "EDITORIAL":
+        verify_quality(content)
 
 
 def main():
@@ -184,7 +274,12 @@ def main():
     if content.get("objectives") and (not COVERAGE_REPORT.is_file() or COVERAGE_REPORT.read_text(encoding="utf-8") != coverage_markdown(content)):
         raise ValueError("docs/CONTENT-COVERAGE.md is out of date; run verify-content.py --write-coverage")
     verify(content, read_json(ROOT / "docs/source-review.json"))
-    print(f"Content review ledger passed: {len(content['questions'])} DEMO questions, {sum(len(t.get('lessons', {})) for t in content['topics'])} lesson variants, package v{content['version']}; human publication approval remains pending.")
+    for language, stats in distribution(content).items():
+        shares = ", ".join(f"{k} {v}" for k, v in {**stats["format"], **stats["difficulty"]}.items())
+        print(f"{language.upper()}: {stats['questions']} questions ({shares}); per topic: " + ", ".join(f"{t} {n}" for t, n in stats["topics"].items()))
+    for question_id in overdue_reviews(content):
+        print(f"WARNING: editorial review date has passed for {question_id}; the app shows an overdue notice.")
+    print(f"Content review ledger passed: {len(content['questions'])} {content['status']} questions, {sum(len(t.get('lessons', {})) for t in content['topics'])} lesson variants, package v{content['version']}; human publication approval remains pending.")
 
 
 if __name__ == "__main__":

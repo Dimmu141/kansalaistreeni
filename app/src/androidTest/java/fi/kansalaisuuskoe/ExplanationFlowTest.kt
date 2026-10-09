@@ -50,33 +50,33 @@ class ExplanationFlowTest {
     }
     @Test fun englishSupportAppearsAfterAnswerWithoutReplacingFinnishAndSurvivesRecreation() {
         chooseEnglishSupport(); click("Start learning")
-        await("Kuka käyttää Suomessa lainsäädäntövaltaa?")
+        await("Kuka säätää Suomen lait?")
         text("Explanation in English").assertDoesNotExist()
-        text("Who exercises legislative power in Finland?").assertDoesNotExist()
-        checkLocale("Kuka käyttää Suomessa lainsäädäntövaltaa?", "fi")
+        text("Who makes Finland's laws?").assertDoesNotExist()
+        checkLocale("Kuka säätää Suomen lait?", "fi")
         checkLocale("Eduskunta", "fi")
-        text("Kuka käyttää Suomessa lainsäädäntövaltaa?").assert(SemanticsMatcher.expectValue(SemanticsProperties.Heading, Unit))
+        text("Kuka säätää Suomen lait?").assert(SemanticsMatcher.expectValue(SemanticsProperties.Heading, Unit))
         text("Eduskunta").assert(SemanticsMatcher.expectValue(SemanticsProperties.Role, Role.RadioButton)).assertHeightIsAtLeast(56.dp)
         text("Eduskunta").assertIsDisplayed().performClick(); click("Check answer"); await("Correct")
         rule.onNode(SemanticsMatcher.expectValue(SemanticsProperties.LiveRegion, LiveRegionMode.Polite)).assertExists()
         rule.onNode(hasScrollAction()).performScrollToNode(hasText("Explanation in English"))
-        val english = "Parliament makes laws. The Government prepares legislative proposals."
+        val english = "Under the Constitution, Parliament exercises legislative power. The Government prepares bills, but Parliament decides on laws."
         rule.onNode(hasScrollAction()).performScrollToNode(hasText(english))
         text(english).assertIsDisplayed(); checkLocale(english, "en")
         rule.activityRule.scenario.recreate(); await("Correct")
         rule.onNode(hasScrollAction()).performScrollToNode(hasText(english)); text(english).assertIsDisplayed()
-        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Eduskunta säätää lait. Hallitus valmistelee lakiesityksiä."))
-        checkLocale("Eduskunta säätää lait. Hallitus valmistelee lakiesityksiä.", "fi")
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Perustuslain mukaan lainsäädäntövaltaa käyttää eduskunta. Hallitus valmistelee lakiesityksiä, mutta eduskunta päättää laeista."))
+        checkLocale("Perustuslain mukaan lainsäädäntövaltaa käyttää eduskunta. Hallitus valmistelee lakiesityksiä, mutta eduskunta päättää laeista.", "fi")
         assertEquals(1, runBlocking { app.container.learning.snapshot.first().attempts.size })
     }
     @Test fun swedishStudyKeepsSwedishAlongsideEnglishSupport() {
         chooseEnglishSupport()
         runBlocking { app.container.settings.setStudyLanguage(StudyLanguage.SWEDISH) }
         await("Study language: Swedish"); click("Start learning")
-        await("Vem utövar den lagstiftande makten i Finland?")
-        checkLocale("Vem utövar den lagstiftande makten i Finland?", "sv")
+        await("Vem stiftar lagarna i Finland?")
+        checkLocale("Vem stiftar lagarna i Finland?", "sv")
         text("Riksdagen").performClick(); click("Check answer"); await("Correct")
-        val english = "Parliament makes laws. The Government prepares legislative proposals."
+        val english = "Under the Constitution, Parliament exercises legislative power. The Government prepares bills, but Parliament decides on laws."
         rule.onNode(hasScrollAction()).performScrollToNode(hasText(english)); text(english).assertIsDisplayed()
         text("In easy Finnish").assertDoesNotExist()
         assertEquals("sv", runBlocking { app.container.learning.snapshot.first().attempts.single().language })
@@ -89,18 +89,18 @@ class ExplanationFlowTest {
                 questions = seed.questions.map { it.copy(translations = emptyMap()) }))
             app.container.learning.confirmImport(app.container.learning.prepareImport(json))
         }
-        click("Start learning"); await("Kuka käyttää Suomessa lainsäädäntövaltaa?")
+        click("Start learning"); await("Kuka säätää Suomen lait?")
         text("Eduskunta").performClick(); click("Check answer"); await("Correct")
         val missing = "This question has no English explanation. Read the explanation in your study language."
         rule.onNode(hasScrollAction()).performScrollToNode(hasText(missing)); text(missing).assertIsDisplayed()
-        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Eduskunta säätää lait. Hallitus valmistelee lakiesityksiä."))
-        text("Eduskunta säätää lait. Hallitus valmistelee lakiesityksiä.").assertIsDisplayed()
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Perustuslain mukaan lainsäädäntövaltaa käyttää eduskunta. Hallitus valmistelee lakiesityksiä, mutta eduskunta päättää laeista."))
+        text("Perustuslain mukaan lainsäädäntövaltaa käyttää eduskunta. Hallitus valmistelee lakiesityksiä, mutta eduskunta päättää laeista.").assertIsDisplayed()
     }
     @Test fun defaultPreferenceHidesEnglishSupport() {
-        await("Your learning path"); click("Start learning"); await("Kuka käyttää Suomessa lainsäädäntövaltaa?")
+        await("Your learning path"); click("Start learning"); await("Kuka säätää Suomen lait?")
         text("Eduskunta").performClick(); click("Check answer"); await("Correct")
         text("Explanation in English").assertDoesNotExist()
-        text("Parliament makes laws. The Government prepares legislative proposals.").assertDoesNotExist()
+        text("Under the Constitution, Parliament exercises legislative power. The Government prepares bills, but Parliament decides on laws.").assertDoesNotExist()
         assertEquals(ExplanationPreference.STUDY_LANGUAGE, runBlocking { app.container.settings.settings.first().explanation })
     }
 }

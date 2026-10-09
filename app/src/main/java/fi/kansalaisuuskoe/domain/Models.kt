@@ -14,7 +14,8 @@ enum class QuestionFormat {
 enum class StudyLanguage(val tag: String) { FINNISH("fi"), SWEDISH("sv") }
 data class AnswerOption(val id: String, val text: String)
 data class VocabularyItem(val term: String, val meaning: String, val swedish: String? = null)
-data class Source(val title: String, val url: String)
+/** [checkedAt] is the ISO date an editor last checked the cited page. */
+data class Source(val title: String, val url: String, val checkedAt: String? = null)
 data class Topic(val id: String, val title: String, val description: String, val order: Int, val translations: Map<String, TopicTranslation> = emptyMap(), val lessons: Map<String, AuthoredLesson> = emptyMap()) {
     fun titleFor(language: String) = translations[language]?.title ?: title
     fun descriptionFor(language: String) = translations[language]?.description ?: description
@@ -42,7 +43,13 @@ data class Question(
     val translations: Map<String, QuestionTranslation> = emptyMap(),
     val format: QuestionFormat = QuestionFormat.SINGLE_CHOICE,
     val objectiveIds: List<String> = emptyList(),
-)
+    // ISO dates for facts that can change (officeholders, ages, amounts, memberships).
+    val validFrom: String? = null,
+    val reviewBy: String? = null,
+) {
+    /** Past its editorial review date: the learner is told to check the source. */
+    fun reviewOverdue(today: java.time.LocalDate) = reviewBy?.let { java.time.LocalDate.parse(it) < today } == true
+}
 data class QuestionTranslation(
     val text: String,
     val options: List<AnswerOption>,
