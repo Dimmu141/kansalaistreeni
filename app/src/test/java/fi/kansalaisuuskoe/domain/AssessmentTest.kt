@@ -28,7 +28,7 @@ class AssessmentTest {
         assertEquals(20, queue.size)
         assertEquals(6, queue.count { it.format == QuestionFormat.TRUE_FALSE })
         assertEquals(queue.size, queue.map { it.id }.distinct().size)
-        val half = Assessments.queue(pool, "fi", Random(7), AssessmentMix(questionCount = 10, trueFalseShare = 0.5))
+        val half = Assessments.queue(pool, "fi", Random(7), ExamProfile("test", questionCount = 10, trueFalseShare = 0.5))
         assertEquals(5 to 5, half.count { it.format == QuestionFormat.TRUE_FALSE } to half.count { it.format == QuestionFormat.SINGLE_CHOICE })
     }
     @Test fun `a missing format is filled from the other without shortening`() {

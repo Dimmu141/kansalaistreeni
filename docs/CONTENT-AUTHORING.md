@@ -39,7 +39,7 @@ From v0.17 a question may set `format` to `SINGLE_CHOICE` (the default when omit
 
 A package that contains any `TRUE_FALSE` question must declare `"schemaVersion": 2`. Schema 1 packages remain valid and every question in them is single choice. Questions installed before v0.17, saved assessment snapshots and backups have no `format` field and read as single choice; their IDs and revisions do not change, so progress is kept. App versions before v0.17 reject schema 2 packages instead of showing a statement as an ordinary choice.
 
-Practice assessments aim for about 30% true/false items and fill from the other format when one is missing. The length and share are set in one place, `AssessmentMix` in `domain/Assessment.kt`; they are practice choices, not the official exam format.
+Practice assessments aim for about 30% true/false items and fill from the other format when one is missing. Their length, format mix, pass mark and time limit come from one place, `ExamProfile` in `domain/ExamProfile.kt`. The app uses `ExamProfile.UNKNOWN` (20 questions, about 30% true/false, no pass mark, no time limit), so no pass/fail verdict or timer is shown and results list only correct/total and per-topic results. These are practice choices, not the official exam format; when Migri publishes it, only `ExamProfile.CURRENT` and a content package should need to change.
 
 ## Learning objectives (content schema 2)
 

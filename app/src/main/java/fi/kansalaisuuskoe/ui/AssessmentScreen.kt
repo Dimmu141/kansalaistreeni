@@ -30,7 +30,7 @@ private fun AssessmentStatus(state: AssessmentUiState, retry: () -> Unit) {
 internal fun AssessmentsScreen(state: AssessmentUiState, app: AppUiState, start: () -> Unit, open: (String) -> Unit, retry: () -> Unit, delete: (AssessmentSession) -> Unit) {
     val sessions = state.sessions.filter { it.language == app.settings.studyLanguage.tag }
     val active = sessions.firstOrNull { !it.complete }
-    val count = minOf(AssessmentMix.DEFAULT.questionCount, app.studySnapshot.questions.size)
+    val count = minOf(ExamProfile.CURRENT.questionCount, app.studySnapshot.questions.size)
     Page {
         item { Heading(stringResource(R.string.assessment_title), stringResource(R.string.assessment_intro)) }
         item { StudyScope(app) }

@@ -23,29 +23,21 @@ data class AssessmentResult(val correct: Int, val total: Int, val topics: List<A
     val accuracy get() = if (total == 0) 0 else correct * 100 / total
 }
 
-/**
- * The single place that sets practice-assessment length and format mix. These are our practice
- * choices, not the official examination format.
- */
-data class AssessmentMix(val questionCount: Int = 20, val trueFalseShare: Double = 0.3) {
-    init { require(questionCount in 1..Assessments.MAX_QUESTIONS && trueFalseShare in 0.0..1.0) }
-    companion object { val DEFAULT = AssessmentMix() }
-}
-
 object Assessments {
-    // Upper bound for any practice assessment, including restored backups.
-    const val MAX_QUESTIONS = 20
+    // Upper bound for any practice assessment, including restored backups. It never drops below the
+    // original 20, so saved sessions stay restorable when the profile changes.
+    val MAX_QUESTIONS get() = maxOf(20, ExamProfile.CURRENT.questionCount)
 
     /**
      * Round-robin shuffled topics avoid filling a short assessment with one large category. The
      * format share is a target: a missing format is filled from the other rather than shortening it.
      */
-    fun queue(questions: List<Question>, language: String, random: Random = Random.Default, mix: AssessmentMix = AssessmentMix.DEFAULT): List<Question> {
+    fun queue(questions: List<Question>, language: String, random: Random = Random.Default, profile: ExamProfile = ExamProfile.CURRENT): List<Question> {
         val pool = questions.filter { it.language == language }
-        val total = minOf(mix.questionCount, pool.size)
+        val total = minOf(profile.questionCount, pool.size)
         val trueFalse = pool.filter { it.format == QuestionFormat.TRUE_FALSE }
         val singleChoice = pool.filter { it.format != QuestionFormat.TRUE_FALSE }
-        val trueFalseCount = (total * mix.trueFalseShare).roundToInt()
+        val trueFalseCount = (total * profile.trueFalseShare).roundToInt()
             .coerceAtMost(trueFalse.size).coerceAtLeast(total - singleChoice.size)
         val selected = balanced(trueFalse, trueFalseCount, random) + balanced(singleChoice, total - trueFalseCount, random)
         // Interleave the chosen items by topic again so formats and topics are both spread out.
