@@ -1,3 +1,4 @@
+import java.util.Properties
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -6,13 +7,22 @@ plugins {
     id("com.google.devtools.ksp")
     id("androidx.room")
 }
+// Release signing uses your Play upload key from a git-ignored keystore.properties (storeFile,
+// storePassword, keyAlias, keyPassword), or the file named by KANSALAISTREENI_KEYSTORE_PROPERTIES.
+// Without it, release artifacts are built unsigned.
+val keystorePropertiesFile =
+    providers.environmentVariable("KANSALAISTREENI_KEYSTORE_PROPERTIES").orNull?.let(rootProject::file)
+        ?: rootProject.file("keystore.properties")
+val keystoreProperties = Properties().apply {
+    if (keystorePropertiesFile.exists()) keystorePropertiesFile.inputStream().use(::load)
+}
 android {
     namespace = "fi.kansalaisuuskoe"
     compileSdk {
         version = release(37) { minorApiLevel = 0 }
     }
     defaultConfig {
-        applicationId = "fi.kansalaisuuskoe.demo"
+        applicationId = "fi.kansalaistreeni"
         minSdk = 26
         targetSdk = 36
         versionCode = 17
@@ -21,15 +31,26 @@ android {
     }
     buildFeatures { compose = true; buildConfig = true }
     testOptions { animationsDisabled = true }
-    // Both interface languages must be available offline after an app-bundle install.
+    // All interface languages must be available offline after an app-bundle install.
     bundle { language { enableSplit = false } }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlin { compilerOptions { jvmTarget.set(JvmTarget.JVM_17) } }
+    signingConfigs {
+        if (keystorePropertiesFile.exists()) {
+            create("release") {
+                storeFile = keystorePropertiesFile.parentFile.resolve(requireNotNull(keystoreProperties.getProperty("storeFile")))
+                storePassword = requireNotNull(keystoreProperties.getProperty("storePassword"))
+                keyAlias = requireNotNull(keystoreProperties.getProperty("keyAlias"))
+                keyPassword = requireNotNull(keystoreProperties.getProperty("keyPassword"))
+            }
+        }
+    }
     buildTypes {
         release {
+            signingConfig = signingConfigs.findByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")

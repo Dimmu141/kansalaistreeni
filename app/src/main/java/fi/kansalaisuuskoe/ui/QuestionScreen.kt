@@ -64,7 +64,8 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
                 Surface(color = if (correct) MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.errorContainer, shape = MaterialTheme.shapes.medium) {
                     Column(Modifier.fillMaxWidth().padding(16.dp).semantics { liveRegion = LiveRegionMode.Polite }, verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Text(if (correct) stringResource(R.string.answer_correct) else stringResource(R.string.answer_incorrect), style = MaterialTheme.typography.titleLarge)
-                        Text(stringResource(R.string.correct_answer_value, answerLabel(q, q.correctOptionId)), style = MaterialTheme.typography.bodyLarge)
+                        // A correct true/false answer would only repeat the heading ("Oikein · Oikea vastaus: Oikein").
+                        if (!(correct && q.format == QuestionFormat.TRUE_FALSE)) Text(stringResource(R.string.correct_answer_value, answerLabel(q, q.correctOptionId)), style = MaterialTheme.typography.bodyLarge)
                         if (state.extraPractice) {
                             Text(stringResource(R.string.extra_practice_title), style = MaterialTheme.typography.titleSmall)
                             Text(stringResource(R.string.extra_practice_note), style = MaterialTheme.typography.bodyMedium)

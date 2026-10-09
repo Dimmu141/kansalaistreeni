@@ -21,5 +21,6 @@ try {
     if ($Offline) { $tasks += '--offline' }
     & (Join-Path $workspace 'gradlew.bat') @tasks
     if ($LASTEXITCODE -ne 0) { throw 'Android verification failed' }
-    Write-Output 'Verification passed. Release artifacts remain unsigned; no content or app was published.'
+    $signing = if ((Test-Path (Join-Path $workspace 'keystore.properties')) -or $env:KANSALAISTREENI_KEYSTORE_PROPERTIES) { 'signed with the local upload key' } else { 'unsigned' }
+    Write-Output "Verification passed. Release artifacts are $signing; no content or app was published."
 } finally { Pop-Location }

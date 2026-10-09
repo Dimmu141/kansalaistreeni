@@ -58,7 +58,7 @@ class ContentNavigationTest {
             val downTime = SystemClock.uptimeMillis()
             automation.injectInputEvent(KeyEvent(downTime, downTime, KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK, 0), true)
             automation.injectInputEvent(KeyEvent(downTime, SystemClock.uptimeMillis(), KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK, 0), true)
-            rule.waitUntil(10_000) { automation.rootInActiveWindow?.packageName?.toString() == "fi.kansalaisuuskoe.demo" }
+            rule.waitUntil(10_000) { automation.rootInActiveWindow?.packageName?.toString() == "fi.kansalaistreeni" }
             await(pickLabel)
             val back = when (language) { InterfaceLanguage.FINNISH -> "Takaisin"; InterfaceLanguage.SWEDISH -> "Tillbaka"; InterfaceLanguage.ENGLISH -> "Back" }
             rule.onNodeWithContentDescription(back).performClick()

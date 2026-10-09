@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Kansalaisuuskoe · Demo</string>
-    <string name="app_title">Kansalaisuuskoe</string>
+    <string name="app_name">Kansalaistreeni</string>
+    <string name="app_title">Kansalaistreeni</string>
     <string name="nav_home">Koti</string>
     <string name="nav_topics">Aiheet</string>
     <string name="nav_review">Kertaus</string>
@@ -339,4 +339,6 @@
     <string name="review_later_today">myöhemmin tänään</string>
     <string name="review_tomorrow">huomenna</string>
     <plurals name="review_in_days"><item quantity="one">%d päivän päästä</item><item quantity="other">%d päivän päästä</item></plurals>
+    <string name="feedback_send">Anna palautetta</string>
+    <string name="feedback_url" translatable="false"></string>
 </resources>

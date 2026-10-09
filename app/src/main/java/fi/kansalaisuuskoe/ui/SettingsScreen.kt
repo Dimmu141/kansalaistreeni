@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import fi.kansalaisuuskoe.R
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
@@ -21,6 +22,8 @@ import fi.kansalaisuuskoe.BuildConfig
 
 @Composable
 fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Unit, openMaterial: () -> Unit) {
+    // The feedback row appears only when a form URL is configured in strings.xml.
+    val feedbackUrl = stringResource(R.string.feedback_url).takeIf { it.startsWith("https://") }
     Page {
         item { Heading(stringResource(R.string.settings_title), stringResource(R.string.settings_subtitle)) }
         state.settingsError?.let { item { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } }
@@ -103,6 +106,12 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
         // About: the permanent home of the full disclaimer after onboarding.
         item { Text(stringResource(R.string.about_title), style = MaterialTheme.typography.titleMedium, modifier = Modifier.semantics { heading() }) }
         item { ContentNotice(state.contentStatus) }
+        feedbackUrl?.let { url ->
+            item {
+                val uri = LocalUriHandler.current
+                OutlinedButton(onClick = { uri.openUri(url) }, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.feedback_send)) }
+            }
+        }
         item { Text(stringResource(R.string.version_details, BuildConfig.VERSION_NAME, pluralStringResource(R.plurals.question_count, state.snapshot.questions.size, state.snapshot.questions.size)), style = MaterialTheme.typography.bodySmall) }
     }
 }

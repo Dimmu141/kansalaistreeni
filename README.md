@@ -14,10 +14,10 @@ On this Windows workstation:
 $env:JAVA_HOME = 'C:\Program Files\Android\Android Studio\jbr'
 .\gradlew.bat :app:assembleDebug
 & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" install -r .\app\build\outputs\apk\debug\app-debug.apk
-& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" shell am start -n fi.kansalaisuuskoe.demo/fi.kansalaisuuskoe.MainActivity
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" shell am start -n fi.kansalaistreeni/fi.kansalaisuuskoe.MainActivity
 ```
 
-`local.properties` contains this machine's SDK path and is ignored. On another machine let Android Studio generate it. The debug APK is `app/build/outputs/apk/debug/app-debug.apk`. Release assembly produces a minified **unsigned** APK; `:app:bundleRelease` also builds an unsigned app bundle. All three interface languages (Finnish, Swedish, English) are bundled together for offline availability. Release signing and Play publication are not configured. Application ID `fi.kansalaisuuskoe.demo` is provisional and should be decided before distribution.
+`local.properties` contains this machine's SDK path and is ignored. On another machine let Android Studio generate it. The debug APK is `app/build/outputs/apk/debug/app-debug.apk`. Release assembly produces a minified APK and `:app:bundleRelease` an app bundle. They are signed with your Play upload key when a git-ignored `keystore.properties` (see `keystore.properties.example`) or `KANSALAISTREENI_KEYSTORE_PROPERTIES` is present, and unsigned otherwise. All three interface languages (Finnish, Swedish, English) are bundled together for offline availability. Release signing and Play publication are not configured. The app is published as **Kansalaistreeni** with application ID `fi.kansalaistreeni`; the Kotlin namespace stays `fi.kansalaisuuskoe`. `python scripts/generate-icon.py` regenerates the launcher icon and `play/icon-512.png`.
 
 ## What works
 

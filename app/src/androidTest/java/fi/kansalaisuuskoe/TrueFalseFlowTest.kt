@@ -59,7 +59,7 @@ class TrueFalseFlowTest {
         await(statements[0].text)
         rule.onNodeWithText("True").assertIsSelected()
         click("Check answer"); await("Correct")
-        rule.onNodeWithText("Correct answer: True").assertExists()
+        rule.onNodeWithText("Correct answer: True").assertDoesNotExist() // a correct statement needs no repeat
         click("Next question")
 
         await(statements[1].text)
