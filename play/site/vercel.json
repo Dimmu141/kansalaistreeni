@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/", "destination": "/tietosuoja", "permanent": false },
+    { "source": "/privacy", "destination": "/tietosuoja", "permanent": false }
+  ]
+}

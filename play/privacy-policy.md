@@ -2,7 +2,7 @@
 
 Last updated / Päivitetty / Uppdaterad: 9.10.2026
 
-Publish this text at a public URL (for example GitHub Pages or Google Sites) and enter that URL in Play Console. Fill in the contact address before publishing.
+Published at https://kansalaistreeni.vercel.app/tietosuoja (source: play/site/).
 
 ## English
 
@@ -16,7 +16,7 @@ If you choose to send feedback from Settings → About, the link opens a web for
 
 If you installed the app from Google Play, Google may collect information as described in Google's privacy policy.
 
-Contact: [your e-mail address]
+Contact: dmitry.gurbanov@protonmail.com
 
 ## Suomi
 
@@ -30,7 +30,7 @@ Jos lähetät palautetta kohdasta Asetukset → Tietoja, linkki avaa verkkolomak
 
 Jos asensit sovelluksen Google Playsta, Google voi kerätä tietoja oman tietosuojakäytäntönsä mukaisesti.
 
-Yhteystiedot: [sähköpostiosoitteesi]
+Yhteystiedot: dmitry.gurbanov@protonmail.com
 
 ## Svenska
 
@@ -44,4 +44,4 @@ Om du skickar respons via Inställningar → Om appen öppnar länken ett webbfo
 
 Om du installerade appen från Google Play kan Google samla in uppgifter enligt Googles integritetspolicy.
 
-Kontakt: [din e-postadress]
+Kontakt: dmitry.gurbanov@protonmail.com
