@@ -105,7 +105,7 @@ class AssessmentFlowTest {
             app.container.settings.setStudyLanguage(StudyLanguage.SWEDISH)
             app.container.settings.setInterfaceLanguage(InterfaceLanguage.FINNISH)
         }
-        await("Harjoittelukieli: ruotsi"); click("Harjoituskoe"); click("Aloita harjoituskoe")
+        rule.awaitDescription("Harjoittelukieli: ruotsi"); click("Harjoituskoe"); click("Aloita harjoituskoe")
         rule.waitUntil(15_000) { runBlocking { assessments.sessions.first().isNotEmpty() } }
         val id = runBlocking { assessments.sessions.first().single().id }
         val questions = saved(id).questions

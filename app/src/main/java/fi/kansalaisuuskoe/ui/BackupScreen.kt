@@ -46,7 +46,7 @@ internal fun BackupBody(state: BackupState, currentAnswers: Int, export: () -> U
             item { OutlinedButton(select, Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled = !state.busy) { Text(stringResource(R.string.backup_select)) } }
         } else {
             item { Heading(stringResource(R.string.backup_review)) }
-            item { Text(stringResource(R.string.backup_date, formatReviewTime(preview.backup.exportedAt))) }
+            item { Text(stringResource(R.string.backup_date, formatDateTime(preview.backup.exportedAt))) }
             item { Text(stringResource(R.string.package_details, preview.backup.content.packageId, preview.backup.content.version)) }
             item { ContentNotice(preview.backup.content.questions.map { it.model() }.contentStatus(), compact = true) }
             item { Text(stringResource(R.string.backup_material_counts, preview.backup.content.topics.size, preview.backup.content.questions.size)) }

@@ -23,8 +23,6 @@ internal fun TopicLessonScreen(state: AppUiState, topicId: String, practise: () 
             item { Heading(stringResource(R.string.lesson_unavailable), stringResource(R.string.language_empty_body)) }
         } else {
             item { Heading(lesson.topic.titleFor(locale), lesson.topic.descriptionFor(locale)) }
-            item { StudyScope(state) }
-            item { ContentNotice(lesson.contentStatus(), compact = true) }
             item {
                 lesson.authored?.let { StudyText(it.introduction, state.settings.studyLanguage.tag, MaterialTheme.typography.bodyLarge) }
                     ?: Text(stringResource(R.string.lesson_intro), style = MaterialTheme.typography.bodyLarge)
@@ -37,7 +35,7 @@ internal fun TopicLessonScreen(state: AppUiState, topicId: String, practise: () 
                     Text(stringResource(R.string.lesson_idea_position, index + 1, lesson.authored.sections.size), style = MaterialTheme.typography.labelLarge)
                     AuthoredLessonSection(section, lesson.english?.sections?.find { it.id == section.id }, state.settings.studyLanguage.tag,
                         state.settings.easyFinnish, state.settings.explanation)
-                    section.sources.forEach { SourceReference(it, lesson.authored.status) }
+                    section.sources.forEach { SourceReference(it) }
                 }
             } else itemsIndexed(lesson.ideas, key = { _, question -> question.id }) { index, question ->
                 Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
@@ -56,19 +54,18 @@ internal fun TopicLessonScreen(state: AppUiState, topicId: String, practise: () 
 
 @Composable
 internal fun SourceReference(question: Question) {
-    SourceReference(question.source, question.status, question.reviewOverdue(java.time.LocalDate.now()))
+    SourceReference(question.source, question.reviewOverdue(java.time.LocalDate.now()))
 }
 
 /** One source line for questions and lessons: title, selectable link, editorial check date and an overdue warning. */
 @Composable
-internal fun SourceReference(source: Source, status: ContentStatus, reviewOverdue: Boolean = false) {
+internal fun SourceReference(source: Source, reviewOverdue: Boolean = false) {
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Text(stringResource(R.string.source_title), style = MaterialTheme.typography.titleMedium)
         Text(source.title, style = MaterialTheme.typography.bodyMedium)
         SelectionContainer { Text(source.url, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
         source.checkedAt?.let { Text(stringResource(R.string.source_checked, formatDate(it)), style = MaterialTheme.typography.bodySmall) }
         if (reviewOverdue) Text(stringResource(R.string.review_overdue), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.error)
-        if (status != ContentStatus.OFFICIAL) Text(stringResource(R.string.source_note), style = MaterialTheme.typography.bodySmall)
     }
 }
 

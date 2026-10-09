@@ -29,7 +29,6 @@ internal fun WordPracticeScreen(state: WordPracticeState, reveal: () -> Unit, ne
                     item { Button(next, Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(if (state.index + 1 == state.total) R.string.words_finish else R.string.words_next)) } }
                 }
                 item { Text(stringResource(R.string.words_no_score), style = MaterialTheme.typography.bodySmall) }
-                item { ContentNotice(word.contexts.contentStatus(), compact = true) }
             }
         }
     }

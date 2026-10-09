@@ -46,9 +46,8 @@ internal fun AnswerChoices(question: Question, selected: String?, enabled: Boole
         return
     }
     Column(Modifier.selectableGroup(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        question.options.forEachIndexed { index, option ->
+        question.options.forEach { option ->
             Choice(question, option.id, selected, enabled, select, feedback, Modifier.fillMaxWidth()) {
-                Text(stringResource(R.string.option_number, index + 1), style = MaterialTheme.typography.titleMedium, modifier = Modifier.width(32.dp))
                 Box(Modifier.weight(1f)) { StudyText(option.text, question.language, MaterialTheme.typography.bodyLarge) }
                 if (!feedback) RadioButton(selected = selected == option.id, onClick = null, enabled = enabled)
             }

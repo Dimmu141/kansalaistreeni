@@ -48,14 +48,13 @@ internal fun AssessmentsScreen(state: AssessmentUiState, app: AppUiState, start:
             item { AssessmentStatus(state, retry) }
             item { Text(stringResource(R.string.language_empty_body)) }
         }
-        item { ContentNotice(app.contentStatus) }
         item { Heading(stringResource(R.string.assessment_history), stringResource(R.string.assessment_storage_note)) }
         if (sessions.none { it.complete }) item { Text(stringResource(R.string.assessment_history_empty)) }
         items(sessions.filter { it.complete }, key = { it.id }) { session ->
             val result = Assessments.result(session)
             OutlinedCard(onClick = { open(session.id) }, modifier = Modifier.fillMaxWidth()) {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(formatReviewTime(requireNotNull(session.finishedAt)), style = MaterialTheme.typography.labelLarge)
+                    Text(formatDateTime(requireNotNull(session.finishedAt)), style = MaterialTheme.typography.labelLarge)
                     Text(stringResource(R.string.assessment_score, result.correct, result.total, result.accuracy), style = MaterialTheme.typography.titleLarge)
                     Text(stringResource(R.string.assessment_view_result), style = MaterialTheme.typography.bodyMedium)
                 }
@@ -89,9 +88,8 @@ internal fun AssessmentScreen(state: AssessmentUiState, sessionId: String, app: 
                 if (question.format == QuestionFormat.TRUE_FALSE) Text(stringResource(R.string.true_false_prompt), style = MaterialTheme.typography.bodyMedium)
                 Text(stringResource(R.string.assessment_saved_progress, session.answeredCount, session.questions.size), style = MaterialTheme.typography.bodySmall)
                 Text(session.topics.first { it.id == question.topicId }.titleFor(language), style = MaterialTheme.typography.labelLarge)
-                Text(stringResource(question.status.labelResource()), style = MaterialTheme.typography.labelLarge)
-                Text(stringResource(if (session.language == "sv") R.string.question_language_swedish else R.string.question_language), style = MaterialTheme.typography.bodySmall)
-                LinearProgressIndicator(progress = { session.answeredCount.toFloat() / session.questions.size }, modifier = Modifier.fillMaxWidth())
+                if (androidx.compose.ui.platform.LocalConfiguration.current.locales[0].language != session.language) Text(stringResource(if (session.language == "sv") R.string.question_language_swedish else R.string.question_language), style = MaterialTheme.typography.bodySmall)
+                ProgressBar(session.answeredCount.toFloat() / session.questions.size)
                 Text(stringResource(R.string.assessment_feedback_later), style = MaterialTheme.typography.bodyMedium)
             }
         }
@@ -105,7 +103,6 @@ internal fun AssessmentScreen(state: AssessmentUiState, sessionId: String, app: 
         }
         if (session.position > 0) item { OutlinedButton({ model.move(session.id, session.position - 1) }, Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled = !state.busy) { Text(stringResource(R.string.assessment_previous)) } }
         item { Text(stringResource(R.string.assessment_exit_note), style = MaterialTheme.typography.bodySmall) }
-        item { ContentNotice(session.questions.contentStatus(), compact = true) }
     }
 }
 
@@ -115,7 +112,7 @@ private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, 
     val eligible = Assessments.practiceMistakes(session, app.snapshot.questions)
     val language = topicLanguage(session.language)
     Page {
-        item { Heading(stringResource(R.string.assessment_result_title), formatReviewTime(requireNotNull(session.finishedAt))) }
+        item { Heading(stringResource(R.string.assessment_result_title), formatDateTime(requireNotNull(session.finishedAt))) }
         item { Text(stringResource(if (session.language == "sv") R.string.question_language_swedish else R.string.question_language)) }
         item { Text(stringResource(R.string.assessment_score, result.correct, result.total, result.accuracy), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite }) }
         item { Text(stringResource(R.string.assessment_score_note), style = MaterialTheme.typography.bodyMedium) }
@@ -127,13 +124,12 @@ private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, 
         item { OutlinedButton(leave, Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.assessment_back_to_list)) } }
         item { AssessmentStatus(state, retry) }
         item { AssessmentDeleteAction(session, state.busy || state.loading, delete) }
-        item { ContentNotice(session.questions.contentStatus(), compact = true) }
         item { Heading(stringResource(R.string.assessment_topic_results)) }
         items(result.topics, key = { it.topic.id }) { topic ->
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(topic.topic.titleFor(language), style = MaterialTheme.typography.titleMedium)
                 Text(stringResource(R.string.assessment_topic_score, topic.correct, topic.total))
-                LinearProgressIndicator(progress = { topic.correct.toFloat() / topic.total }, modifier = Modifier.fillMaxWidth())
+                ProgressBar(topic.correct.toFloat() / topic.total)
             }
         }
         item { Heading(stringResource(R.string.assessment_answers)) }
@@ -178,7 +174,7 @@ private fun AssessmentDeleteAction(session: AssessmentSession, busy: Boolean, de
             text = {
                 Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     Text(stringResource(if (target.language == "sv") R.string.question_language_swedish else R.string.question_language))
-                    Text(formatReviewTime(target.finishedAt ?: target.startedAt))
+                    Text(formatDateTime(target.finishedAt ?: target.startedAt))
                     if (target.complete) {
                         val result = Assessments.result(target)
                         Text(stringResource(R.string.assessment_score, result.correct, result.total, result.accuracy))

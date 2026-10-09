@@ -24,13 +24,9 @@
     <string name="notice_demo_body">Kysymykset ja aiheet eivät ole virallista koemateriaalia. Tämä sovellus ei ole viranomaispalvelu.</string>
     <string name="notice_editorial_body">Kysymykset ovat sovelluksen laatimia harjoituksia, eivät virallisia koekysymyksiä. Tämä sovellus ei ole viranomaispalvelu.</string>
     <string name="notice_official_body">Sisältö on merkitty viralliseksi oppimateriaaliksi. Tämä sovellus ei ole viranomaispalvelu.</string>
-    <string name="mastery_title">Harjoitusmateriaalin osaaminen</string>
-    <string name="mastery_note">Arvio perustuu harjoitteluun. Se ei ennusta kokeen läpäisyä.</string>
     <string name="percent_value">%1$d %%</string>
     <string name="topic_progress">Osaaminen %1$d %% · Harjoiteltu %2$d/%3$d</string>
     <string name="home_title">Oma oppimispolkusi</string>
-    <string name="home_subtitle">Pieni harjoitus kerrallaan.</string>
-    <string name="up_to_date">Harjoittelusi on ajan tasalla</string>
     <string name="practice_topics">Harjoittele aiheita</string>
     <string name="continue_practice">Jatka harjoittelua</string>
     <string name="start_practice">Aloita harjoittelu</string>
@@ -44,11 +40,7 @@
     <string name="streak_note">Peräkkäiset harjoittelupäivät. Yksi vastaus päivässä riittää.</string>
     <string name="day_count">%1$d pv</string>
     <string name="answers_total">Vastauksia yhteensä</string>
-    <string name="home_topics">Harjoittele aiheittain</string>
-    <string name="topics_provisional">Alustavat aiheet · eivät virallisia koeosioita</string>
     <string name="topics_title">Mitä haluat oppia?</string>
-    <string name="topics_subtitle">Valitse aihe. Tutustu keskeisiin asioihin ja sanastoon tai harjoittele kysymyksiä.</string>
-    <string name="topics_list_title">Alustavat harjoitteluaiheet</string>
     <string name="review_title">Kertaa ja muista</string>
     <string name="review_subtitle">Kertaus auttaa pitämään opitun mielessä.</string>
     <string name="review_empty_title">Ei kerrattavaa juuri nyt</string>
@@ -62,7 +54,6 @@
     <string name="strongest_topic">Vahvin harjoiteltu aihe</string>
     <string name="weakest_topic">Eniten harjoitusta kaipaa</string>
     <string name="topic_comparison_note">Vertailu koskee aiheita, joita olet jo harjoitellut. Tasatilanteessa näytetään ensimmäinen aihe.</string>
-    <string name="topic_comparison_empty">Vahvin ja heikoin aihe näkyvät, kun olet aloittanut harjoittelun.</string>
     <string name="topic_mastery_title">Osaaminen aiheittain</string>
     <string name="mastery_rules">Miten arvio syntyy? Oikea vastaus lisää kysymyksen osaamispisteitä 25 ensimmäisellä vastauskerralla tai kun kertaus on ajankohtainen. Aikainen oikea vastaus ei nosta pisteitä tai siirrä kertausta. Väärä vastaus vähentää pisteitä 35. Pisteet ovat välillä 0–100. Aiheen ja koko materiaalin arvio on kysymysten keskiarvo; harjoittelemattoman kysymyksen pisteet ovat 0. Tämä on demoversioon tehty sääntö, ei arvio virallisesta koevalmiudesta.</string>
     <string name="settings_subtitle">Hallitse kieliä, ulkoasua ja tallennettuja oppimistietoja.</string>
@@ -87,15 +78,9 @@
     <string name="practice_empty_body">Kertauslista on tyhjä. Voit harjoitella uusia aiheita.</string>
     <string name="practice_summary">Oikein %1$d / %2$d. Vastauksesi ja edistymisesi on tallennettu tähän laitteeseen.</string>
     <string name="return_home">Palaa oppimispolulle</string>
-    <string name="question_demo">demokysymys</string>
-    <string name="question_editorial">harjoituskysymys</string>
-    <string name="question_sourced">lähteistetyksi merkitty harjoituskysymys</string>
-    <string name="question_official">viralliseksi merkitty oppimateriaali</string>
-    <string name="question_context">%1$s · %2$s</string>
     <string name="question_position">Kysymys %1$d / %2$d</string>
     <string name="question_language">Harjoittelukieli: suomi</string>
     <string name="question_language_swedish">Harjoittelukieli: ruotsi</string>
-    <string name="option_number">%1$d.</string>
     <string name="correct_answer_label">Oikea vastaus</string>
     <string name="your_answer">Oma vastauksesi</string>
     <string name="saving">Tallennetaan…</string>
@@ -112,7 +97,6 @@
     <string name="vocabulary_english">Englanti: %1$s</string>
     <string name="vocabulary_swedish">Ruotsi: %1$s</string>
     <string name="source_title">Taustalähde</string>
-    <string name="source_note">Lähdemerkintä ei tee harjoitusmateriaalista virallista koemateriaalia.</string>
     <string name="show_summary">Näytä yhteenveto</string>
     <string name="next_question">Seuraava kysymys</string>
     <string name="date_time_pattern">d.M.yyyy \&apos;klo\&apos; HH.mm</string>
@@ -291,8 +275,6 @@
     <string name="daily_review_only">Lyhyt kertaus: %1$s.</string>
     <string name="daily_mix">%1$s · %2$s</string>
     <string name="daily_focus_topic">Lisää harjoittelua aiheesta: %1$s.</string>
-    <string name="daily_reviews_remaining">Tämän harjoituksen jälkeen kertausjonoon jää %1$s.</string>
-    <string name="daily_all_reviews">Kertaa kaikki · %1$s</string>
     <string name="daily_reason_review">Kertauskysymys · valittu kertausajan perusteella.</string>
     <string name="daily_reason_weak">Uusi kysymys aiheesta, joka kaipaa vielä harjoittelua.</string>
     <string name="daily_reason_new_topic">Tutustu aiheeseen, jota et ole vielä harjoitellut.</string>
@@ -345,4 +327,16 @@
         <item quantity="one">%d oppimistavoite</item>
         <item quantity="other">%d oppimistavoitetta</item>
     </plurals>
+    <string name="not_official_chip">Ei virallista materiaalia</string>
+    <string name="onboarding_title">Ennen kuin aloitat</string>
+    <string name="onboarding_about_note">Löydät tämän tiedon myöhemmin kohdasta Asetukset → Tietoja.</string>
+    <string name="onboarding_start">Aloita</string>
+    <string name="about_title">Tietoja</string>
+    <string name="study_switch_fi" translatable="false">FI</string>
+    <string name="study_switch_sv" translatable="false">SV</string>
+    <string name="vocabulary_row_note">Aiheiden sanat ja niiden merkitykset</string>
+    <string name="review_now">nyt</string>
+    <string name="review_later_today">myöhemmin tänään</string>
+    <string name="review_tomorrow">huomenna</string>
+    <plurals name="review_in_days"><item quantity="one">%d päivän päästä</item><item quantity="other">%d päivän päästä</item></plurals>
 </resources>

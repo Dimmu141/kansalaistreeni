@@ -72,7 +72,7 @@ class ExplanationFlowTest {
     @Test fun swedishStudyKeepsSwedishAlongsideEnglishSupport() {
         chooseEnglishSupport()
         runBlocking { app.container.settings.setStudyLanguage(StudyLanguage.SWEDISH) }
-        await("Study language: Swedish"); click("Start learning")
+        rule.awaitDescription("Study language: Swedish"); click("Start learning")
         await("Vem stiftar lagarna i Finland?")
         checkLocale("Vem stiftar lagarna i Finland?", "sv")
         text("Riksdagen").performClick(); click("Check answer"); await("Correct")

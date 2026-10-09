@@ -22,8 +22,6 @@ internal fun VocabularyScreen(state: AppUiState, query: String, topicId: String?
     var menu by remember { mutableStateOf(false) }
     Page {
         item { Heading(stringResource(R.string.vocabulary_browser_title), stringResource(R.string.vocabulary_intro)) }
-        item { StudyScope(state) }
-        item { ContentNotice(state.studySnapshot.questions.contentStatus(), compact = true) }
         item { OutlinedTextField(query, search, Modifier.fillMaxWidth(), label = { Text(stringResource(R.string.vocabulary_search)) }, singleLine = true) }
         item {
             Box {
@@ -59,7 +57,6 @@ internal fun VocabularyScreen(state: AppUiState, query: String, topicId: String?
                 }
             }
         }
-        item { ContentNotice(state.contentStatus) }
     }
 }
 

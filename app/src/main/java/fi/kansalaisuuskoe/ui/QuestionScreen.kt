@@ -36,12 +36,7 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
     Page(state = listState) {
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(stringResource(R.string.question_context, topics.find { it.id == q.topicId }?.titleFor(topicLanguage(q.language)).orEmpty(), when (q.status) {
-                    ContentStatus.DEMO -> stringResource(R.string.question_demo)
-                    ContentStatus.EDITORIAL -> stringResource(R.string.question_editorial)
-                    ContentStatus.OFFICIALLY_SOURCED -> stringResource(R.string.question_sourced)
-                    ContentStatus.OFFICIAL -> stringResource(R.string.question_official)
-                }), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                Text(topics.find { it.id == q.topicId }?.titleFor(topicLanguage(q.language)).orEmpty(), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
                 Text(stringResource(R.string.question_position, state.position, state.total), style = MaterialTheme.typography.bodyMedium)
                 if (q.format == QuestionFormat.TRUE_FALSE) Text(stringResource(R.string.true_false_prompt), style = MaterialTheme.typography.bodyMedium)
                 state.dailyReason?.let { reason ->
@@ -53,7 +48,7 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
                     }), style = MaterialTheme.typography.bodySmall)
                 }
                 if (language != q.language) Text(stringResource(if (q.language == "sv") R.string.question_language_swedish else R.string.question_language), style = MaterialTheme.typography.bodySmall)
-                LinearProgressIndicator(progress = { (state.position - 1).toFloat() / state.total }, modifier = Modifier.fillMaxWidth())
+                ProgressBar((state.position - 1).toFloat() / state.total)
             }
         }
         item { StudyText(q.text, q.language, MaterialTheme.typography.headlineMedium, Modifier.semantics { heading() }) }

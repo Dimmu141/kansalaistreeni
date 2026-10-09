@@ -10,6 +10,8 @@ import androidx.compose.ui.res.stringResource
 import fi.kansalaisuuskoe.R
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import fi.kansalaisuuskoe.data.ThemePreference
 import fi.kansalaisuuskoe.data.InterfaceLanguage
@@ -97,6 +99,9 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
         item { HorizontalDivider() }
         item { OutlinedButton(onClick = openMaterial, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.material_title)) } }
         item { OutlinedButton(onClick = openBackup, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.backup_title)) } }
+        item { HorizontalDivider() }
+        // About: the permanent home of the full disclaimer after onboarding.
+        item { Text(stringResource(R.string.about_title), style = MaterialTheme.typography.titleMedium, modifier = Modifier.semantics { heading() }) }
         item { ContentNotice(state.contentStatus) }
         item { Text(stringResource(R.string.version_details, BuildConfig.VERSION_NAME, pluralStringResource(R.plurals.question_count, state.snapshot.questions.size, state.snapshot.questions.size)), style = MaterialTheme.typography.bodySmall) }
     }

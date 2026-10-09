@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.res.Configuration
 import fi.kansalaisuuskoe.domain.Question
 import fi.kansalaisuuskoe.domain.QuestionFormat
+import androidx.compose.ui.test.onAllNodesWithContentDescription
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import java.util.Locale
@@ -19,3 +20,7 @@ internal fun Activity.answerLabel(question: Question, optionId: String): String 
     val localized = createConfigurationContext(Configuration(resources.configuration).apply { setLocale(Locale.forLanguageTag(tag)) })
     return localized.getString(if (optionId == QuestionFormat.TRUE_ID) R.string.true_false_true else R.string.true_false_false)
 }
+
+/** Waits for a node by content description, such as the app bar study-language switch. */
+internal fun androidx.compose.ui.test.junit4.ComposeTestRule.awaitDescription(value: String) =
+    waitUntil(15_000) { onAllNodesWithContentDescription(value).fetchSemanticsNodes().isNotEmpty() }

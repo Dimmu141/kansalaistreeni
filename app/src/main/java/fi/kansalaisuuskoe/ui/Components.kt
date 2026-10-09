@@ -10,7 +10,9 @@ import androidx.compose.ui.res.pluralStringResource
 import fi.kansalaisuuskoe.R
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.*
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.StrokeCap
 import fi.kansalaisuuskoe.domain.TopicProgress
 import fi.kansalaisuuskoe.domain.ContentStatus
 
@@ -64,13 +66,17 @@ fun MasteryHero(percent: Int, studied: Int, total: Int) {
     val masteryLabel = pluralStringResource(R.plurals.mastery_accessibility, percent, percent)
     Surface(color = MaterialTheme.colorScheme.primaryContainer, shape = RoundedCornerShape(24.dp)) {
         Column(Modifier.fillMaxWidth().padding(24.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Text(stringResource(R.string.mastery_title), style = MaterialTheme.typography.titleMedium)
             Text(stringResource(R.string.percent_value, percent), style = MaterialTheme.typography.displayMedium, modifier = Modifier.semantics { contentDescription = masteryLabel })
-            LinearProgressIndicator(progress = { percent / 100f }, modifier = Modifier.fillMaxWidth().height(8.dp))
+            ProgressBar(percent / 100f, 8.dp)
             Text(pluralStringResource(R.plurals.studied_count, total, studied, total), style = MaterialTheme.typography.bodyMedium)
-            Text(stringResource(R.string.mastery_note), style = MaterialTheme.typography.bodySmall)
         }
     }
+}
+/** Progress without the Material stop dot or gap, so 0 % reads as an empty track. */
+@Composable
+fun ProgressBar(fraction: Float, height: Dp = 6.dp) {
+    LinearProgressIndicator(progress = { fraction.coerceIn(0f, 1f) }, modifier = Modifier.fillMaxWidth().height(height),
+        strokeCap = StrokeCap.Butt, gapSize = 0.dp, drawStopIndicator = {})
 }
 @Composable
 fun TopicRow(progress: TopicProgress, onClick: (() -> Unit)? = null) {
@@ -79,7 +85,7 @@ fun TopicRow(progress: TopicProgress, onClick: (() -> Unit)? = null) {
         Column(Modifier.fillMaxWidth().padding(vertical = 16.dp, horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(progress.topic.titleFor(language), style = MaterialTheme.typography.titleMedium)
             Text(progress.topic.descriptionFor(language), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            LinearProgressIndicator(progress = { progress.mastery / 100f }, modifier = Modifier.fillMaxWidth().height(6.dp))
+            ProgressBar(progress.mastery / 100f)
             Text(stringResource(R.string.topic_progress, progress.mastery, progress.studiedCount, progress.questionCount), style = MaterialTheme.typography.labelLarge)
         }
     }
@@ -103,4 +109,10 @@ fun EmptyState(title: String, message: String, actionLabel: String, onAction: ()
         Heading(title, message)
         Button(onClick = onAction, modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)) { Text(actionLabel) }
     }
+}
+
+/** The study language on detail screens without the app bar switch, such as the assessment list. */
+@Composable
+internal fun StudyScope(state: AppUiState) {
+    Text(stringResource(if (state.settings.studyLanguage == fi.kansalaisuuskoe.domain.StudyLanguage.SWEDISH) R.string.question_language_swedish else R.string.question_language), style = MaterialTheme.typography.labelLarge)
 }

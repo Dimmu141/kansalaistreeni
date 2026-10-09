@@ -20,10 +20,12 @@ foreach ($resources in @($finnish, $english)) {
     $keys = @($resources.resources.ChildNodes | ForEach-Object { $_.GetAttribute('name') })
     if (($keys | Select-Object -Unique).Count -ne $keys.Count) { throw 'Duplicate resource key' }
 }
-$baseKeys = @($finnish.resources.ChildNodes | ForEach-Object { $_.GetAttribute('name') })
+# Resources marked translatable="false" (such as the FI/SV switch labels) live only in the base file.
+$translatable = @($finnish.resources.ChildNodes | Where-Object { $_.GetAttribute('translatable') -ne 'false' })
+$baseKeys = @($translatable | ForEach-Object { $_.GetAttribute('name') })
 $translatedKeys = @($english.resources.ChildNodes | ForEach-Object { $_.GetAttribute('name') })
 if (Compare-Object $baseKeys $translatedKeys) { throw 'Finnish/English resource keys differ' }
-foreach ($resource in $finnish.resources.ChildNodes) {
+foreach ($resource in $translatable) {
     $translated = $english.resources.ChildNodes | Where-Object { $_.GetAttribute('name') -eq $resource.GetAttribute('name') }
     $baseFormats = @([regex]::Matches($resource.InnerText, '%(?:\d+\$)?[ds]') | ForEach-Object Value)
     $translatedFormats = @([regex]::Matches($translated.InnerText, '%(?:\d+\$)?[ds]') | ForEach-Object Value)

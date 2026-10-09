@@ -24,13 +24,9 @@
     <string name="notice_demo_body">These questions and topics are not official test material. This app is not a government service.</string>
     <string name="notice_editorial_body">These practice questions were written for the app and are not official test questions. This app is not a government service.</string>
     <string name="notice_official_body">This content is labelled as official learning material. This app is not a government service.</string>
-    <string name="mastery_title">Practice material mastery</string>
-    <string name="mastery_note">This estimate reflects practice. It does not predict whether you will pass the test.</string>
     <string name="percent_value">%1$d%%</string>
     <string name="topic_progress">Mastery %1$d%% · Practised %2$d/%3$d</string>
     <string name="home_title">Your learning path</string>
-    <string name="home_subtitle">One small practice session at a time.</string>
-    <string name="up_to_date">Your practice is up to date</string>
     <string name="practice_topics">Practise by topic</string>
     <string name="continue_practice">Continue learning</string>
     <string name="start_practice">Start learning</string>
@@ -44,11 +40,7 @@
     <string name="streak_note">Consecutive study days. One answer a day is enough.</string>
     <string name="day_count">%1$d d</string>
     <string name="answers_total">Total answers</string>
-    <string name="home_topics">Learn by topic</string>
-    <string name="topics_provisional">Provisional topics · not official test sections</string>
     <string name="topics_title">What would you like to learn?</string>
-    <string name="topics_subtitle">Choose a topic to read key ideas, explore vocabulary or practise questions.</string>
-    <string name="topics_list_title">Provisional study topics</string>
     <string name="review_title">Review and remember</string>
     <string name="review_subtitle">Review helps you remember what you have learnt.</string>
     <string name="review_empty_title">No reviews due right now</string>
@@ -62,7 +54,6 @@
     <string name="strongest_topic">Strongest practised topic</string>
     <string name="weakest_topic">Needs the most practice</string>
     <string name="topic_comparison_note">Only topics you have practised are compared. If scores are tied, the first topic is shown.</string>
-    <string name="topic_comparison_empty">Your strongest and weakest topics appear once you start practising.</string>
     <string name="topic_mastery_title">Mastery by topic</string>
     <string name="mastery_rules">How is mastery calculated? A correct first answer or due review adds 25 points to a question. An early correct answer does not add points or move the review time. An incorrect answer subtracts 35 points. Scores range from 0 to 100. Topic and overall mastery average the question scores; unseen questions count as zero. This is a demo rule, not an estimate of official test readiness.</string>
     <string name="settings_subtitle">Manage languages, appearance and your saved learning data.</string>
@@ -87,15 +78,9 @@
     <string name="practice_empty_body">There are no due or new questions in this session. You can practise by topic.</string>
     <string name="practice_summary">Correct: %1$d / %2$d. Your answers and progress are saved on this device.</string>
     <string name="return_home">Return to your learning path</string>
-    <string name="question_demo">demo question</string>
-    <string name="question_editorial">practice question</string>
-    <string name="question_sourced">practice question labelled as sourced</string>
-    <string name="question_official">material labelled as official</string>
-    <string name="question_context">%1$s · %2$s</string>
     <string name="question_position">Question %1$d / %2$d</string>
     <string name="question_language">Study language: Finnish</string>
     <string name="question_language_swedish">Study language: Swedish</string>
-    <string name="option_number">%1$d.</string>
     <string name="correct_answer_label">Correct answer</string>
     <string name="your_answer">Your answer</string>
     <string name="saving">Saving…</string>
@@ -112,7 +97,6 @@
     <string name="vocabulary_english">English: %1$s</string>
     <string name="vocabulary_swedish">Swedish: %1$s</string>
     <string name="source_title">Background source</string>
-    <string name="source_note">A source reference does not make this practice material official test material.</string>
     <string name="show_summary">Show summary</string>
     <string name="next_question">Next question</string>
     <string name="date_time_pattern">d MMM yyyy \&apos;at\&apos; HH:mm</string>
@@ -291,8 +275,6 @@
     <string name="daily_review_only">Short review: %1$s.</string>
     <string name="daily_mix">%1$s · %2$s</string>
     <string name="daily_focus_topic">More practice in: %1$s.</string>
-    <string name="daily_reviews_remaining">Still due after this session: %1$s.</string>
-    <string name="daily_all_reviews">Review all · %1$s</string>
     <string name="daily_reason_review">Review question · selected because its review was due.</string>
     <string name="daily_reason_weak">A new question from a topic that needs more practice.</string>
     <string name="daily_reason_new_topic">Explore a topic you have not practised yet.</string>
@@ -345,4 +327,14 @@
         <item quantity="one">%d learning objective</item>
         <item quantity="other">%d learning objectives</item>
     </plurals>
+    <string name="not_official_chip">Not official material</string>
+    <string name="onboarding_title">Before you start</string>
+    <string name="onboarding_about_note">You can find this later in Settings → About.</string>
+    <string name="onboarding_start">Start</string>
+    <string name="about_title">About</string>
+    <string name="vocabulary_row_note">Topic words and their meanings</string>
+    <string name="review_now">now</string>
+    <string name="review_later_today">later today</string>
+    <string name="review_tomorrow">tomorrow</string>
+    <plurals name="review_in_days"><item quantity="one">in %d day</item><item quantity="other">in %d days</item></plurals>
 </resources>

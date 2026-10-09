@@ -86,6 +86,5 @@ internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, ex
                 }
             }
         }
-        item { ContentNotice(state.contentStatus) }
     }
 }

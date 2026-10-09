@@ -22,6 +22,7 @@ import androidx.navigation.compose.*
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
 import fi.kansalaisuuskoe.AppContainer
+import fi.kansalaisuuskoe.domain.ContentStatus
 
 private data class Destination(val route: String, val label: Int, val icon: androidx.compose.ui.graphics.vector.ImageVector)
 private val destinations = listOf(
@@ -46,6 +47,10 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
     val words = route.startsWith("words")
     val assessment = route.startsWith("assessment")
     val detail = settings || studying || material || coverage || backup || lesson || vocabulary || words || assessment
+    if (!state.loading && state.error == null && !state.settings.onboardingSeen) {
+        OnboardingScreen(state.contentStatus, model::finishOnboarding)
+        return
+    }
     fun tab(destination: String) {
         nav.navigate(destination) {
             popUpTo("home") { saveState = true }
@@ -56,11 +61,22 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(when { assessment -> R.string.assessment_title; material -> R.string.material_title; coverage -> R.string.coverage_title; backup -> R.string.backup_nav_title; settings -> R.string.settings_title; studying -> R.string.practice_title; lesson -> R.string.lesson_title; vocabulary -> R.string.vocabulary_browser_title; words -> R.string.words_title; else -> R.string.app_title }), style = MaterialTheme.typography.titleLarge) },
+                title = {
+                    Column {
+                        Text(stringResource(when { assessment -> R.string.assessment_title; material -> R.string.material_title; coverage -> R.string.coverage_title; backup -> R.string.backup_nav_title; settings -> R.string.settings_title; studying -> R.string.practice_title; lesson -> R.string.lesson_title; vocabulary -> R.string.vocabulary_browser_title; words -> R.string.words_title; else -> R.string.app_title }), style = MaterialTheme.typography.titleLarge)
+                        // The full disclaimer lives in onboarding and Settings → About; top-level screens keep only this chip.
+                        if (!detail && state.contentStatus != ContentStatus.OFFICIAL) NotOfficialChip()
+                    }
+                },
                 navigationIcon = {
                     if (detail) IconButton(onClick = { nav.popBackStack() }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.back)) }
                 },
-                actions = { if (!detail) IconButton(onClick = { nav.navigate("settings") { launchSingleTop = true } }) { Icon(Icons.Default.Settings, stringResource(R.string.settings_title)) } },
+                actions = {
+                    if (!detail) {
+                        StudyLanguageSwitch(state.settings.studyLanguage, model::studyLanguage)
+                        IconButton(onClick = { nav.navigate("settings") { launchSingleTop = true } }) { Icon(Icons.Default.Settings, stringResource(R.string.settings_title)) }
+                    }
+                },
             )
         },
         bottomBar = {
@@ -76,8 +92,8 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                 state.loading -> Box(Modifier.fillMaxSize(), contentAlignment = androidx.compose.ui.Alignment.Center) { CircularProgressIndicator(Modifier.semanticsLabel(stringResource(R.string.loading_content))) }
                 state.error != null -> Page { item { EmptyState(stringResource(R.string.content_failed), stringResource(state.error), stringResource(R.string.retry), model::initialize) } }
                 else -> NavHost(navController = nav, startDestination = "home") {
-                    composable("home") { HomeScreen(state, { nav.navigate("study/all") }, { nav.navigate("study/review") }, { tab("topics") }, { nav.navigate("lesson/$it") }, { nav.navigate("settings") }, { nav.navigate("assessments") }) }
-                    composable("topics") { TopicsScreen(state, { nav.navigate("vocabulary") }, { nav.navigate("assessments") }) { nav.navigate("lesson/$it") } }
+                    composable("home") { HomeScreen(state, { nav.navigate("study/all") }, { tab("topics") }, { nav.navigate("settings") }, { nav.navigate("assessments") }) }
+                    composable("topics") { TopicsScreen(state, { nav.navigate("vocabulary") }) { nav.navigate("lesson/$it") } }
                     composable("assessments") {
                         val assessmentModel: AssessmentViewModel = viewModel(factory = viewModelFactory { initializer { AssessmentViewModel(container.assessments) } })
                         val assessmentState by assessmentModel.state.collectAsStateWithLifecycle()

@@ -17,7 +17,7 @@ android {
         targetSdk = 36
         versionCode = 16
         versionName = "0.16.0"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "fi.kansalaisuuskoe.OnboardedTestRunner"
     }
     buildFeatures { compose = true; buildConfig = true }
     testOptions { animationsDisabled = true }

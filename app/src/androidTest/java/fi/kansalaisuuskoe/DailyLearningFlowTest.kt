@@ -41,10 +41,13 @@ class DailyLearningFlowTest {
             DailyLearningPlanner.plan(repository.snapshot.first().forLanguage(StudyLanguage.FINNISH), now)
         }
         await("3 kertauskysymystä · 2 uutta kysymystä")
-        rule.onNodeWithText("Sovellusta varten laadittu materiaali").assertIsDisplayed()
-        click("Kertaa kaikki · 7 kysymystä")
+        rule.onNodeWithText("Ei virallista materiaalia").assertIsDisplayed()
+        // The full backlog lives on the Review tab; Home keeps one primary action.
+        rule.onNodeWithText("Kertaus").performClick()
+        click("Aloita kertaus · 7 kysymystä")
         await("Kysymys 1 / 7")
         rule.onNodeWithContentDescription("Takaisin").performClick()
+        rule.onNodeWithText("Koti").performClick()
         await("Oma oppimispolkusi")
         click("Jatka harjoittelua")
         plan.items.forEachIndexed { index, item ->

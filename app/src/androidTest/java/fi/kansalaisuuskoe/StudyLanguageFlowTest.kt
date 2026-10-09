@@ -41,7 +41,7 @@ class StudyLanguageFlowTest {
         rule.onNode(hasScrollAction()).performScrollToNode(hasText("Swedish questions"))
         text("Swedish questions").assertIsSelected()
         rule.onNodeWithContentDescription("Back").performClick()
-        await("Study language: Swedish")
+        rule.awaitDescription("Study language: Swedish")
     }
     @Test fun swedishLearningRestoresFeedbackAndKeepsFinnishHistorySeparate() {
         chooseSwedish()
@@ -62,7 +62,7 @@ class StudyLanguageFlowTest {
         assertEquals(0, LearningEngine.summarize(saved.forLanguage(StudyLanguage.FINNISH), System.currentTimeMillis()).answered)
         assertEquals(2, LearningEngine.summarize(saved.forLanguage(StudyLanguage.SWEDISH), System.currentTimeMillis()).answered)
         rule.onNodeWithContentDescription("Settings").performClick(); click("Finnish questions")
-        rule.onNodeWithContentDescription("Back").performClick(); await("Study language: Finnish")
+        rule.onNodeWithContentDescription("Back").performClick(); rule.awaitDescription("Study language: Finnish")
         click("Start learning")
         await("Kuka käyttää Suomessa lainsäädäntövaltaa?")
         text("Eduskunta").assertExists()
@@ -110,7 +110,7 @@ class StudyLanguageFlowTest {
         text("Review").performClick()
         text("Start review · 1 question").assertDoesNotExist()
         text("Progress").performClick()
-        text("Practice material mastery").assertDoesNotExist()
+        rule.onNodeWithContentDescription("Practice material mastery", substring = true).assertDoesNotExist()
     }
     @Test fun activeSessionKeepsItsLanguageAfterPreferenceChangesAndRecreation() {
         chooseSwedish()

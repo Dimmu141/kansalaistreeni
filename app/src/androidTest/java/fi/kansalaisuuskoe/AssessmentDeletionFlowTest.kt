@@ -68,7 +68,7 @@ class AssessmentDeletionFlowTest {
             id
         }
         val before = runBlocking { learning.snapshot.first() }
-        await("Harjoittelukieli: ruotsi"); click("Harjoituskoe")
+        rule.awaitDescription("Harjoittelukieli: ruotsi"); text("Harjoituskoe").performClick()
         click("Poista keskeneräinen harjoituskoe")
         await("Poistetaanko keskeneräinen harjoituskoe?")
         dialog("Harjoittelukieli: ruotsi").assertIsDisplayed()

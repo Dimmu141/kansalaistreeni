@@ -137,7 +137,7 @@ class LearningFlowTest {
             val now = System.currentTimeMillis()
             repository.snapshot.first().questions.filter { it.language == "fi" }.forEach { repository.answer(it, it.correctOptionId, "first-${it.id}", now) }
         }
-        await("Harjoittelusi on ajan tasalla")
+        await("Harjoittele aiheita")
         click("Harjoittele aiheita")
         await("Mitä haluat oppia?")
         assertEquals(12, runBlocking { repository.snapshot.first().attempts.size })
