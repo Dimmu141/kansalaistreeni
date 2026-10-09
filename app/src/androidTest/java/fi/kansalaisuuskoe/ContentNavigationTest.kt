@@ -31,10 +31,11 @@ class ContentNavigationTest {
     @Test fun realNavigationAndPickerWorkWithBothLocaleContexts() {
         for (language in InterfaceLanguage.entries) {
             runBlocking { app.container.settings.setInterfaceLanguage(language) }
-            val finnish = language == InterfaceLanguage.FINNISH
-            val settingsLabel = if (finnish) "Asetukset" else "Settings"
-            val materialLabel = if (finnish) "Oppimateriaali" else "Study material"
-            val pickLabel = if (finnish) "Valitse sisältötiedosto" else "Choose a content file"
+            val (settingsLabel, materialLabel, pickLabel) = when (language) {
+                InterfaceLanguage.FINNISH -> Triple("Asetukset", "Oppimateriaali", "Valitse sisältötiedosto")
+                InterfaceLanguage.SWEDISH -> Triple("Inställningar", "Studiematerial", "Välj en innehållsfil")
+                InterfaceLanguage.ENGLISH -> Triple("Settings", "Study material", "Choose a content file")
+            }
             rule.waitUntil(15_000) { rule.onAllNodesWithContentDescription(settingsLabel).fetchSemanticsNodes().isNotEmpty() }
             rule.onNodeWithContentDescription(settingsLabel).performClick()
             rule.onNode(hasScrollAction()).performScrollToNode(hasText(materialLabel))
@@ -59,8 +60,9 @@ class ContentNavigationTest {
             automation.injectInputEvent(KeyEvent(downTime, SystemClock.uptimeMillis(), KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK, 0), true)
             rule.waitUntil(10_000) { automation.rootInActiveWindow?.packageName?.toString() == "fi.kansalaisuuskoe.demo" }
             await(pickLabel)
-            rule.onNodeWithContentDescription(if (language == InterfaceLanguage.FINNISH) "Takaisin" else "Back").performClick()
-            rule.onNodeWithContentDescription(if (language == InterfaceLanguage.FINNISH) "Takaisin" else "Back").performClick()
+            val back = when (language) { InterfaceLanguage.FINNISH -> "Takaisin"; InterfaceLanguage.SWEDISH -> "Tillbaka"; InterfaceLanguage.ENGLISH -> "Back" }
+            rule.onNodeWithContentDescription(back).performClick()
+            rule.onNodeWithContentDescription(back).performClick()
         }
     }
 }

@@ -10,7 +10,13 @@ import fi.kansalaisuuskoe.domain.StudyLanguage
 
 private val Context.settingsStore by preferencesDataStore("settings")
 enum class ThemePreference { SYSTEM, LIGHT, DARK }
-enum class InterfaceLanguage(val tag: String) { FINNISH("fi"), ENGLISH("en") }
+enum class InterfaceLanguage(val tag: String) {
+    FINNISH("fi"), SWEDISH("sv"), ENGLISH("en");
+    companion object {
+        /** Without an explicit choice, Swedish study gets a Swedish interface; otherwise Finnish. */
+        fun defaultFor(study: StudyLanguage) = if (study == StudyLanguage.SWEDISH) SWEDISH else FINNISH
+    }
+}
 enum class ExplanationPreference { STUDY_LANGUAGE, ALSO_ENGLISH }
 data class StudySettings(val easyFinnish: Boolean = true, val theme: ThemePreference = ThemePreference.SYSTEM, val interfaceLanguage: InterfaceLanguage = InterfaceLanguage.FINNISH, val studyLanguage: StudyLanguage = StudyLanguage.FINNISH, val explanation: ExplanationPreference = ExplanationPreference.STUDY_LANGUAGE, val onboardingSeen: Boolean = true)
 class SettingsRepository(context: Context) {
@@ -22,9 +28,10 @@ class SettingsRepository(context: Context) {
     private val explanationKey = stringPreferencesKey("explanation")
     private val onboardingKey = booleanPreferencesKey("onboarding_seen")
     val settings = store.data.catch { error -> if (error is IOException) emit(emptyPreferences()) else throw error }.map { prefs ->
+        val study = StudyLanguage.entries.firstOrNull { it.tag == prefs[studyLanguageKey] } ?: StudyLanguage.FINNISH
         StudySettings(prefs[easyKey] ?: true, ThemePreference.entries.firstOrNull { it.name == prefs[themeKey] } ?: ThemePreference.SYSTEM,
-            InterfaceLanguage.entries.firstOrNull { it.tag == prefs[languageKey] } ?: InterfaceLanguage.FINNISH,
-            StudyLanguage.entries.firstOrNull { it.tag == prefs[studyLanguageKey] } ?: StudyLanguage.FINNISH,
+            InterfaceLanguage.entries.firstOrNull { it.tag == prefs[languageKey] } ?: InterfaceLanguage.defaultFor(study),
+            study,
             ExplanationPreference.entries.firstOrNull { it.name == prefs[explanationKey] } ?: ExplanationPreference.STUDY_LANGUAGE,
             prefs[onboardingKey] ?: false)
     }
