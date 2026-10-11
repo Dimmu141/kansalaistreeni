@@ -31,9 +31,7 @@ Jokaisessa kysymyksessä ja oppitunnissa on linkki viralliseen lähteeseen ja ta
 • Finlex, lainsäädäntö: https://www.finlex.fi
 • Suomi.fi: https://www.suomi.fi
 • Valtioneuvosto: https://valtioneuvosto.fi
-• Ulkoministeriö: https://um.fi
 • Tasa-arvovaltuutettu: https://tasa-arvo.fi
-• Eduskunta: https://www.eduskunta.fi
 • Tasavallan presidentti: https://www.presidentti.fi
 • Digi- ja väestötietovirasto: https://dvv.fi
 • Verohallinto: https://www.vero.fi
@@ -70,9 +68,7 @@ Varje fråga och lektion har en länk till en officiell källa och ett kontrolld
 • Finlex, lagstiftning: https://www.finlex.fi
 • Suomi.fi: https://www.suomi.fi
 • Statsrådet: https://valtioneuvosto.fi
-• Utrikesministeriet: https://um.fi
 • Jämställdhetsombudsmannen: https://tasa-arvo.fi
-• Riksdagen: https://www.eduskunta.fi
 • Republikens president: https://www.presidentti.fi
 • Myndigheten för digitalisering och befolkningsdata: https://dvv.fi
 • Skatteförvaltningen: https://www.vero.fi
@@ -109,9 +105,7 @@ Every question and lesson links to an official source with the date it was check
 • Finlex, legislation: https://www.finlex.fi
 • Suomi.fi: https://www.suomi.fi
 • Finnish Government: https://valtioneuvosto.fi
-• Ministry for Foreign Affairs: https://um.fi
 • Ombudsman for Equality: https://tasa-arvo.fi
-• Parliament: https://www.eduskunta.fi
 • President of the Republic: https://www.presidentti.fi
 • Digital and Population Data Services Agency: https://dvv.fi
 • Tax Administration: https://www.vero.fi
