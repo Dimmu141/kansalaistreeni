@@ -4,7 +4,7 @@ App name (all languages): **Kansalaistreeni** (15/30)
 
 Category: Education · Tags: education, language learning · Contains ads: no · In-app purchases: no
 
-Keep the "unofficial" disclaimer at the very top of every full description and list the official source links (Play rejected the first submission on 10 Oct 2026 under the Misleading Claims policy: government information needs source links and an easy-to-see disclaimer). Do not use Migri's, the Finnish Government's or any authority's logo or name as a brand.
+Keep the "unofficial" disclaimer at the very top of every full description and list every official source the app cites, as a complete list — never "main sources" (Play rejected again on 12 Oct 2026 for "Insufficient Sources Provided"; um.fi root returns 403 to bots, so link https://um.fi/frontpage) (Play rejected the first submission on 10 Oct 2026 under the Misleading Claims policy: government information needs source links and an easy-to-see disclaimer). Do not use Migri's, the Finnish Government's or any authority's logo or name as a brand.
 
 ## Suomi (fi-FI)
 
@@ -26,11 +26,13 @@ Sovelluksessa on kahdeksan aihetta: demokratia ja päätöksenteko, perus- ja ih
 • Toimii ilman verkkoyhteyttä, ei käyttäjätiliä, mainoksia eikä seurantaa
 
 VIRALLISET LÄHTEET
-Jokaisessa kysymyksessä ja oppitunnissa on linkki viralliseen lähteeseen ja tarkistuspäivä. Tärkeimmät lähteet:
+Jokaisessa kysymyksessä ja oppitunnissa on linkki viralliseen lähteeseen ja tarkistuspäivä. Sovellus käyttää vain näitä lähteitä:
 • InfoFinland: https://www.infofinland.fi
 • Finlex, lainsäädäntö: https://www.finlex.fi
 • Suomi.fi: https://www.suomi.fi
 • Valtioneuvosto: https://valtioneuvosto.fi
+• Ulkoministeriö: https://um.fi/frontpage
+• Eduskunta: https://www.eduskunta.fi/fi
 • Tasa-arvovaltuutettu: https://tasa-arvo.fi
 • Tasavallan presidentti: https://www.presidentti.fi
 • Digi- ja väestötietovirasto: https://dvv.fi
@@ -63,11 +65,13 @@ Appen har åtta ämnen: demokrati och beslutsfattande, grundläggande och mänsk
 • Fungerar utan nätverk, utan konto, reklam eller spårning
 
 OFFICIELLA KÄLLOR
-Varje fråga och lektion har en länk till en officiell källa och ett kontrolldatum. De viktigaste källorna:
+Varje fråga och lektion har en länk till en officiell källa och ett kontrolldatum. Appen använder endast dessa källor:
 • InfoFinland: https://www.infofinland.fi
 • Finlex, lagstiftning: https://www.finlex.fi
 • Suomi.fi: https://www.suomi.fi
 • Statsrådet: https://valtioneuvosto.fi
+• Utrikesministeriet: https://um.fi/frontpage
+• Riksdagen: https://www.eduskunta.fi/sv
 • Jämställdhetsombudsmannen: https://tasa-arvo.fi
 • Republikens president: https://www.presidentti.fi
 • Myndigheten för digitalisering och befolkningsdata: https://dvv.fi
@@ -100,11 +104,13 @@ The app has eight topics: democracy and decision-making, fundamental and human r
 • Works offline; no account, ads or tracking
 
 OFFICIAL SOURCES
-Every question and lesson links to an official source with the date it was checked. The main sources:
+Every question and lesson links to an official source with the date it was checked. The app uses only these sources:
 • InfoFinland: https://www.infofinland.fi
 • Finlex, legislation: https://www.finlex.fi
 • Suomi.fi: https://www.suomi.fi
 • Finnish Government: https://valtioneuvosto.fi
+• Ministry for Foreign Affairs: https://um.fi/frontpage
+• Parliament of Finland: https://www.eduskunta.fi/en
 • Ombudsman for Equality: https://tasa-arvo.fi
 • President of the Republic: https://www.presidentti.fi
 • Digital and Population Data Services Agency: https://dvv.fi
