@@ -4,7 +4,7 @@ App name (all languages): **Kansalaistreeni** (15/30)
 
 Category: Education · Tags: education, language learning · Contains ads: no · In-app purchases: no
 
-Keep the "unofficial" disclaimer at the very top of every full description and list every official source the app cites, as a complete list — never "main sources" (Play rejected again on 12 Oct 2026 for "Insufficient Sources Provided"; um.fi root returns 403 to bots, so link https://um.fi/frontpage) (Play rejected the first submission on 10 Oct 2026 under the Misleading Claims policy: government information needs source links and an easy-to-see disclaimer). Do not use Migri's, the Finnish Government's or any authority's logo or name as a brand.
+Keep the "unofficial" disclaimer at the very top of every full description and list every official source the app cites, as a complete list — never "main sources" (Play rejected again on 12 Oct 2026 for "Insufficient Sources Provided"; um.fi root returns 403 to bots, so link https://um.fi/frontpage; rejected a 4th time on 13 Oct 2026 because Migri, Kela and the Non-Discrimination Ombudsman were cited in app strings/objectives but not listed — the list must cover demo-content.json source URLs AND objective sourceRefs AND any source named in res/values*/strings.xml or the UI) (Play rejected the first submission on 10 Oct 2026 under the Misleading Claims policy: government information needs source links and an easy-to-see disclaimer). Do not use Migri's, the Finnish Government's or any authority's logo or name as a brand.
 
 ## Suomi (fi-FI)
 
@@ -33,10 +33,13 @@ Jokaisessa kysymyksessä ja oppitunnissa on linkki viralliseen lähteeseen ja ta
 • Valtioneuvosto: https://valtioneuvosto.fi
 • Ulkoministeriö: https://um.fi/frontpage
 • Eduskunta: https://www.eduskunta.fi/fi
+• Maahanmuuttovirasto, kansalaisuuden UKK: https://migri.fi/ukk-suomen-kansalaisuus
 • Tasa-arvovaltuutettu: https://tasa-arvo.fi
+• Yhdenvertaisuusvaltuutettu: https://yhdenvertaisuusvaltuutettu.fi/etusivu
 • Tasavallan presidentti: https://www.presidentti.fi
 • Digi- ja väestötietovirasto: https://dvv.fi
 • Verohallinto: https://www.vero.fi
+• Kela: https://www.kela.fi
 • Kanta: https://www.kanta.fi
 • Tietosuojavaltuutettu: https://tietosuoja.fi
 • Poliisi: https://poliisi.fi
@@ -72,10 +75,13 @@ Varje fråga och lektion har en länk till en officiell källa och ett kontrolld
 • Statsrådet: https://valtioneuvosto.fi
 • Utrikesministeriet: https://um.fi/frontpage
 • Riksdagen: https://www.eduskunta.fi/sv
+• Migrationsverket, frågor om medborgarskap: https://migri.fi/ukk-suomen-kansalaisuus
 • Jämställdhetsombudsmannen: https://tasa-arvo.fi
+• Diskrimineringsombudsmannen: https://yhdenvertaisuusvaltuutettu.fi/sv/framsida
 • Republikens president: https://www.presidentti.fi
 • Myndigheten för digitalisering och befolkningsdata: https://dvv.fi
 • Skatteförvaltningen: https://www.vero.fi
+• FPA (Kela): https://www.kela.fi
 • Kanta: https://www.kanta.fi
 • Dataombudsmannen: https://tietosuoja.fi
 • Polisen: https://poliisi.fi
@@ -111,10 +117,13 @@ Every question and lesson links to an official source with the date it was check
 • Finnish Government: https://valtioneuvosto.fi
 • Ministry for Foreign Affairs: https://um.fi/frontpage
 • Parliament of Finland: https://www.eduskunta.fi/en
+• Finnish Immigration Service, citizenship FAQ: https://migri.fi/en/faq-finnish-citizenship
 • Ombudsman for Equality: https://tasa-arvo.fi
+• Non-Discrimination Ombudsman: https://yhdenvertaisuusvaltuutettu.fi/en/front-page
 • President of the Republic: https://www.presidentti.fi
 • Digital and Population Data Services Agency: https://dvv.fi
 • Tax Administration: https://www.vero.fi
+• Kela (Social Insurance Institution): https://www.kela.fi
 • Kanta: https://www.kanta.fi
 • Data Protection Ombudsman: https://tietosuoja.fi
 • Police: https://poliisi.fi
