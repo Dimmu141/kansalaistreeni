@@ -19,7 +19,7 @@ class LearningContentFlowTest {
     private val app get() = rule.activity.application as CitizenshipApplication
     private fun text(value: String) = rule.onNodeWithText(value)
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
-    private fun click(value: String) { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); text(value).performClick() }
+    private fun click(value: String) { runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }; text(value).performClick() }
     private fun snapshot() = runBlocking { app.container.learning.snapshot.first() }
     private fun search(value: String) { rule.onNode(hasSetTextAction()).performTextReplacement(value); rule.waitForIdle() }
     @Before fun reset() = runBlocking {

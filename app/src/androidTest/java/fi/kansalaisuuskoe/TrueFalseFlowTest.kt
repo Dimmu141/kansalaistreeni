@@ -19,7 +19,8 @@ class TrueFalseFlowTest {
     private val app get() = rule.activity.application as CitizenshipApplication
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
     private fun click(value: String) {
-        rule.onNode(hasScrollAction()).performScrollToNode(hasText(value))
+        // Docked controls (Check, Next) sit outside the list and need no scrolling.
+        runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }
         rule.onAllNodesWithText(value).onFirst().performClick()
     }
 
@@ -51,7 +52,7 @@ class TrueFalseFlowTest {
         click("Democracy and decision-making"); click("Practise this topic")
 
         await(statements[0].text)
-        rule.onNodeWithText("Statement. Is it true or false?").assertIsDisplayed()
+        rule.onNodeWithText("Statement · is it true?").assertIsDisplayed()
         rule.onNodeWithText("True").assertIsDisplayed(); rule.onNodeWithText("False").assertIsDisplayed()
         rule.onNodeWithText("Oikein").assertDoesNotExist()
         rule.onNodeWithText("True").performClick()

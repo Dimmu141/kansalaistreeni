@@ -275,10 +275,10 @@
     <string name="daily_review_only">Lyhyt kertaus: %1$s.</string>
     <string name="daily_mix">%1$s · %2$s</string>
     <string name="daily_focus_topic">Lisää harjoittelua aiheesta: %1$s.</string>
-    <string name="daily_reason_review">Kertauskysymys · valittu kertausajan perusteella.</string>
-    <string name="daily_reason_weak">Uusi kysymys aiheesta, joka kaipaa vielä harjoittelua.</string>
-    <string name="daily_reason_new_topic">Tutustu aiheeseen, jota et ole vielä harjoitellut.</string>
-    <string name="daily_reason_new_question">Uusi kysymys aiemmin harjoittelemastasi aiheesta.</string>
+    <string name="daily_reason_review">Kertaus</string>
+    <string name="daily_reason_weak">Harjoiteltava aihe</string>
+    <string name="daily_reason_new_topic">Uusi aihe</string>
+    <string name="daily_reason_new_question">Uusi kysymys</string>
     <plurals name="daily_review_questions">
         <item quantity="one">%1$d kertauskysymys</item>
         <item quantity="other">%1$d kertauskysymystä</item>
@@ -306,9 +306,9 @@
     <string name="language_swedish">Svenska · ruotsi</string>
     <string name="lesson_english_missing">Tälle osiolle ei ole englanninkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
     <string name="import_changed_lessons">Lisätyt, muutetut tai poistetut oppituntien kieliversiot</string>
-    <string name="true_false_true">Oikein</string>
-    <string name="true_false_false">Väärin</string>
-    <string name="true_false_prompt">Väite. Onko se oikein vai väärin?</string>
+    <string name="true_false_true">Totta</string>
+    <string name="true_false_false">Tarua</string>
+    <string name="true_false_prompt">Väite · onko se totta?</string>
     <string name="coverage_title">Tavoitteiden kattavuus</string>
     <string name="coverage_intro">Näet, montako kysymystä harjoittelee kutakin oppimistavoitetta. Kun virallinen oppimateriaali julkaistaan, tavoitteita voi verrata siihen.</string>
     <string name="coverage_summary">%1$s. %2$s.</string>
@@ -341,4 +341,14 @@
     <plurals name="review_in_days"><item quantity="one">%d päivän päästä</item><item quantity="other">%d päivän päästä</item></plurals>
     <string name="feedback_send">Anna palautetta</string>
     <string name="feedback_url" translatable="false"></string>
+    <string name="question_counter" translatable="false">%1$d / %2$d</string>
+    <string name="why_read">Miksi? Lue selitys</string>
+    <string name="mastery_title_start">Aloitetaan!</string>
+    <string name="mastery_title_early">Hyvä alku</string>
+    <string name="mastery_title_pace">Hyvä tahti!</string>
+    <string name="mastery_title_almost">Melkein valmis</string>
+    <string name="topic_new">Uusi</string>
+    <string name="topic_studied">%1$d / %2$d harjoiteltu</string>
+    <plurals name="streak_chip"><item quantity="one">%d päivä putkeen</item><item quantity="other">%d päivää putkeen</item></plurals>
+    <plurals name="due_chip"><item quantity="one">%d kerrattava</item><item quantity="other">%d kerrattavaa</item></plurals>
 </resources>

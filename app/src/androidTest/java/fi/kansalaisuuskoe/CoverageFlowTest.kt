@@ -19,7 +19,8 @@ class CoverageFlowTest {
     private val app get() = rule.activity.application as CitizenshipApplication
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value, substring = true).fetchSemanticsNodes().isNotEmpty() } }
     private fun click(value: String) {
-        rule.onNode(hasScrollAction()).performScrollToNode(hasText(value))
+        // Docked controls (Check, Next) sit outside the list and need no scrolling.
+        runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }
         rule.onAllNodesWithText(value).onFirst().performClick()
     }
 

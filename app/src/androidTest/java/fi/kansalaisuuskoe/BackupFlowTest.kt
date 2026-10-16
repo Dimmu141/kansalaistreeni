@@ -28,7 +28,7 @@ class BackupFlowTest {
     private var writeFails = false
     private fun snapshot() = runBlocking { repository.snapshot.first() }
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
-    private fun click(value: String) { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); rule.onNodeWithText(value).performClick() }
+    private fun click(value: String) { runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }; rule.onNodeWithText(value).performClick() }
     @Before fun setup() {
         runBlocking {
             app.container.database.clearAllTables(); repository.initialize(app)

@@ -20,7 +20,7 @@ class AuthoredLessonFlowTest {
     private fun snapshot() = runBlocking { app.container.learning.snapshot.first() }
     private fun text(value: String) = rule.onNodeWithText(value)
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
-    private fun show(value: String) { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); rule.onAllNodesWithText(value).onFirst().assertIsDisplayed() }
+    private fun show(value: String) { runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }; rule.onAllNodesWithText(value).onFirst().assertIsDisplayed() }
     private fun click(value: String) { show(value); rule.onAllNodesWithText(value).onFirst().performClick() }
     private fun openTopic(name: String = "Democracy and decision-making") { await("Your learning path"); text("Topics").performClick(); click(name) }
     @Before fun reset(): Unit = runBlocking {

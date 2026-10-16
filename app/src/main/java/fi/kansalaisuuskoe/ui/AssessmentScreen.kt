@@ -10,6 +10,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.semantics.*
@@ -37,13 +38,13 @@ internal fun AssessmentsScreen(state: AssessmentUiState, app: AppUiState, start:
         item { Text(stringResource(R.string.assessment_rules), style = MaterialTheme.typography.bodyMedium) }
         if (active != null) {
             item { Text(stringResource(R.string.assessment_saved_progress, active.answeredCount, active.questions.size)) }
-            item { Button({ open(active.id) }, Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled = !state.busy && !state.loading) { Text(stringResource(R.string.assessment_resume)) } }
+            item { KsButton(stringResource(R.string.assessment_resume), { open(active.id) }, Modifier.fillMaxWidth(), enabled = !state.busy && !state.loading) }
             item { AssessmentStatus(state, retry) }
             item { AssessmentDeleteAction(active, state.busy || state.loading, delete) }
         } else if (count > 0) {
             item { AssessmentStatus(state, retry) }
             item { Text(stringResource(R.string.assessment_length, pluralStringResource(R.plurals.question_count, count, count))) }
-            item { Button(start, Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled = !state.busy && !state.loading) { Text(stringResource(R.string.assessment_start)) } }
+            item { KsButton(stringResource(R.string.assessment_start), start, Modifier.fillMaxWidth(), enabled = !state.busy && !state.loading) }
         } else {
             item { AssessmentStatus(state, retry) }
             item { Text(stringResource(R.string.language_empty_body)) }
@@ -52,12 +53,10 @@ internal fun AssessmentsScreen(state: AssessmentUiState, app: AppUiState, start:
         if (sessions.none { it.complete }) item { Text(stringResource(R.string.assessment_history_empty)) }
         items(sessions.filter { it.complete }, key = { it.id }) { session ->
             val result = Assessments.result(session)
-            OutlinedCard(onClick = { open(session.id) }, modifier = Modifier.fillMaxWidth()) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(formatDateTime(requireNotNull(session.finishedAt)), style = MaterialTheme.typography.labelLarge)
-                    Text(stringResource(R.string.assessment_score, result.correct, result.total, result.accuracy), style = MaterialTheme.typography.titleLarge)
-                    Text(stringResource(R.string.assessment_view_result), style = MaterialTheme.typography.bodyMedium)
-                }
+            KsCard(onClick = { open(session.id) }) {
+                Text(formatDateTime(requireNotNull(session.finishedAt)), style = KsType.caption, color = Ks.colors.inkMuted)
+                Text(stringResource(R.string.assessment_score, result.correct, result.total, result.accuracy), style = KsType.title.copy(fontFeatureSettings = "tnum"))
+                Text(stringResource(R.string.assessment_view_result), style = KsType.body, color = Ks.colors.brand)
             }
         }
     }
@@ -83,23 +82,30 @@ internal fun AssessmentScreen(state: AssessmentUiState, sessionId: String, app: 
     val list = key(session.id, question.id) { rememberLazyListState() }
     Page(list) {
         item {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(stringResource(R.string.question_position, session.position + 1, session.questions.size))
-                if (question.format == QuestionFormat.TRUE_FALSE) Text(stringResource(R.string.true_false_prompt), style = MaterialTheme.typography.bodyMedium)
-                Text(stringResource(R.string.assessment_saved_progress, session.answeredCount, session.questions.size), style = MaterialTheme.typography.bodySmall)
-                Text(session.topics.first { it.id == question.topicId }.titleFor(language), style = MaterialTheme.typography.labelLarge)
-                if (androidx.compose.ui.platform.LocalConfiguration.current.locales[0].language != session.language) Text(stringResource(if (session.language == "sv") R.string.question_language_swedish else R.string.question_language), style = MaterialTheme.typography.bodySmall)
+            val counterLabel = stringResource(R.string.question_position, session.position + 1, session.questions.size)
+            val topic = session.topics.first { it.id == question.topicId }.titleFor(language)
+            val locale = androidx.compose.ui.platform.LocalConfiguration.current.locales[0]
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Text(topic.uppercase(locale), style = KsType.overline, color = Ks.colors.brand, modifier = Modifier.weight(1f).semantics { contentDescription = topic })
+                    Text(stringResource(R.string.question_counter, session.position + 1, session.questions.size), style = KsType.caption.copy(fontFeatureSettings = "tnum"),
+                        color = Ks.colors.inkMuted, modifier = Modifier.semantics { contentDescription = counterLabel })
+                }
                 ProgressBar(session.answeredCount.toFloat() / session.questions.size)
-                Text(stringResource(R.string.assessment_feedback_later), style = MaterialTheme.typography.bodyMedium)
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    KsChip(stringResource(R.string.assessment_saved_progress, session.answeredCount, session.questions.size))
+                    if (locale.language != session.language) KsChip(stringResource(if (session.language == "sv") R.string.question_language_swedish else R.string.question_language))
+                }
+                Text(stringResource(R.string.assessment_feedback_later), style = KsType.caption, color = Ks.colors.inkMuted)
             }
         }
-        item { StudyText(question.text, question.language, MaterialTheme.typography.headlineMedium, Modifier.semantics { heading() }) }
+        item { StudyText(question.text, question.language, KsType.question, Modifier.semantics { heading() }) }
         item { AnswerChoices(question, selected, !state.busy, { model.select(session.id, question.id, it) }) }
         item { AssessmentStatus(state, model::retry) }
         if (session.position == session.questions.lastIndex) {
-            item { Button({ model.finish(session.id) }, Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled = !state.busy && session.answeredCount == session.questions.size) { Text(stringResource(R.string.assessment_finish)) } }
+            item { KsButton(stringResource(R.string.assessment_finish), { model.finish(session.id) }, Modifier.fillMaxWidth(), enabled = !state.busy && session.answeredCount == session.questions.size) }
         } else {
-            item { Button({ model.move(session.id, session.position + 1) }, Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled = selected != null && !state.busy) { Text(stringResource(R.string.next_question)) } }
+            item { KsButton(stringResource(R.string.next_question), { model.move(session.id, session.position + 1) }, Modifier.fillMaxWidth(), enabled = selected != null && !state.busy) }
         }
         if (session.position > 0) item { OutlinedButton({ model.move(session.id, session.position - 1) }, Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled = !state.busy) { Text(stringResource(R.string.assessment_previous)) } }
         item { Text(stringResource(R.string.assessment_exit_note), style = MaterialTheme.typography.bodySmall) }
@@ -114,11 +120,11 @@ private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, 
     Page {
         item { Heading(stringResource(R.string.assessment_result_title), formatDateTime(requireNotNull(session.finishedAt))) }
         item { Text(stringResource(if (session.language == "sv") R.string.question_language_swedish else R.string.question_language)) }
-        item { Text(stringResource(R.string.assessment_score, result.correct, result.total, result.accuracy), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite }) }
+        item { Text(stringResource(R.string.assessment_score, result.correct, result.total, result.accuracy), style = KsType.headline.copy(fontFeatureSettings = "tnum"), color = Ks.colors.brand, modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite }) }
         item { Text(stringResource(R.string.assessment_score_note), style = MaterialTheme.typography.bodyMedium) }
         if (result.mistakes.isEmpty()) item { Text(stringResource(R.string.assessment_all_correct)) }
         else {
-            item { Button(practice, Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled = eligible.isNotEmpty() && !state.busy) { Text(stringResource(R.string.assessment_practice_mistakes, pluralStringResource(R.plurals.question_count, eligible.size, eligible.size))) } }
+            item { KsButton(stringResource(R.string.assessment_practice_mistakes, pluralStringResource(R.plurals.question_count, eligible.size, eligible.size)), practice, Modifier.fillMaxWidth(), enabled = eligible.isNotEmpty() && !state.busy) }
             if (eligible.size < result.mistakes.size) item { Text(stringResource(R.string.assessment_changed_items, pluralStringResource(R.plurals.question_count, result.mistakes.size - eligible.size, result.mistakes.size - eligible.size))) }
         }
         item { OutlinedButton(leave, Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.assessment_back_to_list)) } }
@@ -127,8 +133,10 @@ private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, 
         item { Heading(stringResource(R.string.assessment_topic_results)) }
         items(result.topics, key = { it.topic.id }) { topic ->
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(topic.topic.titleFor(language), style = MaterialTheme.typography.titleMedium)
-                Text(stringResource(R.string.assessment_topic_score, topic.correct, topic.total))
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(topic.topic.titleFor(language), style = KsType.title, modifier = Modifier.weight(1f))
+                    Text(stringResource(R.string.assessment_topic_score, topic.correct, topic.total), style = KsType.caption.copy(fontFeatureSettings = "tnum"), color = Ks.colors.inkMuted)
+                }
                 ProgressBar(topic.correct.toFloat() / topic.total)
             }
         }
@@ -140,13 +148,11 @@ private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, 
             val expandedLabel = stringResource(if (expanded) R.string.recap_expanded else R.string.recap_collapsed)
             val readLabel = stringResource(R.string.recap_read_label, question.text)
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                HorizontalDivider()
-                StudyText(question.text, question.language, MaterialTheme.typography.titleLarge, Modifier.semantics { heading() })
-                Text(stringResource(if (selected.id == correct.id) R.string.answer_correct else R.string.answer_incorrect), style = MaterialTheme.typography.labelLarge)
-                Text(stringResource(R.string.your_answer), style = MaterialTheme.typography.labelLarge)
-                AnswerText(question, selected.id, MaterialTheme.typography.bodyLarge)
-                Text(stringResource(R.string.correct_answer_label), style = MaterialTheme.typography.labelLarge)
-                AnswerText(question, correct.id, MaterialTheme.typography.bodyLarge)
+                HorizontalDivider(color = Ks.colors.line)
+                StudyText(question.text, question.language, KsType.title, Modifier.semantics { heading() })
+                Text(stringResource(if (selected.id == correct.id) R.string.answer_correct else R.string.answer_incorrect), style = KsType.label,
+                    color = if (selected.id == correct.id) Ks.colors.correct else Ks.colors.miss)
+                AnswerOutcome(question, selected.id, correct.id)
                 OutlinedButton({ expanded = !expanded }, Modifier.fillMaxWidth().heightIn(min = 56.dp).semantics {
                     stateDescription = expandedLabel
                     contentDescription = readLabel

@@ -18,7 +18,8 @@ class TopicRoutingFlowTest {
     private val app get() = rule.activity.application as CitizenshipApplication
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
     private fun click(value: String) {
-        rule.onNode(hasScrollAction()).performScrollToNode(hasText(value))
+        // Docked controls (Check, Next) sit outside the list and need no scrolling.
+        runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }
         rule.onAllNodesWithText(value).onFirst().performClick()
     }
 
@@ -50,7 +51,7 @@ class TopicRoutingFlowTest {
         click("Practise this topic")
         questions.forEachIndexed { index, question ->
             await(question.text)
-            rule.onNodeWithText("Question ${index + 1} / ${questions.size}").assertIsDisplayed()
+            rule.onNodeWithText("${index + 1} / ${questions.size}").assertIsDisplayed()
             if (index == 0) {
                 rule.activityRule.scenario.recreate()
                 await(question.text)

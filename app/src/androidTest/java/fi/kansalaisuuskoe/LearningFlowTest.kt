@@ -21,7 +21,8 @@ class LearningFlowTest {
     private fun text(value: String) = rule.onNodeWithText(value)
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
     private fun click(value: String) {
-        rule.onNode(hasScrollAction()).performScrollToNode(hasText(value))
+        // Docked controls (Check, Next) sit outside the list and need no scrolling.
+        runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }
         text(value).performClick()
     }
     private val repository get() = (rule.activity.application as CitizenshipApplication).container.learning
@@ -45,12 +46,11 @@ class LearningFlowTest {
         await("Mitä haluat oppia?")
         click("Yhteiskunta ja demokratia"); click("Harjoittele tätä aihetta")
         await("Kuka käyttää Suomessa lainsäädäntövaltaa?")
-        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Tarkista vastaus"))
         text("Tarkista vastaus").assertIsNotEnabled()
         text("Eduskunta").performClick()
         click("Tarkista vastaus")
         await("Oikein")
-        text("Oikein").performScrollTo().assertIsDisplayed()
+        text("Oikein").assertIsDisplayed()
         click("Seuraava kysymys")
         await("Kuinka monta kansanedustajaa Suomen eduskunnassa on?")
         text("Kuinka monta kansanedustajaa Suomen eduskunnassa on?").assertIsDisplayed()
@@ -123,7 +123,7 @@ class LearningFlowTest {
         text("Eduskunta").performClick()
         click("Tarkista vastaus")
         await("Lisäharjoittelu tallennettu")
-        text("Lisäharjoittelu tallennettu").performScrollTo().assertIsDisplayed()
+        text("Lisäharjoittelu tallennettu").assertIsDisplayed()
         rule.activityRule.scenario.recreate()
         await("Lisäharjoittelu tallennettu")
         val p = runBlocking { repository.snapshot.first().progress.first { it.questionId == first.attempt.questionId } }

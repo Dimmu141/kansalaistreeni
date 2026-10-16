@@ -275,10 +275,10 @@
     <string name="daily_review_only">Kort repetition: %1$s.</string>
     <string name="daily_mix">%1$s · %2$s</string>
     <string name="daily_focus_topic">Mer övning i: %1$s.</string>
-    <string name="daily_reason_review">Repetitionsfråga · vald eftersom repetitionen var aktuell.</string>
-    <string name="daily_reason_weak">En ny fråga från ett ämne som behöver mer övning.</string>
-    <string name="daily_reason_new_topic">Utforska ett ämne som du inte har övat ännu.</string>
-    <string name="daily_reason_new_question">En ny fråga från ett ämne som du har övat tidigare.</string>
+    <string name="daily_reason_review">Repetition</string>
+    <string name="daily_reason_weak">Ämne att öva</string>
+    <string name="daily_reason_new_topic">Nytt ämne</string>
+    <string name="daily_reason_new_question">Ny fråga</string>
     <plurals name="daily_review_questions">
         <item quantity="one">%1$d repetitionsfråga</item>
         <item quantity="other">%1$d repetitionsfrågor</item>
@@ -306,9 +306,9 @@
     <string name="language_swedish">Svenska</string>
     <string name="lesson_english_missing">Den här delen har ingen förklaring på engelska. Läs den på ditt studiespråk.</string>
     <string name="import_changed_lessons">Tillagda, ändrade eller borttagna språkversioner av lektioner</string>
-    <string name="true_false_true">Rätt</string>
-    <string name="true_false_false">Fel</string>
-    <string name="true_false_prompt">Påstående. Är det rätt eller fel?</string>
+    <string name="true_false_true">Sant</string>
+    <string name="true_false_false">Falskt</string>
+    <string name="true_false_prompt">Påstående · är det sant?</string>
     <string name="coverage_title">Täckning av målen</string>
     <string name="coverage_intro">Se hur många frågor som övar varje lärandemål. När det officiella studiematerialet publiceras kan målen jämföras med det.</string>
     <string name="coverage_summary">%1$s. %2$s.</string>
@@ -338,4 +338,13 @@
     <string name="review_tomorrow">i morgon</string>
     <plurals name="review_in_days"><item quantity="one">om %d dag</item><item quantity="other">om %d dagar</item></plurals>
     <string name="feedback_send">Ge respons</string>
+    <string name="why_read">Varför? Läs förklaringen</string>
+    <string name="mastery_title_start">Nu börjar vi!</string>
+    <string name="mastery_title_early">En bra start</string>
+    <string name="mastery_title_pace">Bra takt!</string>
+    <string name="mastery_title_almost">Nästan klart</string>
+    <string name="topic_new">Ny</string>
+    <string name="topic_studied">%1$d / %2$d övade</string>
+    <plurals name="streak_chip"><item quantity="one">%d dag i rad</item><item quantity="other">%d dagar i rad</item></plurals>
+    <plurals name="due_chip"><item quantity="one">%d att repetera</item><item quantity="other">%d att repetera</item></plurals>
 </resources>

@@ -100,6 +100,8 @@ class PlatformAccessibilityTest {
             assertTrue(bounds.height() >= 56 * app.resources.displayMetrics.density)
             click("Eduskunta"); click("Check answer")
             await("Correct answer: Eduskunta")
+            // The feedback sheet's link scrolls the explanation into view.
+            click("Why? Read the explanation")
             assertSpeechLocale("Perustuslain mukaan lainsäädäntövaltaa käyttää eduskunta. Hallitus valmistelee lakiesityksiä, mutta eduskunta päättää laeista.", "fi")
             assertSpeechLocale("Under the Constitution, Parliament exercises legislative power. The Government prepares bills, but Parliament decides on laws.", "en")
             assertEquals(1, runBlocking { app.container.learning.snapshot.first().attempts.size })

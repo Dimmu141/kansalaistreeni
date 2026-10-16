@@ -87,7 +87,9 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
             }
         },
     ) { padding ->
-        Box(Modifier.fillMaxSize().padding(padding).consumeWindowInsets(padding)) {
+        // Practice lets its docked Check button and feedback sheet reach behind the gesture bar.
+        val inner = if (studying) PaddingValues(top = padding.calculateTopPadding()) else padding
+        Box(Modifier.fillMaxSize().padding(inner).consumeWindowInsets(inner)) {
             when {
                 state.loading -> Box(Modifier.fillMaxSize(), contentAlignment = androidx.compose.ui.Alignment.Center) { CircularProgressIndicator(Modifier.semanticsLabel(stringResource(R.string.loading_content))) }
                 state.error != null -> Page { item { EmptyState(stringResource(R.string.content_failed), stringResource(state.error), stringResource(R.string.retry), model::initialize) } }

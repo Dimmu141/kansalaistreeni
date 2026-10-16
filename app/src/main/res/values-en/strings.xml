@@ -275,10 +275,10 @@
     <string name="daily_review_only">Short review: %1$s.</string>
     <string name="daily_mix">%1$s · %2$s</string>
     <string name="daily_focus_topic">More practice in: %1$s.</string>
-    <string name="daily_reason_review">Review question · selected because its review was due.</string>
-    <string name="daily_reason_weak">A new question from a topic that needs more practice.</string>
-    <string name="daily_reason_new_topic">Explore a topic you have not practised yet.</string>
-    <string name="daily_reason_new_question">A new question from a topic you have practised before.</string>
+    <string name="daily_reason_review">Review</string>
+    <string name="daily_reason_weak">Topic to practise</string>
+    <string name="daily_reason_new_topic">New topic</string>
+    <string name="daily_reason_new_question">New question</string>
     <plurals name="daily_review_questions">
         <item quantity="one">%1$d review question</item>
         <item quantity="other">%1$d review questions</item>
@@ -308,7 +308,7 @@
     <string name="import_changed_lessons">Added, changed or removed lesson language versions</string>
     <string name="true_false_true">True</string>
     <string name="true_false_false">False</string>
-    <string name="true_false_prompt">Statement. Is it true or false?</string>
+    <string name="true_false_prompt">Statement · is it true?</string>
     <string name="coverage_title">Objective coverage</string>
     <string name="coverage_intro">See how many questions practise each learning objective. When the official learning material is published, the objectives can be compared with it.</string>
     <string name="coverage_summary">%1$s. %2$s.</string>
@@ -338,4 +338,13 @@
     <string name="review_tomorrow">tomorrow</string>
     <plurals name="review_in_days"><item quantity="one">in %d day</item><item quantity="other">in %d days</item></plurals>
     <string name="feedback_send">Send feedback</string>
+    <string name="why_read">Why? Read the explanation</string>
+    <string name="mastery_title_start">Let’s begin!</string>
+    <string name="mastery_title_early">A good start</string>
+    <string name="mastery_title_pace">Good pace!</string>
+    <string name="mastery_title_almost">Almost there</string>
+    <string name="topic_new">New</string>
+    <string name="topic_studied">%1$d / %2$d practised</string>
+    <plurals name="streak_chip"><item quantity="one">%d day in a row</item><item quantity="other">%d days in a row</item></plurals>
+    <plurals name="due_chip"><item quantity="one">%d to review</item><item quantity="other">%d to review</item></plurals>
 </resources>

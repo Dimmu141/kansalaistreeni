@@ -20,7 +20,7 @@ class SessionRecapFlowTest {
     private val app get() = rule.activity.application as CitizenshipApplication
     private fun text(value: String) = rule.onNodeWithText(value)
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
-    private fun click(value: String) { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); text(value).performClick() }
+    private fun click(value: String) { runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }; text(value).performClick() }
     @Before fun reset() = runBlocking {
         app.container.database.clearAllTables(); app.container.learning.initialize(app); app.container.learning.installRegressionContent()
         app.container.settings.setInterfaceLanguage(InterfaceLanguage.ENGLISH)

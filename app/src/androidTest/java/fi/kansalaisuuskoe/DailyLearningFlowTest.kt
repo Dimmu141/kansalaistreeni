@@ -18,7 +18,8 @@ class DailyLearningFlowTest {
     private val repository get() = app.container.learning
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
     private fun click(value: String) {
-        rule.onNode(hasScrollAction()).performScrollToNode(hasText(value))
+        // Docked controls (Check, Next) sit outside the list and need no scrolling.
+        runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }
         rule.onNodeWithText(value).performClick()
     }
     @Before fun before() = runBlocking {
@@ -45,15 +46,15 @@ class DailyLearningFlowTest {
         // The full backlog lives on the Review tab; Home keeps one primary action.
         rule.onNodeWithText("Kertaus").performClick()
         click("Aloita kertaus · 7 kysymystä")
-        await("Kysymys 1 / 7")
+        await("1 / 7")
         rule.onNodeWithContentDescription("Takaisin").performClick()
         rule.onNodeWithText("Koti").performClick()
         await("Oma oppimispolkusi")
         click("Jatka harjoittelua")
         plan.items.forEachIndexed { index, item ->
             await(item.question.text)
-            rule.onNodeWithText("Kysymys ${index + 1} / 5").assertExists()
-            if (index == 0) rule.onNodeWithText("Kertauskysymys · valittu kertausajan perusteella.").assertExists()
+            rule.onNodeWithText("${index + 1} / 5").assertExists()
+            if (index == 0) rule.onNodeWithText("Kertaus").assertExists()
             click(rule.activity.answerLabel(item.question, item.question.correctOptionId))
             click("Tarkista vastaus")
             await("Oikein")
@@ -79,13 +80,13 @@ class DailyLearningFlowTest {
         await("Lisää harjoittelua aiheesta: Demokratia ja päätöksenteko.")
         click("Jatka harjoittelua")
         await(first.text)
-        rule.onNodeWithText("Uusi kysymys aiheesta, joka kaipaa vielä harjoittelua.").assertIsDisplayed()
+        rule.onNodeWithText("Harjoiteltava aihe").assertIsDisplayed()
         click(rule.activity.answerLabel(first, first.correctOptionId)); click("Tarkista vastaus")
         await("Oikein")
         rule.activityRule.scenario.recreate()
         await("Oikein")
         click("Seuraava kysymys")
-        await("Tutustu aiheeseen, jota et ole vielä harjoitellut.")
+        await("Uusi aihe")
         assertEquals(2, runBlocking { repository.snapshot.first().attempts.size })
     }
 }

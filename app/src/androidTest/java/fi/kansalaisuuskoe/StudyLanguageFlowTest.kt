@@ -22,7 +22,8 @@ class StudyLanguageFlowTest {
     private fun text(value: String) = rule.onNodeWithText(value)
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
     private fun click(value: String) {
-        rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); text(value).performClick()
+        // Docked controls (Check, Next) sit outside the list and need no scrolling.
+        runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }; text(value).performClick()
     }
     @Before fun setup() = runBlocking {
         app.container.database.clearAllTables(); repository.initialize(app); repository.installRegressionContent()
@@ -126,6 +127,6 @@ class StudyLanguageFlowTest {
         assertEquals("sv", runBlocking { repository.snapshot.first().attempts.single().language })
         click("Next question")
         await(planned.items[1].question.text)
-        text("Question 2 / 5").assertExists()
+        text("2 / 5").assertExists()
     }
 }

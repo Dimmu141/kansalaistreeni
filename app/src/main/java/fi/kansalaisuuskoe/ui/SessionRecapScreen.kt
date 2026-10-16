@@ -1,5 +1,6 @@
 package fi.kansalaisuuskoe.ui
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.*
@@ -10,30 +11,65 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.text.font.FontWeight
 import fi.kansalaisuuskoe.R
 import fi.kansalaisuuskoe.data.ExplanationPreference
 import fi.kansalaisuuskoe.domain.Question
 
+/** "Miksi?", the easy-Finnish well and the optional English explanation (design system ExplanationCard). */
 @Composable
 internal fun QuestionExplanation(question: Question, easyFinnish: Boolean, preference: ExplanationPreference, title: Int = R.string.why) {
-    Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            Heading(stringResource(title))
-            StudyText(question.explanation, question.language, MaterialTheme.typography.bodyLarge)
-        }
+    val c = Ks.colors
+    Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text(stringResource(title), style = KsType.title.copy(fontSize = 20.sp, lineHeight = 26.sp), modifier = Modifier.semantics { heading() })
+        StudyText(question.explanation, question.language, KsType.bodyLarge)
         if (question.language == "fi" && easyFinnish && question.easyExplanation != null) {
-            OutlinedCard(Modifier.fillMaxWidth()) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(stringResource(R.string.easy_finnish_title), style = MaterialTheme.typography.titleMedium, modifier = Modifier.semantics { heading() })
-                    StudyText(question.easyExplanation, "fi", MaterialTheme.typography.bodyLarge)
+            Surface(color = c.surface2, contentColor = c.ink, shape = MaterialTheme.shapes.medium) {
+                Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(stringResource(R.string.easy_finnish_title), style = KsType.overline, color = c.inkMuted, modifier = Modifier.semantics { heading() })
+                    StudyText(question.easyExplanation, "fi", KsType.bodyLarge)
                 }
             }
         }
         if (preference == ExplanationPreference.ALSO_ENGLISH) {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(stringResource(R.string.explanation_english_title), style = MaterialTheme.typography.titleMedium, modifier = Modifier.semantics { heading() })
-                question.translations["en"]?.let { StudyText(it.explanation, "en", MaterialTheme.typography.bodyLarge) }
-                    ?: Text(stringResource(R.string.explanation_missing), style = MaterialTheme.typography.bodyMedium)
+                Text(stringResource(R.string.explanation_english_title), style = KsType.title, modifier = Modifier.semantics { heading() })
+                question.translations["en"]?.let { StudyText(it.explanation, "en", KsType.bodyLarge) }
+                    ?: Text(stringResource(R.string.explanation_missing), style = KsType.body, color = c.inkMuted)
+            }
+        }
+    }
+}
+
+/** Key words as one grouped list: the word in bold, its translations on one muted line. */
+@Composable
+internal fun VocabularyList(question: Question) {
+    val c = Ks.colors
+    val swedish = question.language == "sv"
+    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Text(stringResource(R.string.vocabulary_title), style = KsType.title, modifier = Modifier.semantics { heading() })
+        Surface(color = c.surface1, shape = MaterialTheme.shapes.medium, border = BorderStroke(1.dp, c.line)) {
+            Column {
+                question.vocabulary.forEachIndexed { index, word ->
+                    if (index > 0) HorizontalDivider(color = c.line)
+                    val other = if (swedish) word.term else word.swedish
+                    val description = listOfNotNull(
+                        stringResource(R.string.vocabulary_english, word.meaning),
+                        other?.let { stringResource(if (swedish) R.string.vocabulary_finnish else R.string.vocabulary_swedish, it) },
+                    ).joinToString(". ")
+                    Column(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            StudyText(if (swedish) word.swedish ?: word.term else word.term, if (swedish && word.swedish != null) "sv" else "fi",
+                                KsType.title.copy(fontSize = 16.sp, lineHeight = 22.sp, fontWeight = FontWeight.Bold), Modifier.weight(1f))
+                            Text(if (other == null) "EN" else if (swedish) "EN · FI" else "EN · SV", style = KsType.overline.copy(fontSize = 11.sp),
+                                color = c.inkMuted, modifier = Modifier.clearAndSetSemantics {})
+                        }
+                        Text(listOfNotNull(word.meaning, other).joinToString(" · "), style = KsType.body.copy(fontSize = 14.sp, lineHeight = 20.sp),
+                            color = c.inkMuted, modifier = Modifier.semantics { contentDescription = description })
+                    }
+                }
             }
         }
     }
@@ -43,7 +79,8 @@ internal fun QuestionExplanation(question: Question, easyFinnish: Boolean, prefe
 internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, explanation: ExplanationPreference, finish: () -> Unit) {
     Page {
         item { Heading(stringResource(if (state.total == 0) R.string.practice_no_questions else R.string.practice_complete)) }
-        item { Text(if (state.total == 0) stringResource(R.string.practice_empty_body) else stringResource(R.string.practice_summary, state.correctCount, state.total), style = MaterialTheme.typography.bodyLarge) }
+        if (state.total > 0) item { RecapScore(state) }
+        item { Text(if (state.total == 0) stringResource(R.string.practice_empty_body) else stringResource(R.string.practice_summary, state.correctCount, state.total), style = KsType.bodyLarge) }
         if (state.total > 0) {
             item {
                 Text(stringResource(R.string.recap_next_step), style = MaterialTheme.typography.titleMedium, modifier = Modifier.semantics { heading() })
@@ -52,7 +89,7 @@ internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, ex
             state.recap.reviewAt?.let { date -> item { Text(stringResource(R.string.recap_review_at, formatReviewTime(date)), style = MaterialTheme.typography.bodyMedium) } }
         }
         // Keep the onward action reachable before the optional longer explanations.
-        item { Button(onClick = finish, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.return_home)) } }
+        item { KsButton(stringResource(R.string.return_home), finish, Modifier.fillMaxWidth()) }
         if (state.recap.unavailableCount > 0 || (state.total > 0 && state.recap.answers.size < state.total)) {
             item { Text(stringResource(R.string.recap_unavailable), style = MaterialTheme.typography.bodyMedium) }
         }
@@ -69,11 +106,8 @@ internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, ex
                     val expandedLabel = stringResource(if (expanded) R.string.recap_expanded else R.string.recap_collapsed)
                     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                         HorizontalDivider()
-                        StudyText(question.text, question.language, MaterialTheme.typography.titleLarge, Modifier.semantics { heading() })
-                        Text(stringResource(R.string.your_answer), style = MaterialTheme.typography.labelLarge)
-                        AnswerText(question, selected.id, MaterialTheme.typography.bodyLarge)
-                        Text(stringResource(R.string.correct_answer_label), style = MaterialTheme.typography.labelLarge)
-                        AnswerText(question, correct.id, MaterialTheme.typography.bodyLarge)
+                        StudyText(question.text, question.language, KsType.title, Modifier.semantics { heading() })
+                        AnswerOutcome(question, selected.id, correct.id)
                         OutlinedButton(onClick = { expanded = !expanded }, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp).semantics {
                             contentDescription = accessibilityLabel
                             stateDescription = expandedLabel
@@ -83,6 +117,42 @@ internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, ex
                             SourceReference(question)
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+/** The score as one big number, the session's segments as a scoreboard, and a birch star for a full score. */
+@Composable
+private fun RecapScore(state: QuestionUiState) {
+    val c = Ks.colors
+    val full = state.correctCount == state.total
+    Surface(color = if (full) c.birchSoft else c.brandSoft, contentColor = if (full) c.onBirchSoft else c.onBrandSoft, shape = MaterialTheme.shapes.large) {
+        Column(Modifier.fillMaxWidth().padding(24.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                Text(stringResource(R.string.question_counter, state.correctCount, state.total), style = KsType.display.copy(fontFeatureSettings = "tnum"),
+                    modifier = Modifier.weight(1f).clearAndSetSemantics {})
+                if (full) Icon(KsIcons.Star, null, Modifier.size(44.dp), tint = c.birch)
+            }
+            if (state.total <= 10 && state.recap.answers.isNotEmpty()) ProgressSegments(List(state.total) { i ->
+                when (state.recap.answers.getOrNull(i)?.attempt?.correct) { true -> Segment.Correct; false -> Segment.Miss; null -> Segment.Upcoming }
+            }, Modifier.clearAndSetSemantics {})
+        }
+    }
+}
+
+/** The learner's answer and the right one as labelled rows with the verdict icon, so colour is never the only cue. */
+@Composable
+internal fun AnswerOutcome(question: Question, selectedId: String, correctId: String) {
+    val c = Ks.colors
+    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        listOf(Triple(R.string.your_answer, selectedId, selectedId == correctId), Triple(R.string.correct_answer_label, correctId, true)).forEach { (label, id, right) ->
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                VerdictBadge(right, size = 24.dp, animate = false)
+                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    Text(stringResource(label), style = KsType.overline, color = if (right) c.correct else c.miss)
+                    AnswerText(question, id, KsType.option)
                 }
             }
         }

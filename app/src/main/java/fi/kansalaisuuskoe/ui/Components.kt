@@ -2,7 +2,6 @@ package fi.kansalaisuuskoe.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
@@ -12,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.Alignment
 import fi.kansalaisuuskoe.domain.TopicProgress
 import fi.kansalaisuuskoe.domain.ContentStatus
 
@@ -24,12 +23,14 @@ internal fun ContentStatus.labelResource() = when (this) {
 }
 
 @Composable
-fun Page(state: LazyListState = rememberLazyListState(), content: LazyListScope.() -> Unit) {
+fun Page(state: LazyListState = rememberLazyListState(), bottomInset: Dp = 0.dp, content: LazyListScope.() -> Unit) {
     Box(Modifier.fillMaxSize(), contentAlignment = androidx.compose.ui.Alignment.TopCenter) {
         LazyColumn(
             state = state,
             modifier = Modifier.widthIn(max = 760.dp).fillMaxSize(),
-            contentPadding = PaddingValues(horizontal = 20.dp, vertical = 16.dp),
+            // A docked bottom element already includes any unconsumed navigation bar inset.
+            contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 16.dp,
+                bottom = 16.dp + if (bottomInset > 0.dp) bottomInset else WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()),
             verticalArrangement = Arrangement.spacedBy(20.dp),
             content = content,
         )
@@ -38,14 +39,14 @@ fun Page(state: LazyListState = rememberLazyListState(), content: LazyListScope.
 @Composable
 fun Heading(title: String, subtitle: String? = null) {
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        Text(title, style = MaterialTheme.typography.headlineMedium, modifier = Modifier.semantics { heading() })
-        subtitle?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+        Text(title, style = KsType.headline, modifier = Modifier.semantics { heading() })
+        subtitle?.let { Text(it, style = KsType.body, color = Ks.colors.inkMuted) }
     }
 }
 @Composable
 fun ContentNotice(status: ContentStatus, compact: Boolean = false) {
-    Surface(color = MaterialTheme.colorScheme.surfaceContainer, shape = RoundedCornerShape(12.dp)) {
-        Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+    Surface(color = Ks.colors.surface2, shape = MaterialTheme.shapes.medium) {
+        Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(when (status) {
                 ContentStatus.DEMO -> stringResource(R.string.notice_demo_title)
                 ContentStatus.EDITORIAL -> stringResource(R.string.notice_editorial_title)
@@ -57,40 +58,51 @@ fun ContentNotice(status: ContentStatus, compact: Boolean = false) {
                 ContentStatus.EDITORIAL -> stringResource(R.string.notice_editorial_body)
                 ContentStatus.OFFICIALLY_SOURCED -> stringResource(R.string.notice_sourced_body)
                 ContentStatus.OFFICIAL -> stringResource(R.string.notice_official_body)
-            }, style = MaterialTheme.typography.bodySmall)
+            }, style = MaterialTheme.typography.bodyMedium, color = Ks.colors.inkMuted)
         }
     }
 }
+/** The Home card: a mastery ring, encouragement that scales with mastery, the studied count and streak/review chips. */
 @Composable
-fun MasteryHero(percent: Int, studied: Int, total: Int) {
+fun MasteryHero(percent: Int, studied: Int, total: Int, streak: Int = 0, due: Int = 0) {
     val masteryLabel = pluralStringResource(R.plurals.mastery_accessibility, percent, percent)
-    Surface(color = MaterialTheme.colorScheme.primaryContainer, shape = RoundedCornerShape(24.dp)) {
-        Column(Modifier.fillMaxWidth().padding(24.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Text(stringResource(R.string.percent_value, percent), style = MaterialTheme.typography.displayMedium, modifier = Modifier.semantics { contentDescription = masteryLabel })
-            ProgressBar(percent / 100f, 8.dp)
-            Text(pluralStringResource(R.plurals.studied_count, total, studied, total), style = MaterialTheme.typography.bodyMedium)
+    val c = Ks.colors
+    Surface(color = c.brandSoft, contentColor = c.onBrandSoft, shape = MaterialTheme.shapes.large) {
+        Row(Modifier.fillMaxWidth().padding(24.dp), horizontalArrangement = Arrangement.spacedBy(24.dp), verticalAlignment = Alignment.CenterVertically) {
+            MasteryRing(percent, Modifier.clearAndSetSemantics { contentDescription = masteryLabel })
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(stringResource(when {
+                    percent == 0 -> R.string.mastery_title_start
+                    percent < 40 -> R.string.mastery_title_early
+                    percent < 80 -> R.string.mastery_title_pace
+                    else -> R.string.mastery_title_almost
+                }), style = KsType.title)
+                Text(pluralStringResource(R.plurals.studied_count, total, studied, total), style = KsType.body)
+                if (streak >= 2 || due > 0) FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    if (streak >= 2) KsChip(pluralStringResource(R.plurals.streak_chip, streak, streak), ChipTone.Birch, KsIcons.Flame)
+                    if (due > 0) KsChip(pluralStringResource(R.plurals.due_chip, due, due), ChipTone.Brand)
+                }
+            }
         }
     }
 }
-/** Progress without the Material stop dot or gap, so 0 % reads as an empty track. */
-@Composable
-fun ProgressBar(fraction: Float, height: Dp = 6.dp) {
-    LinearProgressIndicator(progress = { fraction.coerceIn(0f, 1f) }, modifier = Modifier.fillMaxWidth().height(height),
-        strokeCap = StrokeCap.Butt, gapSize = 0.dp, drawStopIndicator = {})
-}
+/** A tappable topic: title with mastery top-right (or "New"), one-line description, a mastery bar and the count. */
 @Composable
 fun TopicRow(progress: TopicProgress, onClick: (() -> Unit)? = null) {
     val language = topicLanguage()
-    val body: @Composable () -> Unit = {
-        Column(Modifier.fillMaxWidth().padding(vertical = 16.dp, horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text(progress.topic.titleFor(language), style = MaterialTheme.typography.titleMedium)
-            Text(progress.topic.descriptionFor(language), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            ProgressBar(progress.mastery / 100f)
-            Text(stringResource(R.string.topic_progress, progress.mastery, progress.studiedCount, progress.questionCount), style = MaterialTheme.typography.labelLarge)
+    val started = progress.studiedCount > 0
+    val label = stringResource(R.string.topic_progress, progress.mastery, progress.studiedCount, progress.questionCount)
+    KsCard(onClick = onClick) {
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Text(progress.topic.titleFor(language), style = KsType.title, modifier = Modifier.weight(1f))
+            if (started) Text(stringResource(R.string.percent_value, progress.mastery), style = KsType.caption.copy(fontFeatureSettings = "tnum"), color = Ks.colors.inkMuted)
+            else KsChip(stringResource(R.string.topic_new))
         }
+        Text(progress.topic.descriptionFor(language), style = KsType.body, color = Ks.colors.inkMuted)
+        ProgressBar(progress.mastery / 100f)
+        if (started) Text(stringResource(R.string.topic_studied, progress.studiedCount, progress.questionCount), style = KsType.caption, color = Ks.colors.inkMuted,
+            modifier = Modifier.semantics { contentDescription = label })
     }
-    if (onClick != null) OutlinedCard(onClick = onClick, modifier = Modifier.fillMaxWidth(), content = { body() })
-    else OutlinedCard(modifier = Modifier.fillMaxWidth(), content = { body() })
 }
 @Composable
 fun StatRow(value: String, label: String, detail: String? = null) {
@@ -98,7 +110,7 @@ fun StatRow(value: String, label: String, detail: String? = null) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
             Text(label, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
             Spacer(Modifier.width(12.dp))
-            Text(value, style = MaterialTheme.typography.titleLarge)
+            Text(value, style = KsType.verdict.copy(fontFeatureSettings = "tnum"), color = Ks.colors.brand)
         }
         detail?.let { Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
     }
@@ -107,12 +119,12 @@ fun StatRow(value: String, label: String, detail: String? = null) {
 fun EmptyState(title: String, message: String, actionLabel: String, onAction: () -> Unit) {
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
         Heading(title, message)
-        Button(onClick = onAction, modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)) { Text(actionLabel) }
+        KsButton(actionLabel, onAction, Modifier.fillMaxWidth())
     }
 }
 
 /** The study language on detail screens without the app bar switch, such as the assessment list. */
 @Composable
 internal fun StudyScope(state: AppUiState) {
-    Text(stringResource(if (state.settings.studyLanguage == fi.kansalaisuuskoe.domain.StudyLanguage.SWEDISH) R.string.question_language_swedish else R.string.question_language), style = MaterialTheme.typography.labelLarge)
+    KsChip(stringResource(if (state.settings.studyLanguage == fi.kansalaisuuskoe.domain.StudyLanguage.SWEDISH) R.string.question_language_swedish else R.string.question_language), ChipTone.Brand)
 }

@@ -20,7 +20,7 @@ class SwedishInterfaceFlowTest {
     @get:Rule val rule = createAndroidComposeRule<MainActivity>()
     private val app get() = rule.activity.application as CitizenshipApplication
     private fun await(value: String) { rule.waitUntil(15_000) { rule.onAllNodesWithText(value).fetchSemanticsNodes().isNotEmpty() } }
-    private fun click(value: String) { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)); rule.onAllNodesWithText(value).onFirst().performClick() }
+    private fun click(value: String) { runCatching { rule.onNode(hasScrollAction()).performScrollToNode(hasText(value)) }; rule.onAllNodesWithText(value).onFirst().performClick() }
     @Before fun reset(): Unit = runBlocking {
         app.container.database.clearAllTables(); app.container.learning.initialize(app)
         app.container.settings.setTheme(ThemePreference.LIGHT)
@@ -38,7 +38,7 @@ class SwedishInterfaceFlowTest {
         }
         await("Din inlärningsväg"); rule.onNodeWithText("Inte officiellt material").assertIsDisplayed()
         click("Börja lära dig"); await(statement.text)
-        rule.onNodeWithText("Påstående. Är det rätt eller fel?").assertExists()
+        rule.onNodeWithText("Påstående · är det sant?").assertExists()
         click(rule.activity.answerLabel(statement, statement.correctOptionId)); click("Kontrollera svaret")
         rule.onNode(hasScrollAction()).performScrollToNode(hasText(statement.explanation))
         rule.onNodeWithText(statement.explanation).assertIsDisplayed()
