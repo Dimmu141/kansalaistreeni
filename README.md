@@ -1,6 +1,6 @@
 # Kansalaisuuskoe — Android learning MVP
 
-A native, offline Android app for practising Finnish civic knowledge. Version **0.17.0** is a working MVP, **not an official citizenship-test preparation course**, and nothing in it is presented as the final format. Eight provisional topics contain 200 Finnish and 200 Swedish EDITORIAL practice questions (25 per topic per language, about 30 % true/false), each mapped to learning objectives, with a three- to five-section lesson per topic in Finnish, Swedish and English. The material is written for the app and checked by the assistant against cited official pages; human publication approval is pending and nothing is labelled OFFICIAL. No exam format, pass threshold, time limit, or predicted pass probability is asserted.
+A native, offline Android app for practising Finnish civic knowledge. Version **0.18.0** is a working MVP, **not an official citizenship-test preparation course**, and nothing in it is presented as the final format. Eight provisional topics contain 200 Finnish and 200 Swedish EDITORIAL practice questions (25 per topic per language, about 30 % true/false), each mapped to learning objectives, with a three- to five-section lesson per topic in Finnish, Swedish and English. The material is written for the app and checked by the assistant against cited official pages; human publication approval is pending and nothing is labelled OFFICIAL. No exam format, pass threshold, time limit, or predicted pass probability is asserted.
 
 ## Run
 
