@@ -124,16 +124,19 @@ def rgb(color):
     return tuple(int(color[i:i + 2], 16) for i in (1, 3, 5))
 
 
-def write_png(path, size=512, zoom=1.25):
+def write_png(path, size=512, zoom=1.25, width=None):
+    """A square icon, or with [width] a wider canvas (the feature graphic) with the mark centred."""
+    width = width or size
+    side = max(width, size)
     scale = size / 108 * zoom
-    transform = lambda x, y: (size / 2 + (x - 54) * scale, size / 2 + (y - 54) * scale)
-    pages = coverage([parse_path(LEFT_PAGE), parse_path(RIGHT_PAGE)], size, transform)
-    check = coverage(stroke_polygons(CHECK_POINTS, CHECK_WIDTH), size, transform)
+    transform = lambda x, y: (width / 2 + (x - 54) * scale, size / 2 + (y - 54) * scale)
+    pages = coverage([parse_path(LEFT_PAGE), parse_path(RIGHT_PAGE)], side, transform)
+    check = coverage(stroke_polygons(CHECK_POINTS, CHECK_WIDTH), side, transform)
     background, page, mark = rgb(BACKGROUND), rgb(PAGE), rgb(CHECK)
     raw = bytearray()
     for y in range(size):
         raw.append(0)
-        for x in range(size):
+        for x in range(width):
             color = background
             for layer, (alpha) in ((page, pages[y][x]), (mark, check[y][x])):
                 color = tuple(round(c * (1 - alpha) + l * alpha) for c, l in zip(color, layer))
@@ -141,7 +144,7 @@ def write_png(path, size=512, zoom=1.25):
 
     def chunk(kind, data):
         return struct.pack('>I', len(data)) + kind + data + struct.pack('>I', zlib.crc32(kind + data) & 0xFFFFFFFF)
-    png = b'\x89PNG\r\n\x1a\n' + chunk(b'IHDR', struct.pack('>IIBBBBB', size, size, 8, 2, 0, 0, 0))
+    png = b'\x89PNG\r\n\x1a\n' + chunk(b'IHDR', struct.pack('>IIBBBBB', width, size, 8, 2, 0, 0, 0))
     png += chunk(b'IDAT', zlib.compress(bytes(raw), 9)) + chunk(b'IEND', b'')
     path.parent.mkdir(exist_ok=True)
     path.write_bytes(png)
@@ -150,4 +153,5 @@ def write_png(path, size=512, zoom=1.25):
 if __name__ == '__main__':
     write_resources()
     write_png(ROOT / 'play/icon-512.png')
-    print('Wrote launcher icon resources and play/icon-512.png')
+    write_png(ROOT / 'play/feature-graphic.png', size=500, zoom=1.1, width=1024)
+    print('Wrote launcher icon resources, play/icon-512.png and play/feature-graphic.png')
