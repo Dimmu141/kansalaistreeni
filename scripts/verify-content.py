@@ -113,6 +113,13 @@ BUNDLED_STATUSES = {"DEMO", "EDITORIAL"}
 FORMAT_SHARE = {"TRUE_FALSE": (0.25, 0.35)}
 DIFFICULTY_SHARE = {"EASY": (0.35, 0.45), "MEDIUM": (0.35, 0.45), "HARD": (0.15, 0.25)}
 MIN_TOPIC_QUESTIONS = 25
+# Answer-key balance per study language: nobody should score by always answering "true" or by picking
+# the longest option. The length limits are a ratchet at the current level, not the goal. Lower them
+# towards LENGTH_TARGETS as distractors are rewritten; the gate warns while above the targets.
+TRUE_SHARE = (0.40, 0.60)
+LONGEST_CORRECT_MAX = 0.55
+LENGTH_RATIO_MAX = 1.65
+LENGTH_TARGETS = {"longest": 0.35, "ratio": 1.25}
 
 
 def check_evidence(url, label):
@@ -137,6 +144,40 @@ def distribution(content):
             "topics": {t["id"]: sum(1 for q in qs if q["topicId"] == t["id"]) for t in sorted(content["topics"], key=lambda t: t["order"])},
         }
     return report
+
+
+def answer_key_bias(content):
+    """Per language: share of true/false items keyed true, share of single-choice items whose correct
+    option is the longest (ties split evenly), and mean length of the correct option over its distractors."""
+    report = {}
+    for language in sorted({q["language"] for q in content["questions"]}):
+        qs = [q for q in content["questions"] if q["language"] == language]
+        true_false = [q for q in qs if q.get("format", "SINGLE_CHOICE") == "TRUE_FALSE"]
+        single = [q for q in qs if q.get("format", "SINGLE_CHOICE") == "SINGLE_CHOICE"]
+        longest, ratios = 0.0, []
+        for q in single:
+            lengths = {o["id"]: len(o["text"]) for o in q["options"]}
+            top = [i for i, n in lengths.items() if n == max(lengths.values())]
+            longest += (q["correctOptionId"] in top) / len(top)
+            others = [n for i, n in lengths.items() if i != q["correctOptionId"]]
+            ratios.append(lengths[q["correctOptionId"]] / (sum(others) / len(others)))
+        report[language] = {
+            "true": sum(q["correctOptionId"] == "true" for q in true_false) / len(true_false) if true_false else None,
+            "longest": longest / len(single) if single else None,
+            "ratio": sum(ratios) / len(ratios) if ratios else None,
+        }
+    return report
+
+
+def verify_answer_key(content):
+    for language, bias in answer_key_bias(content).items():
+        low, high = TRUE_SHARE
+        if bias["true"] is not None and not low <= bias["true"] <= high:
+            raise ValueError(f"{language}: {bias['true']:.0%} of true/false answers are 'true', outside {low:.0%}-{high:.0%}")
+        if bias["longest"] is not None and bias["longest"] > LONGEST_CORRECT_MAX:
+            raise ValueError(f"{language}: the longest option is correct in {bias['longest']:.0%} of single-choice questions, above {LONGEST_CORRECT_MAX:.0%}")
+        if bias["ratio"] is not None and bias["ratio"] > LENGTH_RATIO_MAX:
+            raise ValueError(f"{language}: correct options are {bias['ratio']:.2f}x as long as distractors, above {LENGTH_RATIO_MAX:.2f}x")
 
 
 def verify_quality(content):
@@ -170,6 +211,7 @@ def verify_quality(content):
         thin_topics = [t for t, n in stats["topics"].items() if n < MIN_TOPIC_QUESTIONS]
         if thin_topics:
             raise ValueError(f"{language}: fewer than {MIN_TOPIC_QUESTIONS} questions in {', '.join(thin_topics)}")
+    verify_answer_key(content)
     thin = [o["id"] for _, o, counts in coverage(content) if any(c < MIN_OBJECTIVE_QUESTIONS for c in counts.values())]
     if thin:
         raise ValueError(f"Objectives with fewer than {MIN_OBJECTIVE_QUESTIONS} questions: {', '.join(thin)}")
@@ -277,6 +319,10 @@ def main():
     for language, stats in distribution(content).items():
         shares = ", ".join(f"{k} {v}" for k, v in {**stats["format"], **stats["difficulty"]}.items())
         print(f"{language.upper()}: {stats['questions']} questions ({shares}); per topic: " + ", ".join(f"{t} {n}" for t, n in stats["topics"].items()))
+    for language, bias in answer_key_bias(content).items():
+        print(f"{language.upper()} answer key: true/false keyed true {bias['true']:.0%}; longest option correct {bias['longest']:.0%}; correct/distractor length {bias['ratio']:.2f}x")
+        if bias["longest"] > LENGTH_TARGETS["longest"] or bias["ratio"] > LENGTH_TARGETS["ratio"]:
+            print(f"WARNING: {language.upper()} correct options are still recognisable by length; target at most {LENGTH_TARGETS['longest']:.0%} longest and {LENGTH_TARGETS['ratio']:.2f}x.")
     for question_id in overdue_reviews(content):
         print(f"WARNING: editorial review date has passed for {question_id}; the app shows an overdue notice.")
     print(f"Content review ledger passed: {len(content['questions'])} {content['status']} questions, {sum(len(t.get('lessons', {})) for t in content['topics'])} lesson variants, package v{content['version']}; human publication approval remains pending.")

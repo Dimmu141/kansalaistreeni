@@ -22,7 +22,6 @@ import androidx.navigation.compose.*
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
 import fi.kansalaisuuskoe.AppContainer
-import fi.kansalaisuuskoe.domain.ContentStatus
 
 private data class Destination(val route: String, val label: Int, val icon: androidx.compose.ui.graphics.vector.ImageVector)
 private val destinations = listOf(
@@ -65,7 +64,8 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                     Column {
                         Text(stringResource(when { assessment -> R.string.assessment_title; material -> R.string.material_title; coverage -> R.string.coverage_title; backup -> R.string.backup_nav_title; settings -> R.string.settings_title; studying -> R.string.practice_title; lesson -> R.string.lesson_title; vocabulary -> R.string.vocabulary_browser_title; words -> R.string.words_title; else -> R.string.app_title }), style = MaterialTheme.typography.titleLarge)
                         // The full disclaimer lives in onboarding and Settings → About; top-level screens keep only this chip.
-                        if (!detail && state.contentStatus != ContentStatus.OFFICIAL) NotOfficialChip()
+                        // Always shown: an OFFICIAL label is an unsigned file assertion that any import or backup can make.
+                        if (!detail) NotOfficialChip()
                     }
                 },
                 navigationIcon = {

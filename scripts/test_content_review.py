@@ -7,6 +7,7 @@ from pathlib import Path
 module = runpy.run_path(str(Path(__file__).with_name("verify-content.py")))
 ROOT, read_json, verify = (module[name] for name in ("ROOT", "read_json", "verify"))
 verify_objectives, coverage_markdown = module["verify_objectives"], module["coverage_markdown"]
+verify_answer_key, answer_key_bias = module["verify_answer_key"], module["answer_key_bias"]
 
 
 def objective_package():
@@ -46,6 +47,41 @@ class ObjectiveGateTest(unittest.TestCase):
             package["objectives"][0].update(change)
             with self.assertRaises(ValueError):
                 verify_objectives(package)
+
+
+class AnswerKeyGateTest(unittest.TestCase):
+    def setUp(self):
+        self.content = read_json(ROOT / "app/src/main/assets/demo-content.json")
+
+    def finnish(self, fmt):
+        return [q for q in self.content["questions"] if q["language"] == "fi" and q.get("format", "SINGLE_CHOICE") == fmt]
+
+    def test_current_content_passes(self):
+        verify_answer_key(self.content)
+
+    def test_mostly_true_statements_fail(self):
+        for q in self.finnish("TRUE_FALSE"):
+            q["correctOptionId"] = "true"
+        with self.assertRaises(ValueError):
+            verify_answer_key(self.content)
+
+    def test_mostly_false_statements_fail(self):
+        for q in self.finnish("TRUE_FALSE"):
+            q["correctOptionId"] = "false"
+        with self.assertRaises(ValueError):
+            verify_answer_key(self.content)
+
+    def test_padding_correct_options_fails(self):
+        for q in self.finnish("SINGLE_CHOICE")[:60]:
+            correct = next(o for o in q["options"] if o["id"] == q["correctOptionId"])
+            correct["text"] += " sekä muut lain mukaiset tehtävät"
+        with self.assertRaises(ValueError):
+            verify_answer_key(self.content)
+
+    def test_ties_for_longest_option_are_split(self):
+        package = {"questions": [{"language": "fi", "correctOptionId": "a",
+                                  "options": [{"id": "a", "text": "abc"}, {"id": "b", "text": "xyz"}, {"id": "c", "text": "x"}, {"id": "d", "text": "y"}]}]}
+        self.assertEqual(0.5, answer_key_bias(package)["fi"]["longest"])
 
 
 class ReviewGateTest(unittest.TestCase):

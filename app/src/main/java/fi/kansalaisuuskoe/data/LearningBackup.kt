@@ -125,7 +125,8 @@ object BackupCodec {
         val payload = session.payload
         require(payload.questions.size in 1..Assessments.MAX_QUESTIONS && payload.position in payload.questions.indices)
         // Validate original snapshots independently of today's installed question revisions.
-        ContentCodec.validate(ContentPackageDto(ContentCodec.SCHEMA_VERSION, "assessment-snapshot", 1, "EDITORIAL", payload.topics, payload.questions), snapshot = true)
+        ContentCodec.validate(ContentPackageDto(ContentCodec.SCHEMA_VERSION, "assessment-snapshot", 1,
+            ContentCodec.envelopeStatus(payload.topics, payload.questions), payload.topics, payload.questions), snapshot = true)
         require(payload.questions.all { it.language == session.language })
         val questions = payload.questions.associateBy { it.id }
         payload.answers.forEach { (id, answer) -> require(questions[id]?.options?.any { it.id == answer } == true) }

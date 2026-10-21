@@ -73,8 +73,8 @@ class LearningRepository(private val database: LearningDatabase) {
             val material = installed()
             val metadata = requireNotNull(material.metadata)
             // Metadata does not retain the original package-level label. Preserve every question's
-            // provenance, and use a conservative envelope instead of asserting official origin.
-            val status = if (material.questions.all { it.status == "DEMO" }) "DEMO" else "EDITORIAL"
+            // provenance and wrap it in the strongest label the material itself carries.
+            val status = ContentCodec.envelopeStatus(material.topics, material.questions)
             val content = ContentPackageDto(ContentCodec.SCHEMA_VERSION, metadata.packageId, metadata.version, status, material.topics, material.questions, material.objectives)
             BackupCodec.encode(LearningBackup(BackupCodec.FORMAT, BackupCodec.CURRENT_SCHEMA, now, content,
                 dao.attempts().map(BackupAttempt::from), database.assessmentDao().all().map(BackupAssessment::from)))

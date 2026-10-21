@@ -73,6 +73,15 @@ object ContentCodec {
     fun parse(json: String): ContentPackageDto = requireNotNull(packageAdapter.fromJson(json)).also(::validate)
 
     /**
+     * The package label for material re-wrapped without its original one (backups, assessment
+     * snapshots): exactly the strongest label its questions and lessons carry, so it neither fails
+     * validation nor claims more than any item does.
+     */
+    fun envelopeStatus(topics: List<TopicDto>, questions: List<QuestionDto>): String =
+        (questions.map { it.status } + topics.flatMap { topic -> topic.lessons.values.map { it.status } })
+            .maxOfOrNull { ContentStatus.valueOf(it) }?.name ?: ContentStatus.DEMO.name
+
+    /**
      * [snapshot] validates a saved assessment copy: its questions keep their objective IDs, but the
      * snapshot does not copy the objective list.
      */

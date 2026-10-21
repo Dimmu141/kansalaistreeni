@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageId": "fi-civics-demo",
-  "version": 7,
+  "version": 8,
   "officialMaterialStatus": {
     "checkedAt": "2026-10-07",
     "sourceUrl": "https://migri.fi/ukk-suomen-kansalaisuus",
@@ -59,7 +59,7 @@
     },
     {
       "questionId": "dem-executive-power",
-      "sha256": "654db728e865aef3ca247061d38c783e8f2689b4d9b9d775b997cd989b5e298d",
+      "sha256": "4f0ac9492b9580d857e2425a5183af1099b380d0506233a0805ba64b252026a6",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 3 §",
@@ -67,11 +67,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "dem-executive-power-sv",
-      "sha256": "eae697225d7acc41bbd1dc1cbbf9d4c0cb2346be4199d3d91cc9927ea1d71c71",
+      "sha256": "000e38b6abe5416e16473f1b832263f236b7646584211f6333be2978f7b57223",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 3 §",
@@ -79,7 +79,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "demo-members",
@@ -275,7 +275,7 @@
     },
     {
       "questionId": "dem-president-limit",
-      "sha256": "d546888be558c430465067cda49972c3353103b70acac684d36189a7d730e6a6",
+      "sha256": "bc966fd0b0e7b7787b0e3bf5bd66ff8bc65d6e9c4adb1da7a9547d7d88086c18",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 54 §",
@@ -283,11 +283,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "dem-president-limit-sv",
-      "sha256": "82ddba8b22843385874d82584071114168fd093e3f19125879e7646da09dc1bb",
+      "sha256": "133f90fde0cdc921e9955605c4d35e0185daa10a21216bcfe9fb8943740058f7",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 54 §",
@@ -295,7 +295,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "dem-foreign-policy",
@@ -323,7 +323,7 @@
     },
     {
       "questionId": "dem-commander",
-      "sha256": "6b94c1d7d85da3023995576a9cd954a998a6324b3a59f2bf2dce1c073d401692",
+      "sha256": "5931ac66ee597e99d7c02bda887d8c0dec233cacb65c03e405dbfe64d17f903c",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 128 §",
@@ -331,11 +331,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "dem-commander-sv",
-      "sha256": "ecfab8c8fcaa4260454320ce2f98bd806c53a4491ee54cb7b2419396ef8a57d6",
+      "sha256": "958817c8365ff0df2bbfcb9680d642a1fdd452521882294b63375a1b095257e5",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 128 §",
@@ -343,7 +343,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "dem-second-round",
@@ -731,7 +731,7 @@
     },
     {
       "questionId": "rights-public-documents",
-      "sha256": "f6c5526eb5b3bf795d6cd121a47ce1f6715c524b406fa99541169bc4bbf91e10",
+      "sha256": "251943f0fb7af13f83f4381a4aeb60e8176023bafe8be0506b58895ea0b49736",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 12 §",
@@ -739,11 +739,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "rights-public-documents-sv",
-      "sha256": "564ba75cb3a78ee2691bdf95fe5103e2b287b699dd9f7e6d088a0973bb782bdb",
+      "sha256": "1444e0cac90ef744258699beb3d3adf1ddff3235a6f3fe8779e7aeae07e6b03e",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 12 §",
@@ -751,7 +751,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "demo-religion",
@@ -1019,7 +1019,7 @@
     },
     {
       "questionId": "rights-own-language",
-      "sha256": "a2ab52a68d2f1b6d9f349ced05537b532c31e96d0cc524a93504c20462733b7f",
+      "sha256": "a99d21159fc6dad082746fc2a19a7c1fdb3f561d7f276eae12d8b295c1eda1b1",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 17 §",
@@ -1027,11 +1027,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "rights-own-language-sv",
-      "sha256": "93281770a36171851321b51a8a6261027fa6a7e5d032b23b87c56a31389495ca",
+      "sha256": "154023e3b1c7d5c817f0b6dd8d5a042af39d0b2858d779681fb9898f6c406f02",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 17 §",
@@ -1039,7 +1039,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "rights-academic-freedom",
@@ -1619,7 +1619,7 @@
     },
     {
       "questionId": "eq-same-sex-marriage",
-      "sha256": "011f9b8d006cc27718810486c2c4c779922594378b85211b87327139cdf030d4",
+      "sha256": "049e67ed95b0fd40675c72f64f5b66e045111be98ede02c0512554b6a8b0b299",
       "sourceUrl": "https://infofinland.fi/fi/family/marriage-in-finland",
       "evidenceUrl": "https://infofinland.fi/fi/family/marriage-in-finland",
       "locator": "Avioliitto Suomessa",
@@ -1627,11 +1627,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "eq-same-sex-marriage-sv",
-      "sha256": "36709bd778474fcd506b4bf8514188d531fba8b4033d1fc6232b107ad85fcb75",
+      "sha256": "946c00779055e3becdac8fe11fcdf4acd45940961eb42c20e18a44d87b8d9f58",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "locator": "Sexuella minoriteters och könsminoriteters rättigheter",
@@ -1639,7 +1639,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "eq-spouses-work",
@@ -1979,7 +1979,7 @@
     },
     {
       "questionId": "law-trial-period",
-      "sha256": "584e3d8f067be1989fa9f5f55828c08a482f0b590cfcc6b494dcb67c5937017b",
+      "sha256": "30bba44a68316eb655c9e03caf681426d4441fcac7f55af946de2af9a9a07dea",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Koeaika ja sen pituus",
@@ -1987,11 +1987,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "law-trial-period-sv",
-      "sha256": "7d857963a83dd82ac6473d7b2e24e6795b3ad0564c13a5f8cca6d686e32b3c0f",
+      "sha256": "9626260c80e94c200b486c062cc3d7c315e789fbf51af07f150268952d02ed09",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Prövotid och längden på den",
@@ -1999,7 +1999,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "demo-safety",
@@ -2123,7 +2123,7 @@
     },
     {
       "questionId": "law-progressive-tax",
-      "sha256": "75ced6b10319ee47f5e7b83e043efcbb8afe15e464486cf360b214ec3ab20648",
+      "sha256": "8b0bd93e86c3fb2ccefd0991b2efa670bd1e3e855584231c045dba0984749c7c",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/taxation",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/taxation",
       "locator": "Suomen verojärjestelmä",
@@ -2131,11 +2131,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "law-progressive-tax-sv",
-      "sha256": "ac5b423996db798604c5ae4c4fef608c9fc30b13b7eb2138784d23b846c3152f",
+      "sha256": "37f76f31b5289d71d1bbad7e2c90ef28b083466ede5413e2ad2191b9d10f7ce9",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/taxation",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/taxation",
       "locator": "Skattesystemet i Finland",
@@ -2143,7 +2143,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "law-tax-use",
@@ -2435,7 +2435,7 @@
     },
     {
       "questionId": "hist-russian-conquest",
-      "sha256": "797e45f484cad152ad4a3c51eca5586cf6ee18e8bce0abffe6d2d71a9d177223",
+      "sha256": "611e0c55804ef39183ec6929c691c938ea95b79d9bceb9ced2e72bc949190202",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-history",
       "locator": "Suomi osana Venäjän keisarikuntaa 1809–1917",
@@ -2443,11 +2443,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "hist-russian-conquest-sv",
-      "sha256": "2530a6fc220d6fb961c7aa6e4f3439638c0dfd30e80a8c1012f20da9bbbb6c5f",
+      "sha256": "012cb9452f64669ce056ff013ab4b6080b50c5b27d0e710adaa9acc5bb44ccde",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/finnish-history",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/finnish-history",
       "locator": "Finland som en del av Kejsardömet Ryssland 1809–1917",
@@ -2455,7 +2455,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "hist-reformation",
@@ -2675,7 +2675,7 @@
     },
     {
       "questionId": "hist-republic",
-      "sha256": "6a43b0a5ac7ab3e45cda5b3d77402df2ce9d59ebfacc0036c65c01619f523964",
+      "sha256": "13ab0a6bf7f4b57745fd21d6e16dc5081c1034723514a3b9a2eca60a0df06338",
       "sourceUrl": "https://valtioneuvosto.fi/-/10616/suomen-tasavaltainen-hallitusmuoto-tayttaa-100-vuotta",
       "evidenceUrl": "https://valtioneuvosto.fi/-/10616/suomen-tasavaltainen-hallitusmuoto-tayttaa-100-vuotta",
       "locator": "Suomen tasavaltainen hallitusmuoto täyttää 100 vuotta",
@@ -2683,11 +2683,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "hist-republic-sv",
-      "sha256": "6d4e8a369eb70b0ff9bc7c422b020a4c8fb86af8360dcda50ca5b2115e34bf68",
+      "sha256": "be06283010413572a6e82521b6dfb1a3e4b346ec934134cd820d6df22ac6a63a",
       "sourceUrl": "https://valtioneuvosto.fi/sv/-/10616/suomen-tasavaltainen-hallitusmuoto-tayttaa-100-vuotta",
       "evidenceUrl": "https://valtioneuvosto.fi/sv/-/10616/suomen-tasavaltainen-hallitusmuoto-tayttaa-100-vuotta",
       "locator": "Republikens regeringsform fyller hundra år",
@@ -2695,7 +2695,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "hist-winter-war",
@@ -2843,7 +2843,7 @@
     },
     {
       "questionId": "hist-reparations-paid",
-      "sha256": "1288b47570690754ae580ad0f8117775b2ea8cf7654a9dcaf9541bf1eab89e9e",
+      "sha256": "eabcd0adcd89a31c0923d0a52d25087f6a7736ec48e468774d10acb1bb484dcf",
       "sourceUrl": "https://valtioneuvosto.fi/-/60-years-after-the-war-reparations",
       "evidenceUrl": "https://valtioneuvosto.fi/-/60-years-after-the-war-reparations",
       "locator": "Sotakorvauksista 60 vuotta",
@@ -2851,11 +2851,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "hist-reparations-paid-sv",
-      "sha256": "eb482da0116606c787731931e5caf18a23c2ebb3b1e154ab29ead22ce5884930",
+      "sha256": "ae5b8ae4660bc9b40a69ed30e5b02f5746124aaec0117de5181b2c4df23e8ec0",
       "sourceUrl": "https://valtioneuvosto.fi/sv/-/krigsskadestandet-slutbetalades-for-60-ar-sedan",
       "evidenceUrl": "https://valtioneuvosto.fi/sv/-/krigsskadestandet-slutbetalades-for-60-ar-sedan",
       "locator": "Krigsskadeståndet slutbetalades för 60 år sedan",
@@ -2863,7 +2863,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "hist-olympics",
@@ -3083,7 +3083,7 @@
     },
     {
       "questionId": "cult-aland-demilitarised",
-      "sha256": "39a80c02bf4b6e50376cddfe53b1ed5489ff4de892cad1d3912e720828a9f39d",
+      "sha256": "d8ea22d6296120ab2b76e7e31b585985ca97c199ac4fa62e81cba435eef45469",
       "sourceUrl": "https://um.fi/ahvenanmaan-erityisasema",
       "evidenceUrl": "https://um.fi/ahvenanmaan-erityisasema",
       "locator": "Ahvenanmaan demilitarisointi",
@@ -3091,11 +3091,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "cult-aland-demilitarised-sv",
-      "sha256": "dda3369e0f81cc9d72e2a76845e238c81cb170296c338d8d2ef6ce363ad40eb6",
+      "sha256": "d16151fa3597f1cb199d916ebdff81d33e8606e58086e42926327138597c81f4",
       "sourceUrl": "https://um.fi/alands-sarstallning",
       "evidenceUrl": "https://um.fi/alands-sarstallning",
       "locator": "Ålands demilitarisering",
@@ -3103,7 +3103,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "demo-sami",
@@ -3299,7 +3299,7 @@
     },
     {
       "questionId": "cult-may-day",
-      "sha256": "1b2b9965ac3a9a02827a92065969f345954f7ebc23fffac635f718629a3fdcd5",
+      "sha256": "18ad66f84f6fd0304cc7590c6ea713a5da9f0052dbb4a6b090febc3d026a8d88",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-holidays",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/finnish-holidays",
       "locator": "Vappu",
@@ -3307,11 +3307,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "cult-may-day-sv",
-      "sha256": "7f5b42f3bcea89a0afba8ac6747e5b972825cd6b16785b8be1c8256c3e3509a3",
+      "sha256": "07053478d93ddd198123345d2864c057d1c5622391ed6b3085c77ea6eee00ea5",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/finnish-holidays",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/finnish-holidays",
       "locator": "Valborgsmässoafton och första maj",
@@ -3319,7 +3319,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "cult-national-animal",
@@ -3443,7 +3443,7 @@
     },
     {
       "questionId": "cult-library-free",
-      "sha256": "f65145e72facd2ec3ef43382560366426b92ebf8b42a2adc53d9d46fa5a90ee9",
+      "sha256": "b8264c437d840e4c3dd2ec4fd1a0f1d381f4bd256d078a72a28e58f333fa9f20",
       "sourceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "evidenceUrl": "https://infofinland.fi/fi/leisure/libraries",
       "locator": "Johdanto",
@@ -3451,11 +3451,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "cult-library-free-sv",
-      "sha256": "7fda51cd2c6016bc08baef8f6e3e87f707ffe70235bb659346619b7959e5f94a",
+      "sha256": "c102c6597b55c3f4c34a7623f04c6f08b4f9d822a67084b6216ee3fb0995eed9",
       "sourceUrl": "https://infofinland.fi/sv/leisure/libraries",
       "evidenceUrl": "https://infofinland.fi/sv/leisure/libraries",
       "locator": "Inledning",
@@ -3463,7 +3463,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "cult-voluntary-work",
@@ -3491,7 +3491,7 @@
     },
     {
       "questionId": "cult-association-foreigners",
-      "sha256": "0234ba9d0406e2c931592a0797cb8c1fbae945c6d810d8b73fc353d8c5c638d8",
+      "sha256": "0be4f76bc3022182cb3d4700a7cf41907ce3a702eefc658860ea043a4a5249e6",
       "sourceUrl": "https://infofinland.fi/fi/leisure/associations",
       "evidenceUrl": "https://infofinland.fi/fi/leisure/associations",
       "locator": "Johdanto",
@@ -3499,11 +3499,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "cult-association-foreigners-sv",
-      "sha256": "07f1a5405b5f0b01aef4d96825247e50107034d3ed7dff8246ea11ac9d745c9f",
+      "sha256": "17122f3c33a90d596ae56574487cb938087558c0c2fcb1964b3fc91c5439d475",
       "sourceUrl": "https://infofinland.fi/sv/leisure/associations",
       "evidenceUrl": "https://infofinland.fi/sv/leisure/associations",
       "locator": "Inledning",
@@ -3511,7 +3511,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "cult-association-members",
@@ -3779,7 +3779,7 @@
     },
     {
       "questionId": "safe-smoke-alarm",
-      "sha256": "48157372bbd5b115857b06da4957a93cb7a8c082acc76056862b3d5190fbaa0b",
+      "sha256": "aedd88661e781cf0cb3d878818ed81687e74d5d1b1b64235bf315e0528d27831",
       "sourceUrl": "https://infofinland.fi/fi/housing/safety-at-home",
       "evidenceUrl": "https://infofinland.fi/fi/housing/safety-at-home",
       "locator": "Kodin turvallisuus",
@@ -3787,11 +3787,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "safe-smoke-alarm-sv",
-      "sha256": "2d5580e24dddf2929137fe9a5e09519cc24d61381e46182f5401d9f9bae6d44e",
+      "sha256": "e991ccf791c2ba88c6607df0afcc832443057b379bb83c5610eb8f50218c9447",
       "sourceUrl": "https://infofinland.fi/sv/housing/safety-at-home",
       "evidenceUrl": "https://infofinland.fi/sv/housing/safety-at-home",
       "locator": "Säkerhet i hemmet",
@@ -3799,7 +3799,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "safe-smoke-alarm-area",
@@ -4547,7 +4547,7 @@
     },
     {
       "questionId": "dig-prescriptions",
-      "sha256": "726be4dadb841c4efe4bd32a3b441b860f17df47fb4fbafaa004cf313d5b886e",
+      "sha256": "9a13fe6116c364abe4e118a4c8e5862977e44e8c08e7ba5ec128a6013bbfcba0",
       "sourceUrl": "https://www.kanta.fi/reseptit-ja-uusiminen",
       "evidenceUrl": "https://www.kanta.fi/reseptit-ja-uusiminen",
       "locator": "Reseptit ja niiden uusiminen OmaKannassa",
@@ -4555,11 +4555,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "dig-prescriptions-sv",
-      "sha256": "bff819e98bd2455187cf65a844371fd5c266468c820ddd2940e09f9222546959",
+      "sha256": "2843f33a219c2dedd3d4cd08e6b79c9671ff11c9ce557a64d1a2f18ee56641d3",
       "sourceUrl": "https://www.kanta.fi/sv/recept-och-fornyelse-av-dem",
       "evidenceUrl": "https://www.kanta.fi/sv/recept-och-fornyelse-av-dem",
       "locator": "Recept och förnyelse av dem i MittKanta",
@@ -4567,7 +4567,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-21: rewritten as a false statement of the same checked claim to balance the true/false answer key; the cited source and its locator still establish the correct answer. No new source check was made."
     },
     {
       "questionId": "dig-omakanta",

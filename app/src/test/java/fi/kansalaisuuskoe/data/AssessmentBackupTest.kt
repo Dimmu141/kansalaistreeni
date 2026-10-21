@@ -20,6 +20,18 @@ class AssessmentBackupTest {
         assertEquals(1, Assessments.result(model).correct)
         assertEquals("b", content.questions.single().correctOptionId)
     }
+    @Test fun `material labelled above editorial roundtrips with its own labels`() {
+        val sourced = q.copy(status = "OFFICIALLY_SOURCED")
+        val sourcedContent = content.copy(status = "OFFICIALLY_SOURCED", questions = listOf(sourced.copy(revision = 2, correctOptionId = "b")))
+        val value = backup(listOf(session.copy(payload = session.payload.copy(questions = listOf(sourced))))).copy(content = sourcedContent)
+        assertEquals(value, BackupCodec.parse(BackupCodec.encode(value)))
+    }
+    @Test fun `envelope is the strongest label of questions and lessons`() {
+        val lesson = LessonDto("l", 1, "Intro", "OFFICIAL", listOf(LessonSectionDto("s", "Title", "Body", listOf(SourceDto("Source", "https://example.org")))))
+        assertEquals("DEMO", ContentCodec.envelopeStatus(listOf(topic), listOf(q)))
+        assertEquals("OFFICIALLY_SOURCED", ContentCodec.envelopeStatus(listOf(topic), listOf(q, q.copy(id = "other", status = "OFFICIALLY_SOURCED"))))
+        assertEquals("OFFICIAL", ContentCodec.envelopeStatus(listOf(topic.copy(lessons = mapOf("fi" to lesson))), listOf(q)))
+    }
     @Test fun `both language unfinished answers positions and source snapshots roundtrip`() {
         val qs = listOf(q.copy(id = "sv-1", language = "sv"), q.copy(id = "sv-2", language = "sv"))
         val active = BackupAssessment("unfinished", "sv", 2500, null, AssessmentPayload(listOf(topic), qs, mapOf("sv-1" to "b"), 1))

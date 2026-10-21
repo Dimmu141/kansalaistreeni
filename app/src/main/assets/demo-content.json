@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "packageId": "fi-civics-demo",
-  "version": 7,
+  "version": 8,
   "status": "EDITORIAL",
   "topics": [
     {
@@ -2680,9 +2680,9 @@
     },
     {
       "id": "dem-executive-power",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
-      "text": "Hallitusvaltaa käyttävät Suomessa tasavallan presidentti ja valtioneuvosto.",
+      "text": "Hallitusvaltaa käyttää Suomessa eduskunta.",
       "options": [
         {
           "id": "true",
@@ -2693,9 +2693,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Perustuslain mukaan hallitusvaltaa käyttävät tasavallan presidentti ja valtioneuvosto. Valtioneuvoston jäsenten täytyy nauttia eduskunnan luottamusta.",
-      "easyExplanation": "Oikein. Presidentti ja hallitus hoitavat valtion asioita.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Perustuslain mukaan hallitusvaltaa käyttävät tasavallan presidentti ja valtioneuvosto. Eduskunta käyttää lainsäädäntövaltaa, ja valtioneuvoston jäsenten täytyy nauttia eduskunnan luottamusta.",
+      "easyExplanation": "Väärin. Presidentti ja hallitus hoitavat valtion asioita. Eduskunta säätää lait.",
       "vocabulary": [
         {
           "term": "hallitusvalta",
@@ -2721,7 +2721,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Governmental power in Finland is exercised by the President of the Republic and the Government.",
+          "text": "Governmental power in Finland is exercised by Parliament.",
           "options": [
             {
               "id": "true",
@@ -2732,7 +2732,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Under the Constitution, governmental power is exercised by the President and the Government. Members of the Government must have the confidence of Parliament."
+          "explanation": "False. Under the Constitution, governmental power is exercised by the President and the Government. Parliament exercises legislative power, and members of the Government must have its confidence."
         }
       },
       "format": "TRUE_FALSE",
@@ -2742,9 +2742,9 @@
     },
     {
       "id": "dem-executive-power-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
-      "text": "Regeringsmakten i Finland utövas av republikens president och statsrådet.",
+      "text": "Regeringsmakten i Finland utövas av riksdagen.",
       "options": [
         {
           "id": "true",
@@ -2755,8 +2755,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Enligt grundlagen utövas regeringsmakten av republikens president och statsrådet. Statsrådets medlemmar ska ha riksdagens förtroende.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Enligt grundlagen utövas regeringsmakten av republikens president och statsrådet. Riksdagen utövar den lagstiftande makten, och statsrådets medlemmar ska ha riksdagens förtroende.",
       "vocabulary": [
         {
           "term": "hallitusvalta",
@@ -2782,7 +2782,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Governmental power in Finland is exercised by the President of the Republic and the Government.",
+          "text": "Governmental power in Finland is exercised by Parliament.",
           "options": [
             {
               "id": "true",
@@ -2793,7 +2793,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Under the Constitution, governmental power is exercised by the President and the Government. Members of the Government must have the confidence of Parliament."
+          "explanation": "False. Under the Constitution, governmental power is exercised by the President and the Government. Parliament exercises legislative power, and members of the Government must have its confidence."
         }
       },
       "format": "TRUE_FALSE",
@@ -3991,9 +3991,9 @@
     },
     {
       "id": "dem-president-limit",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
-      "text": "Sama henkilö voidaan valita presidentiksi enintään kahdeksi peräkkäiseksi kaudeksi.",
+      "text": "Sama henkilö voidaan valita presidentiksi enintään kolmeksi peräkkäiseksi kaudeksi.",
       "options": [
         {
           "id": "true",
@@ -4004,9 +4004,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Perustuslain mukaan sama henkilö voidaan valita presidentiksi enintään kahdeksi peräkkäiseksi toimikaudeksi.",
-      "easyExplanation": "Oikein. Sama ihminen voi olla presidentti korkeintaan kaksi kautta peräkkäin.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Perustuslain mukaan sama henkilö voidaan valita presidentiksi enintään kahdeksi peräkkäiseksi toimikaudeksi, ei kolmeksi.",
+      "easyExplanation": "Väärin. Sama ihminen voi olla presidentti korkeintaan kaksi kautta peräkkäin.",
       "vocabulary": [
         {
           "term": "peräkkäinen",
@@ -4027,7 +4027,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "The same person can be elected President for at most two consecutive terms.",
+          "text": "The same person can be elected President for at most three consecutive terms.",
           "options": [
             {
               "id": "true",
@@ -4038,7 +4038,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Under the Constitution, the same person can be elected President for at most two consecutive terms."
+          "explanation": "False. Under the Constitution, the same person can be elected President for at most two consecutive terms, not three."
         }
       },
       "format": "TRUE_FALSE",
@@ -4048,9 +4048,9 @@
     },
     {
       "id": "dem-president-limit-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
-      "text": "En och samma person kan väljas till president för högst två perioder i följd.",
+      "text": "En och samma person kan väljas till president för högst tre perioder i följd.",
       "options": [
         {
           "id": "true",
@@ -4061,8 +4061,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Enligt grundlagen kan en och samma person väljas till president för högst två ämbetsperioder i följd.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Enligt grundlagen kan en och samma person väljas till president för högst två ämbetsperioder i följd, inte tre.",
       "vocabulary": [
         {
           "term": "peräkkäinen",
@@ -4083,7 +4083,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "The same person can be elected President for at most two consecutive terms.",
+          "text": "The same person can be elected President for at most three consecutive terms.",
           "options": [
             {
               "id": "true",
@@ -4094,7 +4094,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Under the Constitution, the same person can be elected President for at most two consecutive terms."
+          "explanation": "False. Under the Constitution, the same person can be elected President for at most two consecutive terms, not three."
         }
       },
       "format": "TRUE_FALSE",
@@ -4249,9 +4249,9 @@
     },
     {
       "id": "dem-commander",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
-      "text": "Tasavallan presidentti on Suomen puolustusvoimien ylipäällikkö.",
+      "text": "Pääministeri on Suomen puolustusvoimien ylipäällikkö.",
       "options": [
         {
           "id": "true",
@@ -4262,9 +4262,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Perustuslain mukaan tasavallan presidentti on Suomen puolustusvoimien ylipäällikkö. Presidentti myös nimittää upseerit.",
-      "easyExplanation": "Oikein. Presidentti on armeijan ylin johtaja.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Perustuslain mukaan puolustusvoimien ylipäällikkö on tasavallan presidentti, ei pääministeri. Presidentti myös nimittää upseerit.",
+      "easyExplanation": "Väärin. Armeijan ylin johtaja on presidentti, ei pääministeri.",
       "vocabulary": [
         {
           "term": "ylipäällikkö",
@@ -4275,6 +4275,11 @@
           "term": "puolustusvoimat",
           "meaning": "Defence Forces",
           "swedish": "försvarsmakten"
+        },
+        {
+          "term": "pääministeri",
+          "meaning": "Prime Minister",
+          "swedish": "statsminister"
         }
       ],
       "source": {
@@ -4290,7 +4295,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "The President of the Republic is Commander-in-Chief of Finland's Defence Forces.",
+          "text": "The Prime Minister is Commander-in-Chief of Finland's Defence Forces.",
           "options": [
             {
               "id": "true",
@@ -4301,7 +4306,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Under the Constitution, the President is Commander-in-Chief of the Defence Forces and also appoints the officers."
+          "explanation": "False. Under the Constitution, the President of the Republic, not the Prime Minister, is Commander-in-Chief of the Defence Forces and also appoints the officers."
         }
       },
       "format": "TRUE_FALSE",
@@ -4311,9 +4316,9 @@
     },
     {
       "id": "dem-commander-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
-      "text": "Republikens president är överbefälhavare för Finlands försvarsmakt.",
+      "text": "Statsministern är överbefälhavare för Finlands försvarsmakt.",
       "options": [
         {
           "id": "true",
@@ -4324,8 +4329,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Enligt grundlagen är republikens president överbefälhavare för Finlands försvarsmakt. Presidenten utnämner också officerarna.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Enligt grundlagen är det republikens president, inte statsministern, som är överbefälhavare för Finlands försvarsmakt. Presidenten utnämner också officerarna.",
       "vocabulary": [
         {
           "term": "ylipäällikkö",
@@ -4336,6 +4341,11 @@
           "term": "puolustusvoimat",
           "meaning": "Defence Forces",
           "swedish": "försvarsmakten"
+        },
+        {
+          "term": "pääministeri",
+          "meaning": "Prime Minister",
+          "swedish": "statsminister"
         }
       ],
       "source": {
@@ -4351,7 +4361,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "The President of the Republic is Commander-in-Chief of Finland's Defence Forces.",
+          "text": "The Prime Minister is Commander-in-Chief of Finland's Defence Forces.",
           "options": [
             {
               "id": "true",
@@ -4362,7 +4372,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Under the Constitution, the President is Commander-in-Chief of the Defence Forces and also appoints the officers."
+          "explanation": "False. Under the Constitution, the President of the Republic, not the Prime Minister, is Commander-in-Chief of the Defence Forces and also appoints the officers."
         }
       },
       "format": "TRUE_FALSE",
@@ -6676,9 +6686,9 @@
     },
     {
       "id": "rights-public-documents",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
-      "text": "Viranomaisen asiakirjat ovat julkisia, ellei niiden julkisuutta ole välttämättömistä syistä lailla rajoitettu.",
+      "text": "Viranomaisen asiakirjat ovat salaisia, ellei laissa erikseen säädetä niitä julkisiksi.",
       "options": [
         {
           "id": "true",
@@ -6689,9 +6699,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Perustuslain mukaan viranomaisen hallussa olevat asiakirjat ovat julkisia, jollei julkisuutta ole välttämättömien syiden vuoksi lailla rajoitettu. Jokaisella on oikeus saada tieto julkisesta asiakirjasta.",
-      "easyExplanation": "Oikein. Viranomaisen paperit ovat yleensä julkisia. Laki voi tehdä poikkeuksia.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Perustuslain mukaan pääsääntö on päinvastainen: viranomaisen hallussa olevat asiakirjat ovat julkisia, jollei julkisuutta ole välttämättömien syiden vuoksi lailla rajoitettu. Jokaisella on oikeus saada tieto julkisesta asiakirjasta.",
+      "easyExplanation": "Väärin. Viranomaisen paperit ovat yleensä julkisia. Laki voi tehdä poikkeuksia.",
       "vocabulary": [
         {
           "term": "asiakirja",
@@ -6717,7 +6727,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Documents held by authorities are public unless their publicity has been restricted by law for necessary reasons.",
+          "text": "Documents held by authorities are secret unless a law specifically makes them public.",
           "options": [
             {
               "id": "true",
@@ -6728,7 +6738,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Under the Constitution, documents held by authorities are public unless publicity has been restricted by law for necessary reasons. Everyone has the right to see public documents."
+          "explanation": "False. Under the Constitution, the main rule is the opposite: documents held by authorities are public unless publicity has been restricted by law for necessary reasons. Everyone has the right to see public documents."
         }
       },
       "format": "TRUE_FALSE",
@@ -6738,9 +6748,9 @@
     },
     {
       "id": "rights-public-documents-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
-      "text": "Myndigheternas handlingar är offentliga, om inte offentligheten av tvingande skäl har begränsats genom lag.",
+      "text": "Myndigheternas handlingar är hemliga, om de inte särskilt har förklarats offentliga genom lag.",
       "options": [
         {
           "id": "true",
@@ -6751,8 +6761,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Enligt grundlagen är handlingar som innehas av myndigheterna offentliga, om inte offentligheten av tvingande skäl särskilt har begränsats genom lag. Var och en har rätt att ta del av offentliga handlingar.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Enligt grundlagen är huvudregeln den motsatta: handlingar som innehas av myndigheterna är offentliga, om inte offentligheten av tvingande skäl särskilt har begränsats genom lag. Var och en har rätt att ta del av offentliga handlingar.",
       "vocabulary": [
         {
           "term": "asiakirja",
@@ -6778,7 +6788,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Documents held by authorities are public unless their publicity has been restricted by law for necessary reasons.",
+          "text": "Documents held by authorities are secret unless a law specifically makes them public.",
           "options": [
             {
               "id": "true",
@@ -6789,7 +6799,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Under the Constitution, documents held by authorities are public unless publicity has been restricted by law for necessary reasons. Everyone has the right to see public documents."
+          "explanation": "False. Under the Constitution, the main rule is the opposite: documents held by authorities are public unless publicity has been restricted by law for necessary reasons. Everyone has the right to see public documents."
         }
       },
       "format": "TRUE_FALSE",
@@ -8410,9 +8420,9 @@
     },
     {
       "id": "rights-own-language",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
-      "text": "Jokaisella on oikeus käyttää omassa asiassaan tuomioistuimessa ja muussa viranomaisessa suomea tai ruotsia.",
+      "text": "Tuomioistuimessa ja muussa viranomaisessa saa käyttää omassa asiassaan vain suomea.",
       "options": [
         {
           "id": "true",
@@ -8423,9 +8433,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Perustuslain mukaan jokaisen oikeus käyttää tuomioistuimessa ja muussa viranomaisessa asiassaan omaa kieltään, joko suomea tai ruotsia, turvataan lailla.",
-      "easyExplanation": "Oikein. Viranomaisen kanssa voi asioida suomeksi tai ruotsiksi.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Perustuslain mukaan jokaisen oikeus käyttää tuomioistuimessa ja muussa viranomaisessa asiassaan omaa kieltään, joko suomea tai ruotsia, turvataan lailla. Myös ruotsia saa siis käyttää.",
+      "easyExplanation": "Väärin. Viranomaisen kanssa voi asioida suomeksi tai ruotsiksi.",
       "vocabulary": [
         {
           "term": "kansalliskieli",
@@ -8446,7 +8456,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Everyone has the right to use Finnish or Swedish in their own matter before courts and other authorities.",
+          "text": "Only Finnish may be used in one's own matter before courts and other authorities.",
           "options": [
             {
               "id": "true",
@@ -8457,7 +8467,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. The Constitution protects everyone's right to use their own language, Finnish or Swedish, in their own matter before courts and other authorities."
+          "explanation": "False. The Constitution protects everyone's right to use their own language, Finnish or Swedish, in their own matter before courts and other authorities. Swedish may be used too."
         }
       },
       "format": "TRUE_FALSE",
@@ -8467,9 +8477,9 @@
     },
     {
       "id": "rights-own-language-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
-      "text": "Var och en har rätt att i egen sak använda finska eller svenska hos domstolar och andra myndigheter.",
+      "text": "Hos domstolar och andra myndigheter får man i egen sak använda endast finska.",
       "options": [
         {
           "id": "true",
@@ -8480,8 +8490,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Enligt grundlagen ska vars och ens rätt att hos domstol och andra myndigheter i egen sak använda sitt eget språk, antingen finska eller svenska, tryggas genom lag.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Enligt grundlagen ska vars och ens rätt att hos domstol och andra myndigheter i egen sak använda sitt eget språk, antingen finska eller svenska, tryggas genom lag. Man får alltså också använda svenska.",
       "vocabulary": [
         {
           "term": "kansalliskieli",
@@ -8502,7 +8512,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Everyone has the right to use Finnish or Swedish in their own matter before courts and other authorities.",
+          "text": "Only Finnish may be used in one's own matter before courts and other authorities.",
           "options": [
             {
               "id": "true",
@@ -8513,7 +8523,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. The Constitution protects everyone's right to use their own language, Finnish or Swedish, in their own matter before courts and other authorities."
+          "explanation": "False. The Constitution protects everyone's right to use their own language, Finnish or Swedish, in their own matter before courts and other authorities. Swedish may be used too."
         }
       },
       "format": "TRUE_FALSE",
@@ -11961,9 +11971,9 @@
     },
     {
       "id": "eq-same-sex-marriage",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
-      "text": "Suomessa kaksi samaa sukupuolta olevaa ihmistä voi mennä naimisiin keskenään.",
+      "text": "Suomessa vain eri sukupuolta olevat ihmiset voivat mennä naimisiin keskenään.",
       "options": [
         {
           "id": "true",
@@ -11974,9 +11984,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Suomessa myös samaa sukupuolta olevat parit voivat mennä naimisiin.",
-      "easyExplanation": "Oikein. Kaksi naista tai kaksi miestä voi mennä naimisiin.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Suomessa myös samaa sukupuolta olevat parit voivat mennä naimisiin.",
+      "easyExplanation": "Väärin. Myös kaksi naista tai kaksi miestä voi mennä naimisiin.",
       "vocabulary": [
         {
           "term": "puoliso",
@@ -11997,7 +12007,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "In Finland, two people of the same sex can marry each other.",
+          "text": "In Finland, only people of different sexes can marry each other.",
           "options": [
             {
               "id": "true",
@@ -12008,7 +12018,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Same-sex couples can marry in Finland."
+          "explanation": "False. Same-sex couples can also marry in Finland."
         }
       },
       "format": "TRUE_FALSE",
@@ -12018,9 +12028,9 @@
     },
     {
       "id": "eq-same-sex-marriage-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
-      "text": "I Finland kan två personer av samma kön gifta sig med varandra.",
+      "text": "I Finland kan endast personer av olika kön gifta sig med varandra.",
       "options": [
         {
           "id": "true",
@@ -12031,8 +12041,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. I Finland kan även par av samma kön gifta sig.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. I Finland kan även par av samma kön gifta sig.",
       "vocabulary": [
         {
           "term": "puoliso",
@@ -12053,7 +12063,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "In Finland, two people of the same sex can marry each other.",
+          "text": "In Finland, only people of different sexes can marry each other.",
           "options": [
             {
               "id": "true",
@@ -12064,7 +12074,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Same-sex couples can marry in Finland."
+          "explanation": "False. Same-sex couples can also marry in Finland."
         }
       },
       "format": "TRUE_FALSE",
@@ -14100,9 +14110,9 @@
     },
     {
       "id": "law-trial-period",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
-      "text": "Koeajan aikana sekä työnantaja että työntekijä voivat päättää työsuhteen.",
+      "text": "Koeajan aikana vain työnantaja voi päättää työsuhteen.",
       "options": [
         {
           "id": "true",
@@ -14113,9 +14123,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Työsuhteen alussa voidaan sopia koeajasta. Koeajan aikana sekä työnantaja että työntekijä voivat päättää työsuhteen.",
-      "easyExplanation": "Oikein. Koeajalla kumpikin voi lopettaa työsuhteen.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Työsuhteen alussa voidaan sopia koeajasta. Koeajan aikana sekä työnantaja että työntekijä voivat päättää työsuhteen.",
+      "easyExplanation": "Väärin. Koeajalla kumpikin voi lopettaa työsuhteen, myös työntekijä.",
       "vocabulary": [
         {
           "term": "koeaika",
@@ -14136,7 +14146,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "During the trial period, both the employer and the employee can end the employment.",
+          "text": "During the trial period, only the employer can end the employment.",
           "options": [
             {
               "id": "true",
@@ -14147,7 +14157,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. A trial period can be agreed at the start of employment, and during it either party can end the employment."
+          "explanation": "False. A trial period can be agreed at the start of employment, and during it either the employer or the employee can end the employment."
         }
       },
       "format": "TRUE_FALSE",
@@ -14157,9 +14167,9 @@
     },
     {
       "id": "law-trial-period-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
-      "text": "Under prövotiden kan både arbetsgivaren och arbetstagaren avsluta anställningen.",
+      "text": "Under prövotiden kan endast arbetsgivaren avsluta anställningen.",
       "options": [
         {
           "id": "true",
@@ -14170,8 +14180,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Man kan komma överens om en prövotid i början av anställningen. Under prövotiden kan både arbetsgivaren och arbetstagaren säga upp anställningen.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Man kan komma överens om en prövotid i början av anställningen. Under prövotiden kan både arbetsgivaren och arbetstagaren säga upp anställningen.",
       "vocabulary": [
         {
           "term": "koeaika",
@@ -14192,7 +14202,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "During the trial period, both the employer and the employee can end the employment.",
+          "text": "During the trial period, only the employer can end the employment.",
           "options": [
             {
               "id": "true",
@@ -14203,7 +14213,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. A trial period can be agreed at the start of employment, and during it either party can end the employment."
+          "explanation": "False. A trial period can be agreed at the start of employment, and during it either the employer or the employee can end the employment."
         }
       },
       "format": "TRUE_FALSE",
@@ -14964,9 +14974,9 @@
     },
     {
       "id": "law-progressive-tax",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
-      "text": "Suomessa isosta palkasta maksetaan suurempi osuus veroja kuin pienestä palkasta.",
+      "text": "Suomessa kaikki maksavat palkastaan saman prosenttiosuuden veroja palkan suuruudesta riippumatta.",
       "options": [
         {
           "id": "true",
@@ -14977,9 +14987,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Ansiotulojen verotus on Suomessa progressiivista. Se tarkoittaa, että isosta palkasta maksetaan suurempi osuus veroja kuin pienemmästä palkasta.",
-      "easyExplanation": "Oikein. Kun palkka on isompi, veroprosentti on isompi.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Ansiotulojen verotus on Suomessa progressiivista. Se tarkoittaa, että isosta palkasta maksetaan suurempi osuus veroja kuin pienemmästä palkasta.",
+      "easyExplanation": "Väärin. Kun palkka on isompi, veroprosentti on isompi.",
       "vocabulary": [
         {
           "term": "progressiivinen",
@@ -15005,7 +15015,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "In Finland, a larger share of tax is paid on a big salary than on a small one.",
+          "text": "In Finland, everyone pays the same share of tax on their salary, regardless of how big it is.",
           "options": [
             {
               "id": "true",
@@ -15016,7 +15026,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Income tax in Finland is progressive: a bigger salary is taxed at a higher share than a smaller one."
+          "explanation": "False. Income tax in Finland is progressive: a bigger salary is taxed at a higher share than a smaller one."
         }
       },
       "format": "TRUE_FALSE",
@@ -15026,9 +15036,9 @@
     },
     {
       "id": "law-progressive-tax-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
-      "text": "I Finland betalar man en större andel skatt på en stor lön än på en liten lön.",
+      "text": "I Finland betalar alla samma andel skatt på sin lön, oberoende av hur stor lönen är.",
       "options": [
         {
           "id": "true",
@@ -15039,8 +15049,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Beskattningen i Finland är progressiv. Det innebär att man på en stor lön betalar en större andel skatt än på en mindre lön.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Beskattningen i Finland är progressiv. Det innebär att man på en stor lön betalar en större andel skatt än på en mindre lön.",
       "vocabulary": [
         {
           "term": "progressiivinen",
@@ -15066,7 +15076,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "In Finland, a larger share of tax is paid on a big salary than on a small one.",
+          "text": "In Finland, everyone pays the same share of tax on their salary, regardless of how big it is.",
           "options": [
             {
               "id": "true",
@@ -15077,7 +15087,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Income tax in Finland is progressive: a bigger salary is taxed at a higher share than a smaller one."
+          "explanation": "False. Income tax in Finland is progressive: a bigger salary is taxed at a higher share than a smaller one."
         }
       },
       "format": "TRUE_FALSE",
@@ -16783,9 +16793,9 @@
     },
     {
       "id": "hist-russian-conquest",
-      "revision": 1,
+      "revision": 2,
       "topicId": "history",
-      "text": "Venäjä valloitti Suomen alueen Ruotsilta vuosina 1808–1809.",
+      "text": "Ruotsi valloitti Suomen alueen Venäjältä vuosina 1808–1809.",
       "options": [
         {
           "id": "true",
@@ -16796,9 +16806,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Venäjä valloitti Suomen alueen Ruotsilta 1808–1809. Sen jälkeen Suomesta tuli Venäjän keisarikunnan autonominen osa.",
-      "easyExplanation": "Oikein. Vuonna 1809 Suomi siirtyi Ruotsilta Venäjälle.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Asia oli toisin päin: Venäjä valloitti Suomen alueen Ruotsilta 1808–1809. Sen jälkeen Suomesta tuli Venäjän keisarikunnan autonominen osa.",
+      "easyExplanation": "Väärin. Vuonna 1809 Suomi siirtyi Ruotsilta Venäjälle.",
       "vocabulary": [
         {
           "term": "valloittaa",
@@ -16819,7 +16829,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Russia conquered the territory of Finland from Sweden in 1808–1809.",
+          "text": "Sweden conquered the territory of Finland from Russia in 1808–1809.",
           "options": [
             {
               "id": "true",
@@ -16830,7 +16840,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Russia conquered Finland from Sweden in 1808–1809, after which Finland became an autonomous part of the Russian Empire."
+          "explanation": "False. It was the other way round: Russia conquered Finland from Sweden in 1808–1809, after which Finland became an autonomous part of the Russian Empire."
         }
       },
       "format": "TRUE_FALSE",
@@ -16840,9 +16850,9 @@
     },
     {
       "id": "hist-russian-conquest-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "history",
-      "text": "Ryssland erövrade Finlands område från Sverige 1808–1809.",
+      "text": "Sverige erövrade Finlands område från Ryssland 1808–1809.",
       "options": [
         {
           "id": "true",
@@ -16853,8 +16863,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Ryssland erövrade Finlands område från Sverige 1808–1809. Därefter blev Finland en autonom del av Kejsardömet Ryssland.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Det var tvärtom: Ryssland erövrade Finlands område från Sverige 1808–1809. Därefter blev Finland en autonom del av Kejsardömet Ryssland.",
       "vocabulary": [
         {
           "term": "valloittaa",
@@ -16875,7 +16885,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Russia conquered the territory of Finland from Sweden in 1808–1809.",
+          "text": "Sweden conquered the territory of Finland from Russia in 1808–1809.",
           "options": [
             {
               "id": "true",
@@ -16886,7 +16896,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Russia conquered Finland from Sweden in 1808–1809, after which Finland became an autonomous part of the Russian Empire."
+          "explanation": "False. It was the other way round: Russia conquered Finland from Sweden in 1808–1809, after which Finland became an autonomous part of the Russian Empire."
         }
       },
       "format": "TRUE_FALSE",
@@ -18201,9 +18211,9 @@
     },
     {
       "id": "hist-republic",
-      "revision": 1,
+      "revision": 2,
       "topicId": "history",
-      "text": "Suomi sai tasavaltaisen hallitusmuodon vuonna 1919.",
+      "text": "Suomi sai tasavaltaisen hallitusmuodon vasta vuonna 1945.",
       "options": [
         {
           "id": "true",
@@ -18214,9 +18224,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Eduskunta hyväksyi tasavaltaisen hallitusmuodon kesäkuussa 1919, ja valtionhoitaja Mannerheim vahvisti sen 17. heinäkuuta 1919.",
-      "easyExplanation": "Oikein. Suomesta tuli tasavalta vuonna 1919.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Suomi sai tasavaltaisen hallitusmuodon jo vuonna 1919. Eduskunta hyväksyi sen kesäkuussa 1919, ja valtionhoitaja Mannerheim vahvisti sen 17. heinäkuuta 1919.",
+      "easyExplanation": "Väärin. Suomesta tuli tasavalta vuonna 1919.",
       "vocabulary": [
         {
           "term": "tasavalta",
@@ -18242,7 +18252,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Finland adopted a republican form of government in 1919.",
+          "text": "Finland adopted a republican form of government only in 1945.",
           "options": [
             {
               "id": "true",
@@ -18253,7 +18263,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Parliament approved the republican form of government in June 1919, and Regent Mannerheim confirmed it on 17 July 1919."
+          "explanation": "False. Finland adopted a republican form of government in 1919. Parliament approved it in June 1919, and Regent Mannerheim confirmed it on 17 July 1919."
         }
       },
       "format": "TRUE_FALSE",
@@ -18263,9 +18273,9 @@
     },
     {
       "id": "hist-republic-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "history",
-      "text": "Finland fick en republikansk regeringsform år 1919.",
+      "text": "Finland fick en republikansk regeringsform först år 1945.",
       "options": [
         {
           "id": "true",
@@ -18276,8 +18286,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Riksdagen antog den republikanska regeringsformen i juni 1919, och riksföreståndaren Mannerheim stadfäste den den 17 juli 1919.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Finland fick en republikansk regeringsform redan år 1919. Riksdagen antog den i juni 1919, och riksföreståndaren Mannerheim stadfäste den den 17 juli 1919.",
       "vocabulary": [
         {
           "term": "tasavalta",
@@ -18303,7 +18313,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Finland adopted a republican form of government in 1919.",
+          "text": "Finland adopted a republican form of government only in 1945.",
           "options": [
             {
               "id": "true",
@@ -18314,7 +18324,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Parliament approved the republican form of government in June 1919, and Regent Mannerheim confirmed it on 17 July 1919."
+          "explanation": "False. Finland adopted a republican form of government in 1919. Parliament approved it in June 1919, and Regent Mannerheim confirmed it on 17 July 1919."
         }
       },
       "format": "TRUE_FALSE",
@@ -19202,9 +19212,9 @@
     },
     {
       "id": "hist-reparations-paid",
-      "revision": 1,
+      "revision": 2,
       "topicId": "history",
-      "text": "Suomi oli ainoa maa, joka maksoi sotakorvauksensa täysimääräisesti.",
+      "text": "Suomi jätti osan sotakorvauksistaan maksamatta.",
       "options": [
         {
           "id": "true",
@@ -19215,9 +19225,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Suomi maksoi ainoana maana sotakorvaukset täysimääräisesti. Viimeinen sotakorvausjuna ylitti rajan Vainikkalassa 19. syyskuuta 1952.",
-      "easyExplanation": "Oikein. Suomi maksoi kaikki sotakorvaukset vuoteen 1952 mennessä.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Suomi maksoi ainoana maana sotakorvaukset täysimääräisesti. Viimeinen sotakorvausjuna ylitti rajan Vainikkalassa 19. syyskuuta 1952.",
+      "easyExplanation": "Väärin. Suomi maksoi kaikki sotakorvaukset vuoteen 1952 mennessä.",
       "vocabulary": [
         {
           "term": "täysimääräinen",
@@ -19238,7 +19248,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Finland was the only country that paid its war reparations in full.",
+          "text": "Finland left part of its war reparations unpaid.",
           "options": [
             {
               "id": "true",
@@ -19249,7 +19259,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Finland was the only country to pay its war reparations in full. The last reparations train crossed the border at Vainikkala on 19 September 1952."
+          "explanation": "False. Finland was the only country to pay its war reparations in full. The last reparations train crossed the border at Vainikkala on 19 September 1952."
         }
       },
       "format": "TRUE_FALSE",
@@ -19259,9 +19269,9 @@
     },
     {
       "id": "hist-reparations-paid-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "history",
-      "text": "Finland var det enda landet som betalade sitt krigsskadestånd till fullt belopp.",
+      "text": "Finland lämnade en del av sitt krigsskadestånd obetalt.",
       "options": [
         {
           "id": "true",
@@ -19272,8 +19282,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Finland var det enda landet i världen som betalade sitt krigsskadestånd till fullt belopp. Det sista skadeståndståget passerade gränsen i Vainikkala den 19 september 1952.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Finland var det enda landet i världen som betalade sitt krigsskadestånd till fullt belopp. Det sista skadeståndståget passerade gränsen i Vainikkala den 19 september 1952.",
       "vocabulary": [
         {
           "term": "täysimääräinen",
@@ -19294,7 +19304,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Finland was the only country that paid its war reparations in full.",
+          "text": "Finland left part of its war reparations unpaid.",
           "options": [
             {
               "id": "true",
@@ -19305,7 +19315,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Finland was the only country to pay its war reparations in full. The last reparations train crossed the border at Vainikkala on 19 September 1952."
+          "explanation": "False. Finland was the only country to pay its war reparations in full. The last reparations train crossed the border at Vainikkala on 19 September 1952."
         }
       },
       "format": "TRUE_FALSE",
@@ -20638,9 +20648,9 @@
     },
     {
       "id": "cult-aland-demilitarised",
-      "revision": 1,
+      "revision": 2,
       "topicId": "culture",
-      "text": "Ahvenanmaa on demilitarisoitu, eli siellä ei saa olla sotilaallista läsnäoloa.",
+      "text": "Ahvenanmaalle saa rakentaa sotilastukikohtia ja linnoituksia.",
       "options": [
         {
           "id": "true",
@@ -20651,9 +20661,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Ahvenanmaa on demilitarisoitu. Sotilaallinen läsnäolo maakunnassa ei ole sallittua, eikä saaria saa linnoittaa.",
-      "easyExplanation": "Oikein. Ahvenanmaalla ei saa olla armeijaa.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Ahvenanmaa on demilitarisoitu. Sotilaallinen läsnäolo maakunnassa ei ole sallittua, eikä saaria saa linnoittaa.",
+      "easyExplanation": "Väärin. Ahvenanmaalla ei saa olla armeijaa.",
       "vocabulary": [
         {
           "term": "demilitarisoitu",
@@ -20679,7 +20689,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Åland is demilitarised, meaning no military presence is allowed there.",
+          "text": "Military bases and fortifications may be built on Åland.",
           "options": [
             {
               "id": "true",
@@ -20690,7 +20700,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Åland is demilitarised: no military presence is allowed in the region, and the islands may not be fortified."
+          "explanation": "False. Åland is demilitarised: no military presence is allowed in the region, and the islands may not be fortified."
         }
       },
       "format": "TRUE_FALSE",
@@ -20700,9 +20710,9 @@
     },
     {
       "id": "cult-aland-demilitarised-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "culture",
-      "text": "Åland är demilitariserat, det vill säga där får inte finnas någon militär närvaro.",
+      "text": "På Åland får man bygga militärbaser och befästningar.",
       "options": [
         {
           "id": "true",
@@ -20713,8 +20723,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Åland är demilitariserat. Det får inte finnas någon militär närvaro i landskapet, och öarna får inte befästas.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Åland är demilitariserat. Det får inte finnas någon militär närvaro i landskapet, och öarna får inte befästas.",
       "vocabulary": [
         {
           "term": "demilitarisoitu",
@@ -20740,7 +20750,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Åland is demilitarised, meaning no military presence is allowed there.",
+          "text": "Military bases and fortifications may be built on Åland.",
           "options": [
             {
               "id": "true",
@@ -20751,7 +20761,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Åland is demilitarised: no military presence is allowed in the region, and the islands may not be fortified."
+          "explanation": "False. Åland is demilitarised: no military presence is allowed in the region, and the islands may not be fortified."
         }
       },
       "format": "TRUE_FALSE",
@@ -21899,9 +21909,9 @@
     },
     {
       "id": "cult-may-day",
-      "revision": 1,
+      "revision": 2,
       "topicId": "culture",
-      "text": "Vappu 1. toukokuuta on kevään ja työväen juhla.",
+      "text": "Vappu on Suomessa syksyn sadonkorjuujuhla.",
       "options": [
         {
           "id": "true",
@@ -21912,9 +21922,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Vappu 1.5. on kevään ja työväen juhla.",
-      "easyExplanation": "Oikein. Vappu on kevään juhla 1. toukokuuta.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Vappu 1.5. on kevään ja työväen juhla, ei syksyn juhla.",
+      "easyExplanation": "Väärin. Vappu on kevään juhla 1. toukokuuta.",
       "vocabulary": [
         {
           "term": "vappu",
@@ -21940,7 +21950,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "May Day on 1 May is the festival of spring and of workers.",
+          "text": "May Day is an autumn harvest festival in Finland.",
           "options": [
             {
               "id": "true",
@@ -21951,7 +21961,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. May Day, 1 May, is the festival of spring and of workers."
+          "explanation": "False. May Day, 1 May, is the festival of spring and of workers, not an autumn festival."
         }
       },
       "format": "TRUE_FALSE",
@@ -21961,9 +21971,9 @@
     },
     {
       "id": "cult-may-day-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "culture",
-      "text": "Första maj är vårens och arbetarnas fest.",
+      "text": "Första maj är i Finland en skördefest på hösten.",
       "options": [
         {
           "id": "true",
@@ -21974,8 +21984,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Första maj är vårens och arbetarnas fest.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Första maj är vårens och arbetarnas fest, inte en höstfest.",
       "vocabulary": [
         {
           "term": "vappu",
@@ -22001,7 +22011,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "May Day on 1 May is the festival of spring and of workers.",
+          "text": "May Day is an autumn harvest festival in Finland.",
           "options": [
             {
               "id": "true",
@@ -22012,7 +22022,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. May Day, 1 May, is the festival of spring and of workers."
+          "explanation": "False. May Day, 1 May, is the festival of spring and of workers, not an autumn festival."
         }
       },
       "format": "TRUE_FALSE",
@@ -22797,9 +22807,9 @@
     },
     {
       "id": "cult-library-free",
-      "revision": 1,
+      "revision": 2,
       "topicId": "culture",
-      "text": "Kirjastot ovat Suomessa kaikille avoimia ja maksuttomia.",
+      "text": "Suomen kirjastot ovat avoimia vain Suomen kansalaisille.",
       "options": [
         {
           "id": "true",
@@ -22810,9 +22820,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Jokaisella paikkakunnalla on kunnan- tai kaupunginkirjasto, ja kirjastot ovat kaikille avoimia ja maksuttomia.",
-      "easyExplanation": "Oikein. Kuka tahansa voi käyttää kirjastoa ilmaiseksi.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Jokaisella paikkakunnalla on kunnan- tai kaupunginkirjasto, ja kirjastot ovat kaikille avoimia ja maksuttomia, myös muille kuin Suomen kansalaisille.",
+      "easyExplanation": "Väärin. Kuka tahansa voi käyttää kirjastoa ilmaiseksi.",
       "vocabulary": [
         {
           "term": "kirjasto",
@@ -22833,7 +22843,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Libraries in Finland are open to everyone and free of charge.",
+          "text": "Libraries in Finland are open only to Finnish citizens.",
           "options": [
             {
               "id": "true",
@@ -22844,7 +22854,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Every locality has a municipal or city library, and libraries are open to everyone and free."
+          "explanation": "False. Every locality has a municipal or city library, and libraries are open to everyone, not only to Finnish citizens, and free of charge."
         }
       },
       "format": "TRUE_FALSE",
@@ -22854,9 +22864,9 @@
     },
     {
       "id": "cult-library-free-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "culture",
-      "text": "Biblioteken i Finland är öppna för alla och kostnadsfria.",
+      "text": "Biblioteken i Finland är öppna endast för finska medborgare.",
       "options": [
         {
           "id": "true",
@@ -22867,8 +22877,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Varje ort har ett kommun- eller stadsbibliotek, och biblioteken är öppna för alla och verksamheten är kostnadsfri.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Varje ort har ett kommun- eller stadsbibliotek, och biblioteken är öppna för alla, också för den som inte är finsk medborgare. Verksamheten är kostnadsfri.",
       "vocabulary": [
         {
           "term": "kirjasto",
@@ -22889,7 +22899,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Libraries in Finland are open to everyone and free of charge.",
+          "text": "Libraries in Finland are open only to Finnish citizens.",
           "options": [
             {
               "id": "true",
@@ -22900,7 +22910,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Every locality has a municipal or city library, and libraries are open to everyone and free."
+          "explanation": "False. Every locality has a municipal or city library, and libraries are open to everyone, not only to Finnish citizens, and free of charge."
         }
       },
       "format": "TRUE_FALSE",
@@ -23065,9 +23075,9 @@
     },
     {
       "id": "cult-association-foreigners",
-      "revision": 1,
+      "revision": 2,
       "topicId": "culture",
-      "text": "Myös ulkomaalaisilla on Suomessa oikeus toimia yhdistyksissä.",
+      "text": "Ulkomaalaisilla ei ole Suomessa oikeutta toimia yhdistyksissä.",
       "options": [
         {
           "id": "true",
@@ -23078,9 +23088,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Kaikilla on lain mukaan oikeus toimia yhdistyksissä. Yhdistymisvapaus koskee myös ulkomaalaisia.",
-      "easyExplanation": "Oikein. Ulkomaalainen voi liittyä yhdistykseen.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Kaikilla on lain mukaan oikeus toimia yhdistyksissä. Yhdistymisvapaus koskee myös ulkomaalaisia.",
+      "easyExplanation": "Väärin. Myös ulkomaalainen voi liittyä yhdistykseen.",
       "vocabulary": [
         {
           "term": "yhdistys",
@@ -23101,7 +23111,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Foreigners also have the right to take part in associations in Finland.",
+          "text": "Foreigners do not have the right to take part in associations in Finland.",
           "options": [
             {
               "id": "true",
@@ -23112,7 +23122,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. By law, everyone has the right to take part in associations, and freedom of association also applies to foreigners."
+          "explanation": "False. By law, everyone has the right to take part in associations, and freedom of association also applies to foreigners."
         }
       },
       "format": "TRUE_FALSE",
@@ -23122,9 +23132,9 @@
     },
     {
       "id": "cult-association-foreigners-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "culture",
-      "text": "Även utlänningar har rätt att verka i föreningar i Finland.",
+      "text": "Utlänningar har inte rätt att verka i föreningar i Finland.",
       "options": [
         {
           "id": "true",
@@ -23135,8 +23145,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Enligt lagen har alla rätt att verka i föreningar. Föreningsfriheten gäller också utlänningar.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Enligt lagen har alla rätt att verka i föreningar. Föreningsfriheten gäller också utlänningar.",
       "vocabulary": [
         {
           "term": "yhdistys",
@@ -23157,7 +23167,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Foreigners also have the right to take part in associations in Finland.",
+          "text": "Foreigners do not have the right to take part in associations in Finland.",
           "options": [
             {
               "id": "true",
@@ -23168,7 +23178,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. By law, everyone has the right to take part in associations, and freedom of association also applies to foreigners."
+          "explanation": "False. By law, everyone has the right to take part in associations, and freedom of association also applies to foreigners."
         }
       },
       "format": "TRUE_FALSE",
@@ -24761,9 +24771,9 @@
     },
     {
       "id": "safe-smoke-alarm",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
-      "text": "Jokaisessa kodissa täytyy olla vähintään yksi palovaroitin.",
+      "text": "Palovaroitin on pakollinen vain kerrostaloasunnoissa.",
       "options": [
         {
           "id": "true",
@@ -24774,9 +24784,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Jokaisessa kodissa täytyy olla vähintään yksi palovaroitin. Palovaroitin varoittaa tulipalosta ajoissa.",
-      "easyExplanation": "Oikein. Joka kodissa pitää olla palovaroitin.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Jokaisessa kodissa täytyy olla vähintään yksi palovaroitin, myös esimerkiksi omakotitalossa. Palovaroitin varoittaa tulipalosta ajoissa.",
+      "easyExplanation": "Väärin. Joka kodissa pitää olla palovaroitin.",
       "vocabulary": [
         {
           "term": "palovaroitin",
@@ -24797,7 +24807,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Every home must have at least one smoke alarm.",
+          "text": "A smoke alarm is required only in flats in apartment buildings.",
           "options": [
             {
               "id": "true",
@@ -24808,7 +24818,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Every home must have at least one smoke alarm, which warns of a fire in time."
+          "explanation": "False. Every home must have at least one smoke alarm, including for example a detached house. A smoke alarm warns of a fire in time."
         }
       },
       "format": "TRUE_FALSE",
@@ -24818,9 +24828,9 @@
     },
     {
       "id": "safe-smoke-alarm-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
-      "text": "Det måste finnas minst en brandvarnare i varje hem.",
+      "text": "En brandvarnare är obligatorisk endast i lägenheter i flervåningshus.",
       "options": [
         {
           "id": "true",
@@ -24831,8 +24841,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Det måste finnas minst en brandvarnare i varje hem. Brandvarnaren varnar i tid för brand.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Det måste finnas minst en brandvarnare i varje hem, också till exempel i ett egnahemshus. Brandvarnaren varnar i tid för brand.",
       "vocabulary": [
         {
           "term": "palovaroitin",
@@ -24853,7 +24863,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "Every home must have at least one smoke alarm.",
+          "text": "A smoke alarm is required only in flats in apartment buildings.",
           "options": [
             {
               "id": "true",
@@ -24864,7 +24874,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. Every home must have at least one smoke alarm, which warns of a fire in time."
+          "explanation": "False. Every home must have at least one smoke alarm, including for example a detached house. A smoke alarm warns of a fire in time."
         }
       },
       "format": "TRUE_FALSE",
@@ -29245,9 +29255,9 @@
     },
     {
       "id": "dig-prescriptions",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
-      "text": "Suomessa kaikki reseptit määrätään sähköisinä.",
+      "text": "Suomessa reseptit annetaan yleensä paperisina.",
       "options": [
         {
           "id": "true",
@@ -29258,9 +29268,9 @@
           "text": "Väärin"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Väite on oikein. Kaikki reseptit määrätään sähköisinä, ja näet ne OmaKannassa.",
-      "easyExplanation": "Oikein. Resepti on sähköinen.",
+      "correctOptionId": "false",
+      "explanation": "Väite on väärin. Kaikki reseptit määrätään sähköisinä, ja näet ne OmaKannassa.",
+      "easyExplanation": "Väärin. Resepti on sähköinen.",
       "vocabulary": [
         {
           "term": "resepti",
@@ -29281,7 +29291,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "In Finland, all prescriptions are issued electronically.",
+          "text": "In Finland, prescriptions are usually issued on paper.",
           "options": [
             {
               "id": "true",
@@ -29292,7 +29302,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. All prescriptions are issued electronically, and you can see them in My Kanta."
+          "explanation": "False. All prescriptions are issued electronically, and you can see them in My Kanta."
         }
       },
       "format": "TRUE_FALSE",
@@ -29302,9 +29312,9 @@
     },
     {
       "id": "dig-prescriptions-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
-      "text": "I Finland görs alla recept upp elektroniskt.",
+      "text": "I Finland ges recept oftast ut på papper.",
       "options": [
         {
           "id": "true",
@@ -29315,8 +29325,8 @@
           "text": "Fel"
         }
       ],
-      "correctOptionId": "true",
-      "explanation": "Påståendet är rätt. Alla recept görs upp elektroniskt, och du ser dem i MittKanta.",
+      "correctOptionId": "false",
+      "explanation": "Påståendet är fel. Alla recept görs upp elektroniskt, och du ser dem i MittKanta.",
       "vocabulary": [
         {
           "term": "resepti",
@@ -29337,7 +29347,7 @@
       "status": "EDITORIAL",
       "translations": {
         "en": {
-          "text": "In Finland, all prescriptions are issued electronically.",
+          "text": "In Finland, prescriptions are usually issued on paper.",
           "options": [
             {
               "id": "true",
@@ -29348,7 +29358,7 @@
               "text": "False"
             }
           ],
-          "explanation": "True. All prescriptions are issued electronically, and you can see them in My Kanta."
+          "explanation": "False. All prescriptions are issued electronically, and you can see them in My Kanta."
         }
       },
       "format": "TRUE_FALSE",
