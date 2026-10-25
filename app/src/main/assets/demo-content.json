@@ -2525,17 +2525,17 @@
     },
     {
       "id": "demo-courts",
-      "revision": 2,
+      "revision": 3,
       "topicId": "democracy",
       "text": "Kuka käyttää Suomessa tuomiovaltaa?",
       "options": [
         {
           "id": "a",
-          "text": "Poliisi"
+          "text": "Poliisi ja syyttäjälaitos"
         },
         {
           "id": "b",
-          "text": "Eduskunta"
+          "text": "Eduskunnan lakivaliokunta"
         },
         {
           "id": "c",
@@ -2543,7 +2543,7 @@
         },
         {
           "id": "d",
-          "text": "Valtioneuvosto"
+          "text": "Valtioneuvoston oikeusministeriö"
         }
       ],
       "correctOptionId": "c",
@@ -2578,11 +2578,11 @@
           "options": [
             {
               "id": "a",
-              "text": "The police"
+              "text": "The police and the prosecution service"
             },
             {
               "id": "b",
-              "text": "Parliament"
+              "text": "Parliament's Legal Affairs Committee"
             },
             {
               "id": "c",
@@ -2590,7 +2590,7 @@
             },
             {
               "id": "d",
-              "text": "The Government"
+              "text": "The Government's Ministry of Justice"
             }
           ],
           "explanation": "Judicial power is exercised by independent courts. The highest courts are the Supreme Court and the Supreme Administrative Court."
@@ -2603,17 +2603,17 @@
     },
     {
       "id": "demo-courts-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "democracy",
       "text": "Vem utövar den dömande makten i Finland?",
       "options": [
         {
           "id": "a",
-          "text": "Polisen"
+          "text": "Polisen och åklagarmyndigheten"
         },
         {
           "id": "b",
-          "text": "Riksdagen"
+          "text": "Riksdagens lagutskott"
         },
         {
           "id": "c",
@@ -2621,7 +2621,7 @@
         },
         {
           "id": "d",
-          "text": "Statsrådet"
+          "text": "Statsrådets justitieministerium"
         }
       ],
       "correctOptionId": "c",
@@ -2655,11 +2655,11 @@
           "options": [
             {
               "id": "a",
-              "text": "The police"
+              "text": "The police and the prosecution service"
             },
             {
               "id": "b",
-              "text": "Parliament"
+              "text": "Parliament's Legal Affairs Committee"
             },
             {
               "id": "c",
@@ -2667,7 +2667,7 @@
             },
             {
               "id": "d",
-              "text": "The Government"
+              "text": "The Government's Ministry of Justice"
             }
           ],
           "explanation": "Judicial power is exercised by independent courts. The highest courts are the Supreme Court and the Supreme Administrative Court."
@@ -3403,21 +3403,21 @@
     },
     {
       "id": "dem-municipal-vote",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Muun kuin EU-maan kansalainen asuu Suomessa. Milloin hän voi äänestää kuntavaaleissa?",
       "options": [
         {
           "id": "a",
-          "text": "Vasta kun hän saa Suomen kansalaisuuden"
+          "text": "Vasta kun hän on saanut Suomen kansalaisuuden ja täyttänyt 18 vuotta"
         },
         {
           "id": "b",
-          "text": "Heti kun hän muuttaa Suomeen"
+          "text": "Heti kun hän muuttaa Suomeen ja saa kotikunnan, kuten EU-kansalainen"
         },
         {
           "id": "c",
-          "text": "Kun hän on asunut Suomessa viisi vuotta"
+          "text": "Kun hän on asunut Suomessa yhtäjaksoisesti vähintään viisi vuotta"
         },
         {
           "id": "d",
@@ -3456,15 +3456,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Only once they become a Finnish citizen"
+              "text": "Only once they have become a Finnish citizen and turned 18"
             },
             {
               "id": "b",
-              "text": "As soon as they move to Finland"
+              "text": "As soon as they move to Finland and get a municipality of residence, like an EU citizen"
             },
             {
               "id": "c",
-              "text": "After living in Finland for five years"
+              "text": "Once they have lived in Finland continuously for at least five years"
             },
             {
               "id": "d",
@@ -3481,21 +3481,21 @@
     },
     {
       "id": "dem-municipal-vote-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "En medborgare i ett land utanför EU bor i Finland. När kan hen rösta i kommunalval?",
       "options": [
         {
           "id": "a",
-          "text": "Först när hen blir finsk medborgare"
+          "text": "Först när hen har blivit finsk medborgare och fyllt 18 år"
         },
         {
           "id": "b",
-          "text": "Genast när hen flyttar till Finland"
+          "text": "Genast när hen flyttar till Finland och får en hemkommun, som en EU-medborgare"
         },
         {
           "id": "c",
-          "text": "När hen har bott i Finland i fem år"
+          "text": "När hen har bott i Finland utan avbrott i minst fem år"
         },
         {
           "id": "d",
@@ -3533,15 +3533,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Only once they become a Finnish citizen"
+              "text": "Only once they have become a Finnish citizen and turned 18"
             },
             {
               "id": "b",
-              "text": "As soon as they move to Finland"
+              "text": "As soon as they move to Finland and get a municipality of residence, like an EU citizen"
             },
             {
               "id": "c",
-              "text": "After living in Finland for five years"
+              "text": "Once they have lived in Finland continuously for at least five years"
             },
             {
               "id": "d",
@@ -3681,7 +3681,7 @@
     },
     {
       "id": "dem-eu-vote",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Toisen EU-maan kansalainen asuu Suomessa. Mitä hänen täytyy tehdä, jotta hän voi äänestää Suomessa Euroopan parlamentin vaaleissa?",
       "options": [
@@ -3691,15 +3691,15 @@
         },
         {
           "id": "b",
-          "text": "Hakea Suomen kansalaisuutta"
+          "text": "Hakea Suomen kansalaisuutta Maahanmuuttovirastolta ennen vaalipäivää"
         },
         {
           "id": "c",
-          "text": "Asua Suomessa vähintään viisi vuotta"
+          "text": "Ilmoittautua äänestäjäksi kunnan vaalitoimistoon vaalipäivänä ennen äänestämistä"
         },
         {
           "id": "d",
-          "text": "Rekisteröityä puolueen jäseneksi"
+          "text": "Asua Suomessa vähintään viisi vuotta ja osoittaa suomen tai ruotsin kielen taito"
         }
       ],
       "correctOptionId": "a",
@@ -3738,15 +3738,15 @@
             },
             {
               "id": "b",
-              "text": "Apply for Finnish citizenship"
+              "text": "Apply to the Finnish Immigration Service for Finnish citizenship before election day"
             },
             {
               "id": "c",
-              "text": "Live in Finland for at least five years"
+              "text": "Register as a voter at the municipal election office on election day before voting"
             },
             {
               "id": "d",
-              "text": "Register as a member of a political party"
+              "text": "Live in Finland for at least five years and prove skills in Finnish or Swedish"
             }
           ],
           "explanation": "A citizen of another EU country can vote in Finland if they are 18, have a municipality of residence in Finland on the 51st day before the election and register with the Digital and Population Data Services Agency by the 80th day before election day."
@@ -3759,7 +3759,7 @@
     },
     {
       "id": "dem-eu-vote-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "En medborgare i ett annat EU-land bor i Finland. Vad måste hen göra för att kunna rösta i Finland i val till Europaparlamentet?",
       "options": [
@@ -3769,15 +3769,15 @@
         },
         {
           "id": "b",
-          "text": "Ansöka om finskt medborgarskap"
+          "text": "Ansöka om finskt medborgarskap hos Migrationsverket före valdagen"
         },
         {
           "id": "c",
-          "text": "Bo i Finland i minst fem år"
+          "text": "Anmäla sig som väljare hos kommunens valbyrå på valdagen innan man röstar"
         },
         {
           "id": "d",
-          "text": "Registrera sig som medlem i ett parti"
+          "text": "Bo i Finland i minst fem år och visa kunskaper i finska eller svenska"
         }
       ],
       "correctOptionId": "a",
@@ -3815,15 +3815,15 @@
             },
             {
               "id": "b",
-              "text": "Apply for Finnish citizenship"
+              "text": "Apply to the Finnish Immigration Service for Finnish citizenship before election day"
             },
             {
               "id": "c",
-              "text": "Live in Finland for at least five years"
+              "text": "Register as a voter at the municipal election office on election day before voting"
             },
             {
               "id": "d",
-              "text": "Register as a member of a political party"
+              "text": "Live in Finland for at least five years and prove skills in Finnish or Swedish"
             }
           ],
           "explanation": "A citizen of another EU country can vote in Finland if they are 18, have a municipality of residence in Finland on the 51st day before the election and register with the Digital and Population Data Services Agency by the 80th day before election day."
@@ -4104,13 +4104,13 @@
     },
     {
       "id": "dem-foreign-policy",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Kuka johtaa Suomen ulkopolitiikkaa?",
       "options": [
         {
           "id": "a",
-          "text": "Eduskunnan puhemies"
+          "text": "Eduskunnan puhemies yhdessä ulkoasiainvaliokunnan kanssa"
         },
         {
           "id": "b",
@@ -4118,11 +4118,11 @@
         },
         {
           "id": "c",
-          "text": "Ulkoministeri yksin"
+          "text": "Ulkoministeri yksin, eikä presidentti osallistu siihen"
         },
         {
           "id": "d",
-          "text": "Puolustusvoimien komentaja"
+          "text": "Pääministeri yksin eduskunnan antamien ohjeiden mukaan"
         }
       ],
       "correctOptionId": "b",
@@ -4152,7 +4152,7 @@
           "options": [
             {
               "id": "a",
-              "text": "The Speaker of Parliament"
+              "text": "The Speaker of Parliament together with the Foreign Affairs Committee"
             },
             {
               "id": "b",
@@ -4160,11 +4160,11 @@
             },
             {
               "id": "c",
-              "text": "The Minister for Foreign Affairs alone"
+              "text": "The Minister for Foreign Affairs alone, without the President"
             },
             {
               "id": "d",
-              "text": "The Commander of the Defence Forces"
+              "text": "The Prime Minister alone, following Parliament's instructions"
             }
           ],
           "explanation": "Under the Constitution, Finland's foreign policy is directed by the President together with the Government. Parliament approves international obligations."
@@ -4177,13 +4177,13 @@
     },
     {
       "id": "dem-foreign-policy-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Vem leder Finlands utrikespolitik?",
       "options": [
         {
           "id": "a",
-          "text": "Riksdagens talman"
+          "text": "Riksdagens talman tillsammans med utrikesutskottet"
         },
         {
           "id": "b",
@@ -4191,11 +4191,11 @@
         },
         {
           "id": "c",
-          "text": "Utrikesministern ensam"
+          "text": "Utrikesministern ensam, utan att presidenten deltar"
         },
         {
           "id": "d",
-          "text": "Kommendören för försvarsmakten"
+          "text": "Statsministern ensam enligt riksdagens anvisningar"
         }
       ],
       "correctOptionId": "b",
@@ -4224,7 +4224,7 @@
           "options": [
             {
               "id": "a",
-              "text": "The Speaker of Parliament"
+              "text": "The Speaker of Parliament together with the Foreign Affairs Committee"
             },
             {
               "id": "b",
@@ -4232,11 +4232,11 @@
             },
             {
               "id": "c",
-              "text": "The Minister for Foreign Affairs alone"
+              "text": "The Minister for Foreign Affairs alone, without the President"
             },
             {
               "id": "d",
-              "text": "The Commander of the Defence Forces"
+              "text": "The Prime Minister alone, following Parliament's instructions"
             }
           ],
           "explanation": "Under the Constitution, Finland's foreign policy is directed by the President together with the Government. Parliament approves international obligations."
@@ -4382,21 +4382,21 @@
     },
     {
       "id": "dem-second-round",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Mitä tapahtuu, jos kukaan ehdokas ei saa presidentinvaalin ensimmäisellä kierroksella yli puolta annetuista äänistä?",
       "options": [
         {
           "id": "a",
-          "text": "Eduskunta valitsee presidentin"
+          "text": "Eduskunta valitsee presidentin kahden suosituimman ehdokkaan väliltä"
         },
         {
           "id": "b",
-          "text": "Eniten ääniä saanut ehdokas tulee valituksi"
+          "text": "Eniten ääniä saanut ehdokas tulee valituksi, vaikka enemmistö puuttuu"
         },
         {
           "id": "c",
-          "text": "Vaali järjestetään uudelleen vuoden kuluttua"
+          "text": "Vaali järjestetään kokonaan uudelleen uusin ehdokkain vuoden kuluttua"
         },
         {
           "id": "d",
@@ -4435,15 +4435,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Parliament chooses the President"
+              "text": "Parliament chooses the President from the two most popular candidates"
             },
             {
               "id": "b",
-              "text": "The candidate with the most votes is elected"
+              "text": "The candidate with the most votes is elected, even without a majority"
             },
             {
               "id": "c",
-              "text": "The election is held again a year later"
+              "text": "The whole election is held again with new candidates a year later"
             },
             {
               "id": "d",
@@ -4460,21 +4460,21 @@
     },
     {
       "id": "dem-second-round-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Vad händer om ingen kandidat får mer än hälften av de avgivna rösterna i presidentvalets första omgång?",
       "options": [
         {
           "id": "a",
-          "text": "Riksdagen väljer presidenten"
+          "text": "Riksdagen väljer presidenten mellan de två populäraste kandidaterna"
         },
         {
           "id": "b",
-          "text": "Den kandidat som fått flest röster blir vald"
+          "text": "Den kandidat som fått flest röster blir vald, även utan majoritet"
         },
         {
           "id": "c",
-          "text": "Valet förrättas på nytt efter ett år"
+          "text": "Valet görs om helt med nya kandidater efter ett år"
         },
         {
           "id": "d",
@@ -4512,15 +4512,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Parliament chooses the President"
+              "text": "Parliament chooses the President from the two most popular candidates"
             },
             {
               "id": "b",
-              "text": "The candidate with the most votes is elected"
+              "text": "The candidate with the most votes is elected, even without a majority"
             },
             {
               "id": "c",
-              "text": "The election is held again a year later"
+              "text": "The whole election is held again with new candidates a year later"
             },
             {
               "id": "d",
@@ -4964,13 +4964,13 @@
     },
     {
       "id": "dem-ministers",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Kuka nimittää pääministerin lisäksi muut ministerit?",
       "options": [
         {
           "id": "a",
-          "text": "Eduskunta suljetulla lippuäänestyksellä"
+          "text": "Eduskunta valitsee ministerit suljetulla lippuäänestyksellä"
         },
         {
           "id": "b",
@@ -4978,11 +4978,11 @@
         },
         {
           "id": "c",
-          "text": "Puolueiden puheenjohtajat yhdessä"
+          "text": "Hallituspuolueiden puheenjohtajat yhdessä ilman presidenttiä"
         },
         {
           "id": "d",
-          "text": "Korkein oikeus"
+          "text": "Korkein oikeus tarkistettuaan ehdokkaiden taustat"
         }
       ],
       "correctOptionId": "b",
@@ -5017,7 +5017,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Parliament by secret ballot"
+              "text": "Parliament elects the ministers by secret ballot"
             },
             {
               "id": "b",
@@ -5025,11 +5025,11 @@
             },
             {
               "id": "c",
-              "text": "The party leaders together"
+              "text": "The leaders of the government parties together, without the President"
             },
             {
               "id": "d",
-              "text": "The Supreme Court"
+              "text": "The Supreme Court, after checking the candidates' backgrounds"
             }
           ],
           "explanation": "The President appoints the other ministers on the proposal of the person elected Prime Minister. Parliament elects the Prime Minister."
@@ -5042,13 +5042,13 @@
     },
     {
       "id": "dem-ministers-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Vem utnämner de övriga ministrarna förutom statsministern?",
       "options": [
         {
           "id": "a",
-          "text": "Riksdagen genom sluten omröstning"
+          "text": "Riksdagen väljer ministrarna genom sluten omröstning"
         },
         {
           "id": "b",
@@ -5056,11 +5056,11 @@
         },
         {
           "id": "c",
-          "text": "Partiordförandena tillsammans"
+          "text": "Regeringspartiernas ordförande tillsammans utan presidenten"
         },
         {
           "id": "d",
-          "text": "Högsta domstolen"
+          "text": "Högsta domstolen efter att ha granskat kandidaternas bakgrund"
         }
       ],
       "correctOptionId": "b",
@@ -5094,7 +5094,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Parliament by secret ballot"
+              "text": "Parliament elects the ministers by secret ballot"
             },
             {
               "id": "b",
@@ -5102,11 +5102,11 @@
             },
             {
               "id": "c",
-              "text": "The party leaders together"
+              "text": "The leaders of the government parties together, without the President"
             },
             {
               "id": "d",
-              "text": "The Supreme Court"
+              "text": "The Supreme Court, after checking the candidates' backgrounds"
             }
           ],
           "explanation": "The President appoints the other ministers on the proposal of the person elected Prime Minister. Parliament elects the Prime Minister."
@@ -5274,7 +5274,7 @@
     },
     {
       "id": "dem-wellbeing-county",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Mitä hyvinvointialueet järjestävät?",
       "options": [
@@ -5284,15 +5284,15 @@
         },
         {
           "id": "b",
-          "text": "Peruskoulut ja kirjastot"
+          "text": "Peruskoulut, kirjastot ja varhaiskasvatuksen palvelut"
         },
         {
           "id": "c",
-          "text": "Poliisin ja tullin palvelut"
+          "text": "Poliisin, tullin ja rajavartiolaitoksen palvelut"
         },
         {
           "id": "d",
-          "text": "Verotuksen ja eläkkeet"
+          "text": "Verotus-, eläke- ja työttömyysturvapalvelut"
         }
       ],
       "correctOptionId": "a",
@@ -5331,15 +5331,15 @@
             },
             {
               "id": "b",
-              "text": "Comprehensive schools and libraries"
+              "text": "Comprehensive schools, libraries and early childhood education"
             },
             {
               "id": "c",
-              "text": "Police and customs services"
+              "text": "Police, customs and border guard services"
             },
             {
               "id": "d",
-              "text": "Taxation and pensions"
+              "text": "Taxation, pensions and unemployment benefits"
             }
           ],
           "explanation": "Wellbeing services counties organise social and health services and rescue services. There are 21 of them. Helsinki and Åland organise these services themselves."
@@ -5352,7 +5352,7 @@
     },
     {
       "id": "dem-wellbeing-county-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "democracy",
       "text": "Vad ordnar välfärdsområdena?",
       "options": [
@@ -5362,15 +5362,15 @@
         },
         {
           "id": "b",
-          "text": "Grundskolor och bibliotek"
+          "text": "Grundskolor, bibliotek och tjänster inom småbarnspedagogik"
         },
         {
           "id": "c",
-          "text": "Polisens och tullens tjänster"
+          "text": "Polisens, tullens och gränsbevakningens tjänster"
         },
         {
           "id": "d",
-          "text": "Beskattning och pensioner"
+          "text": "Beskattning, pensioner och utkomstskydd för arbetslösa"
         }
       ],
       "correctOptionId": "a",
@@ -5408,15 +5408,15 @@
             },
             {
               "id": "b",
-              "text": "Comprehensive schools and libraries"
+              "text": "Comprehensive schools, libraries and early childhood education"
             },
             {
               "id": "c",
-              "text": "Police and customs services"
+              "text": "Police, customs and border guard services"
             },
             {
               "id": "d",
-              "text": "Taxation and pensions"
+              "text": "Taxation, pensions and unemployment benefits"
             }
           ],
           "explanation": "Wellbeing services counties organise social and health services and rescue services. There are 21 of them. Helsinki and Åland organise these services themselves."
@@ -9991,7 +9991,7 @@
         },
         {
           "id": "c",
-          "text": "Syrjintä on kielletty vain viranomaisissa, ei yksityisissä yrityksissä"
+          "text": "Vain alkuperän perusteella, ja vain viranomaisissa"
         },
         {
           "id": "d",
@@ -10038,7 +10038,7 @@
             },
             {
               "id": "c",
-              "text": "Discrimination is banned only at authorities, not in private companies"
+              "text": "Only origin, and only at authorities"
             },
             {
               "id": "d",
@@ -10069,7 +10069,7 @@
         },
         {
           "id": "c",
-          "text": "Diskriminering är förbjuden bara hos myndigheter, inte i privata företag"
+          "text": "Endast på grund av ursprung, och bara hos myndigheter"
         },
         {
           "id": "d",
@@ -10115,7 +10115,7 @@
             },
             {
               "id": "c",
-              "text": "Discrimination is banned only at authorities, not in private companies"
+              "text": "Only origin, and only at authorities"
             },
             {
               "id": "d",
@@ -13983,7 +13983,7 @@
         },
         {
           "id": "d",
-          "text": "Kyllä, koeajan aikana eli ensimmäiset kuusi kuukautta"
+          "text": "Kyllä, koeajan aikana, joka voi kestää enintään kuusi kuukautta"
         }
       ],
       "correctOptionId": "b",
@@ -14025,7 +14025,7 @@
             },
             {
               "id": "d",
-              "text": "Yes, during the trial period, that is the first six months"
+              "text": "Yes, during the trial period, which can last up to six months"
             }
           ],
           "explanation": "An employer may not pay less than the collective agreement sets. In most sectors the employer must follow a collective agreement."
@@ -14056,7 +14056,7 @@
         },
         {
           "id": "d",
-          "text": "Ja, under prövotiden, det vill säga de första sex månaderna"
+          "text": "Ja, under prövotiden, som kan vara högst sex månader"
         }
       ],
       "correctOptionId": "b",
@@ -14097,7 +14097,7 @@
             },
             {
               "id": "d",
-              "text": "Yes, during the trial period, that is the first six months"
+              "text": "Yes, during the trial period, which can last up to six months"
             }
           ],
           "explanation": "An employer may not pay less than the collective agreement sets. In most sectors the employer must follow a collective agreement."
@@ -15103,15 +15103,15 @@
       "options": [
         {
           "id": "a",
-          "text": "Esimerkiksi yksityisten yritysten voitot, osingot ja johtajien palkat"
+          "text": "Esimerkiksi yksityisten yritysten voittoja, osinkoja ja johtajien palkkoja"
         },
         {
           "id": "b",
-          "text": "Esimerkiksi kaikkien asukkaiden vuokrat, sähkölaskut ja ruokaostokset"
+          "text": "Esimerkiksi kaikkien asukkaiden vuokria, sähkölaskuja ja ruokaostoksia"
         },
         {
           "id": "c",
-          "text": "Esimerkiksi kaikkien eläkeläisten ulkomaanmatkat ja hotellilaskut"
+          "text": "Esimerkiksi kaikkien eläkeläisten ulkomaanmatkoja ja hotellilaskuja"
         },
         {
           "id": "d",
@@ -15830,7 +15830,7 @@
       "options": [
         {
           "id": "a",
-          "text": "Huoltajuus siirtyy erossa aina kunnan sosiaalitoimelle"
+          "text": "Siitä, että huoltajuus siirtyy kunnan sosiaalitoimelle"
         },
         {
           "id": "b",
@@ -15838,11 +15838,11 @@
         },
         {
           "id": "c",
-          "text": "Huoltajuus kuuluu erossa aina lapsen äidille"
+          "text": "Siitä, että huoltajuus kuuluu automaattisesti äidille"
         },
         {
           "id": "d",
-          "text": "Lapsi päättää huoltajuudesta yksin 12 vuotta täytettyään"
+          "text": "Siitä, että 12-vuotias lapsi päättää huoltajuudesta yksin"
         }
       ],
       "correctOptionId": "b",
@@ -15877,7 +15877,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Custody always passes to the municipal social services on divorce"
+              "text": "That custody passes to the municipal social services"
             },
             {
               "id": "b",
@@ -15885,11 +15885,11 @@
             },
             {
               "id": "c",
-              "text": "Custody always belongs to the child's mother on divorce"
+              "text": "That custody automatically belongs to the mother"
             },
             {
               "id": "d",
-              "text": "The child decides custody alone once they are 12"
+              "text": "That a 12-year-old child decides custody alone"
             }
           ],
           "explanation": "Parents can agree on joint custody or on sole custody by one parent. A child welfare officer can confirm their agreement."
@@ -15908,7 +15908,7 @@
       "options": [
         {
           "id": "a",
-          "text": "Vårdnaden går vid skilsmässa alltid över till kommunens socialtjänst"
+          "text": "Att vårdnaden förs över till kommunens socialtjänst"
         },
         {
           "id": "b",
@@ -15916,11 +15916,11 @@
         },
         {
           "id": "c",
-          "text": "Vårdnaden hör vid skilsmässa alltid till barnets mamma"
+          "text": "Att vårdnaden automatiskt hör till mamman"
         },
         {
           "id": "d",
-          "text": "Barnet bestämmer ensamt om vårdnaden när det har fyllt 12 år"
+          "text": "Att ett 12-årigt barn ensamt bestämmer om vårdnaden"
         }
       ],
       "correctOptionId": "b",
@@ -15954,7 +15954,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Custody always passes to the municipal social services on divorce"
+              "text": "That custody passes to the municipal social services"
             },
             {
               "id": "b",
@@ -15962,11 +15962,11 @@
             },
             {
               "id": "c",
-              "text": "Custody always belongs to the child's mother on divorce"
+              "text": "That custody automatically belongs to the mother"
             },
             {
               "id": "d",
-              "text": "The child decides custody alone once they are 12"
+              "text": "That a 12-year-old child decides custody alone"
             }
           ],
           "explanation": "Parents can agree on joint custody or on sole custody by one parent. A child welfare officer can confirm their agreement."
@@ -15985,7 +15985,7 @@
       "options": [
         {
           "id": "a",
-          "text": "Kela maksaa sen aina kokonaan"
+          "text": "Aina Kela, valtion varoista"
         },
         {
           "id": "b",
@@ -16032,7 +16032,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Kela always pays it in full"
+              "text": "Always Kela, from state funds"
             },
             {
               "id": "b",
@@ -16063,7 +16063,7 @@
       "options": [
         {
           "id": "a",
-          "text": "FPA betalar det alltid i sin helhet"
+          "text": "Alltid FPA, med statens medel"
         },
         {
           "id": "b",
@@ -16109,7 +16109,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Kela always pays it in full"
+              "text": "Always Kela, from state funds"
             },
             {
               "id": "b",
@@ -29537,7 +29537,7 @@
         },
         {
           "id": "c",
-          "text": "Vain käymällä itse lääkärin vastaanotolla"
+          "text": "Vain silloin, kun käyt itse lääkärin vastaanotolla"
         },
         {
           "id": "d",
@@ -29579,7 +29579,7 @@
             },
             {
               "id": "c",
-              "text": "Only by visiting the doctor's surgery in person"
+              "text": "Only when you visit the doctor's surgery in person"
             },
             {
               "id": "d",
@@ -29610,7 +29610,7 @@
         },
         {
           "id": "c",
-          "text": "Bara genom att själv besöka läkarmottagningen"
+          "text": "Bara när du själv besöker läkarmottagningen"
         },
         {
           "id": "d",
@@ -29651,7 +29651,7 @@
             },
             {
               "id": "c",
-              "text": "Only by visiting the doctor's surgery in person"
+              "text": "Only when you visit the doctor's surgery in person"
             },
             {
               "id": "d",

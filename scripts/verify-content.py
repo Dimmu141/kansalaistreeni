@@ -114,12 +114,10 @@ FORMAT_SHARE = {"TRUE_FALSE": (0.25, 0.35)}
 DIFFICULTY_SHARE = {"EASY": (0.35, 0.45), "MEDIUM": (0.35, 0.45), "HARD": (0.15, 0.25)}
 MIN_TOPIC_QUESTIONS = 25
 # Answer-key balance per study language: nobody should score by always answering "true" or by picking
-# the longest option. The length limits are a ratchet at the current level, not the goal. Lower them
-# towards LENGTH_TARGETS as distractors are rewritten; the gate warns while above the targets.
+# the longest option (chance is 25 % with four options).
 TRUE_SHARE = (0.40, 0.60)
-LONGEST_CORRECT_MAX = 0.55
-LENGTH_RATIO_MAX = 1.65
-LENGTH_TARGETS = {"longest": 0.35, "ratio": 1.25}
+LONGEST_CORRECT_MAX = 0.35
+LENGTH_RATIO_MAX = 1.25
 
 
 def check_evidence(url, label):
@@ -321,8 +319,6 @@ def main():
         print(f"{language.upper()}: {stats['questions']} questions ({shares}); per topic: " + ", ".join(f"{t} {n}" for t, n in stats["topics"].items()))
     for language, bias in answer_key_bias(content).items():
         print(f"{language.upper()} answer key: true/false keyed true {bias['true']:.0%}; longest option correct {bias['longest']:.0%}; correct/distractor length {bias['ratio']:.2f}x")
-        if bias["longest"] > LENGTH_TARGETS["longest"] or bias["ratio"] > LENGTH_TARGETS["ratio"]:
-            print(f"WARNING: {language.upper()} correct options are still recognisable by length; target at most {LENGTH_TARGETS['longest']:.0%} longest and {LENGTH_TARGETS['ratio']:.2f}x.")
     for question_id in overdue_reviews(content):
         print(f"WARNING: editorial review date has passed for {question_id}; the app shows an overdue notice.")
     print(f"Content review ledger passed: {len(content['questions'])} {content['status']} questions, {sum(len(t.get('lessons', {})) for t in content['topics'])} lesson variants, package v{content['version']}; human publication approval remains pending.")

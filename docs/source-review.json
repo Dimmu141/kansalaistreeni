@@ -35,7 +35,7 @@
     },
     {
       "questionId": "demo-courts",
-      "sha256": "3dfd0e5c7d44813315388e045f2b3f62230fda72cf2e311f0e18d192d0578224",
+      "sha256": "e4d8926ff22059dc56a30a1795ed76631fe5a23dc03fbd8db620ce241c7e9059",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 3 §",
@@ -43,11 +43,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-courts-sv",
-      "sha256": "333931da679721823e1fe8b2099c9085ee892875e73f7f7f884e5529a21aaf36",
+      "sha256": "0382f4efefd741635df4228c56025900560f3104435c55726c8750f08fdb9f09",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 3 §",
@@ -55,7 +55,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-executive-power",
@@ -179,7 +179,7 @@
     },
     {
       "questionId": "dem-municipal-vote",
-      "sha256": "afb14b89b879c2d3ae63b4580ea4f11f6570d578d2b566866b7e326736ae351b",
+      "sha256": "da3878b23e328846ee7d7ba0d324f9ec8d6d4fcfd4cceeb622583834c57aca61",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/elections-and-voting-in-finland",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/elections-and-voting-in-finland",
       "locator": "Kuntavaalit: Kuka voi äänestää?",
@@ -187,11 +187,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-municipal-vote-sv",
-      "sha256": "a5d8d1e6914cbeda7963a24ef08d2e6f8e022da0b6d565eaa31e9cb926c671a0",
+      "sha256": "0208df2b9aee4856ba2777dafe2b12beb8d95246b2a9797e5fe6c0a1abb4fe23",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/elections-and-voting-in-finland",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/elections-and-voting-in-finland",
       "locator": "Kommunalval: Vem kan rösta?",
@@ -199,7 +199,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-county-vote",
@@ -227,7 +227,7 @@
     },
     {
       "questionId": "dem-eu-vote",
-      "sha256": "edc9375c60e7154d03f8a36814c2e61c985cad5bcd3c346b5537a82a577402d8",
+      "sha256": "60c4710414f84cb49a5b8e4359dc42e58c46713cb26c6ac20a30f2fd61101c51",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/elections-and-voting-in-finland",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/elections-and-voting-in-finland",
       "locator": "Euroopan parlamentin vaalit: Kuka voi äänestää?",
@@ -235,11 +235,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-eu-vote-sv",
-      "sha256": "cf19c49e06cf0943ae260d9ca1bfcf30351f0941eb2e79f485cba02505bedb22",
+      "sha256": "a3ca269fd8f156489585540bfc4fb0fd6ff8a1d04936e9f9d326a83d77baa7de",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/elections-and-voting-in-finland",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/elections-and-voting-in-finland",
       "locator": "Val till Europaparlamentet: Vem kan rösta?",
@@ -247,7 +247,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-president-term",
@@ -299,7 +299,7 @@
     },
     {
       "questionId": "dem-foreign-policy",
-      "sha256": "26c6f4a956100c2a78d0cbe1f12b57a0b53df00faf41ba4fe55ef55555cc3183",
+      "sha256": "8978c86be406b49ae7be203975b685e005bd4f044efea214af3a0249d1cede15",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 93 §",
@@ -307,11 +307,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-foreign-policy-sv",
-      "sha256": "25729e2305a1b62230247e530c3d0770d0465f474969d05010a5bff1a2f85504",
+      "sha256": "7dff1e4742e8115bf4bb71fa691ac9f2ee9895fce29a7bd92814e4168991948e",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 93 §",
@@ -319,7 +319,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-commander",
@@ -347,7 +347,7 @@
     },
     {
       "questionId": "dem-second-round",
-      "sha256": "9d1977e53cd4bb1b98cae58362f370441c68bb7aa0925b33ca9040b1a7800d8c",
+      "sha256": "c4d34cf20c35d212f9a3075a0bd1ad2712b79e81ec0ea1c71afedfadc844636a",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 54 §",
@@ -355,11 +355,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-second-round-sv",
-      "sha256": "09300d469998ab8168d1374d8cc22d1af4e6e179470c012addfcb2ed2f5911d5",
+      "sha256": "818bdfecd85b4dcb2ebf4806fddcac85e5bef744d4143a902659975c982354f6",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 54 §",
@@ -367,7 +367,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-president-office",
@@ -443,7 +443,7 @@
     },
     {
       "questionId": "dem-ministers",
-      "sha256": "f8d82983e6af50c9889aad60480f475817394f778d57d967d1ea34412c8ef6a4",
+      "sha256": "5722ecfe41400e3d3787fd1ef8478d8e25a22037f8738b6e96453767a4630d83",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 61 §",
@@ -451,11 +451,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-ministers-sv",
-      "sha256": "e8d1477039060a71b493ed8586a5b0786a52af7671f30b03b7e8df10a2bd8d1c",
+      "sha256": "9a5121f1ad2ad85a6636c0873329c7af9d051f1a46f7e20012f00a845cf0d0f8",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 61 §",
@@ -463,7 +463,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-municipal-council",
@@ -491,7 +491,7 @@
     },
     {
       "questionId": "dem-wellbeing-county",
-      "sha256": "0a46099cf1586bef0580c2a3c8168ccf59311d50fa68e392b483f750abbc1447",
+      "sha256": "6b926fc95d897ca36ec00b273a0b8302207e9db88022d2bda5c4f12b00f2c128",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/elections-and-voting-in-finland",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/elections-and-voting-in-finland",
       "locator": "Aluevaalit",
@@ -499,11 +499,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-wellbeing-county-sv",
-      "sha256": "4e01e1458c31fb150e69a4cb0cedf2a479e4061e8b88ea6b9b7b81018f140270",
+      "sha256": "62cb62ba6396181d6997d49b5ea311cdeee9db7c01c6747fdf19ce1b77d9de13",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/elections-and-voting-in-finland",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/elections-and-voting-in-finland",
       "locator": "Välfärdsområdesval",
@@ -511,7 +511,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dem-county-exceptions",
@@ -1283,7 +1283,7 @@
     },
     {
       "questionId": "eq-grounds",
-      "sha256": "0bcfd2194727681eafcf3e13104e0a7885a83e9d4fbb080cab55ad94e641bc53",
+      "sha256": "50fb915d9ff2496df08773fc93ea4b3be82823c425d9218ec8f5a34eba1b2052",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/equality-and-non-discrimination",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/equality-and-non-discrimination",
       "locator": "Yhdenvertaisuus",
@@ -1295,7 +1295,7 @@
     },
     {
       "questionId": "eq-grounds-sv",
-      "sha256": "5eb8a15cfe94754b313fcd024488c20204e898311fd5f2fd76d20dea2520ced6",
+      "sha256": "5bb6d4d264ce3f9146a46e698b550b9b0c39e3ce95a7f88dadd1a15f7a24f165",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "locator": "Jämlikhet",
@@ -1955,7 +1955,7 @@
     },
     {
       "questionId": "law-collective-agreement",
-      "sha256": "dd8274474b859bc831b165d108bd92d6836962e3ea19ed02c8fa3b962ff7fbc9",
+      "sha256": "f474b757e5d1677af5e14648b8b237568ca2267b358cb0343fd4f9d6bec5091b",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Palkka ja palkan maksaminen",
@@ -1967,7 +1967,7 @@
     },
     {
       "questionId": "law-collective-agreement-sv",
-      "sha256": "1675ed162caa2ffce4d5e68aca11e3f3c1e9ea9d96d3b6644f51cd635835445a",
+      "sha256": "b56d1a0e17f6e5aaeb07abffa0c93efd53675d59d6e959fa8b5801e4d3e9cd2b",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Lön och utbetalning av lönen",
@@ -2147,7 +2147,7 @@
     },
     {
       "questionId": "law-tax-use",
-      "sha256": "08f371686d3ca2b124f78ae819e712fba2c6076ff5ff29021116798302c70158",
+      "sha256": "628cff2ec72b1df60d1afd086a7174bd69d41f256f05818d3d22413987479e37",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/taxation",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/taxation",
       "locator": "Suomen verojärjestelmä",
@@ -2267,7 +2267,7 @@
     },
     {
       "questionId": "law-joint-custody",
-      "sha256": "fc21e0ef9bb04110a64eb97dd436dae2a5e53b17f475e6dd63b6e0691ed4f7cc",
+      "sha256": "7e40ff9b5d7f33ceeb6da269471595fd7144e425ccca2fd22a55a3af64a445ee",
       "sourceUrl": "https://infofinland.fi/fi/family/divorce/children-in-a-divorce",
       "evidenceUrl": "https://infofinland.fi/fi/family/divorce/children-in-a-divorce",
       "locator": "Huoltajuus",
@@ -2279,7 +2279,7 @@
     },
     {
       "questionId": "law-joint-custody-sv",
-      "sha256": "caf4c1f9c280c7c1605d1eb4603df10be0e09ce7050ceb5a68acc313dbbfccc0",
+      "sha256": "0d64bc379163416bb8f9f1c64dd35088b66044f3bf982988fee573191999a561",
       "sourceUrl": "https://infofinland.fi/sv/family/divorce/children-in-a-divorce",
       "evidenceUrl": "https://infofinland.fi/sv/family/divorce/children-in-a-divorce",
       "locator": "Vårdnad",
@@ -2291,7 +2291,7 @@
     },
     {
       "questionId": "law-child-maintenance",
-      "sha256": "36c58bf0a831c0cc836951f28af11485e88f703b5a019d065856cb5ae9c7e80c",
+      "sha256": "1cbe1870b8b60561c1d2cbe22743a6b25898df38c8c188d935460e081fa3051e",
       "sourceUrl": "https://infofinland.fi/fi/family/divorce/children-in-a-divorce",
       "evidenceUrl": "https://infofinland.fi/fi/family/divorce/children-in-a-divorce",
       "locator": "Lapsen elatusapu",
@@ -2303,7 +2303,7 @@
     },
     {
       "questionId": "law-child-maintenance-sv",
-      "sha256": "5bb0aec634c48efeba64db83fa6c65ab3cead1ebccc3155efc80d420eb3bb55a",
+      "sha256": "054a4f20f7d2413dc086a6d3477b2e71be84083352e98894a1429e363ca5cfa1",
       "sourceUrl": "https://infofinland.fi/sv/family/divorce/children-in-a-divorce",
       "evidenceUrl": "https://infofinland.fi/sv/family/divorce/children-in-a-divorce",
       "locator": "Underhållsbidrag för barn",
@@ -4595,7 +4595,7 @@
     },
     {
       "questionId": "dig-renew-condition",
-      "sha256": "eead97fc6baba8f2a7402f4d7a6b5fcb004edac7d0d11b46205873ae9e73e089",
+      "sha256": "0506386a683bdfe45b084cf21c5bf36f2a9505b4410247bb1603d0c0680926cc",
       "sourceUrl": "https://www.kanta.fi/reseptit-ja-uusiminen",
       "evidenceUrl": "https://www.kanta.fi/reseptit-ja-uusiminen",
       "locator": "Usein kysyttyä resepteistä ja reseptien uusimisesta",
@@ -4607,7 +4607,7 @@
     },
     {
       "questionId": "dig-renew-condition-sv",
-      "sha256": "10e4c7c26b037db8e799257067dc43be83c17db53a337a4b245720fd808a4c86",
+      "sha256": "6bb953f01e516c1e99484be7a25531818023b61e47624931e21fb2f4741e24ea",
       "sourceUrl": "https://www.kanta.fi/sv/recept-och-fornyelse-av-dem",
       "evidenceUrl": "https://www.kanta.fi/sv/recept-och-fornyelse-av-dem",
       "locator": "Vanliga frågor om förnyelse av recept",
