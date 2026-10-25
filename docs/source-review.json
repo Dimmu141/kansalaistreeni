@@ -611,7 +611,7 @@
     },
     {
       "questionId": "rights-everyone",
-      "sha256": "04f7d2a5581b51818e3da54a1985193f1a917488bbcbf5139b43a6bed6fd3e36",
+      "sha256": "e238c5f1a5229a1e962189843a654be6b130f5d2f3d539f7b735149fb9cba20f",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "locator": "Johdanto",
@@ -619,11 +619,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-everyone-sv",
-      "sha256": "0ffc4e2f5234c8f06d6732a3c8fa88a53de57a61ca1a2e1d544b994e77d388b6",
+      "sha256": "47c61f08857d4779a1934645caf73eb0409e4495b2aa473a603f25ccac9d8034",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "locator": "Inledning",
@@ -631,7 +631,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-public-duty",
@@ -683,7 +683,7 @@
     },
     {
       "questionId": "demo-expression",
-      "sha256": "f9be227d6473157672d1998e0e71870563c0fbcdda62b3c61500fa0fddacb535",
+      "sha256": "f734f0b50bcf27d36a478c7549f734312fce878984c62a50166ed49b273f8158",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 12 §",
@@ -691,11 +691,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-expression-sv",
-      "sha256": "fa9d869974be2a9c9171dd3885c6ecc9ae81655e10f621d60bd45d2dc13b544d",
+      "sha256": "77956c50f1b2742733060e1c2f560b6b652b3e96f45980a8dea5195fbc064ecb",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 12 §",
@@ -703,11 +703,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-no-censorship",
-      "sha256": "846a8da12f502afe2bc60a441e1ffdbf536fac5f4516997703d2a1255d64c284",
+      "sha256": "b1f2c34fd960f10ba1000a5ab8d851198f88e590fd90f70699d720cbf8aa940c",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 12 §",
@@ -715,11 +715,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-no-censorship-sv",
-      "sha256": "75697b249837050c58ca1639aa7a0f90874e2ff64ac832e0ab20dc9f1c0f8215",
+      "sha256": "d7eef9eddeec30fab731b893f0adc971190696ead45576d081e839723010c45b",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 12 §",
@@ -727,7 +727,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-public-documents",
@@ -755,7 +755,7 @@
     },
     {
       "questionId": "demo-religion",
-      "sha256": "59c84197cf0615aecb2335cf33f0d045cc5c468cb56b2f411bbb8cd96fcd4d15",
+      "sha256": "39166d0cc48777c18238fa67d6521560d2218f5bbd23b402ca57f0f3f975d136",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 11 §",
@@ -763,11 +763,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-religion-sv",
-      "sha256": "f977ec6e86048987cb26a8f603dd99d6c5e74d817028f49c70837cf467045a6f",
+      "sha256": "c1d2bbc6e69dd27182dd94d81f42ad811d9834c17b84476886d3f5709afe94bd",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 11 §",
@@ -775,7 +775,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-conscience",
@@ -827,7 +827,7 @@
     },
     {
       "questionId": "demo-assembly",
-      "sha256": "a37b0fcf0d14cc1c5f0b414511a6cb43524e90ff503898b0597da8c7310a12d1",
+      "sha256": "c15c3cd134ec94f8f7bc30c3feba13d90246385ce13a3875c5dd479cba00e339",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "locator": "Oikeudet",
@@ -835,11 +835,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-assembly-sv",
-      "sha256": "7b938bf4385cd50113abbe4a513a816adc894ec7b0ee1aaa4bec399c4b0e6d26",
+      "sha256": "0fdc88a93ab7d85acb6c96225418a7d73326c3854a4701c0fe9c8721e458604d",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "locator": "Rättigheter",
@@ -847,11 +847,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-association",
-      "sha256": "eabee073bb63691a2865d92d8c84822d31956ec6ecfa5f3c946833ea3851f0cd",
+      "sha256": "6bf86025cf1868be5adcb28a465d053f1be410f15f63c1da516452560b06e0ca",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 13 §",
@@ -859,11 +859,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-association-sv",
-      "sha256": "d3f9676e8ae9d280a5f5f5fd7619c27dd713f0d3b87f63fdbd42c50350669434",
+      "sha256": "8bae43643d8d5f26cda888e9b3be0f6c78d601d8669556fd10c0125a027f353e",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 13 §",
@@ -871,7 +871,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-trade-union",
@@ -923,7 +923,7 @@
     },
     {
       "questionId": "demo-privacy",
-      "sha256": "f17bf2e96d620b589a3327ed5d28ad0ae1019dff4ad9647d48dfa64832c3a9f7",
+      "sha256": "23600c25e8b3aff4ce7f1398f8afb41f0521d8cfaefd59f8b50f4e8628c67804",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 10 §",
@@ -931,11 +931,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-privacy-sv",
-      "sha256": "74792ddd56a9f00a39bec5abea7da4c37f72fa2b1b5e0ff3a1e41f2db6fcce41",
+      "sha256": "4fd05c8e3def044732c5825c0c2b5408526a42786d89404a23d58cb975dd086a",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 10 §",
@@ -943,7 +943,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-message-secrecy",
@@ -1067,7 +1067,7 @@
     },
     {
       "questionId": "rights-due-process",
-      "sha256": "ae150b076b46af6ef07e80070a964a315009fb80a55ff072138fbc799c39f1e0",
+      "sha256": "dc96a542865142b3fc4b887448f034a6d36912fe42d58ee7c4f6f3594a57108c",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 21 §",
@@ -1075,11 +1075,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-due-process-sv",
-      "sha256": "5b2fc9048dc5fac99f4b594de3d852fe5f74e5f1b1eb2558fa5b0946ac8aeb9d",
+      "sha256": "f096d2bcf873b446e50dd9e98e1d778b86016025bbf83b4d344feb5b6b3de2dc",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 21 §",
@@ -1087,11 +1087,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-ombudsman",
-      "sha256": "58901fd7c4bb1e6dc9228f47b7b3c0d5bcbbfcb93efb80172e0614547870db57",
+      "sha256": "4c3910ceb2aaf968fe0e8288f14d7435bda332d789af4e9591ac9cd7e7caf63a",
       "sourceUrl": "https://www.finlex.fi/fi/lainsaadanto/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/fin@20180817",
       "locator": "Perustuslaki 109 §",
@@ -1099,11 +1099,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-ombudsman-sv",
-      "sha256": "35d8498da81c4efd73defe47480cc39a0f9ea5a41b0eb291b5e442978ae87a9c",
+      "sha256": "eaee38c0b16b8c80377b928ccd2c871b4d73d9aa0889d859d1b0859b76d63b9d",
       "sourceUrl": "https://www.finlex.fi/sv/lagstiftning/1999/731",
       "evidenceUrl": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1999/731/swe@20180817",
       "locator": "Grundlagen 109 §",
@@ -1111,7 +1111,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-no-retroactive-crime",
@@ -1187,7 +1187,7 @@
     },
     {
       "questionId": "rights-child-opinion",
-      "sha256": "2fe62d7a91f01e56a9ad57462fe5c1d361ab9c8eaec1aa139c0cce6f158bb558",
+      "sha256": "1684a73968a1976f6c2e09e2b3fd41c0f0347bb3fcbc4389839d617ed3e8b8c3",
       "sourceUrl": "https://infofinland.fi/fi/family/children/childrens-and-youths-rights-and-obligations",
       "evidenceUrl": "https://infofinland.fi/fi/family/children/childrens-and-youths-rights-and-obligations",
       "locator": "Johdanto",
@@ -1195,11 +1195,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "rights-child-opinion-sv",
-      "sha256": "23db5c64266d563654b3cd62892e45e7563760ac402096ed6c81ce88c49e41e3",
+      "sha256": "398f70a8cde3ab50fb4ff013f19e710f4eb97dd171b1d3851593345aae63e717",
       "sourceUrl": "https://infofinland.fi/sv/family/children/childrens-and-youths-rights-and-obligations",
       "evidenceUrl": "https://infofinland.fi/sv/family/children/childrens-and-youths-rights-and-obligations",
       "locator": "Inledning",
@@ -1207,7 +1207,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-equality",

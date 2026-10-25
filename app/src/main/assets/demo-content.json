@@ -5943,13 +5943,13 @@
     },
     {
       "id": "rights-everyone",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Keitä Suomen perusoikeudet koskevat?",
       "options": [
         {
           "id": "a",
-          "text": "Vain Suomen kansalaisia"
+          "text": "Vain Suomen kansalaisia ja pysyvän oleskeluluvan saaneita"
         },
         {
           "id": "b",
@@ -5957,11 +5957,11 @@
         },
         {
           "id": "c",
-          "text": "Vain ihmisiä, jotka ovat työssä"
+          "text": "Vain ihmisiä, jotka työskentelevät ja maksavat veroja"
         },
         {
           "id": "d",
-          "text": "Vain täysi-ikäisiä kansalaisia"
+          "text": "Vain täysi-ikäisiä Suomen kansalaisia"
         }
       ],
       "correctOptionId": "b",
@@ -5996,7 +5996,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Only Finnish citizens"
+              "text": "Only Finnish citizens and holders of a permanent residence permit"
             },
             {
               "id": "b",
@@ -6004,11 +6004,11 @@
             },
             {
               "id": "c",
-              "text": "Only people who are in work"
+              "text": "Only people who work and pay taxes"
             },
             {
               "id": "d",
-              "text": "Only adult citizens"
+              "text": "Only adult Finnish citizens"
             }
           ],
           "explanation": "Equality, freedom of religion, freedom of expression and many other rights apply to everyone, including foreigners living in Finland. Some rights, such as voting in parliamentary elections, belong only to Finnish citizens."
@@ -6021,13 +6021,13 @@
     },
     {
       "id": "rights-everyone-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Vilka gäller de grundläggande fri- och rättigheterna i Finland?",
       "options": [
         {
           "id": "a",
-          "text": "Endast finska medborgare"
+          "text": "Endast finska medborgare och de som har permanent uppehållstillstånd"
         },
         {
           "id": "b",
@@ -6035,11 +6035,11 @@
         },
         {
           "id": "c",
-          "text": "Endast människor som arbetar"
+          "text": "Endast människor som arbetar och betalar skatt"
         },
         {
           "id": "d",
-          "text": "Endast myndiga medborgare"
+          "text": "Endast myndiga finska medborgare"
         }
       ],
       "correctOptionId": "b",
@@ -6073,7 +6073,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Only Finnish citizens"
+              "text": "Only Finnish citizens and holders of a permanent residence permit"
             },
             {
               "id": "b",
@@ -6081,11 +6081,11 @@
             },
             {
               "id": "c",
-              "text": "Only people who are in work"
+              "text": "Only people who work and pay taxes"
             },
             {
               "id": "d",
-              "text": "Only adult citizens"
+              "text": "Only adult Finnish citizens"
             }
           ],
           "explanation": "Equality, freedom of religion, freedom of expression and many other rights apply to everyone, including foreigners living in Finland. Some rights, such as voting in parliamentary elections, belong only to Finnish citizens."
@@ -6376,17 +6376,17 @@
     },
     {
       "id": "demo-expression",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Mitä sananvapaus tarkoittaa?",
       "options": [
         {
           "id": "a",
-          "text": "Oikeutta saada valtiolta rahaa mielipiteen julkaisemiseen"
+          "text": "Oikeutta saada valtiolta rahaa omien mielipiteiden julkaisemiseen lehdissä"
         },
         {
           "id": "b",
-          "text": "Velvollisuutta kertoa mielipiteensä viranomaiselle"
+          "text": "Velvollisuutta kertoa omat mielipiteensä viranomaiselle aina pyydettäessä"
         },
         {
           "id": "c",
@@ -6394,7 +6394,7 @@
         },
         {
           "id": "d",
-          "text": "Oikeutta estää muita julkaisemasta mielipiteitään"
+          "text": "Oikeutta estää muita julkaisemasta mielipiteitä, joista on itse eri mieltä"
         }
       ],
       "correctOptionId": "c",
@@ -6429,11 +6429,11 @@
           "options": [
             {
               "id": "a",
-              "text": "A right to state money for publishing your opinion"
+              "text": "A right to state money for publishing your own opinions in newspapers"
             },
             {
               "id": "b",
-              "text": "A duty to tell the authorities your opinion"
+              "text": "A duty to tell the authorities your opinions whenever they ask"
             },
             {
               "id": "c",
@@ -6441,7 +6441,7 @@
             },
             {
               "id": "d",
-              "text": "The right to stop others publishing their opinions"
+              "text": "The right to stop others publishing opinions you disagree with"
             }
           ],
           "explanation": "Freedom of expression includes the right to express, publish and receive information, opinions and other messages without anyone preventing it in advance. The law still sets limits; defamation, for example, is a crime."
@@ -6454,17 +6454,17 @@
     },
     {
       "id": "demo-expression-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Vad innebär yttrandefrihet?",
       "options": [
         {
           "id": "a",
-          "text": "Rätt att få pengar av staten för att publicera sin åsikt"
+          "text": "Rätt att få pengar av staten för att publicera sina egna åsikter i tidningar"
         },
         {
           "id": "b",
-          "text": "Skyldighet att berätta sin åsikt för myndigheterna"
+          "text": "Skyldighet att alltid berätta sina åsikter för myndigheterna när de ber om det"
         },
         {
           "id": "c",
@@ -6472,7 +6472,7 @@
         },
         {
           "id": "d",
-          "text": "Rätt att hindra andra från att publicera sina åsikter"
+          "text": "Rätt att hindra andra från att publicera åsikter som man själv inte håller med om"
         }
       ],
       "correctOptionId": "c",
@@ -6506,11 +6506,11 @@
           "options": [
             {
               "id": "a",
-              "text": "A right to state money for publishing your opinion"
+              "text": "A right to state money for publishing your own opinions in newspapers"
             },
             {
               "id": "b",
-              "text": "A duty to tell the authorities your opinion"
+              "text": "A duty to tell the authorities your opinions whenever they ask"
             },
             {
               "id": "c",
@@ -6518,7 +6518,7 @@
             },
             {
               "id": "d",
-              "text": "The right to stop others publishing their opinions"
+              "text": "The right to stop others publishing opinions you disagree with"
             }
           ],
           "explanation": "Freedom of expression includes the right to express, publish and receive information, opinions and other messages without anyone preventing it in advance. The law still sets limits; defamation, for example, is a crime."
@@ -6531,21 +6531,21 @@
     },
     {
       "id": "rights-no-censorship",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Saako viranomainen tarkastaa sanomalehden jutut ennen kuin ne julkaistaan?",
       "options": [
         {
           "id": "a",
-          "text": "Kyllä, jos juttu koskee politiikkaa"
+          "text": "Kyllä, jos juttu koskee politiikkaa tai valtion johtoa"
         },
         {
           "id": "b",
-          "text": "Kyllä, kaikki jutut tarkastetaan"
+          "text": "Kyllä, viranomainen tarkastaa kaikki lehtijutut ennen kuin ne julkaistaan"
         },
         {
           "id": "c",
-          "text": "Vain vaalien aikana"
+          "text": "Vain vaalien aikana, jotta äänestäjiä ei johdeta harhaan"
         },
         {
           "id": "d",
@@ -6584,15 +6584,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Yes, if the article is about politics"
+              "text": "Yes, if the article is about politics or the state leadership"
             },
             {
               "id": "b",
-              "text": "Yes, all articles are checked"
+              "text": "Yes, an authority checks every newspaper article before it is published"
             },
             {
               "id": "c",
-              "text": "Only during elections"
+              "text": "Only during elections, so that voters are not misled"
             },
             {
               "id": "d",
@@ -6609,21 +6609,21 @@
     },
     {
       "id": "rights-no-censorship-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Får en myndighet granska tidningsartiklar innan de publiceras?",
       "options": [
         {
           "id": "a",
-          "text": "Ja, om artikeln handlar om politik"
+          "text": "Ja, om artikeln handlar om politik eller statsledningen"
         },
         {
           "id": "b",
-          "text": "Ja, alla artiklar granskas"
+          "text": "Ja, en myndighet granskar alla tidningsartiklar innan de publiceras"
         },
         {
           "id": "c",
-          "text": "Endast under val"
+          "text": "Endast under val, så att väljarna inte vilseleds"
         },
         {
           "id": "d",
@@ -6661,15 +6661,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Yes, if the article is about politics"
+              "text": "Yes, if the article is about politics or the state leadership"
             },
             {
               "id": "b",
-              "text": "Yes, all articles are checked"
+              "text": "Yes, an authority checks every newspaper article before it is published"
             },
             {
               "id": "c",
-              "text": "Only during elections"
+              "text": "Only during elections, so that voters are not misled"
             },
             {
               "id": "d",
@@ -6809,7 +6809,7 @@
     },
     {
       "id": "demo-religion",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Voiko ihminen Suomessa olla kuulumatta mihinkään uskonnolliseen yhdyskuntaan?",
       "options": [
@@ -6819,15 +6819,15 @@
         },
         {
           "id": "b",
-          "text": "Ei, jokaisen täytyy kuulua johonkin"
+          "text": "Ei, jokaisen täytyy kuulua johonkin uskonnolliseen yhdyskuntaan"
         },
         {
           "id": "c",
-          "text": "Vain jos hän ei ole Suomen kansalainen"
+          "text": "Kyllä, mutta vain jos hän ei ole Suomen kansalainen"
         },
         {
           "id": "d",
-          "text": "Vain viranomaisen luvalla"
+          "text": "Vain kirkon tai muun yhdyskunnan antamalla luvalla"
         }
       ],
       "correctOptionId": "a",
@@ -6866,15 +6866,15 @@
             },
             {
               "id": "b",
-              "text": "No, everyone must belong to one"
+              "text": "No, everyone must belong to some religious community"
             },
             {
               "id": "c",
-              "text": "Only if they are not a Finnish citizen"
+              "text": "Yes, but only if they are not a Finnish citizen"
             },
             {
               "id": "d",
-              "text": "Only with an authority's permission"
+              "text": "Only with permission from the church or another community"
             }
           ],
           "explanation": "Freedom of religion and conscience includes the right to belong or not to belong to a religious community. Everyone chooses their religion, and nobody has to choose one."
@@ -6887,7 +6887,7 @@
     },
     {
       "id": "demo-religion-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Kan en person i Finland låta bli att höra till något religiöst samfund?",
       "options": [
@@ -6897,15 +6897,15 @@
         },
         {
           "id": "b",
-          "text": "Nej, alla måste höra till något"
+          "text": "Nej, alla måste höra till något religiöst samfund"
         },
         {
           "id": "c",
-          "text": "Endast om hen inte är finsk medborgare"
+          "text": "Ja, men bara om hen inte är finsk medborgare"
         },
         {
           "id": "d",
-          "text": "Endast med myndighetens tillstånd"
+          "text": "Endast med tillstånd från kyrkan eller ett annat samfund"
         }
       ],
       "correctOptionId": "a",
@@ -6943,15 +6943,15 @@
             },
             {
               "id": "b",
-              "text": "No, everyone must belong to one"
+              "text": "No, everyone must belong to some religious community"
             },
             {
               "id": "c",
-              "text": "Only if they are not a Finnish citizen"
+              "text": "Yes, but only if they are not a Finnish citizen"
             },
             {
               "id": "d",
-              "text": "Only with an authority's permission"
+              "text": "Only with permission from the church or another community"
             }
           ],
           "explanation": "Freedom of religion and conscience includes the right to belong or not to belong to a religious community. Everyone chooses their religion, and nobody has to choose one."
@@ -7244,7 +7244,7 @@
     },
     {
       "id": "demo-assembly",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Tarvitaanko Suomessa viranomaisen lupa mielenosoituksen järjestämiseen?",
       "options": [
@@ -7254,15 +7254,15 @@
         },
         {
           "id": "b",
-          "text": "Kyllä, kunnan lupa tarvitaan aina"
+          "text": "Kyllä, kunnan lupa tarvitaan aina etukäteen"
         },
         {
           "id": "c",
-          "text": "Kyllä, eduskunnan täytyy hyväksyä se"
+          "text": "Kyllä, poliisin täytyy myöntää sille lupa etukäteen"
         },
         {
           "id": "d",
-          "text": "Ei, eikä siitä tarvitse kertoa kenellekään"
+          "text": "Ei, eikä siitä tarvitse kertoa kenellekään etukäteen"
         }
       ],
       "correctOptionId": "a",
@@ -7301,15 +7301,15 @@
             },
             {
               "id": "b",
-              "text": "Yes, a municipal permit is always needed"
+              "text": "Yes, a municipal permit is always needed in advance"
             },
             {
               "id": "c",
-              "text": "Yes, Parliament must approve it"
+              "text": "Yes, the police must grant a permit for it in advance"
             },
             {
               "id": "d",
-              "text": "No, and nobody needs to be told about it"
+              "text": "No, and nobody needs to be told about it in advance"
             }
           ],
           "explanation": "Everyone has the right to organise meetings and demonstrations without a permit. A demonstration must, however, be notified to the police in advance."
@@ -7322,7 +7322,7 @@
     },
     {
       "id": "demo-assembly-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Behövs ett tillstånd från en myndighet för att ordna en demonstration i Finland?",
       "options": [
@@ -7332,15 +7332,15 @@
         },
         {
           "id": "b",
-          "text": "Ja, kommunens tillstånd behövs alltid"
+          "text": "Ja, ett tillstånd från kommunen behövs alltid i förväg"
         },
         {
           "id": "c",
-          "text": "Ja, riksdagen måste godkänna den"
+          "text": "Ja, polisen måste bevilja tillstånd för den i förväg"
         },
         {
           "id": "d",
-          "text": "Nej, och man behöver inte berätta det för någon"
+          "text": "Nej, och man behöver inte berätta det för någon i förväg"
         }
       ],
       "correctOptionId": "a",
@@ -7378,15 +7378,15 @@
             },
             {
               "id": "b",
-              "text": "Yes, a municipal permit is always needed"
+              "text": "Yes, a municipal permit is always needed in advance"
             },
             {
               "id": "c",
-              "text": "Yes, Parliament must approve it"
+              "text": "Yes, the police must grant a permit for it in advance"
             },
             {
               "id": "d",
-              "text": "No, and nobody needs to be told about it"
+              "text": "No, and nobody needs to be told about it in advance"
             }
           ],
           "explanation": "Everyone has the right to organise meetings and demonstrations without a permit. A demonstration must, however, be notified to the police in advance."
@@ -7399,17 +7399,17 @@
     },
     {
       "id": "demo-association",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Voiko ihminen päättää olla kuulumatta yhdistykseen?",
       "options": [
         {
           "id": "a",
-          "text": "Ei, työpaikan yhdistykseen on pakko kuulua"
+          "text": "Ei, työpaikan yhdistykseen tai ammattiliittoon on aina pakko kuulua"
         },
         {
           "id": "b",
-          "text": "Vain jos yhdistys antaa luvan"
+          "text": "Vain jos yhdistyksen hallitus antaa siihen erikseen luvan"
         },
         {
           "id": "c",
@@ -7417,7 +7417,7 @@
         },
         {
           "id": "d",
-          "text": "Vain alle 18-vuotiaat voivat päättää niin"
+          "text": "Kyllä, mutta vain jos hän ei ole koskaan liittynyt yhdistykseen"
         }
       ],
       "correctOptionId": "c",
@@ -7452,11 +7452,11 @@
           "options": [
             {
               "id": "a",
-              "text": "No, everyone must join the workplace association"
+              "text": "No, everyone must always join the workplace association or trade union"
             },
             {
               "id": "b",
-              "text": "Only if the association allows it"
+              "text": "Only if the association's board specifically allows it"
             },
             {
               "id": "c",
@@ -7464,7 +7464,7 @@
             },
             {
               "id": "d",
-              "text": "Only people under 18 can decide that"
+              "text": "Yes, but only if they have never joined an association"
             }
           ],
           "explanation": "Freedom of association includes the right to found an association without a permit, to belong or not to belong to one, and to take part in its activities."
@@ -7477,17 +7477,17 @@
     },
     {
       "id": "demo-association-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Kan en person bestämma sig för att inte höra till en förening?",
       "options": [
         {
           "id": "a",
-          "text": "Nej, man måste höra till arbetsplatsens förening"
+          "text": "Nej, man måste alltid höra till arbetsplatsens förening eller fackförbund"
         },
         {
           "id": "b",
-          "text": "Endast om föreningen ger tillstånd"
+          "text": "Endast om föreningens styrelse särskilt ger tillstånd till det"
         },
         {
           "id": "c",
@@ -7495,7 +7495,7 @@
         },
         {
           "id": "d",
-          "text": "Endast personer under 18 år kan bestämma det"
+          "text": "Ja, men bara om hen aldrig har gått med i någon förening"
         }
       ],
       "correctOptionId": "c",
@@ -7529,11 +7529,11 @@
           "options": [
             {
               "id": "a",
-              "text": "No, everyone must join the workplace association"
+              "text": "No, everyone must always join the workplace association or trade union"
             },
             {
               "id": "b",
-              "text": "Only if the association allows it"
+              "text": "Only if the association's board specifically allows it"
             },
             {
               "id": "c",
@@ -7541,7 +7541,7 @@
             },
             {
               "id": "d",
-              "text": "Only people under 18 can decide that"
+              "text": "Yes, but only if they have never joined an association"
             }
           ],
           "explanation": "Freedom of association includes the right to found an association without a permit, to belong or not to belong to one, and to take part in its activities."
@@ -7832,21 +7832,21 @@
     },
     {
       "id": "demo-privacy",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Mikä kuuluu perustuslain mukaan yksityiselämän suojaan?",
       "options": [
         {
           "id": "a",
-          "text": "Oikeus saada ilmainen asunto"
+          "text": "Oikeus saada kunnalta ilmainen asunto omaa rauhaa varten"
         },
         {
           "id": "b",
-          "text": "Oikeus kieltäytyä maksamasta veroja"
+          "text": "Oikeus kieltäytyä maksamasta veroja yksityisyyden vuoksi"
         },
         {
           "id": "c",
-          "text": "Oikeus saada tietää toisten ihmisten terveystiedot"
+          "text": "Oikeus saada tietää naapureiden ja työtovereiden terveystiedot"
         },
         {
           "id": "d",
@@ -7885,15 +7885,15 @@
           "options": [
             {
               "id": "a",
-              "text": "The right to free housing"
+              "text": "The right to free housing from the municipality for your own privacy"
             },
             {
               "id": "b",
-              "text": "The right to refuse to pay taxes"
+              "text": "The right to refuse to pay taxes for privacy reasons"
             },
             {
               "id": "c",
-              "text": "The right to know other people's health information"
+              "text": "The right to know your neighbours' and colleagues' health information"
             },
             {
               "id": "d",
@@ -7910,21 +7910,21 @@
     },
     {
       "id": "demo-privacy-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "rights",
       "text": "Vad hör enligt grundlagen till skyddet för privatlivet?",
       "options": [
         {
           "id": "a",
-          "text": "Rätten till en gratis bostad"
+          "text": "Rätten att få en gratis bostad av kommunen för att ha sin egen ro"
         },
         {
           "id": "b",
-          "text": "Rätten att vägra betala skatt"
+          "text": "Rätten att vägra betala skatt av integritetsskäl"
         },
         {
           "id": "c",
-          "text": "Rätten att få veta andra människors hälsouppgifter"
+          "text": "Rätten att få veta grannarnas och arbetskamraternas hälsouppgifter"
         },
         {
           "id": "d",
@@ -7962,15 +7962,15 @@
           "options": [
             {
               "id": "a",
-              "text": "The right to free housing"
+              "text": "The right to free housing from the municipality for your own privacy"
             },
             {
               "id": "b",
-              "text": "The right to refuse to pay taxes"
+              "text": "The right to refuse to pay taxes for privacy reasons"
             },
             {
               "id": "c",
-              "text": "The right to know other people's health information"
+              "text": "The right to know your neighbours' and colleagues' health information"
             },
             {
               "id": "d",
@@ -8656,17 +8656,17 @@
     },
     {
       "id": "rights-due-process",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Mitä oikeusturvaan kuuluu perustuslain mukaan?",
       "options": [
         {
           "id": "a",
-          "text": "Oikeus valita itse tuomari"
+          "text": "Oikeus valita itse oman asiansa tuomari ja syyttäjä"
         },
         {
           "id": "b",
-          "text": "Oikeus saada aina ilmainen asianajaja"
+          "text": "Oikeus saada aina ilmainen asianajaja tulotasosta riippumatta"
         },
         {
           "id": "c",
@@ -8674,7 +8674,7 @@
         },
         {
           "id": "d",
-          "text": "Oikeus jättää tuomio noudattamatta"
+          "text": "Oikeus jättää tuomio noudattamatta, jos on siitä eri mieltä"
         }
       ],
       "correctOptionId": "c",
@@ -8709,11 +8709,11 @@
           "options": [
             {
               "id": "a",
-              "text": "The right to choose your own judge"
+              "text": "The right to choose the judge and prosecutor in your own case"
             },
             {
               "id": "b",
-              "text": "The right to a free lawyer in every case"
+              "text": "The right to a free lawyer in every case, whatever your income"
             },
             {
               "id": "c",
@@ -8721,7 +8721,7 @@
             },
             {
               "id": "d",
-              "text": "The right not to follow a judgment"
+              "text": "The right not to follow a judgment you disagree with"
             }
           ],
           "explanation": "The Constitution says the law must protect public hearings, the right to be heard, the right to a reasoned decision and the right to appeal. These guarantee a fair trial and good administration."
@@ -8734,17 +8734,17 @@
     },
     {
       "id": "rights-due-process-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Vad hör enligt grundlagen till rättsskyddet?",
       "options": [
         {
           "id": "a",
-          "text": "Rätten att själv välja domare"
+          "text": "Rätten att själv välja domare och åklagare i sitt ärende"
         },
         {
           "id": "b",
-          "text": "Rätten att alltid få en gratis advokat"
+          "text": "Rätten att alltid få en gratis advokat oberoende av inkomster"
         },
         {
           "id": "c",
@@ -8752,7 +8752,7 @@
         },
         {
           "id": "d",
-          "text": "Rätten att inte följa en dom"
+          "text": "Rätten att inte följa en dom om man inte håller med om den"
         }
       ],
       "correctOptionId": "c",
@@ -8786,11 +8786,11 @@
           "options": [
             {
               "id": "a",
-              "text": "The right to choose your own judge"
+              "text": "The right to choose the judge and prosecutor in your own case"
             },
             {
               "id": "b",
-              "text": "The right to a free lawyer in every case"
+              "text": "The right to a free lawyer in every case, whatever your income"
             },
             {
               "id": "c",
@@ -8798,7 +8798,7 @@
             },
             {
               "id": "d",
-              "text": "The right not to follow a judgment"
+              "text": "The right not to follow a judgment you disagree with"
             }
           ],
           "explanation": "The Constitution says the law must protect public hearings, the right to be heard, the right to a reasoned decision and the right to appeal. These guarantee a fair trial and good administration."
@@ -8811,7 +8811,7 @@
     },
     {
       "id": "rights-ombudsman",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Mitä eduskunnan oikeusasiamies tekee?",
       "options": [
@@ -8821,15 +8821,15 @@
         },
         {
           "id": "b",
-          "text": "Tuomitsee rikoksista"
+          "text": "Tuomitsee virkamiehiä rikoksista ja päättää heidän rangaistuksistaan tuomioistuimen sijasta"
         },
         {
           "id": "c",
-          "text": "Säätää lakeja"
+          "text": "Säätää lakeja yhdessä eduskunnan kanssa ja vahvistaa ne voimaan"
         },
         {
           "id": "d",
-          "text": "Johtaa poliisia"
+          "text": "Johtaa poliisia ja päättää, mitä rikoksia poliisi tutkii ensin"
         }
       ],
       "correctOptionId": "a",
@@ -8868,15 +8868,15 @@
             },
             {
               "id": "b",
-              "text": "Judges crimes"
+              "text": "Judges officials for crimes and decides their punishments instead of the courts"
             },
             {
               "id": "c",
-              "text": "Makes laws"
+              "text": "Makes laws together with Parliament and confirms them"
             },
             {
               "id": "d",
-              "text": "Leads the police"
+              "text": "Leads the police and decides which crimes they investigate first"
             }
           ],
           "explanation": "The Parliamentary Ombudsman oversees that courts, other authorities and officials obey the law and fulfil their duties, and also oversees fundamental and human rights."
@@ -8889,7 +8889,7 @@
     },
     {
       "id": "rights-ombudsman-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Vad gör riksdagens justitieombudsman?",
       "options": [
@@ -8899,15 +8899,15 @@
         },
         {
           "id": "b",
-          "text": "Dömer för brott"
+          "text": "Dömer tjänstemän för brott och beslutar om deras straff i stället för domstolarna"
         },
         {
           "id": "c",
-          "text": "Stiftar lagar"
+          "text": "Stiftar lagar tillsammans med riksdagen och stadfäster dem"
         },
         {
           "id": "d",
-          "text": "Leder polisen"
+          "text": "Leder polisen och bestämmer vilka brott polisen utreder först"
         }
       ],
       "correctOptionId": "a",
@@ -8945,15 +8945,15 @@
             },
             {
               "id": "b",
-              "text": "Judges crimes"
+              "text": "Judges officials for crimes and decides their punishments instead of the courts"
             },
             {
               "id": "c",
-              "text": "Makes laws"
+              "text": "Makes laws together with Parliament and confirms them"
             },
             {
               "id": "d",
-              "text": "Leads the police"
+              "text": "Leads the police and decides which crimes they investigate first"
             }
           ],
           "explanation": "The Parliamentary Ombudsman oversees that courts, other authorities and officials obey the law and fulfil their duties, and also oversees fundamental and human rights."
@@ -9399,13 +9399,13 @@
     },
     {
       "id": "rights-child-opinion",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Miten lapsen mielipide otetaan huomioon häntä koskevissa asioissa?",
       "options": [
         {
           "id": "a",
-          "text": "Sillä ei ole merkitystä ennen 18 vuoden ikää"
+          "text": "Sillä ei ole merkitystä ennen kuin lapsi täyttää 18 vuotta"
         },
         {
           "id": "b",
@@ -9413,11 +9413,11 @@
         },
         {
           "id": "c",
-          "text": "Lapsi päättää kaikista asioista aina itse"
+          "text": "Lapsi päättää kaikista itseään koskevista asioista aina itse ja yksin"
         },
         {
           "id": "d",
-          "text": "Vain koulu saa kysyä lapsen mielipidettä"
+          "text": "Vain koulu ja lastensuojelu saavat kysyä lapsen mielipidettä"
         }
       ],
       "correctOptionId": "b",
@@ -9452,7 +9452,7 @@
           "options": [
             {
               "id": "a",
-              "text": "It does not matter before age 18"
+              "text": "It does not matter until the child turns 18"
             },
             {
               "id": "b",
@@ -9460,11 +9460,11 @@
             },
             {
               "id": "c",
-              "text": "The child always decides everything alone"
+              "text": "The child always decides everything about themselves, alone"
             },
             {
               "id": "d",
-              "text": "Only the school may ask the child's opinion"
+              "text": "Only the school and child welfare may ask the child's opinion"
             }
           ],
           "explanation": "Children must have a say in matters that affect them. The older the child, the more weight their opinion must be given, for example when parents separate."
@@ -9477,13 +9477,13 @@
     },
     {
       "id": "rights-child-opinion-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "rights",
       "text": "Hur beaktas barnets åsikt i frågor som gäller barnet?",
       "options": [
         {
           "id": "a",
-          "text": "Den har ingen betydelse före 18 års ålder"
+          "text": "Den har ingen betydelse förrän barnet har fyllt 18 år"
         },
         {
           "id": "b",
@@ -9491,11 +9491,11 @@
         },
         {
           "id": "c",
-          "text": "Barnet bestämmer alltid allt själv"
+          "text": "Barnet bestämmer alltid självt och ensamt om allt som gäller barnet"
         },
         {
           "id": "d",
-          "text": "Endast skolan får fråga om barnets åsikt"
+          "text": "Endast skolan och barnskyddet får fråga om barnets åsikt"
         }
       ],
       "correctOptionId": "b",
@@ -9529,7 +9529,7 @@
           "options": [
             {
               "id": "a",
-              "text": "It does not matter before age 18"
+              "text": "It does not matter until the child turns 18"
             },
             {
               "id": "b",
@@ -9537,11 +9537,11 @@
             },
             {
               "id": "c",
-              "text": "The child always decides everything alone"
+              "text": "The child always decides everything about themselves, alone"
             },
             {
               "id": "d",
-              "text": "Only the school may ask the child's opinion"
+              "text": "Only the school and child welfare may ask the child's opinion"
             }
           ],
           "explanation": "Children must have a say in matters that affect them. The older the child, the more weight their opinion must be given, for example when parents separate."
