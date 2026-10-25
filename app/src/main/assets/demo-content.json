@@ -9554,7 +9554,7 @@
     },
     {
       "id": "demo-equality",
-      "revision": 2,
+      "revision": 3,
       "topicId": "equality",
       "text": "Mitä yhdenvertaisuus tarkoittaa?",
       "options": [
@@ -9564,15 +9564,15 @@
         },
         {
           "id": "b",
-          "text": "Kaikki saavat saman palkan"
+          "text": "Kaikki saavat saman palkan ja saman kokoisen asunnon riippumatta työstään"
         },
         {
           "id": "c",
-          "text": "Kaikilla täytyy olla sama mielipide"
+          "text": "Kaikkien täytyy olla samaa mieltä yhteiskunnan tärkeistä asioista ja arvoista"
         },
         {
           "id": "d",
-          "text": "Vain Suomen kansalaisia kohdellaan tasavertaisesti"
+          "text": "Vain Suomen kansalaiset ovat samanarvoisia keskenään iästä, alkuperästä, kielestä tai uskonnosta riippumatta"
         }
       ],
       "correctOptionId": "a",
@@ -9611,15 +9611,15 @@
             },
             {
               "id": "b",
-              "text": "Everyone gets the same salary"
+              "text": "Everyone gets the same pay and the same size of home, whatever their job"
             },
             {
               "id": "c",
-              "text": "Everyone must have the same opinion"
+              "text": "Everyone must agree on society's important questions and values"
             },
             {
               "id": "d",
-              "text": "Only Finnish citizens are treated equally"
+              "text": "Only Finnish citizens are of equal worth among themselves regardless of age, origin, language or religion"
             }
           ],
           "explanation": "Equality means that all people are of equal worth regardless of, for example, age, ethnic or national origin, citizenship, language, religion, disability or sexual orientation."
@@ -9632,7 +9632,7 @@
     },
     {
       "id": "demo-equality-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "equality",
       "text": "Vad betyder likabehandling?",
       "options": [
@@ -9642,15 +9642,15 @@
         },
         {
           "id": "b",
-          "text": "Alla får samma lön"
+          "text": "Alla får samma lön och lika stor bostad oavsett vilket arbete de har"
         },
         {
           "id": "c",
-          "text": "Alla måste ha samma åsikt"
+          "text": "Alla måste ha samma åsikt om viktiga frågor och värderingar i samhället"
         },
         {
           "id": "d",
-          "text": "Endast finska medborgare behandlas jämlikt"
+          "text": "Endast finska medborgare är lika värda sinsemellan oavsett ålder, ursprung, språk eller religion"
         }
       ],
       "correctOptionId": "a",
@@ -9688,15 +9688,15 @@
             },
             {
               "id": "b",
-              "text": "Everyone gets the same salary"
+              "text": "Everyone gets the same pay and the same size of home, whatever their job"
             },
             {
               "id": "c",
-              "text": "Everyone must have the same opinion"
+              "text": "Everyone must agree on society's important questions and values"
             },
             {
               "id": "d",
-              "text": "Only Finnish citizens are treated equally"
+              "text": "Only Finnish citizens are of equal worth among themselves regardless of age, origin, language or religion"
             }
           ],
           "explanation": "Equality means that all people are of equal worth regardless of, for example, age, ethnic or national origin, citizenship, language, religion, disability or sexual orientation."
@@ -9977,21 +9977,21 @@
     },
     {
       "id": "eq-grounds",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Minkä perusteella ihmistä ei saa syrjiä Suomessa?",
       "options": [
         {
           "id": "a",
-          "text": "Vain sukupuolen perusteella"
+          "text": "Vain sukupuolen ja kansalaisuuden perusteella"
         },
         {
           "id": "b",
-          "text": "Vain kansalaisuuden perusteella"
+          "text": "Vain kansalaisuuden perusteella, ei esimerkiksi iän perusteella"
         },
         {
           "id": "c",
-          "text": "Syrjintää ei kielletä yksityisissä yrityksissä"
+          "text": "Syrjintä on kielletty vain viranomaisissa, ei yksityisissä yrityksissä"
         },
         {
           "id": "d",
@@ -10030,15 +10030,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Only gender"
+              "text": "Only gender and citizenship"
             },
             {
               "id": "b",
-              "text": "Only citizenship"
+              "text": "Only citizenship, not for example age"
             },
             {
               "id": "c",
-              "text": "Discrimination is not banned in private companies"
+              "text": "Discrimination is banned only at authorities, not in private companies"
             },
             {
               "id": "d",
@@ -10055,21 +10055,21 @@
     },
     {
       "id": "eq-grounds-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "På vilka grunder får ingen diskrimineras i Finland?",
       "options": [
         {
           "id": "a",
-          "text": "Endast på grund av kön"
+          "text": "Endast på grund av kön och medborgarskap"
         },
         {
           "id": "b",
-          "text": "Endast på grund av medborgarskap"
+          "text": "Endast på grund av medborgarskap, inte till exempel ålder"
         },
         {
           "id": "c",
-          "text": "Diskriminering är inte förbjuden i privata företag"
+          "text": "Diskriminering är förbjuden bara hos myndigheter, inte i privata företag"
         },
         {
           "id": "d",
@@ -10107,15 +10107,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Only gender"
+              "text": "Only gender and citizenship"
             },
             {
               "id": "b",
-              "text": "Only citizenship"
+              "text": "Only citizenship, not for example age"
             },
             {
               "id": "c",
-              "text": "Discrimination is not banned in private companies"
+              "text": "Discrimination is banned only at authorities, not in private companies"
             },
             {
               "id": "d",
@@ -10525,7 +10525,7 @@
     },
     {
       "id": "eq-best-applicant",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Kenet työnantajan täytyy yhdenvertaisuuslain mukaan valita työhön?",
       "options": [
@@ -10535,15 +10535,15 @@
         },
         {
           "id": "b",
-          "text": "Hakijan, joka on Suomen kansalainen"
+          "text": "Hakijan, joka on Suomen kansalainen ja puhuu äidinkielenään suomea"
         },
         {
           "id": "c",
-          "text": "Nuorimman hakijan"
+          "text": "Nuorimman hakijan, koska hänellä on pisin työura edessään"
         },
         {
           "id": "d",
-          "text": "Hakijan, jonka työnantaja tuntee ennestään"
+          "text": "Hakijan, jonka työnantaja tai työyhteisö tuntee ennestään parhaiten ja johon se luottaa"
         }
       ],
       "correctOptionId": "a",
@@ -10582,15 +10582,15 @@
             },
             {
               "id": "b",
-              "text": "The applicant who is a Finnish citizen"
+              "text": "The applicant who is a Finnish citizen and a native Finnish speaker"
             },
             {
               "id": "c",
-              "text": "The youngest applicant"
+              "text": "The youngest applicant, since they have the longest career ahead"
             },
             {
               "id": "d",
-              "text": "An applicant the employer already knows"
+              "text": "The applicant the employer or work community already knows best and trusts"
             }
           ],
           "explanation": "The Non-Discrimination Act requires equal treatment of applicants. The employer must choose the most qualified applicant and be able to show acceptable, work-related grounds for the choice."
@@ -10603,7 +10603,7 @@
     },
     {
       "id": "eq-best-applicant-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Vem måste arbetsgivaren enligt diskrimineringslagen välja till jobbet?",
       "options": [
@@ -10613,15 +10613,15 @@
         },
         {
           "id": "b",
-          "text": "Den sökande som är finsk medborgare"
+          "text": "Den sökande som är finsk medborgare och har finska som modersmål"
         },
         {
           "id": "c",
-          "text": "Den yngsta sökanden"
+          "text": "Den yngsta sökanden, eftersom hen har längst arbetsliv framför sig"
         },
         {
           "id": "d",
-          "text": "Den sökande som arbetsgivaren redan känner"
+          "text": "Den sökande som arbetsgivaren eller arbetsgemenskapen redan känner bäst och litar på"
         }
       ],
       "correctOptionId": "a",
@@ -10659,15 +10659,15 @@
             },
             {
               "id": "b",
-              "text": "The applicant who is a Finnish citizen"
+              "text": "The applicant who is a Finnish citizen and a native Finnish speaker"
             },
             {
               "id": "c",
-              "text": "The youngest applicant"
+              "text": "The youngest applicant, since they have the longest career ahead"
             },
             {
               "id": "d",
-              "text": "An applicant the employer already knows"
+              "text": "The applicant the employer or work community already knows best and trusts"
             }
           ],
           "explanation": "The Non-Discrimination Act requires equal treatment of applicants. The employer must choose the most qualified applicant and be able to show acceptable, work-related grounds for the choice."
@@ -11083,21 +11083,21 @@
     },
     {
       "id": "eq-work-language",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Työntekijän äidinkieli on muu kuin suomi tai ruotsi. Mistä työnantajan täytyy huolehtia?",
       "options": [
         {
           "id": "a",
-          "text": "Että työntekijä käy suomen kurssin omalla ajallaan ennen töitä"
+          "text": "Että työntekijä käy suomen kielen kurssin omalla ajallaan ja omalla kustannuksellaan ennen töiden alkamista"
         },
         {
           "id": "b",
-          "text": "Että työsopimus tehdään aina vain suomeksi"
+          "text": "Että työsopimus tehdään aina vain suomeksi, vaikka työntekijä ei ymmärrä sitä"
         },
         {
           "id": "c",
-          "text": "Ei mistään erityisestä"
+          "text": "Ei mistään, koska työntekijän täytyy itse hankkia tulkki"
         },
         {
           "id": "d",
@@ -11136,15 +11136,15 @@
           "options": [
             {
               "id": "a",
-              "text": "That the employee takes a Finnish course in their own time before starting"
+              "text": "That the employee takes a Finnish course in their own time and at their own cost before starting"
             },
             {
               "id": "b",
-              "text": "That the contract is always made only in Finnish"
+              "text": "That the contract is always made only in Finnish, even if the employee does not understand it"
             },
             {
               "id": "c",
-              "text": "Nothing in particular"
+              "text": "Nothing, because the employee must arrange an interpreter themselves"
             },
             {
               "id": "d",
@@ -11161,21 +11161,21 @@
     },
     {
       "id": "eq-work-language-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "En arbetstagare har ett annat modersmål än finska eller svenska. Vad måste arbetsgivaren se till?",
       "options": [
         {
           "id": "a",
-          "text": "Att arbetstagaren går en finskkurs på egen tid innan arbetet börjar"
+          "text": "Att arbetstagaren går en finskkurs på egen tid och egen bekostnad innan arbetet börjar"
         },
         {
           "id": "b",
-          "text": "Att arbetsavtalet alltid görs endast på finska"
+          "text": "Att arbetsavtalet alltid görs endast på finska, även om arbetstagaren inte förstår det"
         },
         {
           "id": "c",
-          "text": "Inget särskilt"
+          "text": "Ingenting, eftersom arbetstagaren själv måste skaffa en tolk"
         },
         {
           "id": "d",
@@ -11213,15 +11213,15 @@
           "options": [
             {
               "id": "a",
-              "text": "That the employee takes a Finnish course in their own time before starting"
+              "text": "That the employee takes a Finnish course in their own time and at their own cost before starting"
             },
             {
               "id": "b",
-              "text": "That the contract is always made only in Finnish"
+              "text": "That the contract is always made only in Finnish, even if the employee does not understand it"
             },
             {
               "id": "c",
-              "text": "Nothing in particular"
+              "text": "Nothing, because the employee must arrange an interpreter themselves"
             },
             {
               "id": "d",
@@ -11238,13 +11238,13 @@
     },
     {
       "id": "eq-equality-act",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Mitä naisten ja miesten välisestä tasa-arvosta annettu laki kieltää?",
       "options": [
         {
           "id": "a",
-          "text": "Naisten ja miesten erilliset harrastusryhmät"
+          "text": "Naisten ja miesten erilliset harrastusryhmät, saunavuorot ja urheilukilpailut"
         },
         {
           "id": "b",
@@ -11252,11 +11252,11 @@
         },
         {
           "id": "c",
-          "text": "Ammattiliittoihin kuulumisen"
+          "text": "Ammattiliittoihin kuulumisen ja työehtosopimukset"
         },
         {
           "id": "d",
-          "text": "Erilaiset ammatinvalinnat"
+          "text": "Sen, että naiset ja miehet valitsevat erilaisia ammatteja"
         }
       ],
       "correctOptionId": "b",
@@ -11291,7 +11291,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Separate hobby groups for women and men"
+              "text": "Separate hobby groups, sauna turns and sports competitions for women and men"
             },
             {
               "id": "b",
@@ -11299,11 +11299,11 @@
             },
             {
               "id": "c",
-              "text": "Trade union membership"
+              "text": "Trade union membership and collective agreements"
             },
             {
               "id": "d",
-              "text": "Different career choices"
+              "text": "Women and men choosing different occupations"
             }
           ],
           "explanation": "The Equality Act bans discrimination based on, among other things, gender, gender identity and expression, pregnancy, childbirth, parenthood and family responsibilities. It also aims to promote equality between women and men."
@@ -11316,13 +11316,13 @@
     },
     {
       "id": "eq-equality-act-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Vad förbjuder lagen om jämställdhet mellan kvinnor och män?",
       "options": [
         {
           "id": "a",
-          "text": "Separata hobbygrupper för kvinnor och män"
+          "text": "Separata hobbygrupper, bastuturer och idrottstävlingar för kvinnor och män"
         },
         {
           "id": "b",
@@ -11330,11 +11330,11 @@
         },
         {
           "id": "c",
-          "text": "Medlemskap i fackförbund"
+          "text": "Medlemskap i fackförbund och kollektivavtal"
         },
         {
           "id": "d",
-          "text": "Olika yrkesval"
+          "text": "Att kvinnor och män väljer olika yrken"
         }
       ],
       "correctOptionId": "b",
@@ -11368,7 +11368,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Separate hobby groups for women and men"
+              "text": "Separate hobby groups, sauna turns and sports competitions for women and men"
             },
             {
               "id": "b",
@@ -11376,11 +11376,11 @@
             },
             {
               "id": "c",
-              "text": "Trade union membership"
+              "text": "Trade union membership and collective agreements"
             },
             {
               "id": "d",
-              "text": "Different career choices"
+              "text": "Women and men choosing different occupations"
             }
           ],
           "explanation": "The Equality Act bans discrimination based on, among other things, gender, gender identity and expression, pregnancy, childbirth, parenthood and family responsibilities. It also aims to promote equality between women and men."
@@ -11393,7 +11393,7 @@
     },
     {
       "id": "eq-equal-pay",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Mitä tasa-arvolaki sanoo palkasta?",
       "options": [
@@ -11407,11 +11407,11 @@
         },
         {
           "id": "c",
-          "text": "Palkan päättää aina valtio"
+          "text": "Valtio päättää aina kaikkien työntekijöiden palkat"
         },
         {
           "id": "d",
-          "text": "Laki ei koske palkkoja"
+          "text": "Laki ei koske palkkoja eikä muita työehtoja"
         }
       ],
       "correctOptionId": "a",
@@ -11454,11 +11454,11 @@
             },
             {
               "id": "c",
-              "text": "The state always decides pay"
+              "text": "The state always decides every employee's pay"
             },
             {
               "id": "d",
-              "text": "The law does not apply to pay"
+              "text": "The law does not apply to pay or other terms of employment"
             }
           ],
           "explanation": "The Equality Act bans gender-based discrimination in pay, for example when someone doing the same or equal-value work is put at a disadvantage because of gender without an acceptable reason."
@@ -11471,7 +11471,7 @@
     },
     {
       "id": "eq-equal-pay-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Vad säger jämställdhetslagen om lön?",
       "options": [
@@ -11485,11 +11485,11 @@
         },
         {
           "id": "c",
-          "text": "Staten bestämmer alltid lönen"
+          "text": "Staten bestämmer alltid alla arbetstagares löner"
         },
         {
           "id": "d",
-          "text": "Lagen gäller inte löner"
+          "text": "Lagen gäller inte löner eller andra anställningsvillkor"
         }
       ],
       "correctOptionId": "a",
@@ -11531,11 +11531,11 @@
             },
             {
               "id": "c",
-              "text": "The state always decides pay"
+              "text": "The state always decides every employee's pay"
             },
             {
               "id": "d",
-              "text": "The law does not apply to pay"
+              "text": "The law does not apply to pay or other terms of employment"
             }
           ],
           "explanation": "The Equality Act bans gender-based discrimination in pay, for example when someone doing the same or equal-value work is put at a disadvantage because of gender without an acceptable reason."
@@ -12084,7 +12084,7 @@
     },
     {
       "id": "eq-spouses-work",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Kuka päättää, käykö aviopuoliso töissä?",
       "options": [
@@ -12094,15 +12094,15 @@
         },
         {
           "id": "b",
-          "text": "Aviomies päättää"
+          "text": "Aviomies päättää, koska hän on perheen pää"
         },
         {
           "id": "c",
-          "text": "Puolisoiden vanhemmat päättävät"
+          "text": "Puolisoiden vanhemmat päättävät avioliiton alussa"
         },
         {
           "id": "d",
-          "text": "Puolisoiden suvut päättävät yhdessä"
+          "text": "Puolisot päättävät yhdessä, ja erimielisyydessä mies ratkaisee"
         }
       ],
       "correctOptionId": "a",
@@ -12136,15 +12136,15 @@
             },
             {
               "id": "b",
-              "text": "The husband decides"
+              "text": "The husband decides, as head of the family"
             },
             {
               "id": "c",
-              "text": "The spouses' parents decide"
+              "text": "The spouses' parents decide at the start of the marriage"
             },
             {
               "id": "d",
-              "text": "The spouses' families decide together"
+              "text": "The spouses decide together; if they disagree, the husband decides"
             }
           ],
           "explanation": "Spouses are equal. Each has the right to decide whether to go to work or take part in activities outside the family."
@@ -12157,7 +12157,7 @@
     },
     {
       "id": "eq-spouses-work-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Vem bestämmer om en make eller maka arbetar?",
       "options": [
@@ -12167,15 +12167,15 @@
         },
         {
           "id": "b",
-          "text": "Mannen bestämmer"
+          "text": "Mannen bestämmer, eftersom han är familjens huvud"
         },
         {
           "id": "c",
-          "text": "Makarnas föräldrar bestämmer"
+          "text": "Makarnas föräldrar bestämmer i början av äktenskapet"
         },
         {
           "id": "d",
-          "text": "Makarnas släkter bestämmer tillsammans"
+          "text": "Makarna bestämmer tillsammans, och vid oenighet avgör mannen"
         }
       ],
       "correctOptionId": "a",
@@ -12208,15 +12208,15 @@
             },
             {
               "id": "b",
-              "text": "The husband decides"
+              "text": "The husband decides, as head of the family"
             },
             {
               "id": "c",
-              "text": "The spouses' parents decide"
+              "text": "The spouses' parents decide at the start of the marriage"
             },
             {
               "id": "d",
-              "text": "The spouses' families decide together"
+              "text": "The spouses decide together; if they disagree, the husband decides"
             }
           ],
           "explanation": "Spouses are equal. Each has the right to decide whether to go to work or take part in activities outside the family."
@@ -12676,13 +12676,13 @@
     },
     {
       "id": "eq-disabled-rights",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Mitä oikeuksia vammaisella ihmisellä on Suomessa?",
       "options": [
         {
           "id": "a",
-          "text": "Vain oikeus sosiaaliturvaan"
+          "text": "Vain oikeus sosiaaliturvaan ja hoitoon, mutta ei esimerkiksi perheen perustamiseen"
         },
         {
           "id": "b",
@@ -12690,11 +12690,11 @@
         },
         {
           "id": "c",
-          "text": "Oikeus tehdä työtä vain erityistyöpaikoissa"
+          "text": "Oikeus tehdä työtä, mutta vain erityisesti vammaisille tarkoitetuissa työpaikoissa"
         },
         {
           "id": "d",
-          "text": "Oikeus opiskella vain erityiskoulussa"
+          "text": "Oikeus opiskella, mutta vain erityiskoulussa tai kotona"
         }
       ],
       "correctOptionId": "b",
@@ -12724,7 +12724,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Only the right to social security"
+              "text": "Only the right to social security and care, not for example to start a family"
             },
             {
               "id": "b",
@@ -12732,11 +12732,11 @@
             },
             {
               "id": "c",
-              "text": "The right to work only in special workplaces"
+              "text": "The right to work, but only in workplaces meant specially for disabled people"
             },
             {
               "id": "d",
-              "text": "The right to study only in a special school"
+              "text": "The right to study, but only in a special school or at home"
             }
           ],
           "explanation": "Disabled people have the right to do the same things as everyone else, for example to study, work and start a family."
@@ -12749,13 +12749,13 @@
     },
     {
       "id": "eq-disabled-rights-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "equality",
       "text": "Vilka rättigheter har en person med funktionsnedsättning i Finland?",
       "options": [
         {
           "id": "a",
-          "text": "Endast rätt till social trygghet"
+          "text": "Endast rätt till social trygghet och vård, men inte till exempel att bilda familj"
         },
         {
           "id": "b",
@@ -12763,11 +12763,11 @@
         },
         {
           "id": "c",
-          "text": "Rätt att arbeta endast på särskilda arbetsplatser"
+          "text": "Rätt att arbeta, men endast på arbetsplatser som är särskilt avsedda för personer med funktionsnedsättning"
         },
         {
           "id": "d",
-          "text": "Rätt att studera endast i en specialskola"
+          "text": "Rätt att studera, men endast i en specialskola eller hemma"
         }
       ],
       "correctOptionId": "b",
@@ -12796,7 +12796,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Only the right to social security"
+              "text": "Only the right to social security and care, not for example to start a family"
             },
             {
               "id": "b",
@@ -12804,11 +12804,11 @@
             },
             {
               "id": "c",
-              "text": "The right to work only in special workplaces"
+              "text": "The right to work, but only in workplaces meant specially for disabled people"
             },
             {
               "id": "d",
-              "text": "The right to study only in a special school"
+              "text": "The right to study, but only in a special school or at home"
             }
           ],
           "explanation": "Disabled people have the right to do the same things as everyone else, for example to study, work and start a family."

@@ -1211,7 +1211,7 @@
     },
     {
       "questionId": "demo-equality",
-      "sha256": "09a43f36a2e82f1bc153f613c4085d28e029fef4298ecc9e0371045011991179",
+      "sha256": "9fcb6aad8c6f51c4f2f197aeb569d7e4dacabacc9e212fca1a8f28d5bcd74a1b",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/equality-and-non-discrimination",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/equality-and-non-discrimination",
       "locator": "Yhdenvertaisuus",
@@ -1219,11 +1219,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-equality-sv",
-      "sha256": "567a4f3776f63a0205ece4d47457729f53a722e4f7c16a4e8b67701a7be0ef7a",
+      "sha256": "a598ee51397b449b828e57b9b80436ffdc15a5755fe8ad152e2810466934d902",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "locator": "Jämlikhet",
@@ -1231,7 +1231,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-before-law",
@@ -1283,7 +1283,7 @@
     },
     {
       "questionId": "eq-grounds",
-      "sha256": "f622ced31f150a17abe477fe0c92972d13023bb27b65c4d35ad428fb0de4e125",
+      "sha256": "0bcfd2194727681eafcf3e13104e0a7885a83e9d4fbb080cab55ad94e641bc53",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/equality-and-non-discrimination",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/equality-and-non-discrimination",
       "locator": "Yhdenvertaisuus",
@@ -1291,11 +1291,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-grounds-sv",
-      "sha256": "14ca4dbbbcfa3b31954e30593b55169e7c2a3d1f955cc4cd01c370fe3383e61a",
+      "sha256": "5eb8a15cfe94754b313fcd024488c20204e898311fd5f2fd76d20dea2520ced6",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "locator": "Jämlikhet",
@@ -1303,7 +1303,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-landlord-citizenship",
@@ -1379,7 +1379,7 @@
     },
     {
       "questionId": "eq-best-applicant",
-      "sha256": "b32c493eabf1affc3b93c3e57189f75f96a7f8620be2f76b512e21e85539baca",
+      "sha256": "ba19c295a40d62e910e38f8052a70898eb35c927b00050681a2f653e76340725",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/finnish-working-life/working-without-discrimination",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/finnish-working-life/working-without-discrimination",
       "locator": "Yhdenvertaisuus rekrytoinnissa",
@@ -1387,11 +1387,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-best-applicant-sv",
-      "sha256": "81880bad94133dbf9ab8d341231b6fe0c994662fe75ed743faf04f00e439957e",
+      "sha256": "b631e7fe5878c01e550710ece9777bcfc952b6c05454752640914c12b628b538",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/finnish-working-life/working-without-discrimination",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/finnish-working-life/working-without-discrimination",
       "locator": "Jämlikhet i rekryteringen",
@@ -1399,7 +1399,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-religion-hiring",
@@ -1475,7 +1475,7 @@
     },
     {
       "questionId": "eq-work-language",
-      "sha256": "6e0a5b73760008689ffcbe19a16188f55b047f06becb21ad0fcbec8bdc8fee74",
+      "sha256": "f360dcfcc89111b555470c46a3487c9e64964bdff8bfc84104f50d1da3c43e6b",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/finnish-working-life/working-without-discrimination",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/finnish-working-life/working-without-discrimination",
       "locator": "Yhdenvertaisuus työpaikalla",
@@ -1483,11 +1483,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-work-language-sv",
-      "sha256": "49a90edd67f8835e666841ad0e567428e9e9e670abb63d360136f0f2e865d608",
+      "sha256": "b0c3e06ee6f98b0e2b4aff2b19a5689a35a235a57451e30eb53bf72deff61dee",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/finnish-working-life/working-without-discrimination",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/finnish-working-life/working-without-discrimination",
       "locator": "Jämlikhet på arbetsplatsen",
@@ -1495,11 +1495,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-equality-act",
-      "sha256": "3e643ec6d6e389dde4624f42acea442dd1d2da4b56d71ae5d88a984597955f20",
+      "sha256": "46d0959096a3cde784ad4a0dbb569c3301df58de8d1baac0afcfe4a625ba9fbe",
       "sourceUrl": "https://tasa-arvo.fi/tasa-arvolaki-pahkinankuoressa",
       "evidenceUrl": "https://tasa-arvo.fi/tasa-arvolaki-pahkinankuoressa",
       "locator": "Tasa-arvolaki pähkinänkuoressa",
@@ -1507,11 +1507,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-equality-act-sv",
-      "sha256": "e9e1040525af3579c737fd76685b0128ff7351b239aed898b3f094ae25eabc01",
+      "sha256": "98067e437c2c6096379e342c903af0292f6ef95c113c8b4668070996f56fa3ab",
       "sourceUrl": "https://tasa-arvo.fi/sv/jamstalldhetslagen-i-korthet",
       "evidenceUrl": "https://tasa-arvo.fi/sv/jamstalldhetslagen-i-korthet",
       "locator": "Jämställdhetslagen i korthet",
@@ -1519,11 +1519,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-equal-pay",
-      "sha256": "78a6026f30df707b80ec05b2ebfa9202e8fedb1a2ada62b84764d689517e7a2a",
+      "sha256": "b24e5f255b94a755439bf63bae3cb4045a78571e716f23236bba655133c0b2e4",
       "sourceUrl": "https://tasa-arvo.fi/palkkasyrjinta",
       "evidenceUrl": "https://tasa-arvo.fi/palkkasyrjinta",
       "locator": "Tasa-arvolaissa kielletään sukupuoleen perustuva palkkasyrjintä",
@@ -1531,11 +1531,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-equal-pay-sv",
-      "sha256": "8470104b122a8e1c8a35d188103f9348f9cad61a0077af03a923b3275b57389b",
+      "sha256": "e7ca9bcf12a3426126a2e5e228dc765fe663aab3cd49b6d2ae928cfd3adf2f90",
       "sourceUrl": "https://tasa-arvo.fi/sv/lonediskriminering",
       "evidenceUrl": "https://tasa-arvo.fi/sv/lonediskriminering",
       "locator": "Jämställdhetslagen förbjuder lönediskriminering på grund av kön",
@@ -1543,7 +1543,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-act-year",
@@ -1643,7 +1643,7 @@
     },
     {
       "questionId": "eq-spouses-work",
-      "sha256": "c425f8e88b80973a21188ce8e3c8024b8a8a1a2f05d13de18c5afa98db08d995",
+      "sha256": "7c16ff96d0bc6250eb48e3595e4dc31b56320f54bd147309067716279fc10f00",
       "sourceUrl": "https://infofinland.fi/fi/family/marriage-in-finland/rights-and-obligations-of-spouses",
       "evidenceUrl": "https://infofinland.fi/fi/family/marriage-in-finland/rights-and-obligations-of-spouses",
       "locator": "Johdanto",
@@ -1651,11 +1651,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-spouses-work-sv",
-      "sha256": "0598eb3c84be178971f5f4ae5bb53a9f33724b58bf87256d4484a860db499d01",
+      "sha256": "16a54e33ba76c702868b5009c14554f26726ca2dc7b4b738d07ded0c10877f81",
       "sourceUrl": "https://infofinland.fi/sv/family/marriage-in-finland/rights-and-obligations-of-spouses",
       "evidenceUrl": "https://infofinland.fi/sv/family/marriage-in-finland/rights-and-obligations-of-spouses",
       "locator": "Inledning",
@@ -1663,7 +1663,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-ombudsman-contact",
@@ -1739,7 +1739,7 @@
     },
     {
       "questionId": "eq-disabled-rights",
-      "sha256": "9d872e7b53252d25af56b903ac35156984d1ad222d046cd2261d3a4eb4be99e9",
+      "sha256": "e9f411e2ce68a09565656237e003d292ad13da7fb8878e5888b8f75fcdcd95d7",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/equality-and-non-discrimination",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/equality-and-non-discrimination",
       "locator": "Vammaisten ihmisten oikeudet",
@@ -1747,11 +1747,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-disabled-rights-sv",
-      "sha256": "19655a143c5bc71f338e5065f0737b3e77c1cf7ba25e6c8b3a121bdea0d6fb28",
+      "sha256": "deee9aac56d928633f5b87572d6197bc6c91c8e9cbafe0e982885e46bfdb8f02",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/equality-and-non-discrimination",
       "locator": "Rättigheter för personer med funktionsnedsättning",
@@ -1759,7 +1759,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "eq-accommodation",
