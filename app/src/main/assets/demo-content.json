@@ -24312,7 +24312,7 @@
     },
     {
       "id": "safe-report-anywhere",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Missä rikoksesta voi tehdä ilmoituksen poliisille?",
       "options": [
@@ -24322,11 +24322,11 @@
         },
         {
           "id": "b",
-          "text": "Vain Helsingissä"
+          "text": "Vain sen kunnan poliisiasemalla, jossa asut vakituisesti"
         },
         {
           "id": "c",
-          "text": "Vain tuomioistuimessa"
+          "text": "Vain käräjäoikeudessa tai kunnan virastossa"
         },
         {
           "id": "d",
@@ -24364,11 +24364,11 @@
             },
             {
               "id": "b",
-              "text": "Only in Helsinki"
+              "text": "Only at the police station of the municipality where you live permanently"
             },
             {
               "id": "c",
-              "text": "Only in court"
+              "text": "Only at a district court or a municipal office"
             },
             {
               "id": "d",
@@ -24385,7 +24385,7 @@
     },
     {
       "id": "safe-report-anywhere-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Var kan man anmäla ett brott till polisen?",
       "options": [
@@ -24395,11 +24395,11 @@
         },
         {
           "id": "b",
-          "text": "Endast i Helsingfors"
+          "text": "Endast på polisstationen i den kommun där du stadigvarande bor"
         },
         {
           "id": "c",
-          "text": "Endast i domstol"
+          "text": "Endast vid tingsrätten eller på kommunens kansli"
         },
         {
           "id": "d",
@@ -24436,11 +24436,11 @@
             },
             {
               "id": "b",
-              "text": "Only in Helsinki"
+              "text": "Only at the police station of the municipality where you live permanently"
             },
             {
               "id": "c",
-              "text": "Only in court"
+              "text": "Only at a district court or a municipal office"
             },
             {
               "id": "d",
@@ -24884,17 +24884,17 @@
     },
     {
       "id": "safe-smoke-alarm-area",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Kuinka monta palovaroitinta asunnossa täytyy vähintään olla?",
       "options": [
         {
           "id": "a",
-          "text": "Yksi koko talossa"
+          "text": "Yksi jokaista alkavaa 120 neliömetriä kohti koko asunnossa"
         },
         {
           "id": "b",
-          "text": "Yksi jokaista huonetta kohti"
+          "text": "Yksi jokaista makuuhuonetta kohti, muissa tiloissa palovaroitinta ei tarvita"
         },
         {
           "id": "c",
@@ -24902,7 +24902,7 @@
         },
         {
           "id": "d",
-          "text": "Yksi jokaista 200 neliömetriä kohti"
+          "text": "Yksi jokaista alkavaa 200 neliömetriä kohti joka kerroksessa"
         }
       ],
       "correctOptionId": "c",
@@ -24937,11 +24937,11 @@
           "options": [
             {
               "id": "a",
-              "text": "One for the whole building"
+              "text": "One for each started 120 square metres in the whole home"
             },
             {
               "id": "b",
-              "text": "One per room"
+              "text": "One in each bedroom, but no smoke alarm is needed in other rooms"
             },
             {
               "id": "c",
@@ -24949,7 +24949,7 @@
             },
             {
               "id": "d",
-              "text": "One per 200 square metres"
+              "text": "One for each started 200 square metres on every floor"
             }
           ],
           "explanation": "There must be at least one smoke alarm for each started 60 square metres on every floor of the home."
@@ -24964,17 +24964,17 @@
     },
     {
       "id": "safe-smoke-alarm-area-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Hur många brandvarnare måste en bostad minst ha?",
       "options": [
         {
           "id": "a",
-          "text": "En i hela huset"
+          "text": "En för varje påbörjad yta på 120 kvadratmeter i hela bostaden"
         },
         {
           "id": "b",
-          "text": "En per rum"
+          "text": "En i varje sovrum, men i övriga utrymmen behövs ingen brandvarnare alls"
         },
         {
           "id": "c",
@@ -24982,7 +24982,7 @@
         },
         {
           "id": "d",
-          "text": "En per 200 kvadratmeter"
+          "text": "En för varje påbörjad yta på 200 kvadratmeter på varje våningsplan"
         }
       ],
       "correctOptionId": "c",
@@ -25016,11 +25016,11 @@
           "options": [
             {
               "id": "a",
-              "text": "One for the whole building"
+              "text": "One for each started 120 square metres in the whole home"
             },
             {
               "id": "b",
-              "text": "One per room"
+              "text": "One in each bedroom, but no smoke alarm is needed in other rooms"
             },
             {
               "id": "c",
@@ -25028,7 +25028,7 @@
             },
             {
               "id": "d",
-              "text": "One per 200 square metres"
+              "text": "One for each started 200 square metres on every floor"
             }
           ],
           "explanation": "There must be at least one smoke alarm for each started 60 square metres on every floor of the home."
@@ -25043,13 +25043,13 @@
     },
     {
       "id": "safe-rental-alarm",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Kuka vastaa vuokra-asunnossa palovaroittimien hankinnasta ja huollosta?",
       "options": [
         {
           "id": "a",
-          "text": "Vuokralainen yksin"
+          "text": "Vuokralainen, koska hän asuu asunnossa"
         },
         {
           "id": "b",
@@ -25057,11 +25057,11 @@
         },
         {
           "id": "c",
-          "text": "Pelastuslaitos"
+          "text": "Alueen pelastuslaitos"
         },
         {
           "id": "d",
-          "text": "Kunta"
+          "text": "Kunnan rakennusvalvonta"
         }
       ],
       "correctOptionId": "b",
@@ -25091,7 +25091,7 @@
           "options": [
             {
               "id": "a",
-              "text": "The tenant alone"
+              "text": "The tenant, because they live in the flat"
             },
             {
               "id": "b",
@@ -25099,11 +25099,11 @@
             },
             {
               "id": "c",
-              "text": "The rescue department"
+              "text": "The regional rescue department"
             },
             {
               "id": "d",
-              "text": "The municipality"
+              "text": "The municipal building control"
             }
           ],
           "explanation": "In a rented home, the owner or the housing company is responsible for acquiring and maintaining smoke alarms. Report an alarm that does not work."
@@ -25116,13 +25116,13 @@
     },
     {
       "id": "safe-rental-alarm-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Vem ansvarar i en hyresbostad för att skaffa och underhålla brandvarnare?",
       "options": [
         {
           "id": "a",
-          "text": "Hyresgästen ensam"
+          "text": "Hyresgästen, eftersom hen bor i bostaden"
         },
         {
           "id": "b",
@@ -25130,11 +25130,11 @@
         },
         {
           "id": "c",
-          "text": "Räddningsverket"
+          "text": "Det regionala räddningsverket"
         },
         {
           "id": "d",
-          "text": "Kommunen"
+          "text": "Kommunens byggnadstillsyn"
         }
       ],
       "correctOptionId": "b",
@@ -25163,7 +25163,7 @@
           "options": [
             {
               "id": "a",
-              "text": "The tenant alone"
+              "text": "The tenant, because they live in the flat"
             },
             {
               "id": "b",
@@ -25171,11 +25171,11 @@
             },
             {
               "id": "c",
-              "text": "The rescue department"
+              "text": "The regional rescue department"
             },
             {
               "id": "d",
-              "text": "The municipality"
+              "text": "The municipal building control"
             }
           ],
           "explanation": "In a rented home, the owner or the housing company is responsible for acquiring and maintaining smoke alarms. Report an alarm that does not work."
@@ -25188,21 +25188,21 @@
     },
     {
       "id": "safe-grease-fire",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Miten sammutat rasvapalon, joka syttyy ruokaa laittaessa?",
       "options": [
         {
           "id": "a",
-          "text": "Kaatamalla päälle vettä"
+          "text": "Kaatamalla päälle kylmää vettä kattilasta"
         },
         {
           "id": "b",
-          "text": "Puhaltamalla"
+          "text": "Puhaltamalla tai heiluttamalla pyyhettä"
         },
         {
           "id": "c",
-          "text": "Avaamalla ikkunan"
+          "text": "Avaamalla ikkunan ja kantamalla palavan kattilan ulos"
         },
         {
           "id": "d",
@@ -25241,15 +25241,15 @@
           "options": [
             {
               "id": "a",
-              "text": "By pouring water on it"
+              "text": "By pouring cold water on it from a pan"
             },
             {
               "id": "b",
-              "text": "By blowing on it"
+              "text": "By blowing on it or waving a towel"
             },
             {
               "id": "c",
-              "text": "By opening the window"
+              "text": "By opening the window and carrying the burning pan outside"
             },
             {
               "id": "d",
@@ -25266,21 +25266,21 @@
     },
     {
       "id": "safe-grease-fire-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Hur släcker du en fettbrand som börjar när du lagar mat?",
       "options": [
         {
           "id": "a",
-          "text": "Genom att hälla vatten på den"
+          "text": "Genom att hälla kallt vatten ur en kastrull på den"
         },
         {
           "id": "b",
-          "text": "Genom att blåsa"
+          "text": "Genom att blåsa eller vifta med en handduk"
         },
         {
           "id": "c",
-          "text": "Genom att öppna fönstret"
+          "text": "Genom att öppna fönstret och bära ut den brinnande kastrullen"
         },
         {
           "id": "d",
@@ -25318,15 +25318,15 @@
           "options": [
             {
               "id": "a",
-              "text": "By pouring water on it"
+              "text": "By pouring cold water on it from a pan"
             },
             {
               "id": "b",
-              "text": "By blowing on it"
+              "text": "By blowing on it or waving a towel"
             },
             {
               "id": "c",
-              "text": "By opening the window"
+              "text": "By opening the window and carrying the burning pan outside"
             },
             {
               "id": "d",
@@ -25498,17 +25498,17 @@
     },
     {
       "id": "safe-warning-test",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Milloin väestöhälyttimiä testataan?",
       "options": [
         {
           "id": "a",
-          "text": "Joka päivä klo 18"
+          "text": "Joka kuukauden viimeisenä arkiperjantaina kello 18.00"
         },
         {
           "id": "b",
-          "text": "Vain uutenavuotena"
+          "text": "Joka viikon maanantaina klo 12"
         },
         {
           "id": "c",
@@ -25516,7 +25516,7 @@
         },
         {
           "id": "d",
-          "text": "Kerran vuodessa itsenäisyyspäivänä"
+          "text": "Kerran vuodessa itsenäisyyspäivänä klo 12"
         }
       ],
       "correctOptionId": "c",
@@ -25546,11 +25546,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Every day at 18:00"
+              "text": "At 18:00 on the last weekday Friday of every month"
             },
             {
               "id": "b",
-              "text": "Only on New Year's Eve"
+              "text": "Every Monday at 12:00"
             },
             {
               "id": "c",
@@ -25558,7 +25558,7 @@
             },
             {
               "id": "d",
-              "text": "Once a year on Independence Day"
+              "text": "Once a year on Independence Day at 12:00"
             }
           ],
           "explanation": "The sirens are tested at 12:00 on the first weekday Monday of every month. The test requires no action from residents."
@@ -25573,17 +25573,17 @@
     },
     {
       "id": "safe-warning-test-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "När testas befolkningsskyddslarmen?",
       "options": [
         {
           "id": "a",
-          "text": "Varje dag kl. 18"
+          "text": "Den sista vardagsfredagen varje månad kl. 18.00"
         },
         {
           "id": "b",
-          "text": "Endast på nyårsafton"
+          "text": "Varje måndag kl. 12"
         },
         {
           "id": "c",
@@ -25591,7 +25591,7 @@
         },
         {
           "id": "d",
-          "text": "En gång om året på självständighetsdagen"
+          "text": "En gång om året på självständighetsdagen kl. 12"
         }
       ],
       "correctOptionId": "c",
@@ -25620,11 +25620,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Every day at 18:00"
+              "text": "At 18:00 on the last weekday Friday of every month"
             },
             {
               "id": "b",
-              "text": "Only on New Year's Eve"
+              "text": "Every Monday at 12:00"
             },
             {
               "id": "c",
@@ -25632,7 +25632,7 @@
             },
             {
               "id": "d",
-              "text": "Once a year on Independence Day"
+              "text": "Once a year on Independence Day at 12:00"
             }
           ],
           "explanation": "The sirens are tested at 12:00 on the first weekday Monday of every month. The test requires no action from residents."
@@ -25647,7 +25647,7 @@
     },
     {
       "id": "safe-warning-sound",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Miltä yleinen vaaramerkki kuulostaa?",
       "options": [
@@ -25657,15 +25657,15 @@
         },
         {
           "id": "b",
-          "text": "Kolme lyhyttä piippausta"
+          "text": "Kolme lyhyttä äänimerkkiä minuutin välein"
         },
         {
           "id": "c",
-          "text": "Tasainen ääni viiden minuutin ajan"
+          "text": "Tasainen yhden minuutin mittainen äänimerkki"
         },
         {
           "id": "d",
-          "text": "Kirkonkellojen soitto"
+          "text": "Kirkonkellojen yhtäjaksoinen soitto viiden minuutin ajan"
         }
       ],
       "correctOptionId": "a",
@@ -25704,15 +25704,15 @@
             },
             {
               "id": "b",
-              "text": "Three short beeps"
+              "text": "Three short tones a minute apart"
             },
             {
               "id": "c",
-              "text": "A steady tone for five minutes"
+              "text": "A steady tone lasting one minute"
             },
             {
               "id": "d",
-              "text": "Church bells ringing"
+              "text": "Church bells ringing continuously for five minutes"
             }
           ],
           "explanation": "The general warning signal from the public sirens is a rising and falling tone lasting one minute. The all-clear is a steady one-minute tone."
@@ -25725,7 +25725,7 @@
     },
     {
       "id": "safe-warning-sound-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Hur låter den allmänna farosignalen?",
       "options": [
@@ -25735,15 +25735,15 @@
         },
         {
           "id": "b",
-          "text": "Tre korta pip"
+          "text": "Tre korta ljudsignaler med en minuts mellanrum"
         },
         {
           "id": "c",
-          "text": "En jämn ton i fem minuter"
+          "text": "En jämn ljudsignal som varar en minut"
         },
         {
           "id": "d",
-          "text": "Kyrkklockor som ringer"
+          "text": "Kyrkklockor som ringer utan uppehåll i fem minuter"
         }
       ],
       "correctOptionId": "a",
@@ -25781,15 +25781,15 @@
             },
             {
               "id": "b",
-              "text": "Three short beeps"
+              "text": "Three short tones a minute apart"
             },
             {
               "id": "c",
-              "text": "A steady tone for five minutes"
+              "text": "A steady tone lasting one minute"
             },
             {
               "id": "d",
-              "text": "Church bells ringing"
+              "text": "Church bells ringing continuously for five minutes"
             }
           ],
           "explanation": "The general warning signal from the public sirens is a rising and falling tone lasting one minute. The all-clear is a steady one-minute tone."
@@ -25802,13 +25802,13 @@
     },
     {
       "id": "safe-warning-action",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Mitä teet, kun kuulet yleisen vaaramerkin?",
       "options": [
         {
           "id": "a",
-          "text": "Menet ulos katsomaan"
+          "text": "Menet ulos katsomaan, mitä on tapahtunut"
         },
         {
           "id": "b",
@@ -25816,7 +25816,7 @@
         },
         {
           "id": "c",
-          "text": "Ajat autolla pois kaupungista"
+          "text": "Lähdet heti autolla pois kaupungista"
         },
         {
           "id": "d",
@@ -25855,7 +25855,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Go outside to look"
+              "text": "Go outside to see what has happened"
             },
             {
               "id": "b",
@@ -25863,7 +25863,7 @@
             },
             {
               "id": "c",
-              "text": "Drive out of town"
+              "text": "Drive out of town at once"
             },
             {
               "id": "d",
@@ -25880,13 +25880,13 @@
     },
     {
       "id": "safe-warning-action-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Vad gör du när du hör den allmänna farosignalen?",
       "options": [
         {
           "id": "a",
-          "text": "Går ut för att titta"
+          "text": "Går ut för att se vad som har hänt"
         },
         {
           "id": "b",
@@ -25894,7 +25894,7 @@
         },
         {
           "id": "c",
-          "text": "Kör bort från staden med bil"
+          "text": "Kör genast bort från staden med bil"
         },
         {
           "id": "d",
@@ -25932,7 +25932,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Go outside to look"
+              "text": "Go outside to see what has happened"
             },
             {
               "id": "b",
@@ -25940,7 +25940,7 @@
             },
             {
               "id": "c",
-              "text": "Drive out of town"
+              "text": "Drive out of town at once"
             },
             {
               "id": "d",
@@ -26070,17 +26070,17 @@
     },
     {
       "id": "safe-72-hours",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Kuinka pitkään kotitalouksien tulisi suosituksen mukaan pystyä selviytymään itsenäisesti häiriötilanteessa?",
       "options": [
         {
           "id": "a",
-          "text": "Yhden tunnin"
+          "text": "Vähintään 12 tuntia eli puoli vuorokautta"
         },
         {
           "id": "b",
-          "text": "Kuusi tuntia"
+          "text": "Vähintään 24 tuntia eli yhden vuorokauden"
         },
         {
           "id": "c",
@@ -26088,7 +26088,7 @@
         },
         {
           "id": "d",
-          "text": "Kaksi kuukautta"
+          "text": "Vähintään kaksi kuukautta eli 60 vuorokautta"
         }
       ],
       "correctOptionId": "c",
@@ -26123,11 +26123,11 @@
           "options": [
             {
               "id": "a",
-              "text": "One hour"
+              "text": "At least 12 hours, or half a day"
             },
             {
               "id": "b",
-              "text": "Six hours"
+              "text": "At least 24 hours, or one day"
             },
             {
               "id": "c",
@@ -26135,7 +26135,7 @@
             },
             {
               "id": "d",
-              "text": "Two months"
+              "text": "At least two months, or 60 days"
             }
           ],
           "explanation": "The recommendation is that households should be prepared to cope independently for at least 72 hours, or three days. A home supply includes water, food and medicines."
@@ -26150,17 +26150,17 @@
     },
     {
       "id": "safe-72-hours-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Hur länge bör hushållen enligt rekommendationen klara sig självständigt i en störningssituation?",
       "options": [
         {
           "id": "a",
-          "text": "En timme"
+          "text": "Minst 12 timmar eller ett halvt dygn"
         },
         {
           "id": "b",
-          "text": "Sex timmar"
+          "text": "Minst 24 timmar eller ett dygn"
         },
         {
           "id": "c",
@@ -26168,7 +26168,7 @@
         },
         {
           "id": "d",
-          "text": "Två månader"
+          "text": "Minst två månader eller 60 dygn"
         }
       ],
       "correctOptionId": "c",
@@ -26202,11 +26202,11 @@
           "options": [
             {
               "id": "a",
-              "text": "One hour"
+              "text": "At least 12 hours, or half a day"
             },
             {
               "id": "b",
-              "text": "Six hours"
+              "text": "At least 24 hours, or one day"
             },
             {
               "id": "c",
@@ -26214,7 +26214,7 @@
             },
             {
               "id": "d",
-              "text": "Two months"
+              "text": "At least two months, or 60 days"
             }
           ],
           "explanation": "The recommendation is that households should be prepared to cope independently for at least 72 hours, or three days. A home supply includes water, food and medicines."
@@ -26469,7 +26469,7 @@
     },
     {
       "id": "safe-nollalinja",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Mikä on Nollalinja?",
       "options": [
@@ -26479,15 +26479,15 @@
         },
         {
           "id": "b",
-          "text": "Poliisin sakkojen maksunumero"
+          "text": "Poliisin numero, johon voi soittaa, jos haluaa kysyä sakon maksamisesta"
         },
         {
           "id": "c",
-          "text": "Verohallinnon neuvonta"
+          "text": "Verohallinnon puhelinpalvelu, josta saa apua verokortin ja veroilmoituksen täyttämiseen"
         },
         {
           "id": "d",
-          "text": "Kelan ajanvarausnumero"
+          "text": "Kelan puhelinnumero, josta voi varata ajan etuuksia koskevaan neuvontaan"
         }
       ],
       "correctOptionId": "a",
@@ -26526,15 +26526,15 @@
             },
             {
               "id": "b",
-              "text": "The police number for paying fines"
+              "text": "A police number to call if you want to ask about paying a fine"
             },
             {
               "id": "c",
-              "text": "The Tax Administration's advice line"
+              "text": "The Tax Administration's phone service for help with filling in tax cards and tax returns"
             },
             {
               "id": "d",
-              "text": "Kela's appointment number"
+              "text": "Kela's number for booking an appointment for advice on benefits"
             }
           ],
           "explanation": "Nollalinja is a helpline you can call if you have experienced violence or sexual violence in your family or been threatened with violence. You can call at any time; the number is 080 005 005."
@@ -26547,7 +26547,7 @@
     },
     {
       "id": "safe-nollalinja-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Vad är Nollalinja?",
       "options": [
@@ -26557,15 +26557,15 @@
         },
         {
           "id": "b",
-          "text": "Polisens nummer för att betala böter"
+          "text": "Polisens nummer som man kan ringa för att fråga om att betala böter"
         },
         {
           "id": "c",
-          "text": "Skatteförvaltningens rådgivning"
+          "text": "Skatteförvaltningens telefontjänst där man får hjälp med att fylla i skattekort och skattedeklaration"
         },
         {
           "id": "d",
-          "text": "FPA:s nummer för tidsbokning"
+          "text": "FPA:s telefonnummer där man kan boka tid för rådgivning om förmåner"
         }
       ],
       "correctOptionId": "a",
@@ -26603,15 +26603,15 @@
             },
             {
               "id": "b",
-              "text": "The police number for paying fines"
+              "text": "A police number to call if you want to ask about paying a fine"
             },
             {
               "id": "c",
-              "text": "The Tax Administration's advice line"
+              "text": "The Tax Administration's phone service for help with filling in tax cards and tax returns"
             },
             {
               "id": "d",
-              "text": "Kela's appointment number"
+              "text": "Kela's number for booking an appointment for advice on benefits"
             }
           ],
           "explanation": "Nollalinja is a helpline you can call if you have experienced violence or sexual violence in your family or been threatened with violence. You can call at any time; the number is 080 005 005."
@@ -26747,21 +26747,21 @@
     },
     {
       "id": "safe-child-welfare-notice",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Kuka voi tehdä lastensuojeluilmoituksen?",
       "options": [
         {
           "id": "a",
-          "text": "Vain lapsen vanhemmat"
+          "text": "Vain lapsen vanhemmat tai muut lapsen viralliset huoltajat"
         },
         {
           "id": "b",
-          "text": "Vain poliisi"
+          "text": "Vain poliisi tai muu viranomainen"
         },
         {
           "id": "c",
-          "text": "Vain lapsi itse"
+          "text": "Vain lapsi itse, kun hän on täyttänyt 12 vuotta"
         },
         {
           "id": "d",
@@ -26800,15 +26800,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Only the child's parents"
+              "text": "Only the child's parents or other official guardians"
             },
             {
               "id": "b",
-              "text": "Only the police"
+              "text": "Only the police or another authority"
             },
             {
               "id": "c",
-              "text": "Only the child"
+              "text": "Only the child, once they are 12"
             },
             {
               "id": "d",
@@ -26825,21 +26825,21 @@
     },
     {
       "id": "safe-child-welfare-notice-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "safety",
       "text": "Vem kan göra en barnskyddsanmälan?",
       "options": [
         {
           "id": "a",
-          "text": "Endast barnets föräldrar"
+          "text": "Endast barnets föräldrar eller barnets andra officiella vårdnadshavare"
         },
         {
           "id": "b",
-          "text": "Endast polisen"
+          "text": "Endast polisen eller en annan myndighet"
         },
         {
           "id": "c",
-          "text": "Endast barnet självt"
+          "text": "Endast barnet självt, när det har fyllt 12 år"
         },
         {
           "id": "d",
@@ -26877,15 +26877,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Only the child's parents"
+              "text": "Only the child's parents or other official guardians"
             },
             {
               "id": "b",
-              "text": "Only the police"
+              "text": "Only the police or another authority"
             },
             {
               "id": "c",
-              "text": "Only the child"
+              "text": "Only the child, once they are 12"
             },
             {
               "id": "d",

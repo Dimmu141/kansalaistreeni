@@ -3707,7 +3707,7 @@
     },
     {
       "questionId": "safe-report-anywhere",
-      "sha256": "dd56b945880ef4a04b3a081d12c5e3667ff17ee2243ee9765afb5d4dcb22a815",
+      "sha256": "d7f9d9c6a3e57e1d18b2b75caa933d413b8ad09fe2d158614bc24a983a74d593",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "locator": "Rikosilmoituksen tekeminen",
@@ -3715,11 +3715,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-report-anywhere-sv",
-      "sha256": "9a89b8a16d07d951edaf7af41753067a70739a704083b7a5fe8cff679fe4f936",
+      "sha256": "36939a63ea0ddd0d55a0a2e37c44b29517018c81cbfd0254a0083c310ec13b28",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "locator": "Att göra en brottsanmälan",
@@ -3727,7 +3727,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-online-report-hours",
@@ -3803,7 +3803,7 @@
     },
     {
       "questionId": "safe-smoke-alarm-area",
-      "sha256": "b223305f128daf9231951b39ea8723373abd7ab519eebcaa964685ab037120c1",
+      "sha256": "5b2e4e84e5cf6de398c68668eda80d725347a862ddaab47f789b72cc0d33aa31",
       "sourceUrl": "https://pelastustoimi.fi/koti-ja-arki/ennaltaehkaisy/varoittimet/palovaroittimet",
       "evidenceUrl": "https://pelastustoimi.fi/koti-ja-arki/ennaltaehkaisy/varoittimet/palovaroittimet",
       "locator": "Palovaroittimet",
@@ -3811,11 +3811,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-smoke-alarm-area-sv",
-      "sha256": "6abf90d6adca4dd22ecd523b64dbc98948718bec5ad496fc15a7c99a5c740beb",
+      "sha256": "bdc2e1617b0dad3befd41ce54d89af5cf6fd9eb3e40d80a11319eb15784d122d",
       "sourceUrl": "https://pelastustoimi.fi/sv/hem-och-vardag/forebyggande/varnare/brandvarnare",
       "evidenceUrl": "https://pelastustoimi.fi/sv/hem-och-vardag/forebyggande/varnare/brandvarnare",
       "locator": "Brandvarnare",
@@ -3823,11 +3823,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-rental-alarm",
-      "sha256": "1b0ed20836c8aacda5a6a33ee70e4539a8b33dbd2fbd147194b8144a667ecc26",
+      "sha256": "32e44377fa838fd6b33a7f0437003ffb874e7651401c76ed41ec21307b5c6806",
       "sourceUrl": "https://infofinland.fi/fi/housing/safety-at-home",
       "evidenceUrl": "https://infofinland.fi/fi/housing/safety-at-home",
       "locator": "Paloturvallisuuden muistilista",
@@ -3835,11 +3835,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-rental-alarm-sv",
-      "sha256": "24f98bf03285687934218909f5fb735d95178e0b3dee4d2f18ccc08bebd956e3",
+      "sha256": "49c2b8e6831b9cb86df3ba9933f8c8b99abe8616b2336771523aa164c5a0c732",
       "sourceUrl": "https://infofinland.fi/sv/housing/safety-at-home",
       "evidenceUrl": "https://infofinland.fi/sv/housing/safety-at-home",
       "locator": "Komihåglista för brandsäkerhet",
@@ -3847,11 +3847,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-grease-fire",
-      "sha256": "f9c1cb1df2c2fcb48b9f81c973a5d2739287cbafac1309068ccfb82748bc2cb1",
+      "sha256": "5cf1a1698d3b3fd447e59b5797670511ddf6cfab84ef393e1324bee7b162bc8a",
       "sourceUrl": "https://infofinland.fi/fi/housing/safety-at-home",
       "evidenceUrl": "https://infofinland.fi/fi/housing/safety-at-home",
       "locator": "Paloturvallisuuden muistilista",
@@ -3859,11 +3859,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-grease-fire-sv",
-      "sha256": "a22eea38d5831300ca08e392519775afed0a15271b9d23b05ffad1ecf1ebc2d4",
+      "sha256": "99c34553937982518d6912175c02122f602d6c1f1272343367f32fae1382e387",
       "sourceUrl": "https://infofinland.fi/sv/housing/safety-at-home",
       "evidenceUrl": "https://infofinland.fi/sv/housing/safety-at-home",
       "locator": "Komihåglista för brandsäkerhet",
@@ -3871,7 +3871,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-no-lift",
@@ -3899,7 +3899,7 @@
     },
     {
       "questionId": "safe-warning-test",
-      "sha256": "e691ab202fed66e16fd49be29da37fea47569e7748b075d44c36107ee2611ede",
+      "sha256": "916d0891ade2619257f717fae60dbc52529ee1aea53c59cf4dd3154e39b51b8b",
       "sourceUrl": "https://pelastustoimi.fi/koti-ja-arki/hatatilanne/vaaramerkki",
       "evidenceUrl": "https://pelastustoimi.fi/koti-ja-arki/hatatilanne/vaaramerkki",
       "locator": "Vaaramerkki",
@@ -3907,11 +3907,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-warning-test-sv",
-      "sha256": "679b772bae261b1e0ed04f8170f07b89fe9536841a75e98cc4e43035a6072a2c",
+      "sha256": "4cb244e1066dfeb295c6e02c650d5d6bbd485637e61d831a9dce710006b1d77e",
       "sourceUrl": "https://pelastustoimi.fi/sv/hem-och-vardag/nodsituation/farosignal",
       "evidenceUrl": "https://pelastustoimi.fi/sv/hem-och-vardag/nodsituation/farosignal",
       "locator": "Farosignal",
@@ -3919,11 +3919,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-warning-sound",
-      "sha256": "f848a8d595302942e12a5b35529cf121656bb781689d29ac4c6d09fabfaba88f",
+      "sha256": "3b0d930d014c315537cb5f9227cbb9153f857ab514df40e7ff5201e9de1077e3",
       "sourceUrl": "https://pelastustoimi.fi/koti-ja-arki/hatatilanne/vaaramerkki",
       "evidenceUrl": "https://pelastustoimi.fi/koti-ja-arki/hatatilanne/vaaramerkki",
       "locator": "Vaaramerkki",
@@ -3931,11 +3931,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-warning-sound-sv",
-      "sha256": "b257a4573d0239baf729a822e11eba3f4cb7603009d5081fa934a9b77c97e575",
+      "sha256": "22b2d92300d51f294af8d4edd7da43573e731df8f85406499613142fa22367a3",
       "sourceUrl": "https://pelastustoimi.fi/sv/hem-och-vardag/nodsituation/farosignal",
       "evidenceUrl": "https://pelastustoimi.fi/sv/hem-och-vardag/nodsituation/farosignal",
       "locator": "Farosignal",
@@ -3943,11 +3943,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-warning-action",
-      "sha256": "a0e58cff90b6b247ef260c84959f46e9e5b46744640936c05d64eefbb2094055",
+      "sha256": "f95fec38c2ce2a29a987a42250728dc0d30e888dd725475690544df0cda19f43",
       "sourceUrl": "https://pelastustoimi.fi/koti-ja-arki/hatatilanne/vaaramerkki",
       "evidenceUrl": "https://pelastustoimi.fi/koti-ja-arki/hatatilanne/vaaramerkki",
       "locator": "Kuulet yleisen vaaramerkin - toimi näin",
@@ -3955,11 +3955,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-warning-action-sv",
-      "sha256": "6504870aeba6c7d1615f52a81d70b5648abd867b70f9ff43d26924d3cf6120c7",
+      "sha256": "1867b2a8c4f44bb184c54d6194a57f37203c8ea5d4c41f170ca40123024ac705",
       "sourceUrl": "https://pelastustoimi.fi/sv/hem-och-vardag/nodsituation/farosignal",
       "evidenceUrl": "https://pelastustoimi.fi/sv/hem-och-vardag/nodsituation/farosignal",
       "locator": "Gör så här när du hör den allmänna farosignalen",
@@ -3967,7 +3967,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-warning-phone",
@@ -3995,7 +3995,7 @@
     },
     {
       "questionId": "safe-72-hours",
-      "sha256": "4f1c27a0724086a40ed54adea020e67ba9bc6536604a877c1409b513c785574b",
+      "sha256": "929ec32f1b416264bb9a4fbd9694c1516902abeb7914d611954258d78d56a5f3",
       "sourceUrl": "https://www.suomi.fi/oppaat/varautuminen/nain-varaudut-hairio-ja-kriisitilanteisiin/yleisohjeet-varautumiseen-kotivaraan-ja-eri-tilanteissa-toimimiseen",
       "evidenceUrl": "https://www.suomi.fi/oppaat/varautuminen/nain-varaudut-hairio-ja-kriisitilanteisiin/yleisohjeet-varautumiseen-kotivaraan-ja-eri-tilanteissa-toimimiseen",
       "locator": "Mihin kotivarasuositus perustuu?",
@@ -4003,11 +4003,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-72-hours-sv",
-      "sha256": "7e856d4b2946ae0f0ea48dc5c1e74512523846f6cf55354ae1e4f8700eff82d6",
+      "sha256": "24d3ca9807dd40e7b56cbe56d771cba0d1e7d5bf4473438e80db50d07d34fb44",
       "sourceUrl": "https://www.suomi.fi/guider/beredskap/sa-har-forbereder-du-dig-for-stornings-och-krissituationer/allmanna-anvisningar-om-beredskap-reservforrad-och-agerande-i-olika-situationer",
       "evidenceUrl": "https://www.suomi.fi/guider/beredskap/sa-har-forbereder-du-dig-for-stornings-och-krissituationer/allmanna-anvisningar-om-beredskap-reservforrad-och-agerande-i-olika-situationer",
       "locator": "Vad bygger rekommendationen om reservförråd på?",
@@ -4015,7 +4015,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-home-supply",
@@ -4067,7 +4067,7 @@
     },
     {
       "questionId": "safe-nollalinja",
-      "sha256": "31a8bb3a080aae37528ff6175d9e1b1bcff61c0352064b81984d7676194d249c",
+      "sha256": "78e80afd5abfc91fc87ca0f24b25b290fab4e9254b96216ae12185fbdcee925b",
       "sourceUrl": "https://infofinland.fi/fi/family/problems-in-the-family",
       "evidenceUrl": "https://infofinland.fi/fi/family/problems-in-the-family",
       "locator": "Apua väkivaltaan / Nollalinja",
@@ -4075,11 +4075,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-nollalinja-sv",
-      "sha256": "b3dfe54ae915f8f9a1989cd575da72bf7214d2bccba1afd1e6fffcecb46f3f1d",
+      "sha256": "e681805af9573dcb14f0c9a9d11d26782b95e1877f1c7bd7f3c2e4e3b2abf326",
       "sourceUrl": "https://infofinland.fi/sv/family/problems-in-the-family",
       "evidenceUrl": "https://infofinland.fi/sv/family/problems-in-the-family",
       "locator": "Hjälp vid våld / Nollalinja",
@@ -4087,7 +4087,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-violence-culture",
@@ -4115,7 +4115,7 @@
     },
     {
       "questionId": "safe-child-welfare-notice",
-      "sha256": "48a82becd4cb4c299aa7f56e09352113ec9485066394ed7bdf46b8d1a7d3e7e5",
+      "sha256": "03d90c9e524e3fab078e3c69d56cc2aeb2e3d3fe8bdb31f4e8903d1fb3ba8abd",
       "sourceUrl": "https://infofinland.fi/fi/family/children/child-welfare",
       "evidenceUrl": "https://infofinland.fi/fi/family/children/child-welfare",
       "locator": "Lastensuojelu",
@@ -4123,11 +4123,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-child-welfare-notice-sv",
-      "sha256": "24cb287dde0a35405a690e0d41a9cf6f7dd089aebdee51af3c17ac17fe248ded",
+      "sha256": "dd9a7d5c5029b687dbf5fbf09fe738a0666513ea37b97b7487ebfbabd6a1cf94",
       "sourceUrl": "https://infofinland.fi/sv/family/children/child-welfare",
       "evidenceUrl": "https://infofinland.fi/sv/family/children/child-welfare",
       "locator": "Barnskydd",
@@ -4135,7 +4135,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "safe-right-hand-traffic",
