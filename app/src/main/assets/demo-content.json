@@ -13099,13 +13099,13 @@
     },
     {
       "id": "demo-follow-law",
-      "revision": 2,
+      "revision": 3,
       "topicId": "laws",
       "text": "Keiden täytyy noudattaa Suomen lakeja?",
       "options": [
         {
           "id": "a",
-          "text": "Vain Suomen kansalaisten"
+          "text": "Vain Suomen kansalaisten ja niiden, joilla on oleskelulupa"
         },
         {
           "id": "b",
@@ -13113,11 +13113,11 @@
         },
         {
           "id": "c",
-          "text": "Vain työssä käyvien"
+          "text": "Vain niiden, jotka käyvät töissä tai opiskelevat Suomessa"
         },
         {
           "id": "d",
-          "text": "Vain yli 18-vuotiaiden kansalaisten"
+          "text": "Vain täysi-ikäisten, jotka asuvat Suomessa vakituisesti"
         }
       ],
       "correctOptionId": "b",
@@ -13152,7 +13152,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Only Finnish citizens"
+              "text": "Only Finnish citizens and those with a residence permit"
             },
             {
               "id": "b",
@@ -13160,11 +13160,11 @@
             },
             {
               "id": "c",
-              "text": "Only people in work"
+              "text": "Only those who work or study in Finland"
             },
             {
               "id": "d",
-              "text": "Only citizens over 18"
+              "text": "Only adults permanently resident in Finland"
             }
           ],
           "explanation": "Everyone who lives in or stays in Finland must obey Finnish laws, including tourists and others staying for a short time."
@@ -13177,13 +13177,13 @@
     },
     {
       "id": "demo-follow-law-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "laws",
       "text": "Vilka måste följa Finlands lagar?",
       "options": [
         {
           "id": "a",
-          "text": "Endast finska medborgare"
+          "text": "Endast finska medborgare och de som har uppehållstillstånd"
         },
         {
           "id": "b",
@@ -13191,11 +13191,11 @@
         },
         {
           "id": "c",
-          "text": "Endast de som arbetar"
+          "text": "Endast de som arbetar eller studerar i Finland"
         },
         {
           "id": "d",
-          "text": "Endast medborgare över 18 år"
+          "text": "Endast myndiga personer som är stadigvarande bosatta i Finland"
         }
       ],
       "correctOptionId": "b",
@@ -13229,7 +13229,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Only Finnish citizens"
+              "text": "Only Finnish citizens and those with a residence permit"
             },
             {
               "id": "b",
@@ -13237,11 +13237,11 @@
             },
             {
               "id": "c",
-              "text": "Only people in work"
+              "text": "Only those who work or study in Finland"
             },
             {
               "id": "d",
-              "text": "Only citizens over 18"
+              "text": "Only adults permanently resident in Finland"
             }
           ],
           "explanation": "Everyone who lives in or stays in Finland must obey Finnish laws, including tourists and others staying for a short time."
@@ -13377,21 +13377,21 @@
     },
     {
       "id": "law-police-tasks",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Mikä on poliisin tehtävä Suomessa?",
       "options": [
         {
           "id": "a",
-          "text": "Säätää lakeja"
+          "text": "Säätää lakeja ja päättää valtion budjetista eduskunnan kanssa"
         },
         {
           "id": "b",
-          "text": "Tuomita rikoksista"
+          "text": "Tuomita rikoksista ja päättää rangaistuksista tuomioistuimen sijaan"
         },
         {
           "id": "c",
-          "text": "Kerätä veroja"
+          "text": "Kerätä veroja ja valvoa, että kaikki maksavat veronsa ajallaan"
         },
         {
           "id": "d",
@@ -13430,15 +13430,15 @@
           "options": [
             {
               "id": "a",
-              "text": "To make laws"
+              "text": "To make laws and decide the state budget together with Parliament"
             },
             {
               "id": "b",
-              "text": "To judge crimes"
+              "text": "To judge crimes and decide punishments instead of the courts"
             },
             {
               "id": "c",
-              "text": "To collect taxes"
+              "text": "To collect taxes and make sure everyone pays them on time"
             },
             {
               "id": "d",
@@ -13455,21 +13455,21 @@
     },
     {
       "id": "law-police-tasks-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Vilken uppgift har polisen i Finland?",
       "options": [
         {
           "id": "a",
-          "text": "Att stifta lagar"
+          "text": "Att stifta lagar och besluta om statsbudgeten tillsammans med riksdagen"
         },
         {
           "id": "b",
-          "text": "Att döma för brott"
+          "text": "Att döma för brott och bestämma straff i stället för domstolen"
         },
         {
           "id": "c",
-          "text": "Att ta ut skatter"
+          "text": "Att ta ut skatter och se till att alla betalar sin skatt i tid"
         },
         {
           "id": "d",
@@ -13507,15 +13507,15 @@
           "options": [
             {
               "id": "a",
-              "text": "To make laws"
+              "text": "To make laws and decide the state budget together with Parliament"
             },
             {
               "id": "b",
-              "text": "To judge crimes"
+              "text": "To judge crimes and decide punishments instead of the courts"
             },
             {
               "id": "c",
-              "text": "To collect taxes"
+              "text": "To collect taxes and make sure everyone pays them on time"
             },
             {
               "id": "d",
@@ -13687,17 +13687,17 @@
     },
     {
       "id": "demo-oral-contract",
-      "revision": 2,
+      "revision": 3,
       "topicId": "laws",
       "text": "Voiko työsopimus Suomessa olla suullinen?",
       "options": [
         {
           "id": "a",
-          "text": "Ei, se on aina mitätön"
+          "text": "Ei, suullinen työsopimus on aina mitätön eikä sido työnantajaa"
         },
         {
           "id": "b",
-          "text": "Vain jos työ kestää alle päivän"
+          "text": "Vain jos työ kestää alle päivän; muuten sopimus on tehtävä kirjallisena"
         },
         {
           "id": "c",
@@ -13705,7 +13705,7 @@
         },
         {
           "id": "d",
-          "text": "Kyllä, eikä mitään kirjallista tarvita koskaan"
+          "text": "Kyllä, eikä työnantajan tarvitse koskaan antaa mitään kirjallista"
         }
       ],
       "correctOptionId": "c",
@@ -13740,11 +13740,11 @@
           "options": [
             {
               "id": "a",
-              "text": "No, it is always invalid"
+              "text": "No, an oral contract is always invalid and does not bind the employer"
             },
             {
               "id": "b",
-              "text": "Only if the work lasts less than a day"
+              "text": "Only if the work lasts under a day; otherwise it must be in writing"
             },
             {
               "id": "c",
@@ -13752,7 +13752,7 @@
             },
             {
               "id": "d",
-              "text": "Yes, and nothing written is ever needed"
+              "text": "Yes, and the employer never has to give anything in writing"
             }
           ],
           "explanation": "An employment contract can be oral. If there is no written contract, the employer must give written information on the terms of work, except for very short working time of on average at most three hours a week."
@@ -13765,17 +13765,17 @@
     },
     {
       "id": "demo-oral-contract-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "laws",
       "text": "Kan ett arbetsavtal vara muntligt i Finland?",
       "options": [
         {
           "id": "a",
-          "text": "Nej, det är alltid ogiltigt"
+          "text": "Nej, ett muntligt arbetsavtal är alltid ogiltigt och binder inte arbetsgivaren"
         },
         {
           "id": "b",
-          "text": "Endast om arbetet varar mindre än en dag"
+          "text": "Bara om arbetet varar mindre än en dag; annars måste avtalet vara skriftligt"
         },
         {
           "id": "c",
@@ -13783,7 +13783,7 @@
         },
         {
           "id": "d",
-          "text": "Ja, och inget skriftligt behövs någonsin"
+          "text": "Ja, och arbetsgivaren behöver aldrig ge något skriftligt"
         }
       ],
       "correctOptionId": "c",
@@ -13817,11 +13817,11 @@
           "options": [
             {
               "id": "a",
-              "text": "No, it is always invalid"
+              "text": "No, an oral contract is always invalid and does not bind the employer"
             },
             {
               "id": "b",
-              "text": "Only if the work lasts less than a day"
+              "text": "Only if the work lasts under a day; otherwise it must be in writing"
             },
             {
               "id": "c",
@@ -13829,7 +13829,7 @@
             },
             {
               "id": "d",
-              "text": "Yes, and nothing written is ever needed"
+              "text": "Yes, and the employer never has to give anything in writing"
             }
           ],
           "explanation": "An employment contract can be oral. If there is no written contract, the employer must give written information on the terms of work, except for very short working time of on average at most three hours a week."
@@ -13965,13 +13965,13 @@
     },
     {
       "id": "law-collective-agreement",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Saako työnantaja maksaa vähemmän palkkaa kuin alan työehtosopimuksessa on sovittu?",
       "options": [
         {
           "id": "a",
-          "text": "Kyllä, jos työntekijä suostuu"
+          "text": "Kyllä, jos työntekijä suostuu siihen kirjallisesti työsopimuksessa"
         },
         {
           "id": "b",
@@ -13979,11 +13979,11 @@
         },
         {
           "id": "c",
-          "text": "Kyllä, jos työntekijä on ulkomaalainen"
+          "text": "Kyllä, jos työntekijä on ulkomaalainen tai tilapäisessä työssä"
         },
         {
           "id": "d",
-          "text": "Kyllä, koeajan aikana"
+          "text": "Kyllä, koeajan aikana eli ensimmäiset kuusi kuukautta"
         }
       ],
       "correctOptionId": "b",
@@ -14013,7 +14013,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Yes, if the employee agrees"
+              "text": "Yes, if the employee agrees to it in writing in the employment contract"
             },
             {
               "id": "b",
@@ -14021,11 +14021,11 @@
             },
             {
               "id": "c",
-              "text": "Yes, if the employee is a foreigner"
+              "text": "Yes, if the employee is a foreigner or in temporary work"
             },
             {
               "id": "d",
-              "text": "Yes, during the trial period"
+              "text": "Yes, during the trial period, that is the first six months"
             }
           ],
           "explanation": "An employer may not pay less than the collective agreement sets. In most sectors the employer must follow a collective agreement."
@@ -14038,13 +14038,13 @@
     },
     {
       "id": "law-collective-agreement-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Får arbetsgivaren betala lägre lön än vad som avtalats i branschens kollektivavtal?",
       "options": [
         {
           "id": "a",
-          "text": "Ja, om arbetstagaren går med på det"
+          "text": "Ja, om arbetstagaren går med på det skriftligt i arbetsavtalet"
         },
         {
           "id": "b",
@@ -14052,11 +14052,11 @@
         },
         {
           "id": "c",
-          "text": "Ja, om arbetstagaren är utlänning"
+          "text": "Ja, om arbetstagaren är utlänning eller har ett tillfälligt jobb"
         },
         {
           "id": "d",
-          "text": "Ja, under prövotiden"
+          "text": "Ja, under prövotiden, det vill säga de första sex månaderna"
         }
       ],
       "correctOptionId": "b",
@@ -14085,7 +14085,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Yes, if the employee agrees"
+              "text": "Yes, if the employee agrees to it in writing in the employment contract"
             },
             {
               "id": "b",
@@ -14093,11 +14093,11 @@
             },
             {
               "id": "c",
-              "text": "Yes, if the employee is a foreigner"
+              "text": "Yes, if the employee is a foreigner or in temporary work"
             },
             {
               "id": "d",
-              "text": "Yes, during the trial period"
+              "text": "Yes, during the trial period, that is the first six months"
             }
           ],
           "explanation": "An employer may not pay less than the collective agreement sets. In most sectors the employer must follow a collective agreement."
@@ -14223,7 +14223,7 @@
     },
     {
       "id": "demo-safety",
-      "revision": 2,
+      "revision": 3,
       "topicId": "laws",
       "text": "Mitä työntekijän täytyy itse tehdä työturvallisuuden puolesta?",
       "options": [
@@ -14233,7 +14233,7 @@
         },
         {
           "id": "b",
-          "text": "Ostaa omat turvavälineet"
+          "text": "Ostaa omat turvavälineet ja huolehtia niiden huollosta"
         },
         {
           "id": "c",
@@ -14241,7 +14241,7 @@
         },
         {
           "id": "d",
-          "text": "Pyytää lupaa poliisilta"
+          "text": "Pyytää poliisilta luvan vaarallisiin työtehtäviin"
         }
       ],
       "correctOptionId": "a",
@@ -14280,7 +14280,7 @@
             },
             {
               "id": "b",
-              "text": "Buy their own safety equipment"
+              "text": "Buy their own safety equipment and keep it maintained"
             },
             {
               "id": "c",
@@ -14288,7 +14288,7 @@
             },
             {
               "id": "d",
-              "text": "Ask the police for permission"
+              "text": "Ask the police for permission for dangerous tasks"
             }
           ],
           "explanation": "The employer is responsible for safety at work, but employees must also work safely and follow the work instructions."
@@ -14301,7 +14301,7 @@
     },
     {
       "id": "demo-safety-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "laws",
       "text": "Vad måste en arbetstagare själv göra för arbetssäkerheten?",
       "options": [
@@ -14311,7 +14311,7 @@
         },
         {
           "id": "b",
-          "text": "Köpa sin egen säkerhetsutrustning"
+          "text": "Köpa sin egen säkerhetsutrustning och se till att den underhålls"
         },
         {
           "id": "c",
@@ -14319,7 +14319,7 @@
         },
         {
           "id": "d",
-          "text": "Be polisen om tillstånd"
+          "text": "Be polisen om tillstånd för farliga arbetsuppgifter"
         }
       ],
       "correctOptionId": "a",
@@ -14357,7 +14357,7 @@
             },
             {
               "id": "b",
-              "text": "Buy their own safety equipment"
+              "text": "Buy their own safety equipment and keep it maintained"
             },
             {
               "id": "c",
@@ -14365,7 +14365,7 @@
             },
             {
               "id": "d",
-              "text": "Ask the police for permission"
+              "text": "Ask the police for permission for dangerous tasks"
             }
           ],
           "explanation": "The employer is responsible for safety at work, but employees must also work safely and follow the work instructions."
@@ -14523,13 +14523,13 @@
     },
     {
       "id": "demo-orientation",
-      "revision": 2,
+      "revision": 3,
       "topicId": "laws",
       "text": "Mitä työnantajan täytyy tehdä, kun työntekijä aloittaa uuden työn?",
       "options": [
         {
           "id": "a",
-          "text": "Pyytää työntekijältä takuumaksu"
+          "text": "Periä työntekijältä takuumaksu työvälineistä"
         },
         {
           "id": "b",
@@ -14537,11 +14537,11 @@
         },
         {
           "id": "c",
-          "text": "Ilmoittaa työntekijästä poliisille"
+          "text": "Ilmoittaa uudesta työntekijästä poliisille"
         },
         {
           "id": "d",
-          "text": "Ei mitään erityistä"
+          "text": "Ei mitään, työntekijä opettelee työn itse"
         }
       ],
       "correctOptionId": "b",
@@ -14571,7 +14571,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Ask the employee for a deposit"
+              "text": "Charge the employee a deposit for work tools"
             },
             {
               "id": "b",
@@ -14579,11 +14579,11 @@
             },
             {
               "id": "c",
-              "text": "Report the employee to the police"
+              "text": "Report the new employee to the police"
             },
             {
               "id": "d",
-              "text": "Nothing in particular"
+              "text": "Nothing; the employee learns the job alone"
             }
           ],
           "explanation": "When you start a new job, the employer must give you orientation in your new tasks, which helps you work correctly and safely."
@@ -14597,13 +14597,13 @@
     },
     {
       "id": "demo-orientation-sv",
-      "revision": 2,
+      "revision": 3,
       "topicId": "laws",
       "text": "Vad måste arbetsgivaren göra när en arbetstagare börjar i ett nytt jobb?",
       "options": [
         {
           "id": "a",
-          "text": "Kräva en garantiavgift av arbetstagaren"
+          "text": "Ta ut en garantiavgift av arbetstagaren för arbetsredskapen"
         },
         {
           "id": "b",
@@ -14611,11 +14611,11 @@
         },
         {
           "id": "c",
-          "text": "Anmäla arbetstagaren till polisen"
+          "text": "Anmäla den nya arbetstagaren till polisen"
         },
         {
           "id": "d",
-          "text": "Inget särskilt"
+          "text": "Ingenting, arbetstagaren lär sig arbetet på egen hand"
         }
       ],
       "correctOptionId": "b",
@@ -14644,7 +14644,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Ask the employee for a deposit"
+              "text": "Charge the employee a deposit for work tools"
             },
             {
               "id": "b",
@@ -14652,11 +14652,11 @@
             },
             {
               "id": "c",
-              "text": "Report the employee to the police"
+              "text": "Report the new employee to the police"
             },
             {
               "id": "d",
-              "text": "Nothing in particular"
+              "text": "Nothing; the employee learns the job alone"
             }
           ],
           "explanation": "When you start a new job, the employer must give you orientation in your new tasks, which helps you work correctly and safely."
@@ -14670,17 +14670,17 @@
     },
     {
       "id": "law-tax-card",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Milloin tarvitset verokortin?",
       "options": [
         {
           "id": "a",
-          "text": "Vain jos omistat auton"
+          "text": "Vain jos omistat Suomessa auton tai asunnon"
         },
         {
           "id": "b",
-          "text": "Vain jos olet Suomen kansalainen"
+          "text": "Vain jos olet täysi-ikäinen Suomen kansalainen"
         },
         {
           "id": "c",
@@ -14688,7 +14688,7 @@
         },
         {
           "id": "d",
-          "text": "Vain jos asut vuokra-asunnossa"
+          "text": "Vain jos asut vuokra-asunnossa ja saat asumistukea"
         }
       ],
       "correctOptionId": "c",
@@ -14723,11 +14723,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Only if you own a car"
+              "text": "Only if you own a car or a home in Finland"
             },
             {
               "id": "b",
-              "text": "Only if you are a Finnish citizen"
+              "text": "Only if you are an adult Finnish citizen"
             },
             {
               "id": "c",
@@ -14735,7 +14735,7 @@
             },
             {
               "id": "d",
-              "text": "Only if you live in a rented flat"
+              "text": "Only if you rent your home and get housing allowance"
             }
           ],
           "explanation": "You need a tax card if you receive a salary or other income in Finland. It shows your tax rate, which the employer uses to withhold tax from your pay."
@@ -14748,17 +14748,17 @@
     },
     {
       "id": "law-tax-card-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "När behöver du ett skattekort?",
       "options": [
         {
           "id": "a",
-          "text": "Endast om du äger en bil"
+          "text": "Endast om du äger en bil eller en bostad i Finland"
         },
         {
           "id": "b",
-          "text": "Endast om du är finsk medborgare"
+          "text": "Endast om du är myndig och finsk medborgare"
         },
         {
           "id": "c",
@@ -14766,7 +14766,7 @@
         },
         {
           "id": "d",
-          "text": "Endast om du bor i en hyresbostad"
+          "text": "Endast om du bor i en hyresbostad och får bostadsbidrag"
         }
       ],
       "correctOptionId": "c",
@@ -14800,11 +14800,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Only if you own a car"
+              "text": "Only if you own a car or a home in Finland"
             },
             {
               "id": "b",
-              "text": "Only if you are a Finnish citizen"
+              "text": "Only if you are an adult Finnish citizen"
             },
             {
               "id": "c",
@@ -14812,7 +14812,7 @@
             },
             {
               "id": "d",
-              "text": "Only if you live in a rented flat"
+              "text": "Only if you rent your home and get housing allowance"
             }
           ],
           "explanation": "You need a tax card if you receive a salary or other income in Finland. It shows your tax rate, which the employer uses to withhold tax from your pay."
@@ -15097,21 +15097,21 @@
     },
     {
       "id": "law-tax-use",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Mitä valtio ja kunnat maksavat verorahoilla?",
       "options": [
         {
           "id": "a",
-          "text": "Yksityisten yritysten voitot"
+          "text": "Esimerkiksi yksityisten yritysten voitot, osingot ja johtajien palkat"
         },
         {
           "id": "b",
-          "text": "Ihmisten vuokrat aina kokonaan"
+          "text": "Esimerkiksi kaikkien asukkaiden vuokrat, sähkölaskut ja ruokaostokset"
         },
         {
           "id": "c",
-          "text": "Puolueiden vaalimainokset"
+          "text": "Esimerkiksi kaikkien eläkeläisten ulkomaanmatkat ja hotellilaskut"
         },
         {
           "id": "d",
@@ -15145,15 +15145,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Private companies' profits"
+              "text": "For example private companies' profits, dividends and executives' pay"
             },
             {
               "id": "b",
-              "text": "Everyone's full rent"
+              "text": "For example every resident's rent, electricity bills and groceries"
             },
             {
               "id": "c",
-              "text": "Parties' election adverts"
+              "text": "For example all pensioners' trips abroad and hotel bills"
             },
             {
               "id": "d",
@@ -15170,21 +15170,21 @@
     },
     {
       "id": "law-tax-use-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Vad betalar staten och kommunerna med skattepengarna?",
       "options": [
         {
           "id": "a",
-          "text": "Privata företags vinster"
+          "text": "Till exempel privata företags vinster, dividender och direktörernas löner"
         },
         {
           "id": "b",
-          "text": "Alltid människors hela hyra"
+          "text": "Till exempel alla invånares hyror, elräkningar och matinköp"
         },
         {
           "id": "c",
-          "text": "Partiernas valreklam"
+          "text": "Till exempel alla pensionärers utlandsresor och hotellräkningar"
         },
         {
           "id": "d",
@@ -15217,15 +15217,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Private companies' profits"
+              "text": "For example private companies' profits, dividends and executives' pay"
             },
             {
               "id": "b",
-              "text": "Everyone's full rent"
+              "text": "For example every resident's rent, electricity bills and groceries"
             },
             {
               "id": "c",
-              "text": "Parties' election adverts"
+              "text": "For example all pensioners' trips abroad and hotel bills"
             },
             {
               "id": "d",
@@ -15824,13 +15824,13 @@
     },
     {
       "id": "law-joint-custody",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Mistä eroavat vanhemmat voivat sopia lapsen huoltajuudesta?",
       "options": [
         {
           "id": "a",
-          "text": "Huoltajuus siirtyy aina kunnalle"
+          "text": "Huoltajuus siirtyy erossa aina kunnan sosiaalitoimelle"
         },
         {
           "id": "b",
@@ -15838,11 +15838,11 @@
         },
         {
           "id": "c",
-          "text": "Huoltajuus kuuluu aina äidille"
+          "text": "Huoltajuus kuuluu erossa aina lapsen äidille"
         },
         {
           "id": "d",
-          "text": "Lapsi päättää huoltajuudesta yksin"
+          "text": "Lapsi päättää huoltajuudesta yksin 12 vuotta täytettyään"
         }
       ],
       "correctOptionId": "b",
@@ -15877,7 +15877,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Custody always passes to the municipality"
+              "text": "Custody always passes to the municipal social services on divorce"
             },
             {
               "id": "b",
@@ -15885,11 +15885,11 @@
             },
             {
               "id": "c",
-              "text": "Custody always belongs to the mother"
+              "text": "Custody always belongs to the child's mother on divorce"
             },
             {
               "id": "d",
-              "text": "The child decides alone"
+              "text": "The child decides custody alone once they are 12"
             }
           ],
           "explanation": "Parents can agree on joint custody or on sole custody by one parent. A child welfare officer can confirm their agreement."
@@ -15902,13 +15902,13 @@
     },
     {
       "id": "law-joint-custody-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Vad kan föräldrar som skiljer sig komma överens om när det gäller vårdnaden om barnet?",
       "options": [
         {
           "id": "a",
-          "text": "Vårdnaden går alltid över till kommunen"
+          "text": "Vårdnaden går vid skilsmässa alltid över till kommunens socialtjänst"
         },
         {
           "id": "b",
@@ -15916,11 +15916,11 @@
         },
         {
           "id": "c",
-          "text": "Vårdnaden hör alltid till mamman"
+          "text": "Vårdnaden hör vid skilsmässa alltid till barnets mamma"
         },
         {
           "id": "d",
-          "text": "Barnet bestämmer ensamt om vårdnaden"
+          "text": "Barnet bestämmer ensamt om vårdnaden när det har fyllt 12 år"
         }
       ],
       "correctOptionId": "b",
@@ -15954,7 +15954,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Custody always passes to the municipality"
+              "text": "Custody always passes to the municipal social services on divorce"
             },
             {
               "id": "b",
@@ -15962,11 +15962,11 @@
             },
             {
               "id": "c",
-              "text": "Custody always belongs to the mother"
+              "text": "Custody always belongs to the child's mother on divorce"
             },
             {
               "id": "d",
-              "text": "The child decides alone"
+              "text": "The child decides custody alone once they are 12"
             }
           ],
           "explanation": "Parents can agree on joint custody or on sole custody by one parent. A child welfare officer can confirm their agreement."
@@ -15979,21 +15979,21 @@
     },
     {
       "id": "law-child-maintenance",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Kuka maksaa lapsen elatusapua vanhempien erotessa?",
       "options": [
         {
           "id": "a",
-          "text": "Kela aina"
+          "text": "Kela maksaa sen aina kokonaan"
         },
         {
           "id": "b",
-          "text": "Lapsi itse"
+          "text": "Vanhempi, jonka luona lapsi asuu"
         },
         {
           "id": "c",
-          "text": "Isovanhemmat"
+          "text": "Lapsen isovanhemmat kummaltakin puolelta"
         },
         {
           "id": "d",
@@ -16032,15 +16032,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Always Kela"
+              "text": "Kela always pays it in full"
             },
             {
               "id": "b",
-              "text": "The child"
+              "text": "The parent the child lives with"
             },
             {
               "id": "c",
-              "text": "The grandparents"
+              "text": "The child's grandparents on both sides"
             },
             {
               "id": "d",
@@ -16057,21 +16057,21 @@
     },
     {
       "id": "law-child-maintenance-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "laws",
       "text": "Vem betalar underhållsbidrag för barnet när föräldrarna skiljer sig?",
       "options": [
         {
           "id": "a",
-          "text": "Alltid FPA"
+          "text": "FPA betalar det alltid i sin helhet"
         },
         {
           "id": "b",
-          "text": "Barnet självt"
+          "text": "Den förälder som barnet bor hos"
         },
         {
           "id": "c",
-          "text": "Mor- eller farföräldrarna"
+          "text": "Barnets mor- och farföräldrar"
         },
         {
           "id": "d",
@@ -16109,15 +16109,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Always Kela"
+              "text": "Kela always pays it in full"
             },
             {
               "id": "b",
-              "text": "The child"
+              "text": "The parent the child lives with"
             },
             {
               "id": "c",
-              "text": "The grandparents"
+              "text": "The child's grandparents on both sides"
             },
             {
               "id": "d",

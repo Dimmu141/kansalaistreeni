@@ -1811,7 +1811,7 @@
     },
     {
       "questionId": "demo-follow-law",
-      "sha256": "e0603b0f60ca4ed077eac0ebb447738bc90271a51fe121b15e391e39f53600ee",
+      "sha256": "eaabb20d9e16dc470123982e511fed675f478d7aabff0d2de0b8ed18f3ef40fe",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "locator": "Velvollisuudet",
@@ -1819,11 +1819,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-follow-law-sv",
-      "sha256": "c861d1789a51a239db22c7dad95ffe2f2ea5ce1dc0806719e0dced56741aecc4",
+      "sha256": "106a9fe950ede29171a3d40549fb00fd3ce7b0fc2ffd51c3940b6da5ec980fd6",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "locator": "Skyldigheter",
@@ -1831,7 +1831,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-duty-to-help",
@@ -1859,7 +1859,7 @@
     },
     {
       "questionId": "law-police-tasks",
-      "sha256": "183f52f9df9a15e206e9fbdf6e1a80446c126323b960a15c92af21c2490df8de",
+      "sha256": "3cfbd1f382fc899787afd1cbdf0cd725232ad0f3d1c39b1b6366e150532908e3",
       "sourceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/fi/information-about-finland/legislation-and-rights",
       "locator": "Poliisi turvaa oikeudet ja järjestyksen",
@@ -1867,11 +1867,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-police-tasks-sv",
-      "sha256": "49f28530bde8ea6bd37b7e948302346842287b20a162603c6d72e4bbfe320cc3",
+      "sha256": "def05e0c3ed9387afc004f5ddc3173eb1032679c091fd031507d4c2e751432f3",
       "sourceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "evidenceUrl": "https://infofinland.fi/sv/information-about-finland/legislation-and-rights",
       "locator": "Polisen tryggar rättigheterna och ordningen",
@@ -1879,7 +1879,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-contract",
@@ -1907,7 +1907,7 @@
     },
     {
       "questionId": "demo-oral-contract",
-      "sha256": "33eb1a1802f16d973f6a5ee9383fab59cc1bb1f381c3702af67c374833292325",
+      "sha256": "e1cb53dc26482505c4343a211fca9341cca5f051198f3c8eea94e61851fe89d3",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Jos työsopimus on suullinen",
@@ -1915,11 +1915,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-oral-contract-sv",
-      "sha256": "c15790f84d5beb10fe771f53b5cb3b3c71d4e18a75dca167e7648fc2c2283a58",
+      "sha256": "aae044ba0d66cf9c4dbdc0ae8fbccd5957933c0b60b7d0fb5190be9b8ca813cf",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Om arbetsavtalet är muntligt",
@@ -1927,7 +1927,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-no-minimum-wage",
@@ -1955,7 +1955,7 @@
     },
     {
       "questionId": "law-collective-agreement",
-      "sha256": "b064ac930f267af034357e9d60d6cb75f67f04e3609189f9392018615768e082",
+      "sha256": "dd8274474b859bc831b165d108bd92d6836962e3ea19ed02c8fa3b962ff7fbc9",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Palkka ja palkan maksaminen",
@@ -1963,11 +1963,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-collective-agreement-sv",
-      "sha256": "24c4d56b232174092a82c554c88b27321c8700ead9dcb4bad5ced141c4ce5749",
+      "sha256": "1675ed162caa2ffce4d5e68aca11e3f3c1e9ea9d96d3b6644f51cd635835445a",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/employment-contract-and-terms-of-employment",
       "locator": "Lön och utbetalning av lönen",
@@ -1975,7 +1975,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-trial-period",
@@ -2003,7 +2003,7 @@
     },
     {
       "questionId": "demo-safety",
-      "sha256": "65750ce31a8a924dac553ccde7eb3a07d71e6d9225a4e027b3f1cdf263537956",
+      "sha256": "fab96ce7505256dc01e412db0dad7bbe6afbe56c3d698a6ac92dc7c8dfd9bf87",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Työturvallisuus ja työsuojelu",
@@ -2011,11 +2011,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-safety-sv",
-      "sha256": "b448f1d9e9b2e7498735c9925f3826481a810d1504c6bf1578c4805e0ce8b8d7",
+      "sha256": "c7f04c97696864920afa83390fabd8b75d6549196b9443e89ce8df12dc1ff321",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Arbetssäkerhet och arbetarskydd",
@@ -2023,7 +2023,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-protective-equipment",
@@ -2051,7 +2051,7 @@
     },
     {
       "questionId": "demo-orientation",
-      "sha256": "02bbfdf085e222b1d20f6c42b0109e227fecafee3efa9a26779b54b048f4e867",
+      "sha256": "e68cf27c54471036e993d1517c7a06c62c16adcfbb405eb368b71010a0d5757f",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Työsuojelutoiminta työpaikalla",
@@ -2059,11 +2059,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "demo-orientation-sv",
-      "sha256": "2806dd0ca93f5bfa980bdbb75c5c0a94ffb40aeb2ae4dd684d4d15e8d6450ee2",
+      "sha256": "9439a664312239c887398e34defdc4fc4442844de1d8cfdde1f08d52a385d9a0",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/health-and-safety-at-work",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/during-employment/health-and-safety-at-work",
       "locator": "Arbetarskyddsverksamhet på arbetsplatsen",
@@ -2071,11 +2071,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-tax-card",
-      "sha256": "4993e2c19b6fa6538d9015a5c69b7d1e856410e1764cd22ecf677ac51f340314",
+      "sha256": "f9ea04923c62f3c8383e100556d9f42487af0fce502b3b044e058ab88a7827e0",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/taxation/tax-card",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/taxation/tax-card",
       "locator": "Verokortti",
@@ -2083,11 +2083,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-tax-card-sv",
-      "sha256": "c9285c8d737282f025b7608a194f4ad205e078ca3b7323f2ae956b82ba80a5ec",
+      "sha256": "d5bd033346d6c7dcce67d86cfd3fa7a28909bde71ddb73bd72450c3ab924fb0d",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/taxation/tax-card",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/taxation/tax-card",
       "locator": "Skattekort",
@@ -2095,7 +2095,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-no-tax-card",
@@ -2147,7 +2147,7 @@
     },
     {
       "questionId": "law-tax-use",
-      "sha256": "61c38e69e4b5cfb10ba31e7b72d51c7fba0af01a452aa80926bbcc133f6ec6ae",
+      "sha256": "08f371686d3ca2b124f78ae819e712fba2c6076ff5ff29021116798302c70158",
       "sourceUrl": "https://infofinland.fi/fi/work-and-enterprise/taxation",
       "evidenceUrl": "https://infofinland.fi/fi/work-and-enterprise/taxation",
       "locator": "Suomen verojärjestelmä",
@@ -2155,11 +2155,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-tax-use-sv",
-      "sha256": "d42e6415cfd9b065555d83446cc3c2338a839261ebfdbdd45a77dbdc6a6341d9",
+      "sha256": "83d1337605b872895f664e7f8747707456991c6010cca73fcdad2a4cf5f1205a",
       "sourceUrl": "https://infofinland.fi/sv/work-and-enterprise/taxation",
       "evidenceUrl": "https://infofinland.fi/sv/work-and-enterprise/taxation",
       "locator": "Skattesystemet i Finland",
@@ -2167,7 +2167,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-written-lease",
@@ -2267,7 +2267,7 @@
     },
     {
       "questionId": "law-joint-custody",
-      "sha256": "c997c3cf9b48d5773706bd25e0fa776d1c6499544859d0577b11dc0ab9621a67",
+      "sha256": "fc21e0ef9bb04110a64eb97dd436dae2a5e53b17f475e6dd63b6e0691ed4f7cc",
       "sourceUrl": "https://infofinland.fi/fi/family/divorce/children-in-a-divorce",
       "evidenceUrl": "https://infofinland.fi/fi/family/divorce/children-in-a-divorce",
       "locator": "Huoltajuus",
@@ -2275,11 +2275,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-joint-custody-sv",
-      "sha256": "11effb92e142e2bb977c09844b7e7fff3e2aed6f1e5f812088c3ac5652b9b1f0",
+      "sha256": "caf4c1f9c280c7c1605d1eb4603df10be0e09ce7050ceb5a68acc313dbbfccc0",
       "sourceUrl": "https://infofinland.fi/sv/family/divorce/children-in-a-divorce",
       "evidenceUrl": "https://infofinland.fi/sv/family/divorce/children-in-a-divorce",
       "locator": "Vårdnad",
@@ -2287,11 +2287,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-child-maintenance",
-      "sha256": "6c493d836c5cda8164f4fa72475bf1434a0277713fe4ebed216440efd23b5f19",
+      "sha256": "36c58bf0a831c0cc836951f28af11485e88f703b5a019d065856cb5ae9c7e80c",
       "sourceUrl": "https://infofinland.fi/fi/family/divorce/children-in-a-divorce",
       "evidenceUrl": "https://infofinland.fi/fi/family/divorce/children-in-a-divorce",
       "locator": "Lapsen elatusapu",
@@ -2299,11 +2299,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-child-maintenance-sv",
-      "sha256": "97f9fe9dc9a46c79b81259eab9c6d3b8e34b62e83c4ef1ec6a72db4ca5121372",
+      "sha256": "5bb0aec634c48efeba64db83fa6c65ab3cead1ebccc3155efc80d420eb3bb55a",
       "sourceUrl": "https://infofinland.fi/sv/family/divorce/children-in-a-divorce",
       "evidenceUrl": "https://infofinland.fi/sv/family/divorce/children-in-a-divorce",
       "locator": "Underhållsbidrag för barn",
@@ -2311,7 +2311,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "law-custody-residence",
