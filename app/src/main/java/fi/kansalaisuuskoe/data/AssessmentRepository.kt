@@ -14,6 +14,7 @@ import java.util.UUID
 data class AssessmentPayload(
     val topics: List<TopicDto>, val questions: List<QuestionDto>,
     val answers: Map<String, String> = emptyMap(), val position: Int = 0,
+    val timeLimitMinutes: Int? = null,
 )
 
 @Entity(tableName = "assessments")
@@ -46,23 +47,27 @@ class AssessmentRepository(private val database: LearningDatabase) {
     private fun decode(row: AssessmentEntity): AssessmentSession {
         val payload = requireNotNull(adapter.fromJson(row.payload))
         return AssessmentSession(row.id, row.language, row.startedAt, row.finishedAt,
-            payload.topics.map { it.model() }, payload.questions.map { it.model() }, payload.answers, payload.position)
+            payload.topics.map { it.model() }, payload.questions.map { it.model() }, payload.answers, payload.position, payload.timeLimitMinutes)
     }
 
     suspend fun get(id: String): AssessmentSession? = withContext(Dispatchers.IO) { dao.get(id)?.let(::decode) }
 
-    suspend fun start(language: StudyLanguage, now: Long = System.currentTimeMillis()): String = withContext(Dispatchers.IO) {
+    /** An unfinished assessment in [language] is resumed as it is; [length] and [timed] apply only to a new one. */
+    suspend fun start(language: StudyLanguage, now: Long = System.currentTimeMillis(), length: Int = ExamProfile.CURRENT.questionCount,
+                      timed: Boolean = false): String = withContext(Dispatchers.IO) {
+        require(length in 1..Assessments.MAX_QUESTIONS)
         database.withTransaction {
             dao.active(language.tag)?.let { return@withTransaction it.id }
             val learning = database.learningDao()
             val material = learning.questions().map { requireNotNull(ContentCodec.questionAdapter.fromJson(it.payload)) }
-            val queue = Assessments.queue(material.map { it.model() }, language.tag)
+            val queue = Assessments.queue(material.map { it.model() }, language.tag, count = length)
             require(queue.isNotEmpty()) { "No questions in selected study language" }
             val topics = learning.topics().filter { t -> queue.any { it.topicId == t.id } }.map {
                 // Results need original labels and question explanations, not a copy of every lesson.
                 it.dto().copy(lessons = emptyMap())
             }
-            val payload = AssessmentPayload(topics, queue.map { q -> material.first { it.id == q.id } })
+            val payload = AssessmentPayload(topics, queue.map { q -> material.first { it.id == q.id } },
+                timeLimitMinutes = if (timed) queue.size * Assessments.MINUTES_PER_QUESTION else null)
             val id = UUID.randomUUID().toString()
             dao.save(AssessmentEntity(id, language.tag, now, null, adapter.toJson(payload)))
             id
@@ -79,7 +84,8 @@ class AssessmentRepository(private val database: LearningDatabase) {
         }
     }
 
-    suspend fun select(id: String, questionId: String, optionId: String) = update(id) { Assessments.select(it, questionId, optionId) }
+    suspend fun select(id: String, questionId: String, optionId: String, now: Long = System.currentTimeMillis()) =
+        update(id) { Assessments.select(it, questionId, optionId, now) }
     suspend fun move(id: String, position: Int) = update(id) { Assessments.move(it, position) }
     suspend fun finish(id: String, now: Long = System.currentTimeMillis()) = update(id) { Assessments.finish(it, now) }
 

@@ -246,11 +246,22 @@
     <string name="backup_restore_error">Palautus epäonnistui. Nykyiset tietosi säilyivät. Voit yrittää palautusta uudelleen.</string>
     <string name="assessment_title">Harjoituskoe</string>
     <string name="assessment_intro">Testaa oppimaasi eri aiheista. Tämä on sovelluksen oma harjoitus, ei virallinen kansalaisuuskoe.</string>
-    <string name="assessment_rules">Ei aikarajaa. Voit muuttaa vastauksiasi ennen lopettamista. Oikeat vastaukset ja selitykset näet vasta lopuksi. Vastaukset tallentuvat automaattisesti tähän laitteeseen.</string>
+    <string name="assessment_rules">Voit muuttaa vastauksiasi ennen lopettamista. Oikeat vastaukset ja selitykset näet vasta lopuksi. Vastaukset tallentuvat automaattisesti tähän laitteeseen.</string>
     <string name="assessment_saved_progress">Tallennetut vastaukset: %1$d / %2$d</string>
     <string name="assessment_resume">Jatka keskeneräistä harjoituskoetta</string>
-    <string name="assessment_length">Harjoituksessa on %1$s valitsemallasi opiskelukielellä. Määrä perustuu sovelluksen aineistoon.</string>
     <string name="assessment_start">Aloita harjoituskoe</string>
+    <string name="assessment_length_title">Kysymysten määrä</string>
+    <string name="assessment_timer_title">Aikaraja</string>
+    <string name="assessment_timer_note">Oma harjoitusasetuksesi, ei virallisen kokeen sääntö: %1$d minuuttia, eli minuutti kysymystä kohden. Aika kuluu myös, kun sovellus on suljettuna. Kun aika loppuu, harjoituskoe päättyy ja vastaamattomat kysymykset lasketaan vääriksi.</string>
+    <string name="assessment_time_left">Aikaa %1$s</string>
+    <string name="assessment_time_left_description">Aikaa jäljellä noin %1$d min</string>
+    <string name="assessment_exit_note_timed">Voit poistua ja jatkaa myöhemmin Harjoituskoe-sivulta, mutta aika kuluu sillä välin.</string>
+    <string name="assessment_time_limit_used">Aikaraja %1$d min</string>
+    <string name="assessment_no_answer">Ei vastausta</string>
+    <plurals name="assessment_unanswered">
+        <item quantity="one">Aika loppui. %d kysymys jäi vastaamatta, ja se lasketaan vääräksi.</item>
+        <item quantity="other">Aika loppui. %d kysymystä jäi vastaamatta, ja ne lasketaan vääriksi.</item>
+    </plurals>
     <string name="assessment_history">Aiemmat harjoituskokeet</string>
     <string name="assessment_storage_note">Harjoituskokeet tallennetaan tähän laitteeseen. Voit ottaa ne mukaan varmuuskopioon.</string>
     <string name="assessment_history_empty">Valmiit harjoituskokeet ja niiden tulokset näkyvät tässä.</string>

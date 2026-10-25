@@ -246,11 +246,22 @@
     <string name="backup_restore_error">Återställningen misslyckades. Dina nuvarande uppgifter är intakta. Du kan försöka återställa igen.</string>
     <string name="assessment_title">Övningsprov</string>
     <string name="assessment_intro">Testa vad du har lärt dig i olika ämnen. Det här är en övning i appen, inte det officiella medborgarskapsprovet.</string>
-    <string name="assessment_rules">Ingen tidsgräns. Du kan ändra dina svar innan du avslutar. Svar och förklaringar visas först i slutet. Dina val sparas automatiskt på den här enheten.</string>
+    <string name="assessment_rules">Du kan ändra dina svar innan du avslutar. Svar och förklaringar visas först i slutet. Dina val sparas automatiskt på den här enheten.</string>
     <string name="assessment_saved_progress">Sparade svar: %1$d / %2$d</string>
     <string name="assessment_resume">Fortsätt övningsprovet</string>
-    <string name="assessment_length">Den här övningen har %1$s på ditt studiespråk, hämtade från det installerade materialet.</string>
     <string name="assessment_start">Starta övningsprovet</string>
+    <string name="assessment_length_title">Antal frågor</string>
+    <string name="assessment_timer_title">Tidsgräns</string>
+    <string name="assessment_timer_note">Din egen övningsinställning, inte en regel för det officiella provet: %1$d minuter, alltså en minut per fråga. Tiden går även när appen är stängd. När tiden är slut avslutas övningsprovet och obesvarade frågor räknas som fel.</string>
+    <string name="assessment_time_left">Tid %1$s</string>
+    <string name="assessment_time_left_description">Cirka %1$d min kvar</string>
+    <string name="assessment_exit_note_timed">Du kan lämna provet och fortsätta senare från sidan för övningsprov, men tiden fortsätter att gå.</string>
+    <string name="assessment_time_limit_used">Tidsgräns %1$d min</string>
+    <string name="assessment_no_answer">Inget svar</string>
+    <plurals name="assessment_unanswered">
+        <item quantity="one">Tiden tog slut. %d fråga blev obesvarad och räknas som fel.</item>
+        <item quantity="other">Tiden tog slut. %d frågor blev obesvarade och räknas som fel.</item>
+    </plurals>
     <string name="assessment_history">Tidigare övningsprov</string>
     <string name="assessment_storage_note">Övningsprov sparas på den här enheten. Du kan ta med dem i en säkerhetskopia.</string>
     <string name="assessment_history_empty">Slutförda övningsprov och deras resultat visas här.</string>

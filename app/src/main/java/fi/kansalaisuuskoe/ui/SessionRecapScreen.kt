@@ -144,10 +144,12 @@ private fun RecapScore(state: QuestionUiState) {
 
 /** The learner's answer and the right one as labelled rows with the verdict icon, so colour is never the only cue. */
 @Composable
-internal fun AnswerOutcome(question: Question, selectedId: String, correctId: String) {
+internal fun AnswerOutcome(question: Question, selectedId: String?, correctId: String) {
     val c = Ks.colors
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        listOf(Triple(R.string.your_answer, selectedId, selectedId == correctId), Triple(R.string.correct_answer_label, correctId, true)).forEach { (label, id, right) ->
+        // A null answer is a timed practice question left unanswered when time ran out; only the key is shown.
+        listOfNotNull(selectedId?.let { Triple(R.string.your_answer, it, it == correctId) },
+            Triple(R.string.correct_answer_label, correctId, true)).forEach { (label, id, right) ->
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 VerdictBadge(right, size = 24.dp, animate = false)
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {

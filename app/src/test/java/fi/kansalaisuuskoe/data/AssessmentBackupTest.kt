@@ -71,6 +71,16 @@ class AssessmentBackupTest {
         rejected(backup(listOf(session.copy(finishedAt = null, payload = session.payload.copy(questions = emptyList())))))
         rejected(backup(listOf(session.copy(finishedAt = null, payload = session.payload.copy(questions = List(Assessments.MAX_QUESTIONS + 1) { q.copy(id = "q$it") }, answers = emptyMap())))))
     }
+    @Test fun `timed sessions roundtrip and may finish unanswered only after their deadline`() {
+        val qs = listOf(q, q.copy(id = "q2"))
+        val timed = BackupAssessment("timed", "fi", 1000, 1000 + 120_000, AssessmentPayload(listOf(topic), qs, mapOf("q" to "a"), timeLimitMinutes = 2))
+        val value = backup(listOf(timed))
+        assertEquals(value, BackupCodec.parse(BackupCodec.encode(value)))
+        rejected(backup(listOf(timed.copy(finishedAt = 1000 + 119_999))))
+        rejected(backup(listOf(timed.copy(payload = timed.payload.copy(timeLimitMinutes = null)))))
+        rejected(backup(listOf(timed.copy(payload = timed.payload.copy(timeLimitMinutes = 0)))))
+        assertFalse(BackupCodec.encode(backup()).contains("timeLimitMinutes"))
+    }
     @Test fun `unknown nested fields and injected result percentages are rejected`() {
         val json = BackupCodec.encode(backup()).replace("\"position\":0", "\"accuracy\":100,\"position\":0")
         try { BackupCodec.parse(json); fail("Unrecognised result data accepted") } catch (e: BackupException) { assertEquals(BackupProblem.INVALID, e.problem) }

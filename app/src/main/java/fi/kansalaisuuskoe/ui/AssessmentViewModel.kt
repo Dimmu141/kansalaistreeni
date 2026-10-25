@@ -54,7 +54,8 @@ class AssessmentViewModel(private val repository: AssessmentRepository) : ViewMo
         }
     }
     fun retry() { pending?.let { write(pendingError, it) } ?: load() }
-    fun start(language: StudyLanguage, open: (String) -> Unit) = write { open(repository.start(language)) }
+    fun start(language: StudyLanguage, length: Int, timed: Boolean, open: (String) -> Unit) =
+        write { open(repository.start(language, length = length, timed = timed)) }
     fun select(id: String, questionId: String, optionId: String) = write { repository.select(id, questionId, optionId) }
     fun move(id: String, position: Int) = write { repository.move(id, position) }
     fun finish(id: String) = write { repository.finish(id) }

@@ -1,6 +1,12 @@
 package fi.kansalaisuuskoe.ui
 
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.lazy.items
@@ -11,12 +17,16 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.unit.dp
 import fi.kansalaisuuskoe.R
 import fi.kansalaisuuskoe.domain.*
+import kotlinx.coroutines.delay
 
 @Composable
 private fun AssessmentStatus(state: AssessmentUiState, retry: () -> Unit) {
@@ -28,10 +38,15 @@ private fun AssessmentStatus(state: AssessmentUiState, retry: () -> Unit) {
 }
 
 @Composable
-internal fun AssessmentsScreen(state: AssessmentUiState, app: AppUiState, start: () -> Unit, open: (String) -> Unit, retry: () -> Unit, delete: (AssessmentSession) -> Unit) {
+internal fun AssessmentsScreen(state: AssessmentUiState, app: AppUiState, start: (Int, Boolean) -> Unit, open: (String) -> Unit, retry: () -> Unit, delete: (AssessmentSession) -> Unit) {
     val sessions = state.sessions.filter { it.language == app.settings.studyLanguage.tag }
     val active = sessions.firstOrNull { !it.complete }
-    val count = minOf(ExamProfile.CURRENT.questionCount, app.studySnapshot.questions.size)
+    val available = app.studySnapshot.questions.size
+    // Offer only lengths the installed material can fill; small material gets one length of everything.
+    val lengths = Assessments.LENGTHS.filter { it <= available }.ifEmpty { listOf(available) }
+    var wanted by rememberSaveable { mutableIntStateOf(ExamProfile.CURRENT.questionCount) }
+    var timed by rememberSaveable { mutableStateOf(false) }
+    val count = lengths.lastOrNull { it <= wanted } ?: lengths.first()
     Page {
         item { Heading(stringResource(R.string.assessment_title), stringResource(R.string.assessment_intro)) }
         item { StudyScope(app) }
@@ -42,9 +57,11 @@ internal fun AssessmentsScreen(state: AssessmentUiState, app: AppUiState, start:
             item { AssessmentStatus(state, retry) }
             item { AssessmentDeleteAction(active, state.busy || state.loading, delete) }
         } else if (count > 0) {
+            if (lengths.size > 1) item { LengthChoice(lengths, count) { wanted = it } }
+            item { TimeLimitChoice(timed, count * Assessments.MINUTES_PER_QUESTION) { timed = it } }
             item { AssessmentStatus(state, retry) }
-            item { Text(stringResource(R.string.assessment_length, pluralStringResource(R.plurals.question_count, count, count))) }
-            item { KsButton(stringResource(R.string.assessment_start), start, Modifier.fillMaxWidth(), enabled = !state.busy && !state.loading) }
+            item { KsButton(stringResource(R.string.assessment_start), { start(count, timed) },
+                Modifier.fillMaxWidth(), enabled = !state.busy && !state.loading) }
         } else {
             item { AssessmentStatus(state, retry) }
             item { Text(stringResource(R.string.language_empty_body)) }
@@ -56,10 +73,64 @@ internal fun AssessmentsScreen(state: AssessmentUiState, app: AppUiState, start:
             KsCard(onClick = { open(session.id) }) {
                 Text(formatDateTime(requireNotNull(session.finishedAt)), style = KsType.caption, color = Ks.colors.inkMuted)
                 Text(stringResource(R.string.assessment_score, result.correct, result.total, result.accuracy), style = KsType.title.copy(fontFeatureSettings = "tnum"))
+                session.timeLimitMinutes?.let { Text(stringResource(R.string.assessment_time_limit_used, it), style = KsType.caption, color = Ks.colors.inkMuted) }
                 Text(stringResource(R.string.assessment_view_result), style = KsType.body, color = Ks.colors.brand)
             }
         }
     }
+}
+
+/** Question-count choice styled like the study-language switch: a raised thumb on a `surface-2` track. */
+@Composable
+private fun LengthChoice(lengths: List<Int>, selected: Int, choose: (Int) -> Unit) {
+    val c = Ks.colors
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(stringResource(R.string.assessment_length_title), style = KsType.title, modifier = Modifier.semantics { heading() })
+        Row(Modifier.fillMaxWidth().clip(CircleShape).background(c.surface2).padding(3.dp).selectableGroup()) {
+            lengths.forEach { length ->
+                val active = selected == length
+                val description = pluralStringResource(R.plurals.question_count, length, length)
+                val fill by animateColorAsState(if (active) c.surface1 else c.surface2, tween(KsMotion.SELECT), label = "length")
+                val ink by animateColorAsState(if (active) c.brand else c.inkMuted, tween(KsMotion.SELECT), label = "lengthText")
+                Surface(color = fill, contentColor = ink, shape = CircleShape, shadowElevation = if (active) 1.dp else 0.dp,
+                    modifier = Modifier.weight(1f).selectable(active, role = Role.RadioButton, onClick = { choose(length) }).semantics { contentDescription = description }) {
+                    Box(Modifier.heightIn(min = 48.dp), contentAlignment = Alignment.Center) {
+                        Text(length.toString(), style = KsType.label.copy(fontWeight = FontWeight.Bold, fontFeatureSettings = "tnum"))
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun TimeLimitChoice(timed: Boolean, minutes: Int, choose: (Boolean) -> Unit) {
+    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(stringResource(R.string.assessment_timer_title), style = KsType.title)
+            Text(stringResource(R.string.assessment_timer_note, minutes), style = MaterialTheme.typography.bodySmall)
+        }
+        Spacer(Modifier.width(8.dp))
+        Switch(checked = timed, onCheckedChange = choose, modifier = Modifier.semanticsLabel(stringResource(R.string.assessment_timer_title)))
+    }
+}
+
+/** Remaining time of a timed practice; when it reaches zero the attempt is finished as it stands. */
+@Composable
+private fun TimeLeftChip(session: AssessmentSession, deadline: Long, finish: () -> Unit) {
+    var now by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    LaunchedEffect(session.id) {
+        while (true) {
+            now = System.currentTimeMillis()
+            // The view model ignores a call while another write is running, so keep asking until the result opens.
+            if (now >= deadline) finish()
+            delay(1000)
+        }
+    }
+    val seconds = ((deadline - now).coerceAtLeast(0) + 999) / 1000
+    val description = stringResource(R.string.assessment_time_left_description, (seconds + 59) / 60)
+    KsChip(stringResource(R.string.assessment_time_left, "%d:%02d".format(seconds / 60, seconds % 60)), if (seconds <= 300) ChipTone.Birch else ChipTone.Brand,
+        modifier = Modifier.clearAndSetSemantics { contentDescription = description })
 }
 
 @Composable
@@ -93,6 +164,7 @@ internal fun AssessmentScreen(state: AssessmentUiState, sessionId: String, app: 
                 }
                 ProgressBar(session.answeredCount.toFloat() / session.questions.size)
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    session.deadline?.let { TimeLeftChip(session, it) { model.finish(session.id) } }
                     KsChip(stringResource(R.string.assessment_saved_progress, session.answeredCount, session.questions.size))
                     if (locale.language != session.language) KsChip(stringResource(if (session.language == "sv") R.string.question_language_swedish else R.string.question_language))
                 }
@@ -108,7 +180,7 @@ internal fun AssessmentScreen(state: AssessmentUiState, sessionId: String, app: 
             item { KsButton(stringResource(R.string.next_question), { model.move(session.id, session.position + 1) }, Modifier.fillMaxWidth(), enabled = selected != null && !state.busy) }
         }
         if (session.position > 0) item { OutlinedButton({ model.move(session.id, session.position - 1) }, Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled = !state.busy) { Text(stringResource(R.string.assessment_previous)) } }
-        item { Text(stringResource(R.string.assessment_exit_note), style = MaterialTheme.typography.bodySmall) }
+        item { Text(stringResource(if (session.timeLimitMinutes != null) R.string.assessment_exit_note_timed else R.string.assessment_exit_note), style = MaterialTheme.typography.bodySmall) }
     }
 }
 
@@ -121,6 +193,8 @@ private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, 
         item { Heading(stringResource(R.string.assessment_result_title), formatDateTime(requireNotNull(session.finishedAt))) }
         item { Text(stringResource(if (session.language == "sv") R.string.question_language_swedish else R.string.question_language)) }
         item { Text(stringResource(R.string.assessment_score, result.correct, result.total, result.accuracy), style = KsType.headline.copy(fontFeatureSettings = "tnum"), color = Ks.colors.brand, modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite }) }
+        session.timeLimitMinutes?.let { item { Text(stringResource(R.string.assessment_time_limit_used, it), style = KsType.caption, color = Ks.colors.inkMuted) } }
+        if (result.unanswered > 0) item { Text(pluralStringResource(R.plurals.assessment_unanswered, result.unanswered, result.unanswered)) }
         item { Text(stringResource(R.string.assessment_score_note), style = MaterialTheme.typography.bodyMedium) }
         if (result.mistakes.isEmpty()) item { Text(stringResource(R.string.assessment_all_correct)) }
         else {
@@ -143,16 +217,16 @@ private fun AssessmentResultScreen(session: AssessmentSession, app: AppUiState, 
         item { Heading(stringResource(R.string.assessment_answers)) }
         items(session.questions, key = { it.id }) { question ->
             var expanded by rememberSaveable(session.id, question.id) { mutableStateOf(false) }
-            val selected = question.options.first { it.id == session.answers[question.id] }
+            val selected = session.answers[question.id]
             val correct = question.options.first { it.id == question.correctOptionId }
             val expandedLabel = stringResource(if (expanded) R.string.recap_expanded else R.string.recap_collapsed)
             val readLabel = stringResource(R.string.recap_read_label, question.text)
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 HorizontalDivider(color = Ks.colors.line)
                 StudyText(question.text, question.language, KsType.title, Modifier.semantics { heading() })
-                Text(stringResource(if (selected.id == correct.id) R.string.answer_correct else R.string.answer_incorrect), style = KsType.label,
-                    color = if (selected.id == correct.id) Ks.colors.correct else Ks.colors.miss)
-                AnswerOutcome(question, selected.id, correct.id)
+                Text(stringResource(when (selected) { correct.id -> R.string.answer_correct; null -> R.string.assessment_no_answer; else -> R.string.answer_incorrect }), style = KsType.label,
+                    color = if (selected == correct.id) Ks.colors.correct else Ks.colors.miss)
+                AnswerOutcome(question, selected, correct.id)
                 OutlinedButton({ expanded = !expanded }, Modifier.fillMaxWidth().heightIn(min = 56.dp).semantics {
                     stateDescription = expandedLabel
                     contentDescription = readLabel

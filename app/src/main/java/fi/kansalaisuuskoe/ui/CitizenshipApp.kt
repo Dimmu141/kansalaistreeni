@@ -99,7 +99,7 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                     composable("assessments") {
                         val assessmentModel: AssessmentViewModel = viewModel(factory = viewModelFactory { initializer { AssessmentViewModel(container.assessments) } })
                         val assessmentState by assessmentModel.state.collectAsStateWithLifecycle()
-                        AssessmentsScreen(assessmentState, state, { assessmentModel.start(state.settings.studyLanguage) { nav.navigate("assessment/$it") } }, { nav.navigate("assessment/$it") }, assessmentModel::retry, { assessmentModel.delete(it) })
+                        AssessmentsScreen(assessmentState, state, { length, timed -> assessmentModel.start(state.settings.studyLanguage, length, timed) { nav.navigate("assessment/$it") } }, { nav.navigate("assessment/$it") }, assessmentModel::retry, { assessmentModel.delete(it) })
                     }
                     composable("assessment/{sessionId}") { backStack ->
                         val assessmentModel: AssessmentViewModel = viewModel(viewModelStoreOwner = backStack, factory = viewModelFactory { initializer { AssessmentViewModel(container.assessments) } })

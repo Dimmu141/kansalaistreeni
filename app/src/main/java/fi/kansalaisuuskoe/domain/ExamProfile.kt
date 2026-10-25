@@ -4,8 +4,10 @@ package fi.kansalaisuuskoe.domain
  * The single description of the exam format that practice assessments imitate: length, format mix,
  * pass mark and time limit. Migri has not published the official format, so the app uses [UNKNOWN]:
  * our own practice length and mix, no pass mark and no time limit, and therefore no pass/fail verdict
- * or timer anywhere. When the official format is published, only [CURRENT] and a content package
- * should need to change; the verdict and timer UI is to be built against that real profile.
+ * from the profile. The learner may still choose a length and their own practice time limit
+ * ([AssessmentSession.timeLimitMinutes]); neither is presented as the official format. When the
+ * official format is published, only [CURRENT] and a content package should need to change; the
+ * verdict UI is to be built against that real profile.
  */
 data class ExamProfile(
     val id: String,

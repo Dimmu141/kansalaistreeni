@@ -130,7 +130,10 @@ object BackupCodec {
         require(payload.questions.all { it.language == session.language })
         val questions = payload.questions.associateBy { it.id }
         payload.answers.forEach { (id, answer) -> require(questions[id]?.options?.any { it.id == answer } == true) }
-        if (session.finishedAt != null) require(payload.answers.size == payload.questions.size)
+        payload.timeLimitMinutes?.let { require(it in 1..Assessments.MAX_QUESTIONS * Assessments.MINUTES_PER_QUESTION) }
+        // Only a timed session that ran out of time may finish with unanswered questions.
+        if (session.finishedAt != null && payload.answers.size != payload.questions.size)
+            require(payload.timeLimitMinutes != null && session.finishedAt >= session.startedAt + payload.timeLimitMinutes * 60_000L)
     }
 }
 

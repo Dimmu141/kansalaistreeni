@@ -72,6 +72,31 @@ class AssessmentTest {
         assertEquals(0, Assessments.move(Assessments.move(session(), 2), 0).position)
     }
     @Test(expected = IllegalArgumentException::class) fun `invalid position is rejected`() { Assessments.move(session(), 3) }
+    @Test fun `queue honours a chosen length`() {
+        val pool = (0..49).map { q.copy(id = "q$it", topicId = if (it % 2 == 0) "one" else "two") }
+        assertEquals(40, Assessments.queue(pool, "fi", Random(5), count = 40).size)
+        assertEquals(30, Assessments.queue(pool, "fi", Random(5), count = 30).map { it.id }.distinct().size)
+        assertTrue(Assessments.MAX_QUESTIONS >= Assessments.LENGTHS.max())
+    }
+    @Test fun `untimed session never expires`() {
+        assertNull(session().deadline)
+        assertFalse(session().expired(Long.MAX_VALUE))
+    }
+    @Test fun `timed session ends at its deadline and finishes with unanswered questions counted wrong`() {
+        val timed = session().copy(timeLimitMinutes = 3, answers = mapOf("q" to "yes"))
+        assertEquals(1000 + 180_000L, timed.deadline)
+        assertFalse(timed.expired(180_999)); assertTrue(timed.expired(181_000))
+        val result = Assessments.result(Assessments.finish(timed, 181_000))
+        assertEquals(1 to 3, result.correct to result.total)
+        assertEquals(2, result.unanswered)
+        assertEquals(listOf("second", "third"), result.mistakes.map { it.id })
+    }
+    @Test(expected = IllegalArgumentException::class) fun `timed session cannot finish unanswered before its deadline`() {
+        Assessments.finish(session().copy(timeLimitMinutes = 3), 2000)
+    }
+    @Test(expected = IllegalStateException::class) fun `answers are refused after the deadline`() {
+        Assessments.select(session().copy(timeLimitMinutes = 1), "q", "yes", now = 61_000)
+    }
     @Test fun `follow up excludes removed revised and silently changed facts`() {
         val old = finished()
         assertTrue(Assessments.practiceMistakes(old, listOf(q)).isEmpty())

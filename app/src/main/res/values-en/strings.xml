@@ -246,11 +246,22 @@
     <string name="backup_restore_error">Restoration failed. Your current data is intact. You can retry the restore.</string>
     <string name="assessment_title">Practice assessment</string>
     <string name="assessment_intro">Check what you have learned across topics. This is an app practice exercise, not the official citizenship test.</string>
-    <string name="assessment_rules">No time limit. You can change answers before finishing. Answers and explanations appear only at the end. Your choices are saved automatically on this device.</string>
+    <string name="assessment_rules">You can change answers before finishing. Answers and explanations appear only at the end. Your choices are saved automatically on this device.</string>
     <string name="assessment_saved_progress">Saved answers: %1$d / %2$d</string>
     <string name="assessment_resume">Resume assessment</string>
-    <string name="assessment_length">This exercise has %1$s in your study language, drawn from the installed material.</string>
     <string name="assessment_start">Start assessment</string>
+    <string name="assessment_length_title">Number of questions</string>
+    <string name="assessment_timer_title">Time limit</string>
+    <string name="assessment_timer_note">Your own practice setting, not an official exam rule: %1$d minutes, one minute per question. Time keeps running while the app is closed. When time runs out, the assessment ends and unanswered questions count as wrong.</string>
+    <string name="assessment_time_left">Time %1$s</string>
+    <string name="assessment_time_left_description">About %1$d min left</string>
+    <string name="assessment_exit_note_timed">You can leave and resume later from the assessment page, but the time keeps running.</string>
+    <string name="assessment_time_limit_used">Time limit %1$d min</string>
+    <string name="assessment_no_answer">No answer</string>
+    <plurals name="assessment_unanswered">
+        <item quantity="one">Time ran out. %d question was left unanswered and counts as wrong.</item>
+        <item quantity="other">Time ran out. %d questions were left unanswered and count as wrong.</item>
+    </plurals>
     <string name="assessment_history">Past assessments</string>
     <string name="assessment_storage_note">Assessments are saved on this device. You can include them in a backup.</string>
     <string name="assessment_history_empty">Completed assessments and their results will appear here.</string>
