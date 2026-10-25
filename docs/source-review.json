@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageId": "fi-civics-demo",
-  "version": 8,
+  "version": 9,
   "officialMaterialStatus": {
     "checkedAt": "2026-10-07",
     "sourceUrl": "https://migri.fi/ukk-suomen-kansalaisuus",
@@ -4211,7 +4211,7 @@
     },
     {
       "questionId": "dig-id-tools",
-      "sha256": "1ec3ed22f186ea3d5115d7ce3af4e090d13879af7140d5d2f86d8dcd5171faaf",
+      "sha256": "211279e0d1aca7ab3bd74dca816fe4e808c6a0a041213448fcf4afeea0c657cb",
       "sourceUrl": "https://www.suomi.fi/ohjeet-ja-tuki/tunnistus/tietoa-suomi-fi-tunnistuksessa-kaytossa-olevista-tunnistusvalineista",
       "evidenceUrl": "https://www.suomi.fi/ohjeet-ja-tuki/tunnistus/tietoa-suomi-fi-tunnistuksessa-kaytossa-olevista-tunnistusvalineista",
       "locator": "Tietoa Suomi.fi-tunnistuksessa käytössä olevista tunnistusvälineistä",
@@ -4219,11 +4219,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-id-tools-sv",
-      "sha256": "dbff0b5973f214269f71619cbf550a37f06be74e1b62c6df63fc143719bd4894",
+      "sha256": "b15cd09e9b3e030e381cc3419f58d1247156165b1a9f56efc02b366356903b33",
       "sourceUrl": "https://www.suomi.fi/anvisningar-och-stod/identifikation/information-om-identifieringsverktyg-som-anvands-vid-suomi-fi-identifikation",
       "evidenceUrl": "https://www.suomi.fi/anvisningar-och-stod/identifikation/information-om-identifieringsverktyg-som-anvands-vid-suomi-fi-identifikation",
       "locator": "Information om identifieringsverktyg som används vid Suomi.fi-identifikation",
@@ -4231,11 +4231,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-id-authenticator",
-      "sha256": "54362f4763595393354b69571bf53b536482a44c755e215a8385a9387600df59",
+      "sha256": "d3e37810d7b1ba542229d6e0dcfa806d8ebe2c48c84bbd92865952c240a6f5b4",
       "sourceUrl": "https://www.suomi.fi/ohjeet-ja-tuki/tunnistus/tietoa-suomi-fi-tunnistuksessa-kaytossa-olevista-tunnistusvalineista",
       "evidenceUrl": "https://www.suomi.fi/ohjeet-ja-tuki/tunnistus/tietoa-suomi-fi-tunnistuksessa-kaytossa-olevista-tunnistusvalineista",
       "locator": "Tietoa Suomi.fi-tunnistuksessa käytössä olevista tunnistusvälineistä",
@@ -4243,11 +4243,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-id-authenticator-sv",
-      "sha256": "2ffeaa164910f9e064f4cbf20425b1c305e1379919d1a24c0ea3bffc7b078b80",
+      "sha256": "937998c28748a2d20ef43bf5b65c2d9f4e48441c136fe166852c6d41093b99e2",
       "sourceUrl": "https://www.suomi.fi/anvisningar-och-stod/identifikation/information-om-identifieringsverktyg-som-anvands-vid-suomi-fi-identifikation",
       "evidenceUrl": "https://www.suomi.fi/anvisningar-och-stod/identifikation/information-om-identifieringsverktyg-som-anvands-vid-suomi-fi-identifikation",
       "locator": "Information om identifieringsverktyg som används vid Suomi.fi-identifikation",
@@ -4255,7 +4255,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-id-logout",
@@ -4307,7 +4307,7 @@
     },
     {
       "questionId": "dig-id-never-ask",
-      "sha256": "b4654a004bf1e0e5d4857e4fb6c976f44cf5b4a9c9217dbc9570553361d4b5b7",
+      "sha256": "95a8d0bf966b0fcec12658feea48d12e40fced7b71cad3ba4a82b9b9d604cbd2",
       "sourceUrl": "https://poliisi.fi/-/poliisi-varoittaa-pankkien-nimissa-tehdyista-petoksista",
       "evidenceUrl": "https://poliisi.fi/-/poliisi-varoittaa-pankkien-nimissa-tehdyista-petoksista",
       "locator": "Poliisi varoittaa pankkien nimissä tehdyistä petoksista",
@@ -4315,11 +4315,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-id-never-ask-sv",
-      "sha256": "c00b39d95027d9025dbb0216abf1c858c9d1948d2c304f66739f894662d3aaad",
+      "sha256": "c8d2cdedffa396ff468f7c49bce30a47cf2ce3381abe5413c46f7ede0b2f6445",
       "sourceUrl": "https://poliisi.fi/sv/-/polisen-varnar-for-bedragerier-som-utfors-i-bankers-namn",
       "evidenceUrl": "https://poliisi.fi/sv/-/polisen-varnar-for-bedragerier-som-utfors-i-bankers-namn",
       "locator": "Polisen varnar för bedrägerier som utförs i bankers namn",
@@ -4327,11 +4327,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-authorisation",
-      "sha256": "d139c9f334836f9ea5eb362707d8b9cdae2ce72fade1aabafcf24c4b6201d980",
+      "sha256": "781953d16da5f1003cc9d400c63ac5bc2746bec6292db35c6466fb47982abf34",
       "sourceUrl": "https://www.suomi.fi/ohjeet-ja-tuki/valtuudet/mika-on-suomifi-valtuudet",
       "evidenceUrl": "https://www.suomi.fi/ohjeet-ja-tuki/valtuudet/mika-on-suomifi-valtuudet",
       "locator": "Mikä on Suomi.fi-valtuudet?",
@@ -4339,11 +4339,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-authorisation-sv",
-      "sha256": "8593c05b95ca5457dfceb9dbc8294b9ed886a1f97f2a4bed21caec460a0c0ee6",
+      "sha256": "dcd07ebdd6e6aae042134c0508f5e824ced01b9af46e27a1bb05626e83a0e9a3",
       "sourceUrl": "https://www.suomi.fi/anvisningar-och-stod/fullmakter/vad-ar-suomifi-fullmakter",
       "evidenceUrl": "https://www.suomi.fi/anvisningar-och-stod/fullmakter/vad-ar-suomifi-fullmakter",
       "locator": "Vad är Suomi.fi-fullmakter?",
@@ -4351,7 +4351,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-authorisation-ids",
@@ -4379,7 +4379,7 @@
     },
     {
       "questionId": "dig-messages",
-      "sha256": "35f2c3e474eb056baeaa90924601bf86925bcc8d77a8e0c539143314c248139a",
+      "sha256": "70aadd60350f67d04085605e5de1bae44c763abfcbc7815c1d3d0caeed07e990",
       "sourceUrl": "https://www.suomi.fi/ohjeet-ja-tuki/viestit/mika-on-suomifi-viestit",
       "evidenceUrl": "https://www.suomi.fi/ohjeet-ja-tuki/viestit/mika-on-suomifi-viestit",
       "locator": "Mikä on Suomi.fi-viestit?",
@@ -4387,11 +4387,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-messages-sv",
-      "sha256": "4de68f84fb918fcfe6ccf46c8adb74c2813173f133dcbe8340aac62405cfb1fe",
+      "sha256": "d0b92748420bb4b0108629289def4a83573446f9a9c9577ddc64bc18312cc94c",
       "sourceUrl": "https://www.suomi.fi/anvisningar-och-stod/meddelanden/vad-ar-suomifi-meddelanden",
       "evidenceUrl": "https://www.suomi.fi/anvisningar-och-stod/meddelanden/vad-ar-suomifi-meddelanden",
       "locator": "Vad är Suomi.fi-meddelanden?",
@@ -4399,7 +4399,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-messages-mailbox",
@@ -4451,7 +4451,7 @@
     },
     {
       "questionId": "dig-omavero-children",
-      "sha256": "c76f643d8f0e831714944475353b758b435bfcfa43068f27b36eefba9d796090",
+      "sha256": "cb6bab8ac37841350eda2c909ed55870c0d9f1b5c74816d859ff64a99f78124f",
       "sourceUrl": "https://www.vero.fi/tietoa-verohallinnosta/yhteystiedot-ja-asiointi/asioi-verkossa/tietoa-omaverosta/",
       "evidenceUrl": "https://www.vero.fi/tietoa-verohallinnosta/yhteystiedot-ja-asiointi/asioi-verkossa/tietoa-omaverosta/",
       "locator": "Tietoa OmaVerosta",
@@ -4459,11 +4459,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-omavero-children-sv",
-      "sha256": "111cda35f565bf3a27ab62ba5e0274a7c45eb3f38184b04ae1216ace7311210a",
+      "sha256": "221f1d08ddfa05173e342ae9831f5382d161d31f2f16188c2eeac3ea2d3cd5e3",
       "sourceUrl": "https://www.vero.fi/sv/skatteforvaltningen/kontakta-oss/etjanster/information-om-minskatt/",
       "evidenceUrl": "https://www.vero.fi/sv/skatteforvaltningen/kontakta-oss/etjanster/information-om-minskatt/",
       "locator": "Information om MinSkatt",
@@ -4471,11 +4471,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-move-online",
-      "sha256": "a174bd0e91fa8d4bd474b75628ebd10fcfaa61c674cb81320107c71d22457409",
+      "sha256": "4f2ebc27a6d506768b77ed845449e5da5c6a83ebfdf642acb86f6ae546ca5857",
       "sourceUrl": "https://dvv.fi/muutto-suomessa",
       "evidenceUrl": "https://dvv.fi/muutto-suomessa",
       "locator": "Muuttoilmoitus",
@@ -4483,11 +4483,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-move-online-sv",
-      "sha256": "b87183b102e6176c19da79c95d106ea64106fe22a720b40e0d28eb07c574604c",
+      "sha256": "9fcbfaf7aa083616cddb6934b78ec090d67dcf46f1b7992673efda8e0c602bc7",
       "sourceUrl": "https://dvv.fi/sv/flytt-i-finland",
       "evidenceUrl": "https://dvv.fi/sv/flytt-i-finland",
       "locator": "Flyttanmälan",
@@ -4495,7 +4495,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-move-always",
@@ -4571,7 +4571,7 @@
     },
     {
       "questionId": "dig-omakanta",
-      "sha256": "905f80cc80358a47613ea53f5256fc52b2830a6046c756b9bcaed6b51471a048",
+      "sha256": "4cf002cf2baaab438f85fc1257c7474c170a4101054ea8fdabaac14bcaa785ed",
       "sourceUrl": "https://www.kanta.fi/omakanta",
       "evidenceUrl": "https://www.kanta.fi/omakanta",
       "locator": "OmaKanta",
@@ -4579,11 +4579,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-omakanta-sv",
-      "sha256": "32642081c2462538047fed4ef5ae6c6262801ecd6f94e47681a360d97a96cfa3",
+      "sha256": "26a850d65a9784ce28f7f327662fbec9e6e85554bd589ada161433204d517687",
       "sourceUrl": "https://www.kanta.fi/sv/mittkanta",
       "evidenceUrl": "https://www.kanta.fi/sv/mittkanta",
       "locator": "MittKanta",
@@ -4591,11 +4591,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-renew-condition",
-      "sha256": "d0be3c191d53912b7992e9313705d859a6bf1f72a09b3ef8b30011b8819eb794",
+      "sha256": "eead97fc6baba8f2a7402f4d7a6b5fcb004edac7d0d11b46205873ae9e73e089",
       "sourceUrl": "https://www.kanta.fi/reseptit-ja-uusiminen",
       "evidenceUrl": "https://www.kanta.fi/reseptit-ja-uusiminen",
       "locator": "Usein kysyttyä resepteistä ja reseptien uusimisesta",
@@ -4603,11 +4603,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-renew-condition-sv",
-      "sha256": "d3212ca3d37ed9db95aad4cd6cb8b5376ecab3a75024427e2749a8ccc35e9ff3",
+      "sha256": "10e4c7c26b037db8e799257067dc43be83c17db53a337a4b245720fd808a4c86",
       "sourceUrl": "https://www.kanta.fi/sv/recept-och-fornyelse-av-dem",
       "evidenceUrl": "https://www.kanta.fi/sv/recept-och-fornyelse-av-dem",
       "locator": "Vanliga frågor om förnyelse av recept",
@@ -4615,11 +4615,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-kanta-access",
-      "sha256": "8da4b9f96a4de5ac7b670f52d82ddc88738ef02e17d72cbac738bf313947459c",
+      "sha256": "8b2ccafa7458e3f28cc9f8ca8d97b9dfd55992bf42cc736ce6ff36d4b35cb789",
       "sourceUrl": "https://www.kanta.fi/mita-kanta-palvelut-ovat",
       "evidenceUrl": "https://www.kanta.fi/mita-kanta-palvelut-ovat",
       "locator": "Mitä Kanta-palvelut ovat? / Käyttö on turvallista",
@@ -4627,11 +4627,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-kanta-access-sv",
-      "sha256": "6274a8cd00e8573216ee7ccfe0a690b3879c6e5b9ac60179eecbadeb2215bca0",
+      "sha256": "517bae08dbbfda82ae5c65f6031e0084407b6c4cdfbbacf4a834e7e23df7046c",
       "sourceUrl": "https://www.kanta.fi/sv/vad-ar-kanta-tjansterna",
       "evidenceUrl": "https://www.kanta.fi/sv/vad-ar-kanta-tjansterna",
       "locator": "Vad är Kanta-tjänsterna? / Användningen är säker",
@@ -4639,11 +4639,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-scam-hurry",
-      "sha256": "75a49ba60a29bea69537a5b48ea9c240532cf8051c31c2629cb1572db289c4ba",
+      "sha256": "aa97bbeed0df90b846b1f89a911d6ce6fc6d7e263d25befbb4fff577788757d6",
       "sourceUrl": "https://www.kanta.fi/tietoa-huijauksista",
       "evidenceUrl": "https://www.kanta.fi/tietoa-huijauksista",
       "locator": "Tietoa huijauksista",
@@ -4651,11 +4651,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-scam-hurry-sv",
-      "sha256": "093bbbd98e16004ab0f964e9b14392db0de268720d6aee85628d477b0dcb2455",
+      "sha256": "4e5ef79f9ebea45e0f9680daeedcfa7340cbceb0be7b826be212c14bdae88a18",
       "sourceUrl": "https://www.kanta.fi/sv/information-om-bedragerier",
       "evidenceUrl": "https://www.kanta.fi/sv/information-om-bedragerier",
       "locator": "Information om bedrägerier",
@@ -4663,11 +4663,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-scam-respond",
-      "sha256": "31884dcd69371564023c3826f6131d9d72ef25fe0eec90c79d93745198a9bcf5",
+      "sha256": "deabb11f1ab2868f4287c2cb2e6959d2e3704d329e8ca5dd14038f842ab82e31",
       "sourceUrl": "https://www.kanta.fi/tietoa-huijauksista",
       "evidenceUrl": "https://www.kanta.fi/tietoa-huijauksista",
       "locator": "Mitä tehdä, jos joudut tietojenkalasteluyrityksen kohteeksi?",
@@ -4675,11 +4675,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-scam-respond-sv",
-      "sha256": "62ecaa31e5e7127da60dd37279a1f316ad20123da55dd1aee32eab032690773f",
+      "sha256": "78f92688bbbb5c81ec2aaad6c2bad66deab7ade6a7dd4b498c6a8461bdddf427",
       "sourceUrl": "https://www.kanta.fi/sv/information-om-bedragerier",
       "evidenceUrl": "https://www.kanta.fi/sv/information-om-bedragerier",
       "locator": "Vad ska du göra om du blir utsatt för försök till nätfiske?",
@@ -4687,11 +4687,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-scam-bank-first",
-      "sha256": "76c5c2a4ba78ca05b8d8a16d255ee03a7f62ff22373db07962bfd45b1a56fc23",
+      "sha256": "6bf6259ad70d126003f4b253f8ea9e34c07d87bfd2141d2ab2a5a2652c719a5f",
       "sourceUrl": "https://www.kanta.fi/tietoa-huijauksista",
       "evidenceUrl": "https://www.kanta.fi/tietoa-huijauksista",
       "locator": "Tietoa huijauksista",
@@ -4699,11 +4699,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-scam-bank-first-sv",
-      "sha256": "f99a622dce8af0d0ea0ca415f54cb468e3c5720f104b10a259825e53cf45c91e",
+      "sha256": "2043f66987339262fdba4e2503a3753c0d4625474cfe60b47ea69679c355cfb7",
       "sourceUrl": "https://www.kanta.fi/sv/information-om-bedragerier",
       "evidenceUrl": "https://www.kanta.fi/sv/information-om-bedragerier",
       "locator": "Information om bedrägerier",
@@ -4711,7 +4711,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-scam-genuine",
@@ -4787,7 +4787,7 @@
     },
     {
       "questionId": "dig-data-ombudsman",
-      "sha256": "3a12a0732d72207402c4603ca314df35e2929ca1ba63edc49c601a0fc19d3536",
+      "sha256": "acc7f1f247c165d22021ea5bfceb6d9f042df4f952e8b5732c72bb5f0ca23789",
       "sourceUrl": "https://tietosuoja.fi/kun-haluat-tarkastaa-tietosi",
       "evidenceUrl": "https://tietosuoja.fi/kun-haluat-tarkastaa-tietosi",
       "locator": "Toimi näin",
@@ -4795,11 +4795,11 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     },
     {
       "questionId": "dig-data-ombudsman-sv",
-      "sha256": "8a035bd659a59a7cb6f96cf14b9e1a1aad2a977582cc222b3a218e9b1b581a33",
+      "sha256": "350ea1b8f01a9541db649da37bc0ff71f0d3656b07787d25765da316f20c4125",
       "sourceUrl": "https://tietosuoja.fi/sv/nar-du-vill-granska-dina-uppgifter",
       "evidenceUrl": "https://tietosuoja.fi/sv/nar-du-vill-granska-dina-uppgifter",
       "locator": "Gör så här",
@@ -4807,7 +4807,7 @@
       "checkedAt": "2026-10-08",
       "reviewType": "ASSISTANT_SOURCE_CHECK",
       "publicationApproved": false,
-      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending."
+      "notes": "App-authored EDITORIAL wording at about B1 level, checked by the assistant against the cited official page on 2026-10-08. Specialist Finnish, Swedish, English and easy-language review and human publication approval are pending. 2026-10-25: answer options rewritten so that the correct option is not recognisable by length; distractors were checked by the assistant against the cited source as incorrect. The correct answer is unchanged."
     }
   ],
   "lessonReviews": [

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "packageId": "fi-civics-demo",
-  "version": 8,
+  "version": 9,
   "status": "EDITORIAL",
   "topics": [
     {
@@ -27325,13 +27325,13 @@
     },
     {
       "id": "dig-id-tools",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Millä voit tunnistautua Suomi.fi-tunnistusta käyttäviin verkkopalveluihin?",
       "options": [
         {
           "id": "a",
-          "text": "Pelkällä sähköpostiosoitteella"
+          "text": "Sähköpostiosoitteella ja siihen lähetettävällä kertakoodilla"
         },
         {
           "id": "b",
@@ -27339,11 +27339,11 @@
         },
         {
           "id": "c",
-          "text": "Puhelinnumerolla ja syntymäajalla"
+          "text": "Puhelinnumerolla ja henkilötunnuksen loppuosalla"
         },
         {
           "id": "d",
-          "text": "Kirjastokortilla"
+          "text": "Kirjastokortilla ja sen nelinumeroisella PIN-koodilla"
         }
       ],
       "correctOptionId": "b",
@@ -27378,7 +27378,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Only an e-mail address"
+              "text": "An e-mail address and a one-time code sent to it"
             },
             {
               "id": "b",
@@ -27386,11 +27386,11 @@
             },
             {
               "id": "c",
-              "text": "A phone number and date of birth"
+              "text": "A phone number and the last part of a personal identity code"
             },
             {
               "id": "d",
-              "text": "A library card"
+              "text": "A library card and its four-digit PIN"
             }
           ],
           "explanation": "Services using Suomi.fi identification accept, for example, Finnish bank IDs, a mobile certificate, the hightrust.id app or a certificate card."
@@ -27403,13 +27403,13 @@
     },
     {
       "id": "dig-id-tools-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Med vad kan du identifiera dig i e-tjänster som använder Suomi.fi-identifikation?",
       "options": [
         {
           "id": "a",
-          "text": "Endast med e-postadress"
+          "text": "Med e-postadress och en engångskod som skickas dit"
         },
         {
           "id": "b",
@@ -27417,11 +27417,11 @@
         },
         {
           "id": "c",
-          "text": "Med telefonnummer och födelsedatum"
+          "text": "Med telefonnummer och slutet av personbeteckningen"
         },
         {
           "id": "d",
-          "text": "Med bibliotekskort"
+          "text": "Med bibliotekskort och dess fyrsiffriga PIN-kod"
         }
       ],
       "correctOptionId": "b",
@@ -27455,7 +27455,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Only an e-mail address"
+              "text": "An e-mail address and a one-time code sent to it"
             },
             {
               "id": "b",
@@ -27463,11 +27463,11 @@
             },
             {
               "id": "c",
-              "text": "A phone number and date of birth"
+              "text": "A phone number and the last part of a personal identity code"
             },
             {
               "id": "d",
-              "text": "A library card"
+              "text": "A library card and its four-digit PIN"
             }
           ],
           "explanation": "Services using Suomi.fi identification accept, for example, Finnish bank IDs, a mobile certificate, the hightrust.id app or a certificate card."
@@ -27480,13 +27480,13 @@
     },
     {
       "id": "dig-id-authenticator",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Millä ulkomaalainen voi tunnistautua Suomi.fi-palveluihin, jos hänellä ei ole suomalaisia pankkitunnuksia?",
       "options": [
         {
           "id": "a",
-          "text": "Ulkomaisella ajokortilla"
+          "text": "Ulkomaisen ajokortin numerolla"
         },
         {
           "id": "b",
@@ -27498,7 +27498,7 @@
         },
         {
           "id": "d",
-          "text": "Ei mitenkään"
+          "text": "Ei mitenkään ilman suomalaisia tunnuksia"
         }
       ],
       "correctOptionId": "c",
@@ -27533,7 +27533,7 @@
           "options": [
             {
               "id": "a",
-              "text": "With a foreign driving licence"
+              "text": "With the number of a foreign driving licence"
             },
             {
               "id": "b",
@@ -27545,7 +27545,7 @@
             },
             {
               "id": "d",
-              "text": "Not at all"
+              "text": "Not at all without Finnish IDs"
             }
           ],
           "explanation": "Foreigners can identify themselves with the Finnish Authenticator app once they have taken it into use."
@@ -27558,13 +27558,13 @@
     },
     {
       "id": "dig-id-authenticator-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Med vad kan en utlänning utan finländska bankkoder identifiera sig i Suomi.fi-tjänsterna?",
       "options": [
         {
           "id": "a",
-          "text": "Med ett utländskt körkort"
+          "text": "Med numret på ett utländskt körkort"
         },
         {
           "id": "b",
@@ -27576,7 +27576,7 @@
         },
         {
           "id": "d",
-          "text": "Inte alls"
+          "text": "Inte alls utan finländska koder"
         }
       ],
       "correctOptionId": "c",
@@ -27610,7 +27610,7 @@
           "options": [
             {
               "id": "a",
-              "text": "With a foreign driving licence"
+              "text": "With the number of a foreign driving licence"
             },
             {
               "id": "b",
@@ -27622,7 +27622,7 @@
             },
             {
               "id": "d",
-              "text": "Not at all"
+              "text": "Not at all without Finnish IDs"
             }
           ],
           "explanation": "Foreigners can identify themselves with the Finnish Authenticator app once they have taken it into use."
@@ -27903,21 +27903,21 @@
     },
     {
       "id": "dig-id-never-ask",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Kuka saa kysyä sinulta pankkitunnuksiasi?",
       "options": [
         {
           "id": "a",
-          "text": "Pankki puhelimessa"
+          "text": "Oma pankkisi, jos se soittaa sinulle puhelimella"
         },
         {
           "id": "b",
-          "text": "Poliisi"
+          "text": "Poliisi, jos se tutkii tiliisi kohdistuvaa petosta"
         },
         {
           "id": "c",
-          "text": "Verohallinto sähköpostilla"
+          "text": "Verohallinto, jos se lähettää sinulle sähköpostia"
         },
         {
           "id": "d",
@@ -27951,15 +27951,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Your bank by phone"
+              "text": "Your own bank, if it calls you by phone"
             },
             {
               "id": "b",
-              "text": "The police"
+              "text": "The police, if they are investigating fraud on your account"
             },
             {
               "id": "c",
-              "text": "The Tax Administration by e-mail"
+              "text": "The Tax Administration, if it sends you an e-mail"
             },
             {
               "id": "d",
@@ -27976,21 +27976,21 @@
     },
     {
       "id": "dig-id-never-ask-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Vem får be dig om dina bankkoder?",
       "options": [
         {
           "id": "a",
-          "text": "Banken i telefon"
+          "text": "Din egen bank, om den ringer dig i telefon"
         },
         {
           "id": "b",
-          "text": "Polisen"
+          "text": "Polisen, om den utreder ett bedrägeri mot ditt konto"
         },
         {
           "id": "c",
-          "text": "Skatteförvaltningen per e-post"
+          "text": "Skatteförvaltningen, om den skickar dig e-post"
         },
         {
           "id": "d",
@@ -28023,15 +28023,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Your bank by phone"
+              "text": "Your own bank, if it calls you by phone"
             },
             {
               "id": "b",
-              "text": "The police"
+              "text": "The police, if they are investigating fraud on your account"
             },
             {
               "id": "c",
-              "text": "The Tax Administration by e-mail"
+              "text": "The Tax Administration, if it sends you an e-mail"
             },
             {
               "id": "d",
@@ -28048,7 +28048,7 @@
     },
     {
       "id": "dig-authorisation",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Mikä on Suomi.fi-valtuus?",
       "options": [
@@ -28058,15 +28058,15 @@
         },
         {
           "id": "b",
-          "text": "Paperinen henkilökortti"
+          "text": "Sähköinen henkilökortti, jolla tunnistaudut verkkopalveluihin"
         },
         {
           "id": "c",
-          "text": "Pankin lainasopimus"
+          "text": "Lupa, jolla viranomainen saa katsoa tietojasi ilman suostumusta"
         },
         {
           "id": "d",
-          "text": "Kunnan asukaskortti"
+          "text": "Kunnan myöntämä todistus vakituisesta asuinpaikasta"
         }
       ],
       "correctOptionId": "a",
@@ -28105,15 +28105,15 @@
             },
             {
               "id": "b",
-              "text": "A paper identity card"
+              "text": "An electronic ID card for identifying yourself online"
             },
             {
               "id": "c",
-              "text": "A bank loan agreement"
+              "text": "A permit letting an authority see your data without consent"
             },
             {
               "id": "d",
-              "text": "A municipal resident card"
+              "text": "A certificate from the municipality of your permanent residence"
             }
           ],
           "explanation": "A Suomi.fi authorisation is an electronic power of attorney whose details are stored in the authorisation register. It lets you act for another person or organisation."
@@ -28126,7 +28126,7 @@
     },
     {
       "id": "dig-authorisation-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Vad är en Suomi.fi-fullmakt?",
       "options": [
@@ -28136,15 +28136,15 @@
         },
         {
           "id": "b",
-          "text": "Ett identitetskort i papper"
+          "text": "Ett elektroniskt id-kort som du identifierar dig med på nätet"
         },
         {
           "id": "c",
-          "text": "Ett låneavtal med banken"
+          "text": "Ett tillstånd för en myndighet att se dina uppgifter utan samtycke"
         },
         {
           "id": "d",
-          "text": "Ett invånarkort från kommunen"
+          "text": "Ett intyg från kommunen om din stadigvarande bostadsort"
         }
       ],
       "correctOptionId": "a",
@@ -28182,15 +28182,15 @@
             },
             {
               "id": "b",
-              "text": "A paper identity card"
+              "text": "An electronic ID card for identifying yourself online"
             },
             {
               "id": "c",
-              "text": "A bank loan agreement"
+              "text": "A permit letting an authority see your data without consent"
             },
             {
               "id": "d",
-              "text": "A municipal resident card"
+              "text": "A certificate from the municipality of your permanent residence"
             }
           ],
           "explanation": "A Suomi.fi authorisation is an electronic power of attorney whose details are stored in the authorisation register. It lets you act for another person or organisation."
@@ -28316,17 +28316,17 @@
     },
     {
       "id": "dig-messages",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Mitä saat Suomi.fi-viestien kautta?",
       "options": [
         {
           "id": "a",
-          "text": "Mainoksia kaupoista"
+          "text": "Mainoksia ja tarjouksia suomalaisista kaupoista"
         },
         {
           "id": "b",
-          "text": "Ilmaisia puheluita"
+          "text": "Ilmaisia puheluita viranomaisille"
         },
         {
           "id": "c",
@@ -28334,7 +28334,7 @@
         },
         {
           "id": "d",
-          "text": "Pankkilainoja"
+          "text": "Tekstiviestejä ystäviltäsi ja perheeltäsi"
         }
       ],
       "correctOptionId": "c",
@@ -28369,11 +28369,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Shop advertising"
+              "text": "Advertising and offers from Finnish shops"
             },
             {
               "id": "b",
-              "text": "Free phone calls"
+              "text": "Free phone calls to authorities"
             },
             {
               "id": "c",
@@ -28381,7 +28381,7 @@
             },
             {
               "id": "d",
-              "text": "Bank loans"
+              "text": "Text messages from friends and family"
             }
           ],
           "explanation": "Suomi.fi Messages delivers digital post from several authorities easily and securely to your phone."
@@ -28394,17 +28394,17 @@
     },
     {
       "id": "dig-messages-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Vad får du via Suomi.fi-meddelanden?",
       "options": [
         {
           "id": "a",
-          "text": "Reklam från butiker"
+          "text": "Reklam och erbjudanden från finländska butiker"
         },
         {
           "id": "b",
-          "text": "Gratis samtal"
+          "text": "Gratis samtal till myndigheter"
         },
         {
           "id": "c",
@@ -28412,7 +28412,7 @@
         },
         {
           "id": "d",
-          "text": "Banklån"
+          "text": "Sms från dina vänner och din familj"
         }
       ],
       "correctOptionId": "c",
@@ -28446,11 +28446,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Shop advertising"
+              "text": "Advertising and offers from Finnish shops"
             },
             {
               "id": "b",
-              "text": "Free phone calls"
+              "text": "Free phone calls to authorities"
             },
             {
               "id": "c",
@@ -28458,7 +28458,7 @@
             },
             {
               "id": "d",
-              "text": "Bank loans"
+              "text": "Text messages from friends and family"
             }
           ],
           "explanation": "Suomi.fi Messages delivers digital post from several authorities easily and securely to your phone."
@@ -28729,21 +28729,21 @@
     },
     {
       "id": "dig-omavero-children",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Kenen veroasioita voit hoitaa OmaVerossa ilman erillistä valtuutta?",
       "options": [
         {
           "id": "a",
-          "text": "Vain naapurisi"
+          "text": "Vain omasi ja aviopuolisosi"
         },
         {
           "id": "b",
-          "text": "Kenen tahansa suomalaisen"
+          "text": "Kenen tahansa, jonka henkilötunnuksen tiedät"
         },
         {
           "id": "c",
-          "text": "Vain työnantajasi"
+          "text": "Omasi ja täysi-ikäisten lastesi"
         },
         {
           "id": "d",
@@ -28782,15 +28782,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Only your neighbour's"
+              "text": "Only your own and your spouse's"
             },
             {
               "id": "b",
-              "text": "Any Finn's"
+              "text": "Anyone whose personal identity code you know"
             },
             {
               "id": "c",
-              "text": "Only your employer's"
+              "text": "Your own and your adult children's"
             },
             {
               "id": "d",
@@ -28807,21 +28807,21 @@
     },
     {
       "id": "dig-omavero-children-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Vems skatteärenden kan du sköta i MinSkatt utan en separat fullmakt?",
       "options": [
         {
           "id": "a",
-          "text": "Endast din grannes"
+          "text": "Bara dina egna och din makes eller makas"
         },
         {
           "id": "b",
-          "text": "Vilken finländares som helst"
+          "text": "Vem som helst vars personbeteckning du vet"
         },
         {
           "id": "c",
-          "text": "Endast din arbetsgivares"
+          "text": "Dina egna och dina myndiga barns"
         },
         {
           "id": "d",
@@ -28859,15 +28859,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Only your neighbour's"
+              "text": "Only your own and your spouse's"
             },
             {
               "id": "b",
-              "text": "Any Finn's"
+              "text": "Anyone whose personal identity code you know"
             },
             {
               "id": "c",
-              "text": "Only your employer's"
+              "text": "Your own and your adult children's"
             },
             {
               "id": "d",
@@ -28884,7 +28884,7 @@
     },
     {
       "id": "dig-move-online",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Missä muuttoilmoituksen voi tehdä verkossa?",
       "options": [
@@ -28894,15 +28894,15 @@
         },
         {
           "id": "b",
-          "text": "Kelan sivuilla"
+          "text": "Poliisin sähköisessä asiointipalvelussa, jossa haetaan myös passia"
         },
         {
           "id": "c",
-          "text": "Poliisin sivuilla"
+          "text": "Kunnan verkkosivuilla asukkaiden sähköisellä asiointilomakkeella"
         },
         {
           "id": "d",
-          "text": "Taloyhtiön verkkosivuilla"
+          "text": "Taloyhtiön isännöitsijätoimiston verkkosivuilla"
         }
       ],
       "correctOptionId": "a",
@@ -28936,15 +28936,15 @@
             },
             {
               "id": "b",
-              "text": "On Kela's website"
+              "text": "In the police e-service, where passports are also applied for"
             },
             {
               "id": "c",
-              "text": "On the police website"
+              "text": "On the municipality's website using a residents' online form"
             },
             {
               "id": "d",
-              "text": "On the housing company's website"
+              "text": "On the website of the housing company's management office"
             }
           ],
           "explanation": "A notification of move can be made in the joint online service of the Digital and Population Data Services Agency (DVV) and Posti, using Finnish bank IDs or a mobile certificate."
@@ -28957,7 +28957,7 @@
     },
     {
       "id": "dig-move-online-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Var kan man göra flyttanmälan på nätet?",
       "options": [
@@ -28967,15 +28967,15 @@
         },
         {
           "id": "b",
-          "text": "På FPA:s webbplats"
+          "text": "I polisens e-tjänst, där man också ansöker om pass och identitetskort"
         },
         {
           "id": "c",
-          "text": "På polisens webbplats"
+          "text": "På kommunens webbplats med invånarnas elektroniska blankett"
         },
         {
           "id": "d",
-          "text": "På husbolagets webbplats"
+          "text": "På webbplatsen för husbolagets disponentbyrå"
         }
       ],
       "correctOptionId": "a",
@@ -29008,15 +29008,15 @@
             },
             {
               "id": "b",
-              "text": "On Kela's website"
+              "text": "In the police e-service, where passports are also applied for"
             },
             {
               "id": "c",
-              "text": "On the police website"
+              "text": "On the municipality's website using a residents' online form"
             },
             {
               "id": "d",
-              "text": "On the housing company's website"
+              "text": "On the website of the housing company's management office"
             }
           ],
           "explanation": "A notification of move can be made in the joint online service of the Digital and Population Data Services Agency (DVV) and Posti, using Finnish bank IDs or a mobile certificate."
@@ -29368,17 +29368,17 @@
     },
     {
       "id": "dig-omakanta",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Mitä voit tehdä OmaKannassa?",
       "options": [
         {
           "id": "a",
-          "text": "Maksaa veroja"
+          "text": "Varata ajan mihin tahansa terveyskeskukseen tai yksityiselle lääkärille"
         },
         {
           "id": "b",
-          "text": "Tehdä rikosilmoituksen"
+          "text": "Tehdä rikosilmoituksen ja seurata sen käsittelyä"
         },
         {
           "id": "c",
@@ -29386,7 +29386,7 @@
         },
         {
           "id": "d",
-          "text": "Hakea passia"
+          "text": "Hakea Kelan sairauspäivärahaa ja nähdä päätökset"
         }
       ],
       "correctOptionId": "c",
@@ -29421,11 +29421,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Pay taxes"
+              "text": "Book an appointment at any health centre or private doctor"
             },
             {
               "id": "b",
-              "text": "Report a crime"
+              "text": "Report a crime and follow its handling"
             },
             {
               "id": "c",
@@ -29433,7 +29433,7 @@
             },
             {
               "id": "d",
-              "text": "Apply for a passport"
+              "text": "Apply for Kela sickness allowance and see the decisions"
             }
           ],
           "explanation": "In My Kanta you can, for example, read your care records, see laboratory results and request a prescription renewal."
@@ -29446,17 +29446,17 @@
     },
     {
       "id": "dig-omakanta-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Vad kan du göra i MittKanta?",
       "options": [
         {
           "id": "a",
-          "text": "Betala skatt"
+          "text": "Boka tid till vilken hälsocentral eller privatläkare som helst"
         },
         {
           "id": "b",
-          "text": "Göra en brottsanmälan"
+          "text": "Göra en brottsanmälan och följa hur den behandlas"
         },
         {
           "id": "c",
@@ -29464,7 +29464,7 @@
         },
         {
           "id": "d",
-          "text": "Ansöka om pass"
+          "text": "Ansöka om FPA:s sjukdagpenning och se besluten"
         }
       ],
       "correctOptionId": "c",
@@ -29498,11 +29498,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Pay taxes"
+              "text": "Book an appointment at any health centre or private doctor"
             },
             {
               "id": "b",
-              "text": "Report a crime"
+              "text": "Report a crime and follow its handling"
             },
             {
               "id": "c",
@@ -29510,7 +29510,7 @@
             },
             {
               "id": "d",
-              "text": "Apply for a passport"
+              "text": "Apply for Kela sickness allowance and see the decisions"
             }
           ],
           "explanation": "In My Kanta you can, for example, read your care records, see laboratory results and request a prescription renewal."
@@ -29523,7 +29523,7 @@
     },
     {
       "id": "dig-renew-condition",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Milloin voit pyytää OmaKannassa reseptin uusimista?",
       "options": [
@@ -29537,11 +29537,11 @@
         },
         {
           "id": "c",
-          "text": "Vain lääkärin vastaanotolla"
+          "text": "Vain käymällä itse lääkärin vastaanotolla"
         },
         {
           "id": "d",
-          "text": "Vain kerran elämässä"
+          "text": "Vain kerran vuodessa samalle lääkkeelle"
         }
       ],
       "correctOptionId": "b",
@@ -29579,11 +29579,11 @@
             },
             {
               "id": "c",
-              "text": "Only at the doctor's surgery"
+              "text": "Only by visiting the doctor's surgery in person"
             },
             {
               "id": "d",
-              "text": "Only once in a lifetime"
+              "text": "Only once a year for the same medicine"
             }
           ],
           "explanation": "You can request a renewal in My Kanta only if medicine has already been bought with the prescription. A new medicine needs a doctor."
@@ -29596,7 +29596,7 @@
     },
     {
       "id": "dig-renew-condition-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "När kan du begära förnyelse av ett recept i MittKanta?",
       "options": [
@@ -29610,11 +29610,11 @@
         },
         {
           "id": "c",
-          "text": "Bara på läkarmottagningen"
+          "text": "Bara genom att själv besöka läkarmottagningen"
         },
         {
           "id": "d",
-          "text": "Bara en gång i livet"
+          "text": "Bara en gång per år för samma läkemedel"
         }
       ],
       "correctOptionId": "b",
@@ -29651,11 +29651,11 @@
             },
             {
               "id": "c",
-              "text": "Only at the doctor's surgery"
+              "text": "Only by visiting the doctor's surgery in person"
             },
             {
               "id": "d",
-              "text": "Only once in a lifetime"
+              "text": "Only once a year for the same medicine"
             }
           ],
           "explanation": "You can request a renewal in My Kanta only if medicine has already been bought with the prescription. A new medicine needs a doctor."
@@ -29668,21 +29668,21 @@
     },
     {
       "id": "dig-kanta-access",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Kuka pääsee katsomaan asiakkaan tietoja Kanta-palveluissa?",
       "options": [
         {
           "id": "a",
-          "text": "Kuka tahansa internetin käyttäjä"
+          "text": "Kuka tahansa, joka tietää asiakkaan henkilötunnuksen"
         },
         {
           "id": "b",
-          "text": "Työnantaja"
+          "text": "Työnantaja, jos tiedot liittyvät työkykyyn tai sairauslomaan"
         },
         {
           "id": "c",
-          "text": "Vuokranantaja"
+          "text": "Vakuutusyhtiöt, kun asiakas hakee henki- tai matkavakuutusta"
         },
         {
           "id": "d",
@@ -29716,15 +29716,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Any internet user"
+              "text": "Anyone who knows the customer's personal identity code"
             },
             {
               "id": "b",
-              "text": "The employer"
+              "text": "The employer, if the data concerns work ability or sick leave"
             },
             {
               "id": "c",
-              "text": "The landlord"
+              "text": "Insurance companies, when the customer applies for life or travel insurance"
             },
             {
               "id": "d",
@@ -29741,21 +29741,21 @@
     },
     {
       "id": "dig-kanta-access-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Vem har tillgång till kundens uppgifter i Kanta-tjänsterna?",
       "options": [
         {
           "id": "a",
-          "text": "Vem som helst på internet"
+          "text": "Vem som helst som känner till kundens personbeteckning"
         },
         {
           "id": "b",
-          "text": "Arbetsgivaren"
+          "text": "Arbetsgivaren, om uppgifterna gäller arbetsförmåga eller sjukledighet"
         },
         {
           "id": "c",
-          "text": "Hyresvärden"
+          "text": "Försäkringsbolag, när kunden ansöker om liv- eller reseförsäkring"
         },
         {
           "id": "d",
@@ -29788,15 +29788,15 @@
           "options": [
             {
               "id": "a",
-              "text": "Any internet user"
+              "text": "Anyone who knows the customer's personal identity code"
             },
             {
               "id": "b",
-              "text": "The employer"
+              "text": "The employer, if the data concerns work ability or sick leave"
             },
             {
               "id": "c",
-              "text": "The landlord"
+              "text": "Insurance companies, when the customer applies for life or travel insurance"
             },
             {
               "id": "d",
@@ -29813,7 +29813,7 @@
     },
     {
       "id": "dig-scam-hurry",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Mikä on tyypillinen huijausviestin tuntomerkki?",
       "options": [
@@ -29823,7 +29823,7 @@
         },
         {
           "id": "b",
-          "text": "Viestissä ei ole linkkejä"
+          "text": "Viestissä ei ole yhtään linkkiä tai liitettä"
         },
         {
           "id": "c",
@@ -29870,7 +29870,7 @@
             },
             {
               "id": "b",
-              "text": "It contains no links"
+              "text": "It has no links or attachments"
             },
             {
               "id": "c",
@@ -29891,7 +29891,7 @@
     },
     {
       "id": "dig-scam-hurry-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Vad är ett typiskt kännetecken för ett bluffmeddelande?",
       "options": [
@@ -29901,7 +29901,7 @@
         },
         {
           "id": "b",
-          "text": "Meddelandet har inga länkar"
+          "text": "Meddelandet har inga länkar eller bilagor"
         },
         {
           "id": "c",
@@ -29947,7 +29947,7 @@
             },
             {
               "id": "b",
-              "text": "It contains no links"
+              "text": "It has no links or attachments"
             },
             {
               "id": "c",
@@ -29968,17 +29968,17 @@
     },
     {
       "id": "dig-scam-respond",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Saat viestin, joka pyytää syöttämään pankkitunnuksesi linkin kautta. Mitä teet?",
       "options": [
         {
           "id": "a",
-          "text": "Syötän tunnukset nopeasti"
+          "text": "Syötän tunnukset, jos viesti näyttää aidolta"
         },
         {
           "id": "b",
-          "text": "Vastaan viestiin ja kysyn lisää"
+          "text": "Vastaan viestiin ja kysyn, kuka sen lähetti"
         },
         {
           "id": "c",
@@ -30016,11 +30016,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Enter the credentials quickly"
+              "text": "Enter the credentials if the message looks genuine"
             },
             {
               "id": "b",
-              "text": "Reply and ask for more"
+              "text": "Reply and ask who sent it"
             },
             {
               "id": "c",
@@ -30041,17 +30041,17 @@
     },
     {
       "id": "dig-scam-respond-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Du får ett meddelande som ber dig skriva in dina bankkoder via en länk. Vad gör du?",
       "options": [
         {
           "id": "a",
-          "text": "Skriver snabbt in koderna"
+          "text": "Skriver in koderna om meddelandet ser äkta ut"
         },
         {
           "id": "b",
-          "text": "Svarar och frågar mer"
+          "text": "Svarar och frågar vem som har skickat det"
         },
         {
           "id": "c",
@@ -30088,11 +30088,11 @@
           "options": [
             {
               "id": "a",
-              "text": "Enter the credentials quickly"
+              "text": "Enter the credentials if the message looks genuine"
             },
             {
               "id": "b",
-              "text": "Reply and ask for more"
+              "text": "Reply and ask who sent it"
             },
             {
               "id": "c",
@@ -30113,13 +30113,13 @@
     },
     {
       "id": "dig-scam-bank-first",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Epäilet, että pankkitunnuksesi ovat joutuneet vääriin käsiin. Mitä teet ensin?",
       "options": [
         {
           "id": "a",
-          "text": "Odotan muutaman viikon"
+          "text": "Odotan muutaman päivän, tuleeko tililtä outoja veloituksia"
         },
         {
           "id": "b",
@@ -30127,11 +30127,11 @@
         },
         {
           "id": "c",
-          "text": "Vaihdan sähköpostiosoitteen"
+          "text": "Vaihdan ensin sähköpostiosoitteeni ja puhelinnumeroni"
         },
         {
           "id": "d",
-          "text": "Kerron asiasta sosiaalisessa mediassa"
+          "text": "Kerron asiasta ensin sosiaalisessa mediassa ja ystävilleni"
         }
       ],
       "correctOptionId": "b",
@@ -30161,7 +30161,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Wait a few weeks"
+              "text": "Wait a few days to see if odd charges appear on the account"
             },
             {
               "id": "b",
@@ -30169,11 +30169,11 @@
             },
             {
               "id": "c",
-              "text": "Change my e-mail address"
+              "text": "First change my e-mail address and phone number"
             },
             {
               "id": "d",
-              "text": "Post about it on social media"
+              "text": "First post about it on social media and tell my friends"
             }
           ],
           "explanation": "If you suspect your bank credentials are in the wrong hands, contact your bank's customer service and then make a crime report to the police."
@@ -30186,13 +30186,13 @@
     },
     {
       "id": "dig-scam-bank-first-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Du misstänker att dina bankkoder har hamnat i fel händer. Vad gör du först?",
       "options": [
         {
           "id": "a",
-          "text": "Väntar några veckor"
+          "text": "Väntar några dagar för att se om det kommer konstiga debiteringar"
         },
         {
           "id": "b",
@@ -30200,11 +30200,11 @@
         },
         {
           "id": "c",
-          "text": "Byter e-postadress"
+          "text": "Byter först e-postadress och telefonnummer"
         },
         {
           "id": "d",
-          "text": "Berättar om det i sociala medier"
+          "text": "Berättar först om det i sociala medier och för mina vänner"
         }
       ],
       "correctOptionId": "b",
@@ -30233,7 +30233,7 @@
           "options": [
             {
               "id": "a",
-              "text": "Wait a few weeks"
+              "text": "Wait a few days to see if odd charges appear on the account"
             },
             {
               "id": "b",
@@ -30241,11 +30241,11 @@
             },
             {
               "id": "c",
-              "text": "Change my e-mail address"
+              "text": "First change my e-mail address and phone number"
             },
             {
               "id": "d",
-              "text": "Post about it on social media"
+              "text": "First post about it on social media and tell my friends"
             }
           ],
           "explanation": "If you suspect your bank credentials are in the wrong hands, contact your bank's customer service and then make a crime report to the police."
@@ -30653,17 +30653,17 @@
     },
     {
       "id": "dig-data-ombudsman",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Rekisterinpitäjä kieltäytyy antamasta tietojasi, eikä mielestäsi ole perusteita. Keneen voit ottaa yhteyttä?",
       "options": [
         {
           "id": "a",
-          "text": "Pelastuslaitokseen"
+          "text": "Yhdenvertaisuusvaltuutettuun"
         },
         {
           "id": "b",
-          "text": "Kelaan"
+          "text": "Tasa-arvovaltuutettuun"
         },
         {
           "id": "c",
@@ -30706,11 +30706,11 @@
           "options": [
             {
               "id": "a",
-              "text": "The rescue department"
+              "text": "The Non-Discrimination Ombudsman"
             },
             {
               "id": "b",
-              "text": "Kela"
+              "text": "The Ombudsman for Equality"
             },
             {
               "id": "c",
@@ -30731,17 +30731,17 @@
     },
     {
       "id": "dig-data-ombudsman-sv",
-      "revision": 1,
+      "revision": 2,
       "topicId": "digital",
       "text": "Den personuppgiftsansvarige vägrar ge dig dina uppgifter, och enligt dig finns det inga grunder. Vem kan du kontakta?",
       "options": [
         {
           "id": "a",
-          "text": "Räddningsverket"
+          "text": "Diskrimineringsombudsmannen"
         },
         {
           "id": "b",
-          "text": "FPA"
+          "text": "Jämställdhetsombudsmannen"
         },
         {
           "id": "c",
@@ -30783,11 +30783,11 @@
           "options": [
             {
               "id": "a",
-              "text": "The rescue department"
+              "text": "The Non-Discrimination Ombudsman"
             },
             {
               "id": "b",
-              "text": "Kela"
+              "text": "The Ombudsman for Equality"
             },
             {
               "id": "c",
