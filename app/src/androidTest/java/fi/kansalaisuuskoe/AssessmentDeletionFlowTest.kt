@@ -68,7 +68,8 @@ class AssessmentDeletionFlowTest {
             id
         }
         val before = runBlocking { learning.snapshot.first() }
-        rule.awaitDescription("Harjoittelukieli: ruotsi"); text("Harjoituskoe").performClick()
+        // The interface switches from English to Finnish here; wait for the home button itself, not only the chip.
+        rule.awaitDescription("Harjoittelukieli: ruotsi"); await("Harjoituskoe"); click("Harjoituskoe")
         click("Poista keskeneräinen harjoituskoe")
         await("Poistetaanko keskeneräinen harjoituskoe?")
         dialog("Harjoittelukieli: ruotsi").assertIsDisplayed()

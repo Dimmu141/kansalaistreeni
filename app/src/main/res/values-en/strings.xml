@@ -366,4 +366,11 @@
     <string name="vocabulary_meaning_russian">Meaning in Russian</string>
     <string name="vocabulary_russian">Russian: %1$s</string>
     <string name="machine_translation_note">Machine translation, not yet checked by a person.</string>
+    <string name="language_arabic">العربية · Arabic</string>
+    <string name="explanation_also_arabic">Also in Arabic</string>
+    <string name="explanation_arabic_title">Explanation in Arabic</string>
+    <string name="explanation_missing_arabic">This question has no Arabic explanation. Read the explanation in your study language.</string>
+    <string name="lesson_arabic_missing">This section has no Arabic explanation. Read it in your study language.</string>
+    <string name="vocabulary_meaning_arabic">Meaning in Arabic</string>
+    <string name="vocabulary_arabic">Arabic: %1$s</string>
 </resources>

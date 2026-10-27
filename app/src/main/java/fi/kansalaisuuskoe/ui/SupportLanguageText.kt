@@ -6,23 +6,29 @@ import androidx.compose.ui.res.stringResource
 import fi.kansalaisuuskoe.R
 import fi.kansalaisuuskoe.data.ExplanationPreference
 
-/** Interface strings that name a support language. Add a branch here with each new [ExplanationPreference]. */
-internal val ExplanationPreference.optionLabel get() = when (this) {
-    ExplanationPreference.STUDY_LANGUAGE -> R.string.explanation_study_only
-    ExplanationPreference.ALSO_ENGLISH -> R.string.explanation_also_english
-    ExplanationPreference.ALSO_RUSSIAN -> R.string.explanation_also_russian
+/** Interface strings that name one support language. Add a row here with each new [ExplanationPreference]. */
+private class SupportStrings(
+    val option: Int, val title: Int, val missing: Int, val lessonMissing: Int, val meaningTitle: Int, val meaningLine: Int,
+)
+
+private val ExplanationPreference.strings get() = when (this) {
+    ExplanationPreference.STUDY_LANGUAGE, ExplanationPreference.ALSO_ENGLISH -> SupportStrings(
+        if (this == ExplanationPreference.STUDY_LANGUAGE) R.string.explanation_study_only else R.string.explanation_also_english,
+        R.string.explanation_english_title, R.string.explanation_missing, R.string.lesson_english_missing,
+        R.string.vocabulary_meaning_english, R.string.vocabulary_english)
+    ExplanationPreference.ALSO_RUSSIAN -> SupportStrings(R.string.explanation_also_russian, R.string.explanation_russian_title,
+        R.string.explanation_missing_russian, R.string.lesson_russian_missing, R.string.vocabulary_meaning_russian, R.string.vocabulary_russian)
+    ExplanationPreference.ALSO_ARABIC -> SupportStrings(R.string.explanation_also_arabic, R.string.explanation_arabic_title,
+        R.string.explanation_missing_arabic, R.string.lesson_arabic_missing, R.string.vocabulary_meaning_arabic, R.string.vocabulary_arabic)
 }
-internal val ExplanationPreference.explanationTitle get() =
-    if (this == ExplanationPreference.ALSO_RUSSIAN) R.string.explanation_russian_title else R.string.explanation_english_title
-internal val ExplanationPreference.explanationMissing get() =
-    if (this == ExplanationPreference.ALSO_RUSSIAN) R.string.explanation_missing_russian else R.string.explanation_missing
-internal val ExplanationPreference.lessonMissing get() =
-    if (this == ExplanationPreference.ALSO_RUSSIAN) R.string.lesson_russian_missing else R.string.lesson_english_missing
-internal val ExplanationPreference.meaningTitle get() =
-    if (this == ExplanationPreference.ALSO_RUSSIAN) R.string.vocabulary_meaning_russian else R.string.vocabulary_meaning_english
+
+internal val ExplanationPreference.optionLabel get() = strings.option
+internal val ExplanationPreference.explanationTitle get() = strings.title
+internal val ExplanationPreference.explanationMissing get() = strings.missing
+internal val ExplanationPreference.lessonMissing get() = strings.lessonMissing
+internal val ExplanationPreference.meaningTitle get() = strings.meaningTitle
 /** "Russian: %1$s" for screen readers in the compact word list. */
-internal val ExplanationPreference.meaningLine get() =
-    if (this == ExplanationPreference.ALSO_RUSSIAN) R.string.vocabulary_russian else R.string.vocabulary_english
+internal val ExplanationPreference.meaningLine get() = strings.meaningLine
 
 /** Shown under any support translation a person has not yet checked. */
 @Composable

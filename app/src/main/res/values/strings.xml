@@ -370,4 +370,11 @@
     <string name="vocabulary_meaning_russian">Merkitys venäjäksi</string>
     <string name="vocabulary_russian">Venäjä: %1$s</string>
     <string name="machine_translation_note">Konekäännös, jota ihminen ei ole vielä tarkistanut.</string>
+    <string name="language_arabic">العربية · arabia</string>
+    <string name="explanation_also_arabic">Lisäksi arabiaksi</string>
+    <string name="explanation_arabic_title">Selitys arabiaksi</string>
+    <string name="explanation_missing_arabic">Tähän kysymykseen ei ole arabiankielistä selitystä. Lue selitys opiskelukielellä.</string>
+    <string name="lesson_arabic_missing">Tälle osiolle ei ole arabiankielistä selitystä. Lue teksti opiskelukielelläsi.</string>
+    <string name="vocabulary_meaning_arabic">Merkitys arabiaksi</string>
+    <string name="vocabulary_arabic">Arabia: %1$s</string>
 </resources>

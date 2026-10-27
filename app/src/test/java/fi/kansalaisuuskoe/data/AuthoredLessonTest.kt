@@ -15,9 +15,9 @@ class AuthoredLessonTest {
     private fun rejects(block: () -> Unit) { try { block(); fail("Invalid lesson accepted") } catch (_: IllegalArgumentException) { } }
     private fun prepare(next: ContentPackageDto) = ContentUpdates.prepare(next, "new", installed, emptyMap())
 
-    @Test fun `every topic has aligned independently authored bilingual lessons and English and Russian support`() {
+    @Test fun `every topic has aligned independently authored bilingual lessons and English, Russian and Arabic support`() {
         content.topics.forEach { t ->
-            assertEquals(setOf("fi", "sv", "en", "ru"), t.lessons.keys)
+            assertEquals(setOf("fi", "sv", "en", "ru", "ar"), t.lessons.keys)
             val native = t.lessons.getValue("fi")
             assertTrue(native.sections.size in 3..5)
             t.lessons.forEach { (language, l) ->

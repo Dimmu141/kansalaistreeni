@@ -165,6 +165,6 @@ class LearningMigrationTest {
         assertEquals(2, saved.questions.size); assertNull(saved.finishedAt)
         assertTrue(saved.topics.all { it.lessons.isEmpty() })
         val repository = LearningRepository(requireNotNull(database))
-        assertTrue(repository.snapshot.first().topics.filter { it.lessons.isNotEmpty() }.all { it.lessons.keys == setOf("fi", "sv", "en", "ru") })
+        assertTrue(repository.snapshot.first().topics.filter { it.lessons.isNotEmpty() }.all { it.lessons.keys == setOf("fi", "sv", "en", "ru", "ar") })
     }
 }

@@ -5,7 +5,9 @@ import androidx.activity.compose.LocalActivityResultRegistryOwner
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.unit.LayoutDirection
 import fi.kansalaisuuskoe.data.InterfaceLanguage
 import java.util.Locale
 
@@ -21,8 +23,11 @@ fun InterfaceLocale(language: InterfaceLanguage, content: @Composable () -> Unit
         Configuration(current).apply { setLocale(Locale.forLanguageTag(language.tag)) }
     }
     val localized = remember(context, configuration) { context.createConfigurationContext(configuration) }
+    // The Activity's direction follows the device locale; an Arabic interface on a Finnish phone must still mirror.
+    val direction = if (configuration.layoutDirection == android.view.View.LAYOUT_DIRECTION_RTL) LayoutDirection.Rtl else LayoutDirection.Ltr
     CompositionLocalProvider(
         LocalConfiguration provides configuration,
+        LocalLayoutDirection provides direction,
         LocalContext provides localized,
         LocalResources provides localized.resources,
         *ownerProviders.toTypedArray(),

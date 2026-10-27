@@ -11,7 +11,7 @@ import fi.kansalaisuuskoe.domain.StudyLanguage
 private val Context.settingsStore by preferencesDataStore("settings")
 enum class ThemePreference { SYSTEM, LIGHT, DARK }
 enum class InterfaceLanguage(val tag: String) {
-    FINNISH("fi"), SWEDISH("sv"), ENGLISH("en"), RUSSIAN("ru");
+    FINNISH("fi"), SWEDISH("sv"), ENGLISH("en"), RUSSIAN("ru"), ARABIC("ar");
     companion object {
         /** Without an explicit choice, Swedish study gets a Swedish interface; otherwise Finnish. */
         fun defaultFor(study: StudyLanguage) = if (study == StudyLanguage.SWEDISH) SWEDISH else FINNISH
@@ -22,7 +22,7 @@ enum class InterfaceLanguage(val tag: String) {
  * and word meanings. Questions are always practised in Finnish or Swedish, as in the exam. Stored by
  * name, so a new language is a new entry plus its strings in SupportLanguageText.
  */
-enum class ExplanationPreference(val tag: String?) { STUDY_LANGUAGE(null), ALSO_ENGLISH("en"), ALSO_RUSSIAN("ru") }
+enum class ExplanationPreference(val tag: String?) { STUDY_LANGUAGE(null), ALSO_ENGLISH("en"), ALSO_RUSSIAN("ru"), ALSO_ARABIC("ar") }
 data class StudySettings(val easyFinnish: Boolean = true, val theme: ThemePreference = ThemePreference.SYSTEM, val interfaceLanguage: InterfaceLanguage = InterfaceLanguage.FINNISH, val studyLanguage: StudyLanguage = StudyLanguage.FINNISH, val explanation: ExplanationPreference = ExplanationPreference.STUDY_LANGUAGE, val onboardingSeen: Boolean = true)
 class SettingsRepository(context: Context) {
     private val store = context.settingsStore

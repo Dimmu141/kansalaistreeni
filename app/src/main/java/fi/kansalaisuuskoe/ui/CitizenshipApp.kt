@@ -46,6 +46,8 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
     val words = route.startsWith("words")
     val assessment = route.startsWith("assessment")
     val detail = settings || studying || material || coverage || backup || lesson || vocabulary || words || assessment
+    // The NavHost exists only once content has loaded; navigating before that throws, so top-level controls wait too.
+    val ready = !state.loading && state.error == null
     if (!state.loading && state.error == null && !state.settings.onboardingSeen) {
         OnboardingScreen(state.contentStatus, model::finishOnboarding)
         return
@@ -72,7 +74,7 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                     if (detail) IconButton(onClick = { nav.popBackStack() }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.back)) }
                 },
                 actions = {
-                    if (!detail) {
+                    if (!detail && ready) {
                         StudyLanguageSwitch(state.settings.studyLanguage, model::studyLanguage)
                         IconButton(onClick = { nav.navigate("settings") { launchSingleTop = true } }) { Icon(Icons.Default.Settings, stringResource(R.string.settings_title)) }
                     }
@@ -80,7 +82,7 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
             )
         },
         bottomBar = {
-            if (!detail) NavigationBar {
+            if (!detail && ready) NavigationBar {
                 destinations.forEach { d ->
                     NavigationBarItem(selected = route == d.route, onClick = { tab(d.route) }, icon = { Icon(d.icon, null) }, label = { Text(stringResource(d.label), maxLines = 1) })
                 }

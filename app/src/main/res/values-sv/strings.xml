@@ -366,4 +366,11 @@
     <string name="vocabulary_meaning_russian">Betydelse på ryska</string>
     <string name="vocabulary_russian">Ryska: %1$s</string>
     <string name="machine_translation_note">Maskinöversättning som ännu inte har granskats av en människa.</string>
+    <string name="language_arabic">العربية · arabiska</string>
+    <string name="explanation_also_arabic">Även på arabiska</string>
+    <string name="explanation_arabic_title">Förklaring på arabiska</string>
+    <string name="explanation_missing_arabic">Den här frågan har ingen förklaring på arabiska. Läs förklaringen på ditt studiespråk.</string>
+    <string name="lesson_arabic_missing">Den här delen har ingen förklaring på arabiska. Läs den på ditt studiespråk.</string>
+    <string name="vocabulary_meaning_arabic">Betydelse på arabiska</string>
+    <string name="vocabulary_arabic">Arabiska: %1$s</string>
 </resources>

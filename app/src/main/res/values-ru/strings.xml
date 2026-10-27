@@ -388,4 +388,11 @@
     <string name="vocabulary_meaning_russian">Значение на русском</string>
     <string name="vocabulary_russian">Русский: %1$s</string>
     <string name="machine_translation_note">Машинный перевод, ещё не проверенный человеком.</string>
+    <string name="language_arabic">العربية · арабский</string>
+    <string name="explanation_also_arabic">Также на арабском</string>
+    <string name="explanation_arabic_title">Объяснение на арабском</string>
+    <string name="explanation_missing_arabic">У этого вопроса нет объяснения на арабском. Прочитайте объяснение на языке обучения.</string>
+    <string name="lesson_arabic_missing">У этого раздела нет объяснения на арабском. Прочитайте его на языке обучения.</string>
+    <string name="vocabulary_meaning_arabic">Значение на арабском</string>
+    <string name="vocabulary_arabic">Арабский: %1$s</string>
 </resources>

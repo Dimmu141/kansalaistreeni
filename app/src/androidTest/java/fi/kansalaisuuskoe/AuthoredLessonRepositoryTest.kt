@@ -46,7 +46,7 @@ class AuthoredLessonRepositoryTest {
         // v0.17 rewrote the old questions, so each one returns under a higher revision; its history above is untouched.
         val revisions = after.questions.associate { it.id to it.revision }
         assertTrue(before.questions.all { q -> (revisions[q.id] ?: 0) > q.revision })
-        assertTrue(after.topics.filter { it.lessons.isNotEmpty() }.all { it.lessons.keys == setOf("fi", "sv", "en", "ru") })
+        assertTrue(after.topics.filter { it.lessons.isNotEmpty() }.all { it.lessons.keys == setOf("fi", "sv", "en", "ru", "ar") })
         assertEquals(seed().version, learning.installedContent().metadata?.version)
     }
     @Test fun lessonOnlyImportPersistsAcrossReopenAndPortableBackupWithoutTouchingLearning() = runBlocking {

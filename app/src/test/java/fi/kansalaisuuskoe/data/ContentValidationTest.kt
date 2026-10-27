@@ -14,18 +14,20 @@ class ContentValidationTest {
             assertEquals(en, counterpart.translations.getValue("en"))
         }
     }
-    @Test fun `every demo concept has the same Russian support in both study languages`() {
+    @Test fun `every demo concept has the same Russian and Arabic support in both study languages`() {
         val c = content()
-        c.questions.forEach { q ->
-            val ru = q.translations.getValue("ru")
-            assertEquals(q.options.map { it.id }, ru.options.map { it.id })
-            assertEquals(q.vocabulary.map { it.term }.toSet(), ru.vocabulary.keys)
-            assertFalse(ru.reviewed)
-            val counterpart = c.questions.first { it.id.removeSuffix("-sv") == q.id.removeSuffix("-sv") && it.language != q.language }
-            assertEquals(ru.copy(vocabulary = emptyMap()), counterpart.translations.getValue("ru").copy(vocabulary = emptyMap()))
+        for (language in listOf("ru", "ar")) {
+            c.questions.forEach { q ->
+                val support = q.translations.getValue(language)
+                assertEquals(q.options.map { it.id }, support.options.map { it.id })
+                assertEquals(q.vocabulary.map { it.term }.toSet(), support.vocabulary.keys)
+                assertFalse(support.reviewed)
+                val counterpart = c.questions.first { it.id.removeSuffix("-sv") == q.id.removeSuffix("-sv") && it.language != q.language }
+                assertEquals(support.copy(vocabulary = emptyMap()), counterpart.translations.getValue(language).copy(vocabulary = emptyMap()))
+            }
+            assertTrue(c.topics.all { it.translations.containsKey(language) && it.lessons.containsKey(language) })
+            assertTrue(c.objectives.all { it.statement.containsKey(language) })
         }
-        assertTrue(c.topics.all { it.translations.containsKey("ru") && it.lessons.containsKey("ru") })
-        assertTrue(c.objectives.all { it.statement.containsKey("ru") })
     }
     @Test(expected = IllegalArgumentException::class) fun `translated meaning for a word outside the vocabulary is rejected`() {
         val c = content(); val q = c.questions.first()
