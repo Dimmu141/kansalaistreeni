@@ -101,3 +101,18 @@ A **translation-only** change requires a new package version but may keep the qu
 Translation language tags must be valid and differ from the base language, and option IDs must remain aligned. Blank vocabulary, blank easy explanations and source URLs with embedded credentials are rejected.
 
 See [Content review](CONTENT-REVIEW.md) for source checks and fingerprints. Changing a supporting translation preserves learning progress but still requires a fresh editorial review entry. Machine validation cannot approve factual or linguistic quality.
+
+## Support languages in v0.20
+
+Questions are always practised in Finnish or Swedish, as in the exam. Any other language tag (`en`, `ru`, later `ar`, `fa`, `so`…) is a **support language**: the learner picks one in Settings → Explanation language, and after answering sees the question's meaning and explanation in it, the lesson sections and the word meanings. Russian is the first one after English; it also has a full interface translation (`res/values-ru`).
+
+A support translation of a question may add `vocabulary`, a map from each Finnish `term` in the question's vocabulary to its meaning, and `reviewed: true` once a person has checked it. Lessons accept any support language that aligns with the native lesson (no `easyBody`), and objective statements accept any language tag. Until `reviewed` is true the app labels the text as a machine translation.
+
+Workflow for a new language (see the two scripts' `--help`):
+
+1. Write `docs/termbase/<lang>.json`: every vocabulary term once, with `keepFinnish` for institutions and documents whose Finnish name a learner must recognise in the exam (written in parentheses on first mention).
+2. Draft translations from the Finnish text with the English as reference, one JSON file per topic plus `topics.json`, and merge them with `scripts/merge-translation.py <lang> <drafts>`. Vocabulary meanings come from the termbase; one draft per bilingual concept fills both the Finnish and Swedish question. The package version goes up by one.
+3. Run `scripts/verify-translations.py --record <lang>`, then `scripts/verify-translations.py`. It fails on missing, misaligned or stale translations and on answer-length cues, and lists places for a reviewer to look at.
+4. Export `docs/translations/<lang>-review.csv` with `--export <lang>` for a native reviewer, apply their corrections, record again, and mark checked items with `--mark-reviewed <lang> --reviewer "Name" all|ID…`.
+
+Support languages other than English are outside the source-review ledger (`docs/source-review.json`), so adding or changing one does not invalidate the source checks. If a Finnish question changes, its translations become stale and the translation gate fails until they are redone.

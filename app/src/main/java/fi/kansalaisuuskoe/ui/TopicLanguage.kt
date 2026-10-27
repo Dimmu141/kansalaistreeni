@@ -3,13 +3,15 @@ package fi.kansalaisuuskoe.ui
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.platform.LocalConfiguration
+import fi.kansalaisuuskoe.data.ExplanationPreference
 import fi.kansalaisuuskoe.domain.StudyLanguage
 
 val LocalStudyLanguage = compositionLocalOf { StudyLanguage.FINNISH }
+val LocalSupportLanguage = compositionLocalOf { ExplanationPreference.STUDY_LANGUAGE }
 
 /**
  * Topic names are study material. Swedish study shows the Swedish names; otherwise they follow the
- * interface language, which is Finnish or English. Pass a language to pin it, e.g. a saved assessment's.
+ * interface language (Finnish, English or Russian). Pass a language to pin it, e.g. a saved assessment's.
  */
 @Composable
 internal fun topicLanguage(study: String = LocalStudyLanguage.current.tag): String =

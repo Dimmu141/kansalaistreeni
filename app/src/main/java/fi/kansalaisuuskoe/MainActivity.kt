@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
             val state by model.state.collectAsStateWithLifecycle()
             InterfaceLocale(state.settings.interfaceLanguage) {
                 CitizenshipTheme(state.settings.theme) {
-                    CompositionLocalProvider(LocalStudyLanguage provides state.settings.studyLanguage) { CitizenshipApp(state, model, container) }
+                    CompositionLocalProvider(LocalStudyLanguage provides state.settings.studyLanguage, LocalSupportLanguage provides state.settings.explanation) { CitizenshipApp(state, model, container) }
                 }
             }
         }

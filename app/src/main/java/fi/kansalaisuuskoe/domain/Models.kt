@@ -23,7 +23,7 @@ data class Topic(val id: String, val title: String, val description: String, val
 data class TopicTranslation(val title: String, val description: String)
 
 /** Localized reading material. Reading alone never counts as a scored answer. */
-data class AuthoredLesson(val id: String, val revision: Int, val introduction: String, val status: ContentStatus, val sections: List<LessonSection>)
+data class AuthoredLesson(val id: String, val revision: Int, val introduction: String, val status: ContentStatus, val sections: List<LessonSection>, val reviewed: Boolean = false)
 data class LessonSection(val id: String, val title: String, val body: String, val easyBody: String?, val sources: List<Source>)
 data class Question(
     val id: String,
@@ -54,6 +54,9 @@ data class QuestionTranslation(
     val text: String,
     val options: List<AnswerOption>,
     val explanation: String,
+    /** Vocabulary meanings keyed by the Finnish term. */
+    val vocabulary: Map<String, String> = emptyMap(),
+    val reviewed: Boolean = false,
 )
 data class QuestionAttempt(
     val id: String,

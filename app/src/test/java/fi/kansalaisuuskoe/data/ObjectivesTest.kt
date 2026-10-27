@@ -35,7 +35,7 @@ class ObjectivesTest {
         rejected(pack(objs = objectives + objectives.first()))
         rejected(pack(objs = objectives + ObjectiveDto("x", "missing", mapOf("fi" to "A", "sv" to "B"))))
         rejected(pack(objs = objectives.map { it.copy(statement = it.statement - "sv") }))
-        rejected(pack(objs = objectives.map { it.copy(statement = it.statement + ("de" to "Ziel")) }))
+        rejected(pack(objs = objectives.map { it.copy(statement = it.statement + ("German!" to "Ziel")) }))
         rejected(pack(objs = objectives.map { it.copy(sourceRef = " ") }))
         rejected(pack(objs = objectives.map { it.copy(id = "Bad Id") }))
     }

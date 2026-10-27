@@ -14,6 +14,24 @@ class ContentValidationTest {
             assertEquals(en, counterpart.translations.getValue("en"))
         }
     }
+    @Test fun `every demo concept has the same Russian support in both study languages`() {
+        val c = content()
+        c.questions.forEach { q ->
+            val ru = q.translations.getValue("ru")
+            assertEquals(q.options.map { it.id }, ru.options.map { it.id })
+            assertEquals(q.vocabulary.map { it.term }.toSet(), ru.vocabulary.keys)
+            assertFalse(ru.reviewed)
+            val counterpart = c.questions.first { it.id.removeSuffix("-sv") == q.id.removeSuffix("-sv") && it.language != q.language }
+            assertEquals(ru.copy(vocabulary = emptyMap()), counterpart.translations.getValue("ru").copy(vocabulary = emptyMap()))
+        }
+        assertTrue(c.topics.all { it.translations.containsKey("ru") && it.lessons.containsKey("ru") })
+        assertTrue(c.objectives.all { it.statement.containsKey("ru") })
+    }
+    @Test(expected = IllegalArgumentException::class) fun `translated meaning for a word outside the vocabulary is rejected`() {
+        val c = content(); val q = c.questions.first()
+        val ru = q.translations.getValue("ru")
+        ContentCodec.validate(c.copy(questions = listOf(q.copy(translations = q.translations + ("ru" to ru.copy(vocabulary = ru.vocabulary + ("tuntematon" to "неизвестный")))))))
+    }
     @Test(expected = IllegalArgumentException::class) fun `invalid translation language tag is rejected`() {
         val c = content(); val q = c.questions.first()
         ContentCodec.validate(c.copy(questions = listOf(q.copy(translations = mapOf("English!" to q.translations.getValue("en"))))))

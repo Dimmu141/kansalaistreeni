@@ -34,8 +34,9 @@ internal fun TopicLessonScreen(state: AppUiState, topicId: String, practise: () 
                 Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
                     HorizontalDivider(color = Ks.colors.line)
                     Text(stringResource(R.string.lesson_idea_position, index + 1, lesson.authored.sections.size), style = KsType.caption.copy(fontFeatureSettings = "tnum"), color = Ks.colors.brand)
-                    AuthoredLessonSection(section, lesson.english?.sections?.find { it.id == section.id }, state.settings.studyLanguage.tag,
-                        state.settings.easyFinnish, state.settings.explanation)
+                    val support = state.settings.explanation.tag?.let { lesson.topic.lessons[it] }
+                    AuthoredLessonSection(section, support?.sections?.find { it.id == section.id }, state.settings.studyLanguage.tag,
+                        state.settings.easyFinnish, state.settings.explanation, support?.reviewed == true)
                     section.sources.forEach { SourceReference(it) }
                 }
             } else itemsIndexed(lesson.ideas, key = { _, question -> question.id }) { index, question ->
@@ -75,7 +76,7 @@ internal fun SourceReference(source: Source, reviewOverdue: Boolean = false) {
 }
 
 @Composable
-internal fun AuthoredLessonSection(section: LessonSection, english: LessonSection?, language: String, easyFinnish: Boolean, preference: ExplanationPreference) {
+internal fun AuthoredLessonSection(section: LessonSection, support: LessonSection?, language: String, easyFinnish: Boolean, preference: ExplanationPreference, reviewed: Boolean = false) {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         StudyText(section.title, language, MaterialTheme.typography.titleLarge, Modifier.semantics { heading() })
         StudyText(section.body, language, MaterialTheme.typography.bodyLarge)
@@ -83,10 +84,13 @@ internal fun AuthoredLessonSection(section: LessonSection, english: LessonSectio
             Text(stringResource(R.string.easy_finnish_title), style = MaterialTheme.typography.titleMedium, modifier = Modifier.semantics { heading() })
             StudyText(section.easyBody, "fi", MaterialTheme.typography.bodyLarge)
         }
-        if (preference == ExplanationPreference.ALSO_ENGLISH) {
-            Text(stringResource(R.string.explanation_english_title), style = MaterialTheme.typography.titleMedium, modifier = Modifier.semantics { heading() })
-            english?.let { StudyText(it.body, "en", MaterialTheme.typography.bodyLarge) }
-                ?: Text(stringResource(R.string.lesson_english_missing), style = MaterialTheme.typography.bodyMedium)
+        preference.tag?.let { tag ->
+            Text(stringResource(preference.explanationTitle), style = MaterialTheme.typography.titleMedium, modifier = Modifier.semantics { heading() })
+            support?.let {
+                StudyText(it.title, tag, MaterialTheme.typography.titleSmall)
+                StudyText(it.body, tag, MaterialTheme.typography.bodyLarge)
+                if (!reviewed) MachineTranslationNote()
+            } ?: Text(stringResource(preference.lessonMissing), style = MaterialTheme.typography.bodyMedium)
         }
     }
 }

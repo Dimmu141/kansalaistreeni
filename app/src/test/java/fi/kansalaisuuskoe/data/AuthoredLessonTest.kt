@@ -15,9 +15,9 @@ class AuthoredLessonTest {
     private fun rejects(block: () -> Unit) { try { block(); fail("Invalid lesson accepted") } catch (_: IllegalArgumentException) { } }
     private fun prepare(next: ContentPackageDto) = ContentUpdates.prepare(next, "new", installed, emptyMap())
 
-    @Test fun `every topic has aligned independently authored bilingual lessons and English support`() {
+    @Test fun `every topic has aligned independently authored bilingual lessons and English and Russian support`() {
         content.topics.forEach { t ->
-            assertEquals(setOf("fi", "sv", "en"), t.lessons.keys)
+            assertEquals(setOf("fi", "sv", "en", "ru"), t.lessons.keys)
             val native = t.lessons.getValue("fi")
             assertTrue(native.sections.size in 3..5)
             t.lessons.forEach { (language, l) ->
@@ -45,7 +45,9 @@ class AuthoredLessonTest {
             lesson.copy(sections = listOf(section.copy(body = " "))), lesson.copy(sections = listOf(section.copy(easyBody = " "))),
             lesson.copy(status = "OFFICIAL"), lesson.copy(sections = listOf(section.copy(sources = listOf(SourceDto("Bad", "https://user@source.example/"))))))
             .forEach { changed -> rejects { ContentCodec.validate(withLesson(changed)) } }
-        rejects { ContentCodec.validate(withLesson(lesson, "de")) }
+        rejects { ContentCodec.validate(withLesson(lesson, "de")) } // Easy Finnish exists only in Finnish.
+        rejects { ContentCodec.validate(withLesson(lesson.copy(sections = lesson.sections.map { it.copy(easyBody = null) }.drop(1)), "de")) }
+        ContentCodec.validate(withLesson(lesson.copy(sections = lesson.sections.map { it.copy(easyBody = null) }), "de"))
         rejects { ContentCodec.validate(withLesson(lesson, "sv")) } // Easy Finnish cannot masquerade as Swedish support.
     }
     @Test fun `misaligned supporting lesson sections are rejected`() {

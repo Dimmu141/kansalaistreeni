@@ -38,7 +38,8 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
                     ).padding(horizontal = 4.dp), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                         RadioButton(selected = state.settings.interfaceLanguage == language, onClick = null)
                         Spacer(Modifier.width(12.dp))
-                        Text(stringResource(when (language) { InterfaceLanguage.FINNISH -> R.string.language_finnish; InterfaceLanguage.SWEDISH -> R.string.language_swedish; InterfaceLanguage.ENGLISH -> R.string.language_english }))
+                        Text(stringResource(when (language) { InterfaceLanguage.FINNISH -> R.string.language_finnish; InterfaceLanguage.SWEDISH -> R.string.language_swedish
+                            InterfaceLanguage.ENGLISH -> R.string.language_english; InterfaceLanguage.RUSSIAN -> R.string.language_russian }))
                     }
                 }
             }
@@ -54,7 +55,7 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
                     ).padding(horizontal = 4.dp), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                         RadioButton(selected = state.settings.explanation == preference, onClick = null)
                         Spacer(Modifier.width(12.dp))
-                        Text(stringResource(if (preference == ExplanationPreference.STUDY_LANGUAGE) R.string.explanation_study_only else R.string.explanation_also_english))
+                        Text(stringResource(preference.optionLabel))
                     }
                 }
             }

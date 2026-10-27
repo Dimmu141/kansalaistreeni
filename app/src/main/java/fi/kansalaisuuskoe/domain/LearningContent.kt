@@ -21,6 +21,8 @@ data class VocabularyEntry(
     val otherTerm: String?,
     val language: String,
     val contexts: List<Question>,
+    /** Meanings in support languages, keyed by language tag. */
+    val supportMeanings: Map<String, String> = emptyMap(),
 )
 
 /** Reading views derive from the installed package; they never update question mastery. */
@@ -40,9 +42,10 @@ object LearningContent {
                 val other = if (language == StudyLanguage.SWEDISH) word.term else word.swedish
                 val key = Key(normalize(term), normalize(word.meaning), normalize(other.orEmpty()))
                 val previous = words[key]
+                val support = question.translations.mapNotNull { (tag, t) -> t.vocabulary[word.term]?.let { tag to it } }.toMap()
                 words[key] = if (previous == null) {
-                    VocabularyEntry("${question.id}:$index", term, word.meaning, other, language.tag, listOf(question))
-                } else previous.copy(contexts = (previous.contexts + question).distinctBy { it.id })
+                    VocabularyEntry("${question.id}:$index", term, word.meaning, other, language.tag, listOf(question), support)
+                } else previous.copy(contexts = (previous.contexts + question).distinctBy { it.id }, supportMeanings = support + previous.supportMeanings)
             }
         }
         return words.values.sortedBy { normalize(it.term) }
@@ -52,7 +55,7 @@ object LearningContent {
         val tokens = normalize(query).split(Regex("\\s+")).filter { it.isNotEmpty() }
         return entries.mapNotNull { entry ->
             val contexts = entry.contexts.filter { topicId == null || it.topicId == topicId }
-            val searchable = normalize(listOf(entry.term, entry.meaning, entry.otherTerm.orEmpty(),
+            val searchable = normalize(listOf(entry.term, entry.meaning, entry.otherTerm.orEmpty(), entry.supportMeanings.values.joinToString(" "),
                 contexts.joinToString(" ") { it.explanation }).joinToString(" "))
             if (contexts.isNotEmpty() && tokens.all { searchable.contains(it) }) entry.copy(contexts = contexts) else null
         }

@@ -165,7 +165,7 @@
     <string name="vocabulary_finnish">Finnish: %1$s</string>
     <string name="import_languages">Questions by language: Finnish %1$d · Swedish %2$d</string>
     <string name="import_study_scope">The study language filters the questions you see. If the package does not include your selected language, change it in Settings.</string>
-    <string name="explanation_language_note">Questions and reading material stay in your study language. English support appears alongside reading material and after answering, when available.</string>
+    <string name="explanation_language_note">Questions and reading material stay in your study language. Support in the chosen language appears alongside reading material and after answering, when available.</string>
     <string name="explanation_study_only">Study language only</string>
     <string name="explanation_also_english">Also in English</string>
     <string name="explanation_english_title">Explanation in English</string>
@@ -358,4 +358,12 @@
     <string name="topic_studied">%1$d / %2$d practised</string>
     <plurals name="streak_chip"><item quantity="one">%d day in a row</item><item quantity="other">%d days in a row</item></plurals>
     <plurals name="due_chip"><item quantity="one">%d to review</item><item quantity="other">%d to review</item></plurals>
+    <string name="language_russian">Русский · Russian</string>
+    <string name="explanation_also_russian">Also in Russian</string>
+    <string name="explanation_russian_title">Explanation in Russian</string>
+    <string name="explanation_missing_russian">This question has no Russian explanation. Read the explanation in your study language.</string>
+    <string name="lesson_russian_missing">This section has no Russian explanation. Read it in your study language.</string>
+    <string name="vocabulary_meaning_russian">Meaning in Russian</string>
+    <string name="vocabulary_russian">Russian: %1$s</string>
+    <string name="machine_translation_note">Machine translation, not yet checked by a person.</string>
 </resources>

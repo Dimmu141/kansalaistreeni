@@ -165,7 +165,7 @@
     <string name="vocabulary_finnish">Suomeksi: %1$s</string>
     <string name="import_languages">Kysymyksiä kielittäin: suomi %1$d · ruotsi %2$d</string>
     <string name="import_study_scope">Opiskelukieli rajaa näkyvät kysymykset. Jos paketista puuttuu valitsemasi kieli, voit vaihtaa kieltä asetuksissa.</string>
-    <string name="explanation_language_note">Kysymykset ja lukutekstit pysyvät opiskelukielellä. Englanninkieliset tukitekstit näkyvät lukutekstien yhteydessä ja vastaamisen jälkeen, kun ne ovat saatavilla.</string>
+    <string name="explanation_language_note">Kysymykset ja lukutekstit pysyvät opiskelukielellä. Tukikielen tekstit näkyvät lukutekstien yhteydessä ja vastaamisen jälkeen, kun ne ovat saatavilla.</string>
     <string name="explanation_study_only">Vain opiskelukielellä</string>
     <string name="explanation_also_english">Lisäksi englanniksi</string>
     <string name="explanation_english_title">Selitys englanniksi</string>
@@ -362,4 +362,12 @@
     <string name="topic_studied">%1$d / %2$d harjoiteltu</string>
     <plurals name="streak_chip"><item quantity="one">%d päivä putkeen</item><item quantity="other">%d päivää putkeen</item></plurals>
     <plurals name="due_chip"><item quantity="one">%d kerrattava</item><item quantity="other">%d kerrattavaa</item></plurals>
+    <string name="language_russian">Русский · venäjä</string>
+    <string name="explanation_also_russian">Lisäksi venäjäksi</string>
+    <string name="explanation_russian_title">Selitys venäjäksi</string>
+    <string name="explanation_missing_russian">Tähän kysymykseen ei ole venäjänkielistä selitystä. Lue selitys opiskelukielellä.</string>
+    <string name="lesson_russian_missing">Tälle osiolle ei ole venäjänkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
+    <string name="vocabulary_meaning_russian">Merkitys venäjäksi</string>
+    <string name="vocabulary_russian">Venäjä: %1$s</string>
+    <string name="machine_translation_note">Konekäännös, jota ihminen ei ole vielä tarkistanut.</string>
 </resources>

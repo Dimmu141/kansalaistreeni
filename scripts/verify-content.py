@@ -27,12 +27,19 @@ def read_json(path):
 
 
 CLASSIFICATION = ("topicId", "objectiveIds")
+# Languages covered by this source-review ledger. Other support languages have their own translation
+# ledger (docs/translation-review.json, scripts/verify-translations.py), so adding one leaves these
+# source reviews intact.
+REVIEWED_LANGUAGES = {"fi", "sv", "en"}
 
 
 def fingerprint(question):
-    # Includes translation wording. Structural validation is also run by JVM tests. Classification
-    # is excluded: moving a question to another topic or objective does not change the reviewed facts.
+    # Includes the English translation wording. Structural validation is also run by JVM tests.
+    # Classification is excluded: moving a question to another topic or objective does not change the
+    # reviewed facts.
     reviewed = {key: value for key, value in question.items() if key not in CLASSIFICATION}
+    if "translations" in reviewed:
+        reviewed["translations"] = {k: v for k, v in reviewed["translations"].items() if k in REVIEWED_LANGUAGES}
     text = json.dumps(reviewed, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
@@ -215,7 +222,7 @@ def verify_quality(content):
         raise ValueError(f"Objectives with fewer than {MIN_OBJECTIVE_QUESTIONS} questions: {', '.join(thin)}")
     for topic in content["topics"]:
         variants = topic.get("lessons", {})
-        if set(variants) != {"fi", "sv", "en"} or not 3 <= len(variants["fi"]["sections"]) <= 5:
+        if not REVIEWED_LANGUAGES <= set(variants) or not 3 <= len(variants["fi"]["sections"]) <= 5:
             raise ValueError(f"Every topic needs a 3-5 section lesson in FI, SV and EN: {topic['id']}")
 
 
@@ -263,7 +270,8 @@ def verify(content, ledger):
             raise ValueError(f"Bilingual answer key, classification or English support mismatch: {key}")
         if status == "EDITORIAL" and fi["source"]["url"] == sv["source"]["url"]:
             raise ValueError(f"Swedish variant needs a Swedish source page: {key}")
-    lessons = {(t["id"], language): lesson for t in content["topics"] for language, lesson in t.get("lessons", {}).items()}
+    lessons = {(t["id"], language): lesson for t in content["topics"] for language, lesson in t.get("lessons", {}).items()
+               if language in REVIEWED_LANGUAGES}
     lesson_reviews = {(r["topicId"], r["language"]): r for r in ledger.get("lessonReviews", [])}
     if len(lesson_reviews) != len(ledger.get("lessonReviews", [])) or lessons.keys() != lesson_reviews.keys():
         raise ValueError("Every authored lesson needs exactly one source review")
@@ -286,8 +294,8 @@ def verify(content, ledger):
                 check_evidence(reference["evidenceUrl"], f"lesson {key}")
     for topic in content["topics"]:
         variants = topic.get("lessons", {})
-        if variants and (set(variants) != {"fi", "sv", "en"} or len({(lesson["id"], tuple(s["id"] for s in lesson["sections"])) for lesson in variants.values()}) != 1):
-            raise ValueError("Bundled lesson variants must align in FI, SV and EN")
+        if variants and (not REVIEWED_LANGUAGES <= set(variants) or len({(lesson["id"], tuple(s["id"] for s in lesson["sections"])) for lesson in variants.values()}) != 1):
+            raise ValueError("Bundled lesson variants must align in FI, SV, EN and every support language")
     if status == "EDITORIAL":
         verify_quality(content)
 
@@ -303,7 +311,8 @@ def main():
     content = read_json(path)
     if args.fingerprints:
         hashes = {q["id"]: fingerprint(q) for q in content["questions"]}
-        hashes.update({f"lesson:{t['id']}:{language}": fingerprint(lesson) for t in content["topics"] for language, lesson in t.get("lessons", {}).items()})
+        hashes.update({f"lesson:{t['id']}:{language}": fingerprint(lesson) for t in content["topics"] for language, lesson in t.get("lessons", {}).items()
+                       if language in REVIEWED_LANGUAGES})
         print(json.dumps(hashes, indent=2))
         return
     verify_objectives(content)
@@ -321,7 +330,7 @@ def main():
         print(f"{language.upper()} answer key: true/false keyed true {bias['true']:.0%}; longest option correct {bias['longest']:.0%}; correct/distractor length {bias['ratio']:.2f}x")
     for question_id in overdue_reviews(content):
         print(f"WARNING: editorial review date has passed for {question_id}; the app shows an overdue notice.")
-    print(f"Content review ledger passed: {len(content['questions'])} {content['status']} questions, {sum(len(t.get('lessons', {})) for t in content['topics'])} lesson variants, package v{content['version']}; human publication approval remains pending.")
+    print(f"Content review ledger passed: {len(content['questions'])} {content['status']} questions, {sum(len(set(t.get('lessons', {})) & REVIEWED_LANGUAGES) for t in content['topics'])} lesson variants, package v{content['version']}; human publication approval remains pending.")
 
 
 if __name__ == "__main__":

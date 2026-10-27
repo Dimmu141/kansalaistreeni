@@ -12,6 +12,8 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Architecture contracts failed' }
     & $Python (Join-Path $PSScriptRoot 'verify-content.py')
     if ($LASTEXITCODE -ne 0) { throw 'Content review gate failed' }
+    & $Python (Join-Path $PSScriptRoot 'verify-translations.py')
+    if ($LASTEXITCODE -ne 0) { throw 'Translation review gate failed' }
     & $Python (Join-Path $PSScriptRoot 'test_content_review.py')
     if ($LASTEXITCODE -ne 0) { throw 'Content gate regression tests failed' }
     $tasks = @(':app:testDebugUnitTest', ':app:lintDebug', ':app:lintRelease', ':app:assembleDebug', ':app:assembleRelease', ':app:bundleRelease')

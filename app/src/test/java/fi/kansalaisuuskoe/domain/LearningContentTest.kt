@@ -21,6 +21,13 @@ class LearningContentTest {
         val revised = question.copy(revision = 2, explanation = "Revised explanation", source = Source("New reference", "https://example.org/new"))
         assertEquals(revised, LearningContent.lesson(snapshot.copy(questions = listOf(revised)), topic.id, StudyLanguage.FINNISH)?.ideas?.single())
     }
+    @Test fun `support-language meanings are collected and searchable`() {
+        val translated = question.copy(translations = mapOf("ru" to QuestionTranslation("Вопрос", question.options, "Объяснение", mapOf("eduskunta" to "парламент"))))
+        val words = LearningContent.vocabulary(snapshot.copy(questions = listOf(translated)), StudyLanguage.FINNISH)
+        assertEquals(mapOf("ru" to "парламент"), words.single().supportMeanings)
+        assertEquals(1, LearningContent.search(words, "парламент").size)
+        assertTrue(LearningContent.vocabulary(snapshot, StudyLanguage.FINNISH).single().supportMeanings.isEmpty())
+    }
     @Test fun `duplicate words retain all contexts without duplicate question entries`() {
         val repeated = question.copy(id = "second", vocabulary = question.vocabulary + question.vocabulary)
         val words = LearningContent.vocabulary(snapshot.copy(questions = listOf(question, repeated)), StudyLanguage.FINNISH)

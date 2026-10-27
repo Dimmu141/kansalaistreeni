@@ -62,9 +62,14 @@ internal fun VocabularyScreen(state: AppUiState, query: String, topicId: String?
 
 @Composable
 internal fun VocabularyMeaning(word: VocabularyEntry) {
+    val support = LocalSupportLanguage.current
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Text(stringResource(R.string.vocabulary_meaning_english), style = MaterialTheme.typography.labelLarge)
         StudyText(word.meaning, "en", MaterialTheme.typography.bodyLarge)
+        support.tag?.takeIf { it != "en" }?.let { tag -> word.supportMeanings[tag]?.let {
+            Text(stringResource(support.meaningTitle), style = MaterialTheme.typography.labelLarge)
+            StudyText(it, tag, MaterialTheme.typography.bodyLarge)
+        } }
         word.otherTerm?.let {
             Text(stringResource(if (word.language == "fi") R.string.vocabulary_swedish_term else R.string.vocabulary_finnish_term), style = MaterialTheme.typography.labelLarge)
             StudyText(it, if (word.language == "fi") "sv" else "fi", MaterialTheme.typography.bodyLarge)

@@ -38,7 +38,8 @@ class StudyLanguageFlowTest {
         rule.onNodeWithContentDescription("Settings").performClick()
         click("Swedish questions")
         rule.activityRule.scenario.recreate()
-        await("Interface language")
+        // The longer language lists keep the restored scroll position below the first heading.
+        await("Study language")
         rule.onNode(hasScrollAction()).performScrollToNode(hasText("Swedish questions"))
         text("Swedish questions").assertIsSelected()
         rule.onNodeWithContentDescription("Back").performClick()

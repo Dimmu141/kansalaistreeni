@@ -13,6 +13,7 @@ import androidx.compose.ui.semantics.*
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import fi.kansalaisuuskoe.R
 import fi.kansalaisuuskoe.data.ExplanationPreference
@@ -33,11 +34,15 @@ internal fun QuestionExplanation(question: Question, easyFinnish: Boolean, prefe
                 }
             }
         }
-        if (preference == ExplanationPreference.ALSO_ENGLISH) {
+        preference.tag?.let { tag ->
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(stringResource(R.string.explanation_english_title), style = KsType.title, modifier = Modifier.semantics { heading() })
-                question.translations["en"]?.let { StudyText(it.explanation, "en", KsType.bodyLarge) }
-                    ?: Text(stringResource(R.string.explanation_missing), style = KsType.body, color = c.inkMuted)
+                Text(stringResource(preference.explanationTitle), style = KsType.title, modifier = Modifier.semantics { heading() })
+                question.translations[tag]?.let {
+                    // The question's meaning first: the learner sees the original above and the exam is in Finnish or Swedish.
+                    StudyText(it.text, tag, KsType.body.copy(fontStyle = FontStyle.Italic, color = c.inkMuted))
+                    StudyText(it.explanation, tag, KsType.bodyLarge)
+                    if (!it.reviewed) MachineTranslationNote()
+                } ?: Text(stringResource(preference.explanationMissing), style = KsType.body, color = c.inkMuted)
             }
         }
     }
@@ -48,6 +53,7 @@ internal fun QuestionExplanation(question: Question, easyFinnish: Boolean, prefe
 internal fun VocabularyList(question: Question) {
     val c = Ks.colors
     val swedish = question.language == "sv"
+    val support = LocalSupportLanguage.current.tag?.takeIf { it != "en" }
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(stringResource(R.string.vocabulary_title), style = KsType.title, modifier = Modifier.semantics { heading() })
         Surface(color = c.surface1, shape = MaterialTheme.shapes.medium, border = BorderStroke(1.dp, c.line)) {
@@ -55,18 +61,20 @@ internal fun VocabularyList(question: Question) {
                 question.vocabulary.forEachIndexed { index, word ->
                     if (index > 0) HorizontalDivider(color = c.line)
                     val other = if (swedish) word.term else word.swedish
+                    val supportMeaning = support?.let { question.translations[it]?.vocabulary?.get(word.term) }
                     val description = listOfNotNull(
                         stringResource(R.string.vocabulary_english, word.meaning),
+                        supportMeaning?.let { stringResource(LocalSupportLanguage.current.meaningLine, it) },
                         other?.let { stringResource(if (swedish) R.string.vocabulary_finnish else R.string.vocabulary_swedish, it) },
                     ).joinToString(". ")
                     Column(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             StudyText(if (swedish) word.swedish ?: word.term else word.term, if (swedish && word.swedish != null) "sv" else "fi",
                                 KsType.title.copy(fontSize = 16.sp, lineHeight = 22.sp, fontWeight = FontWeight.Bold), Modifier.weight(1f))
-                            Text(if (other == null) "EN" else if (swedish) "EN · FI" else "EN · SV", style = KsType.overline.copy(fontSize = 11.sp),
+                            Text(listOfNotNull("EN", supportMeaning?.let { support?.uppercase() }, other?.let { if (swedish) "FI" else "SV" }).joinToString(" · "), style = KsType.overline.copy(fontSize = 11.sp),
                                 color = c.inkMuted, modifier = Modifier.clearAndSetSemantics {})
                         }
-                        Text(listOfNotNull(word.meaning, other).joinToString(" · "), style = KsType.body.copy(fontSize = 14.sp, lineHeight = 20.sp),
+                        Text(listOfNotNull(word.meaning, supportMeaning, other).joinToString(" · "), style = KsType.body.copy(fontSize = 14.sp, lineHeight = 20.sp),
                             color = c.inkMuted, modifier = Modifier.semantics { contentDescription = description })
                     }
                 }

@@ -13,8 +13,10 @@ data class TopicDto(val id: String, val title: String, val description: String, 
     fun model() = Topic(id, title, description, order, translations.mapValues { (_, t) -> TopicTranslation(t.title, t.description) }, lessons.mapValues { (_, lesson) -> lesson.model() })
 }
 @JsonClass(generateAdapter = true)
-data class LessonDto(val id: String, val revision: Int, val introduction: String, val status: String, val sections: List<LessonSectionDto>) {
-    fun model() = AuthoredLesson(id, revision, introduction, ContentStatus.valueOf(status), sections.map { it.model() })
+data class LessonDto(val id: String, val revision: Int, val introduction: String, val status: String, val sections: List<LessonSectionDto>,
+                     /** Support translations only: true once a person has checked the translation. */
+                     val reviewed: Boolean = false) {
+    fun model() = AuthoredLesson(id, revision, introduction, ContentStatus.valueOf(status), sections.map { it.model() }, reviewed)
 }
 @JsonClass(generateAdapter = true)
 data class LessonSectionDto(val id: String, val title: String, val body: String, val sources: List<SourceDto>, val easyBody: String? = null) {
@@ -33,7 +35,13 @@ data class VocabularyDto(val term: String, val meaning: String, val swedish: Str
 @JsonClass(generateAdapter = true)
 data class SourceDto(val title: String, val url: String, val checkedAt: String? = null)
 @JsonClass(generateAdapter = true)
-data class TranslationDto(val text: String, val options: List<OptionDto>, val explanation: String)
+data class TranslationDto(
+    val text: String, val options: List<OptionDto>, val explanation: String,
+    /** Meanings of the question's vocabulary in this language, keyed by the Finnish term. */
+    val vocabulary: Map<String, String> = emptyMap(),
+    /** True once a person has checked the translation; otherwise the app labels it as machine-translated. */
+    val reviewed: Boolean = false,
+)
 @JsonClass(generateAdapter = true)
 data class QuestionDto(
     val id: String, val revision: Int, val topicId: String, val text: String,
@@ -53,12 +61,16 @@ data class QuestionDto(
         explanation, easyExplanation, vocabulary.map { VocabularyItem(it.term, it.meaning, it.swedish) },
         Source(source.title, source.url, source.checkedAt), language, Difficulty.valueOf(difficulty), tags,
         ContentStatus.valueOf(status), translations.mapValues { (_, value) ->
-            QuestionTranslation(value.text, value.options.map { AnswerOption(it.id, it.text) }, value.explanation)
+            QuestionTranslation(value.text, value.options.map { AnswerOption(it.id, it.text) }, value.explanation, value.vocabulary, value.reviewed)
         },
         QuestionFormat.valueOf(format),
         objectiveIds, validFrom, reviewBy,
     )
 }
+
+/** Study languages; every other language tag in a package is a support translation. */
+val NATIVE_LANGUAGES = setOf("fi", "sv")
+private val LANGUAGE_TAG = Regex("[a-z]{2,3}(-[A-Za-z0-9]{2,8})*")
 
 object ContentCodec {
     private val moshi = Moshi.Builder().build()
@@ -97,10 +109,10 @@ object ContentCodec {
         content.topics.forEach { topic ->
             require(topic.id.matches(Regex("[a-z0-9-]+")) && topic.title.isNotBlank() && topic.description.isNotBlank())
             topic.translations.forEach { (language, translation) ->
-                require(language.matches(Regex("[a-z]{2,3}(-[A-Za-z0-9]{2,8})*")) && translation.title.isNotBlank() && translation.description.isNotBlank()) { "Invalid topic translation" }
+                require(language.matches(LANGUAGE_TAG) && translation.title.isNotBlank() && translation.description.isNotBlank()) { "Invalid topic translation" }
             }
             topic.lessons.forEach { (language, lesson) ->
-                require(language in setOf("fi", "sv", "en")) { "Unsupported lesson language" }
+                require(language in NATIVE_LANGUAGES || language.matches(LANGUAGE_TAG)) { "Unsupported lesson language" }
                 require(lesson.id.isNotBlank() && lesson.revision > 0 && lesson.introduction.isNotBlank() && lesson.sections.isNotEmpty())
                 require(ContentStatus.valueOf(lesson.status) <= packageStatus) { "Lesson provenance exceeds its package" }
                 require(lesson.sections.map { it.id }.distinct().size == lesson.sections.size) { "Duplicate lesson section" }
@@ -112,11 +124,10 @@ object ContentCodec {
                 }
             }
             // Supporting translations must describe the same sections as the study-language lesson.
-            val english = topic.lessons["en"]
-            if (english != null) {
-                require(topic.lessons.keys.any { it == "fi" || it == "sv" }) { "English support needs a native lesson" }
-                topic.lessons.filterKeys { it != "en" }.values.forEach { native ->
-                    require(native.id == english.id && native.sections.map { it.id } == english.sections.map { it.id }) { "Misaligned lesson translation" }
+            topic.lessons.filterKeys { it !in NATIVE_LANGUAGES }.values.forEach { support ->
+                require(topic.lessons.keys.any { it in NATIVE_LANGUAGES }) { "Support translations need a native lesson" }
+                topic.lessons.filterKeys { it in NATIVE_LANGUAGES }.values.forEach { native ->
+                    require(native.id == support.id && native.sections.map { it.id } == support.sections.map { it.id }) { "Misaligned lesson translation" }
                 }
             }
         }
@@ -145,9 +156,10 @@ object ContentCodec {
             require(validFrom == null || reviewBy == null || validFrom < reviewBy) { "Review date must follow validity date" }
             require(reviewBy == null || q.source.checkedAt?.let(::date)?.let { it <= reviewBy } != false) { "Source check must precede review date" }
             q.translations.forEach { (language, t) ->
-                require(language.matches(Regex("[a-z]{2,3}(-[A-Za-z0-9]{2,8})*")) && language != q.language && t.text.isNotBlank() && t.explanation.isNotBlank())
+                require(language.matches(LANGUAGE_TAG) && language != q.language && t.text.isNotBlank() && t.explanation.isNotBlank())
                 require(t.options.map { it.id }.toSet() == q.options.map { it.id }.toSet() && t.options.size == q.options.size)
                 require(t.options.all { it.text.isNotBlank() })
+                require(t.vocabulary.all { (term, meaning) -> meaning.isNotBlank() && q.vocabulary.any { it.term == term } }) { "Translated word not in vocabulary" }
             }
         }
         validateObjectives(content, snapshot)
@@ -160,7 +172,7 @@ object ContentCodec {
         require(ids.distinct().size == ids.size) { "Duplicate objective ID" }
         content.objectives.forEach { objective ->
             require(objective.id.matches(Regex("[a-z0-9-]+")) && objective.topicId in topics) { "Invalid objective" }
-            require(objective.statement.keys.all { it in setOf("fi", "sv", "en") } && objective.statement.values.all { it.isNotBlank() }) { "Invalid objective statement" }
+            require(objective.statement.keys.all { it.matches(LANGUAGE_TAG) } && objective.statement.values.all { it.isNotBlank() }) { "Invalid objective statement" }
             require(objective.statement.containsKey("fi") && objective.statement.containsKey("sv")) { "Objectives need Finnish and Swedish statements" }
             require(objective.sourceRef == null || objective.sourceRef.isNotBlank())
         }

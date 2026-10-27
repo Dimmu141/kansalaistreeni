@@ -165,7 +165,7 @@
     <string name="vocabulary_finnish">Finska: %1$s</string>
     <string name="import_languages">Frågor per språk: finska %1$d · svenska %2$d</string>
     <string name="import_study_scope">Studiespråket avgör vilka frågor du ser. Om paketet inte innehåller ditt valda språk kan du byta språk i inställningarna.</string>
-    <string name="explanation_language_note">Frågor och läsmaterial visas på ditt studiespråk. Stöd på engelska visas vid läsmaterialet och efter att du har svarat, när det finns.</string>
+    <string name="explanation_language_note">Frågor och läsmaterial visas på ditt studiespråk. Stöd på det valda språket visas vid läsmaterialet och efter att du har svarat, när det finns.</string>
     <string name="explanation_study_only">Bara studiespråket</string>
     <string name="explanation_also_english">Även på engelska</string>
     <string name="explanation_english_title">Förklaring på engelska</string>
@@ -358,4 +358,12 @@
     <string name="topic_studied">%1$d / %2$d övade</string>
     <plurals name="streak_chip"><item quantity="one">%d dag i rad</item><item quantity="other">%d dagar i rad</item></plurals>
     <plurals name="due_chip"><item quantity="one">%d att repetera</item><item quantity="other">%d att repetera</item></plurals>
+    <string name="language_russian">Русский · ryska</string>
+    <string name="explanation_also_russian">Även på ryska</string>
+    <string name="explanation_russian_title">Förklaring på ryska</string>
+    <string name="explanation_missing_russian">Den här frågan har ingen förklaring på ryska. Läs förklaringen på ditt studiespråk.</string>
+    <string name="lesson_russian_missing">Den här delen har ingen förklaring på ryska. Läs den på ditt studiespråk.</string>
+    <string name="vocabulary_meaning_russian">Betydelse på ryska</string>
+    <string name="vocabulary_russian">Ryska: %1$s</string>
+    <string name="machine_translation_note">Maskinöversättning som ännu inte har granskats av en människa.</string>
 </resources>

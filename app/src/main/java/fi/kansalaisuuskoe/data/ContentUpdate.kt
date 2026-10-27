@@ -67,7 +67,7 @@ object ContentUpdates {
         val existing = installed.questions.associateBy { it.id }
         val previousTopics = installed.topics.associateBy { it.id }
         content.topics.forEach { topic ->
-            topic.lessons.filterKeys { it != "en" }.forEach { (language, lesson) ->
+            topic.lessons.filterKeys { it in NATIVE_LANGUAGES }.forEach { (language, lesson) ->
                 previousTopics[topic.id]?.lessons?.get(language)?.let { before ->
                     if (before.id == lesson.id && (lesson.revision < before.revision ||
                             (lesson != before && lesson.revision <= before.revision))) {
