@@ -21,11 +21,12 @@ class ContentValidationTest {
                 val support = q.translations.getValue(language)
                 assertEquals(q.options.map { it.id }, support.options.map { it.id })
                 assertEquals(q.vocabulary.map { it.term }.toSet(), support.vocabulary.keys)
-                assertFalse(support.reviewed)
+                // Russian has been reviewed by a person; Arabic is still a machine draft.
+                assertEquals(language == "ru", support.reviewed)
                 val counterpart = c.questions.first { it.id.removeSuffix("-sv") == q.id.removeSuffix("-sv") && it.language != q.language }
                 assertEquals(support.copy(vocabulary = emptyMap()), counterpart.translations.getValue(language).copy(vocabulary = emptyMap()))
             }
-            assertTrue(c.topics.all { it.translations.containsKey(language) && it.lessons.containsKey(language) })
+            assertTrue(c.topics.all { it.translations.containsKey(language) && it.lessons.getValue(language).reviewed == (language == "ru") })
             assertTrue(c.objectives.all { it.statement.containsKey(language) })
         }
     }

@@ -145,7 +145,8 @@ def check_ledger(content, lang, records):
         reviewed = record["status"] == "HUMAN_REVIEWED"
         if reviewed and not (record.get("reviewer") and record.get("reviewedAt")):
             errors.append(f"{key}: a human review needs a reviewer and a date")
-        if isinstance(translation, dict) and translation.get("reviewed", False) != reviewed:
+        # Only questions and lessons carry the flag; topic names and objective statements have no room for it.
+        if (":" not in key or key.startswith("lesson:")) and translation.get("reviewed", False) != reviewed:
             errors.append(f"{key}: content 'reviewed' flag does not match the ledger status")
     return errors
 
