@@ -9,9 +9,12 @@ import java.security.MessageDigest
 enum class ImportProblem { TOO_LARGE, INVALID, VERSION, REVISION, STALE }
 class ContentImportException(val problem: ImportProblem) : IllegalArgumentException(problem.name)
 
-/** The same limit applies to document providers with missing or inaccurate size metadata. */
+/**
+ * The same limit applies to document providers with missing or inaccurate size metadata. Each support
+ * language adds roughly 0.3 MiB to the bundled package, so the bound leaves room for several more.
+ */
 object ContentFile {
-    const val MAX_BYTES = 2 * 1024 * 1024
+    const val MAX_BYTES = 8 * 1024 * 1024
     fun read(input: InputStream): String {
         val output = ByteArrayOutputStream()
         val buffer = ByteArray(8192)

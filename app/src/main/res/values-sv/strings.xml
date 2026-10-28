@@ -109,7 +109,7 @@
     <string name="package_details">%1$s · version %2$d</string>
     <string name="material_counts">%1$s · %2$s</string>
     <string name="import_pick">Välj en innehållsfil</string>
-    <string name="import_pick_note">Välj ett JSON-innehållspaket som har gjorts för den här appen. Maximal storlek: 2 MiB. Paket kan innehålla frågor på finska och svenska.</string>
+    <string name="import_pick_note">Välj ett JSON-innehållspaket som har gjorts för den här appen. Maximal storlek: 8 MiB. Paket kan innehålla frågor på finska och svenska.</string>
     <string name="import_privacy">Appen läser bara filen du väljer och skickar den inte någon annanstans. Du kan avbryta efter att du har granskat den.</string>
     <string name="import_preview_title">Granska uppdateringen</string>
     <string name="import_provenance">Innehållsmärkning i filen: %1$s</string>
@@ -130,7 +130,7 @@
     <string name="import_question_status">Version %1$d · %2$s</string>
     <string name="import_show_details">Visa svar och förklaring</string>
     <string name="import_hide_details">Dölj detaljer</string>
-    <string name="import_too_large">Filen är för stor. Välj ett innehållspaket på högst 2 MiB. Ditt studiematerial har inte ändrats.</string>
+    <string name="import_too_large">Filen är för stor. Välj ett innehållspaket på högst 8 MiB. Ditt studiematerial har inte ändrats.</string>
     <string name="import_invalid">Det här är inget giltigt innehållspaket för appen. Kontrollera filformatet, frågorna och källänkarna. Ditt studiematerial har inte ändrats.</string>
     <string name="import_version_error">Uppdateringen kräver en nyare paketversion. En äldre version eller en ändrad fil med samma version kan inte ersätta det installerade materialet.</string>
     <string name="import_revision_error">En ändrad fråga kräver en högre revision. Frågans språk kan inte ändras med samma ID. Rätta paketet och välj filen igen.</string>
@@ -373,4 +373,11 @@
     <string name="lesson_arabic_missing">Den här delen har ingen förklaring på arabiska. Läs den på ditt studiespråk.</string>
     <string name="vocabulary_meaning_arabic">Betydelse på arabiska</string>
     <string name="vocabulary_arabic">Arabiska: %1$s</string>
+    <string name="language_persian">فارسی · persiska (dari)</string>
+    <string name="explanation_also_persian">Även på persiska (dari)</string>
+    <string name="explanation_persian_title">Förklaring på persiska</string>
+    <string name="explanation_missing_persian">Den här frågan har ingen förklaring på persiska. Läs förklaringen på ditt studiespråk.</string>
+    <string name="lesson_persian_missing">Den här delen har ingen förklaring på persiska. Läs den på ditt studiespråk.</string>
+    <string name="vocabulary_meaning_persian">Betydelse på persiska</string>
+    <string name="vocabulary_persian">Persiska: %1$s</string>
 </resources>

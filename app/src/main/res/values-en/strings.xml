@@ -109,7 +109,7 @@
     <string name="package_details">%1$s · version %2$d</string>
     <string name="material_counts">%1$s · %2$s</string>
     <string name="import_pick">Choose a content file</string>
-    <string name="import_pick_note">Choose a JSON content package supplied for this app. Maximum size: 2 MiB. Packages can contain Finnish and Swedish questions.</string>
+    <string name="import_pick_note">Choose a JSON content package supplied for this app. Maximum size: 8 MiB. Packages can contain Finnish and Swedish questions.</string>
     <string name="import_privacy">The app reads only the file you choose. It does not send it anywhere. You can cancel after reviewing it.</string>
     <string name="import_preview_title">Review the update</string>
     <string name="import_provenance">Content label in the file: %1$s</string>
@@ -130,7 +130,7 @@
     <string name="import_question_status">Revision %1$d · %2$s</string>
     <string name="import_show_details">Show answers and explanation</string>
     <string name="import_hide_details">Hide details</string>
-    <string name="import_too_large">This file is too large. Choose a content package of 2 MiB or less. Your study material has not changed.</string>
+    <string name="import_too_large">This file is too large. Choose a content package of 8 MiB or less. Your study material has not changed.</string>
     <string name="import_invalid">This is not a valid content package for the app. Check the file format, questions and source links. Your study material has not changed.</string>
     <string name="import_version_error">This update needs a newer package version. An older version or an edited file with the same version cannot replace the installed material.</string>
     <string name="import_revision_error">A changed question needs a higher revision. Its language cannot change under the same ID. Correct the package and choose the file again.</string>
@@ -373,4 +373,11 @@
     <string name="lesson_arabic_missing">This section has no Arabic explanation. Read it in your study language.</string>
     <string name="vocabulary_meaning_arabic">Meaning in Arabic</string>
     <string name="vocabulary_arabic">Arabic: %1$s</string>
+    <string name="language_persian">فارسی · Persian (Dari)</string>
+    <string name="explanation_also_persian">Also in Persian (Dari)</string>
+    <string name="explanation_persian_title">Explanation in Persian</string>
+    <string name="explanation_missing_persian">This question has no Persian explanation. Read the explanation in your study language.</string>
+    <string name="lesson_persian_missing">This section has no Persian explanation. Read it in your study language.</string>
+    <string name="vocabulary_meaning_persian">Meaning in Persian</string>
+    <string name="vocabulary_persian">Persian: %1$s</string>
 </resources>

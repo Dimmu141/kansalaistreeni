@@ -8,6 +8,6 @@ class InterfaceLanguageTest {
     @Test fun `without a choice the interface follows Swedish study and otherwise stays Finnish`() {
         assertEquals(InterfaceLanguage.SWEDISH, InterfaceLanguage.defaultFor(StudyLanguage.SWEDISH))
         assertEquals(InterfaceLanguage.FINNISH, InterfaceLanguage.defaultFor(StudyLanguage.FINNISH))
-        assertEquals(listOf("fi", "sv", "en", "ru", "ar"), InterfaceLanguage.entries.map { it.tag })
+        assertEquals(listOf("fi", "sv", "en", "ru", "ar", "fa"), InterfaceLanguage.entries.map { it.tag })
     }
 }

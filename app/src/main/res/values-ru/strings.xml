@@ -109,7 +109,7 @@
     <string name="package_details">%1$s · версия %2$d</string>
     <string name="material_counts">%1$s · %2$s</string>
     <string name="import_pick">Выбрать файл с материалами</string>
-    <string name="import_pick_note">Выберите пакет материалов в формате JSON, подготовленный для этого приложения. Максимальный размер: 2 МиБ. Пакеты могут содержать вопросы на финском и шведском.</string>
+    <string name="import_pick_note">Выберите пакет материалов в формате JSON, подготовленный для этого приложения. Максимальный размер: 8 МиБ. Пакеты могут содержать вопросы на финском и шведском.</string>
     <string name="import_privacy">Приложение читает только выбранный вами файл и никуда его не отправляет. После просмотра можно отменить.</string>
     <string name="import_preview_title">Проверьте обновление</string>
     <string name="import_provenance">Пометка материалов в файле: %1$s</string>
@@ -130,7 +130,7 @@
     <string name="import_question_status">Ревизия %1$d · %2$s</string>
     <string name="import_show_details">Показать ответы и объяснение</string>
     <string name="import_hide_details">Скрыть подробности</string>
-    <string name="import_too_large">Файл слишком большой. Выберите пакет материалов не больше 2 МиБ. Ваши учебные материалы не изменились.</string>
+    <string name="import_too_large">Файл слишком большой. Выберите пакет материалов не больше 8 МиБ. Ваши учебные материалы не изменились.</string>
     <string name="import_invalid">Это не пакет материалов для приложения. Проверьте формат файла, вопросы и ссылки на источники. Ваши учебные материалы не изменились.</string>
     <string name="import_version_error">Для обновления нужна более новая версия пакета. Старая версия или изменённый файл с той же версией не могут заменить установленные материалы.</string>
     <string name="import_revision_error">Изменённому вопросу нужна более высокая ревизия. Язык вопроса нельзя менять под тем же идентификатором. Исправьте пакет и выберите файл снова.</string>
@@ -395,4 +395,11 @@
     <string name="lesson_arabic_missing">У этого раздела нет объяснения на арабском. Прочитайте его на языке обучения.</string>
     <string name="vocabulary_meaning_arabic">Значение на арабском</string>
     <string name="vocabulary_arabic">Арабский: %1$s</string>
+    <string name="language_persian">فارسی · персидский (дари)</string>
+    <string name="explanation_also_persian">Также на персидском (дари)</string>
+    <string name="explanation_persian_title">Объяснение на персидском</string>
+    <string name="explanation_missing_persian">У этого вопроса нет объяснения на персидском. Прочитайте объяснение на языке обучения.</string>
+    <string name="lesson_persian_missing">У этого раздела нет объяснения на персидском. Прочитайте его на языке обучения.</string>
+    <string name="vocabulary_meaning_persian">Значение на персидском</string>
+    <string name="vocabulary_persian">Персидский: %1$s</string>
 </resources>

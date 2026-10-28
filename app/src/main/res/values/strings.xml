@@ -109,7 +109,7 @@
     <string name="package_details">%1$s · versio %2$d</string>
     <string name="material_counts">%1$s · %2$s</string>
     <string name="import_pick">Valitse sisältötiedosto</string>
-    <string name="import_pick_note">Valitse tätä sovellusta varten tehty JSON-aineistopaketti. Enimmäiskoko: 2 MiB. Paketti voi sisältää suomen- ja ruotsinkielisiä kysymyksiä.</string>
+    <string name="import_pick_note">Valitse tätä sovellusta varten tehty JSON-aineistopaketti. Enimmäiskoko: 8 MiB. Paketti voi sisältää suomen- ja ruotsinkielisiä kysymyksiä.</string>
     <string name="import_privacy">Sovellus lukee vain valitsemasi tiedoston eikä lähetä sitä muualle. Voit perua päivityksen tarkistamisen jälkeen.</string>
     <string name="import_preview_title">Tarkista päivitys</string>
     <string name="import_provenance">Tiedostoon merkitty sisältötyyppi: %1$s</string>
@@ -130,7 +130,7 @@
     <string name="import_question_status">Kysymyksen versio %1$d · %2$s</string>
     <string name="import_show_details">Näytä vastaukset ja selitys</string>
     <string name="import_hide_details">Piilota tiedot</string>
-    <string name="import_too_large">Tiedosto on liian suuri. Valitse enintään 2 MiB:n sisältöpaketti. Oppimateriaalisi ei muuttunut.</string>
+    <string name="import_too_large">Tiedosto on liian suuri. Valitse enintään 8 MiB:n sisältöpaketti. Oppimateriaalisi ei muuttunut.</string>
     <string name="import_invalid">Tiedosto ei ole sovellukselle kelvollinen sisältöpaketti. Tarkista tiedostomuoto, kysymykset ja lähdelinkit. Oppimateriaalisi ei muuttunut.</string>
     <string name="import_version_error">Päivitys tarvitsee uudemman pakettiversion. Vanhempi versio tai samalla versionumerolla muutettu tiedosto ei voi korvata nykyistä materiaalia.</string>
     <string name="import_revision_error">Muutettu kysymys tarvitsee aiempaa suuremman revision. Kysymyksen kieltä ei voi vaihtaa samalla tunnisteella. Korjaa aineisto ja valitse tiedosto uudelleen.</string>
@@ -377,4 +377,11 @@
     <string name="lesson_arabic_missing">Tälle osiolle ei ole arabiankielistä selitystä. Lue teksti opiskelukielelläsi.</string>
     <string name="vocabulary_meaning_arabic">Merkitys arabiaksi</string>
     <string name="vocabulary_arabic">Arabia: %1$s</string>
+    <string name="language_persian">فارسی · persia (dari)</string>
+    <string name="explanation_also_persian">Lisäksi persiaksi (dari)</string>
+    <string name="explanation_persian_title">Selitys persiaksi</string>
+    <string name="explanation_missing_persian">Tähän kysymykseen ei ole persiankielistä selitystä. Lue selitys opiskelukielellä.</string>
+    <string name="lesson_persian_missing">Tälle osiolle ei ole persiankielistä selitystä. Lue teksti opiskelukielelläsi.</string>
+    <string name="vocabulary_meaning_persian">Merkitys persiaksi</string>
+    <string name="vocabulary_persian">Persia: %1$s</string>
 </resources>

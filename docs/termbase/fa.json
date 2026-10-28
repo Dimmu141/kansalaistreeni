@@ -1,0 +1,995 @@
+{
+  "language": "fa",
+  "version": 1,
+  "rules": [
+    "Write one plain, formal Persian text that Dari speakers from Afghanistan read naturally: prefer words shared by Dari and Farsi, and where they differ (e.g. مکتب/مدرسه, صنف/کلاس, تلفون/تلفن), use the Dari-friendly form given here.",
+    "The exam is taken in Finnish or Swedish. On first mention, an institution, office, document or procedure marked keepFinnish is followed by the Finnish word in Latin letters in parentheses: «پارلمان (eduskunta)».",
+    "Use the rendering in 'fa' for every occurrence; adapt it grammatically (ezafe, plural) but do not swap in a synonym.",
+    "Keep numbers, dates and amounts in Western digits as in the Finnish text (6.12.1917, 112, 5 €), and keep Latin names of services (Kela, OmaVero, Suomi.fi) unchanged. Use the zero-width non-joiner where Persian spelling needs it (می‌شود).",
+    "Do not add facts, advice or hedging that the Finnish text does not contain."
+  ],
+  "terms": {
+    "lainsäädäntövalta": {
+      "fa": "قوه مقننه"
+    },
+    "eduskunta": {
+      "fa": "پارلمان فنلند",
+      "keepFinnish": true
+    },
+    "tuomioistuin": {
+      "fa": "دادگاه"
+    },
+    "riippumaton": {
+      "fa": "مستقل"
+    },
+    "hallitusvalta": {
+      "fa": "قدرت حکومتی (اجرایی)"
+    },
+    "valtioneuvosto": {
+      "fa": "حکومت (شورای دولت)",
+      "keepFinnish": true
+    },
+    "kansanedustaja": {
+      "fa": "نماینده پارلمان",
+      "keepFinnish": true
+    },
+    "vaalikausi": {
+      "fa": "دوره پارلمان"
+    },
+    "talousarvio": {
+      "fa": "بودجه دولت"
+    },
+    "valtio": {
+      "fa": "دولت"
+    },
+    "äänioikeus": {
+      "fa": "حق رأی"
+    },
+    "vaalipäivä": {
+      "fa": "روز انتخابات"
+    },
+    "kuntavaalit": {
+      "fa": "انتخابات شهرداری",
+      "keepFinnish": true
+    },
+    "kotikunta": {
+      "fa": "شهرداری محل سکونت",
+      "keepFinnish": true
+    },
+    "aluevaalit": {
+      "fa": "انتخابات منطقه‌ای (مناطق رفاه)",
+      "keepFinnish": true
+    },
+    "yhtäjaksoisesti": {
+      "fa": "به‌طور پیوسته"
+    },
+    "Euroopan parlamentti": {
+      "fa": "پارلمان اروپا"
+    },
+    "ilmoittautua": {
+      "fa": "ثبت‌نام کردن"
+    },
+    "toimikausi": {
+      "fa": "دوره خدمت"
+    },
+    "presidentinvaali": {
+      "fa": "انتخابات ریاست جمهوری"
+    },
+    "peräkkäinen": {
+      "fa": "پیاپی"
+    },
+    "ulkopolitiikka": {
+      "fa": "سیاست خارجی"
+    },
+    "ylipäällikkö": {
+      "fa": "فرمانده کل"
+    },
+    "puolustusvoimat": {
+      "fa": "نیروهای دفاعی فنلند",
+      "keepFinnish": true
+    },
+    "pääministeri": {
+      "fa": "نخست‌وزیر",
+      "keepFinnish": true
+    },
+    "ehdokas": {
+      "fa": "نامزد"
+    },
+    "kierros": {
+      "fa": "دور (انتخابات)"
+    },
+    "tasavallan presidentti": {
+      "fa": "رئیس جمهور",
+      "keepFinnish": true
+    },
+    "hallitusohjelma": {
+      "fa": "برنامه حکومت",
+      "keepFinnish": true
+    },
+    "luottamus": {
+      "fa": "اعتماد"
+    },
+    "parlamentarismi": {
+      "fa": "نظام پارلمانی"
+    },
+    "ministeri": {
+      "fa": "وزیر"
+    },
+    "nimittää": {
+      "fa": "منصوب کردن"
+    },
+    "kunnanvaltuusto": {
+      "fa": "شورای شهرداری",
+      "keepFinnish": true
+    },
+    "kunta": {
+      "fa": "شهرداری",
+      "keepFinnish": true
+    },
+    "hyvinvointialue": {
+      "fa": "منطقه خدمات رفاهی",
+      "keepFinnish": true
+    },
+    "pelastuspalvelut": {
+      "fa": "خدمات امداد و نجات"
+    },
+    "aluevaltuusto": {
+      "fa": "شورای منطقه رفاهی",
+      "keepFinnish": true
+    },
+    "kansalaisaloite": {
+      "fa": "ابتکار شهروندی",
+      "keepFinnish": true
+    },
+    "aloite": {
+      "fa": "ابتکار، پیشنهاد"
+    },
+    "ehdottaa": {
+      "fa": "پیشنهاد کردن"
+    },
+    "laki": {
+      "fa": "قانون"
+    },
+    "kansanvalta": {
+      "fa": "مردم‌سالاری (دموکراسی)"
+    },
+    "vaikuttaa": {
+      "fa": "تأثیر گذاشتن"
+    },
+    "perusoikeus": {
+      "fa": "حق بنیادی",
+      "keepFinnish": true
+    },
+    "ulkomaalainen": {
+      "fa": "خارجی"
+    },
+    "ihmisoikeus": {
+      "fa": "حق بشری"
+    },
+    "julkinen valta": {
+      "fa": "مقامات عمومی"
+    },
+    "kuolemanrangaistus": {
+      "fa": "مجازات اعدام"
+    },
+    "kiduttaa": {
+      "fa": "شکنجه کردن"
+    },
+    "sananvapaus": {
+      "fa": "آزادی بیان"
+    },
+    "mielipide": {
+      "fa": "نظر"
+    },
+    "julkaista": {
+      "fa": "منتشر کردن"
+    },
+    "viranomainen": {
+      "fa": "اداره دولتی (مقام رسمی)"
+    },
+    "asiakirja": {
+      "fa": "سند"
+    },
+    "julkinen": {
+      "fa": "عمومی، علنی"
+    },
+    "uskonnonvapaus": {
+      "fa": "آزادی دین"
+    },
+    "uskonnollinen yhdyskunta": {
+      "fa": "جامعه دینی"
+    },
+    "omatunto": {
+      "fa": "وجدان"
+    },
+    "vakaumus": {
+      "fa": "باور، اعتقاد"
+    },
+    "suostumus": {
+      "fa": "رضایت"
+    },
+    "uskontokunta": {
+      "fa": "جامعه دینی"
+    },
+    "mielenosoitus": {
+      "fa": "تظاهرات"
+    },
+    "ilmoitus": {
+      "fa": "اطلاعیه"
+    },
+    "yhdistys": {
+      "fa": "انجمن"
+    },
+    "yhdistymisvapaus": {
+      "fa": "آزادی تشکیل انجمن"
+    },
+    "ammattiliitto": {
+      "fa": "اتحادیه کارگری",
+      "keepFinnish": true
+    },
+    "järjestäytyä": {
+      "fa": "متشکل شدن"
+    },
+    "perustaa": {
+      "fa": "تأسیس کردن"
+    },
+    "lupa": {
+      "fa": "مجوز، اجازه"
+    },
+    "yksityiselämä": {
+      "fa": "زندگی خصوصی"
+    },
+    "luottamuksellinen": {
+      "fa": "محرمانه"
+    },
+    "kirje": {
+      "fa": "نامه"
+    },
+    "salaisuus": {
+      "fa": "محرمانگی"
+    },
+    "kotirauha": {
+      "fa": "حرمت خانه"
+    },
+    "kunnia": {
+      "fa": "آبرو، حیثیت"
+    },
+    "perusopetus": {
+      "fa": "آموزش پایه",
+      "keepFinnish": true
+    },
+    "maksuton": {
+      "fa": "رایگان"
+    },
+    "kansalliskieli": {
+      "fa": "زبان ملی"
+    },
+    "tiede": {
+      "fa": "علم"
+    },
+    "taide": {
+      "fa": "هنر"
+    },
+    "oikeusturva": {
+      "fa": "حمایت حقوقی"
+    },
+    "hakea muutosta": {
+      "fa": "اعتراض کردن (درخواست تجدید نظر)"
+    },
+    "oikeusasiamies": {
+      "fa": "بازرس پارلمانی (آمبودزمن)",
+      "keepFinnish": true
+    },
+    "valvoa": {
+      "fa": "نظارت کردن"
+    },
+    "rikos": {
+      "fa": "جرم"
+    },
+    "rangaistus": {
+      "fa": "مجازات"
+    },
+    "lyödä": {
+      "fa": "زدن"
+    },
+    "väkivalta": {
+      "fa": "خشونت"
+    },
+    "lapsi": {
+      "fa": "کودک"
+    },
+    "täysi-ikäinen": {
+      "fa": "بزرگسال (به سن قانونی رسیده)"
+    },
+    "ottaa huomioon": {
+      "fa": "در نظر گرفتن"
+    },
+    "yhdenvertaisuus": {
+      "fa": "برابری و عدم تبعیض",
+      "keepFinnish": true
+    },
+    "samanarvoinen": {
+      "fa": "هم‌ارزش"
+    },
+    "lain edessä": {
+      "fa": "در برابر قانون"
+    },
+    "syrjintä": {
+      "fa": "تبعیض"
+    },
+    "hyväksyttävä peruste": {
+      "fa": "دلیل قابل قبول"
+    },
+    "syrjiä": {
+      "fa": "تبعیض قائل شدن"
+    },
+    "vamma": {
+      "fa": "معلولیت"
+    },
+    "vuokranantaja": {
+      "fa": "صاحب‌خانه (اجاره‌دهنده)"
+    },
+    "kansalaisuus": {
+      "fa": "تابعیت"
+    },
+    "kielitaito": {
+      "fa": "مهارت زبانی"
+    },
+    "työnantaja": {
+      "fa": "کارفرما"
+    },
+    "seksuaalinen suuntautuminen": {
+      "fa": "گرایش جنسی"
+    },
+    "työnhakija": {
+      "fa": "جوینده کار"
+    },
+    "rekrytointi": {
+      "fa": "استخدام"
+    },
+    "uskonto": {
+      "fa": "دین"
+    },
+    "palkata": {
+      "fa": "استخدام کردن"
+    },
+    "raskaus": {
+      "fa": "بارداری"
+    },
+    "perhevapaa": {
+      "fa": "مرخصی خانوادگی",
+      "keepFinnish": true
+    },
+    "työsyrjintä": {
+      "fa": "تبعیض در کار"
+    },
+    "työsuojeluviranomainen": {
+      "fa": "اداره ایمنی کار",
+      "keepFinnish": true
+    },
+    "äidinkieli": {
+      "fa": "زبان مادری"
+    },
+    "työehdot": {
+      "fa": "شرایط کار"
+    },
+    "tasa-arvo": {
+      "fa": "برابری جنسیتی",
+      "keepFinnish": true
+    },
+    "sukupuoli": {
+      "fa": "جنسیت"
+    },
+    "palkka": {
+      "fa": "دستمزد، معاش"
+    },
+    "palkkasyrjintä": {
+      "fa": "تبعیض در دستمزد"
+    },
+    "tulla voimaan": {
+      "fa": "اجرایی شدن"
+    },
+    "mennä naimisiin": {
+      "fa": "ازدواج کردن"
+    },
+    "avioliitto": {
+      "fa": "ازدواج"
+    },
+    "pakottaa": {
+      "fa": "مجبور کردن"
+    },
+    "vapaaehtoinen": {
+      "fa": "داوطلبانه"
+    },
+    "puoliso": {
+      "fa": "همسر"
+    },
+    "aviopuoliso": {
+      "fa": "همسر (در ازدواج)"
+    },
+    "yhdenvertaisuusvaltuutettu": {
+      "fa": "نماینده رسمی عدم تبعیض",
+      "keepFinnish": true
+    },
+    "tasa-arvovaltuutettu": {
+      "fa": "نماینده رسمی برابری جنسیتی",
+      "keepFinnish": true
+    },
+    "vammainen": {
+      "fa": "فرد دارای معلولیت"
+    },
+    "työympäristö": {
+      "fa": "محیط کار"
+    },
+    "muuttaa": {
+      "fa": "تغییر دادن"
+    },
+    "kuljetuspalvelu": {
+      "fa": "خدمات حمل‌ونقل (برای افراد دارای معلولیت)"
+    },
+    "henkilökohtainen avustaja": {
+      "fa": "دستیار شخصی"
+    },
+    "noudattaa": {
+      "fa": "رعایت کردن"
+    },
+    "oleskella": {
+      "fa": "اقامت داشتن، حضور داشتن"
+    },
+    "velvollisuus": {
+      "fa": "وظیفه"
+    },
+    "onnettomuus": {
+      "fa": "حادثه"
+    },
+    "poliisi": {
+      "fa": "پلیس"
+    },
+    "järjestys": {
+      "fa": "نظم"
+    },
+    "työsopimus": {
+      "fa": "قرارداد کار",
+      "keepFinnish": true
+    },
+    "allekirjoittaa": {
+      "fa": "امضا کردن"
+    },
+    "suullinen": {
+      "fa": "شفاهی"
+    },
+    "kirjallinen": {
+      "fa": "کتبی"
+    },
+    "vähimmäispalkka": {
+      "fa": "حداقل دستمزد"
+    },
+    "työehtosopimus": {
+      "fa": "قرارداد جمعی کار",
+      "keepFinnish": true
+    },
+    "koeaika": {
+      "fa": "دوره آزمایشی"
+    },
+    "työturvallisuus": {
+      "fa": "ایمنی کار"
+    },
+    "työohje": {
+      "fa": "دستورالعمل کار"
+    },
+    "turvaväline": {
+      "fa": "تجهیزات ایمنی"
+    },
+    "perehdyttää": {
+      "fa": "آموزش و آشنا کردن با کار"
+    },
+    "verokortti": {
+      "fa": "کارت مالیاتی",
+      "keepFinnish": true
+    },
+    "tulo": {
+      "fa": "درآمد"
+    },
+    "periä veroa": {
+      "fa": "کسر کردن مالیات"
+    },
+    "progressiivinen": {
+      "fa": "تصاعدی"
+    },
+    "veroprosentti": {
+      "fa": "نرخ مالیات"
+    },
+    "verorahat": {
+      "fa": "پول مالیات"
+    },
+    "vuokrasopimus": {
+      "fa": "قرارداد اجاره",
+      "keepFinnish": true
+    },
+    "vuokra": {
+      "fa": "کرایه خانه (اجاره‌بها)"
+    },
+    "vuokratakuu": {
+      "fa": "ودیعه اجاره (پول پیش)",
+      "keepFinnish": true
+    },
+    "irtisanoa": {
+      "fa": "فسخ کردن"
+    },
+    "irtisanomisaika": {
+      "fa": "مهلت فسخ"
+    },
+    "muuttoilmoitus": {
+      "fa": "اطلاعیه نقل مکان",
+      "keepFinnish": true
+    },
+    "huoltajuus": {
+      "fa": "سرپرستی کودک"
+    },
+    "yhteishuoltajuus": {
+      "fa": "سرپرستی مشترک"
+    },
+    "elatusapu": {
+      "fa": "نفقه کودک"
+    },
+    "ero": {
+      "fa": "جدایی، طلاق"
+    },
+    "huoltaja": {
+      "fa": "سرپرست قانونی کودک"
+    },
+    "sosiaaliturva": {
+      "fa": "تأمین اجتماعی"
+    },
+    "etuus": {
+      "fa": "کمک‌هزینه، مزایا"
+    },
+    "vakinaisesti": {
+      "fa": "به‌طور دائم"
+    },
+    "hätätilanne": {
+      "fa": "وضعیت اضطراری"
+    },
+    "hoito": {
+      "fa": "مراقبت، درمان"
+    },
+    "valtakunta": {
+      "fa": "پادشاهی"
+    },
+    "rauha": {
+      "fa": "صلح"
+    },
+    "valloittaa": {
+      "fa": "فتح کردن"
+    },
+    "uskonpuhdistus": {
+      "fa": "اصلاحات دینی (رفورماسیون)"
+    },
+    "luterilainen": {
+      "fa": "لوتری"
+    },
+    "yliopisto": {
+      "fa": "دانشگاه"
+    },
+    "autonominen": {
+      "fa": "خودمختار"
+    },
+    "keisarikunta": {
+      "fa": "امپراتوری"
+    },
+    "yhtäläinen": {
+      "fa": "برابر"
+    },
+    "pääkaupunki": {
+      "fa": "پایتخت"
+    },
+    "itsenäisyys": {
+      "fa": "استقلال"
+    },
+    "tunnustaa": {
+      "fa": "به رسمیت شناختن"
+    },
+    "sisällissota": {
+      "fa": "جنگ داخلی"
+    },
+    "tasavalta": {
+      "fa": "جمهوری"
+    },
+    "hallitusmuoto": {
+      "fa": "شکل حکومت (قانون اساسی ۱۹۱۹)"
+    },
+    "talvisota": {
+      "fa": "جنگ زمستان",
+      "keepFinnish": true
+    },
+    "jatkosota": {
+      "fa": "جنگ ادامه",
+      "keepFinnish": true
+    },
+    "miehittää": {
+      "fa": "اشغال کردن"
+    },
+    "hävitä": {
+      "fa": "شکست خوردن"
+    },
+    "luovuttaa": {
+      "fa": "واگذار کردن (زمین)"
+    },
+    "maa-alue": {
+      "fa": "سرزمین"
+    },
+    "asuttaa": {
+      "fa": "اسکان دادن"
+    },
+    "väestö": {
+      "fa": "جمعیت"
+    },
+    "sotakorvaus": {
+      "fa": "غرامت جنگی"
+    },
+    "tavara": {
+      "fa": "کالا"
+    },
+    "täysimääräinen": {
+      "fa": "به‌طور کامل"
+    },
+    "olympialaiset": {
+      "fa": "بازی‌های المپیک"
+    },
+    "päätösasiakirja": {
+      "fa": "سند نهایی"
+    },
+    "Euroopan unioni": {
+      "fa": "اتحادیه اروپا"
+    },
+    "jäsen": {
+      "fa": "عضو"
+    },
+    "käteinen": {
+      "fa": "پول نقد"
+    },
+    "valuutta": {
+      "fa": "واحد پول"
+    },
+    "Nato": {
+      "fa": "ناتو"
+    },
+    "puolustusliitto": {
+      "fa": "پیمان دفاعی"
+    },
+    "yhteinen puolustus": {
+      "fa": "دفاع جمعی"
+    },
+    "turvatakuu": {
+      "fa": "تضمین امنیتی"
+    },
+    "ruotsi": {
+      "fa": "زبان سویدنی"
+    },
+    "Ahvenanmaa": {
+      "fa": "جزایر آلاند",
+      "keepFinnish": true
+    },
+    "virallinen kieli": {
+      "fa": "زبان رسمی"
+    },
+    "demilitarisoitu": {
+      "fa": "غیرنظامی‌شده"
+    },
+    "maakunta": {
+      "fa": "ولایت خودمختار"
+    },
+    "alkuperäiskansa": {
+      "fa": "مردم بومی"
+    },
+    "saamelainen": {
+      "fa": "سامی (از مردم سامی)"
+    },
+    "viittomakieli": {
+      "fa": "زبان اشاره"
+    },
+    "itsehallinto": {
+      "fa": "خودگردانی"
+    },
+    "kotiseutualue": {
+      "fa": "سرزمین بومی سامی‌ها"
+    },
+    "kirkko": {
+      "fa": "کلیسا"
+    },
+    "erityisasema": {
+      "fa": "جایگاه ویژه"
+    },
+    "verotusoikeus": {
+      "fa": "حق اخذ مالیات"
+    },
+    "itsenäisyyspäivä": {
+      "fa": "روز استقلال",
+      "keepFinnish": true
+    },
+    "juhlia": {
+      "fa": "جشن گرفتن"
+    },
+    "juhannus": {
+      "fa": "جشن نیمه تابستان",
+      "keepFinnish": true
+    },
+    "kesämökki": {
+      "fa": "کلبه تابستانی"
+    },
+    "vappu": {
+      "fa": "جشن بهار و روز کارگر (اول ماه مه)",
+      "keepFinnish": true
+    },
+    "kevät": {
+      "fa": "بهار"
+    },
+    "kansalliseläin": {
+      "fa": "حیوان ملی"
+    },
+    "karhu": {
+      "fa": "خرس"
+    },
+    "kansanruno": {
+      "fa": "شعر عامیانه"
+    },
+    "eepos": {
+      "fa": "حماسه"
+    },
+    "kirjastokortti": {
+      "fa": "کارت کتابخانه"
+    },
+    "lainata": {
+      "fa": "امانت گرفتن"
+    },
+    "hukata": {
+      "fa": "گم کردن"
+    },
+    "laina-aika": {
+      "fa": "مدت امانت"
+    },
+    "palauttaa": {
+      "fa": "پس دادن"
+    },
+    "kirjasto": {
+      "fa": "کتابخانه"
+    },
+    "vapaaehtoistyö": {
+      "fa": "کار داوطلبانه"
+    },
+    "kokous": {
+      "fa": "جلسه"
+    },
+    "peruskoulu": {
+      "fa": "مکتب پایه (مدرسه عمومی)",
+      "keepFinnish": true
+    },
+    "vuosiluokka": {
+      "fa": "صنف (پایه درسی)"
+    },
+    "oppivelvollisuus": {
+      "fa": "آموزش اجباری",
+      "keepFinnish": true
+    },
+    "toinen aste": {
+      "fa": "دوره متوسطه دوم (لیسه یا آموزش حرفه‌ای)"
+    },
+    "esiopetus": {
+      "fa": "آموزش پیش‌دبستانی",
+      "keepFinnish": true
+    },
+    "hätänumero": {
+      "fa": "شماره اضطراری"
+    },
+    "päivystäjä": {
+      "fa": "اپراتور اضطراری"
+    },
+    "jono": {
+      "fa": "صف"
+    },
+    "ruuhka": {
+      "fa": "ازدحام"
+    },
+    "rikosilmoitus": {
+      "fa": "گزارش جرم",
+      "keepFinnish": true
+    },
+    "lomake": {
+      "fa": "فرم"
+    },
+    "poliisiasema": {
+      "fa": "ایستگاه پلیس"
+    },
+    "passi": {
+      "fa": "پاسپورت"
+    },
+    "henkilökortti": {
+      "fa": "کارت هویت",
+      "keepFinnish": true
+    },
+    "palovaroitin": {
+      "fa": "دستگاه هشدار دود"
+    },
+    "neliömetri": {
+      "fa": "متر مربع"
+    },
+    "kerros": {
+      "fa": "طبقه"
+    },
+    "taloyhtiö": {
+      "fa": "شرکت مسکن (انجمن مالکان)",
+      "keepFinnish": true
+    },
+    "sammutuspeite": {
+      "fa": "پتوی اطفای حریق"
+    },
+    "tukahduttaa": {
+      "fa": "خاموش کردن با پوشاندن"
+    },
+    "hissi": {
+      "fa": "آسانسور"
+    },
+    "tulipalo": {
+      "fa": "آتش‌سوزی"
+    },
+    "väestöhälytin": {
+      "fa": "آژیر هشدار عمومی"
+    },
+    "vaaramerkki": {
+      "fa": "علامت خطر"
+    },
+    "äänimerkki": {
+      "fa": "علامت صوتی"
+    },
+    "sulkea": {
+      "fa": "بستن"
+    },
+    "ikkuna": {
+      "fa": "پنجره"
+    },
+    "puhelin": {
+      "fa": "تلفون"
+    },
+    "kotivara": {
+      "fa": "ذخیره اضطراری خانه",
+      "keepFinnish": true
+    },
+    "varautua": {
+      "fa": "آماده شدن"
+    },
+    "varasto": {
+      "fa": "ذخیره"
+    },
+    "asevelvollisuus": {
+      "fa": "خدمت سربازی اجباری",
+      "keepFinnish": true
+    },
+    "maanpuolustus": {
+      "fa": "دفاع ملی"
+    },
+    "auttava puhelin": {
+      "fa": "خط تلفن کمک"
+    },
+    "uhkailu": {
+      "fa": "تهدید"
+    },
+    "uhri": {
+      "fa": "قربانی"
+    },
+    "lastensuojelu": {
+      "fa": "حمایت از کودکان",
+      "keepFinnish": true
+    },
+    "liikenne": {
+      "fa": "ترافیک"
+    },
+    "oikea": {
+      "fa": "راست"
+    },
+    "päihtynyt": {
+      "fa": "تحت تأثیر الکل یا مواد مخدر"
+    },
+    "rattijuopumus": {
+      "fa": "رانندگی در حالت مستی"
+    },
+    "talvirengas": {
+      "fa": "تایر زمستانی"
+    },
+    "tunnistautua": {
+      "fa": "احراز هویت کردن"
+    },
+    "mobiilivarmenne": {
+      "fa": "گواهی هویت موبایلی",
+      "keepFinnish": true
+    },
+    "sovellus": {
+      "fa": "اپلیکیشن"
+    },
+    "kirjautua ulos": {
+      "fa": "خروج از حساب"
+    },
+    "tunnukset": {
+      "fa": "اطلاعات ورود"
+    },
+    "pankkitunnukset": {
+      "fa": "کدهای بانکی ورود",
+      "keepFinnish": true
+    },
+    "valtakirja": {
+      "fa": "وکالت‌نامه"
+    },
+    "valtuus": {
+      "fa": "اختیار، نمایندگی"
+    },
+    "käyttäjätunnus": {
+      "fa": "نام کاربری"
+    },
+    "digiposti": {
+      "fa": "پست دیجیتال"
+    },
+    "postilaatikko": {
+      "fa": "صندوق پست"
+    },
+    "alaikäinen": {
+      "fa": "زیر سن قانونی"
+    },
+    "veroasia": {
+      "fa": "امور مالیاتی"
+    },
+    "asunnoton": {
+      "fa": "بی‌خانمان"
+    },
+    "puhelimitse": {
+      "fa": "از طریق تلفون"
+    },
+    "resepti": {
+      "fa": "نسخه پزشکی"
+    },
+    "terveystieto": {
+      "fa": "اطلاعات صحی"
+    },
+    "uusiminen": {
+      "fa": "تمدید"
+    },
+    "lääke": {
+      "fa": "دارو"
+    },
+    "ammattilainen": {
+      "fa": "متخصص"
+    },
+    "huijaus": {
+      "fa": "کلاهبرداری"
+    },
+    "kiire": {
+      "fa": "عجله"
+    },
+    "tietojenkalastelu": {
+      "fa": "فیشینگ (سرقت اطلاعات)"
+    },
+    "asiakaspalvelu": {
+      "fa": "خدمات مشتریان"
+    },
+    "aito": {
+      "fa": "واقعی، اصل"
+    },
+    "sivusto": {
+      "fa": "وب‌سایت"
+    },
+    "henkilötieto": {
+      "fa": "اطلاعات شخصی"
+    },
+    "rekisterinpitäjä": {
+      "fa": "مسئول پردازش اطلاعات"
+    },
+    "määräaika": {
+      "fa": "مهلت"
+    },
+    "tietosuojavaltuutettu": {
+      "fa": "نماینده رسمی حفاظت از اطلاعات",
+      "keepFinnish": true
+    },
+    "kieltäytyä": {
+      "fa": "امتناع کردن"
+    }
+  }
+}

@@ -109,7 +109,7 @@
     <string name="package_details">%1$s · الإصدار %2$d</string>
     <string name="material_counts">%1$s · %2$s</string>
     <string name="import_pick">اختيار ملف المحتوى</string>
-    <string name="import_pick_note">اختر حزمة محتوى بصيغة JSON معدّة لهذا التطبيق. الحد الأقصى للحجم: 2 ميبيبايت. قد تحتوي الحزم على أسئلة بالفنلندية والسويدية.</string>
+    <string name="import_pick_note">اختر حزمة محتوى بصيغة JSON معدّة لهذا التطبيق. الحد الأقصى للحجم: 8 ميبيبايت. قد تحتوي الحزم على أسئلة بالفنلندية والسويدية.</string>
     <string name="import_privacy">يقرأ التطبيق الملف الذي تختاره فقط ولا يرسله إلى أي مكان. يمكنك الإلغاء بعد مراجعته.</string>
     <string name="import_preview_title">راجِع التحديث</string>
     <string name="import_provenance">وصف المحتوى في الملف: %1$s</string>
@@ -130,7 +130,7 @@
     <string name="import_question_status">المراجعة %1$d · %2$s</string>
     <string name="import_show_details">عرض الإجابات والشرح</string>
     <string name="import_hide_details">إخفاء التفاصيل</string>
-    <string name="import_too_large">الملف كبير جداً. اختر حزمة محتوى بحجم 2 ميبيبايت أو أقل. لم تتغيّر موادك الدراسية.</string>
+    <string name="import_too_large">الملف كبير جداً. اختر حزمة محتوى بحجم 8 ميبيبايت أو أقل. لم تتغيّر موادك الدراسية.</string>
     <string name="import_invalid">هذه ليست حزمة محتوى صالحة للتطبيق. تحقّق من صيغة الملف والأسئلة وروابط المصادر. لم تتغيّر موادك الدراسية.</string>
     <string name="import_version_error">يحتاج هذا التحديث إلى إصدار أحدث من الحزمة. لا يمكن لإصدار أقدم أو لملف معدّل بالإصدار نفسه أن يستبدل المواد المثبّتة.</string>
     <string name="import_revision_error">يحتاج السؤال المعدّل إلى رقم مراجعة أعلى، ولا يجوز تغيير لغته تحت المعرّف نفسه. صحّح الحزمة واختر الملف مجدداً.</string>
@@ -417,4 +417,11 @@
     <string name="lesson_arabic_missing">لا يوجد شرح بالعربية لهذا القسم. اقرأه بلغة الدراسة.</string>
     <string name="vocabulary_meaning_arabic">المعنى بالعربية</string>
     <string name="vocabulary_arabic">العربية: %1$s</string>
+    <string name="language_persian">فارسی · الفارسية (الدرية)</string>
+    <string name="explanation_also_persian">بالفارسية (الدرية) أيضاً</string>
+    <string name="explanation_persian_title">الشرح بالفارسية</string>
+    <string name="explanation_missing_persian">لا يوجد شرح بالفارسية لهذا السؤال. اقرأ الشرح بلغة الدراسة.</string>
+    <string name="lesson_persian_missing">لا يوجد شرح بالفارسية لهذا القسم. اقرأه بلغة الدراسة.</string>
+    <string name="vocabulary_meaning_persian">المعنى بالفارسية</string>
+    <string name="vocabulary_persian">الفارسية: %1$s</string>
 </resources>

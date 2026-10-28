@@ -306,7 +306,7 @@ def main():
     parser.add_argument("--write-coverage", action="store_true", help="Regenerate docs/CONTENT-COVERAGE.md from the objectives layer")
     args = parser.parse_args()
     path = ROOT / "app/src/main/assets/demo-content.json"
-    if path.stat().st_size > 2 * 1024 * 1024:
+    if path.stat().st_size > 8 * 1024 * 1024:
         raise ValueError("Bundled content exceeds the import limit")
     content = read_json(path)
     if args.fingerprints:

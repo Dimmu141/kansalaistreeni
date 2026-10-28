@@ -40,7 +40,8 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
                         Spacer(Modifier.width(12.dp))
                         Text(stringResource(when (language) { InterfaceLanguage.FINNISH -> R.string.language_finnish; InterfaceLanguage.SWEDISH -> R.string.language_swedish
                             InterfaceLanguage.ENGLISH -> R.string.language_english; InterfaceLanguage.RUSSIAN -> R.string.language_russian
-                            InterfaceLanguage.ARABIC -> R.string.language_arabic }))
+                            InterfaceLanguage.ARABIC -> R.string.language_arabic
+                            InterfaceLanguage.PERSIAN -> R.string.language_persian }))
                     }
                 }
             }
