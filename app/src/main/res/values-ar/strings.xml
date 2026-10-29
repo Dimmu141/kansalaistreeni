@@ -424,4 +424,11 @@
     <string name="lesson_persian_missing">لا يوجد شرح بالفارسية لهذا القسم. اقرأه بلغة الدراسة.</string>
     <string name="vocabulary_meaning_persian">المعنى بالفارسية</string>
     <string name="vocabulary_persian">الفارسية: %1$s</string>
+    <string name="language_somali">Soomaali · الصومالية</string>
+    <string name="explanation_also_somali">بالصومالية أيضاً</string>
+    <string name="explanation_somali_title">الشرح بالصومالية</string>
+    <string name="explanation_missing_somali">لا يوجد شرح بالصومالية لهذا السؤال. اقرأ الشرح بلغة الدراسة.</string>
+    <string name="lesson_somali_missing">لا يوجد شرح بالصومالية لهذا القسم. اقرأه بلغة الدراسة.</string>
+    <string name="vocabulary_meaning_somali">المعنى بالصومالية</string>
+    <string name="vocabulary_somali">الصومالية: %1$s</string>
 </resources>

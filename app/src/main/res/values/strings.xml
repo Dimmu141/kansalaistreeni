@@ -384,4 +384,11 @@
     <string name="lesson_persian_missing">Tälle osiolle ei ole persiankielistä selitystä. Lue teksti opiskelukielelläsi.</string>
     <string name="vocabulary_meaning_persian">Merkitys persiaksi</string>
     <string name="vocabulary_persian">Persia: %1$s</string>
+    <string name="language_somali">Soomaali · somali</string>
+    <string name="explanation_also_somali">Lisäksi somaliksi</string>
+    <string name="explanation_somali_title">Selitys somaliksi</string>
+    <string name="explanation_missing_somali">Tähän kysymykseen ei ole somalinkielistä selitystä. Lue selitys opiskelukielellä.</string>
+    <string name="lesson_somali_missing">Tälle osiolle ei ole somalinkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
+    <string name="vocabulary_meaning_somali">Merkitys somaliksi</string>
+    <string name="vocabulary_somali">Somali: %1$s</string>
 </resources>

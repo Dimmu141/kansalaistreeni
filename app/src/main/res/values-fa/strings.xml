@@ -380,4 +380,11 @@
     <string name="lesson_persian_missing">این بخش توضیح فارسی ندارد. آن را به زبان مطالعه بخوانید.</string>
     <string name="vocabulary_meaning_persian">معنا به فارسی</string>
     <string name="vocabulary_persian">فارسی: %1$s</string>
+    <string name="language_somali">Soomaali · سومالیایی</string>
+    <string name="explanation_also_somali">به سومالیایی هم</string>
+    <string name="explanation_somali_title">توضیح به سومالیایی</string>
+    <string name="explanation_missing_somali">این سؤال توضیح سومالیایی ندارد. توضیح را به زبان مطالعه بخوانید.</string>
+    <string name="lesson_somali_missing">این بخش توضیح سومالیایی ندارد. آن را به زبان مطالعه بخوانید.</string>
+    <string name="vocabulary_meaning_somali">معنا به سومالیایی</string>
+    <string name="vocabulary_somali">سومالیایی: %1$s</string>
 </resources>

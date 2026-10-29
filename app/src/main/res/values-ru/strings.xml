@@ -402,4 +402,11 @@
     <string name="lesson_persian_missing">У этого раздела нет объяснения на персидском. Прочитайте его на языке обучения.</string>
     <string name="vocabulary_meaning_persian">Значение на персидском</string>
     <string name="vocabulary_persian">Персидский: %1$s</string>
+    <string name="language_somali">Soomaali · сомалийский</string>
+    <string name="explanation_also_somali">Также на сомалийском</string>
+    <string name="explanation_somali_title">Объяснение на сомалийском</string>
+    <string name="explanation_missing_somali">У этого вопроса нет объяснения на сомалийском. Прочитайте объяснение на языке обучения.</string>
+    <string name="lesson_somali_missing">У этого раздела нет объяснения на сомалийском. Прочитайте его на языке обучения.</string>
+    <string name="vocabulary_meaning_somali">Значение на сомалийском</string>
+    <string name="vocabulary_somali">Сомалийский: %1$s</string>
 </resources>

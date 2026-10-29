@@ -380,4 +380,11 @@
     <string name="lesson_persian_missing">Den här delen har ingen förklaring på persiska. Läs den på ditt studiespråk.</string>
     <string name="vocabulary_meaning_persian">Betydelse på persiska</string>
     <string name="vocabulary_persian">Persiska: %1$s</string>
+    <string name="language_somali">Soomaali · somaliska</string>
+    <string name="explanation_also_somali">Även på somaliska</string>
+    <string name="explanation_somali_title">Förklaring på somaliska</string>
+    <string name="explanation_missing_somali">Den här frågan har ingen förklaring på somaliska. Läs förklaringen på ditt studiespråk.</string>
+    <string name="lesson_somali_missing">Den här delen har ingen förklaring på somaliska. Läs den på ditt studiespråk.</string>
+    <string name="vocabulary_meaning_somali">Betydelse på somaliska</string>
+    <string name="vocabulary_somali">Somaliska: %1$s</string>
 </resources>

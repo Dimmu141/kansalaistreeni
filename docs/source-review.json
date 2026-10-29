@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageId": "fi-civics-demo",
-  "version": 13,
+  "version": 14,
   "officialMaterialStatus": {
     "checkedAt": "2026-10-07",
     "sourceUrl": "https://migri.fi/ukk-suomen-kansalaisuus",

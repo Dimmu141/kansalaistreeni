@@ -1,0 +1,995 @@
+{
+  "language": "so",
+  "version": 1,
+  "rules": [
+    "Write plain, standard Somali (Af-Soomaali) in the official Latin orthography, in short sentences that a learner with basic schooling reads easily. Prefer common words over rare Arabic loans where both are understood.",
+    "The exam is taken in Finnish or Swedish. On first mention, an institution, office, document or procedure marked keepFinnish is followed by the Finnish word in parentheses: «Baarlamaanka (eduskunta)».",
+    "Use the rendering in 'so' for every occurrence; adapt it grammatically (definite article -ka/-ta/-ga, plural) but do not swap in a synonym.",
+    "Keep numbers, dates and amounts as in the Finnish text (6.12.1917, 112, 5 €), and keep names of services (Kela, OmaVero, Suomi.fi) unchanged.",
+    "Do not add facts, advice or hedging that the Finnish text does not contain."
+  ],
+  "terms": {
+    "lainsäädäntövalta": {
+      "so": "awoodda sharci-dejinta"
+    },
+    "eduskunta": {
+      "so": "Baarlamaanka Finland",
+      "keepFinnish": true
+    },
+    "tuomioistuin": {
+      "so": "maxkamad"
+    },
+    "riippumaton": {
+      "so": "madax-bannaan"
+    },
+    "hallitusvalta": {
+      "so": "awoodda dowladda (fulinta)"
+    },
+    "valtioneuvosto": {
+      "so": "Golaha Dowladda (xukuumadda)",
+      "keepFinnish": true
+    },
+    "kansanedustaja": {
+      "so": "xildhibaan",
+      "keepFinnish": true
+    },
+    "vaalikausi": {
+      "so": "muddada baarlamaanka"
+    },
+    "talousarvio": {
+      "so": "miisaaniyadda dowladda"
+    },
+    "valtio": {
+      "so": "dowladda"
+    },
+    "äänioikeus": {
+      "so": "xuquuqda codeynta"
+    },
+    "vaalipäivä": {
+      "so": "maalinta doorashada"
+    },
+    "kuntavaalit": {
+      "so": "doorashada degmada",
+      "keepFinnish": true
+    },
+    "kotikunta": {
+      "so": "degmada aad deggan tahay",
+      "keepFinnish": true
+    },
+    "aluevaalit": {
+      "so": "doorashada gobollada daryeelka",
+      "keepFinnish": true
+    },
+    "yhtäjaksoisesti": {
+      "so": "si aan kala go'in"
+    },
+    "Euroopan parlamentti": {
+      "so": "Baarlamaanka Yurub"
+    },
+    "ilmoittautua": {
+      "so": "is-diiwaangelin"
+    },
+    "toimikausi": {
+      "so": "muddada xilka"
+    },
+    "presidentinvaali": {
+      "so": "doorashada madaxweynaha"
+    },
+    "peräkkäinen": {
+      "so": "isku xiga"
+    },
+    "ulkopolitiikka": {
+      "so": "siyaasadda arrimaha dibadda"
+    },
+    "ylipäällikkö": {
+      "so": "Taliyaha Guud"
+    },
+    "puolustusvoimat": {
+      "so": "Ciidamada Difaaca",
+      "keepFinnish": true
+    },
+    "pääministeri": {
+      "so": "Ra'iisul Wasaare",
+      "keepFinnish": true
+    },
+    "ehdokas": {
+      "so": "musharax"
+    },
+    "kierros": {
+      "so": "wareeg"
+    },
+    "tasavallan presidentti": {
+      "so": "Madaxweynaha Jamhuuriyadda",
+      "keepFinnish": true
+    },
+    "hallitusohjelma": {
+      "so": "barnaamijka xukuumadda",
+      "keepFinnish": true
+    },
+    "luottamus": {
+      "so": "kalsooni"
+    },
+    "parlamentarismi": {
+      "so": "nidaamka baarlamaaniga ah"
+    },
+    "ministeri": {
+      "so": "wasiir"
+    },
+    "nimittää": {
+      "so": "magacaabid"
+    },
+    "kunnanvaltuusto": {
+      "so": "golaha degmada",
+      "keepFinnish": true
+    },
+    "kunta": {
+      "so": "degmo",
+      "keepFinnish": true
+    },
+    "hyvinvointialue": {
+      "so": "gobolka adeegyada daryeelka",
+      "keepFinnish": true
+    },
+    "pelastuspalvelut": {
+      "so": "adeegyada samatabbixinta"
+    },
+    "aluevaltuusto": {
+      "so": "golaha gobolka daryeelka",
+      "keepFinnish": true
+    },
+    "kansalaisaloite": {
+      "so": "hindise muwaadin",
+      "keepFinnish": true
+    },
+    "aloite": {
+      "so": "hindise"
+    },
+    "ehdottaa": {
+      "so": "soo jeedin"
+    },
+    "laki": {
+      "so": "sharci"
+    },
+    "kansanvalta": {
+      "so": "dimuqraadiyad"
+    },
+    "vaikuttaa": {
+      "so": "saameyn"
+    },
+    "perusoikeus": {
+      "so": "xuquuq aasaasi ah",
+      "keepFinnish": true
+    },
+    "ulkomaalainen": {
+      "so": "qof ajnabi ah"
+    },
+    "ihmisoikeus": {
+      "so": "xuquuqda aadanaha"
+    },
+    "julkinen valta": {
+      "so": "hay'adaha dowladda"
+    },
+    "kuolemanrangaistus": {
+      "so": "ciqaab dil"
+    },
+    "kiduttaa": {
+      "so": "jirdilid"
+    },
+    "sananvapaus": {
+      "so": "xorriyadda hadalka"
+    },
+    "mielipide": {
+      "so": "fikrad"
+    },
+    "julkaista": {
+      "so": "daabicid"
+    },
+    "viranomainen": {
+      "so": "hay'ad dowladeed"
+    },
+    "asiakirja": {
+      "so": "dukumenti"
+    },
+    "julkinen": {
+      "so": "furan (dadweyne)"
+    },
+    "uskonnonvapaus": {
+      "so": "xorriyadda diinta"
+    },
+    "uskonnollinen yhdyskunta": {
+      "so": "bulsho diimeed"
+    },
+    "omatunto": {
+      "so": "damiir"
+    },
+    "vakaumus": {
+      "so": "aaminaad"
+    },
+    "suostumus": {
+      "so": "oggolaansho"
+    },
+    "uskontokunta": {
+      "so": "koox diimeed"
+    },
+    "mielenosoitus": {
+      "so": "bannaanbax"
+    },
+    "ilmoitus": {
+      "so": "ogeysiis"
+    },
+    "yhdistys": {
+      "so": "urur"
+    },
+    "yhdistymisvapaus": {
+      "so": "xorriyadda ururrada"
+    },
+    "ammattiliitto": {
+      "so": "ururka shaqaalaha",
+      "keepFinnish": true
+    },
+    "järjestäytyä": {
+      "so": "is-abaabulid"
+    },
+    "perustaa": {
+      "so": "aasaasid"
+    },
+    "lupa": {
+      "so": "rukhsad"
+    },
+    "yksityiselämä": {
+      "so": "nolosha gaarka ah"
+    },
+    "luottamuksellinen": {
+      "so": "qarsoodi"
+    },
+    "kirje": {
+      "so": "warqad"
+    },
+    "salaisuus": {
+      "so": "sir"
+    },
+    "kotirauha": {
+      "so": "xurmada guriga"
+    },
+    "kunnia": {
+      "so": "sharaf"
+    },
+    "perusopetus": {
+      "so": "waxbarashada aasaasiga ah",
+      "keepFinnish": true
+    },
+    "maksuton": {
+      "so": "bilaash"
+    },
+    "kansalliskieli": {
+      "so": "luqadda qaranka"
+    },
+    "tiede": {
+      "so": "saynis"
+    },
+    "taide": {
+      "so": "farshaxan"
+    },
+    "oikeusturva": {
+      "so": "ilaalinta sharciga"
+    },
+    "hakea muutosta": {
+      "so": "racfaan qaadasho"
+    },
+    "oikeusasiamies": {
+      "so": "Ombudsmanka Cadaaladda",
+      "keepFinnish": true
+    },
+    "valvoa": {
+      "so": "kormeerid"
+    },
+    "rikos": {
+      "so": "dambi"
+    },
+    "rangaistus": {
+      "so": "ciqaab"
+    },
+    "lyödä": {
+      "so": "garaacid"
+    },
+    "väkivalta": {
+      "so": "rabshad"
+    },
+    "lapsi": {
+      "so": "ilmo"
+    },
+    "täysi-ikäinen": {
+      "so": "qof qaangaar ah"
+    },
+    "ottaa huomioon": {
+      "so": "tixgelin"
+    },
+    "yhdenvertaisuus": {
+      "so": "sinnaanta",
+      "keepFinnish": true
+    },
+    "samanarvoinen": {
+      "so": "qiime siman"
+    },
+    "lain edessä": {
+      "so": "sharciga hortiisa"
+    },
+    "syrjintä": {
+      "so": "takoor"
+    },
+    "hyväksyttävä peruste": {
+      "so": "sabab la aqbali karo"
+    },
+    "syrjiä": {
+      "so": "takoorid"
+    },
+    "vamma": {
+      "so": "naafonimo"
+    },
+    "vuokranantaja": {
+      "so": "mulkiilaha kirada"
+    },
+    "kansalaisuus": {
+      "so": "dhalasho"
+    },
+    "kielitaito": {
+      "so": "aqoonta luqadda"
+    },
+    "työnantaja": {
+      "so": "loo-shaqeeye"
+    },
+    "seksuaalinen suuntautuminen": {
+      "so": "jihada galmada"
+    },
+    "työnhakija": {
+      "so": "shaqo-doon"
+    },
+    "rekrytointi": {
+      "so": "shaqaalaysiin"
+    },
+    "uskonto": {
+      "so": "diin"
+    },
+    "palkata": {
+      "so": "shaqo siin"
+    },
+    "raskaus": {
+      "so": "uur"
+    },
+    "perhevapaa": {
+      "so": "fasaxa qoyska",
+      "keepFinnish": true
+    },
+    "työsyrjintä": {
+      "so": "takoorka shaqada"
+    },
+    "työsuojeluviranomainen": {
+      "so": "hay'adda badbaadada shaqada",
+      "keepFinnish": true
+    },
+    "äidinkieli": {
+      "so": "afka hooyo"
+    },
+    "työehdot": {
+      "so": "shuruudaha shaqada"
+    },
+    "tasa-arvo": {
+      "so": "sinnaanta jinsiga",
+      "keepFinnish": true
+    },
+    "sukupuoli": {
+      "so": "jinsi"
+    },
+    "palkka": {
+      "so": "mushahar"
+    },
+    "palkkasyrjintä": {
+      "so": "takoorka mushaharka"
+    },
+    "tulla voimaan": {
+      "so": "dhaqan gelid"
+    },
+    "mennä naimisiin": {
+      "so": "guursasho"
+    },
+    "avioliitto": {
+      "so": "guur"
+    },
+    "pakottaa": {
+      "so": "ku qasbid"
+    },
+    "vapaaehtoinen": {
+      "so": "ikhtiyaari"
+    },
+    "puoliso": {
+      "so": "lammaane"
+    },
+    "aviopuoliso": {
+      "so": "xaas (seyga ama xaaska)"
+    },
+    "yhdenvertaisuusvaltuutettu": {
+      "so": "Ombudsmanka Ka-hortagga Takoorka",
+      "keepFinnish": true
+    },
+    "tasa-arvovaltuutettu": {
+      "so": "Ombudsmanka Sinnaanta Jinsiga",
+      "keepFinnish": true
+    },
+    "vammainen": {
+      "so": "qof naafo ah"
+    },
+    "työympäristö": {
+      "so": "deegaanka shaqada"
+    },
+    "muuttaa": {
+      "so": "beddelid"
+    },
+    "kuljetuspalvelu": {
+      "so": "adeegga gaadiidka"
+    },
+    "henkilökohtainen avustaja": {
+      "so": "kaaliye shakhsi ah"
+    },
+    "noudattaa": {
+      "so": "u hoggaansamid"
+    },
+    "oleskella": {
+      "so": "joogid"
+    },
+    "velvollisuus": {
+      "so": "waajib"
+    },
+    "onnettomuus": {
+      "so": "shil"
+    },
+    "poliisi": {
+      "so": "booliis"
+    },
+    "järjestys": {
+      "so": "nidaam"
+    },
+    "työsopimus": {
+      "so": "heshiiska shaqada",
+      "keepFinnish": true
+    },
+    "allekirjoittaa": {
+      "so": "saxiixid"
+    },
+    "suullinen": {
+      "so": "af ahaan"
+    },
+    "kirjallinen": {
+      "so": "qoraal ahaan"
+    },
+    "vähimmäispalkka": {
+      "so": "mushaharka ugu yar"
+    },
+    "työehtosopimus": {
+      "so": "heshiiska wadajirka ah ee shaqada",
+      "keepFinnish": true
+    },
+    "koeaika": {
+      "so": "muddada tijaabada"
+    },
+    "työturvallisuus": {
+      "so": "badbaadada shaqada"
+    },
+    "työohje": {
+      "so": "tilmaanta shaqada"
+    },
+    "turvaväline": {
+      "so": "qalabka badbaadada"
+    },
+    "perehdyttää": {
+      "so": "hagid (tababar bilow)"
+    },
+    "verokortti": {
+      "so": "kaadhka canshuurta",
+      "keepFinnish": true
+    },
+    "tulo": {
+      "so": "dakhli"
+    },
+    "periä veroa": {
+      "so": "canshuur ka goyn"
+    },
+    "progressiivinen": {
+      "so": "kordhaya (horusocod)"
+    },
+    "veroprosentti": {
+      "so": "heerka canshuurta"
+    },
+    "verorahat": {
+      "so": "lacagta canshuurta"
+    },
+    "vuokrasopimus": {
+      "so": "heshiiska kirada",
+      "keepFinnish": true
+    },
+    "vuokra": {
+      "so": "kiro"
+    },
+    "vuokratakuu": {
+      "so": "dammaanadda kirada",
+      "keepFinnish": true
+    },
+    "irtisanoa": {
+      "so": "joojin (ogeysiis ka bixid)"
+    },
+    "irtisanomisaika": {
+      "so": "muddada ogeysiiska"
+    },
+    "muuttoilmoitus": {
+      "so": "ogeysiiska guurista",
+      "keepFinnish": true
+    },
+    "huoltajuus": {
+      "so": "xannaanada ilmaha"
+    },
+    "yhteishuoltajuus": {
+      "so": "xannaano wadaag ah"
+    },
+    "elatusapu": {
+      "so": "masruufka ilmaha"
+    },
+    "ero": {
+      "so": "kala tag"
+    },
+    "huoltaja": {
+      "so": "mas'uulka ilmaha"
+    },
+    "sosiaaliturva": {
+      "so": "daryeelka bulshada"
+    },
+    "etuus": {
+      "so": "gargaar"
+    },
+    "vakinaisesti": {
+      "so": "si joogto ah"
+    },
+    "hätätilanne": {
+      "so": "xaalad degdeg ah"
+    },
+    "hoito": {
+      "so": "daryeel"
+    },
+    "valtakunta": {
+      "so": "boqortooyo"
+    },
+    "rauha": {
+      "so": "nabad"
+    },
+    "valloittaa": {
+      "so": "qabsasho"
+    },
+    "uskonpuhdistus": {
+      "so": "Dib-u-habaynta diinta"
+    },
+    "luterilainen": {
+      "so": "Luteraan"
+    },
+    "yliopisto": {
+      "so": "jaamacad"
+    },
+    "autonominen": {
+      "so": "is-maamul leh"
+    },
+    "keisarikunta": {
+      "so": "boqortooyo imbaraadoor"
+    },
+    "yhtäläinen": {
+      "so": "siman"
+    },
+    "pääkaupunki": {
+      "so": "caasimad"
+    },
+    "itsenäisyys": {
+      "so": "xorriyad (madax-bannaani)"
+    },
+    "tunnustaa": {
+      "so": "aqoonsi siin"
+    },
+    "sisällissota": {
+      "so": "dagaal sokeeye"
+    },
+    "tasavalta": {
+      "so": "jamhuuriyad"
+    },
+    "hallitusmuoto": {
+      "so": "qaabka dowladnimo"
+    },
+    "talvisota": {
+      "so": "Dagaalkii Jiilaalka",
+      "keepFinnish": true
+    },
+    "jatkosota": {
+      "so": "Dagaalkii Sii-socoshada",
+      "keepFinnish": true
+    },
+    "miehittää": {
+      "so": "haysasho ciidan"
+    },
+    "hävitä": {
+      "so": "laga adkaado"
+    },
+    "luovuttaa": {
+      "so": "wareejin"
+    },
+    "maa-alue": {
+      "so": "dhul"
+    },
+    "asuttaa": {
+      "so": "dejin"
+    },
+    "väestö": {
+      "so": "dadweyne"
+    },
+    "sotakorvaus": {
+      "so": "magdhowga dagaalka"
+    },
+    "tavara": {
+      "so": "alaab"
+    },
+    "täysimääräinen": {
+      "so": "si buuxda"
+    },
+    "olympialaiset": {
+      "so": "Ciyaaraha Olombikada"
+    },
+    "päätösasiakirja": {
+      "so": "dukumentiga kama dambaysta ah"
+    },
+    "Euroopan unioni": {
+      "so": "Midowga Yurub"
+    },
+    "jäsen": {
+      "so": "xubin"
+    },
+    "käteinen": {
+      "so": "lacag caddaan ah"
+    },
+    "valuutta": {
+      "so": "lacag (currency)"
+    },
+    "Nato": {
+      "so": "NATO"
+    },
+    "puolustusliitto": {
+      "so": "isbahaysi difaac"
+    },
+    "yhteinen puolustus": {
+      "so": "difaac wadajir ah"
+    },
+    "turvatakuu": {
+      "so": "dammaanad amni"
+    },
+    "ruotsi": {
+      "so": "luqadda iswiidhishka"
+    },
+    "Ahvenanmaa": {
+      "so": "Jasiiradaha Åland",
+      "keepFinnish": true
+    },
+    "virallinen kieli": {
+      "so": "luqad rasmi ah"
+    },
+    "demilitarisoitu": {
+      "so": "ka madhan ciidan"
+    },
+    "maakunta": {
+      "so": "gobol"
+    },
+    "alkuperäiskansa": {
+      "so": "dadka asaliga ah"
+    },
+    "saamelainen": {
+      "so": "Saami"
+    },
+    "viittomakieli": {
+      "so": "luqadda calaamadaha"
+    },
+    "itsehallinto": {
+      "so": "is-maamul"
+    },
+    "kotiseutualue": {
+      "so": "deegaanka asalka ah"
+    },
+    "kirkko": {
+      "so": "kaniisad"
+    },
+    "erityisasema": {
+      "so": "maqaam gaar ah"
+    },
+    "verotusoikeus": {
+      "so": "xuquuqda canshuur qaadista"
+    },
+    "itsenäisyyspäivä": {
+      "so": "Maalinta Xorriyadda",
+      "keepFinnish": true
+    },
+    "juhlia": {
+      "so": "dabaaldegid"
+    },
+    "juhannus": {
+      "so": "Dabaaldegga Bartamaha Xagaaga",
+      "keepFinnish": true
+    },
+    "kesämökki": {
+      "so": "aqal xagaa"
+    },
+    "vappu": {
+      "so": "Maalinta 1 May",
+      "keepFinnish": true
+    },
+    "kevät": {
+      "so": "gu' (xilliga ubaxa)"
+    },
+    "kansalliseläin": {
+      "so": "xayawaanka qaranka"
+    },
+    "karhu": {
+      "so": "orso (bear)"
+    },
+    "kansanruno": {
+      "so": "gabay hiddeed"
+    },
+    "eepos": {
+      "so": "gabay dheer oo taariikhi ah"
+    },
+    "kirjastokortti": {
+      "so": "kaadhka maktabadda"
+    },
+    "lainata": {
+      "so": "amaahasho"
+    },
+    "hukata": {
+      "so": "lumin"
+    },
+    "laina-aika": {
+      "so": "muddada amaahda"
+    },
+    "palauttaa": {
+      "so": "soo celin"
+    },
+    "kirjasto": {
+      "so": "maktabad"
+    },
+    "vapaaehtoistyö": {
+      "so": "shaqo tabaruc ah"
+    },
+    "kokous": {
+      "so": "shir"
+    },
+    "peruskoulu": {
+      "so": "dugsiga aasaasiga ah",
+      "keepFinnish": true
+    },
+    "vuosiluokka": {
+      "so": "fasal"
+    },
+    "oppivelvollisuus": {
+      "so": "waxbarasho qasab ah",
+      "keepFinnish": true
+    },
+    "toinen aste": {
+      "so": "heerka dugsiga sare"
+    },
+    "esiopetus": {
+      "so": "waxbarashada ka hor dugsiga",
+      "keepFinnish": true
+    },
+    "hätänumero": {
+      "so": "lambarka gurmadka degdegga ah"
+    },
+    "päivystäjä": {
+      "so": "hawlwadeenka gurmadka"
+    },
+    "jono": {
+      "so": "saf"
+    },
+    "ruuhka": {
+      "so": "cidhiidhi"
+    },
+    "rikosilmoitus": {
+      "so": "warbixinta dambiga",
+      "keepFinnish": true
+    },
+    "lomake": {
+      "so": "foom"
+    },
+    "poliisiasema": {
+      "so": "saldhigga booliska"
+    },
+    "passi": {
+      "so": "baasaboor"
+    },
+    "henkilökortti": {
+      "so": "kaadhka aqoonsiga",
+      "keepFinnish": true
+    },
+    "palovaroitin": {
+      "so": "qalabka digniinta qiiqa"
+    },
+    "neliömetri": {
+      "so": "mitir laba jibbaaran"
+    },
+    "kerros": {
+      "so": "dabaq"
+    },
+    "taloyhtiö": {
+      "so": "shirkadda guryaha",
+      "keepFinnish": true
+    },
+    "sammutuspeite": {
+      "so": "buste dab-demis"
+    },
+    "tukahduttaa": {
+      "so": "bakhtiin (ceejin)"
+    },
+    "hissi": {
+      "so": "wiish"
+    },
+    "tulipalo": {
+      "so": "dab"
+    },
+    "väestöhälytin": {
+      "so": "sireenka digniinta dadweynaha"
+    },
+    "vaaramerkki": {
+      "so": "calaamad khatar"
+    },
+    "äänimerkki": {
+      "so": "calaamad cod"
+    },
+    "sulkea": {
+      "so": "xirid"
+    },
+    "ikkuna": {
+      "so": "daaqad"
+    },
+    "puhelin": {
+      "so": "telefoon"
+    },
+    "kotivara": {
+      "so": "kaydka guriga",
+      "keepFinnish": true
+    },
+    "varautua": {
+      "so": "diyaar garowsasho"
+    },
+    "varasto": {
+      "so": "kayd"
+    },
+    "asevelvollisuus": {
+      "so": "adeegga ciidan ee qasabka ah",
+      "keepFinnish": true
+    },
+    "maanpuolustus": {
+      "so": "difaaca qaranka"
+    },
+    "auttava puhelin": {
+      "so": "khadka caawimada"
+    },
+    "uhkailu": {
+      "so": "hanjabaad"
+    },
+    "uhri": {
+      "so": "dhibbane"
+    },
+    "lastensuojelu": {
+      "so": "ilaalinta carruurta",
+      "keepFinnish": true
+    },
+    "liikenne": {
+      "so": "taraafik"
+    },
+    "oikea": {
+      "so": "midig"
+    },
+    "päihtynyt": {
+      "so": "sakhraansan"
+    },
+    "rattijuopumus": {
+      "so": "wadis sakhraannimo"
+    },
+    "talvirengas": {
+      "so": "taayir jiilaal"
+    },
+    "tunnistautua": {
+      "so": "is-aqoonsiin"
+    },
+    "mobiilivarmenne": {
+      "so": "shahaadada aqoonsiga mobilka",
+      "keepFinnish": true
+    },
+    "sovellus": {
+      "so": "app (barnaamij)"
+    },
+    "kirjautua ulos": {
+      "so": "ka bixid (log out)"
+    },
+    "tunnukset": {
+      "so": "aqoonsiyada gelitaanka"
+    },
+    "pankkitunnukset": {
+      "so": "aqoonsiyada bangiga",
+      "keepFinnish": true
+    },
+    "valtakirja": {
+      "so": "wakaalad"
+    },
+    "valtuus": {
+      "so": "awood wakiil"
+    },
+    "käyttäjätunnus": {
+      "so": "magaca isticmaalaha"
+    },
+    "digiposti": {
+      "so": "boosta dhijitaalka"
+    },
+    "postilaatikko": {
+      "so": "sanduuqa boostada"
+    },
+    "alaikäinen": {
+      "so": "qof aan qaan-gaarin"
+    },
+    "veroasia": {
+      "so": "arrin canshuur"
+    },
+    "asunnoton": {
+      "so": "hoy la'aan"
+    },
+    "puhelimitse": {
+      "so": "telefoon ahaan"
+    },
+    "resepti": {
+      "so": "warqadda daawada"
+    },
+    "terveystieto": {
+      "so": "macluumaadka caafimaadka"
+    },
+    "uusiminen": {
+      "so": "cusboonaysiin"
+    },
+    "lääke": {
+      "so": "daawo"
+    },
+    "ammattilainen": {
+      "so": "xirfadle"
+    },
+    "huijaus": {
+      "so": "khiyaano"
+    },
+    "kiire": {
+      "so": "degdeg"
+    },
+    "tietojenkalastelu": {
+      "so": "khiyaanada xog-raadinta (phishing)"
+    },
+    "asiakaspalvelu": {
+      "so": "adeegga macaamiisha"
+    },
+    "aito": {
+      "so": "dhab ah"
+    },
+    "sivusto": {
+      "so": "bogga internetka"
+    },
+    "henkilötieto": {
+      "so": "xogta shakhsiga"
+    },
+    "rekisterinpitäjä": {
+      "so": "haysta diiwaanka (controller)"
+    },
+    "määräaika": {
+      "so": "wakhtiga kama dambaysta ah"
+    },
+    "tietosuojavaltuutettu": {
+      "so": "Ombudsmanka Ilaalinta Xogta",
+      "keepFinnish": true
+    },
+    "kieltäytyä": {
+      "so": "diidmo"
+    }
+  }
+}
