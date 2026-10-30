@@ -431,4 +431,11 @@
     <string name="lesson_somali_missing">لا يوجد شرح بالصومالية لهذا القسم. اقرأه بلغة الدراسة.</string>
     <string name="vocabulary_meaning_somali">المعنى بالصومالية</string>
     <string name="vocabulary_somali">الصومالية: %1$s</string>
+    <string name="language_ukrainian">Українська · الأوكرانية</string>
+    <string name="explanation_also_ukrainian">بالأوكرانية أيضاً</string>
+    <string name="explanation_ukrainian_title">الشرح بالأوكرانية</string>
+    <string name="explanation_missing_ukrainian">لا يوجد شرح بالأوكرانية لهذا السؤال. اقرأ الشرح بلغة الدراسة.</string>
+    <string name="lesson_ukrainian_missing">لا يوجد شرح بالأوكرانية لهذا القسم. اقرأه بلغة الدراسة.</string>
+    <string name="vocabulary_meaning_ukrainian">المعنى بالأوكرانية</string>
+    <string name="vocabulary_ukrainian">الأوكرانية: %1$s</string>
 </resources>

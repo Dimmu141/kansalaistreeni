@@ -387,4 +387,11 @@
     <string name="lesson_somali_missing">Qaybtan ma laha sharaxaad Soomaali ah. Ku akhri luqaddaada waxbarasho.</string>
     <string name="vocabulary_meaning_somali">Micnaha Soomaaliga</string>
     <string name="vocabulary_somali">Soomaali: %1$s</string>
+    <string name="language_ukrainian">Українська · Yukreeniyaan</string>
+    <string name="explanation_also_ukrainian">Sidoo kale Yukreeniyaan</string>
+    <string name="explanation_ukrainian_title">Sharaxaadda Yukreeniyaanka</string>
+    <string name="explanation_missing_ukrainian">Su\'aashan ma laha sharaxaad Yukreeniyaan ah. Ku akhri sharaxaadda luqaddaada waxbarasho.</string>
+    <string name="lesson_ukrainian_missing">Qaybtan ma laha sharaxaad Yukreeniyaan ah. Ku akhri luqaddaada waxbarasho.</string>
+    <string name="vocabulary_meaning_ukrainian">Micnaha Yukreeniyaanka</string>
+    <string name="vocabulary_ukrainian">Yukreeniyaan: %1$s</string>
 </resources>

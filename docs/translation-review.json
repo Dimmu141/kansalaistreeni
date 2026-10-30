@@ -5970,6 +5970,1363 @@
         "translationSha": "10673af58b475a6875cb41fa7f36fce22c329e24704326752704762e0e563379",
         "status": "MACHINE_DRAFT"
       }
+    },
+    "uk": {
+      "demo-parliament": {
+        "sourceSha": "ed713087e3a54827fd97041ef4355e57f40ef0e20d9e44d983a244ae3133b394",
+        "translationSha": "2781e043ebeb91330c317eaa6fdcd2ae81186bc111f3f323d28a0156421ae819",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-courts": {
+        "sourceSha": "947b0ac4aa373a1dba44d29e3876a125f994e4a06a0b192776389c5f844865a1",
+        "translationSha": "a9d30ec12f89c9e09c65244a8a0d5b25145aa5165510cf72c9f5849f1855780d",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-executive-power": {
+        "sourceSha": "b2e3269dc6240d4eacfeafcd0b1575328e1ba14b0fd7c3dd39cfb9a46fab3b77",
+        "translationSha": "550717412709e3c70929ede1d16447365aa90eb8d480649db01038a3d5490af8",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-members": {
+        "sourceSha": "1b0202cc2e3ae183ffc9219ee10d75d28d6e1d9b6f9744b85bb0b0460391c3b3",
+        "translationSha": "3b5bac156cf88ff51195a01d55f97e34c93a955fc65c28db07cc1dcd3b4e5daf",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-term": {
+        "sourceSha": "fda4f613913f49d767b38b206b64fc1fa649f458c339eaa0e8b58c34dcbffb6c",
+        "translationSha": "ebde10132f2c0d06ba7ff72033b3d3d91322e0bb1f4d1c919e5c602e79a87663",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-state-budget": {
+        "sourceSha": "fdf6c990b6e5da4f7434903a63d1087dc34180963ba3ae744795844306d4c3b8",
+        "translationSha": "bc54e3c68d8c65ba35e628475781d1de296e5fa5abb9eabd2e4a68557b3e93fd",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-voting": {
+        "sourceSha": "cd1dc062d72a43d145333abd1569f13f7e60ef6b98c3ca981851abe185a7b409",
+        "translationSha": "c5c8e093a58fe85c510a12b5cdec88bf492606d115b3fd6cb37afd659e564aaa",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-municipal-vote": {
+        "sourceSha": "994676c8ef1d1632062b554f2efc65c53381232bccc4decf2b39682e104c7177",
+        "translationSha": "2c3e9f2d262f36ae6d671cbb6c33a06b7b69540bb9a5e24380750b6a25205347",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-county-vote": {
+        "sourceSha": "434a0851c51e4d7f02f6b170274c11d162925e183c5e61f896fa387abe9c9023",
+        "translationSha": "cd654c18a42eb567334f49184b280ff5260b203fc82b020da71a84df7be22f43",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-eu-vote": {
+        "sourceSha": "c8fd8fc19801239965fe442156f67ea9d9cd91f924179830b7467e24a345843e",
+        "translationSha": "ff8d8dcbe112d2907b90eb45b5cba6af98a28285e40448cdfa1ab6ae55594e03",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-president-term": {
+        "sourceSha": "cfddb2535c11bc90ba37c76b95d7485fa510c9627508f2be27f36f7a4e25739c",
+        "translationSha": "fbe0f3c4283bdf9b7ff3144dd0eb1c5fb2b44f73124d007f45383fec6da69a8a",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-president-limit": {
+        "sourceSha": "63c22f54b5aa56dc8424ec8ef408313489c3fd6437f6c513d940918a7bf5c4fb",
+        "translationSha": "5650de72b872833d3b1638b2090a1fdb28c300660db69092a92c6c8ef193ac38",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-foreign-policy": {
+        "sourceSha": "3a1dffea0ed4f3e87aadaebfcddddcca6b00931d922144efdcd2195833c49e2a",
+        "translationSha": "0b580978177b7c6d333ae185d3538d268c27fe66121a3416bc410397675f5291",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-commander": {
+        "sourceSha": "e52c94073e30c82057d9bd35c028598f16c74416ffce54a59356c02aab809592",
+        "translationSha": "a535baf80421763f56d07fd34d94dfb2d3c79fabeac04777ddc4da8b93c9d9f0",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-second-round": {
+        "sourceSha": "4582acb16b0c70e1972fcf3ef4f04d9eccc7886bb1c2f6e1d233374aff571ead",
+        "translationSha": "001e862d86ffb76d0f801e8e88452b27ae4ea58eb46448e40b4fa3a76a4fa259",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-president-office": {
+        "sourceSha": "3cb7a58bb4b5731636fc55faed8d00f9a40d9219f070b496808d26de739fe68b",
+        "translationSha": "3f4adad9a7e067c00f8566b14ca22d6577067c011b7cdc4b0707be6ea68eec1c",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-prime-minister": {
+        "sourceSha": "14b2221282720b3b404e5a63c351ce4fd3408ea13e6bcfd5d86c06226e3eb7f4",
+        "translationSha": "64b17e60e70dfc78443505076f1594ecc8ac0e95877cfde6dcb4cc6ff91a55b2",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-confidence": {
+        "sourceSha": "28b860b7c1d740947f57d91e7367d52c60772653da6c02d2ee3097aa3f679cd3",
+        "translationSha": "462065231c5d48771b3594b28abfef4c2c6374232b448f44e99876760ace9a21",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-ministers": {
+        "sourceSha": "4d9f177557ff60f22ba2033ed7abc7f932dd5d518627fd47357e108212b4cf39",
+        "translationSha": "f7886be2f7042c860db30517d62ed64bdacf0e6ac0c28a755defb440481396a8",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-municipal-council": {
+        "sourceSha": "86cb0d549f18f798aa7c9057bf45b9402fded98d015e9aef8cb78c713da3023a",
+        "translationSha": "679d7546f21a9c88a6f61a3c0b7bc33721dd833f9e3f3c7e410841a636d5f97c",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-wellbeing-county": {
+        "sourceSha": "7f0ce6695aa8a343fe690e679aba0bd5ed8f85f67dbe90116255d30e5a7ac724",
+        "translationSha": "851b07b0576b6545834a1853c4e4e05e0d904465d9ae17c1cd040b4fa5954dbb",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-county-exceptions": {
+        "sourceSha": "18e1bb6173dcc9b426538cf223f84a2660a155818a3416f3a58381d9c97c13d7",
+        "translationSha": "f157486e806415c3d14435d1a482b2460374855a63ba570c306000a91b99f026",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-citizens-initiative": {
+        "sourceSha": "1467da9d616d56a1aa072d63c6e77286070f072db2d7ec36b0f2ed628bf022d8",
+        "translationSha": "597785ef35c7c3b09b4fdf548da358f956b875c5b25b79409df9ad6efadb23f6",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-initiative-law": {
+        "sourceSha": "55359c6f4a6308b455b0b78725022392eac08050bceb3b8e7b0a365dde162fe0",
+        "translationSha": "83efb6fbee84634eb240d6f625ccaf3b6293e0e46b50cfcfc51112014bc9918a",
+        "status": "MACHINE_DRAFT"
+      },
+      "dem-right-to-participate": {
+        "sourceSha": "a68ba309ddebaf882b0327b1556169f8d65c9b75e6059bc3eae7dc091b119bec",
+        "translationSha": "21cb1c70f057641725d349b6452e94bed28345fd9bd3c57a5b0891dddb408eab",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-everyone": {
+        "sourceSha": "0ad8015f16280f5c42204e55c29b3bcaaa504f7970d9ea9fe3562f98917c4267",
+        "translationSha": "173e7a16b27c34667d2d66f242f84fad8a8449d7ddb15aa4e490be1351c65d25",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-public-duty": {
+        "sourceSha": "d2c8fc5b77e4b66122f853140952045ba2d259c101ebcf121bcff3283a2fd29e",
+        "translationSha": "481d80c1538338adad39132914c27de3575b3cf37b33126d6155cdc9fe9e70f5",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-death-penalty": {
+        "sourceSha": "5d42eef7df6cb381f5fbd3b1a8cc38f597e76d2edc49f5dded68cc1c7613f51d",
+        "translationSha": "e85855b741819acbdc9acef7cd4b8a6c443e3408fb9c355285700abe62134066",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-expression": {
+        "sourceSha": "3a51f52a03a4f4412a152f0a034e825583dc0a29d82757958458847ebcc16d1c",
+        "translationSha": "6b181294f653a5bbb14628bb93850e081c73d29887df9f8a21eb523b883a55ce",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-no-censorship": {
+        "sourceSha": "4675c0afb3d2a1ec902b78d9bad49b60f3610db174e0b3e29f0fc5c6603ebf8a",
+        "translationSha": "2d20ae0cebdf0133b03ccec727ff017574a51ac8e1de0d24d4e4087f860c9428",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-public-documents": {
+        "sourceSha": "70d8e61590c6e87c35612598870d6da7b7431909fd93c686378ee7132c732984",
+        "translationSha": "7774c785d48a4b3b38e58f16d9e2c40f7b8c88268995a0c07b2dc169aa40a20c",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-religion": {
+        "sourceSha": "21cd4cc79d06530d3fd7f81353073fbc0ed0de5b4bc52eb44f5866636aefa348",
+        "translationSha": "03a6e1c5beef2449be1c8afce4adb3d2ae9f0010033ed557021dac03b80abcee",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-conscience": {
+        "sourceSha": "c70d7a19ab25d18a90f2d378eac51d26e8efa8b2129ebc54ae798dbe41d6bff8",
+        "translationSha": "20246214798339b1d345c6136d4ce98776a2e3a3b66c30144205ba6373e02208",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-child-religion": {
+        "sourceSha": "003f9ba198bd317976013194aade40bee9819bff07aef52cfd8a661abc5d0832",
+        "translationSha": "2de51204235794b88215e09da6098772052e31a4d223fa4d0ccf5efd0046c181",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-assembly": {
+        "sourceSha": "e8d7b970ab9e2c8e484b6d4367f3634f3f83cd0fd3cac4be24fea2ef1b2034e9",
+        "translationSha": "915f1f160e9622a045e5f5299b104f61bb448131d7c9ef2d8c1a19f3466b9167",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-association": {
+        "sourceSha": "9ee9c04f64ab19d9c45933033966701b633eee3df24ebf398b9417de42d48d26",
+        "translationSha": "c1ca1691dc21e878cd1aa334b20478586e34a769c362c2d9e915d6eb9d2a7873",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-trade-union": {
+        "sourceSha": "51e4018ac283ae04ca90ab37d0dce8e34204c8dfdd99f6fdb516bc69d88a1afe",
+        "translationSha": "4a9a71935910f1ad23dadb77265422b937aa38d28f39cba4ba66a10cd26a90f0",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-association-permit": {
+        "sourceSha": "3401d1a6daca699446d3796a86f36b0c8977673d29bd85642244602971cc6461",
+        "translationSha": "3d092c82e25565ad4a6551cc9fe13a4265cf7f764f103b749fbf91ab4ab08c2a",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-privacy": {
+        "sourceSha": "12a7132a324a8e63ea6291e2d1d1ef8a1d8c61ee499116f26dccb4880a0264bd",
+        "translationSha": "42b7e3e6668f33cb5486742140e7df96eba767d18f1b64f016ae4f2c615a2aee",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-message-secrecy": {
+        "sourceSha": "54648700b0a131a8574d018a0c2a0c424482b82067f9660db2bdaf254ab540dc",
+        "translationSha": "9872a33d6f656a02070f8d3ad631a68292b14c58e4684f3cc85317dd371af863",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-protected": {
+        "sourceSha": "a601c294075bce8a1723ba0e95f8af23b05728393c2b392bce27e9f58343b6fe",
+        "translationSha": "fb64aece0240948974afdecd5902b72fc9f07b4f0b6602ae3521ed452a186563",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-basic-education": {
+        "sourceSha": "a396686543c7d10b4fa6717bfb73842f5671a4d273d7b9ab62a4ccb46eaf21c8",
+        "translationSha": "962c4af10bf9b16ab61b2f7cc547c4eae7a083a3516cfe0fc6d707f40f934ef7",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-own-language": {
+        "sourceSha": "bcd097741c202321fe4bd4dd1c54e972fec952adf811e553a5b8e14b7b284772",
+        "translationSha": "218e5541e35ead52dd5ad7e1a43b11805acf82e022066f56a4b3235af08b48fe",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-academic-freedom": {
+        "sourceSha": "a1f8e1666f8ca104cbca21013fbc24fe33ba6d1c4d6d784b338a2298613725b3",
+        "translationSha": "5bd857bad4b90721f09a290c0c875377cebc34727a0b21aee54ee88c9426d8ff",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-due-process": {
+        "sourceSha": "b6e806263e51d2320ba8f41ee926b2ddab9c8ac7a2a82d24cfc6c689cc8c65d4",
+        "translationSha": "e88941eb5825f5ec610d7377fd43134b438e91d448eee88404ae0ded77251e9e",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-ombudsman": {
+        "sourceSha": "edbd706a6b86eb89588013113b95d0336f7c78fde10d9052a7dd84ed11fbde79",
+        "translationSha": "9c2d6c326fc469ab094f2dba7efcd27ea2b3e6a3ab57ee6fabbf8fee38290918",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-no-retroactive-crime": {
+        "sourceSha": "2e461aac358171421360aea71827c698370e462ea1402d64b12d460135743d34",
+        "translationSha": "bf4e2575edbf98b9ca18f8edbb59abbddbeb980378db2a759110171a42a97c03",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-no-hitting-children": {
+        "sourceSha": "2928178735e5e2b7a5a6d4af58e50f0da48231f1f9344887844caa00d4c8f916",
+        "translationSha": "197a806e1fd2d56b94db7d8f2a76b3ce56db3439875be0a6c22b316e7f2419b6",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-child-age": {
+        "sourceSha": "f0bb9fe2bd9027abb81a041c763007fef84b39f186c0f8449e1760e4201e1eff",
+        "translationSha": "050d8717aa15172e25f09b80e48fff37bffbea47decc7f085407d69299b4e2d3",
+        "status": "MACHINE_DRAFT"
+      },
+      "rights-child-opinion": {
+        "sourceSha": "817a2effa2fbcfc8b52420ebcc068217f82dd526a03153967adfbf9cc7d3dd74",
+        "translationSha": "ac49632a1ee777e33c1f4d182dba098043a28932253bc3e186f23a42dcae6b56",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-equality": {
+        "sourceSha": "dd30b4b6ef1ba638d5527ca160b6ac5fd4f22821544a8eae4f1bbc220b0a7c09",
+        "translationSha": "cd5ab23fcbe3e7458dc4d6d3ac1d84ffabfcda2532ca7b0e9bf7e2172decf2da",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-before-law": {
+        "sourceSha": "14411ad755689fb9d8c2be92f9d2d9d353d151a2756043b95eb5b961788d8be3",
+        "translationSha": "59e9c830df43179e835b978e9374d56808c5f9efbb78348900ce20f9e1a272aa",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-acceptable-reason": {
+        "sourceSha": "073b6ce703457a5dba52a61eab37d4f8b94960e0213f137d6e07d6eaead8782c",
+        "translationSha": "d2b70130cbd3b55f21ae7becfcd36b3818cf716f880460c3432b04b943bdd777",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-grounds": {
+        "sourceSha": "5e41016a659be3cabcd8ead4196701d98cbfd36675d6b9525f07b04eaea63a88",
+        "translationSha": "825134936be4a4ac23557d4231f9fb257ca1b1b8254a63b4a35f432fbe78d684",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-landlord-citizenship": {
+        "sourceSha": "ee702ffae1133ae4c034517e88b74890aa7ada14deea69394e2301f1e832eea6",
+        "translationSha": "62964a9f868c92b1de63df47f8be2f59dc353de9a28bdd4bb28b6f5d1ace6669",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-language-demand": {
+        "sourceSha": "ea792498faf317eeca97e5fb4214aa552f651b0e755db5ebeaa98c7553908311",
+        "translationSha": "1ddf2dec6de0918dba3d819eee0617acab8134f2552be080253e62901ca084b3",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-sexual-orientation": {
+        "sourceSha": "2e95b1d82bd2633b59839324f0b971bc9adcb7efa44aa0cb2cd9a8f3774475ca",
+        "translationSha": "2be14c6654dfbb52f729ff0d3cdee4179b687703662d79b99bba82b43e88ac31",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-best-applicant": {
+        "sourceSha": "e80bc52793415ae7094d3c371ae4c2579f306ef6184300359cea4b921d3e558b",
+        "translationSha": "fc0bcb224cdebb27522389d85f7a42f929141bdb60ad8b40e6a56bea62ac6ee8",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-religion-hiring": {
+        "sourceSha": "394650367d459f4514cf4ce23112df6fec68ca30afc9e28ec241fd89eb574a7a",
+        "translationSha": "9d0e53a50450ef7d3f45484af8c8c1332f7c6f3dea6f4c00bf3bea6bc777d2b5",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-pregnancy": {
+        "sourceSha": "72c7a514fd71d2c20490a381974375c4ab0916ee553db936464396099e18a8b2",
+        "translationSha": "f567a3a9e02b752b399a793527a65a10f3bf73169d36e9c7d0b0dc4769130675",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-work-crime": {
+        "sourceSha": "145141336eb538c8c249550a9029bdbf79a53350fa07dedd1036bb8097ed9897",
+        "translationSha": "48811e080ea0788d22e36339e91294c98139ec0b3f5d9a474a39ea16f8885820",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-work-language": {
+        "sourceSha": "96778ba1e7b84b5ad8b5e6c8a08b3636048ad54ebb67e16a277a5dbbe3c7433f",
+        "translationSha": "d7d7ae9bf986424fd3e88e3c9a28e253b9dead1ad7046163c44a00b02a3ad008",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-equality-act": {
+        "sourceSha": "5567ac4b50f2a01353449a15fc82b5ea1e7f73578325bd2f7782624e070501a5",
+        "translationSha": "b040908c125d70168024ebbc154af8783a940004b498c307dfad8bd710865ff4",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-equal-pay": {
+        "sourceSha": "21b10a7d1841e2d2a423944648ca859eaed26c420c5b9c1100b9d3c3ebecdbcb",
+        "translationSha": "9ef7e195114a5e98c27d71676c772595e5b5e19eebeec4ed506b999a5ef4f45d",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-act-year": {
+        "sourceSha": "522667fe47a8811c74496c0c42ac881f665cde5fd16c95cd6a0c5694877b0832",
+        "translationSha": "2769f1a48938a641f4effb5e49c43604189465e07621a7ed4032e10369e6cb89",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-marriage-age": {
+        "sourceSha": "098eb33a2b15dc753add609b276b204c3a1b96cf21c8314a3bc39395112dcd69",
+        "translationSha": "adb1ee2031a29a568dd809e1afd9f39be6db64305052544ab6a035b3a5399650",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-forced-marriage": {
+        "sourceSha": "b94d401d6aa746361df3ec6687980768babb0c1dfb371e6dafc5f219bb75d03e",
+        "translationSha": "cfc7176acd69b62ed9597bf34c231b56673aa0bdf6f4b685091adaef22f66fbe",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-same-sex-marriage": {
+        "sourceSha": "980d0532de075a027c0398d4c226835ec7863d5053f98988ac1cfa83dcf4ec7b",
+        "translationSha": "953eac76bdba533ccd38159a04e70a6141af96176e34908a7cbadefe2189fe31",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-spouses-work": {
+        "sourceSha": "21383d8f91dfef3c5f48dd2f44372721e4db4411c7c3d9563f99241e7ca107aa",
+        "translationSha": "340bb6a4651e7f6267d1818428cff4d0a64f22bf09b0f04e0b44b638d053fb7b",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-ombudsman-contact": {
+        "sourceSha": "4893e8382d1205316413296bcc571fb846fa0d9b145ff3aa4fe0ea1e0fd18e44",
+        "translationSha": "769f7af3aabb472f61b6fd645d3629dad527470939cd9f1c7ba3c87511be3c13",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-ombudsman-free": {
+        "sourceSha": "194a32f2fcf126c1a308bf1cc37c75a680447791430ca3f70a91f2002694a1c1",
+        "translationSha": "9a808bcaac4afa1e83cae69fa73ae9512f4a4fed9bbbccfdd7f1ec3a2c0ce20d",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-gender-ombudsman": {
+        "sourceSha": "c9d10686a2b66b78f9a3b6828ca0b8ed948d838b8859127283db57a1a380cbc9",
+        "translationSha": "0e0e13313be0a387680f8fe16d21163b9f54aa47fd524437217b0911de53ab2a",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-disabled-rights": {
+        "sourceSha": "226aa6ed1b7eadc0eed153ec5ce5d67c3fa72cc9cbabdd7f8ba3118c57dff506",
+        "translationSha": "b66ba586a16f27e5e107c8bcaa9aad80df39396be945356a816be676d00d961b",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-accommodation": {
+        "sourceSha": "a9cd3e76c2d9f427ac02a9d48ecb49ca5e999601cd2fee20a7edcc574ee71d3f",
+        "translationSha": "323d1929ba6b2f77546b74322ae445567abad9c1978b83b815118f2c9d2d37e6",
+        "status": "MACHINE_DRAFT"
+      },
+      "eq-disability-services": {
+        "sourceSha": "1877b2900e9af3aa8ddd88f327d43679a5ba762aa9f0cff2b87683111ef737a0",
+        "translationSha": "339150fc6a499e0f2cea74494c77845496b61a2c6b614f65242e1cab17551c99",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-follow-law": {
+        "sourceSha": "a2a24b9e1eba5a8e7257ee57de990f1e291d9f0205ca62452d50a8cb109238f8",
+        "translationSha": "c276723a5da0df7e31f5e57a606b89a02361ed104be5c1c76cc8467d18328680",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-duty-to-help": {
+        "sourceSha": "ac3b7bcd86f903c7395a4d32f6e19a8521fb0f127ae6c4b4c9c86589b9128d2a",
+        "translationSha": "c1d17825f6fde6fca767251ea6d31bfb5a91f0adb835300dd1631d568d3d4b17",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-police-tasks": {
+        "sourceSha": "bcb2cbe3ea928a35fd4de2df0847f4d9e04ca88a2b613d22d6b2b6acc9c5846a",
+        "translationSha": "0cb1802e81ecd65a536f0d89d2a30ca99ec236f77bde1e68320f7a17187e285b",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-contract": {
+        "sourceSha": "6bb04ace2ad8838b4631c02938f06e6e1a5b5142f38877ab74e7a91aefd550a0",
+        "translationSha": "5b7044ac74771583cad62c13e8e9626f70522909539555c76a95ea6373a381e5",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-oral-contract": {
+        "sourceSha": "615e0f134f115ff0d06ba8a0ddc26b9df43f73790e580ddc38b336df9c96d544",
+        "translationSha": "18b3591980957b51db9877bd07a89e628eaa12a3646f73481ef8939c0a7d329f",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-no-minimum-wage": {
+        "sourceSha": "b055e22c839d7437ba65b42ffffa55c5adfdc4102589bae33c06b4f6d21de74e",
+        "translationSha": "aad2274dbb31b803efc2b55bd2c3e5c00cedcf0ccf44e08d68f655095a14081c",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-collective-agreement": {
+        "sourceSha": "8b3605806bb98fa6fbc39f594a87ff07b78718c4c2a6fa38198c483b99d9f43e",
+        "translationSha": "68a81c2540b8c5852554ddf338dc72c9c2838082b89a3a99d3a5837660756e2d",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-trial-period": {
+        "sourceSha": "e8ed0c4369e323d0c0b1ebad6cc0077e1fd4d289013d2874283113c3cb77a99f",
+        "translationSha": "24f253c5161a654fcd74519c9b08bea1580fdc04784a06a64e56fdecd1aa3613",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-safety": {
+        "sourceSha": "f1767995455904c2722fd73b45878c31cd7be7a128f601de43945e235d0ff726",
+        "translationSha": "7539394e8451f87c9f82f5db023a40b1227b653a9b8abb0310f4c7721934d424",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-protective-equipment": {
+        "sourceSha": "80f2382df5410e1ec9f011f91024da7a2427d54abf303027c95083b9bcb3c44e",
+        "translationSha": "d3485e55d4d7094ad24aecc1b5ed15b427b56f8ddf3733bd9af2f4df8e41316a",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-orientation": {
+        "sourceSha": "9a8c9846cd09867eafb999e8ae1207b278a7816381bb5f8a1f7fdc01490b3099",
+        "translationSha": "44227a673a879a4b38aa1dcdb0fbe6345b94727b27c63aaad06d6e0f6ef7ec76",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-tax-card": {
+        "sourceSha": "0d05f69abdc9801837ab9dcb7d7c22b671f07167b327720b29aa0c935b198dff",
+        "translationSha": "56cd18feed129e9e0c76ae49b24bd9bbff55de65e6fcbe3a856b80076b934407",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-no-tax-card": {
+        "sourceSha": "1449805fbf598b45809b10887ad8e0c8c333d0c0a1c8f37513ceb2e5601d8b59",
+        "translationSha": "0b50261f977e7a35dd21acbaf87fa07087f7713c72b8f7708124ff7872c2a92a",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-progressive-tax": {
+        "sourceSha": "9ac7e1c9cedacd77ad4a561fed6a07d2ed60e68bdec1a5eda7c6bb13a06abbda",
+        "translationSha": "e37b8de5e5887750d9b4d194bf4f62af9b685378aa6472779d606601370abdcd",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-tax-use": {
+        "sourceSha": "1107c56aee307e17913a7c238cf2a49854535169b1e09a3a177b1d5a56cb8e9e",
+        "translationSha": "41679c6192c64330f3610bffa203d4e917c8ac2e407cb9822e937b0febe22c10",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-written-lease": {
+        "sourceSha": "ce59bb4ca51c3f2be25ce6b9b6e64ee741bfd2c789a2a62a3610432f537a8dcb",
+        "translationSha": "7847ef7875f9ba53a1b2261ee596b02a25b34fd34cccded6d56b3e256ccb47ca",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-deposit": {
+        "sourceSha": "d40652bec280f6c03ac73621f8ce39597e5ad69ef57e10ae8c73d6a0ab2942ea",
+        "translationSha": "d0536206962cb1e69a0bfbf79e53e87456968296dbb4a07d37d1a351990647ec",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-tenant-notice": {
+        "sourceSha": "0f466db03f85ae6db346e072ea7386cdd343e3a1efeb587f3de5d33eb29b5ec0",
+        "translationSha": "a23057e04a1a8ccc795b828f4bf6dcf4e573adea586f469f95408c0b480f7747",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-moving-notification": {
+        "sourceSha": "6eaf4c1c56f8efdccabd76b865b60855fec8a91708d889c5a0e12518950291f6",
+        "translationSha": "a991e1de25d6a85ca2470954f7ba7257bd715527a4c94d54b88bfcee80d2f3c5",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-joint-custody": {
+        "sourceSha": "90dfd9b7a148671831ac5034414310766f0f03305b0b2c588a6d99bc17aaa90c",
+        "translationSha": "c45d8f6e40017ed9d854c28c59eebe95e1df47d48e0e876ad01c5f04758f6aa5",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-child-maintenance": {
+        "sourceSha": "9ab8b6ad351f2eac0801ce9bfedd10d03ba831f66e16a1c3d4ca6f6c5edc0352",
+        "translationSha": "5e7fcf5cc056b0ef1a119b9bd6aab810d17b92cd087759cc8a04a4194102bdfa",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-custody-residence": {
+        "sourceSha": "0c25cd11e904d171596c5638ca02a451235de568336d755253f44521717ee361",
+        "translationSha": "5ba456c3d1acce1d5fbc0d6092fda9da385a1a40c31f7a6327fb843842b8e37a",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-kela": {
+        "sourceSha": "7bb1ed3f6aa77b2edfec1d7d28d597edb500711a2c2f7ff591a21a59b59a084d",
+        "translationSha": "0474d0cd0708096ebd1ab20ca7f97df500aea91f8ae017096fc478c0c3658170",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-residence-benefits": {
+        "sourceSha": "ec597359c9f01d59a59bc1bc3e4a97e9feb931a8b8db85c919de9f95c44404c7",
+        "translationSha": "edf43bda010017bea6e341783d359a02da54c42b996effc7f1000bb8668de614",
+        "status": "MACHINE_DRAFT"
+      },
+      "law-emergency-care": {
+        "sourceSha": "161e2e605a27f548517744f0fe6b6c6a450628da3133ee1b6eaf1dd640fc3bb2",
+        "translationSha": "5f1f4d873c8e1c621a8dd277899d83258884e81aff6a1e333d7ee618f350988d",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-sweden": {
+        "sourceSha": "b2d9f987ba902ac4cae090f7de5b729a15f0e7886d6db510326f00e3e39d2795",
+        "translationSha": "a22c3fa9abf2f41cdfacedc9d78528e8e6c8f2bc8eaf6e71a1fbdd5a1b014da1",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-russian-conquest": {
+        "sourceSha": "cb4a805b29355c742423f01118b3c2972bcc29f1b1848e7d94eba980ec5aba28",
+        "translationSha": "97f1ff93bb59e3da73cef4fd006f0a9d0ceec9450158887a9c43b1de0f51c163",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-reformation": {
+        "sourceSha": "69a3a296e20aefe87e99da989b67e121123a9ab1767f6801c15b6f68ea339d06",
+        "translationSha": "84034ece0b3773f956d97289cdd7a191dfde7e640313162c2530e980062c5419",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-first-university": {
+        "sourceSha": "f60e2986e8f7d130036bf891325751eb5ab34c40789c8f430849b08f59281e13",
+        "translationSha": "0ef3b30febc3753d78a97c6d27c6054d2aa92134f71dac9311afca4d07c656e7",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-autonomy": {
+        "sourceSha": "84d7c878ee209935e0e8fcf943d9f5b8cf8f88fd6412912c5abb663ecd73ab04",
+        "translationSha": "8c05000128f3730c142cb926e3242a9a1d89c9271d8aec7302b7e58561eb73f7",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-suffrage": {
+        "sourceSha": "450cd60e1b84568ab8ba992a1f51d9b0403da52851adafc70733a6cdb1fbe5a8",
+        "translationSha": "6e9ee4c1cd1ffc589c410b16ca60ef59a4e81c7d680b1d6b1f841069efbdf751",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-capital": {
+        "sourceSha": "63429c8a4564fff33beaa726ca65b072a0c958f40b10ff985175455caa597efb",
+        "translationSha": "3fba2b0e2d0915f16a225ff4447a1270e997972cbb3f10c4852dc1c03714398b",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-first-women-mps": {
+        "sourceSha": "ca2b4ba51fa6d9bbfffe546cf273fc07e29e4336fddfcbe70938a4eb255ad1bd",
+        "translationSha": "04e2aef66ed8e15ce8ea12d809264a03f227824a129c0d438b14b1fd975cec9a",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-independence": {
+        "sourceSha": "6a30130983027f9abbfdf4bb4df78a1a6851457250ce56bf56c16ed7c41ebccb",
+        "translationSha": "df4c0ccf25cc88bfe5e2ebddb537586ebfd49bb3c09b914e41787101b6b820ac",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-recognition": {
+        "sourceSha": "697dbdede7420d9b56bce2b9fd1e1ee9ad5c36d98fc1672eca2414bf5f707908",
+        "translationSha": "ed0157b17e9c21e1175e6ff02d2cfb986142ce044c0953567faae098081445fb",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-civil-war": {
+        "sourceSha": "e80b2572a029954a8af606ea99e1e320fa61f1a10af07ee4c4aed17da5833d52",
+        "translationSha": "7aafdacd6f9e0d0e45b863a87d2aad58c10c3bb9d8ec0d89bb3561bf4e67a1d2",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-republic": {
+        "sourceSha": "0705ac371894825b891fa4aca8e750f849ca7d8660a6437138fb72f1dc558b7d",
+        "translationSha": "e8a682e699be88f9c8dd3706fb7f6cbcf7a1bf4e3031935790ec97d9ac0bfc76",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-winter-war": {
+        "sourceSha": "1c4b33175722568a19be9bf911713901afe4e3e0f44b14fd590bd7202b4e1878",
+        "translationSha": "d3bfc4c4401a78993953d1d2560ad086decd7752bf8f6d1caefa50487643a197",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-continuation-war": {
+        "sourceSha": "faf6b6b1e368cba2eea3f59c1be10d79624bea5366f993234d3503150918a374",
+        "translationSha": "ef70b01e94b4d0cc4f1680b7f5135122fd5de0450826cbd9f846cf2c33c85d41",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-not-occupied": {
+        "sourceSha": "66d404ba3f18e6c196cc7d8201623f03abc2b5be390612556bfd79e4bf392de5",
+        "translationSha": "138709c4b540c87588d9a47d09945fe0b435d1ffbe582d008a457198501a47d3",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-ceded-land": {
+        "sourceSha": "2d75d09901cc6fe9470526639b895fd5fb56f43d29c601ea31a2cc1c1579b29b",
+        "translationSha": "769dae4fb46f37218716d2475a8d3f8126eceb9c43b7c526651910bb37afbe99",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-evacuees": {
+        "sourceSha": "9e04a3a051a5f9820684c7dd091ca2f4b2d4e4ea51614cffe28000d06e4ad19e",
+        "translationSha": "aea43bbf7f1c61eb800123a2807798b37d0095fdfdc228d13ea62eff1168a274",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-reparations": {
+        "sourceSha": "7cb120e9d386715996e377a1f7c3f154c0253c9e1a29d6fb5c1ed833e5d8be04",
+        "translationSha": "92fc97c8f6f15f39a89a6ae6ae319f7c054b42f833dc8b8814804cdb4aa2354d",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-reparations-paid": {
+        "sourceSha": "dd163998f0dc866da4d2e75e283eb28de47cdb6c3d65ec6ddf3e674212119ad4",
+        "translationSha": "c8541d26af76be7c558221cdf22debe28fef2775971194efd3e3d0017288aa09",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-olympics": {
+        "sourceSha": "0fce3d3cc494ce65bbbcab6bb5946fea91249b220666d1cb046074da6fb986b9",
+        "translationSha": "2c1215b0eb7eda9af99b5cd63e6ff091f339860b4cda940f1d7b28ad92fa476b",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-helsinki-1975": {
+        "sourceSha": "1895bf7b6b2149de5f4be2e2ac2792922668ff809718124e804cf2b689cee547",
+        "translationSha": "9df1606350b409d24b92d1d8d95e29a6f7020277651a3accd021bb9a24104f24",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-eu": {
+        "sourceSha": "53c82f31cbb1760db05e7ebdc9efa427d847c30d51fb57a85d901cbeff175c95",
+        "translationSha": "453980c26525bb392245eeec526da4abbb8f608b753b24ce551efa75099f955e",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-euro-cash": {
+        "sourceSha": "32a5d1498e0b20853710514a8938cf416a8b1c2c9d2acc42ce29f5ffea34e8c4",
+        "translationSha": "0565f011579e1ef708ba36860572d0025a250227d0fb05ca33730f993ef3ffbd",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-nato": {
+        "sourceSha": "462cbd9cb0d642f5a4fcacaccc1ecae8f6e34eab78abd15ea639f486c981ba64",
+        "translationSha": "be0648476c0e03e52fb12c0514def5544c24a57409f67468ef2b1f11a85227c6",
+        "status": "MACHINE_DRAFT"
+      },
+      "hist-nato-article5": {
+        "sourceSha": "3a536db3ab88eeee665804918c049b3057b11c6cde6d80d0060e21cd0665ca50",
+        "translationSha": "2cf8be08b5f4fc0114e9abfb47bf2207f205509a4566f6135a37022ee92fd3a4",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-languages": {
+        "sourceSha": "f59edd7230970aeb5c61b075ac32dbe762311f4c8cc187958e8ec57f0b239da2",
+        "translationSha": "2c9147b719416b2bfdc4ebdab47414d1020db2ac0d390f164aec7d1a07b638de",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-mother-tongue": {
+        "sourceSha": "9eb6fb1bd18a3b104c53b13830098421fffdfc9ad8971cae8cc635de02fe0150",
+        "translationSha": "f99dd8bcdce601e93fb8d76d76911fdf866f06c74cc082281f9c19e69a15cae6",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-aland-language": {
+        "sourceSha": "900a34eabd77b6e95aebb22fecfeba42efcdccfcdcf9a4ed958eeea27db20f1a",
+        "translationSha": "455f7927775e6e84f7fc58b9f5210dbad3c6db45de5c2b810e02031d8ceec8b4",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-aland-demilitarised": {
+        "sourceSha": "6d0e99f67395f4d7e1bb3ff23eafd34c26c990f8b43ab2765d07bd3f2833da58",
+        "translationSha": "071955585696ba143808fadec36cfafc46042875e55c32fceb897802ea06d1d4",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-sami": {
+        "sourceSha": "e572b3fd6b237155210892d75994442c4dbcae03c91dc55e92d956917fb9f91f",
+        "translationSha": "daac87a78dbd6524e78ff6cac85fad7f3541de5f106535fce2f570435eed0e7c",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-sign-language": {
+        "sourceSha": "82d140267bb79eb5be075b3f36c3cd76a584c60c75943a09e5cc3441069d33cb",
+        "translationSha": "d36d4a9ff188c659b6a4ef8a77f961f057869e176aef06e73399accaf480aa98",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-sami-autonomy": {
+        "sourceSha": "5a0ed68ad68874031bfb05d29e639c9812eb0e6111c95932748549729721b4b1",
+        "translationSha": "b008639b5b3d7ba631ebfb90a63dfdf19b9d9769416801483b7b59666610ebc7",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-largest-church": {
+        "sourceSha": "79ab133ab693f29e5918bb98c59222db77c996b01de491a1818aa9360557500d",
+        "translationSha": "1d683ab9544a5c78c4b2f0822f9051d93daac45cb8d89639e4ed06a20f3c5ed4",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-church-status": {
+        "sourceSha": "d869a20dc1b026ca96e4fe41f829d4509353f417853b5f505a4a2879f558c05f",
+        "translationSha": "0d084593e675bab62308ebdfa0d2d70820124f19d0eb7187002af6f3ae249065",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-found-community": {
+        "sourceSha": "edbd1f550b3269161bfa289738ea4ae2da3996a97100b06ca2c728feabdaf612",
+        "translationSha": "6d6a4f184089b80eb75a672cf28c1176fb20bf97941ff7c28069bfb7b94e772c",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-independence-day": {
+        "sourceSha": "8e5a73c6ae8ded06b26358155e3fd83ff31859e80b69f09154c6bd858dd680dc",
+        "translationSha": "b56f180038cc9ca8eba322c5dae7fc861e1ce00ece619c05eb0d86e6d6cbf89c",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-midsummer": {
+        "sourceSha": "69e51acaf466a7e7c2c39736fd12266846aebbb9f0bf9c7860f1ad3fee9c711a",
+        "translationSha": "5acddf41de1fbbac03a95faf4931650c37d93b54c9ad15798e55c61bf6434e65",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-may-day": {
+        "sourceSha": "54ac64400e251769db6c7bc9c5bc34cd08a34797dd1463876a0c71a626c7da89",
+        "translationSha": "feb6702dea5b41c9e7dfec047a05e1ace04c35edc4c54d64dd449810a67adb3c",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-national-animal": {
+        "sourceSha": "da284b9f80525426d909255d53c6d44d28ec34bc72b850a978a55afbb5305504",
+        "translationSha": "9efc9e5e2ab45219ba49016cf5765c20ed74a8537ebd892c50f0a90ff207a844",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-kalevala": {
+        "sourceSha": "ef333fc88a1e9a9625e6a70995d8ad6bc894b0ceddb4384349183b84fc7dc2c4",
+        "translationSha": "ff221e81ef4fb2bb82d9d8cbe23328949b0d2f704b3d120e3bad5b1f2809844c",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-library": {
+        "sourceSha": "2ebbf73cff94b81bfd78dceb9f9c6f51a55a9e3f89d94c5e31ea3b23916982e6",
+        "translationSha": "392c1447ed95deba2a73885bbd8bb8737a7ab1598593efe7c1840283f8d37a7e",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-library-fee": {
+        "sourceSha": "5c5bf23bced754b73582dbe02736930ede44b35b51cc7fd345ab29574a4324e2",
+        "translationSha": "0f2efd9857c2ccec7ba87ae042c36df8482bbfd3c8e18c2787806a02b5c41f4a",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-library-return": {
+        "sourceSha": "1603c8c7b3aee759e9669b8d6e9e880cb1522289230f2b9bdc9d617c8f34ce95",
+        "translationSha": "496b555c0f7c57c1059061f837613d7773a742196a6bbffc0d2285dd6d298c12",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-library-free": {
+        "sourceSha": "6c1e55ca6baf3ef9a4a4fba9d6245f1acfa9af55974fbad68f6b89576a7edc61",
+        "translationSha": "d7d1264c96af00c8a527ea04e3890ec9c838b17e01a284819b4779001cc604c2",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-voluntary-work": {
+        "sourceSha": "400fc4e36a54b6a088de6f4b11410158f9793673d74c84e7e7067e4871a03b2e",
+        "translationSha": "32af99b711752190e1eb95c7a076460c19e6beb4c5e0142c65db8c556c8d34d4",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-association-foreigners": {
+        "sourceSha": "e436e6643a6520bbe4351277dea6442601764ab2cc4b1312af40d8d42bc18f5d",
+        "translationSha": "71d459e9ec2766a33fcd969ecbf6bba5677f83add0bd3eec1dc91bc4c153e7b2",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-association-members": {
+        "sourceSha": "3692da114f45a8e15d7a30107f80b6f070f35e823a9f1d0de2b32f1be9a66fd2",
+        "translationSha": "7f7dd3b07c2ed7bffd4a34c5fd424af7ebe1725af21aa5371a3377d2b276c532",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-comprehensive-school": {
+        "sourceSha": "52ee2142f1b40b04c3fe0b8b03f83dcc9c9609b3aa996a0159fb6105076a62bd",
+        "translationSha": "71add007b643bd26eb9cd8991ea21a25b714adbff06c67030a37def49f616892",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-compulsory-education": {
+        "sourceSha": "7883ab85bfb94b46368ec3f6f3f28803c58a52e557c68c82076a69c17d14475d",
+        "translationSha": "bb2c5105019eca2d08e561aac973aaa894fb49f5aec301f62b8d2adabca547de",
+        "status": "MACHINE_DRAFT"
+      },
+      "cult-pre-primary": {
+        "sourceSha": "17d6f37655564e85c2804fc3ee9250a4c6908aee0e40d0284448614fa9357ed8",
+        "translationSha": "6ac1040a1b775e2aecd1c4680c43eb70f0dfb24b543d166f55a6cb15aa5d0622",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-emergency": {
+        "sourceSha": "c61136316ce270ff6b49f8463e4be8c1b7fe67757a22a60ac23fa6eb4563bf3c",
+        "translationSha": "e86feb3604aedf1413ac7cae3b293155334a398fa8d737aa71d3f8d0c72cd403",
+        "status": "MACHINE_DRAFT"
+      },
+      "demo-emergency-call": {
+        "sourceSha": "66b7d2080ae861f1d8c3f55f23668a1677a2906509f89e7bddcc6c96b4a3b4b1",
+        "translationSha": "891dafd90854dbd6ece98d2d9b63ffa9d06b67a9427adbbb1bfa70e4d8f57a80",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-112-free": {
+        "sourceSha": "1269f983e7d630831db36fd99201924fbeffa93e7c3af3ea7db76e041e47cb93",
+        "translationSha": "3a4f4805d3e25e09c62b33058c39d7f4a2a1197e8d5f9e27ae30377dcc0cc3e8",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-112-queue": {
+        "sourceSha": "ad98d608c2f1594d6132d56850f2f7e7cff2db9743fab04b0c7fb1374ac1a3d1",
+        "translationSha": "52410031f5a16af3e547cdbdc0c3e3248dc24430803f7340afbcac6753772f86",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-report-anywhere": {
+        "sourceSha": "35cfc4b593a0117e6655f0d17063386dd10e6ad8903590abd67f9ee9215894aa",
+        "translationSha": "28e9d8c4f6aa2d0e640c93fd7b2d6a563f4b2377aaa5fef468dd4086c37ef21d",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-online-report-hours": {
+        "sourceSha": "714ee168226edd03f8cf100f468c11f4cce5875f053c54871852711b09ce0f01",
+        "translationSha": "f4efccb06e214f24b917de94ca2e0fc8a53e9072d707998cf21d45a77219da5c",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-lost-passport": {
+        "sourceSha": "532b4afded67012ce89937405107edbc55166f41d6676f5d0ba0e3463f1e6c1d",
+        "translationSha": "c082724e1bc50bca12e7e04bfaa86e2a5f3c2108ef413fc1d3464a0ce5b239a4",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-smoke-alarm": {
+        "sourceSha": "55b1f231dc3bf7e9273ebcbdc656518adbf2ba35d57bbe8659e79e692163ab26",
+        "translationSha": "395e8060091fc97f2c7f905c0a706564be561b2f589bde8acae49ef57b66cd48",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-smoke-alarm-area": {
+        "sourceSha": "83e8087b2949c04f36229d2e9eb3a82a5d0e6971656d22ed9a26ccfdb6a5c480",
+        "translationSha": "4b1781aab271c606b62ceb9e0db232b92e3e309e2e7e74a668c3477689e5db6c",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-rental-alarm": {
+        "sourceSha": "945d860301e83760a793696f9b323a83bb35ba3a9bb58326d7c9fc7a25a7abfb",
+        "translationSha": "2e1c58579a97ded7e6dbf9792dcc384665a1c1ff1f61fe3c82579eb9d318c80e",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-grease-fire": {
+        "sourceSha": "9238dd7630ce8d408ad5a818e01e115ee49f837e8f0a9527d3800ed38be14dd9",
+        "translationSha": "dc46d839f01e2105f47cb38818fa99b2cef6c1add6881e2d2ee7729d331050a7",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-no-lift": {
+        "sourceSha": "c3c4df9d9260bac05ca8ec9d5769100bd9e89952e352a1fb76cbbb8f41621f62",
+        "translationSha": "ba71738f1a2703fc381771a6556bea99a510f59d917b663041b2bd729b670715",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-warning-test": {
+        "sourceSha": "c2bdcbcc607b42731e074ca28a780e800247d3ed6b26b32dc5d18e2da3dfa16b",
+        "translationSha": "5da87a82d22e1c60235cba9cb4d887a78e03509c9399db9c24800c593fbf7932",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-warning-sound": {
+        "sourceSha": "d7967c93d187faebc332e17085dc6b89865431fa40066a2ff41dcf7fba849445",
+        "translationSha": "9e3bd78a46d8270253e6b51d8f1cd76d6f2aca1a96645da7fb9271aeeac38e2b",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-warning-action": {
+        "sourceSha": "b08613dfa5d4c40bc4277360d549590340dee99c7261cfbedc55589530f3bd6f",
+        "translationSha": "68e4446e6d5ee7feb6d15a9339bf9179674c0eb43e0fdb1fd38718e2af35d11d",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-warning-phone": {
+        "sourceSha": "7cd20d98e4bdf9759de57b7dd38f42990a4e0204435e4a1b82209d8b55d628f6",
+        "translationSha": "2af0b49807cd30e6ea204f6a2e55a9739b91bb2095223c352c889e76d6d18af2",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-72-hours": {
+        "sourceSha": "63ea04e20a86d2d4682f9f0750c359c4556f7539a464f9d616dda54fe6ff76ea",
+        "translationSha": "57cdd4b2f86bcd7a5ce60b9a57a019f1d0068861b2fc54df052e2e5a07632270",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-home-supply": {
+        "sourceSha": "d5d141cf157fc5a01bfe356050dced2627807fe6dff7264c7f32d03d33993dff",
+        "translationSha": "650e4a008ec8fc68134725a7ded3b06776c9f2a928a81a6fc2a417acef027cf5",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-conscription": {
+        "sourceSha": "0d16162d2603c9e3790d9ad640a55d8a1c76ddc41a13fde7c118cf2a73ae3f77",
+        "translationSha": "84aaa3ae5a329af711404c6b24c28c73fd45fb0495415a2a9e6f6f9c45a87586",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-nollalinja": {
+        "sourceSha": "c3bf47df9047672497b131228a790beab885de8cb57fb73afdd634a4eeba37ee",
+        "translationSha": "0c5bcd629c7385be894d875855d1641e150fbe7112bf26740b8a8be06c09f1dd",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-violence-culture": {
+        "sourceSha": "cd8325e199aac45bcf70ecaa88c4673d87825da393b15b30862ca2147fc6fd2b",
+        "translationSha": "65f391fc9f59a638f9822d5a6001484fd1a811dc77cadaff8e2dc892c92e5f73",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-child-welfare-notice": {
+        "sourceSha": "875aecd8d6ec2eeef7af2bd573c20b6ecabc96545d4179e3d474dcee3e66735c",
+        "translationSha": "4d41569f11fae853f94ba574bfcd76fd41bb69b6324a844183e177039ff36118",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-right-hand-traffic": {
+        "sourceSha": "3dbcaa1d4efcb082dcd5182a590d82cf4c561c2e4a942dfd1859beb4b398d681",
+        "translationSha": "324fb98ed4aa252ac60fef4727e9940ef37e9fb5d50f88dcc7c08d9ad1aa0ddd",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-drink-driving": {
+        "sourceSha": "76bfacc96a3e172d59e51cb2274bef3548846df079cb6947d344d35aa0c1afec",
+        "translationSha": "92d871d8cf9caf195d5b02550ea8dd001e87d6a94db81d51a445ddb6b45a2670",
+        "status": "MACHINE_DRAFT"
+      },
+      "safe-winter-tyres": {
+        "sourceSha": "5e1cc67a2ebdcfd361691a68df4ebf8f721eb8a02f2bf83210d41ec8562a71d1",
+        "translationSha": "d6a6f4b620b235f0c4b798db2a9ac70b6196414c03696853a99d2a4e8e034591",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-id-tools": {
+        "sourceSha": "5dbf0d23ebae0fe4b66771f4817908566fdd8c42ea5f28301a569d5100e19c97",
+        "translationSha": "80b525b44f5a87fa5b50303eed5dcf1a86ab5566d288e845ca6c881cc1c92aa8",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-id-authenticator": {
+        "sourceSha": "a10eb2614622dba8a1e69a11c71ffb304953f5eba14235a655d799364066044d",
+        "translationSha": "a373b40c240b785b4ff01002389e70ab98583c6c71301708621043d66d8ad600",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-id-logout": {
+        "sourceSha": "47ba9ecfc2bbbfe6994e99a69e9e58bcab16604073220abfdb6c63f88ee532b3",
+        "translationSha": "9c6f3f436c9901569f1546b0508203009bfa3b7bd34c7f08cb58072c8f2b6a95",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-id-own-codes": {
+        "sourceSha": "6a0574522089d64ff725bbb6df65d758b90fe8756a4b9b01629fe59ab20cd67d",
+        "translationSha": "fd7d6a860905c4aaaba70a426c20da46f184bd108fbed7a647b0c94418e2477f",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-id-never-ask": {
+        "sourceSha": "81bb982b1b245f912e74860092a4784a81f382f16c5be2f1d97080563748dd4e",
+        "translationSha": "1cf235da7628e6f682b002606d23ee49b887642e1a541cb8d380ff6f090d7118",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-authorisation": {
+        "sourceSha": "8f56ee3fede0adfe764c42b003b9041ae97cb7e0662d1cbc9fd6cf7c4adb0890",
+        "translationSha": "0d2f3bb65db9d5bda477bbf4470c04ffefc7d36fff16c9d0031fca3a5a9bf614",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-authorisation-ids": {
+        "sourceSha": "c88f356e1c21f8ed92614aded430fb49e5e47f3b2ec4a0fc442b99825e082747",
+        "translationSha": "dba1c592cef3299ad7832826ae892d71a6a76b4d1999fcb1681ef0f9862013b5",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-messages": {
+        "sourceSha": "e0a3f0eb660534324643c8bfc0e886db0642aeb498f149bf8d564bc7a4facb15",
+        "translationSha": "36a513308363a8144ab0164f5052e87b71d9a188d70459cb169d20f858165d4b",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-messages-mailbox": {
+        "sourceSha": "a3c369f3013d67859227a792d0c828fd8a69440058d13ab2ac6187941575cf22",
+        "translationSha": "e021fd11ff6ca1ba89aa368606c7e49f356ce4f25fb9b63cd70a6b7c1cec25e2",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-tax-card": {
+        "sourceSha": "cd7004b1eb80f95b6a55e010adab159dac196afd9867bae2e42d6183995c1492",
+        "translationSha": "92ee21d9d03b847212038843d8edf0ee2086bd7b0b0deabd228236859225cc03",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-omavero-children": {
+        "sourceSha": "90bc3365860b2e156ccc6d258fd92ba646755c99f8c3def03cef5b017044b166",
+        "translationSha": "49a99e08240971aa622aa8fcb3d90605ea3bfc294c00a1a0f9f33cec1b7b0156",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-move-online": {
+        "sourceSha": "fa180a527aa5f4911d9ec3922e3b9d0dcd0782e4b0c16aa706dceb68ac56b29d",
+        "translationSha": "905f7db24b7c59e2796ab51c8ae279e00c5308aa280d63d6b35a7eb406653af6",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-move-always": {
+        "sourceSha": "d37a81efdcd7f668dbf426fd01ccccc1c0db13c2f6eebe4ff938a5ee41e8387e",
+        "translationSha": "06fe0e6ef302804fd22040fb08965f9ae096daa8156a58cdbfe83c7a28d24daf",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-move-phone": {
+        "sourceSha": "d33d1511af51b2305c6e03e65a129fc1260fb6c631829879f874047dda8df5db",
+        "translationSha": "ba5862d034eecba713cbc71ea362215bba6c7230131edac6792aabda8bad87d7",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-prescriptions": {
+        "sourceSha": "a8da8d1ea15fc13001a771f56ec45edf9161a0a4224f3c607b04d9ceab26e1ef",
+        "translationSha": "fa5007e6d2fcbff91731d3f701d6e984b405108baf1fd6f89db1e3bccb0b9135",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-omakanta": {
+        "sourceSha": "1384e89cbf068cfae9e39b2d143e83d5f36003763aaa12017d385acbea4d3563",
+        "translationSha": "904be1ac85633743d5eb01d7a5dda77baf3af3224ae50b85d4a0bcc53cdabda3",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-renew-condition": {
+        "sourceSha": "67c083441cdee61514e63a627c392d71aa7a382840c9c114b23507fd67ba70d6",
+        "translationSha": "bf0b92c741b9eb7204d9f7b81477ea304d0c503acbecfea3e7ea9bacb50534c3",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-kanta-access": {
+        "sourceSha": "7a13ed7327789b884b56014ce35cc6347c6a864c2f7a570b5201322de61ea6a8",
+        "translationSha": "eae7ba2615d1d4b618371e74562588567604a9ae3939994729f8c05c89fdc664",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-scam-hurry": {
+        "sourceSha": "c29ea2f04b06349e6af5eb551a2984362a749231f5c2591bffd869ac3221ed3e",
+        "translationSha": "da6f6f0b86905a5d7e008284ae5dcaee3d974b2a97cd2bf63089153e836775a6",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-scam-respond": {
+        "sourceSha": "a46c916abad3824f255a6d305abcaed1e6d28f3ab2eddb0ca325dff6cddffdc3",
+        "translationSha": "bc275f087353e7a3a8b48132feb133f723ca6ce1d390327d51f566831782f13c",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-scam-bank-first": {
+        "sourceSha": "17769fc4025af4443476a14fe460ef123e9e5cdddbc031221db9008a51ae2ebb",
+        "translationSha": "ee1d36c3149f462cdca9fd6b3685d445e854ba4e6b19df65d9769c707b2d6c2a",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-scam-genuine": {
+        "sourceSha": "47677e9e585bb7b3182b6d8b51be13381bb58540aa47c98d4fe8b714138a1008",
+        "translationSha": "1f1cbbfe01fad8e60f3b80a31570912b81bf45cb2d7cd5a48a2cc012986a33aa",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-data-copy": {
+        "sourceSha": "f5216c3bf47411855bbb4d395cd2e3db419e8d421f4ca537a038df208d6443eb",
+        "translationSha": "9ac75908f7e0d02292d0af7550ff8b5593fbbaf21daafa1fa915cdf39526bbb8",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-data-month": {
+        "sourceSha": "ee971cf5805f800167533240d30c991d2251f7062b0e3569816542a7d64e9bb5",
+        "translationSha": "3d9f67468ce6a69761c231c473e6cf0e03796ec091cfc5b446b78062e6651616",
+        "status": "MACHINE_DRAFT"
+      },
+      "dig-data-ombudsman": {
+        "sourceSha": "d4e65c63282b7b797b22985bd3fc2f1f4bad5baca8515541302e0dc16e4ad67a",
+        "translationSha": "ae6cf7f6b392f71b7fd1ceef3ef460e327c24c18031e7c2eee68dde6f4eae863",
+        "status": "MACHINE_DRAFT"
+      },
+      "topic:democracy": {
+        "sourceSha": "f0beba413ec8098656032351823873319926b82431360476af9621b6def06e3c",
+        "translationSha": "5822e1ba022b62fe25142a2af7b07543fa50300645c5fe02ffc5066c351b7c4b",
+        "status": "MACHINE_DRAFT"
+      },
+      "lesson:democracy": {
+        "sourceSha": "39ba25ac9ad962b77682d926123b3b5f12dc379f68057b4bb278fb95fb40f283",
+        "translationSha": "a69a8a11b4beb43cbdcb418c1ba8be5c644776fd33461040654025cf7a2b6c5f",
+        "status": "MACHINE_DRAFT"
+      },
+      "topic:rights": {
+        "sourceSha": "92f8b56c30f02179148bfd843fea51d3affa508ef679bc5f8ac4f1d34c5eaec7",
+        "translationSha": "ba22e26be94c0ea184134bdd395008f7c6e8143d373c1ce9633cc361450cdf1b",
+        "status": "MACHINE_DRAFT"
+      },
+      "lesson:rights": {
+        "sourceSha": "97a26a84e238eac39b81c072c8e8ba4bb256981f99531cd6b3fda30df62d2c40",
+        "translationSha": "ffa7208f80347125c0b0932881a1585678b1b65164eb62e7018b79fcad55e0d3",
+        "status": "MACHINE_DRAFT"
+      },
+      "topic:equality": {
+        "sourceSha": "ed92c7881e343f86699ca40d0e4428613fd34633a7bdbe176cc26e80cfd6604e",
+        "translationSha": "774d5f1086c6fb8ee83371ffd7eb6dec8460f50f9ad42c3b14fa981919ce12b3",
+        "status": "MACHINE_DRAFT"
+      },
+      "lesson:equality": {
+        "sourceSha": "41b850047e462dc8b6006aa8a094a5b83327e53e4fe55c1860eb07d069e223e9",
+        "translationSha": "1b65c19d1747c90a8a724c021ef88ff3cbdb931db0f031c1a86b8aa78a272415",
+        "status": "MACHINE_DRAFT"
+      },
+      "topic:laws": {
+        "sourceSha": "5596b6206b76f619ef997d42e74d59c7c49786194a7ca7b9d1e9a235e69a1427",
+        "translationSha": "ed0ac49b61d55331c63274357e531121874d4215513e418f8cefcc75af0d4cda",
+        "status": "MACHINE_DRAFT"
+      },
+      "lesson:laws": {
+        "sourceSha": "d64520ee86f9c9eea18d664e37cc0fd6cbdd95dceea50400a7da69454019cfb1",
+        "translationSha": "f9df068cb407724540ea55a77cde9845c0078d69d12a4505baaa22dc1690e10f",
+        "status": "MACHINE_DRAFT"
+      },
+      "topic:history": {
+        "sourceSha": "a04427d3863b5b54f1b6173c194cc3b47073d2c2c25a004e0ee07be1e51cd8be",
+        "translationSha": "8046eb0c556d8ef8910f8584a7cc6be771ab57420ac72a74efc44502a012c167",
+        "status": "MACHINE_DRAFT"
+      },
+      "lesson:history": {
+        "sourceSha": "31e0728e79da73f1685dfd2dac4cab65015272d919c76dfa410d6765f1c4b39c",
+        "translationSha": "b37a718c2ba83ce9be9a323c8754301a1845b2843a127a3ea43d5624cfb66720",
+        "status": "MACHINE_DRAFT"
+      },
+      "topic:culture": {
+        "sourceSha": "0e71b2f7ba9fd9cfb76b5bf47f887ad8f87206e7ff5abd2f1898cd3f524623d5",
+        "translationSha": "63e190482de0e0662da623da25731f8e5997b58a6e4e73b17ffa42a4ccaad480",
+        "status": "MACHINE_DRAFT"
+      },
+      "lesson:culture": {
+        "sourceSha": "7b855fb321aed6c39763a123df0b6a1b68a0bd566219875761c8d8b554188b1a",
+        "translationSha": "4a7d9496563f80522fe04127e8a31c81f7da80f921d2ee2acade2e9e389f9931",
+        "status": "MACHINE_DRAFT"
+      },
+      "topic:safety": {
+        "sourceSha": "6fb4e53cf250b76f9c44323aa0947d169d7b4a9c2123a2454b149989529280c9",
+        "translationSha": "49756ef8a69d402aeb79d7d238ebd26bff604c2e36d20e9fd4076ce8cd2035c0",
+        "status": "MACHINE_DRAFT"
+      },
+      "lesson:safety": {
+        "sourceSha": "2dc91510dbd048578758ddd53e35127b9e471ba3770ee9c8140b6502072f8e08",
+        "translationSha": "c16a6012f83f52f72f477b704ebeaeb6190b31f5b4c929987710fcf1a789044f",
+        "status": "MACHINE_DRAFT"
+      },
+      "topic:digital": {
+        "sourceSha": "601ab7048de04714177bc7072e6e9ad81871637999a6eca1db5134687a137c4b",
+        "translationSha": "27a49207083e3815c49a4438ea606334eda8798c7647e7e3d6924fb78b098e7f",
+        "status": "MACHINE_DRAFT"
+      },
+      "lesson:digital": {
+        "sourceSha": "a619f9da6bfd474fe7068c9da53c5da11f871c3ec421b0d52c735d5da8160b3a",
+        "translationSha": "22af6cb8e787cdd09a3a6e1634084f3b9b325b2d237397349434b12e914fdad6",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dem-powers": {
+        "sourceSha": "078e535adc6165f4e6fb897c3debfbfd5d60c78a79952fc93aa3089f7ef56988",
+        "translationSha": "6b8e72d761c4e5e5c500a859d48a65599926d8a3c0b7787508e37fe337edaa82",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dem-parliament": {
+        "sourceSha": "26102996c253463b116f70133c6f33bbac387aa5626849aa4ed07d11b02a0893",
+        "translationSha": "9847e1ec58b53af3a2fd760563e647cafc74d45e7b4a4dafb45624f2d6947ea9",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dem-elections": {
+        "sourceSha": "5d61ee2ac83f84668a7df01a8bd9b001adca25f63d816ea5b54ec6d5b20c0c6a",
+        "translationSha": "6c950c041a00794c1dc9245522c9f010ad357adfad433e665f051e31d7ef2cdf",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dem-president": {
+        "sourceSha": "a7e628c81813394b53dcdfcc98d557a39ddbf39494274cbec50b033539dd87af",
+        "translationSha": "748954318f4f2a683dc587b0dc90e66cbcb6a1e0e3cc223cdb11b79570265bc8",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dem-government": {
+        "sourceSha": "3185f888d1e9904f77c4f4adea00a1c92a371d44f6391abe042952bbc04048cc",
+        "translationSha": "5895c3f2e74cf9b933adc6851d69c5acc754640c27d6c5d1b6c9573a7c6d162b",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dem-local": {
+        "sourceSha": "bf487bb9eba77269c93afd0e503b3fec17a0d7b328477b74735a4b004b34b0e8",
+        "translationSha": "2615e60771ea8f8e9c6a3ef10dfb022c125314f9ac237fa56f7aaf33360a9a4b",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dem-participation": {
+        "sourceSha": "ab062592e4a86ac09a50dd82eb56598496afa7e8d0cde4cac7f73025a155ba07",
+        "translationSha": "6bd8c97df130e3ca464d49b07b90cb390ce00b0ebdc9ab935b6ed1543acbb7cc",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:rights-scope": {
+        "sourceSha": "5e51dd53ca72959ae5eeaa35af4a00d970930172f9148445bec1e2350891c26c",
+        "translationSha": "5ccf1a32471d9dc1b382c99e5885f0053ed50857964b6d7f10d03f3af4ba40cc",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:rights-expression": {
+        "sourceSha": "7bf133c92d146e1a1475bb1961d49bbe56db53f5f0747f1e63c4c4d7facb9dd6",
+        "translationSha": "55d0176646c4fe9ee014738858b501819fab7fe2d192d1b08496ac703546b977",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:rights-religion": {
+        "sourceSha": "c33ff1f8030b9bfe9e065db0354a93fef6757a644b99478be44834950d4dcd32",
+        "translationSha": "7ab2dae3325093aa83d1e71286219fe5ba39816a6100b25382a1dfb2e6fdf32a",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:rights-assembly": {
+        "sourceSha": "58ddf327c6ef664a99a013cba711d0a17b033c25c3284d2d655351f02569a67a",
+        "translationSha": "5d81339a46d228a8792962939389e3caf43ef1caede39dedde4aeabdba171150",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:rights-privacy": {
+        "sourceSha": "93f9a9ce020537694e9672235d0d7b70e2eed31d61a86042252fc6ed1558e3b0",
+        "translationSha": "b687d390c7307f24530c54296d237eb5625b3172d41d88a142e79fd6dd704a3e",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:rights-education": {
+        "sourceSha": "80a84bb874d5e4695ccaef8970291e59da39d85898050cbe5480cf4e1b7c3011",
+        "translationSha": "7a276da01503735c1eca319500ccd3a95ff6e5353d0253cdc0f419f7c2fdaad4",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:rights-legal": {
+        "sourceSha": "6450855d680977dadad82389caf535e09639cb3e86a3c7f565cd77ffa468266e",
+        "translationSha": "4255f172acc3cf80a7e05248b13d2abdc67dc937a91feb6d2a58cc1a48bbcd90",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:rights-child": {
+        "sourceSha": "11033c72f4acbef150703514269426f1f32e6ee93a2592697d32c4fb6ca7d016",
+        "translationSha": "36e39a3e8496e552a76a5a96cc73381add24b8f954e58253516a7ab952032409",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:eq-law": {
+        "sourceSha": "319a6f05b4e4808af69cbe550f81a5b2537348d5004a03048ad63e2f725929e7",
+        "translationSha": "cd8059eccb8f7ec7760500d99e65cf2b3989c8ae342c6a0653da476989ce92e7",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:eq-grounds": {
+        "sourceSha": "f35df45f473fcf9b6bb6bd7597696a722a002955eabd04a52a0748ced3c087d9",
+        "translationSha": "e98b5e8a33620a4e4e74f7f295190ff116bc49f14dc21088f34caeec5d1ea50e",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:eq-work": {
+        "sourceSha": "0606fd9574a0ea8bb81469ef008b1d9a1d972cdcab361dbffac65fdbf9a1a1f3",
+        "translationSha": "815d9abf1a05d2c61edbe328fecc34a6443a10ff4de2272f2be87a98ecd3d14e",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:eq-gender": {
+        "sourceSha": "e6389c2802fb348166d4f4aa7cf7f58ed7aff17addc0bc78d7a14a073d0833cd",
+        "translationSha": "c3b620bc2b690afbe8324230124d121b3596b5ce6d77cb6a7c9dfe576659adac",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:eq-family": {
+        "sourceSha": "a2003567b30d8e463c157cf9313ba3510e0f65c6e0b95aef11e4b46ab05a4e1a",
+        "translationSha": "5f00df71df444219d4bb3b94badfaff671802bcd120599a9cce3cfe8348aa845",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:eq-help": {
+        "sourceSha": "9e4bc21d7dbf5f4add988286b0dc7e862f463a75b3e53bee24c718dc2606badc",
+        "translationSha": "e215adbaa43087056beaa2faebd4d16dd79af7060e24f0c483a966877748a881",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:eq-disability": {
+        "sourceSha": "0da779bdf6639dfdcc779295421a1807eb7ad3152b48ea5e50d7ef0c53e4ab82",
+        "translationSha": "517b9744d974ff8c55e846f0438b61054794d958a33b345eaf7402133ee7c5b1",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:law-everyone": {
+        "sourceSha": "3c93ba4af80585c933781fc33216c1248e80284db1e8667d3cb98e60b48dd263",
+        "translationSha": "2d2750eb48dd76349178e2bedb6388b8a346dbcf2755a56360d08969afaa2560",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:law-employment": {
+        "sourceSha": "0ceb90e06ed646b0938b7fef6f614868f33a475c9bcfe4ba9dc89264d1f80185",
+        "translationSha": "549b219df307fb3a32fea6db280ed3e8c05ee5e4a1605514e13de46fd2b17032",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:law-work-safety": {
+        "sourceSha": "44449988279950e416792b6ba575cd8681ab605acaab67d5b956232dc14fc86a",
+        "translationSha": "e9a4f8cccf5fc1d52715a3d44c76c08aa8a7b35ea9960ab2899c63d6f76ca53e",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:law-taxes": {
+        "sourceSha": "c41386dd897fa2b1eeb0fea2c840d5442bc0a4d7ac31f359d9eaaad098b1b426",
+        "translationSha": "e32273abc5d810de217566e0f0c4253c63a7a107e0ea66946940be660e699166",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:law-housing": {
+        "sourceSha": "8f61938c340961c56b93635383d3ac93af1c7024d82590c3ccd519bd8dc163a3",
+        "translationSha": "a95f83a754508b5b7b48703cb42fc4eab7168908a8325a5a164c32af29f636a2",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:law-family": {
+        "sourceSha": "06b52d88e430f5a934c6fa71d8d6499fb8e88ade6f952340533d9cddb0e8fb37",
+        "translationSha": "02e565d595c3ab6016b4973b7e02dd1b150075c7c0157ad9f92dcddd556c5a74",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:law-social": {
+        "sourceSha": "c7f0ad2a88f92e0cfc5295f81a549a1cc9eaefe811789b2723329236e34c053e",
+        "translationSha": "6d9ba311f23be68a0e5c8166064efa32c7b653cf11766c51953f801f92e0ef29",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:hist-sweden": {
+        "sourceSha": "84d6a74dd271ad1f70a00ed6a2e548295b5584d3ff3aced304e4bd8c209406ae",
+        "translationSha": "3f9ce9a72dabbba43ea0a84b7bc2592baf6d04bb48a0d5f9a5a673e6a7491743",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:hist-autonomy": {
+        "sourceSha": "b46dea58a7f876c00259f75cba4460f85ad17f7c94580dd37ea4f8a5ae9bd032",
+        "translationSha": "30975047efd3b83940e29e93e85770e7802c38a1d507012cbe9bafccadb27044",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:hist-independence": {
+        "sourceSha": "7bfd8633b19f5b83cd0f7c8f7c18d6b3c4b586972f4488d80675b0bedc4210cf",
+        "translationSha": "a777a302ed72bacdd51d78e0f25df7c12b21d9e5280cf9e72adc4d97ec13ca6a",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:hist-wars": {
+        "sourceSha": "9eb4515a79061099f9cd91b923102d0423dcb284b9fac632eb04d16db774a39a",
+        "translationSha": "17650a2311b732f5041ffa076dcf9f76062951f984f98f8de3b6b1e7befa0ae1",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:hist-postwar": {
+        "sourceSha": "e1a0dd0f332da2d54cb468790a2eba6fd9e28c09d8d92c01c26eb03e5026a98e",
+        "translationSha": "14d4856f09324af199c8c2d7497c8548a7608fda911295e1db899356a6f3b1ab",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:hist-integration": {
+        "sourceSha": "d18784a92d25481b14d02e7f2d2c455237d8fe03c5f9145bb8cd9c66cc6eafec",
+        "translationSha": "e7d61d8b096a1c7ea17a1e78d7f609538c91e237d9dfdd1e478e6f0f7489acf4",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:cult-languages": {
+        "sourceSha": "f981113ca62a7b4f63ae2e8a3b80843c8c3e3bfc98e02baad284edfbde964983",
+        "translationSha": "30dd8c43502b91dad9b729765b7d208834b2f86423ba2cdef30c8604b97e154d",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:cult-minorities": {
+        "sourceSha": "692645ea542d2f3628a4c2e8b392f6a18bb8af9732a2d44ebb29f718f7db0a38",
+        "translationSha": "39c896622b82db76e22301ef27e4b5d260959343a6119b73cc4546478d052e46",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:cult-churches": {
+        "sourceSha": "82fe0004fa09972b0726543ce58b0c949e68dd6d87b4413781d44df2bcb1ea2d",
+        "translationSha": "d613533c31ecf78b13d4b1ff739107f80155105f75c8ae8be7c53dab46ea8d4d",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:cult-symbols": {
+        "sourceSha": "5e314f4b558f267111ed2e517196b6b67ce4836cd68100996438f3cc7d1cacba",
+        "translationSha": "6bb7db2b1b3fbebdd66223f4ce9e91e0f652fae2d02fa0c503c62cf746691927",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:cult-services": {
+        "sourceSha": "c46e6b352fc58191c4c7074409cf3460604bf8ad52f830604d8aeba333bad1ca",
+        "translationSha": "c2878be4afbd0fe0fdaeca8aa133c9ed97e52fd213276eeaef07698c3521c45b",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:cult-civil": {
+        "sourceSha": "fca24f1bb431066ca9051514a1c2aa5c15a470d66f34735c96f7461f0e4e86b2",
+        "translationSha": "07683c120b29335298bb2766affc57160a48f29aa0038d163fa6b9c3bc7cdac6",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:cult-education": {
+        "sourceSha": "6f1850984c584d928e2aa8026f148f60e9ed993c41906abb95ce3e631f0b44ba",
+        "translationSha": "9b2f6de29bc673dbc52d33ace2a6e4f3fddda0726f2750e677cb90fe642de76d",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:safe-112": {
+        "sourceSha": "5482ac491f37d0ef169ced938823b81ace315b18da0465899c927e6e773652a0",
+        "translationSha": "f6ab16cd0bc58dfed41951fa50ee7895c3848025d41e5573c2139ae0b7db6a31",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:safe-police": {
+        "sourceSha": "c7b3592dc5fdeaf6ea394d41ebfbd96d9b9d8549e13ec8e58e38c69d21db487b",
+        "translationSha": "7c1ab5ecb47b00880f265c1d0323387229ccc02672d0cc158d4b65bc0297507d",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:safe-home": {
+        "sourceSha": "5f76d723e2e5d7a36a6edacd9af49c66706efcacad20c9147403bdd59faf575f",
+        "translationSha": "e38cc135301b7b44a0ea50ddc9ef7d30bde8682788d552f7e37b37fcdb0b10e1",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:safe-warnings": {
+        "sourceSha": "46d34610b294a63dbcae2c9e832b2cd482361377b95abbee85e1ed63c2e4c479",
+        "translationSha": "724eca9d6fcef2395df88f1a4804572af1b45bd5c96c4a4f408ff45363d26d33",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:safe-preparedness": {
+        "sourceSha": "da399c94fafe0c697c2edb75c6dc7883e86e7254d9bf0e8eb92595945bba468f",
+        "translationSha": "5d427bb72644df756ad963dba805b0fdc6ad499670faf20e231a9d233fa6dc6f",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:safe-violence": {
+        "sourceSha": "29e72635bd7e36e75f50cf85a5a12a49cf6f37a85b3223d32d419435bbe87754",
+        "translationSha": "e2a7a101c201a558ca21460cf1e9f0bafcf9873ab361ec8a707d6bdc344d82aa",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:safe-traffic": {
+        "sourceSha": "ff2cca0556f5d70328f014c7811673a06cbb4ce29cef32edaf6229f602be2b1d",
+        "translationSha": "4677360eadd236c7e23a4a7427431db82600a845d6b3ccd4917c525161495fda",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dig-identification": {
+        "sourceSha": "a1872da4ecbc545499e94601b2c4f3adc9ebe9340c205e6a58bfd0487577883e",
+        "translationSha": "9037f80c6effc520b7e31dde4b4a8c17d4c437ca1401db26ee0c63fdd0a3429b",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dig-suomifi": {
+        "sourceSha": "9ea6fda3107c5ec4700416d52c55eacb97deda1ba1744678155e4cbb3f1c5821",
+        "translationSha": "7e07064904b2f17c43523867b2c10651c171314c896b1a526ec22c92483d8b2f",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dig-services": {
+        "sourceSha": "4dada6aa20f4164ae8e3eff7778772376ec3151ed575cb35b65f3aae8696a46c",
+        "translationSha": "71b771f25befffffb4af3026258f8dfd5e183a47fb28fc1e9920e4b0883277ea",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dig-health": {
+        "sourceSha": "1c5802e4af983c3c7f62f74484b0937ec685d629a3284423a997ede64f4a8a6b",
+        "translationSha": "9152fbf2e314c6ca2dfdf6b60ded54fd84739453b5de3d9b89cb58fa9c37d94c",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dig-scams": {
+        "sourceSha": "3bf94968297eaadedb3fd494016d684a09e60b6d05705f6680a37db7a51120d6",
+        "translationSha": "f658ded0aaad7c77a7002f644dd7214661639b9c244763f3fcb0d201dafd1f5c",
+        "status": "MACHINE_DRAFT"
+      },
+      "objective:dig-data": {
+        "sourceSha": "143c3aff3dbb291f0eb9cde887f55e97525af065d4df8b9168743d63d024b4db",
+        "translationSha": "d55d228d77fa3cd3e4cf51698ca31fc3020a240e5f4319c19a2f1ff20a13399b",
+        "status": "MACHINE_DRAFT"
+      }
     }
   }
 }

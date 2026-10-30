@@ -409,4 +409,11 @@
     <string name="lesson_somali_missing">У этого раздела нет объяснения на сомалийском. Прочитайте его на языке обучения.</string>
     <string name="vocabulary_meaning_somali">Значение на сомалийском</string>
     <string name="vocabulary_somali">Сомалийский: %1$s</string>
+    <string name="language_ukrainian">Українська · украинский</string>
+    <string name="explanation_also_ukrainian">Также на украинском</string>
+    <string name="explanation_ukrainian_title">Объяснение на украинском</string>
+    <string name="explanation_missing_ukrainian">У этого вопроса нет объяснения на украинском. Прочитайте объяснение на языке обучения.</string>
+    <string name="lesson_ukrainian_missing">У этого раздела нет объяснения на украинском. Прочитайте его на языке обучения.</string>
+    <string name="vocabulary_meaning_ukrainian">Значение на украинском</string>
+    <string name="vocabulary_ukrainian">Украинский: %1$s</string>
 </resources>

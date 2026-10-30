@@ -42,7 +42,8 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
                             InterfaceLanguage.ENGLISH -> R.string.language_english; InterfaceLanguage.RUSSIAN -> R.string.language_russian
                             InterfaceLanguage.ARABIC -> R.string.language_arabic
                             InterfaceLanguage.PERSIAN -> R.string.language_persian
-                            InterfaceLanguage.SOMALI -> R.string.language_somali }))
+                            InterfaceLanguage.SOMALI -> R.string.language_somali
+                            InterfaceLanguage.UKRAINIAN -> R.string.language_ukrainian }))
                     }
                 }
             }

@@ -387,4 +387,11 @@
     <string name="lesson_somali_missing">این بخش توضیح سومالیایی ندارد. آن را به زبان مطالعه بخوانید.</string>
     <string name="vocabulary_meaning_somali">معنا به سومالیایی</string>
     <string name="vocabulary_somali">سومالیایی: %1$s</string>
+    <string name="language_ukrainian">Українська · اوکراینی</string>
+    <string name="explanation_also_ukrainian">به اوکراینی هم</string>
+    <string name="explanation_ukrainian_title">توضیح به اوکراینی</string>
+    <string name="explanation_missing_ukrainian">این سؤال توضیح اوکراینی ندارد. توضیح را به زبان مطالعه بخوانید.</string>
+    <string name="lesson_ukrainian_missing">این بخش توضیح اوکراینی ندارد. آن را به زبان مطالعه بخوانید.</string>
+    <string name="vocabulary_meaning_ukrainian">معنا به اوکراینی</string>
+    <string name="vocabulary_ukrainian">اوکراینی: %1$s</string>
 </resources>

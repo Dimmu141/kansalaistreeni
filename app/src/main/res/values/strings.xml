@@ -391,4 +391,11 @@
     <string name="lesson_somali_missing">Tälle osiolle ei ole somalinkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
     <string name="vocabulary_meaning_somali">Merkitys somaliksi</string>
     <string name="vocabulary_somali">Somali: %1$s</string>
+    <string name="language_ukrainian">Українська · ukraina</string>
+    <string name="explanation_also_ukrainian">Lisäksi ukrainaksi</string>
+    <string name="explanation_ukrainian_title">Selitys ukrainaksi</string>
+    <string name="explanation_missing_ukrainian">Tähän kysymykseen ei ole ukrainankielistä selitystä. Lue selitys opiskelukielellä.</string>
+    <string name="lesson_ukrainian_missing">Tälle osiolle ei ole ukrainankielistä selitystä. Lue teksti opiskelukielelläsi.</string>
+    <string name="vocabulary_meaning_ukrainian">Merkitys ukrainaksi</string>
+    <string name="vocabulary_ukrainian">Ukraina: %1$s</string>
 </resources>

@@ -387,4 +387,11 @@
     <string name="lesson_somali_missing">This section has no Somali explanation. Read it in your study language.</string>
     <string name="vocabulary_meaning_somali">Meaning in Somali</string>
     <string name="vocabulary_somali">Somali: %1$s</string>
+    <string name="language_ukrainian">Українська · Ukrainian</string>
+    <string name="explanation_also_ukrainian">Also in Ukrainian</string>
+    <string name="explanation_ukrainian_title">Explanation in Ukrainian</string>
+    <string name="explanation_missing_ukrainian">This question has no Ukrainian explanation. Read the explanation in your study language.</string>
+    <string name="lesson_ukrainian_missing">This section has no Ukrainian explanation. Read it in your study language.</string>
+    <string name="vocabulary_meaning_ukrainian">Meaning in Ukrainian</string>
+    <string name="vocabulary_ukrainian">Ukrainian: %1$s</string>
 </resources>

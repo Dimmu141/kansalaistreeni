@@ -1,0 +1,995 @@
+{
+  "language": "uk",
+  "version": 1,
+  "rules": [
+    "The exam is taken in Finnish or Swedish. On first mention in a Ukrainian text, an institution, office, document or procedure marked keepFinnish is followed by the Finnish word in parentheses: «парламент (eduskunta)».",
+    "Use the rendering in 'uk' for every occurrence; inflect it as Ukrainian grammar requires, but do not swap in a synonym.",
+    "Address the learner with «ви». Use neutral, plain modern Ukrainian (about B1 level) following the 2019 orthography; avoid Russianisms and bureaucratic phrasing.",
+    "Dates as 6.12.1917 or «6 грудня 1917 року»; numbers and euros as in Finnish (5 €, 112); keep names of services (Kela, OmaVero, Suomi.fi) unchanged.",
+    "Do not add facts, advice or hedging that the Finnish text does not contain."
+  ],
+  "terms": {
+    "lainsäädäntövalta": {
+      "uk": "законодавча влада"
+    },
+    "eduskunta": {
+      "uk": "парламент Фінляндії",
+      "keepFinnish": true
+    },
+    "tuomioistuin": {
+      "uk": "суд"
+    },
+    "riippumaton": {
+      "uk": "незалежний"
+    },
+    "hallitusvalta": {
+      "uk": "урядова (виконавча) влада"
+    },
+    "valtioneuvosto": {
+      "uk": "уряд (Державна рада)",
+      "keepFinnish": true
+    },
+    "kansanedustaja": {
+      "uk": "депутат парламенту",
+      "keepFinnish": true
+    },
+    "vaalikausi": {
+      "uk": "скликання парламенту"
+    },
+    "talousarvio": {
+      "uk": "державний бюджет"
+    },
+    "valtio": {
+      "uk": "держава"
+    },
+    "äänioikeus": {
+      "uk": "право голосу"
+    },
+    "vaalipäivä": {
+      "uk": "день виборів"
+    },
+    "kuntavaalit": {
+      "uk": "муніципальні вибори",
+      "keepFinnish": true
+    },
+    "kotikunta": {
+      "uk": "муніципалітет проживання",
+      "keepFinnish": true
+    },
+    "aluevaalit": {
+      "uk": "вибори до регіонів добробуту",
+      "keepFinnish": true
+    },
+    "yhtäjaksoisesti": {
+      "uk": "безперервно"
+    },
+    "Euroopan parlamentti": {
+      "uk": "Європейський парламент"
+    },
+    "ilmoittautua": {
+      "uk": "зареєструватися"
+    },
+    "toimikausi": {
+      "uk": "строк повноважень"
+    },
+    "presidentinvaali": {
+      "uk": "президентські вибори"
+    },
+    "peräkkäinen": {
+      "uk": "поспіль"
+    },
+    "ulkopolitiikka": {
+      "uk": "зовнішня політика"
+    },
+    "ylipäällikkö": {
+      "uk": "Верховний головнокомандувач"
+    },
+    "puolustusvoimat": {
+      "uk": "Сили оборони",
+      "keepFinnish": true
+    },
+    "pääministeri": {
+      "uk": "прем'єр-міністр",
+      "keepFinnish": true
+    },
+    "ehdokas": {
+      "uk": "кандидат"
+    },
+    "kierros": {
+      "uk": "тур"
+    },
+    "tasavallan presidentti": {
+      "uk": "Президент Республіки",
+      "keepFinnish": true
+    },
+    "hallitusohjelma": {
+      "uk": "програма уряду",
+      "keepFinnish": true
+    },
+    "luottamus": {
+      "uk": "довіра"
+    },
+    "parlamentarismi": {
+      "uk": "парламентаризм"
+    },
+    "ministeri": {
+      "uk": "міністр"
+    },
+    "nimittää": {
+      "uk": "призначати"
+    },
+    "kunnanvaltuusto": {
+      "uk": "муніципальна рада",
+      "keepFinnish": true
+    },
+    "kunta": {
+      "uk": "муніципалітет",
+      "keepFinnish": true
+    },
+    "hyvinvointialue": {
+      "uk": "регіон добробуту",
+      "keepFinnish": true
+    },
+    "pelastuspalvelut": {
+      "uk": "рятувальні служби"
+    },
+    "aluevaltuusto": {
+      "uk": "регіональна рада",
+      "keepFinnish": true
+    },
+    "kansalaisaloite": {
+      "uk": "громадянська ініціатива",
+      "keepFinnish": true
+    },
+    "aloite": {
+      "uk": "ініціатива"
+    },
+    "ehdottaa": {
+      "uk": "пропонувати"
+    },
+    "laki": {
+      "uk": "закон"
+    },
+    "kansanvalta": {
+      "uk": "народовладдя"
+    },
+    "vaikuttaa": {
+      "uk": "впливати"
+    },
+    "perusoikeus": {
+      "uk": "основне право",
+      "keepFinnish": true
+    },
+    "ulkomaalainen": {
+      "uk": "іноземець"
+    },
+    "ihmisoikeus": {
+      "uk": "права людини"
+    },
+    "julkinen valta": {
+      "uk": "органи публічної влади"
+    },
+    "kuolemanrangaistus": {
+      "uk": "смертна кара"
+    },
+    "kiduttaa": {
+      "uk": "катувати"
+    },
+    "sananvapaus": {
+      "uk": "свобода слова"
+    },
+    "mielipide": {
+      "uk": "думка"
+    },
+    "julkaista": {
+      "uk": "публікувати"
+    },
+    "viranomainen": {
+      "uk": "орган влади"
+    },
+    "asiakirja": {
+      "uk": "документ"
+    },
+    "julkinen": {
+      "uk": "відкритий (публічний)"
+    },
+    "uskonnonvapaus": {
+      "uk": "свобода віросповідання"
+    },
+    "uskonnollinen yhdyskunta": {
+      "uk": "релігійна громада"
+    },
+    "omatunto": {
+      "uk": "совість"
+    },
+    "vakaumus": {
+      "uk": "переконання"
+    },
+    "suostumus": {
+      "uk": "згода"
+    },
+    "uskontokunta": {
+      "uk": "віросповідна громада"
+    },
+    "mielenosoitus": {
+      "uk": "демонстрація"
+    },
+    "ilmoitus": {
+      "uk": "повідомлення"
+    },
+    "yhdistys": {
+      "uk": "об'єднання"
+    },
+    "yhdistymisvapaus": {
+      "uk": "свобода об'єднань"
+    },
+    "ammattiliitto": {
+      "uk": "профспілка",
+      "keepFinnish": true
+    },
+    "järjestäytyä": {
+      "uk": "організовуватися"
+    },
+    "perustaa": {
+      "uk": "засновувати"
+    },
+    "lupa": {
+      "uk": "дозвіл"
+    },
+    "yksityiselämä": {
+      "uk": "приватне життя"
+    },
+    "luottamuksellinen": {
+      "uk": "конфіденційний"
+    },
+    "kirje": {
+      "uk": "лист"
+    },
+    "salaisuus": {
+      "uk": "таємниця"
+    },
+    "kotirauha": {
+      "uk": "недоторканність житла"
+    },
+    "kunnia": {
+      "uk": "честь"
+    },
+    "perusopetus": {
+      "uk": "базова освіта",
+      "keepFinnish": true
+    },
+    "maksuton": {
+      "uk": "безоплатний"
+    },
+    "kansalliskieli": {
+      "uk": "державна мова"
+    },
+    "tiede": {
+      "uk": "наука"
+    },
+    "taide": {
+      "uk": "мистецтво"
+    },
+    "oikeusturva": {
+      "uk": "правовий захист"
+    },
+    "hakea muutosta": {
+      "uk": "оскаржувати"
+    },
+    "oikeusasiamies": {
+      "uk": "Омбудсман парламенту",
+      "keepFinnish": true
+    },
+    "valvoa": {
+      "uk": "наглядати"
+    },
+    "rikos": {
+      "uk": "злочин"
+    },
+    "rangaistus": {
+      "uk": "покарання"
+    },
+    "lyödä": {
+      "uk": "бити"
+    },
+    "väkivalta": {
+      "uk": "насильство"
+    },
+    "lapsi": {
+      "uk": "дитина"
+    },
+    "täysi-ikäinen": {
+      "uk": "повнолітній"
+    },
+    "ottaa huomioon": {
+      "uk": "враховувати"
+    },
+    "yhdenvertaisuus": {
+      "uk": "рівність",
+      "keepFinnish": true
+    },
+    "samanarvoinen": {
+      "uk": "рівноцінний"
+    },
+    "lain edessä": {
+      "uk": "перед законом"
+    },
+    "syrjintä": {
+      "uk": "дискримінація"
+    },
+    "hyväksyttävä peruste": {
+      "uk": "прийнятна підстава"
+    },
+    "syrjiä": {
+      "uk": "дискримінувати"
+    },
+    "vamma": {
+      "uk": "інвалідність"
+    },
+    "vuokranantaja": {
+      "uk": "орендодавець"
+    },
+    "kansalaisuus": {
+      "uk": "громадянство"
+    },
+    "kielitaito": {
+      "uk": "знання мови"
+    },
+    "työnantaja": {
+      "uk": "роботодавець"
+    },
+    "seksuaalinen suuntautuminen": {
+      "uk": "сексуальна орієнтація"
+    },
+    "työnhakija": {
+      "uk": "шукач роботи"
+    },
+    "rekrytointi": {
+      "uk": "найм працівників"
+    },
+    "uskonto": {
+      "uk": "релігія"
+    },
+    "palkata": {
+      "uk": "наймати"
+    },
+    "raskaus": {
+      "uk": "вагітність"
+    },
+    "perhevapaa": {
+      "uk": "сімейна відпустка",
+      "keepFinnish": true
+    },
+    "työsyrjintä": {
+      "uk": "дискримінація на роботі"
+    },
+    "työsuojeluviranomainen": {
+      "uk": "орган з охорони праці",
+      "keepFinnish": true
+    },
+    "äidinkieli": {
+      "uk": "рідна мова"
+    },
+    "työehdot": {
+      "uk": "умови праці"
+    },
+    "tasa-arvo": {
+      "uk": "гендерна рівність",
+      "keepFinnish": true
+    },
+    "sukupuoli": {
+      "uk": "стать"
+    },
+    "palkka": {
+      "uk": "заробітна плата"
+    },
+    "palkkasyrjintä": {
+      "uk": "дискримінація в оплаті"
+    },
+    "tulla voimaan": {
+      "uk": "набирати чинності"
+    },
+    "mennä naimisiin": {
+      "uk": "одружуватися"
+    },
+    "avioliitto": {
+      "uk": "шлюб"
+    },
+    "pakottaa": {
+      "uk": "примушувати"
+    },
+    "vapaaehtoinen": {
+      "uk": "добровільний"
+    },
+    "puoliso": {
+      "uk": "партнер (у подружжі)"
+    },
+    "aviopuoliso": {
+      "uk": "чоловік або дружина"
+    },
+    "yhdenvertaisuusvaltuutettu": {
+      "uk": "Омбудсман з питань недискримінації",
+      "keepFinnish": true
+    },
+    "tasa-arvovaltuutettu": {
+      "uk": "Омбудсман з питань рівності",
+      "keepFinnish": true
+    },
+    "vammainen": {
+      "uk": "людина з інвалідністю"
+    },
+    "työympäristö": {
+      "uk": "робоче середовище"
+    },
+    "muuttaa": {
+      "uk": "змінювати"
+    },
+    "kuljetuspalvelu": {
+      "uk": "транспортна послуга"
+    },
+    "henkilökohtainen avustaja": {
+      "uk": "особистий асистент"
+    },
+    "noudattaa": {
+      "uk": "дотримуватися"
+    },
+    "oleskella": {
+      "uk": "перебувати"
+    },
+    "velvollisuus": {
+      "uk": "обов'язок"
+    },
+    "onnettomuus": {
+      "uk": "нещасний випадок"
+    },
+    "poliisi": {
+      "uk": "поліція"
+    },
+    "järjestys": {
+      "uk": "порядок"
+    },
+    "työsopimus": {
+      "uk": "трудовий договір",
+      "keepFinnish": true
+    },
+    "allekirjoittaa": {
+      "uk": "підписувати"
+    },
+    "suullinen": {
+      "uk": "усний"
+    },
+    "kirjallinen": {
+      "uk": "письмовий"
+    },
+    "vähimmäispalkka": {
+      "uk": "мінімальна заробітна плата"
+    },
+    "työehtosopimus": {
+      "uk": "колективний договір",
+      "keepFinnish": true
+    },
+    "koeaika": {
+      "uk": "випробувальний строк"
+    },
+    "työturvallisuus": {
+      "uk": "безпека праці"
+    },
+    "työohje": {
+      "uk": "робоча інструкція"
+    },
+    "turvaväline": {
+      "uk": "засоби захисту"
+    },
+    "perehdyttää": {
+      "uk": "вводити в роботу (інструктаж)"
+    },
+    "verokortti": {
+      "uk": "податкова картка",
+      "keepFinnish": true
+    },
+    "tulo": {
+      "uk": "дохід"
+    },
+    "periä veroa": {
+      "uk": "утримувати податок"
+    },
+    "progressiivinen": {
+      "uk": "прогресивний"
+    },
+    "veroprosentti": {
+      "uk": "податкова ставка"
+    },
+    "verorahat": {
+      "uk": "податкові кошти"
+    },
+    "vuokrasopimus": {
+      "uk": "договір оренди",
+      "keepFinnish": true
+    },
+    "vuokra": {
+      "uk": "орендна плата"
+    },
+    "vuokratakuu": {
+      "uk": "орендна застава",
+      "keepFinnish": true
+    },
+    "irtisanoa": {
+      "uk": "розірвати договір"
+    },
+    "irtisanomisaika": {
+      "uk": "строк попередження"
+    },
+    "muuttoilmoitus": {
+      "uk": "повідомлення про переїзд",
+      "keepFinnish": true
+    },
+    "huoltajuus": {
+      "uk": "опіка"
+    },
+    "yhteishuoltajuus": {
+      "uk": "спільна опіка"
+    },
+    "elatusapu": {
+      "uk": "аліменти"
+    },
+    "ero": {
+      "uk": "розлучення (розставання)"
+    },
+    "huoltaja": {
+      "uk": "опікун"
+    },
+    "sosiaaliturva": {
+      "uk": "соціальне забезпечення"
+    },
+    "etuus": {
+      "uk": "виплата (пільга)"
+    },
+    "vakinaisesti": {
+      "uk": "постійно"
+    },
+    "hätätilanne": {
+      "uk": "надзвичайна ситуація"
+    },
+    "hoito": {
+      "uk": "лікування (догляд)"
+    },
+    "valtakunta": {
+      "uk": "королівство"
+    },
+    "rauha": {
+      "uk": "мир"
+    },
+    "valloittaa": {
+      "uk": "завойовувати"
+    },
+    "uskonpuhdistus": {
+      "uk": "Реформація"
+    },
+    "luterilainen": {
+      "uk": "лютеранський"
+    },
+    "yliopisto": {
+      "uk": "університет"
+    },
+    "autonominen": {
+      "uk": "автономний"
+    },
+    "keisarikunta": {
+      "uk": "імперія"
+    },
+    "yhtäläinen": {
+      "uk": "рівний"
+    },
+    "pääkaupunki": {
+      "uk": "столиця"
+    },
+    "itsenäisyys": {
+      "uk": "незалежність"
+    },
+    "tunnustaa": {
+      "uk": "визнавати"
+    },
+    "sisällissota": {
+      "uk": "громадянська війна"
+    },
+    "tasavalta": {
+      "uk": "республіка"
+    },
+    "hallitusmuoto": {
+      "uk": "форма правління"
+    },
+    "talvisota": {
+      "uk": "Зимова війна",
+      "keepFinnish": true
+    },
+    "jatkosota": {
+      "uk": "Війна-продовження",
+      "keepFinnish": true
+    },
+    "miehittää": {
+      "uk": "окупувати"
+    },
+    "hävitä": {
+      "uk": "програти"
+    },
+    "luovuttaa": {
+      "uk": "поступитися (передати)"
+    },
+    "maa-alue": {
+      "uk": "територія"
+    },
+    "asuttaa": {
+      "uk": "переселяти"
+    },
+    "väestö": {
+      "uk": "населення"
+    },
+    "sotakorvaus": {
+      "uk": "воєнні репарації"
+    },
+    "tavara": {
+      "uk": "товари"
+    },
+    "täysimääräinen": {
+      "uk": "у повному обсязі"
+    },
+    "olympialaiset": {
+      "uk": "Олімпійські ігри"
+    },
+    "päätösasiakirja": {
+      "uk": "Заключний акт"
+    },
+    "Euroopan unioni": {
+      "uk": "Європейський Союз"
+    },
+    "jäsen": {
+      "uk": "член"
+    },
+    "käteinen": {
+      "uk": "готівка"
+    },
+    "valuutta": {
+      "uk": "валюта"
+    },
+    "Nato": {
+      "uk": "НАТО"
+    },
+    "puolustusliitto": {
+      "uk": "оборонний союз"
+    },
+    "yhteinen puolustus": {
+      "uk": "колективна оборона"
+    },
+    "turvatakuu": {
+      "uk": "гарантія безпеки"
+    },
+    "ruotsi": {
+      "uk": "шведська мова"
+    },
+    "Ahvenanmaa": {
+      "uk": "Аландські острови",
+      "keepFinnish": true
+    },
+    "virallinen kieli": {
+      "uk": "офіційна мова"
+    },
+    "demilitarisoitu": {
+      "uk": "демілітаризований"
+    },
+    "maakunta": {
+      "uk": "провінція"
+    },
+    "alkuperäiskansa": {
+      "uk": "корінний народ"
+    },
+    "saamelainen": {
+      "uk": "саамський"
+    },
+    "viittomakieli": {
+      "uk": "жестова мова"
+    },
+    "itsehallinto": {
+      "uk": "самоврядування"
+    },
+    "kotiseutualue": {
+      "uk": "рідний край"
+    },
+    "kirkko": {
+      "uk": "церква"
+    },
+    "erityisasema": {
+      "uk": "особливий статус"
+    },
+    "verotusoikeus": {
+      "uk": "право стягувати податки"
+    },
+    "itsenäisyyspäivä": {
+      "uk": "День незалежності",
+      "keepFinnish": true
+    },
+    "juhlia": {
+      "uk": "святкувати"
+    },
+    "juhannus": {
+      "uk": "Іванове свято (Юханнус)",
+      "keepFinnish": true
+    },
+    "kesämökki": {
+      "uk": "літній будиночок"
+    },
+    "vappu": {
+      "uk": "Перше травня (Ваппу)",
+      "keepFinnish": true
+    },
+    "kevät": {
+      "uk": "весна"
+    },
+    "kansalliseläin": {
+      "uk": "національна тварина"
+    },
+    "karhu": {
+      "uk": "ведмідь"
+    },
+    "kansanruno": {
+      "uk": "народна поема"
+    },
+    "eepos": {
+      "uk": "епос"
+    },
+    "kirjastokortti": {
+      "uk": "читацький квиток"
+    },
+    "lainata": {
+      "uk": "позичати"
+    },
+    "hukata": {
+      "uk": "загубити"
+    },
+    "laina-aika": {
+      "uk": "строк позики"
+    },
+    "palauttaa": {
+      "uk": "повертати"
+    },
+    "kirjasto": {
+      "uk": "бібліотека"
+    },
+    "vapaaehtoistyö": {
+      "uk": "волонтерська робота"
+    },
+    "kokous": {
+      "uk": "збори"
+    },
+    "peruskoulu": {
+      "uk": "загальноосвітня школа",
+      "keepFinnish": true
+    },
+    "vuosiluokka": {
+      "uk": "клас"
+    },
+    "oppivelvollisuus": {
+      "uk": "обов'язкове навчання",
+      "keepFinnish": true
+    },
+    "toinen aste": {
+      "uk": "середня ступінь освіти"
+    },
+    "esiopetus": {
+      "uk": "дошкільна освіта",
+      "keepFinnish": true
+    },
+    "hätänumero": {
+      "uk": "номер екстреної допомоги"
+    },
+    "päivystäjä": {
+      "uk": "черговий оператор"
+    },
+    "jono": {
+      "uk": "черга"
+    },
+    "ruuhka": {
+      "uk": "перевантаження"
+    },
+    "rikosilmoitus": {
+      "uk": "заява про злочин",
+      "keepFinnish": true
+    },
+    "lomake": {
+      "uk": "форма (бланк)"
+    },
+    "poliisiasema": {
+      "uk": "поліцейська дільниця"
+    },
+    "passi": {
+      "uk": "паспорт"
+    },
+    "henkilökortti": {
+      "uk": "посвідчення особи",
+      "keepFinnish": true
+    },
+    "palovaroitin": {
+      "uk": "димовий сповіщувач"
+    },
+    "neliömetri": {
+      "uk": "квадратний метр"
+    },
+    "kerros": {
+      "uk": "поверх"
+    },
+    "taloyhtiö": {
+      "uk": "житлове товариство",
+      "keepFinnish": true
+    },
+    "sammutuspeite": {
+      "uk": "протипожежне покривало"
+    },
+    "tukahduttaa": {
+      "uk": "придушити (накрити)"
+    },
+    "hissi": {
+      "uk": "ліфт"
+    },
+    "tulipalo": {
+      "uk": "пожежа"
+    },
+    "väestöhälytin": {
+      "uk": "сирена оповіщення населення"
+    },
+    "vaaramerkki": {
+      "uk": "сигнал небезпеки"
+    },
+    "äänimerkki": {
+      "uk": "звуковий сигнал"
+    },
+    "sulkea": {
+      "uk": "зачиняти"
+    },
+    "ikkuna": {
+      "uk": "вікно"
+    },
+    "puhelin": {
+      "uk": "телефон"
+    },
+    "kotivara": {
+      "uk": "домашній запас",
+      "keepFinnish": true
+    },
+    "varautua": {
+      "uk": "готуватися"
+    },
+    "varasto": {
+      "uk": "запас"
+    },
+    "asevelvollisuus": {
+      "uk": "військовий обов'язок",
+      "keepFinnish": true
+    },
+    "maanpuolustus": {
+      "uk": "оборона країни"
+    },
+    "auttava puhelin": {
+      "uk": "телефон довіри"
+    },
+    "uhkailu": {
+      "uk": "погрози"
+    },
+    "uhri": {
+      "uk": "потерпілий"
+    },
+    "lastensuojelu": {
+      "uk": "захист дітей",
+      "keepFinnish": true
+    },
+    "liikenne": {
+      "uk": "дорожній рух"
+    },
+    "oikea": {
+      "uk": "правий"
+    },
+    "päihtynyt": {
+      "uk": "у стані сп'яніння"
+    },
+    "rattijuopumus": {
+      "uk": "керування в нетверезому стані"
+    },
+    "talvirengas": {
+      "uk": "зимова шина"
+    },
+    "tunnistautua": {
+      "uk": "ідентифікуватися"
+    },
+    "mobiilivarmenne": {
+      "uk": "мобільний сертифікат",
+      "keepFinnish": true
+    },
+    "sovellus": {
+      "uk": "застосунок"
+    },
+    "kirjautua ulos": {
+      "uk": "вийти з системи"
+    },
+    "tunnukset": {
+      "uk": "облікові дані"
+    },
+    "pankkitunnukset": {
+      "uk": "банківські облікові дані",
+      "keepFinnish": true
+    },
+    "valtakirja": {
+      "uk": "довіреність"
+    },
+    "valtuus": {
+      "uk": "повноваження"
+    },
+    "käyttäjätunnus": {
+      "uk": "ім'я користувача"
+    },
+    "digiposti": {
+      "uk": "цифрова пошта"
+    },
+    "postilaatikko": {
+      "uk": "поштова скринька"
+    },
+    "alaikäinen": {
+      "uk": "неповнолітній"
+    },
+    "veroasia": {
+      "uk": "податкова справа"
+    },
+    "asunnoton": {
+      "uk": "безхатній"
+    },
+    "puhelimitse": {
+      "uk": "телефоном"
+    },
+    "resepti": {
+      "uk": "рецепт"
+    },
+    "terveystieto": {
+      "uk": "медична інформація"
+    },
+    "uusiminen": {
+      "uk": "поновлення"
+    },
+    "lääke": {
+      "uk": "ліки"
+    },
+    "ammattilainen": {
+      "uk": "фахівець"
+    },
+    "huijaus": {
+      "uk": "шахрайство"
+    },
+    "kiire": {
+      "uk": "поспіх"
+    },
+    "tietojenkalastelu": {
+      "uk": "фішинг"
+    },
+    "asiakaspalvelu": {
+      "uk": "служба підтримки клієнтів"
+    },
+    "aito": {
+      "uk": "справжній"
+    },
+    "sivusto": {
+      "uk": "вебсайт"
+    },
+    "henkilötieto": {
+      "uk": "персональні дані"
+    },
+    "rekisterinpitäjä": {
+      "uk": "контролер даних"
+    },
+    "määräaika": {
+      "uk": "строк"
+    },
+    "tietosuojavaltuutettu": {
+      "uk": "Омбудсман із захисту даних",
+      "keepFinnish": true
+    },
+    "kieltäytyä": {
+      "uk": "відмовлятися"
+    }
+  }
+}
