@@ -398,4 +398,11 @@
     <string name="lesson_ukrainian_missing">Tälle osiolle ei ole ukrainankielistä selitystä. Lue teksti opiskelukielelläsi.</string>
     <string name="vocabulary_meaning_ukrainian">Merkitys ukrainaksi</string>
     <string name="vocabulary_ukrainian">Ukraina: %1$s</string>
+    <string name="language_turkish">Türkçe · turkki</string>
+    <string name="explanation_also_turkish">Lisäksi turkiksi</string>
+    <string name="explanation_turkish_title">Selitys turkiksi</string>
+    <string name="explanation_missing_turkish">Tähän kysymykseen ei ole turkinkielistä selitystä. Lue selitys opiskelukielellä.</string>
+    <string name="lesson_turkish_missing">Tälle osiolle ei ole turkinkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
+    <string name="vocabulary_meaning_turkish">Merkitys turkiksi</string>
+    <string name="vocabulary_turkish">Turkki: %1$s</string>
 </resources>

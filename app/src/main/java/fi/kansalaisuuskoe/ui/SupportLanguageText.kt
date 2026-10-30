@@ -26,6 +26,8 @@ private val ExplanationPreference.strings get() = when (this) {
         R.string.explanation_missing_somali, R.string.lesson_somali_missing, R.string.vocabulary_meaning_somali, R.string.vocabulary_somali)
     ExplanationPreference.ALSO_UKRAINIAN -> SupportStrings(R.string.explanation_also_ukrainian, R.string.explanation_ukrainian_title,
         R.string.explanation_missing_ukrainian, R.string.lesson_ukrainian_missing, R.string.vocabulary_meaning_ukrainian, R.string.vocabulary_ukrainian)
+    ExplanationPreference.ALSO_TURKISH -> SupportStrings(R.string.explanation_also_turkish, R.string.explanation_turkish_title,
+        R.string.explanation_missing_turkish, R.string.lesson_turkish_missing, R.string.vocabulary_meaning_turkish, R.string.vocabulary_turkish)
 }
 
 internal val ExplanationPreference.optionLabel get() = strings.option

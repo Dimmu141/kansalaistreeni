@@ -1,0 +1,995 @@
+{
+  "language": "tr",
+  "version": 1,
+  "rules": [
+    "The exam is taken in Finnish or Swedish. On first mention in a Turkish text, an institution, office, document or procedure marked keepFinnish is followed by the Finnish word in parentheses: «Finlandiya Parlamentosu (eduskunta)».",
+    "Use the rendering in 'tr' for every occurrence; add suffixes as Turkish grammar requires (Finlandiya'da, Kela'dan), but do not swap in a synonym.",
+    "Address the learner with «siz». Use plain modern Turkish (about B1 level); prefer common words over Ottoman or very formal legal vocabulary.",
+    "Dates as 6.12.1917 or «6 Aralık 1917»; numbers and euros as in Finnish (5 €, 112); keep names of services (Kela, OmaVero, Suomi.fi) unchanged.",
+    "Do not add facts, advice or hedging that the Finnish text does not contain."
+  ],
+  "terms": {
+    "lainsäädäntövalta": {
+      "tr": "yasama yetkisi"
+    },
+    "eduskunta": {
+      "tr": "Finlandiya Parlamentosu",
+      "keepFinnish": true
+    },
+    "tuomioistuin": {
+      "tr": "mahkeme"
+    },
+    "riippumaton": {
+      "tr": "bağımsız"
+    },
+    "hallitusvalta": {
+      "tr": "yürütme yetkisi"
+    },
+    "valtioneuvosto": {
+      "tr": "hükümet (Devlet Konseyi)",
+      "keepFinnish": true
+    },
+    "kansanedustaja": {
+      "tr": "milletvekili",
+      "keepFinnish": true
+    },
+    "vaalikausi": {
+      "tr": "yasama dönemi"
+    },
+    "talousarvio": {
+      "tr": "devlet bütçesi"
+    },
+    "valtio": {
+      "tr": "devlet"
+    },
+    "äänioikeus": {
+      "tr": "oy hakkı"
+    },
+    "vaalipäivä": {
+      "tr": "seçim günü"
+    },
+    "kuntavaalit": {
+      "tr": "belediye seçimleri",
+      "keepFinnish": true
+    },
+    "kotikunta": {
+      "tr": "ikamet belediyesi",
+      "keepFinnish": true
+    },
+    "aluevaalit": {
+      "tr": "refah bölgesi seçimleri",
+      "keepFinnish": true
+    },
+    "yhtäjaksoisesti": {
+      "tr": "kesintisiz olarak"
+    },
+    "Euroopan parlamentti": {
+      "tr": "Avrupa Parlamentosu"
+    },
+    "ilmoittautua": {
+      "tr": "kaydolmak"
+    },
+    "toimikausi": {
+      "tr": "görev süresi"
+    },
+    "presidentinvaali": {
+      "tr": "cumhurbaşkanlığı seçimi"
+    },
+    "peräkkäinen": {
+      "tr": "art arda"
+    },
+    "ulkopolitiikka": {
+      "tr": "dış politika"
+    },
+    "ylipäällikkö": {
+      "tr": "Başkomutan"
+    },
+    "puolustusvoimat": {
+      "tr": "Savunma Kuvvetleri",
+      "keepFinnish": true
+    },
+    "pääministeri": {
+      "tr": "başbakan",
+      "keepFinnish": true
+    },
+    "ehdokas": {
+      "tr": "aday"
+    },
+    "kierros": {
+      "tr": "tur"
+    },
+    "tasavallan presidentti": {
+      "tr": "Cumhurbaşkanı",
+      "keepFinnish": true
+    },
+    "hallitusohjelma": {
+      "tr": "hükümet programı",
+      "keepFinnish": true
+    },
+    "luottamus": {
+      "tr": "güven"
+    },
+    "parlamentarismi": {
+      "tr": "parlamenter sistem"
+    },
+    "ministeri": {
+      "tr": "bakan"
+    },
+    "nimittää": {
+      "tr": "atamak"
+    },
+    "kunnanvaltuusto": {
+      "tr": "belediye meclisi",
+      "keepFinnish": true
+    },
+    "kunta": {
+      "tr": "belediye",
+      "keepFinnish": true
+    },
+    "hyvinvointialue": {
+      "tr": "refah hizmetleri bölgesi",
+      "keepFinnish": true
+    },
+    "pelastuspalvelut": {
+      "tr": "kurtarma hizmetleri"
+    },
+    "aluevaltuusto": {
+      "tr": "bölge meclisi",
+      "keepFinnish": true
+    },
+    "kansalaisaloite": {
+      "tr": "vatandaş girişimi",
+      "keepFinnish": true
+    },
+    "aloite": {
+      "tr": "girişim"
+    },
+    "ehdottaa": {
+      "tr": "önermek"
+    },
+    "laki": {
+      "tr": "kanun"
+    },
+    "kansanvalta": {
+      "tr": "halk egemenliği"
+    },
+    "vaikuttaa": {
+      "tr": "etkilemek"
+    },
+    "perusoikeus": {
+      "tr": "temel hak",
+      "keepFinnish": true
+    },
+    "ulkomaalainen": {
+      "tr": "yabancı"
+    },
+    "ihmisoikeus": {
+      "tr": "insan hakları"
+    },
+    "julkinen valta": {
+      "tr": "kamu otoritesi"
+    },
+    "kuolemanrangaistus": {
+      "tr": "ölüm cezası"
+    },
+    "kiduttaa": {
+      "tr": "işkence etmek"
+    },
+    "sananvapaus": {
+      "tr": "ifade özgürlüğü"
+    },
+    "mielipide": {
+      "tr": "görüş"
+    },
+    "julkaista": {
+      "tr": "yayımlamak"
+    },
+    "viranomainen": {
+      "tr": "resmi makam"
+    },
+    "asiakirja": {
+      "tr": "belge"
+    },
+    "julkinen": {
+      "tr": "kamuya açık"
+    },
+    "uskonnonvapaus": {
+      "tr": "din özgürlüğü"
+    },
+    "uskonnollinen yhdyskunta": {
+      "tr": "dini topluluk"
+    },
+    "omatunto": {
+      "tr": "vicdan"
+    },
+    "vakaumus": {
+      "tr": "inanç"
+    },
+    "suostumus": {
+      "tr": "rıza"
+    },
+    "uskontokunta": {
+      "tr": "inanç topluluğu"
+    },
+    "mielenosoitus": {
+      "tr": "gösteri"
+    },
+    "ilmoitus": {
+      "tr": "bildirim"
+    },
+    "yhdistys": {
+      "tr": "dernek"
+    },
+    "yhdistymisvapaus": {
+      "tr": "örgütlenme özgürlüğü"
+    },
+    "ammattiliitto": {
+      "tr": "sendika",
+      "keepFinnish": true
+    },
+    "järjestäytyä": {
+      "tr": "örgütlenmek"
+    },
+    "perustaa": {
+      "tr": "kurmak"
+    },
+    "lupa": {
+      "tr": "izin"
+    },
+    "yksityiselämä": {
+      "tr": "özel hayat"
+    },
+    "luottamuksellinen": {
+      "tr": "gizli"
+    },
+    "kirje": {
+      "tr": "mektup"
+    },
+    "salaisuus": {
+      "tr": "gizlilik"
+    },
+    "kotirauha": {
+      "tr": "konut dokunulmazlığı"
+    },
+    "kunnia": {
+      "tr": "onur"
+    },
+    "perusopetus": {
+      "tr": "temel eğitim",
+      "keepFinnish": true
+    },
+    "maksuton": {
+      "tr": "ücretsiz"
+    },
+    "kansalliskieli": {
+      "tr": "ulusal dil"
+    },
+    "tiede": {
+      "tr": "bilim"
+    },
+    "taide": {
+      "tr": "sanat"
+    },
+    "oikeusturva": {
+      "tr": "hukuki güvence"
+    },
+    "hakea muutosta": {
+      "tr": "itiraz etmek"
+    },
+    "oikeusasiamies": {
+      "tr": "Meclis Ombudsmanı",
+      "keepFinnish": true
+    },
+    "valvoa": {
+      "tr": "denetlemek"
+    },
+    "rikos": {
+      "tr": "suç"
+    },
+    "rangaistus": {
+      "tr": "ceza"
+    },
+    "lyödä": {
+      "tr": "vurmak"
+    },
+    "väkivalta": {
+      "tr": "şiddet"
+    },
+    "lapsi": {
+      "tr": "çocuk"
+    },
+    "täysi-ikäinen": {
+      "tr": "reşit"
+    },
+    "ottaa huomioon": {
+      "tr": "dikkate almak"
+    },
+    "yhdenvertaisuus": {
+      "tr": "eşitlik",
+      "keepFinnish": true
+    },
+    "samanarvoinen": {
+      "tr": "eşit değerde"
+    },
+    "lain edessä": {
+      "tr": "kanun önünde"
+    },
+    "syrjintä": {
+      "tr": "ayrımcılık"
+    },
+    "hyväksyttävä peruste": {
+      "tr": "kabul edilebilir gerekçe"
+    },
+    "syrjiä": {
+      "tr": "ayrımcılık yapmak"
+    },
+    "vamma": {
+      "tr": "engellilik"
+    },
+    "vuokranantaja": {
+      "tr": "ev sahibi"
+    },
+    "kansalaisuus": {
+      "tr": "vatandaşlık"
+    },
+    "kielitaito": {
+      "tr": "dil becerisi"
+    },
+    "työnantaja": {
+      "tr": "işveren"
+    },
+    "seksuaalinen suuntautuminen": {
+      "tr": "cinsel yönelim"
+    },
+    "työnhakija": {
+      "tr": "iş başvurusu yapan kişi"
+    },
+    "rekrytointi": {
+      "tr": "işe alım"
+    },
+    "uskonto": {
+      "tr": "din"
+    },
+    "palkata": {
+      "tr": "işe almak"
+    },
+    "raskaus": {
+      "tr": "hamilelik"
+    },
+    "perhevapaa": {
+      "tr": "aile izni",
+      "keepFinnish": true
+    },
+    "työsyrjintä": {
+      "tr": "işyerinde ayrımcılık"
+    },
+    "työsuojeluviranomainen": {
+      "tr": "iş sağlığı ve güvenliği makamı",
+      "keepFinnish": true
+    },
+    "äidinkieli": {
+      "tr": "ana dil"
+    },
+    "työehdot": {
+      "tr": "çalışma koşulları"
+    },
+    "tasa-arvo": {
+      "tr": "cinsiyet eşitliği",
+      "keepFinnish": true
+    },
+    "sukupuoli": {
+      "tr": "cinsiyet"
+    },
+    "palkka": {
+      "tr": "ücret"
+    },
+    "palkkasyrjintä": {
+      "tr": "ücret ayrımcılığı"
+    },
+    "tulla voimaan": {
+      "tr": "yürürlüğe girmek"
+    },
+    "mennä naimisiin": {
+      "tr": "evlenmek"
+    },
+    "avioliitto": {
+      "tr": "evlilik"
+    },
+    "pakottaa": {
+      "tr": "zorlamak"
+    },
+    "vapaaehtoinen": {
+      "tr": "gönüllü"
+    },
+    "puoliso": {
+      "tr": "eş"
+    },
+    "aviopuoliso": {
+      "tr": "karı ya da koca"
+    },
+    "yhdenvertaisuusvaltuutettu": {
+      "tr": "Ayrımcılıkla Mücadele Ombudsmanı",
+      "keepFinnish": true
+    },
+    "tasa-arvovaltuutettu": {
+      "tr": "Eşitlik Ombudsmanı",
+      "keepFinnish": true
+    },
+    "vammainen": {
+      "tr": "engelli"
+    },
+    "työympäristö": {
+      "tr": "çalışma ortamı"
+    },
+    "muuttaa": {
+      "tr": "değiştirmek"
+    },
+    "kuljetuspalvelu": {
+      "tr": "ulaşım hizmeti"
+    },
+    "henkilökohtainen avustaja": {
+      "tr": "kişisel asistan"
+    },
+    "noudattaa": {
+      "tr": "uymak"
+    },
+    "oleskella": {
+      "tr": "bulunmak"
+    },
+    "velvollisuus": {
+      "tr": "yükümlülük"
+    },
+    "onnettomuus": {
+      "tr": "kaza"
+    },
+    "poliisi": {
+      "tr": "polis"
+    },
+    "järjestys": {
+      "tr": "düzen"
+    },
+    "työsopimus": {
+      "tr": "iş sözleşmesi",
+      "keepFinnish": true
+    },
+    "allekirjoittaa": {
+      "tr": "imzalamak"
+    },
+    "suullinen": {
+      "tr": "sözlü"
+    },
+    "kirjallinen": {
+      "tr": "yazılı"
+    },
+    "vähimmäispalkka": {
+      "tr": "asgari ücret"
+    },
+    "työehtosopimus": {
+      "tr": "toplu iş sözleşmesi",
+      "keepFinnish": true
+    },
+    "koeaika": {
+      "tr": "deneme süresi"
+    },
+    "työturvallisuus": {
+      "tr": "iş güvenliği"
+    },
+    "työohje": {
+      "tr": "iş talimatı"
+    },
+    "turvaväline": {
+      "tr": "koruyucu ekipman"
+    },
+    "perehdyttää": {
+      "tr": "işe alıştırmak"
+    },
+    "verokortti": {
+      "tr": "vergi kartı",
+      "keepFinnish": true
+    },
+    "tulo": {
+      "tr": "gelir"
+    },
+    "periä veroa": {
+      "tr": "vergi kesmek"
+    },
+    "progressiivinen": {
+      "tr": "artan oranlı"
+    },
+    "veroprosentti": {
+      "tr": "vergi oranı"
+    },
+    "verorahat": {
+      "tr": "vergi gelirleri"
+    },
+    "vuokrasopimus": {
+      "tr": "kira sözleşmesi",
+      "keepFinnish": true
+    },
+    "vuokra": {
+      "tr": "kira"
+    },
+    "vuokratakuu": {
+      "tr": "kira depozitosu",
+      "keepFinnish": true
+    },
+    "irtisanoa": {
+      "tr": "feshetmek"
+    },
+    "irtisanomisaika": {
+      "tr": "fesih bildirim süresi"
+    },
+    "muuttoilmoitus": {
+      "tr": "taşınma bildirimi",
+      "keepFinnish": true
+    },
+    "huoltajuus": {
+      "tr": "velayet"
+    },
+    "yhteishuoltajuus": {
+      "tr": "ortak velayet"
+    },
+    "elatusapu": {
+      "tr": "nafaka"
+    },
+    "ero": {
+      "tr": "ayrılık"
+    },
+    "huoltaja": {
+      "tr": "veli"
+    },
+    "sosiaaliturva": {
+      "tr": "sosyal güvenlik"
+    },
+    "etuus": {
+      "tr": "ödenek"
+    },
+    "vakinaisesti": {
+      "tr": "sürekli olarak"
+    },
+    "hätätilanne": {
+      "tr": "acil durum"
+    },
+    "hoito": {
+      "tr": "tedavi"
+    },
+    "valtakunta": {
+      "tr": "krallık"
+    },
+    "rauha": {
+      "tr": "barış"
+    },
+    "valloittaa": {
+      "tr": "fethetmek"
+    },
+    "uskonpuhdistus": {
+      "tr": "Reform hareketi"
+    },
+    "luterilainen": {
+      "tr": "Lutherci"
+    },
+    "yliopisto": {
+      "tr": "üniversite"
+    },
+    "autonominen": {
+      "tr": "özerk"
+    },
+    "keisarikunta": {
+      "tr": "imparatorluk"
+    },
+    "yhtäläinen": {
+      "tr": "eşit"
+    },
+    "pääkaupunki": {
+      "tr": "başkent"
+    },
+    "itsenäisyys": {
+      "tr": "bağımsızlık"
+    },
+    "tunnustaa": {
+      "tr": "tanımak"
+    },
+    "sisällissota": {
+      "tr": "iç savaş"
+    },
+    "tasavalta": {
+      "tr": "cumhuriyet"
+    },
+    "hallitusmuoto": {
+      "tr": "yönetim biçimi"
+    },
+    "talvisota": {
+      "tr": "Kış Savaşı",
+      "keepFinnish": true
+    },
+    "jatkosota": {
+      "tr": "Devam Savaşı",
+      "keepFinnish": true
+    },
+    "miehittää": {
+      "tr": "işgal etmek"
+    },
+    "hävitä": {
+      "tr": "kaybetmek"
+    },
+    "luovuttaa": {
+      "tr": "devretmek"
+    },
+    "maa-alue": {
+      "tr": "toprak"
+    },
+    "asuttaa": {
+      "tr": "yerleştirmek"
+    },
+    "väestö": {
+      "tr": "nüfus"
+    },
+    "sotakorvaus": {
+      "tr": "savaş tazminatı"
+    },
+    "tavara": {
+      "tr": "mal"
+    },
+    "täysimääräinen": {
+      "tr": "tam olarak"
+    },
+    "olympialaiset": {
+      "tr": "Olimpiyat Oyunları"
+    },
+    "päätösasiakirja": {
+      "tr": "Nihai Senet"
+    },
+    "Euroopan unioni": {
+      "tr": "Avrupa Birliği"
+    },
+    "jäsen": {
+      "tr": "üye"
+    },
+    "käteinen": {
+      "tr": "nakit"
+    },
+    "valuutta": {
+      "tr": "para birimi"
+    },
+    "Nato": {
+      "tr": "NATO"
+    },
+    "puolustusliitto": {
+      "tr": "savunma ittifakı"
+    },
+    "yhteinen puolustus": {
+      "tr": "ortak savunma"
+    },
+    "turvatakuu": {
+      "tr": "güvenlik garantisi"
+    },
+    "ruotsi": {
+      "tr": "İsveççe"
+    },
+    "Ahvenanmaa": {
+      "tr": "Åland Adaları",
+      "keepFinnish": true
+    },
+    "virallinen kieli": {
+      "tr": "resmi dil"
+    },
+    "demilitarisoitu": {
+      "tr": "silahsızlandırılmış"
+    },
+    "maakunta": {
+      "tr": "bölge"
+    },
+    "alkuperäiskansa": {
+      "tr": "yerli halk"
+    },
+    "saamelainen": {
+      "tr": "Sami"
+    },
+    "viittomakieli": {
+      "tr": "işaret dili"
+    },
+    "itsehallinto": {
+      "tr": "özyönetim"
+    },
+    "kotiseutualue": {
+      "tr": "yurt bölgesi"
+    },
+    "kirkko": {
+      "tr": "kilise"
+    },
+    "erityisasema": {
+      "tr": "özel statü"
+    },
+    "verotusoikeus": {
+      "tr": "vergi alma hakkı"
+    },
+    "itsenäisyyspäivä": {
+      "tr": "Bağımsızlık Günü",
+      "keepFinnish": true
+    },
+    "juhlia": {
+      "tr": "kutlamak"
+    },
+    "juhannus": {
+      "tr": "Yaz Ortası Bayramı",
+      "keepFinnish": true
+    },
+    "kesämökki": {
+      "tr": "yazlık"
+    },
+    "vappu": {
+      "tr": "1 Mayıs (Vappu)",
+      "keepFinnish": true
+    },
+    "kevät": {
+      "tr": "ilkbahar"
+    },
+    "kansalliseläin": {
+      "tr": "ulusal hayvan"
+    },
+    "karhu": {
+      "tr": "ayı"
+    },
+    "kansanruno": {
+      "tr": "halk şiiri"
+    },
+    "eepos": {
+      "tr": "destan"
+    },
+    "kirjastokortti": {
+      "tr": "kütüphane kartı"
+    },
+    "lainata": {
+      "tr": "ödünç almak"
+    },
+    "hukata": {
+      "tr": "kaybetmek (bir eşyayı)"
+    },
+    "laina-aika": {
+      "tr": "ödünç süresi"
+    },
+    "palauttaa": {
+      "tr": "iade etmek"
+    },
+    "kirjasto": {
+      "tr": "kütüphane"
+    },
+    "vapaaehtoistyö": {
+      "tr": "gönüllü çalışma"
+    },
+    "kokous": {
+      "tr": "toplantı"
+    },
+    "peruskoulu": {
+      "tr": "temel okul",
+      "keepFinnish": true
+    },
+    "vuosiluokka": {
+      "tr": "sınıf"
+    },
+    "oppivelvollisuus": {
+      "tr": "zorunlu eğitim",
+      "keepFinnish": true
+    },
+    "toinen aste": {
+      "tr": "ortaöğretim"
+    },
+    "esiopetus": {
+      "tr": "okul öncesi eğitim",
+      "keepFinnish": true
+    },
+    "hätänumero": {
+      "tr": "acil numara"
+    },
+    "päivystäjä": {
+      "tr": "acil çağrı görevlisi"
+    },
+    "jono": {
+      "tr": "sıra"
+    },
+    "ruuhka": {
+      "tr": "yoğunluk"
+    },
+    "rikosilmoitus": {
+      "tr": "suç duyurusu",
+      "keepFinnish": true
+    },
+    "lomake": {
+      "tr": "form"
+    },
+    "poliisiasema": {
+      "tr": "karakol"
+    },
+    "passi": {
+      "tr": "pasaport"
+    },
+    "henkilökortti": {
+      "tr": "kimlik kartı",
+      "keepFinnish": true
+    },
+    "palovaroitin": {
+      "tr": "duman dedektörü"
+    },
+    "neliömetri": {
+      "tr": "metrekare"
+    },
+    "kerros": {
+      "tr": "kat"
+    },
+    "taloyhtiö": {
+      "tr": "konut şirketi",
+      "keepFinnish": true
+    },
+    "sammutuspeite": {
+      "tr": "yangın battaniyesi"
+    },
+    "tukahduttaa": {
+      "tr": "boğmak (üstünü örtmek)"
+    },
+    "hissi": {
+      "tr": "asansör"
+    },
+    "tulipalo": {
+      "tr": "yangın"
+    },
+    "väestöhälytin": {
+      "tr": "halk uyarı sireni"
+    },
+    "vaaramerkki": {
+      "tr": "tehlike işareti"
+    },
+    "äänimerkki": {
+      "tr": "sesli işaret"
+    },
+    "sulkea": {
+      "tr": "kapatmak"
+    },
+    "ikkuna": {
+      "tr": "pencere"
+    },
+    "puhelin": {
+      "tr": "telefon"
+    },
+    "kotivara": {
+      "tr": "ev stoku",
+      "keepFinnish": true
+    },
+    "varautua": {
+      "tr": "hazırlıklı olmak"
+    },
+    "varasto": {
+      "tr": "stok"
+    },
+    "asevelvollisuus": {
+      "tr": "askerlik yükümlülüğü",
+      "keepFinnish": true
+    },
+    "maanpuolustus": {
+      "tr": "ülke savunması"
+    },
+    "auttava puhelin": {
+      "tr": "yardım hattı"
+    },
+    "uhkailu": {
+      "tr": "tehdit"
+    },
+    "uhri": {
+      "tr": "mağdur"
+    },
+    "lastensuojelu": {
+      "tr": "çocuk koruma",
+      "keepFinnish": true
+    },
+    "liikenne": {
+      "tr": "trafik"
+    },
+    "oikea": {
+      "tr": "sağ"
+    },
+    "päihtynyt": {
+      "tr": "sarhoş"
+    },
+    "rattijuopumus": {
+      "tr": "alkollü araç kullanma"
+    },
+    "talvirengas": {
+      "tr": "kış lastiği"
+    },
+    "tunnistautua": {
+      "tr": "kimlik doğrulamak"
+    },
+    "mobiilivarmenne": {
+      "tr": "mobil sertifika",
+      "keepFinnish": true
+    },
+    "sovellus": {
+      "tr": "uygulama"
+    },
+    "kirjautua ulos": {
+      "tr": "oturumu kapatmak"
+    },
+    "tunnukset": {
+      "tr": "giriş bilgileri"
+    },
+    "pankkitunnukset": {
+      "tr": "banka giriş bilgileri",
+      "keepFinnish": true
+    },
+    "valtakirja": {
+      "tr": "vekâletname"
+    },
+    "valtuus": {
+      "tr": "yetki"
+    },
+    "käyttäjätunnus": {
+      "tr": "kullanıcı adı"
+    },
+    "digiposti": {
+      "tr": "dijital posta"
+    },
+    "postilaatikko": {
+      "tr": "posta kutusu"
+    },
+    "alaikäinen": {
+      "tr": "reşit olmayan"
+    },
+    "veroasia": {
+      "tr": "vergi işi"
+    },
+    "asunnoton": {
+      "tr": "evsiz"
+    },
+    "puhelimitse": {
+      "tr": "telefonla"
+    },
+    "resepti": {
+      "tr": "reçete"
+    },
+    "terveystieto": {
+      "tr": "sağlık bilgisi"
+    },
+    "uusiminen": {
+      "tr": "yenileme"
+    },
+    "lääke": {
+      "tr": "ilaç"
+    },
+    "ammattilainen": {
+      "tr": "uzman"
+    },
+    "huijaus": {
+      "tr": "dolandırıcılık"
+    },
+    "kiire": {
+      "tr": "acele"
+    },
+    "tietojenkalastelu": {
+      "tr": "oltalama (phishing)"
+    },
+    "asiakaspalvelu": {
+      "tr": "müşteri hizmetleri"
+    },
+    "aito": {
+      "tr": "gerçek"
+    },
+    "sivusto": {
+      "tr": "web sitesi"
+    },
+    "henkilötieto": {
+      "tr": "kişisel veri"
+    },
+    "rekisterinpitäjä": {
+      "tr": "veri sorumlusu"
+    },
+    "määräaika": {
+      "tr": "süre"
+    },
+    "tietosuojavaltuutettu": {
+      "tr": "Veri Koruma Ombudsmanı",
+      "keepFinnish": true
+    },
+    "kieltäytyä": {
+      "tr": "reddetmek"
+    }
+  }
+}

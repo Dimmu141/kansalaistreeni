@@ -394,4 +394,11 @@
     <string name="lesson_ukrainian_missing">This section has no Ukrainian explanation. Read it in your study language.</string>
     <string name="vocabulary_meaning_ukrainian">Meaning in Ukrainian</string>
     <string name="vocabulary_ukrainian">Ukrainian: %1$s</string>
+    <string name="language_turkish">Türkçe · Turkish</string>
+    <string name="explanation_also_turkish">Also in Turkish</string>
+    <string name="explanation_turkish_title">Explanation in Turkish</string>
+    <string name="explanation_missing_turkish">This question has no Turkish explanation. Read the explanation in your study language.</string>
+    <string name="lesson_turkish_missing">This section has no Turkish explanation. Read it in your study language.</string>
+    <string name="vocabulary_meaning_turkish">Meaning in Turkish</string>
+    <string name="vocabulary_turkish">Turkish: %1$s</string>
 </resources>

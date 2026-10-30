@@ -438,4 +438,11 @@
     <string name="lesson_ukrainian_missing">لا يوجد شرح بالأوكرانية لهذا القسم. اقرأه بلغة الدراسة.</string>
     <string name="vocabulary_meaning_ukrainian">المعنى بالأوكرانية</string>
     <string name="vocabulary_ukrainian">الأوكرانية: %1$s</string>
+    <string name="language_turkish">Türkçe · التركية</string>
+    <string name="explanation_also_turkish">بالتركية أيضاً</string>
+    <string name="explanation_turkish_title">الشرح بالتركية</string>
+    <string name="explanation_missing_turkish">لا يوجد شرح بالتركية لهذا السؤال. اقرأ الشرح بلغة الدراسة.</string>
+    <string name="lesson_turkish_missing">لا يوجد شرح بالتركية لهذا القسم. اقرأه بلغة الدراسة.</string>
+    <string name="vocabulary_meaning_turkish">المعنى بالتركية</string>
+    <string name="vocabulary_turkish">التركية: %1$s</string>
 </resources>

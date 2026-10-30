@@ -394,4 +394,11 @@
     <string name="lesson_ukrainian_missing">Qaybtan ma laha sharaxaad Yukreeniyaan ah. Ku akhri luqaddaada waxbarasho.</string>
     <string name="vocabulary_meaning_ukrainian">Micnaha Yukreeniyaanka</string>
     <string name="vocabulary_ukrainian">Yukreeniyaan: %1$s</string>
+    <string name="language_turkish">Türkçe · Turki</string>
+    <string name="explanation_also_turkish">Sidoo kale Turki</string>
+    <string name="explanation_turkish_title">Sharaxaadda Turkiga</string>
+    <string name="explanation_missing_turkish">Su\'aashan ma laha sharaxaad Turki ah. Ku akhri sharaxaadda luqaddaada waxbarasho.</string>
+    <string name="lesson_turkish_missing">Qaybtan ma laha sharaxaad Turki ah. Ku akhri luqaddaada waxbarasho.</string>
+    <string name="vocabulary_meaning_turkish">Micnaha Turkiga</string>
+    <string name="vocabulary_turkish">Turki: %1$s</string>
 </resources>

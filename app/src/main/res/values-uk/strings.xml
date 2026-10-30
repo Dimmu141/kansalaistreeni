@@ -416,4 +416,11 @@
     <string name="lesson_ukrainian_missing">Цей розділ не має пояснення українською. Прочитайте його мовою навчання.</string>
     <string name="vocabulary_meaning_ukrainian">Значення українською</string>
     <string name="vocabulary_ukrainian">Українська: %1$s</string>
+    <string name="language_turkish">Türkçe · турецька</string>
+    <string name="explanation_also_turkish">Також турецькою</string>
+    <string name="explanation_turkish_title">Пояснення турецькою</string>
+    <string name="explanation_missing_turkish">Це питання не має пояснення турецькою. Прочитайте пояснення мовою навчання.</string>
+    <string name="lesson_turkish_missing">Цей розділ не має пояснення турецькою. Прочитайте його мовою навчання.</string>
+    <string name="vocabulary_meaning_turkish">Значення турецькою</string>
+    <string name="vocabulary_turkish">Турецька: %1$s</string>
 </resources>

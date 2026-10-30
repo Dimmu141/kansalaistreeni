@@ -394,4 +394,11 @@
     <string name="lesson_ukrainian_missing">Den här delen har ingen förklaring på ukrainska. Läs den på ditt studiespråk.</string>
     <string name="vocabulary_meaning_ukrainian">Betydelse på ukrainska</string>
     <string name="vocabulary_ukrainian">Ukrainska: %1$s</string>
+    <string name="language_turkish">Türkçe · turkiska</string>
+    <string name="explanation_also_turkish">Även på turkiska</string>
+    <string name="explanation_turkish_title">Förklaring på turkiska</string>
+    <string name="explanation_missing_turkish">Den här frågan har ingen förklaring på turkiska. Läs förklaringen på ditt studiespråk.</string>
+    <string name="lesson_turkish_missing">Den här delen har ingen förklaring på turkiska. Läs den på ditt studiespråk.</string>
+    <string name="vocabulary_meaning_turkish">Betydelse på turkiska</string>
+    <string name="vocabulary_turkish">Turkiska: %1$s</string>
 </resources>
