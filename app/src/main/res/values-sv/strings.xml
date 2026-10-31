@@ -408,4 +408,12 @@
     <string name="lesson_thai_missing">Den här delen har ingen förklaring på thailändska. Läs den på ditt studiespråk.</string>
     <string name="vocabulary_meaning_thai">Betydelse på thailändska</string>
     <string name="vocabulary_thai">Thailändska: %1$s</string>
+    <string name="onboarding_language_title">Välj språk</string>
+    <string name="onboarding_language_note">Menyer och anvisningar visas på det här språket. Du kan ändra det senare i inställningarna.</string>
+    <string name="onboarding_study_title">Provet är på finska eller svenska</string>
+    <string name="onboarding_exam_note">Medborgarskapsprovet görs på finska eller svenska, så frågorna i appen är alltid på finska eller svenska. Välj det språk du tänker göra provet på. Ditt eget språk hjälper dig att förstå förklaringarna och orden.</string>
+    <string name="onboarding_next">Fortsätt</string>
+    <string name="translation_show">Visa översättning</string>
+    <string name="translation_hide">Dölj översättning</string>
+    <string name="translation_exam_note">Bara som stöd för förståelsen. Det riktiga provet är på finska eller svenska, så försök först läsa frågan på ditt studiespråk.</string>
 </resources>

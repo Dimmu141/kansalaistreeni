@@ -28,58 +28,24 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
         item { Heading(stringResource(R.string.settings_title), stringResource(R.string.settings_subtitle)) }
         state.settingsError?.let { item { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } }
         item {
-            Column(Modifier.selectableGroup(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text(stringResource(R.string.interface_language), style = MaterialTheme.typography.titleMedium)
                 Text(stringResource(R.string.interface_language_note), style = MaterialTheme.typography.bodyMedium)
-                InterfaceLanguage.entries.forEach { language ->
-                    Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).selectable(
-                        selected = state.settings.interfaceLanguage == language, role = Role.RadioButton,
-                        onClick = { model.interfaceLanguage(language) },
-                    ).padding(horizontal = 4.dp), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                        RadioButton(selected = state.settings.interfaceLanguage == language, onClick = null)
-                        Spacer(Modifier.width(12.dp))
-                        Text(stringResource(when (language) { InterfaceLanguage.FINNISH -> R.string.language_finnish; InterfaceLanguage.SWEDISH -> R.string.language_swedish
-                            InterfaceLanguage.ENGLISH -> R.string.language_english; InterfaceLanguage.RUSSIAN -> R.string.language_russian
-                            InterfaceLanguage.ARABIC -> R.string.language_arabic
-                            InterfaceLanguage.PERSIAN -> R.string.language_persian
-                            InterfaceLanguage.SOMALI -> R.string.language_somali
-                            InterfaceLanguage.UKRAINIAN -> R.string.language_ukrainian
-                            InterfaceLanguage.TURKISH -> R.string.language_turkish
-                            InterfaceLanguage.THAI -> R.string.language_thai }))
-                    }
-                }
+                InterfaceLanguageChoices(state.settings.interfaceLanguage, model::interfaceLanguage)
             }
         }
         item {
-            Column(Modifier.selectableGroup(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(stringResource(R.string.explanation_language), style = MaterialTheme.typography.titleMedium)
                 Text(stringResource(R.string.explanation_language_note), style = MaterialTheme.typography.bodyMedium)
-                ExplanationPreference.entries.forEach { preference ->
-                    Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).selectable(
-                        selected = state.settings.explanation == preference, role = Role.RadioButton,
-                        onClick = { model.explanation(preference) },
-                    ).padding(horizontal = 4.dp), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                        RadioButton(selected = state.settings.explanation == preference, onClick = null)
-                        Spacer(Modifier.width(12.dp))
-                        Text(stringResource(preference.optionLabel))
-                    }
-                }
+                ExplanationChoices(state.settings.explanation, model::explanation)
             }
         }
         item {
-            Column(Modifier.selectableGroup(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(stringResource(R.string.study_language), style = MaterialTheme.typography.titleMedium)
                 Text(stringResource(R.string.study_language_note), style = MaterialTheme.typography.bodyMedium)
-                StudyLanguage.entries.forEach { language ->
-                    Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).selectable(
-                        selected = state.settings.studyLanguage == language, role = Role.RadioButton,
-                        onClick = { model.studyLanguage(language) },
-                    ).padding(horizontal = 4.dp), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                        RadioButton(selected = state.settings.studyLanguage == language, onClick = null)
-                        Spacer(Modifier.width(12.dp))
-                        Text(stringResource(if (language == StudyLanguage.FINNISH) R.string.study_finnish else R.string.study_swedish))
-                    }
-                }
+                StudyLanguageChoices(state.settings.studyLanguage, model::studyLanguage)
             }
         }
         item {
@@ -122,6 +88,45 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
         item { Text(stringResource(R.string.version_details, BuildConfig.VERSION_NAME, pluralStringResource(R.plurals.question_count, state.snapshot.questions.size, state.snapshot.questions.size)), style = MaterialTheme.typography.bodySmall) }
     }
 }
+/** One radio row per choice; shared by Settings and first-run onboarding. */
+@Composable
+private fun <T> RadioChoices(options: List<T>, selected: T, choose: (T) -> Unit, label: @Composable (T) -> String) {
+    Column(Modifier.selectableGroup(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        options.forEach { option ->
+            Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).selectable(
+                selected = selected == option, role = Role.RadioButton, onClick = { choose(option) },
+            ).padding(horizontal = 4.dp), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                RadioButton(selected = selected == option, onClick = null)
+                Spacer(Modifier.width(12.dp))
+                Text(label(option))
+            }
+        }
+    }
+}
+
+@Composable
+internal fun InterfaceLanguageChoices(selected: InterfaceLanguage, choose: (InterfaceLanguage) -> Unit) =
+    RadioChoices(InterfaceLanguage.entries, selected, choose) { language ->
+        stringResource(when (language) { InterfaceLanguage.FINNISH -> R.string.language_finnish; InterfaceLanguage.SWEDISH -> R.string.language_swedish
+            InterfaceLanguage.ENGLISH -> R.string.language_english; InterfaceLanguage.RUSSIAN -> R.string.language_russian
+            InterfaceLanguage.ARABIC -> R.string.language_arabic
+            InterfaceLanguage.PERSIAN -> R.string.language_persian
+            InterfaceLanguage.SOMALI -> R.string.language_somali
+            InterfaceLanguage.UKRAINIAN -> R.string.language_ukrainian
+            InterfaceLanguage.TURKISH -> R.string.language_turkish
+            InterfaceLanguage.THAI -> R.string.language_thai })
+    }
+
+@Composable
+internal fun ExplanationChoices(selected: ExplanationPreference, choose: (ExplanationPreference) -> Unit) =
+    RadioChoices(ExplanationPreference.entries, selected, choose) { stringResource(it.optionLabel) }
+
+@Composable
+internal fun StudyLanguageChoices(selected: StudyLanguage, choose: (StudyLanguage) -> Unit) =
+    RadioChoices(StudyLanguage.entries, selected, choose) {
+        stringResource(if (it == StudyLanguage.FINNISH) R.string.study_finnish else R.string.study_swedish)
+    }
+
 @Composable
 private fun FutureSetting(title: String, detail: String) {
     Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {

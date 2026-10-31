@@ -22,7 +22,13 @@ enum class InterfaceLanguage(val tag: String) {
  * and word meanings. Questions are always practised in Finnish or Swedish, as in the exam. Stored by
  * name, so a new language is a new entry plus its strings in SupportLanguageText.
  */
-enum class ExplanationPreference(val tag: String?) { STUDY_LANGUAGE(null), ALSO_ENGLISH("en"), ALSO_RUSSIAN("ru"), ALSO_ARABIC("ar"), ALSO_PERSIAN("fa"), ALSO_SOMALI("so"), ALSO_UKRAINIAN("uk"), ALSO_TURKISH("tr"), ALSO_THAI("th") }
+enum class ExplanationPreference(val tag: String?) {
+    STUDY_LANGUAGE(null), ALSO_ENGLISH("en"), ALSO_RUSSIAN("ru"), ALSO_ARABIC("ar"), ALSO_PERSIAN("fa"), ALSO_SOMALI("so"), ALSO_UKRAINIAN("uk"), ALSO_TURKISH("tr"), ALSO_THAI("th");
+    companion object {
+        /** First-run default: support in the chosen interface language; Finnish and Swedish need none. */
+        fun matching(language: InterfaceLanguage) = entries.firstOrNull { it.tag == language.tag } ?: STUDY_LANGUAGE
+    }
+}
 data class StudySettings(val easyFinnish: Boolean = true, val theme: ThemePreference = ThemePreference.SYSTEM, val interfaceLanguage: InterfaceLanguage = InterfaceLanguage.FINNISH, val studyLanguage: StudyLanguage = StudyLanguage.FINNISH, val explanation: ExplanationPreference = ExplanationPreference.STUDY_LANGUAGE, val onboardingSeen: Boolean = true)
 class SettingsRepository(context: Context) {
     private val store = context.settingsStore

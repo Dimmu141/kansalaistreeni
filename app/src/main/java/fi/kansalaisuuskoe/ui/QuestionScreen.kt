@@ -11,6 +11,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.res.stringResource
 import fi.kansalaisuuskoe.R
 import androidx.compose.ui.Modifier
@@ -74,6 +75,9 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
                     segments, (state.position - 1 + if (state.answered) 1 else 0).toFloat() / state.total, chips)
             }
             item { StudyText(q.text, q.language, KsType.question, Modifier.semantics { heading() }) }
+            // Only before answering: afterwards the explanation already shows the translation, and the indices below stay put.
+            val translation = explanation.tag?.let { tag -> q.translations[tag]?.let { tag to it } }
+            if (!state.answered && translation != null) item { QuestionTranslationToggle(q, translation.first, translation.second) }
             item { AnswerChoices(q, state.selected, !state.answered && !state.saving && !state.retryPending, select, state.answered) }
             state.error?.let { item { Text(stringResource(it), color = c.miss, modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite }) } }
             if (!state.answered) {
@@ -115,6 +119,32 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
 }
 
 private val EmphasizedDecelerate = CubicBezierEasing(0.05f, 0.7f, 0.1f, 1f)
+
+/**
+ * Tap-to-reveal help in the learner's support language, hidden by default and kept out of assessments: the question
+ * and its options, with a reminder that the real test is in Finnish or Swedish.
+ */
+@Composable
+private fun QuestionTranslationToggle(question: Question, tag: String, translation: QuestionTranslation) {
+    val c = Ks.colors
+    var shown by rememberSaveable(question.id) { mutableStateOf(false) }
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        TextButton({ shown = !shown }, Modifier.heightIn(min = 44.dp), contentPadding = PaddingValues(horizontal = 0.dp)) {
+            Text(stringResource(if (shown) R.string.translation_hide else R.string.translation_show), style = KsType.label)
+        }
+        if (shown) Surface(color = c.surface2, contentColor = c.ink, shape = MaterialTheme.shapes.medium) {
+            Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                StudyText(translation.text, tag, KsType.bodyLarge)
+                // True/false labels are already in the interface language; other options follow the original order.
+                if (question.format != QuestionFormat.TRUE_FALSE) question.options.forEach { option ->
+                    translation.options.firstOrNull { it.id == option.id }?.let { StudyText("• " + it.text, tag, KsType.body) }
+                }
+                Text(stringResource(R.string.translation_exam_note), style = KsType.caption, color = c.inkMuted)
+                if (!translation.reviewed) MachineTranslationNote()
+            }
+        }
+    }
+}
 
 /** One eyebrow, one counter, one track, then quiet chips for the daily reason and a language mismatch. */
 @Composable

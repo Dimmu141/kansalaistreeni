@@ -70,6 +70,28 @@ class ExplanationFlowTest {
         checkLocale("Perustuslain mukaan lainsäädäntövaltaa käyttää eduskunta. Hallitus valmistelee lakiesityksiä, mutta eduskunta päättää laeista.", "fi")
         assertEquals(1, runBlocking { app.container.learning.snapshot.first().attempts.size })
     }
+    @Test fun translationStaysHiddenUntilAskedAndRemindsThatTheTestIsInFinnishOrSwedish() {
+        val examNote = "For understanding only. The real test is in Finnish or Swedish, so try reading the question in your study language first."
+        chooseEnglishSupport(); click("Start learning")
+        await("Kuka säätää Suomen lait?")
+        text("Who makes Finland's laws?").assertDoesNotExist()
+        click("Show translation"); await("Who makes Finland's laws?")
+        checkLocale("Who makes Finland's laws?", "en")
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("• Parliament")); text("• Parliament").assertIsDisplayed()
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText(examNote)); text(examNote).assertIsDisplayed()
+        // Recreation keeps the choice for this question.
+        rule.activityRule.scenario.recreate(); await("Who makes Finland's laws?")
+        click("Hide translation"); text("Who makes Finland's laws?").assertDoesNotExist()
+        text("Eduskunta").performClick(); click("Check answer"); await("Correct")
+        // After answering, the explanation carries the translation and the button goes away.
+        text("Show translation").assertDoesNotExist()
+        assertEquals(1, runBlocking { app.container.learning.snapshot.first().attempts.size })
+    }
+    @Test fun withoutASupportLanguageThereIsNoTranslationButton() {
+        await("Your learning path"); click("Start learning")
+        await("Kuka säätää Suomen lait?")
+        text("Show translation").assertDoesNotExist()
+    }
     @Test fun swedishStudyKeepsSwedishAlongsideEnglishSupport() {
         chooseEnglishSupport()
         runBlocking { app.container.settings.setStudyLanguage(StudyLanguage.SWEDISH) }

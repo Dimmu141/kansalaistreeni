@@ -14,6 +14,18 @@ class ContentValidationTest {
             assertEquals(en, counterpart.translations.getValue("en"))
         }
     }
+    @Test fun `English is never labelled as a machine translation, unchecked drafts still are`() {
+        val c = content()
+        c.questions.map { it.model() }.forEach { q ->
+            assertTrue(q.translations.getValue("en").reviewed)
+            assertFalse(q.translations.getValue("ar").reviewed)
+        }
+        c.topics.map { it.model() }.forEach { t ->
+            assertTrue(t.lessons.getValue("en").reviewed)
+            assertTrue(t.lessons.getValue("ru").reviewed)
+            assertFalse(t.lessons.getValue("th").reviewed)
+        }
+    }
     @Test fun `every demo concept has the same Russian, Arabic, Persian, Somali, Ukrainian, Turkish and Thai support in both study languages`() {
         val c = content()
         for (language in listOf("ru", "ar", "fa", "so", "uk", "tr", "th")) {

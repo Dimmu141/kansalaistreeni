@@ -430,4 +430,12 @@
     <string name="lesson_thai_missing">У этого раздела нет объяснения на тайском. Прочитайте его на языке обучения.</string>
     <string name="vocabulary_meaning_thai">Значение на тайском</string>
     <string name="vocabulary_thai">Тайский: %1$s</string>
+    <string name="onboarding_language_title">Выберите язык</string>
+    <string name="onboarding_language_note">Меню и подсказки будут на этом языке. Его можно изменить позже в настройках.</string>
+    <string name="onboarding_study_title">Экзамен — на финском или шведском</string>
+    <string name="onboarding_exam_note">Экзамен на гражданство сдают на финском или шведском, поэтому вопросы в приложении всегда на финском или шведском. Выберите язык, на котором собираетесь сдавать экзамен. Ваш родной язык поможет понять объяснения и слова.</string>
+    <string name="onboarding_next">Продолжить</string>
+    <string name="translation_show">Показать перевод</string>
+    <string name="translation_hide">Скрыть перевод</string>
+    <string name="translation_exam_note">Только для понимания. Настоящий экзамен — на финском или шведском, поэтому сначала попробуйте прочитать вопрос на языке обучения.</string>
 </resources>

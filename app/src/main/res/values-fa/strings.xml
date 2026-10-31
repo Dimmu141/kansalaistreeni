@@ -408,4 +408,12 @@
     <string name="lesson_thai_missing">این بخش توضیح تایلندی ندارد. آن را به زبان مطالعه بخوانید.</string>
     <string name="vocabulary_meaning_thai">معنا به تایلندی</string>
     <string name="vocabulary_thai">تایلندی: %1$s</string>
+    <string name="onboarding_language_title">زبان را انتخاب کنید</string>
+    <string name="onboarding_language_note">منوها و راهنماها به این زبان نمایش داده می‌شوند. بعداً می‌توانید آن را در تنظیمات تغییر دهید.</string>
+    <string name="onboarding_study_title">امتحان به فنلندی یا سویدنی است</string>
+    <string name="onboarding_exam_note">امتحان تابعیت به فنلندی یا سویدنی برگزار می‌شود، بنابراین سؤال‌ها در این اپ همیشه به فنلندی یا سویدنی هستند. زبانی را انتخاب کنید که می‌خواهید امتحان را به آن بدهید. زبان خودتان به شما کمک می‌کند توضیحات و واژه‌ها را بفهمید.</string>
+    <string name="onboarding_next">ادامه</string>
+    <string name="translation_show">نمایش ترجمه</string>
+    <string name="translation_hide">پنهان کردن ترجمه</string>
+    <string name="translation_exam_note">فقط برای فهمیدن. امتحان واقعی به فنلندی یا سویدنی است، پس اول سعی کنید سؤال را به زبان مطالعه بخوانید.</string>
 </resources>

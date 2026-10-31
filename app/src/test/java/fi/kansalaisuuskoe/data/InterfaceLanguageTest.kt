@@ -10,4 +10,10 @@ class InterfaceLanguageTest {
         assertEquals(InterfaceLanguage.FINNISH, InterfaceLanguage.defaultFor(StudyLanguage.FINNISH))
         assertEquals(listOf("fi", "sv", "en", "ru", "ar", "fa", "so", "uk", "tr", "th"), InterfaceLanguage.entries.map { it.tag })
     }
+    @Test fun `first run picks support in the interface language, and none for the study languages`() {
+        assertEquals(ExplanationPreference.STUDY_LANGUAGE, ExplanationPreference.matching(InterfaceLanguage.FINNISH))
+        assertEquals(ExplanationPreference.STUDY_LANGUAGE, ExplanationPreference.matching(InterfaceLanguage.SWEDISH))
+        // Every other interface language has its own support language.
+        InterfaceLanguage.entries.drop(2).forEach { assertEquals(it.tag, ExplanationPreference.matching(it).tag) }
+    }
 }

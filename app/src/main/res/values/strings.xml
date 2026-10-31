@@ -412,4 +412,12 @@
     <string name="lesson_thai_missing">Tälle osiolle ei ole thainkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
     <string name="vocabulary_meaning_thai">Merkitys thaiksi</string>
     <string name="vocabulary_thai">Thai: %1$s</string>
+    <string name="onboarding_language_title">Valitse kieli · Choose your language</string>
+    <string name="onboarding_language_note">Valikot ja ohjeet näkyvät tällä kielellä. Voit vaihtaa sen myöhemmin asetuksista.</string>
+    <string name="onboarding_study_title">Koe on suomeksi tai ruotsiksi</string>
+    <string name="onboarding_exam_note">Kansalaisuuskoe tehdään suomeksi tai ruotsiksi. Siksi kysymykset ovat tässä sovelluksessa aina suomeksi tai ruotsiksi. Valitse kieli, jolla aiot tehdä kokeen. Oma kielesi auttaa ymmärtämään selitykset ja sanat.</string>
+    <string name="onboarding_next">Jatka</string>
+    <string name="translation_show">Näytä käännös</string>
+    <string name="translation_hide">Piilota käännös</string>
+    <string name="translation_exam_note">Vain ymmärtämisen tueksi. Oikea koe on suomeksi tai ruotsiksi, joten yritä lukea kysymys ensin opiskelukielellä.</string>
 </resources>

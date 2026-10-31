@@ -69,6 +69,10 @@ class AppViewModel(
     fun interfaceLanguage(value: InterfaceLanguage) = save { preferences.setInterfaceLanguage(value) }
     fun studyLanguage(value: StudyLanguage) = save { preferences.setStudyLanguage(value) }
     fun explanation(value: ExplanationPreference) = save { preferences.setExplanation(value) }
+    /** On first run the interface choice also picks the matching support language; Settings keeps them separate. */
+    fun onboardingLanguage(value: InterfaceLanguage) = save {
+        preferences.setInterfaceLanguage(value); preferences.setExplanation(ExplanationPreference.matching(value))
+    }
     fun finishOnboarding() = save { preferences.setOnboardingSeen(true) }
     private fun save(action: suspend () -> Unit) {
         viewModelScope.launch {

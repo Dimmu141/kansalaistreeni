@@ -408,4 +408,12 @@
     <string name="lesson_thai_missing">This section has no Thai explanation. Read it in your study language.</string>
     <string name="vocabulary_meaning_thai">Meaning in Thai</string>
     <string name="vocabulary_thai">Thai: %1$s</string>
+    <string name="onboarding_language_title">Choose your language</string>
+    <string name="onboarding_language_note">Menus and guidance appear in this language. You can change it later in Settings.</string>
+    <string name="onboarding_study_title">The test is in Finnish or Swedish</string>
+    <string name="onboarding_exam_note">The citizenship test is taken in Finnish or Swedish, so questions in this app are always in Finnish or Swedish. Choose the language you plan to take the test in. Your own language helps you understand the explanations and words.</string>
+    <string name="onboarding_next">Continue</string>
+    <string name="translation_show">Show translation</string>
+    <string name="translation_hide">Hide translation</string>
+    <string name="translation_exam_note">For understanding only. The real test is in Finnish or Swedish, so try reading the question in your study language first.</string>
 </resources>

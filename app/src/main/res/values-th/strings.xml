@@ -397,4 +397,12 @@
     <string name="lesson_thai_missing">ส่วนนี้ไม่มีคำอธิบายภาษาไทย โปรดอ่านในภาษาที่เรียน</string>
     <string name="vocabulary_meaning_thai">ความหมายภาษาไทย</string>
     <string name="vocabulary_thai">ภาษาไทย: %1$s</string>
+    <string name="onboarding_language_title">เลือกภาษา</string>
+    <string name="onboarding_language_note">เมนูและคำแนะนำจะแสดงเป็นภาษานี้ คุณเปลี่ยนได้ภายหลังในการตั้งค่า</string>
+    <string name="onboarding_study_title">การสอบเป็นภาษาฟินแลนด์หรือภาษาสวีเดน</string>
+    <string name="onboarding_exam_note">การสอบสัญชาติใช้ภาษาฟินแลนด์หรือภาษาสวีเดน คำถามในแอปนี้จึงเป็นภาษาฟินแลนด์หรือภาษาสวีเดนเสมอ เลือกภาษาที่คุณจะใช้สอบ ภาษาของคุณเองช่วยให้เข้าใจคำอธิบายและคำศัพท์</string>
+    <string name="onboarding_next">ต่อไป</string>
+    <string name="translation_show">แสดงคำแปล</string>
+    <string name="translation_hide">ซ่อนคำแปล</string>
+    <string name="translation_exam_note">ใช้เพื่อความเข้าใจเท่านั้น การสอบจริงเป็นภาษาฟินแลนด์หรือภาษาสวีเดน โปรดลองอ่านคำถามในภาษาที่เรียนก่อน</string>
 </resources>

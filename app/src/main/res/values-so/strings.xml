@@ -408,4 +408,12 @@
     <string name="lesson_thai_missing">Qaybtan ma laha sharaxaad Taylandiis ah. Ku akhri luqaddaada waxbarasho.</string>
     <string name="vocabulary_meaning_thai">Micnaha Taylandiiska</string>
     <string name="vocabulary_thai">Taylandiis: %1$s</string>
+    <string name="onboarding_language_title">Dooro luqadda</string>
+    <string name="onboarding_language_note">Liisaska iyo tilmaamaha waxay ku soo bixi doonaan luqaddan. Mar dambe waad ka beddeli kartaa Dejinta.</string>
+    <string name="onboarding_study_title">Imtixaanku waa Finnish ama Iswiidhish</string>
+    <string name="onboarding_exam_note">Imtixaanka dhalashada waxaa lagu galaa Finnish ama Iswiidhish, sidaas darteed su\'aalaha app-kan had iyo jeer waa Finnish ama Iswiidhish. Dooro luqadda aad imtixaanka ku geli doonto. Luqaddaadu waxay kaa caawinaysaa inaad fahanto sharaxaadda iyo erayada.</string>
+    <string name="onboarding_next">Sii wad</string>
+    <string name="translation_show">Muuji turjumaadda</string>
+    <string name="translation_hide">Qari turjumaadda</string>
+    <string name="translation_exam_note">Kaliya fahamka. Imtixaanka dhabta ah waa Finnish ama Iswiidhish, marka isku day inaad marka hore su\'aasha ku akhrido luqadda waxbarashada.</string>
 </resources>

@@ -50,7 +50,7 @@ class CoverageFlowTest {
         await("Your learning path")
         rule.onNodeWithContentDescription("Settings").performClick()
         click("Study material")
-        click("Objective coverage")
+        await("Objective coverage"); click("Objective coverage")
         await("Widely practised")
         rule.onNodeWithText("FI 1 · SV 0").assertExists()
         rule.onNodeWithText("Fewer than 3 questions").assertExists()

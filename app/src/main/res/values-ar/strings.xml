@@ -452,4 +452,12 @@
     <string name="lesson_thai_missing">لا يوجد شرح بالتايلاندية لهذا القسم. اقرأه بلغة الدراسة.</string>
     <string name="vocabulary_meaning_thai">المعنى بالتايلاندية</string>
     <string name="vocabulary_thai">التايلاندية: %1$s</string>
+    <string name="onboarding_language_title">اختر اللغة</string>
+    <string name="onboarding_language_note">ستظهر القوائم والإرشادات بهذه اللغة. يمكنك تغييرها لاحقاً من الإعدادات.</string>
+    <string name="onboarding_study_title">الامتحان بالفنلندية أو السويدية</string>
+    <string name="onboarding_exam_note">يُجرى امتحان الجنسية بالفنلندية أو السويدية، لذلك تكون الأسئلة في هذا التطبيق دائماً بالفنلندية أو السويدية. اختر اللغة التي تنوي أداء الامتحان بها. تساعدك لغتك على فهم الشروح والكلمات.</string>
+    <string name="onboarding_next">متابعة</string>
+    <string name="translation_show">إظهار الترجمة</string>
+    <string name="translation_hide">إخفاء الترجمة</string>
+    <string name="translation_exam_note">للفهم فقط. الامتحان الحقيقي بالفنلندية أو السويدية، لذا حاول قراءة السؤال بلغة الدراسة أولاً.</string>
 </resources>

@@ -430,4 +430,12 @@
     <string name="lesson_thai_missing">Цей розділ не має пояснення тайською. Прочитайте його мовою навчання.</string>
     <string name="vocabulary_meaning_thai">Значення тайською</string>
     <string name="vocabulary_thai">Тайська: %1$s</string>
+    <string name="onboarding_language_title">Виберіть мову</string>
+    <string name="onboarding_language_note">Меню й підказки будуть цією мовою. Її можна змінити пізніше в налаштуваннях.</string>
+    <string name="onboarding_study_title">Іспит — фінською або шведською</string>
+    <string name="onboarding_exam_note">Іспит на громадянство складають фінською або шведською, тому питання в застосунку завжди фінською або шведською. Виберіть мову, якою плануєте складати іспит. Ваша мова допоможе зрозуміти пояснення й слова.</string>
+    <string name="onboarding_next">Продовжити</string>
+    <string name="translation_show">Показати переклад</string>
+    <string name="translation_hide">Приховати переклад</string>
+    <string name="translation_exam_note">Лише для розуміння. Справжній іспит — фінською або шведською, тому спершу спробуйте прочитати питання мовою навчання.</string>
 </resources>

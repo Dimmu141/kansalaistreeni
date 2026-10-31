@@ -8,8 +8,13 @@ import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.*
+import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -20,21 +25,70 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import fi.kansalaisuuskoe.R
+import fi.kansalaisuuskoe.data.ExplanationPreference
+import fi.kansalaisuuskoe.data.InterfaceLanguage
+import fi.kansalaisuuskoe.data.StudySettings
 import fi.kansalaisuuskoe.domain.ContentStatus
 import fi.kansalaisuuskoe.domain.StudyLanguage
 
-/** Shown once on first run: the only place outside Settings → About with the full disclaimer. */
+/**
+ * Shown once on first run, in three short steps: the interface language, then how to study (the exam language and
+ * one's own support language), then the full disclaimer — the only place outside Settings → About that shows it.
+ */
 @Composable
-fun OnboardingScreen(status: ContentStatus, start: () -> Unit) {
+fun OnboardingScreen(
+    status: ContentStatus, settings: StudySettings, chooseInterface: (InterfaceLanguage) -> Unit,
+    chooseStudy: (StudyLanguage) -> Unit, chooseSupport: (ExplanationPreference) -> Unit, start: () -> Unit,
+) {
+    var step by rememberSaveable { mutableIntStateOf(0) }
+    BackHandler(enabled = step > 0) { step -= 1 }
     Scaffold { padding ->
         Box(Modifier.fillMaxSize().padding(padding).consumeWindowInsets(padding)) {
-            Page {
-                item { Heading(stringResource(R.string.app_title), stringResource(R.string.onboarding_title)) }
-                item { ContentNotice(status) }
-                item { Text(stringResource(R.string.onboarding_about_note), style = MaterialTheme.typography.bodyMedium) }
-                item { KsButton(stringResource(R.string.onboarding_start), start, Modifier.fillMaxWidth()) }
-            }
+            // A fresh list per step, so each step opens at its top.
+            key(step) { Page {
+                when (step) {
+                    0 -> {
+                        item { Heading(stringResource(R.string.app_title), stringResource(R.string.onboarding_language_title)) }
+                        item { Text(stringResource(R.string.onboarding_language_note), style = MaterialTheme.typography.bodyMedium) }
+                        item { InterfaceLanguageChoices(settings.interfaceLanguage, chooseInterface) }
+                        item { KsButton(stringResource(R.string.onboarding_next), { step = 1 }, Modifier.fillMaxWidth()) }
+                    }
+                    1 -> {
+                        item { Heading(stringResource(R.string.app_title), stringResource(R.string.onboarding_study_title)) }
+                        item { ExamLanguageNote() }
+                        item {
+                            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                Text(stringResource(R.string.study_language), style = MaterialTheme.typography.titleMedium)
+                                StudyLanguageChoices(settings.studyLanguage, chooseStudy)
+                            }
+                        }
+                        item {
+                            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                Text(stringResource(R.string.explanation_language), style = MaterialTheme.typography.titleMedium)
+                                Text(stringResource(R.string.explanation_language_note), style = MaterialTheme.typography.bodyMedium)
+                                ExplanationChoices(settings.explanation, chooseSupport)
+                            }
+                        }
+                        item { KsButton(stringResource(R.string.onboarding_next), { step = 2 }, Modifier.fillMaxWidth()) }
+                    }
+                    else -> {
+                        item { Heading(stringResource(R.string.app_title), stringResource(R.string.onboarding_title)) }
+                        item { ContentNotice(status) }
+                        item { Text(stringResource(R.string.onboarding_about_note), style = MaterialTheme.typography.bodyMedium) }
+                        item { KsButton(stringResource(R.string.onboarding_start), start, Modifier.fillMaxWidth()) }
+                    }
+                }
+            } }
         }
+    }
+}
+
+/** The one fact every learner needs before choosing languages: the real test is in Finnish or Swedish. */
+@Composable
+private fun ExamLanguageNote() {
+    val c = Ks.colors
+    Surface(color = c.brandSoft, contentColor = c.ink, shape = MaterialTheme.shapes.medium) {
+        Text(stringResource(R.string.onboarding_exam_note), style = KsType.body, modifier = Modifier.fillMaxWidth().padding(16.dp))
     }
 }
 

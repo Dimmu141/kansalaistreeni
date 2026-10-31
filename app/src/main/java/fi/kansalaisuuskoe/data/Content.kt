@@ -10,13 +10,13 @@ import java.net.URI
 data class ContentPackageDto(val schemaVersion: Int, val packageId: String, val version: Int, val status: String, val topics: List<TopicDto>, val questions: List<QuestionDto>, val objectives: List<ObjectiveDto> = emptyList())
 @JsonClass(generateAdapter = true)
 data class TopicDto(val id: String, val title: String, val description: String, val order: Int, val translations: Map<String, TopicTranslationDto> = emptyMap(), val lessons: Map<String, LessonDto> = emptyMap()) {
-    fun model() = Topic(id, title, description, order, translations.mapValues { (_, t) -> TopicTranslation(t.title, t.description) }, lessons.mapValues { (_, lesson) -> lesson.model() })
+    fun model() = Topic(id, title, description, order, translations.mapValues { (_, t) -> TopicTranslation(t.title, t.description) }, lessons.mapValues { (language, lesson) -> lesson.model(language) })
 }
 @JsonClass(generateAdapter = true)
 data class LessonDto(val id: String, val revision: Int, val introduction: String, val status: String, val sections: List<LessonSectionDto>,
                      /** Support translations only: true once a person has checked the translation. */
                      val reviewed: Boolean = false) {
-    fun model() = AuthoredLesson(id, revision, introduction, ContentStatus.valueOf(status), sections.map { it.model() }, reviewed)
+    fun model(language: String) = AuthoredLesson(id, revision, introduction, ContentStatus.valueOf(status), sections.map { it.model() }, reviewed || language in SOURCE_LANGUAGES)
 }
 @JsonClass(generateAdapter = true)
 data class LessonSectionDto(val id: String, val title: String, val body: String, val sources: List<SourceDto>, val easyBody: String? = null) {
@@ -60,8 +60,8 @@ data class QuestionDto(
         id, revision, topicId, text, options.map { AnswerOption(it.id, it.text) }, correctOptionId,
         explanation, easyExplanation, vocabulary.map { VocabularyItem(it.term, it.meaning, it.swedish) },
         Source(source.title, source.url, source.checkedAt), language, Difficulty.valueOf(difficulty), tags,
-        ContentStatus.valueOf(status), translations.mapValues { (_, value) ->
-            QuestionTranslation(value.text, value.options.map { AnswerOption(it.id, it.text) }, value.explanation, value.vocabulary, value.reviewed)
+        ContentStatus.valueOf(status), translations.mapValues { (language, value) ->
+            QuestionTranslation(value.text, value.options.map { AnswerOption(it.id, it.text) }, value.explanation, value.vocabulary, value.reviewed || language in SOURCE_LANGUAGES)
         },
         QuestionFormat.valueOf(format),
         objectiveIds, validFrom, reviewBy,
@@ -70,6 +70,8 @@ data class QuestionDto(
 
 /** Study languages; every other language tag in a package is a support translation. */
 val NATIVE_LANGUAGES = setOf("fi", "sv")
+/** Written with the Finnish source and covered by its review, so never labelled as a machine translation. */
+val SOURCE_LANGUAGES = NATIVE_LANGUAGES + "en"
 private val LANGUAGE_TAG = Regex("[a-z]{2,3}(-[A-Za-z0-9]{2,8})*")
 
 object ContentCodec {

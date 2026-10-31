@@ -29,7 +29,40 @@ class OnboardingFlowTest {
     }
     @After fun restore(): Unit = runBlocking { app.container.settings.setOnboardingSeen(true) }
 
+    /** Step 1 (interface language) and step 2 (exam language and support) lead to the disclaimer. */
+    private fun throughLanguageSteps() {
+        await("Choose your language"); rule.onNodeWithText("Continue").performClick()
+        await("The test is in Finnish or Swedish")
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Continue")); rule.onNodeWithText("Continue").performClick()
+    }
+
+    @Test fun firstRunAsksForLanguagesAndSaysTheTestIsInFinnishOrSwedish() {
+        val examNote = "The citizenship test is taken in Finnish or Swedish, so questions in this app are always in Finnish or Swedish. " +
+            "Choose the language you plan to take the test in. Your own language helps you understand the explanations and words."
+        await("Choose your language")
+        // Choosing an interface language also picks it as the support language.
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Русский · Russian")); rule.onNodeWithText("Русский · Russian").performClick()
+        await("Выберите язык")
+        rule.waitUntil(10_000) { runBlocking { app.container.settings.settings.first().explanation == ExplanationPreference.ALSO_RUSSIAN } }
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("English · английский")); rule.onNodeWithText("English · английский").performClick()
+        await("Choose your language")
+        rule.waitUntil(10_000) { runBlocking { app.container.settings.settings.first().explanation == ExplanationPreference.ALSO_ENGLISH } }
+        rule.onNodeWithText("Continue").performClick()
+        await("The test is in Finnish or Swedish"); rule.onNodeWithText(examNote).assertIsDisplayed()
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Swedish questions")); rule.onNodeWithText("Swedish questions").performClick()
+        rule.waitUntil(10_000) { runBlocking { app.container.settings.settings.first().studyLanguage == StudyLanguage.SWEDISH } }
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Also in English")); rule.onNodeWithText("Also in English").assertIsSelected()
+        // Back returns to the previous step instead of leaving the app.
+        rule.activityRule.scenario.onActivity { it.onBackPressedDispatcher.onBackPressed() }
+        await("Choose your language")
+        rule.onNodeWithText("Continue").performClick(); await("The test is in Finnish or Swedish")
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("Continue")); rule.onNodeWithText("Continue").performClick()
+        await("Before you start"); rule.onNodeWithText("Start").performClick()
+        rule.awaitDescription("Study language: Swedish")
+    }
+
     @Test fun disclaimerShowsOnceThenOnlyAsChipAndInAbout() {
+        throughLanguageSteps()
         await("Before you start"); rule.onNodeWithText(disclaimer).assertIsDisplayed()
         rule.onNodeWithText("Start").performClick()
         await("Your learning path")
@@ -44,6 +77,7 @@ class OnboardingFlowTest {
     }
 
     @Test fun appBarSwitchChangesTheStudyLanguage() {
+        throughLanguageSteps()
         await("Before you start"); rule.onNodeWithText("Start").performClick(); await("Your learning path")
         rule.onNodeWithContentDescription("Study language: Swedish").performClick()
         rule.waitUntil(10_000) { runBlocking { app.container.settings.settings.first().studyLanguage == StudyLanguage.SWEDISH } }

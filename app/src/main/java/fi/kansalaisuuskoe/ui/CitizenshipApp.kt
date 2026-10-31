@@ -49,7 +49,7 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
     // The NavHost exists only once content has loaded; navigating before that throws, so top-level controls wait too.
     val ready = !state.loading && state.error == null
     if (!state.loading && state.error == null && !state.settings.onboardingSeen) {
-        OnboardingScreen(state.contentStatus, model::finishOnboarding)
+        OnboardingScreen(state.contentStatus, state.settings, model::onboardingLanguage, model::studyLanguage, model::explanation, model::finishOnboarding)
         return
     }
     fun tab(destination: String) {

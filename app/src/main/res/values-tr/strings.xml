@@ -408,4 +408,12 @@
     <string name="lesson_thai_missing">Bu bölümün Tayca açıklaması yok. Çalışma dilinizde okuyun.</string>
     <string name="vocabulary_meaning_thai">Tayca anlamı</string>
     <string name="vocabulary_thai">Tayca: %1$s</string>
+    <string name="onboarding_language_title">Dilinizi seçin</string>
+    <string name="onboarding_language_note">Menüler ve yönergeler bu dilde görünür. Daha sonra Ayarlar\'dan değiştirebilirsiniz.</string>
+    <string name="onboarding_study_title">Sınav Fince veya İsveççedir</string>
+    <string name="onboarding_exam_note">Vatandaşlık sınavı Fince veya İsveççe yapılır, bu yüzden bu uygulamadaki sorular her zaman Fince veya İsveççedir. Sınava gireceğiniz dili seçin. Kendi diliniz açıklamaları ve kelimeleri anlamanıza yardımcı olur.</string>
+    <string name="onboarding_next">Devam</string>
+    <string name="translation_show">Çeviriyi göster</string>
+    <string name="translation_hide">Çeviriyi gizle</string>
+    <string name="translation_exam_note">Yalnızca anlamanız için. Gerçek sınav Fince veya İsveççedir; bu yüzden önce soruyu çalışma dilinizde okumaya çalışın.</string>
 </resources>
