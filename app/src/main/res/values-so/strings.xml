@@ -401,4 +401,11 @@
     <string name="lesson_turkish_missing">Qaybtan ma laha sharaxaad Turki ah. Ku akhri luqaddaada waxbarasho.</string>
     <string name="vocabulary_meaning_turkish">Micnaha Turkiga</string>
     <string name="vocabulary_turkish">Turki: %1$s</string>
+    <string name="language_thai">ภาษาไทย · Taylandiis</string>
+    <string name="explanation_also_thai">Sidoo kale Taylandiis</string>
+    <string name="explanation_thai_title">Sharaxaadda Taylandiiska</string>
+    <string name="explanation_missing_thai">Su\'aashan ma laha sharaxaad Taylandiis ah. Ku akhri sharaxaadda luqaddaada waxbarasho.</string>
+    <string name="lesson_thai_missing">Qaybtan ma laha sharaxaad Taylandiis ah. Ku akhri luqaddaada waxbarasho.</string>
+    <string name="vocabulary_meaning_thai">Micnaha Taylandiiska</string>
+    <string name="vocabulary_thai">Taylandiis: %1$s</string>
 </resources>

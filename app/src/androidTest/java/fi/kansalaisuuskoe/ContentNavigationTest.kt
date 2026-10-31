@@ -41,6 +41,7 @@ class ContentNavigationTest {
                 InterfaceLanguage.SOMALI -> Triple("Dejinta", "Agabka waxbarashada", "Dooro fayl waxyaabo")
                 InterfaceLanguage.UKRAINIAN -> Triple("Налаштування", "Навчальні матеріали", "Вибрати файл із матеріалами")
                 InterfaceLanguage.TURKISH -> Triple("Ayarlar", "Çalışma materyali", "İçerik dosyası seç")
+                InterfaceLanguage.THAI -> Triple("การตั้งค่า", "สื่อการเรียน", "เลือกไฟล์เนื้อหา")
             }
             rule.waitUntil(15_000) { rule.onAllNodesWithContentDescription(settingsLabel).fetchSemanticsNodes().isNotEmpty() }
             rule.onNodeWithContentDescription(settingsLabel).performClick()
@@ -66,7 +67,7 @@ class ContentNavigationTest {
             automation.injectInputEvent(KeyEvent(downTime, SystemClock.uptimeMillis(), KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK, 0), true)
             rule.waitUntil(10_000) { automation.rootInActiveWindow?.packageName?.toString() == "fi.kansalaistreeni" }
             await(pickLabel)
-            val back = when (language) { InterfaceLanguage.FINNISH -> "Takaisin"; InterfaceLanguage.SWEDISH -> "Tillbaka"; InterfaceLanguage.ENGLISH -> "Back"; InterfaceLanguage.RUSSIAN -> "Назад"; InterfaceLanguage.ARABIC -> "رجوع"; InterfaceLanguage.PERSIAN -> "بازگشت"; InterfaceLanguage.SOMALI -> "Dib u noqo"; InterfaceLanguage.UKRAINIAN -> "Назад"; InterfaceLanguage.TURKISH -> "Geri" }
+            val back = when (language) { InterfaceLanguage.FINNISH -> "Takaisin"; InterfaceLanguage.SWEDISH -> "Tillbaka"; InterfaceLanguage.ENGLISH -> "Back"; InterfaceLanguage.RUSSIAN -> "Назад"; InterfaceLanguage.ARABIC -> "رجوع"; InterfaceLanguage.PERSIAN -> "بازگشت"; InterfaceLanguage.SOMALI -> "Dib u noqo"; InterfaceLanguage.UKRAINIAN -> "Назад"; InterfaceLanguage.TURKISH -> "Geri"; InterfaceLanguage.THAI -> "กลับ" }
             rule.onNodeWithContentDescription(back).performClick()
             rule.onNodeWithContentDescription(back).performClick()
         }

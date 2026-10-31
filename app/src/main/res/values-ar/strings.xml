@@ -445,4 +445,11 @@
     <string name="lesson_turkish_missing">لا يوجد شرح بالتركية لهذا القسم. اقرأه بلغة الدراسة.</string>
     <string name="vocabulary_meaning_turkish">المعنى بالتركية</string>
     <string name="vocabulary_turkish">التركية: %1$s</string>
+    <string name="language_thai">ภาษาไทย · التايلاندية</string>
+    <string name="explanation_also_thai">بالتايلاندية أيضاً</string>
+    <string name="explanation_thai_title">الشرح بالتايلاندية</string>
+    <string name="explanation_missing_thai">لا يوجد شرح بالتايلاندية لهذا السؤال. اقرأ الشرح بلغة الدراسة.</string>
+    <string name="lesson_thai_missing">لا يوجد شرح بالتايلاندية لهذا القسم. اقرأه بلغة الدراسة.</string>
+    <string name="vocabulary_meaning_thai">المعنى بالتايلاندية</string>
+    <string name="vocabulary_thai">التايلاندية: %1$s</string>
 </resources>

@@ -405,4 +405,11 @@
     <string name="lesson_turkish_missing">Tälle osiolle ei ole turkinkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
     <string name="vocabulary_meaning_turkish">Merkitys turkiksi</string>
     <string name="vocabulary_turkish">Turkki: %1$s</string>
+    <string name="language_thai">ภาษาไทย · thai</string>
+    <string name="explanation_also_thai">Lisäksi thaiksi</string>
+    <string name="explanation_thai_title">Selitys thaiksi</string>
+    <string name="explanation_missing_thai">Tähän kysymykseen ei ole thainkielistä selitystä. Lue selitys opiskelukielellä.</string>
+    <string name="lesson_thai_missing">Tälle osiolle ei ole thainkielistä selitystä. Lue teksti opiskelukielelläsi.</string>
+    <string name="vocabulary_meaning_thai">Merkitys thaiksi</string>
+    <string name="vocabulary_thai">Thai: %1$s</string>
 </resources>

@@ -1,0 +1,995 @@
+{
+  "language": "th",
+  "version": 1,
+  "rules": [
+    "The exam is taken in Finnish or Swedish. On first mention in a Thai text, an institution, office, document or procedure marked keepFinnish is followed by the Finnish word in parentheses: «รัฐสภาฟินแลนด์ (eduskunta)».",
+    "Use the rendering in 'th' for every occurrence; do not swap in a synonym.",
+    "Use polite, plain modern Thai (about B1 level) addressed to the reader with คุณ; avoid royal or very formal legal vocabulary where a common word works.",
+    "Dates as 6.12.1917 or «6 ธันวาคม 1917» in the Western calendar (not the Buddhist era); Arabic numerals; euros as in Finnish (5 €, 112); keep names of services (Kela, OmaVero, Suomi.fi) unchanged.",
+    "Do not add facts, advice or hedging that the Finnish text does not contain."
+  ],
+  "terms": {
+    "lainsäädäntövalta": {
+      "th": "อำนาจนิติบัญญัติ"
+    },
+    "eduskunta": {
+      "th": "รัฐสภาฟินแลนด์",
+      "keepFinnish": true
+    },
+    "tuomioistuin": {
+      "th": "ศาล"
+    },
+    "riippumaton": {
+      "th": "เป็นอิสระ"
+    },
+    "hallitusvalta": {
+      "th": "อำนาจบริหาร"
+    },
+    "valtioneuvosto": {
+      "th": "รัฐบาล (คณะรัฐมนตรี)",
+      "keepFinnish": true
+    },
+    "kansanedustaja": {
+      "th": "สมาชิกรัฐสภา",
+      "keepFinnish": true
+    },
+    "vaalikausi": {
+      "th": "วาระของรัฐสภา"
+    },
+    "talousarvio": {
+      "th": "งบประมาณแผ่นดิน"
+    },
+    "valtio": {
+      "th": "รัฐ"
+    },
+    "äänioikeus": {
+      "th": "สิทธิเลือกตั้ง"
+    },
+    "vaalipäivä": {
+      "th": "วันเลือกตั้ง"
+    },
+    "kuntavaalit": {
+      "th": "การเลือกตั้งระดับเทศบาล",
+      "keepFinnish": true
+    },
+    "kotikunta": {
+      "th": "เทศบาลที่อยู่อาศัย",
+      "keepFinnish": true
+    },
+    "aluevaalit": {
+      "th": "การเลือกตั้งเขตสวัสดิการ",
+      "keepFinnish": true
+    },
+    "yhtäjaksoisesti": {
+      "th": "อย่างต่อเนื่อง"
+    },
+    "Euroopan parlamentti": {
+      "th": "รัฐสภายุโรป"
+    },
+    "ilmoittautua": {
+      "th": "ลงทะเบียน"
+    },
+    "toimikausi": {
+      "th": "วาระการดำรงตำแหน่ง"
+    },
+    "presidentinvaali": {
+      "th": "การเลือกตั้งประธานาธิบดี"
+    },
+    "peräkkäinen": {
+      "th": "ติดต่อกัน"
+    },
+    "ulkopolitiikka": {
+      "th": "นโยบายต่างประเทศ"
+    },
+    "ylipäällikkö": {
+      "th": "ผู้บัญชาการทหารสูงสุด"
+    },
+    "puolustusvoimat": {
+      "th": "กองกำลังป้องกันประเทศ",
+      "keepFinnish": true
+    },
+    "pääministeri": {
+      "th": "นายกรัฐมนตรี",
+      "keepFinnish": true
+    },
+    "ehdokas": {
+      "th": "ผู้สมัคร"
+    },
+    "kierros": {
+      "th": "รอบ"
+    },
+    "tasavallan presidentti": {
+      "th": "ประธานาธิบดี",
+      "keepFinnish": true
+    },
+    "hallitusohjelma": {
+      "th": "นโยบายรัฐบาล",
+      "keepFinnish": true
+    },
+    "luottamus": {
+      "th": "ความไว้วางใจ"
+    },
+    "parlamentarismi": {
+      "th": "ระบบรัฐสภา"
+    },
+    "ministeri": {
+      "th": "รัฐมนตรี"
+    },
+    "nimittää": {
+      "th": "แต่งตั้ง"
+    },
+    "kunnanvaltuusto": {
+      "th": "สภาเทศบาล",
+      "keepFinnish": true
+    },
+    "kunta": {
+      "th": "เทศบาล",
+      "keepFinnish": true
+    },
+    "hyvinvointialue": {
+      "th": "เขตบริการสวัสดิการ",
+      "keepFinnish": true
+    },
+    "pelastuspalvelut": {
+      "th": "บริการกู้ภัย"
+    },
+    "aluevaltuusto": {
+      "th": "สภาเขต",
+      "keepFinnish": true
+    },
+    "kansalaisaloite": {
+      "th": "การเสนอกฎหมายโดยประชาชน",
+      "keepFinnish": true
+    },
+    "aloite": {
+      "th": "ข้อเสนอ"
+    },
+    "ehdottaa": {
+      "th": "เสนอ"
+    },
+    "laki": {
+      "th": "กฎหมาย"
+    },
+    "kansanvalta": {
+      "th": "ประชาธิปไตย"
+    },
+    "vaikuttaa": {
+      "th": "มีอิทธิพล"
+    },
+    "perusoikeus": {
+      "th": "สิทธิขั้นพื้นฐาน",
+      "keepFinnish": true
+    },
+    "ulkomaalainen": {
+      "th": "ชาวต่างชาติ"
+    },
+    "ihmisoikeus": {
+      "th": "สิทธิมนุษยชน"
+    },
+    "julkinen valta": {
+      "th": "หน่วยงานรัฐ"
+    },
+    "kuolemanrangaistus": {
+      "th": "โทษประหารชีวิต"
+    },
+    "kiduttaa": {
+      "th": "ทรมาน"
+    },
+    "sananvapaus": {
+      "th": "เสรีภาพในการแสดงความคิดเห็น"
+    },
+    "mielipide": {
+      "th": "ความคิดเห็น"
+    },
+    "julkaista": {
+      "th": "เผยแพร่"
+    },
+    "viranomainen": {
+      "th": "หน่วยงานราชการ"
+    },
+    "asiakirja": {
+      "th": "เอกสาร"
+    },
+    "julkinen": {
+      "th": "สาธารณะ"
+    },
+    "uskonnonvapaus": {
+      "th": "เสรีภาพในการนับถือศาสนา"
+    },
+    "uskonnollinen yhdyskunta": {
+      "th": "ชุมชนศาสนา"
+    },
+    "omatunto": {
+      "th": "มโนธรรม"
+    },
+    "vakaumus": {
+      "th": "ความเชื่อ"
+    },
+    "suostumus": {
+      "th": "ความยินยอม"
+    },
+    "uskontokunta": {
+      "th": "องค์กรศาสนา"
+    },
+    "mielenosoitus": {
+      "th": "การชุมนุมประท้วง"
+    },
+    "ilmoitus": {
+      "th": "การแจ้ง"
+    },
+    "yhdistys": {
+      "th": "สมาคม"
+    },
+    "yhdistymisvapaus": {
+      "th": "เสรีภาพในการรวมกลุ่ม"
+    },
+    "ammattiliitto": {
+      "th": "สหภาพแรงงาน",
+      "keepFinnish": true
+    },
+    "järjestäytyä": {
+      "th": "รวมกลุ่ม"
+    },
+    "perustaa": {
+      "th": "ก่อตั้ง"
+    },
+    "lupa": {
+      "th": "ใบอนุญาต"
+    },
+    "yksityiselämä": {
+      "th": "ชีวิตส่วนตัว"
+    },
+    "luottamuksellinen": {
+      "th": "เป็นความลับ"
+    },
+    "kirje": {
+      "th": "จดหมาย"
+    },
+    "salaisuus": {
+      "th": "ความลับ"
+    },
+    "kotirauha": {
+      "th": "ความสงบในที่พักอาศัย"
+    },
+    "kunnia": {
+      "th": "เกียรติ"
+    },
+    "perusopetus": {
+      "th": "การศึกษาขั้นพื้นฐาน",
+      "keepFinnish": true
+    },
+    "maksuton": {
+      "th": "ไม่เสียค่าใช้จ่าย"
+    },
+    "kansalliskieli": {
+      "th": "ภาษาประจำชาติ"
+    },
+    "tiede": {
+      "th": "วิทยาศาสตร์"
+    },
+    "taide": {
+      "th": "ศิลปะ"
+    },
+    "oikeusturva": {
+      "th": "การคุ้มครองทางกฎหมาย"
+    },
+    "hakea muutosta": {
+      "th": "อุทธรณ์"
+    },
+    "oikeusasiamies": {
+      "th": "ผู้ตรวจการแผ่นดินของรัฐสภา",
+      "keepFinnish": true
+    },
+    "valvoa": {
+      "th": "กำกับดูแล"
+    },
+    "rikos": {
+      "th": "อาชญากรรม"
+    },
+    "rangaistus": {
+      "th": "บทลงโทษ"
+    },
+    "lyödä": {
+      "th": "ตี"
+    },
+    "väkivalta": {
+      "th": "ความรุนแรง"
+    },
+    "lapsi": {
+      "th": "เด็ก"
+    },
+    "täysi-ikäinen": {
+      "th": "บรรลุนิติภาวะ"
+    },
+    "ottaa huomioon": {
+      "th": "คำนึงถึง"
+    },
+    "yhdenvertaisuus": {
+      "th": "ความเท่าเทียม",
+      "keepFinnish": true
+    },
+    "samanarvoinen": {
+      "th": "มีคุณค่าเท่ากัน"
+    },
+    "lain edessä": {
+      "th": "ต่อหน้ากฎหมาย"
+    },
+    "syrjintä": {
+      "th": "การเลือกปฏิบัติ"
+    },
+    "hyväksyttävä peruste": {
+      "th": "เหตุผลที่ยอมรับได้"
+    },
+    "syrjiä": {
+      "th": "เลือกปฏิบัติ"
+    },
+    "vamma": {
+      "th": "ความพิการ"
+    },
+    "vuokranantaja": {
+      "th": "ผู้ให้เช่า"
+    },
+    "kansalaisuus": {
+      "th": "สัญชาติ"
+    },
+    "kielitaito": {
+      "th": "ทักษะภาษา"
+    },
+    "työnantaja": {
+      "th": "นายจ้าง"
+    },
+    "seksuaalinen suuntautuminen": {
+      "th": "รสนิยมทางเพศ"
+    },
+    "työnhakija": {
+      "th": "ผู้สมัครงาน"
+    },
+    "rekrytointi": {
+      "th": "การรับสมัครงาน"
+    },
+    "uskonto": {
+      "th": "ศาสนา"
+    },
+    "palkata": {
+      "th": "จ้างงาน"
+    },
+    "raskaus": {
+      "th": "การตั้งครรภ์"
+    },
+    "perhevapaa": {
+      "th": "การลาเพื่อครอบครัว",
+      "keepFinnish": true
+    },
+    "työsyrjintä": {
+      "th": "การเลือกปฏิบัติในที่ทำงาน"
+    },
+    "työsuojeluviranomainen": {
+      "th": "หน่วยงานความปลอดภัยในการทำงาน",
+      "keepFinnish": true
+    },
+    "äidinkieli": {
+      "th": "ภาษาแม่"
+    },
+    "työehdot": {
+      "th": "เงื่อนไขการจ้างงาน"
+    },
+    "tasa-arvo": {
+      "th": "ความเท่าเทียมทางเพศ",
+      "keepFinnish": true
+    },
+    "sukupuoli": {
+      "th": "เพศ"
+    },
+    "palkka": {
+      "th": "ค่าจ้าง"
+    },
+    "palkkasyrjintä": {
+      "th": "การเลือกปฏิบัติด้านค่าจ้าง"
+    },
+    "tulla voimaan": {
+      "th": "มีผลบังคับใช้"
+    },
+    "mennä naimisiin": {
+      "th": "แต่งงาน"
+    },
+    "avioliitto": {
+      "th": "การสมรส"
+    },
+    "pakottaa": {
+      "th": "บังคับ"
+    },
+    "vapaaehtoinen": {
+      "th": "โดยสมัครใจ"
+    },
+    "puoliso": {
+      "th": "คู่ครอง"
+    },
+    "aviopuoliso": {
+      "th": "คู่สมรส"
+    },
+    "yhdenvertaisuusvaltuutettu": {
+      "th": "ผู้ตรวจการด้านการไม่เลือกปฏิบัติ",
+      "keepFinnish": true
+    },
+    "tasa-arvovaltuutettu": {
+      "th": "ผู้ตรวจการด้านความเท่าเทียม",
+      "keepFinnish": true
+    },
+    "vammainen": {
+      "th": "คนพิการ"
+    },
+    "työympäristö": {
+      "th": "สภาพแวดล้อมในการทำงาน"
+    },
+    "muuttaa": {
+      "th": "เปลี่ยนแปลง"
+    },
+    "kuljetuspalvelu": {
+      "th": "บริการรับส่ง"
+    },
+    "henkilökohtainen avustaja": {
+      "th": "ผู้ช่วยส่วนตัว"
+    },
+    "noudattaa": {
+      "th": "ปฏิบัติตาม"
+    },
+    "oleskella": {
+      "th": "พำนัก"
+    },
+    "velvollisuus": {
+      "th": "หน้าที่"
+    },
+    "onnettomuus": {
+      "th": "อุบัติเหตุ"
+    },
+    "poliisi": {
+      "th": "ตำรวจ"
+    },
+    "järjestys": {
+      "th": "ความสงบเรียบร้อย"
+    },
+    "työsopimus": {
+      "th": "สัญญาจ้างงาน",
+      "keepFinnish": true
+    },
+    "allekirjoittaa": {
+      "th": "ลงนาม"
+    },
+    "suullinen": {
+      "th": "ด้วยวาจา"
+    },
+    "kirjallinen": {
+      "th": "เป็นลายลักษณ์อักษร"
+    },
+    "vähimmäispalkka": {
+      "th": "ค่าจ้างขั้นต่ำ"
+    },
+    "työehtosopimus": {
+      "th": "ข้อตกลงร่วม",
+      "keepFinnish": true
+    },
+    "koeaika": {
+      "th": "ช่วงทดลองงาน"
+    },
+    "työturvallisuus": {
+      "th": "ความปลอดภัยในการทำงาน"
+    },
+    "työohje": {
+      "th": "คำแนะนำในการทำงาน"
+    },
+    "turvaväline": {
+      "th": "อุปกรณ์ป้องกัน"
+    },
+    "perehdyttää": {
+      "th": "ปฐมนิเทศ"
+    },
+    "verokortti": {
+      "th": "บัตรภาษี",
+      "keepFinnish": true
+    },
+    "tulo": {
+      "th": "รายได้"
+    },
+    "periä veroa": {
+      "th": "หักภาษี"
+    },
+    "progressiivinen": {
+      "th": "อัตราก้าวหน้า"
+    },
+    "veroprosentti": {
+      "th": "อัตราภาษี"
+    },
+    "verorahat": {
+      "th": "เงินภาษี"
+    },
+    "vuokrasopimus": {
+      "th": "สัญญาเช่า",
+      "keepFinnish": true
+    },
+    "vuokra": {
+      "th": "ค่าเช่า"
+    },
+    "vuokratakuu": {
+      "th": "เงินประกันการเช่า",
+      "keepFinnish": true
+    },
+    "irtisanoa": {
+      "th": "บอกเลิกสัญญา"
+    },
+    "irtisanomisaika": {
+      "th": "ระยะเวลาแจ้งล่วงหน้า"
+    },
+    "muuttoilmoitus": {
+      "th": "การแจ้งย้ายที่อยู่",
+      "keepFinnish": true
+    },
+    "huoltajuus": {
+      "th": "อำนาจปกครองบุตร"
+    },
+    "yhteishuoltajuus": {
+      "th": "อำนาจปกครองร่วม"
+    },
+    "elatusapu": {
+      "th": "ค่าเลี้ยงดูบุตร"
+    },
+    "ero": {
+      "th": "การแยกทาง"
+    },
+    "huoltaja": {
+      "th": "ผู้ปกครอง"
+    },
+    "sosiaaliturva": {
+      "th": "ประกันสังคม"
+    },
+    "etuus": {
+      "th": "สวัสดิการ"
+    },
+    "vakinaisesti": {
+      "th": "อย่างถาวร"
+    },
+    "hätätilanne": {
+      "th": "เหตุฉุกเฉิน"
+    },
+    "hoito": {
+      "th": "การรักษา"
+    },
+    "valtakunta": {
+      "th": "ราชอาณาจักร"
+    },
+    "rauha": {
+      "th": "สันติภาพ"
+    },
+    "valloittaa": {
+      "th": "พิชิต"
+    },
+    "uskonpuhdistus": {
+      "th": "การปฏิรูปศาสนา"
+    },
+    "luterilainen": {
+      "th": "นิกายลูเทอแรน"
+    },
+    "yliopisto": {
+      "th": "มหาวิทยาลัย"
+    },
+    "autonominen": {
+      "th": "ปกครองตนเอง"
+    },
+    "keisarikunta": {
+      "th": "จักรวรรดิ"
+    },
+    "yhtäläinen": {
+      "th": "เท่าเทียมกัน"
+    },
+    "pääkaupunki": {
+      "th": "เมืองหลวง"
+    },
+    "itsenäisyys": {
+      "th": "เอกราช"
+    },
+    "tunnustaa": {
+      "th": "รับรอง"
+    },
+    "sisällissota": {
+      "th": "สงครามกลางเมือง"
+    },
+    "tasavalta": {
+      "th": "สาธารณรัฐ"
+    },
+    "hallitusmuoto": {
+      "th": "รูปแบบการปกครอง"
+    },
+    "talvisota": {
+      "th": "สงครามฤดูหนาว",
+      "keepFinnish": true
+    },
+    "jatkosota": {
+      "th": "สงครามต่อเนื่อง",
+      "keepFinnish": true
+    },
+    "miehittää": {
+      "th": "ยึดครอง"
+    },
+    "hävitä": {
+      "th": "แพ้"
+    },
+    "luovuttaa": {
+      "th": "ยกให้"
+    },
+    "maa-alue": {
+      "th": "ดินแดน"
+    },
+    "asuttaa": {
+      "th": "ตั้งถิ่นฐานใหม่"
+    },
+    "väestö": {
+      "th": "ประชากร"
+    },
+    "sotakorvaus": {
+      "th": "ค่าปฏิกรรมสงคราม"
+    },
+    "tavara": {
+      "th": "สินค้า"
+    },
+    "täysimääräinen": {
+      "th": "เต็มจำนวน"
+    },
+    "olympialaiset": {
+      "th": "กีฬาโอลิมปิก"
+    },
+    "päätösasiakirja": {
+      "th": "กรรมสารสุดท้าย"
+    },
+    "Euroopan unioni": {
+      "th": "สหภาพยุโรป"
+    },
+    "jäsen": {
+      "th": "สมาชิก"
+    },
+    "käteinen": {
+      "th": "เงินสด"
+    },
+    "valuutta": {
+      "th": "สกุลเงิน"
+    },
+    "Nato": {
+      "th": "นาโต"
+    },
+    "puolustusliitto": {
+      "th": "พันธมิตรทางทหาร"
+    },
+    "yhteinen puolustus": {
+      "th": "การป้องกันร่วม"
+    },
+    "turvatakuu": {
+      "th": "หลักประกันความมั่นคง"
+    },
+    "ruotsi": {
+      "th": "ภาษาสวีเดน"
+    },
+    "Ahvenanmaa": {
+      "th": "หมู่เกาะโอลันด์",
+      "keepFinnish": true
+    },
+    "virallinen kieli": {
+      "th": "ภาษาราชการ"
+    },
+    "demilitarisoitu": {
+      "th": "เขตปลอดทหาร"
+    },
+    "maakunta": {
+      "th": "แคว้น"
+    },
+    "alkuperäiskansa": {
+      "th": "ชนพื้นเมือง"
+    },
+    "saamelainen": {
+      "th": "ชาวซามี"
+    },
+    "viittomakieli": {
+      "th": "ภาษามือ"
+    },
+    "itsehallinto": {
+      "th": "การปกครองตนเอง"
+    },
+    "kotiseutualue": {
+      "th": "ถิ่นฐานดั้งเดิม"
+    },
+    "kirkko": {
+      "th": "โบสถ์"
+    },
+    "erityisasema": {
+      "th": "สถานะพิเศษ"
+    },
+    "verotusoikeus": {
+      "th": "สิทธิในการเก็บภาษี"
+    },
+    "itsenäisyyspäivä": {
+      "th": "วันประกาศเอกราช",
+      "keepFinnish": true
+    },
+    "juhlia": {
+      "th": "ฉลอง"
+    },
+    "juhannus": {
+      "th": "เทศกาลกลางฤดูร้อน",
+      "keepFinnish": true
+    },
+    "kesämökki": {
+      "th": "บ้านพักตากอากาศฤดูร้อน"
+    },
+    "vappu": {
+      "th": "วันแรงงาน 1 พฤษภาคม (Vappu)",
+      "keepFinnish": true
+    },
+    "kevät": {
+      "th": "ฤดูใบไม้ผลิ"
+    },
+    "kansalliseläin": {
+      "th": "สัตว์ประจำชาติ"
+    },
+    "karhu": {
+      "th": "หมี"
+    },
+    "kansanruno": {
+      "th": "บทกวีพื้นบ้าน"
+    },
+    "eepos": {
+      "th": "มหากาพย์"
+    },
+    "kirjastokortti": {
+      "th": "บัตรห้องสมุด"
+    },
+    "lainata": {
+      "th": "ยืม"
+    },
+    "hukata": {
+      "th": "ทำหาย"
+    },
+    "laina-aika": {
+      "th": "ระยะเวลายืม"
+    },
+    "palauttaa": {
+      "th": "คืน"
+    },
+    "kirjasto": {
+      "th": "ห้องสมุด"
+    },
+    "vapaaehtoistyö": {
+      "th": "งานอาสาสมัคร"
+    },
+    "kokous": {
+      "th": "การประชุม"
+    },
+    "peruskoulu": {
+      "th": "โรงเรียนการศึกษาภาคบังคับ",
+      "keepFinnish": true
+    },
+    "vuosiluokka": {
+      "th": "ชั้นเรียน"
+    },
+    "oppivelvollisuus": {
+      "th": "การศึกษาภาคบังคับ",
+      "keepFinnish": true
+    },
+    "toinen aste": {
+      "th": "ระดับมัธยมศึกษาตอนปลาย"
+    },
+    "esiopetus": {
+      "th": "การศึกษาก่อนวัยเรียน",
+      "keepFinnish": true
+    },
+    "hätänumero": {
+      "th": "หมายเลขฉุกเฉิน"
+    },
+    "päivystäjä": {
+      "th": "เจ้าหน้าที่รับแจ้งเหตุ"
+    },
+    "jono": {
+      "th": "คิว"
+    },
+    "ruuhka": {
+      "th": "ความหนาแน่นของสาย"
+    },
+    "rikosilmoitus": {
+      "th": "การแจ้งความ",
+      "keepFinnish": true
+    },
+    "lomake": {
+      "th": "แบบฟอร์ม"
+    },
+    "poliisiasema": {
+      "th": "สถานีตำรวจ"
+    },
+    "passi": {
+      "th": "หนังสือเดินทาง"
+    },
+    "henkilökortti": {
+      "th": "บัตรประจำตัว",
+      "keepFinnish": true
+    },
+    "palovaroitin": {
+      "th": "เครื่องตรวจจับควัน"
+    },
+    "neliömetri": {
+      "th": "ตารางเมตร"
+    },
+    "kerros": {
+      "th": "ชั้น"
+    },
+    "taloyhtiö": {
+      "th": "นิติบุคคลอาคารชุด",
+      "keepFinnish": true
+    },
+    "sammutuspeite": {
+      "th": "ผ้าห่มดับเพลิง"
+    },
+    "tukahduttaa": {
+      "th": "คลุมดับ"
+    },
+    "hissi": {
+      "th": "ลิฟต์"
+    },
+    "tulipalo": {
+      "th": "ไฟไหม้"
+    },
+    "väestöhälytin": {
+      "th": "ไซเรนเตือนภัยสาธารณะ"
+    },
+    "vaaramerkki": {
+      "th": "สัญญาณอันตราย"
+    },
+    "äänimerkki": {
+      "th": "สัญญาณเสียง"
+    },
+    "sulkea": {
+      "th": "ปิด"
+    },
+    "ikkuna": {
+      "th": "หน้าต่าง"
+    },
+    "puhelin": {
+      "th": "โทรศัพท์"
+    },
+    "kotivara": {
+      "th": "เสบียงสำรองในบ้าน",
+      "keepFinnish": true
+    },
+    "varautua": {
+      "th": "เตรียมพร้อม"
+    },
+    "varasto": {
+      "th": "คลังเก็บ"
+    },
+    "asevelvollisuus": {
+      "th": "การเกณฑ์ทหาร",
+      "keepFinnish": true
+    },
+    "maanpuolustus": {
+      "th": "การป้องกันประเทศ"
+    },
+    "auttava puhelin": {
+      "th": "สายด่วนช่วยเหลือ"
+    },
+    "uhkailu": {
+      "th": "การข่มขู่"
+    },
+    "uhri": {
+      "th": "ผู้เสียหาย"
+    },
+    "lastensuojelu": {
+      "th": "การคุ้มครองเด็ก",
+      "keepFinnish": true
+    },
+    "liikenne": {
+      "th": "การจราจร"
+    },
+    "oikea": {
+      "th": "ขวา"
+    },
+    "päihtynyt": {
+      "th": "มึนเมา"
+    },
+    "rattijuopumus": {
+      "th": "เมาแล้วขับ"
+    },
+    "talvirengas": {
+      "th": "ยางสำหรับฤดูหนาว"
+    },
+    "tunnistautua": {
+      "th": "ยืนยันตัวตน"
+    },
+    "mobiilivarmenne": {
+      "th": "ใบรับรองมือถือ",
+      "keepFinnish": true
+    },
+    "sovellus": {
+      "th": "แอป"
+    },
+    "kirjautua ulos": {
+      "th": "ออกจากระบบ"
+    },
+    "tunnukset": {
+      "th": "ข้อมูลเข้าสู่ระบบ"
+    },
+    "pankkitunnukset": {
+      "th": "ข้อมูลเข้าสู่ระบบธนาคาร",
+      "keepFinnish": true
+    },
+    "valtakirja": {
+      "th": "หนังสือมอบอำนาจ"
+    },
+    "valtuus": {
+      "th": "การมอบอำนาจ"
+    },
+    "käyttäjätunnus": {
+      "th": "ชื่อผู้ใช้"
+    },
+    "digiposti": {
+      "th": "ไปรษณีย์ดิจิทัล"
+    },
+    "postilaatikko": {
+      "th": "กล่องจดหมาย"
+    },
+    "alaikäinen": {
+      "th": "ผู้เยาว์"
+    },
+    "veroasia": {
+      "th": "เรื่องภาษี"
+    },
+    "asunnoton": {
+      "th": "คนไร้บ้าน"
+    },
+    "puhelimitse": {
+      "th": "ทางโทรศัพท์"
+    },
+    "resepti": {
+      "th": "ใบสั่งยา"
+    },
+    "terveystieto": {
+      "th": "ข้อมูลสุขภาพ"
+    },
+    "uusiminen": {
+      "th": "การต่ออายุ"
+    },
+    "lääke": {
+      "th": "ยา"
+    },
+    "ammattilainen": {
+      "th": "ผู้เชี่ยวชาญ"
+    },
+    "huijaus": {
+      "th": "การหลอกลวง"
+    },
+    "kiire": {
+      "th": "ความเร่งรีบ"
+    },
+    "tietojenkalastelu": {
+      "th": "ฟิชชิง"
+    },
+    "asiakaspalvelu": {
+      "th": "ฝ่ายบริการลูกค้า"
+    },
+    "aito": {
+      "th": "ของจริง"
+    },
+    "sivusto": {
+      "th": "เว็บไซต์"
+    },
+    "henkilötieto": {
+      "th": "ข้อมูลส่วนบุคคล"
+    },
+    "rekisterinpitäjä": {
+      "th": "ผู้ควบคุมข้อมูล"
+    },
+    "määräaika": {
+      "th": "กำหนดเวลา"
+    },
+    "tietosuojavaltuutettu": {
+      "th": "ผู้ตรวจการด้านการคุ้มครองข้อมูล",
+      "keepFinnish": true
+    },
+    "kieltäytyä": {
+      "th": "ปฏิเสธ"
+    }
+  }
+}

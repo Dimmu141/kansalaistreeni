@@ -401,4 +401,11 @@
     <string name="lesson_turkish_missing">Bu bölümün Türkçe açıklaması yok. Çalışma dilinizde okuyun.</string>
     <string name="vocabulary_meaning_turkish">Türkçe anlamı</string>
     <string name="vocabulary_turkish">Türkçe: %1$s</string>
+    <string name="language_thai">ภาษาไทย · Tayca</string>
+    <string name="explanation_also_thai">Tayca da</string>
+    <string name="explanation_thai_title">Tayca açıklama</string>
+    <string name="explanation_missing_thai">Bu sorunun Tayca açıklaması yok. Açıklamayı çalışma dilinizde okuyun.</string>
+    <string name="lesson_thai_missing">Bu bölümün Tayca açıklaması yok. Çalışma dilinizde okuyun.</string>
+    <string name="vocabulary_meaning_thai">Tayca anlamı</string>
+    <string name="vocabulary_thai">Tayca: %1$s</string>
 </resources>

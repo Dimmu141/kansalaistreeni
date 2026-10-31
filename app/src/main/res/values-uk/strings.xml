@@ -423,4 +423,11 @@
     <string name="lesson_turkish_missing">Цей розділ не має пояснення турецькою. Прочитайте його мовою навчання.</string>
     <string name="vocabulary_meaning_turkish">Значення турецькою</string>
     <string name="vocabulary_turkish">Турецька: %1$s</string>
+    <string name="language_thai">ภาษาไทย · тайська</string>
+    <string name="explanation_also_thai">Також тайською</string>
+    <string name="explanation_thai_title">Пояснення тайською</string>
+    <string name="explanation_missing_thai">Це питання не має пояснення тайською. Прочитайте пояснення мовою навчання.</string>
+    <string name="lesson_thai_missing">Цей розділ не має пояснення тайською. Прочитайте його мовою навчання.</string>
+    <string name="vocabulary_meaning_thai">Значення тайською</string>
+    <string name="vocabulary_thai">Тайська: %1$s</string>
 </resources>

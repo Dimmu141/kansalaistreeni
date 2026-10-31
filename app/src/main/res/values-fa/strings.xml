@@ -401,4 +401,11 @@
     <string name="lesson_turkish_missing">این بخش توضیح ترکی ندارد. آن را به زبان مطالعه بخوانید.</string>
     <string name="vocabulary_meaning_turkish">معنا به ترکی</string>
     <string name="vocabulary_turkish">ترکی: %1$s</string>
+    <string name="language_thai">ภาษาไทย · تایلندی</string>
+    <string name="explanation_also_thai">به تایلندی هم</string>
+    <string name="explanation_thai_title">توضیح به تایلندی</string>
+    <string name="explanation_missing_thai">این سؤال توضیح تایلندی ندارد. توضیح را به زبان مطالعه بخوانید.</string>
+    <string name="lesson_thai_missing">این بخش توضیح تایلندی ندارد. آن را به زبان مطالعه بخوانید.</string>
+    <string name="vocabulary_meaning_thai">معنا به تایلندی</string>
+    <string name="vocabulary_thai">تایلندی: %1$s</string>
 </resources>

@@ -14,14 +14,14 @@ class ContentValidationTest {
             assertEquals(en, counterpart.translations.getValue("en"))
         }
     }
-    @Test fun `every demo concept has the same Russian, Arabic, Persian, Somali, Ukrainian and Turkish support in both study languages`() {
+    @Test fun `every demo concept has the same Russian, Arabic, Persian, Somali, Ukrainian, Turkish and Thai support in both study languages`() {
         val c = content()
-        for (language in listOf("ru", "ar", "fa", "so", "uk", "tr")) {
+        for (language in listOf("ru", "ar", "fa", "so", "uk", "tr", "th")) {
             c.questions.forEach { q ->
                 val support = q.translations.getValue(language)
                 assertEquals(q.options.map { it.id }, support.options.map { it.id })
                 assertEquals(q.vocabulary.map { it.term }.toSet(), support.vocabulary.keys)
-                // Russian has been reviewed by a person; Arabic, Persian, Somali, Ukrainian and Turkish are still machine drafts.
+                // Russian has been reviewed by a person; Arabic, Persian, Somali, Ukrainian, Turkish and Thai are still machine drafts.
                 assertEquals(language == "ru", support.reviewed)
                 val counterpart = c.questions.first { it.id.removeSuffix("-sv") == q.id.removeSuffix("-sv") && it.language != q.language }
                 assertEquals(support.copy(vocabulary = emptyMap()), counterpart.translations.getValue(language).copy(vocabulary = emptyMap()))

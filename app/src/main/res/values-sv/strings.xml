@@ -401,4 +401,11 @@
     <string name="lesson_turkish_missing">Den här delen har ingen förklaring på turkiska. Läs den på ditt studiespråk.</string>
     <string name="vocabulary_meaning_turkish">Betydelse på turkiska</string>
     <string name="vocabulary_turkish">Turkiska: %1$s</string>
+    <string name="language_thai">ภาษาไทย · thailändska</string>
+    <string name="explanation_also_thai">Även på thailändska</string>
+    <string name="explanation_thai_title">Förklaring på thailändska</string>
+    <string name="explanation_missing_thai">Den här frågan har ingen förklaring på thailändska. Läs förklaringen på ditt studiespråk.</string>
+    <string name="lesson_thai_missing">Den här delen har ingen förklaring på thailändska. Läs den på ditt studiespråk.</string>
+    <string name="vocabulary_meaning_thai">Betydelse på thailändska</string>
+    <string name="vocabulary_thai">Thailändska: %1$s</string>
 </resources>
