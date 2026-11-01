@@ -8,22 +8,34 @@ Keep the "unofficial" disclaimer at the very top of every full description and l
 
 ## Suomi (fi-FI)
 
-**Lyhyt kuvaus** (≤ 80): Harjoittele Suomen yhteiskunnan perusasioita. Epävirallinen harjoitussovellus.
+**Lyhyt kuvaus** (≤ 80): Opi Suomen yhteiskunta muutamassa minuutissa päivässä. Ilmainen, epävirallinen.
 
 **Kuvaus:**
 
 EPÄVIRALLINEN HARJOITUSSOVELLUS. Kansalaistreeni ei ole viranomaispalvelu eikä edusta mitään viranomaista. Se ei liity Maahanmuuttovirastoon tai muihin viranomaisiin. Kysymykset ovat sovellusta varten laadittuja harjoituksia, eivät virallisia koekysymyksiä.
 
-Kansalaistreeni auttaa harjoittelemaan Suomen yhteiskunnan perusasioita selkeällä suomella tai ruotsilla.
+Miten eduskunta säätää lait? Mitä oikeuksia sinulla on Suomessa? Mihin soitat hätätilanteessa? Kansalaistreeni tekee Suomen yhteiskunnan perusasioista lyhyitä harjoituksia, joita on helppo tehdä muutama minuutti päivässä. Ilmainen, ilman mainoksia ja ilman verkkoyhteyttä.
 
-Sovelluksessa on kahdeksan aihetta: demokratia ja päätöksenteko, perus- ja ihmisoikeudet, yhdenvertaisuus ja tasa-arvo, lait arjessa, Suomen historia, kulttuuri ja kielet, turvallisuus sekä digitaaliset palvelut. Jokaisessa aiheessa on lyhyt lukuteksti ja 25 kysymystä kummallakin kielellä.
+ETENE AIHEPOLKUA
+Kahdeksan aihetta muodostaa polun: demokratia ja päätöksenteko, perus- ja ihmisoikeudet, yhdenvertaisuus ja tasa-arvo, lait arjessa, Suomen historia, kulttuuri ja kielet, turvallisuus sekä digitaaliset palvelut. Jokaisessa aiheessa on lyhyt lukuteksti ja 25 kysymystä suomeksi ja ruotsiksi. Näet yhdellä silmäyksellä, mitkä aiheet ovat jo hallussa ja mikä on seuraavana.
 
-• Monivalinta- ja oikein/väärin-kysymyksiä
+OPI VIRHEISTÄSI
 • Selitys jokaiseen vastaukseen, myös helpolla suomella
+• Harjoittele väärin menneet kysymykset uudelleen heti harjoituksen jälkeen
+• Kokoa vaikeat kysymykset omaksi listaksi
+• Kertaus tuo kysymykset takaisin juuri oikeaan aikaan
+• Putki, viikkonäkymä ja halutessasi päivittäinen muistutus pitävät tahdin yllä
+
+TESTAA ITSESI
+Harjoituskokeessa on 20, 30 tai 40 kysymystä, ja voit halutessasi lisätä aikarajan. Tulos ja selitykset näytetään lopuksi. Koe on oma harjoituksesi: se ei ennusta virallisen kokeen läpäisyä.
+
+OMALLA KIELELLÄSI
+Harjoittelet suomeksi tai ruotsiksi, mutta valikot ja selitykset saa myös englanniksi, venäjäksi, arabiaksi, persiaksi (dari), somaliksi, ukrainaksi, turkiksi ja thaiksi. Venäjänkieliset tekstit on tarkistanut ihminen; muut tukikielet ovat konekäännöksiä, ja sovellus merkitsee ne sellaisiksi.
+
+• Kuuntele kysymykset ja selitykset ääneen
 • Sanasto suomeksi, ruotsiksi ja englanniksi
-• Kertaus muistuttaa kysymyksistä oikeaan aikaan
-• Harjoituskoe, joka ei arvioi läpäisyä
-• Toimii ilman verkkoyhteyttä, ei käyttäjätiliä, mainoksia eikä seurantaa
+• Monivalinta- ja oikein/väärin-kysymyksiä
+• Ei käyttäjätiliä, mainoksia eikä seurantaa; edistymisen voi varmuuskopioida tiedostoon
 
 VIRALLISET LÄHTEET
 Jokaisessa kysymyksessä ja oppitunnissa on linkki viralliseen lähteeseen ja tarkistuspäivä. Sovellus käyttää vain näitä lähteitä:
@@ -50,22 +62,34 @@ Tarkista ajankohtaiset tiedot aina virallisista lähteistä. Sovellus ei ennusta
 
 ## Svenska (sv-SE)
 
-**Kort beskrivning** (≤ 80): Öva grunderna om det finländska samhället. En inofficiell övningsapp.
+**Kort beskrivning** (≤ 80): Lär dig det finländska samhället på några minuter om dagen. Gratis, inofficiell.
 
 **Beskrivning:**
 
 INOFFICIELL ÖVNINGSAPP. Kansalaistreeni är inte en myndighetstjänst och företräder ingen myndighet. Den har ingen koppling till Migrationsverket eller andra myndigheter. Frågorna är övningar som skrivits för appen, inte officiella provfrågor.
 
-Kansalaistreeni hjälper dig att öva grunderna om det finländska samhället på tydlig svenska eller finska.
+Hur stiftar riksdagen lagar? Vilka rättigheter har du i Finland? Vart ringer du i en nödsituation? Kansalaistreeni gör grunderna om det finländska samhället till korta övningar som är lätta att göra några minuter om dagen. Gratis, utan reklam och utan nätverk.
 
-Appen har åtta ämnen: demokrati och beslutsfattande, grundläggande och mänskliga rättigheter, jämlikhet och jämställdhet, lagar i vardagen, Finlands historia, kultur och språk, säkerhet samt digitala tjänster. Varje ämne har en kort lästext och 25 frågor på båda språken.
+FÖLJ ÄMNESSTIGEN
+Åtta ämnen bildar en stig: demokrati och beslutsfattande, grundläggande och mänskliga rättigheter, jämlikhet och jämställdhet, lagar i vardagen, Finlands historia, kultur och språk, säkerhet samt digitala tjänster. Varje ämne har en kort lästext och 25 frågor på svenska och finska. Du ser direkt vilka ämnen du redan behärskar och vad som står på tur.
 
-• Flervals- och rätt/fel-frågor
+LÄR DIG AV MISSTAGEN
 • En förklaring till varje svar
+• Öva på frågorna du svarade fel på direkt efter övningen
+• Samla svåra frågor i en egen lista
+• Repetition tar tillbaka frågorna vid rätt tidpunkt
+• Svit, veckovy och en daglig påminnelse om du vill håller tempot uppe
+
+TESTA DIG SJÄLV
+Övningsprovet har 20, 30 eller 40 frågor, och du kan lägga till en tidsgräns om du vill. Resultatet och förklaringarna visas på slutet. Provet är din egen övning: det förutsäger inte om du klarar det officiella provet.
+
+PÅ DITT EGET SPRÅK
+Du övar på svenska eller finska, men menyer och förklaringar finns också på engelska, ryska, arabiska, persiska (dari), somaliska, ukrainska, turkiska och thai. De ryska texterna är granskade av en människa; de andra stödspråken är maskinöversättningar, och appen märker dem som sådana.
+
+• Lyssna på frågor och förklaringar med uppläsning
 • Ordlista på svenska, finska och engelska
-• Repetition påminner dig om frågor vid rätt tidpunkt
-• Ett övningsprov som inte bedömer om du skulle klara provet
-• Fungerar utan nätverk, utan konto, reklam eller spårning
+• Flervals- och rätt/fel-frågor
+• Inget konto, ingen reklam eller spårning; framstegen kan säkerhetskopieras till en fil
 
 OFFICIELLA KÄLLOR
 Varje fråga och lektion har en länk till en officiell källa och ett kontrolldatum. Appen använder endast dessa källor:
@@ -92,22 +116,34 @@ Kontrollera alltid aktuell information i officiella källor. Appen förutsäger 
 
 ## English (en-US)
 
-**Short description** (≤ 80): Practise the basics of Finnish society. An unofficial practice app.
+**Short description** (≤ 80): Learn how Finland works in a few minutes a day. Free and unofficial.
 
 **Description:**
 
 UNOFFICIAL PRACTICE APP. Kansalaistreeni is not a government service and does not represent any government entity. It is not affiliated with the Finnish Immigration Service (Migri) or any other authority. The questions are practice material written for the app, not official test questions.
 
-Kansalaistreeni helps you practise the basics of Finnish society in clear Finnish or Swedish.
+How does Parliament pass laws? What rights do you have in Finland? Who do you call in an emergency? Kansalaistreeni turns the basics of Finnish society into short exercises that are easy to fit into a few minutes a day. Free, with no ads, and it works offline.
 
-The app has eight topics: democracy and decision-making, fundamental and human rights, equality, laws in everyday life, Finnish history, culture and languages, safety, and digital services. Each topic has a short reading text and 25 questions in both languages.
+FOLLOW THE TOPIC PATH
+Eight topics form a path: democracy and decision-making, fundamental and human rights, equality, laws in everyday life, Finnish history, culture and languages, safety, and digital services. Each topic has a short reading text and 25 questions in Finnish and in Swedish. You see at a glance which topics you have mastered and what comes next.
 
-• Multiple-choice and true/false questions
+LEARN FROM YOUR MISTAKES
 • An explanation for every answer, including easy Finnish
-• Vocabulary in Finnish, Swedish and English
+• Practise the questions you got wrong right after a session
+• Collect hard questions in your own list
 • Spaced review brings questions back at the right time
-• A practice assessment that does not predict passing
-• Works offline; no account, ads or tracking
+• A streak, a weekly view and an optional daily reminder keep you going
+
+TEST YOURSELF
+The practice test has 20, 30 or 40 questions, with an optional time limit. You see your result and the explanations at the end. It is your own practice: it does not predict whether you will pass the official test.
+
+IN YOUR OWN LANGUAGE
+You practise in Finnish or Swedish, and menus and explanations are also available in English, Russian, Arabic, Persian (Dari), Somali, Ukrainian, Turkish and Thai. The Russian texts have been checked by a person; the other support languages are machine translations, and the app labels them as such.
+
+• Listen to questions and explanations read aloud
+• Vocabulary in Finnish, Swedish and English
+• Multiple-choice and true/false questions
+• No account, ads or tracking; back up your progress to a file
 
 OFFICIAL SOURCES
 Every question and lesson links to an official source with the date it was checked. The app uses only these sources:
