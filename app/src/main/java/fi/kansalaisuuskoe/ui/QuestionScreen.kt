@@ -5,7 +5,10 @@ import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.slideInVertically
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -34,13 +37,13 @@ fun Modifier.semanticsLabel(label: String) = semantics { contentDescription = la
 
 @Composable
 fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boolean, select: (String) -> Unit, submit: () -> Unit, next: () -> Unit, finish: () -> Unit, retry: () -> Unit, explanation: ExplanationPreference = ExplanationPreference.STUDY_LANGUAGE,
-    toggleMark: () -> Unit = {}, practiseAgain: (List<String>) -> Unit = {}) {
+    toggleMark: () -> Unit = {}, streak: Int = 0, practiceDays: Set<java.time.LocalDate> = emptySet(), practiseAgain: (List<String>) -> Unit = {}) {
     if (state.loading) { Box(Modifier.fillMaxSize(), contentAlignment = androidx.compose.ui.Alignment.Center) { CircularProgressIndicator(Modifier.semanticsLabel(stringResource(R.string.loading_practice))) }; return }
     if (state.question == null && !state.finished) {
         Page { item { EmptyState(stringResource(R.string.practice_failed), state.error?.let { stringResource(it) }.orEmpty(), stringResource(R.string.retry), retry) } }; return
     }
     if (state.finished) {
-        key("session-recap") { SessionRecapScreen(state, easyFinnish, explanation, finish, practiseAgain) }
+        key("session-recap") { SessionRecapScreen(state, easyFinnish, explanation, finish, practiseAgain, streak, practiceDays) }
         return
     }
     val q = requireNotNull(state.question)
@@ -181,12 +184,13 @@ private fun FeedbackSheet(correct: Boolean, answer: String?, extraPractice: Bool
     marked: Boolean, toggleMark: () -> Unit) {
     val c = Ks.colors
     Surface(color = if (correct) c.correctSoft else c.missSoft, contentColor = if (correct) c.onCorrectSoft else c.onMissSoft,
-        shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp), shadowElevation = 8.dp) {
+        shape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp), border = BorderStroke(2.dp, if (correct) c.correct else c.miss)) {
         Column(Modifier.fillMaxWidth().navigationBarsPadding().padding(start = 20.dp, end = 20.dp, top = 24.dp, bottom = 12.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
             Column(Modifier.semantics { liveRegion = LiveRegionMode.Polite }, verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    VerdictBadge(correct, size = 40.dp)
-                    Text(stringResource(if (correct) R.string.answer_correct else R.string.answer_incorrect), style = KsType.verdict, color = if (correct) c.correct else c.miss)
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                    Box(Modifier.size(52.dp).background(c.surface1, CircleShape), contentAlignment = Alignment.Center) { VerdictBadge(correct, size = 40.dp) }
+                    Text(stringResource(if (correct) R.string.answer_correct else R.string.answer_incorrect),
+                        style = KsType.verdict.copy(fontSize = 24.sp, lineHeight = 30.sp, fontWeight = FontWeight.ExtraBold), color = if (correct) c.onCorrectSoft else c.onMissSoft)
                 }
                 answer?.let {
                     val line = stringResource(R.string.correct_answer_value, it)

@@ -454,4 +454,11 @@
     <string name="read_aloud_note">The speaker button reads the question and explanation aloud with the phone\'s own Finnish or Swedish voice. Nothing is sent over the network.</string>
     <string name="slow_speech_setting">Slower speech</string>
     <string name="slow_speech_note">Read at a calmer pace.</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">Up next</string>
+    <string name="path_mastered">Mastered</string>
+    <string name="recap_tile_accuracy">Accuracy</string>
+    <string name="recap_tile_streak">Streak</string>
+    <string name="recap_week">This week</string>
+    <string name="home_path">Topic path</string>
 </resources>

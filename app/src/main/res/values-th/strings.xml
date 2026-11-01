@@ -442,4 +442,11 @@
     <string name="read_aloud_note">ปุ่มลำโพงจะอ่านคำถามและคำอธิบายด้วยเสียงภาษาฟินแลนด์หรือสวีเดนของโทรศัพท์เอง ไม่มีการส่งข้อมูลผ่านเครือข่าย</string>
     <string name="slow_speech_setting">พูดช้าลง</string>
     <string name="slow_speech_note">อ่านด้วยจังหวะที่ช้าลง</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">ถัดไป</string>
+    <string name="path_mastered">เชี่ยวชาญแล้ว</string>
+    <string name="recap_tile_accuracy">ความแม่นยำ</string>
+    <string name="recap_tile_streak">ต่อเนื่อง</string>
+    <string name="recap_week">สัปดาห์นี้</string>
+    <string name="home_path">เส้นทางหัวข้อ</string>
 </resources>

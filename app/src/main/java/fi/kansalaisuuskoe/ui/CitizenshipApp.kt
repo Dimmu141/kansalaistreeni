@@ -25,11 +25,17 @@ import fi.kansalaisuuskoe.AppContainer
 
 private data class Destination(val route: String, val label: Int, val icon: androidx.compose.ui.graphics.vector.ImageVector)
 private val destinations = listOf(
-    Destination("home", R.string.nav_home, Icons.Default.Home),
-    Destination("topics", R.string.nav_topics, Icons.AutoMirrored.Filled.List),
-    Destination("review", R.string.nav_review, Icons.Default.Refresh),
-    Destination("progress", R.string.nav_progress, Icons.Default.CheckCircle),
+    Destination("home", R.string.nav_home, KsIcons.Home),
+    Destination("topics", R.string.nav_topics, KsIcons.Grid),
+    Destination("review", R.string.nav_review, KsIcons.Repeat),
+    Destination("progress", R.string.nav_progress, KsIcons.Chart),
 )
+
+/** The local days with at least one answer, for the results screen's week strip. */
+private fun practiceDays(attempts: List<fi.kansalaisuuskoe.domain.QuestionAttempt>): Set<java.time.LocalDate> {
+    val zone = java.time.ZoneId.systemDefault()
+    return attempts.mapTo(HashSet()) { java.time.Instant.ofEpochMilli(it.answeredAt).atZone(zone).toLocalDate() }
+}
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContainer) {
@@ -96,7 +102,7 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                 state.loading -> Box(Modifier.fillMaxSize(), contentAlignment = androidx.compose.ui.Alignment.Center) { CircularProgressIndicator(Modifier.semanticsLabel(stringResource(R.string.loading_content))) }
                 state.error != null -> Page { item { EmptyState(stringResource(R.string.content_failed), stringResource(state.error), stringResource(R.string.retry), model::initialize) } }
                 else -> NavHost(navController = nav, startDestination = "home") {
-                    composable("home") { HomeScreen(state, { nav.navigate("study/all") }, { tab("topics") }, { nav.navigate("settings") }, { nav.navigate("assessments") }) }
+                    composable("home") { HomeScreen(state, { nav.navigate("study/all") }, { tab("topics") }, { nav.navigate("settings") }, { nav.navigate("assessments") }) { nav.navigate("lesson/$it") } }
                     composable("topics") { TopicsScreen(state, { nav.navigate("vocabulary") }) { nav.navigate("lesson/$it") } }
                     composable("assessments") {
                         val assessmentModel: AssessmentViewModel = viewModel(factory = viewModelFactory { initializer { AssessmentViewModel(container.assessments) } })
@@ -158,7 +164,7 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                         QuestionScreen(questionState, state.snapshot.topics, state.settings.easyFinnish,
                             questionModel::select, questionModel::submit, questionModel::next,
                             { nav.navigate("home") { popUpTo("home") { inclusive = false }; launchSingleTop = true } }, questionModel::load, state.settings.explanation,
-                            questionModel::toggleMark) { ids ->
+                            questionModel::toggleMark, streak = state.summary.streak, practiceDays = practiceDays(state.snapshot.attempts)) { ids ->
                             // The retry replaces the finished session, so Back returns to where that session started.
                             nav.navigate("study/retry?questionIds=${Uri.encode(PracticeRequest.retryArgument(ids))}") { popUpTo(backStack.destination.id) { inclusive = true } }
                         }

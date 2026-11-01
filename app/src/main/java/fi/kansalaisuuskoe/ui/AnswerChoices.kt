@@ -109,20 +109,20 @@ private fun Choice(question: Question, optionId: String, selected: String?, enab
         OptionState.Selected -> c.brand; OptionState.Correct -> c.correct; OptionState.Miss -> c.miss; else -> c.line
     }, tween(KsMotion.SELECT), label = "border")
     val ink = when (state) { OptionState.Correct -> c.onCorrectSoft; OptionState.Miss -> c.onMissSoft; else -> c.ink }
-    val width by animateDpAsState(if (state == OptionState.Resting || state == OptionState.Dimmed) 1.5.dp else 2.dp, tween(KsMotion.SELECT), label = "width")
     val opacity by animateFloatAsState(if (state == OptionState.Dimmed) 0.55f else 1f, tween(KsMotion.SELECT), label = "dim")
     val interaction = remember { MutableInteractionSource() }
-    val lifted = state == OptionState.Resting || state == OptionState.Selected
+    // The edge takes the border's colour, so the whole option reads as one solid, pressable piece.
+    val edge = if (state == OptionState.Resting || state == OptionState.Dimmed) c.line else stroke
+    val shape = MaterialTheme.shapes.medium
 
     Surface(
         modifier = modifier
             .graphicsLayer { scaleX = scale; scaleY = scale; translationX = offset * density }
-            .pressScale(interaction, 0.98f)
             .alpha(opacity)
             .selectable(selected = isSelected, enabled = enabled, role = Role.RadioButton, interactionSource = interaction, indication = null,
-                onClick = { view.tapHaptic(); select(optionId) }),
-        color = fill, contentColor = ink, shape = MaterialTheme.shapes.medium,
-        border = BorderStroke(width, stroke), shadowElevation = if (lifted) 1.dp else 0.dp,
+                onClick = { view.tapHaptic(); select(optionId) })
+            .pressEdge(interaction, edge, shape, enabled = enabled),
+        color = fill, contentColor = ink, shape = shape, border = BorderStroke(2.dp, stroke),
     ) {
         val tag = when (state) {
             // Text labels keep feedback understandable without colour.

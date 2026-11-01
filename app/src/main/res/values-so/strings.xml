@@ -454,4 +454,11 @@
     <string name="read_aloud_note">Badhanka sameecaddu wuxuu kor ugu akhriyaa su\'aasha iyo sharaxaadda codka taleefanka ee Finnish ama Swedish. Wax lama diro internetka.</string>
     <string name="slow_speech_setting">Hadal tartiib ah</string>
     <string name="slow_speech_note">Ku akhri xawaare deggan.</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">Xiga xigta</string>
+    <string name="path_mastered">La bartay</string>
+    <string name="recap_tile_accuracy">Saxnaan</string>
+    <string name="recap_tile_streak">Maalmo xiriir ah</string>
+    <string name="recap_week">Toddobaadkan</string>
+    <string name="home_path">Jidka mawduucyada</string>
 </resources>

@@ -454,4 +454,11 @@
     <string name="read_aloud_note">Högtalarknappen läser upp frågan och förklaringen med telefonens egen finska eller svenska röst. Inget skickas över nätet.</string>
     <string name="slow_speech_setting">Långsammare tal</string>
     <string name="slow_speech_note">Läs i lugnare takt.</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">Nästa</string>
+    <string name="path_mastered">Kan du</string>
+    <string name="recap_tile_accuracy">Träffsäkerhet</string>
+    <string name="recap_tile_streak">Svit</string>
+    <string name="recap_week">Den här veckan</string>
+    <string name="home_path">Ämnesstigen</string>
 </resources>

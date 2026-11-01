@@ -458,4 +458,11 @@
     <string name="read_aloud_note">Kaiutinpainike lukee kysymyksen ja selityksen ääneen puhelimen omalla suomen- tai ruotsinkielisellä äänellä. Mitään ei lähetetä verkkoon.</string>
     <string name="slow_speech_setting">Hitaampi puhe</string>
     <string name="slow_speech_note">Lue rauhallisempaan tahtiin.</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">Seuraavaksi</string>
+    <string name="path_mastered">Hallussa</string>
+    <string name="recap_tile_accuracy">Tarkkuus</string>
+    <string name="recap_tile_streak">Putki</string>
+    <string name="recap_week">Tämä viikko</string>
+    <string name="home_path">Aihepolku</string>
 </resources>

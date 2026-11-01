@@ -7,7 +7,13 @@ import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.drawOutline
+import androidx.compose.ui.graphics.drawscope.translate
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
@@ -56,6 +62,23 @@ internal fun Modifier.pressScale(interaction: InteractionSource, pressed: Float 
     return graphicsLayer { scaleX = scale; scaleY = scale }
 }
 
+/** The solid lower edge under a pressable control: a darker shade of its face. */
+internal fun Color.edge(): Color = lerp(this, Color.Black, 0.28f)
+
+/**
+ * Tactile depth: a solid edge sits [depth] below the face, and pressing pushes the face down onto it. The edge is
+ * drawn in the space this modifier reserves, so the face keeps its size; place it after semantics so a control's
+ * touch bounds include the edge.
+ */
+@Composable
+internal fun Modifier.pressEdge(interaction: InteractionSource, edge: Color, shape: Shape, depth: Dp = 4.dp, enabled: Boolean = true): Modifier {
+    val isPressed by interaction.collectIsPressedAsState()
+    val down by animateDpAsState(if (isPressed && enabled) depth else 0.dp, tween(KsMotion.PRESS), label = "edge")
+    return padding(bottom = depth)
+        .drawBehind { translate(top = depth.toPx()) { drawOutline(shape.createOutline(size, layoutDirection, this), edge) } }
+        .graphicsLayer { translationY = down.toPx() }
+}
+
 internal fun View.tapHaptic() { performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY) }
 
 /** Confirm or reject on reveal (API 30+); older devices stay silent rather than buzz ambiguously. */
@@ -84,32 +107,47 @@ internal object KsIcons {
     val Bookmark =strokeIcon("Bookmark", 2f, "M7 3.5h10v17l-5-3.6-5 3.6z")
     val BookmarkFilled = strokeIcon("BookmarkFilled", 2f, "M7 3.5h10v17l-5-3.6-5 3.6z", filled = true)
     val Document = strokeIcon("Document", 2f, "M7 3.5h7l4 4v13H7z", "M14 3.5v4h4", "M10 12h5M10 15.5h5")
+    val Play = strokeIcon("Play", 1.6f, "M8.5 5.5v13l10-6.5z", filled = true)
+    val Home = strokeIcon("Home", 2.2f, "M3.5 11l8.5-7 8.5 7v8.5a1 1 0 0 1-1 1h-5v-6h-5v6h-5a1 1 0 0 1-1-1z")
+    val Grid = strokeIcon("Grid", 2.2f, "M4 4h6.5v6.5H4z", "M13.5 4H20v6.5h-6.5z", "M4 13.5h6.5V20H4z", "M13.5 13.5H20V20h-6.5z")
+    val Repeat = strokeIcon("Repeat", 2.2f, "M4 12a8 8 0 1 0 2.6-5.9L4 8.5", "M4 3.5v5h5")
+    val Chart = strokeIcon("Chart", 2.2f, "M5 20V11M11 20V5M17 20v-7M3 20h18")
 }
 
 // ---------- Buttons ----------
 
-enum class KsTone { Primary, Tonal, Correct, Miss }
+/** Outline is the quiet secondary action; Inverse is the primary on a brand-coloured card. */
+enum class KsTone { Primary, Tonal, Correct, Miss, Outline, Inverse }
 
-/** Pill button, 56dp tall, that scales on press. One primary per screen; Correct/Miss only inside the feedback sheet. */
+internal val KsButtonShape = RoundedCornerShape(16.dp)
+
+/** A chunky 56dp button on a solid edge that it presses down into. One primary per screen; Correct/Miss only inside the feedback sheet. */
 @Composable
 internal fun KsButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifier, enabled: Boolean = true, tone: KsTone = KsTone.Primary) {
     val c = Ks.colors
     val view = LocalView.current
     val interaction = remember { MutableInteractionSource() }
-    val pressed by interaction.collectIsPressedAsState()
     val (container, content) = when (tone) {
-        KsTone.Primary -> (if (pressed) c.brandPressed else c.brand) to c.onBrand
+        KsTone.Primary -> c.brand to c.onBrand
         KsTone.Tonal -> c.brandSoft to c.onBrandSoft
         KsTone.Correct -> c.correct to c.onCorrect
         KsTone.Miss -> c.miss to c.onMiss
+        KsTone.Outline -> c.surface1 to c.brand
+        KsTone.Inverse -> c.surface1 to c.brand
     }
-    val fill by animateColorAsState(container, tween(KsMotion.PRESS), label = "button")
+    val edge = when {
+        !enabled -> c.line
+        tone == KsTone.Outline -> c.line
+        tone == KsTone.Inverse -> c.brandPressed.edge()
+        else -> container.edge()
+    }
     Button(
-        onClick = { view.tapHaptic(); onClick() }, enabled = enabled, interactionSource = interaction, shape = CircleShape,
-        colors = ButtonDefaults.buttonColors(containerColor = fill, contentColor = content, disabledContainerColor = c.surface2, disabledContentColor = c.inkMuted),
+        onClick = { view.tapHaptic(); onClick() }, enabled = enabled, interactionSource = interaction, shape = KsButtonShape,
+        colors = ButtonDefaults.buttonColors(containerColor = container, contentColor = content, disabledContainerColor = c.surface2, disabledContentColor = c.inkMuted),
+        border = if (tone == KsTone.Outline && enabled) BorderStroke(2.dp, c.line) else null,
         contentPadding = PaddingValues(horizontal = 24.dp),
-        modifier = modifier.heightIn(min = 56.dp).pressScale(interaction),
-    ) { Text(text, style = KsType.label, textAlign = TextAlign.Center) }
+        modifier = modifier.heightIn(min = 60.dp).pressEdge(interaction, edge, KsButtonShape, enabled = enabled),
+    ) { Text(text, style = KsType.label.copy(fontWeight = FontWeight.ExtraBold), textAlign = TextAlign.Center) }
 }
 
 // ---------- Chips ----------
@@ -172,7 +210,7 @@ internal fun ProgressSegments(segments: List<Segment>, modifier: Modifier = Modi
             val color by animateColorAsState(when (segment) {
                 Segment.Upcoming -> c.surface2; Segment.Current -> c.brand; Segment.Correct -> c.correct; Segment.Miss -> c.miss
             }, tween(KsMotion.PROGRESS), label = "segment")
-            Box(Modifier.weight(1f).height(6.dp).clip(RoundedCornerShape(3.dp)).background(color))
+            Box(Modifier.weight(1f).height(10.dp).clip(RoundedCornerShape(5.dp)).background(color))
         }
     }
 }

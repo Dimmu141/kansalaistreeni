@@ -478,4 +478,11 @@
     <string name="read_aloud_note">Кнопка динамика читает вопрос и объяснение вслух голосом самого телефона на финском или шведском. Ничего не отправляется в сеть.</string>
     <string name="slow_speech_setting">Медленная речь</string>
     <string name="slow_speech_note">Читать в более спокойном темпе.</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">Далее</string>
+    <string name="path_mastered">Освоено</string>
+    <string name="recap_tile_accuracy">Точность</string>
+    <string name="recap_tile_streak">Серия</string>
+    <string name="recap_week">Эта неделя</string>
+    <string name="home_path">Путь по темам</string>
 </resources>

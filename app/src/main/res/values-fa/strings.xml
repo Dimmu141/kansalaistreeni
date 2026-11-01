@@ -454,4 +454,11 @@
     <string name="read_aloud_note">دکمهٔ بلندگو سؤال و توضیح را با صدای خود گوشی به فنلاندی یا سوئدی می‌خواند. چیزی به اینترنت فرستاده نمی‌شود.</string>
     <string name="slow_speech_setting">گفتار آهسته‌تر</string>
     <string name="slow_speech_note">با سرعتی آرام‌تر بخوان.</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">بعدی</string>
+    <string name="path_mastered">تسلط کامل</string>
+    <string name="recap_tile_accuracy">دقت</string>
+    <string name="recap_tile_streak">روزهای پیاپی</string>
+    <string name="recap_week">این هفته</string>
+    <string name="home_path">مسیر موضوع‌ها</string>
 </resources>

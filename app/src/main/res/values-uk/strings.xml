@@ -478,4 +478,11 @@
     <string name="read_aloud_note">Кнопка динаміка читає питання й пояснення вголос голосом самого телефона фінською або шведською. Нічого не надсилається в мережу.</string>
     <string name="slow_speech_setting">Повільніше мовлення</string>
     <string name="slow_speech_note">Читати в спокійнішому темпі.</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">Далі</string>
+    <string name="path_mastered">Опановано</string>
+    <string name="recap_tile_accuracy">Точність</string>
+    <string name="recap_tile_streak">Серія</string>
+    <string name="recap_week">Цей тиждень</string>
+    <string name="home_path">Шлях за темами</string>
 </resources>

@@ -502,4 +502,11 @@
     <string name="read_aloud_note">يقرأ زر السماعة السؤال والشرح بصوت الهاتف نفسه بالفنلندية أو السويدية. لا يُرسل أي شيء عبر الشبكة.</string>
     <string name="slow_speech_setting">كلام أبطأ</string>
     <string name="slow_speech_note">القراءة بوتيرة أهدأ.</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">التالي</string>
+    <string name="path_mastered">متقن</string>
+    <string name="recap_tile_accuracy">الدقة</string>
+    <string name="recap_tile_streak">سلسلة الأيام</string>
+    <string name="recap_week">هذا الأسبوع</string>
+    <string name="home_path">مسار المواضيع</string>
 </resources>

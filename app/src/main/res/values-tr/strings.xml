@@ -454,4 +454,11 @@
     <string name="read_aloud_note">Hoparlör düğmesi soruyu ve açıklamayı telefonun kendi Fince veya İsveççe sesiyle okur. İnternete hiçbir şey gönderilmez.</string>
     <string name="slow_speech_setting">Daha yavaş konuşma</string>
     <string name="slow_speech_note">Daha sakin bir hızda oku.</string>
+    <!-- Draft B: home path and results celebration -->
+    <string name="home_next_up">Sıradaki</string>
+    <string name="path_mastered">Öğrenildi</string>
+    <string name="recap_tile_accuracy">Doğruluk</string>
+    <string name="recap_tile_streak">Seri</string>
+    <string name="recap_week">Bu hafta</string>
+    <string name="home_path">Konu yolu</string>
 </resources>
