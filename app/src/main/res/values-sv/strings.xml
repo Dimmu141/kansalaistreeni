@@ -69,8 +69,6 @@
     <string name="language_english">English · engelska</string>
     <string name="study_language">Studiespråk</string>
     <string name="explanation_language">Förklaringsspråk</string>
-    <string name="sound_title">Ljud</string>
-    <string name="sound_pending">Av · ljudåterkoppling kommer senare</string>
     <string name="version_details">Version %1$s · %2$s\nInget konto, inga annonser och ingen spårning. Appen fungerar offline.</string>
     <string name="practice_failed">Övningen kunde inte öppnas</string>
     <string name="practice_no_questions">Inga frågor i den här övningen</string>
@@ -444,4 +442,16 @@
     <string name="hard_note">Frågor som du själv har valt. Ta bort en fråga från listan när den går bra.</string>
     <string name="hard_practice">Öva på svåra · %1$s</string>
     <string name="error_save_mark">Markeringen kunde inte sparas. Försök igen.</string>
+    <string name="read_aloud">Läs upp</string>
+    <string name="read_aloud_stop">Sluta läsa</string>
+    <string name="voice_missing_title">Ingen talröst hittades</string>
+    <string name="voice_missing_fi">Telefonen har ingen finsk talröst som fungerar utan nätverksanslutning. Du kan installera en i Androids inställningar för text till tal.</string>
+    <string name="voice_missing_sv">Telefonen har ingen svensk talröst som fungerar utan nätverksanslutning. Du kan installera en i Androids inställningar för text till tal.</string>
+    <string name="voice_no_engine">Telefonen har ingen tjänst för text till tal, så uppläsning är inte tillgänglig.</string>
+    <string name="voice_install">Installera röst</string>
+    <string name="voice_close">Stäng</string>
+    <string name="read_aloud_setting">Uppläsning</string>
+    <string name="read_aloud_note">Högtalarknappen läser upp frågan och förklaringen med telefonens egen finska eller svenska röst. Inget skickas över nätet.</string>
+    <string name="slow_speech_setting">Långsammare tal</string>
+    <string name="slow_speech_note">Läs i lugnare takt.</string>
 </resources>

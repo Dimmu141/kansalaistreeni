@@ -69,8 +69,6 @@
     <string name="language_english">English</string>
     <string name="study_language">Study language</string>
     <string name="explanation_language">Explanation language</string>
-    <string name="sound_title">Sound</string>
-    <string name="sound_pending">Off · audio feedback coming later</string>
     <string name="version_details">Version %1$s · %2$s\nNo account, ads or tracking. The app works offline.</string>
     <string name="practice_failed">Practice could not be opened</string>
     <string name="practice_no_questions">No questions in this session</string>
@@ -444,4 +442,16 @@
     <string name="hard_note">Questions you chose yourself. Remove a question from the list once you know it.</string>
     <string name="hard_practice">Practise hard questions · %1$s</string>
     <string name="error_save_mark">The mark could not be saved. Please try again.</string>
+    <string name="read_aloud">Read aloud</string>
+    <string name="read_aloud_stop">Stop reading</string>
+    <string name="voice_missing_title">No voice found</string>
+    <string name="voice_missing_fi">This phone has no Finnish voice that works without a network connection. You can install one in Android\'s text-to-speech settings.</string>
+    <string name="voice_missing_sv">This phone has no Swedish voice that works without a network connection. You can install one in Android\'s text-to-speech settings.</string>
+    <string name="voice_no_engine">This phone has no text-to-speech service, so reading aloud is not available.</string>
+    <string name="voice_install">Install voice</string>
+    <string name="voice_close">Close</string>
+    <string name="read_aloud_setting">Read aloud</string>
+    <string name="read_aloud_note">The speaker button reads the question and explanation aloud with the phone\'s own Finnish or Swedish voice. Nothing is sent over the network.</string>
+    <string name="slow_speech_setting">Slower speech</string>
+    <string name="slow_speech_note">Read at a calmer pace.</string>
 </resources>

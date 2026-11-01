@@ -65,7 +65,8 @@ class LocaleFlowTest {
         await("Correct")
         rule.activityRule.scenario.recreate()
         await("Correct")
-        click("In easy Finnish")
+        // Scroll rather than tap: a tapped label can sit under the docked feedback sheet's Next button.
+        rule.onNode(hasScrollAction()).performScrollToNode(hasText("In easy Finnish"))
         text("Eduskunta päättää Suomen laeista.").assertExists()
         click("Important vocabulary")
         // The key-word list shows translations on one line: "power to make laws · ...".

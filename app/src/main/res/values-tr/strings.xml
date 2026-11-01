@@ -69,8 +69,6 @@
     <string name="language_english">English · İngilizce</string>
     <string name="study_language">Çalışma dili</string>
     <string name="explanation_language">Açıklama dili</string>
-    <string name="sound_title">Ses</string>
-    <string name="sound_pending">Kapalı · sesli geri bildirim daha sonra gelecek</string>
     <string name="version_details">Sürüm %1$s · %2$s\nHesap, reklam veya izleme yok. Uygulama çevrimdışı çalışır.</string>
     <string name="practice_failed">Alıştırma açılamadı</string>
     <string name="practice_no_questions">Bu oturumda soru yok</string>
@@ -444,4 +442,16 @@
     <string name="hard_note">Kendi seçtiğiniz sorular. Bir soruyu öğrendiğinizde listeden çıkarın.</string>
     <string name="hard_practice">Zor soruları çalış · %1$s</string>
     <string name="error_save_mark">İşaret kaydedilemedi. Lütfen tekrar deneyin.</string>
+    <string name="read_aloud">Sesli oku</string>
+    <string name="read_aloud_stop">Okumayı durdur</string>
+    <string name="voice_missing_title">Ses bulunamadı</string>
+    <string name="voice_missing_fi">Bu telefonda internetsiz çalışan Fince bir ses yok. Android\'in metin okuma ayarlarından yükleyebilirsiniz.</string>
+    <string name="voice_missing_sv">Bu telefonda internetsiz çalışan İsveççe bir ses yok. Android\'in metin okuma ayarlarından yükleyebilirsiniz.</string>
+    <string name="voice_no_engine">Bu telefonda metin okuma hizmeti yok, bu yüzden sesli okuma kullanılamıyor.</string>
+    <string name="voice_install">Sesi yükle</string>
+    <string name="voice_close">Kapat</string>
+    <string name="read_aloud_setting">Sesli okuma</string>
+    <string name="read_aloud_note">Hoparlör düğmesi soruyu ve açıklamayı telefonun kendi Fince veya İsveççe sesiyle okur. İnternete hiçbir şey gönderilmez.</string>
+    <string name="slow_speech_setting">Daha yavaş konuşma</string>
+    <string name="slow_speech_note">Daha sakin bir hızda oku.</string>
 </resources>

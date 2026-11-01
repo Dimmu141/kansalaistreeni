@@ -7,6 +7,10 @@
          wake-lock and boot permissions so the reminder survives a restart. -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" tools:node="remove" />
+    <!-- Read-aloud binds to the phone's text-to-speech engine, which Android 11+ must be told to show the app. -->
+    <queries>
+        <intent><action android:name="android.intent.action.TTS_SERVICE" /></intent>
+    </queries>
     <application
         android:name=".CitizenshipApplication"
         android:allowBackup="false"

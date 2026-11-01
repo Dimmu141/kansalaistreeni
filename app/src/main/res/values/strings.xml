@@ -69,8 +69,6 @@
     <string name="language_english">English · englanti</string>
     <string name="study_language">Harjoittelukieli</string>
     <string name="explanation_language">Selitysten kieli</string>
-    <string name="sound_title">Äänet</string>
-    <string name="sound_pending">Pois · äänipalaute tulossa</string>
     <string name="version_details">Versio %1$s · %2$s\nEi käyttäjätiliä, mainoksia tai seurantaa. Sovellus toimii ilman verkkoyhteyttä.</string>
     <string name="practice_failed">Harjoitus ei avautunut</string>
     <string name="practice_no_questions">Ei kysymyksiä tässä harjoituksessa</string>
@@ -448,4 +446,16 @@
     <string name="hard_note">Itse valitsemasi kysymykset. Poista kysymys listalta, kun se sujuu.</string>
     <string name="hard_practice">Harjoittele vaikeita · %1$s</string>
     <string name="error_save_mark">Merkintää ei voitu tallentaa. Yritä uudelleen.</string>
+    <string name="read_aloud">Lue ääneen</string>
+    <string name="read_aloud_stop">Lopeta lukeminen</string>
+    <string name="voice_missing_title">Puheääntä ei löytynyt</string>
+    <string name="voice_missing_fi">Puhelimeen ei ole asennettu suomenkielistä puheääntä, joka toimii ilman verkkoyhteyttä. Voit asentaa sen Androidin tekstistä puheeksi -asetuksista.</string>
+    <string name="voice_missing_sv">Puhelimeen ei ole asennettu ruotsinkielistä puheääntä, joka toimii ilman verkkoyhteyttä. Voit asentaa sen Androidin tekstistä puheeksi -asetuksista.</string>
+    <string name="voice_no_engine">Puhelimessa ei ole tekstistä puheeksi -palvelua, joten ääneen lukeminen ei ole käytettävissä.</string>
+    <string name="voice_install">Asenna ääni</string>
+    <string name="voice_close">Sulje</string>
+    <string name="read_aloud_setting">Ääneen lukeminen</string>
+    <string name="read_aloud_note">Kaiutinpainike lukee kysymyksen ja selityksen ääneen puhelimen omalla suomen- tai ruotsinkielisellä äänellä. Mitään ei lähetetä verkkoon.</string>
+    <string name="slow_speech_setting">Hitaampi puhe</string>
+    <string name="slow_speech_note">Lue rauhallisempaan tahtiin.</string>
 </resources>

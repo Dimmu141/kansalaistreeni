@@ -69,8 +69,6 @@
     <string name="language_english">English · الإنجليزية</string>
     <string name="study_language">لغة الدراسة</string>
     <string name="explanation_language">لغة الشرح</string>
-    <string name="sound_title">الصوت</string>
-    <string name="sound_pending">متوقف · ستأتي التنبيهات الصوتية لاحقاً</string>
     <string name="version_details">الإصدار %1$s · %2$s\nبلا حساب ولا إعلانات ولا تتبّع. يعمل التطبيق دون اتصال.</string>
     <string name="practice_failed">تعذّر فتح التدريب</string>
     <string name="practice_no_questions">لا توجد أسئلة في هذه الجلسة</string>
@@ -492,4 +490,16 @@
     <string name="hard_note">أسئلة اخترتها بنفسك. أزل السؤال من القائمة عندما تتقنه.</string>
     <string name="hard_practice">تدرّب على الأسئلة الصعبة · %1$s</string>
     <string name="error_save_mark">تعذّر حفظ العلامة. حاول مرة أخرى.</string>
+    <string name="read_aloud">اقرأ بصوت عالٍ</string>
+    <string name="read_aloud_stop">أوقف القراءة</string>
+    <string name="voice_missing_title">لم يُعثر على صوت</string>
+    <string name="voice_missing_fi">لا يوجد في هذا الهاتف صوت فنلندي يعمل دون اتصال بالشبكة. يمكنك تثبيته من إعدادات تحويل النص إلى كلام في Android.</string>
+    <string name="voice_missing_sv">لا يوجد في هذا الهاتف صوت سويدي يعمل دون اتصال بالشبكة. يمكنك تثبيته من إعدادات تحويل النص إلى كلام في Android.</string>
+    <string name="voice_no_engine">لا توجد في هذا الهاتف خدمة لتحويل النص إلى كلام، لذا القراءة بصوت عالٍ غير متاحة.</string>
+    <string name="voice_install">ثبّت الصوت</string>
+    <string name="voice_close">إغلاق</string>
+    <string name="read_aloud_setting">القراءة بصوت عالٍ</string>
+    <string name="read_aloud_note">يقرأ زر السماعة السؤال والشرح بصوت الهاتف نفسه بالفنلندية أو السويدية. لا يُرسل أي شيء عبر الشبكة.</string>
+    <string name="slow_speech_setting">كلام أبطأ</string>
+    <string name="slow_speech_note">القراءة بوتيرة أهدأ.</string>
 </resources>

@@ -24,7 +24,10 @@ import fi.kansalaisuuskoe.domain.Question
 internal fun QuestionExplanation(question: Question, easyFinnish: Boolean, preference: ExplanationPreference, title: Int = R.string.why) {
     val c = Ks.colors
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        Text(stringResource(title), style = KsType.title.copy(fontSize = 20.sp, lineHeight = 26.sp), modifier = Modifier.semantics { heading() })
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(stringResource(title), style = KsType.title.copy(fontSize = 20.sp, lineHeight = 26.sp), modifier = Modifier.weight(1f).semantics { heading() })
+            SpeakButton("explanation-${question.id}", question.explanation, question.language)
+        }
         StudyText(question.explanation, question.language, KsType.bodyLarge)
         if (question.language == "fi" && easyFinnish && question.easyExplanation != null) {
             Surface(color = c.surface2, contentColor = c.ink, shape = MaterialTheme.shapes.medium) {

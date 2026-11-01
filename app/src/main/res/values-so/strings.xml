@@ -69,8 +69,6 @@
     <string name="language_english">English · Ingiriis</string>
     <string name="study_language">Luqadda waxbarashada</string>
     <string name="explanation_language">Luqadda sharaxaadda</string>
-    <string name="sound_title">Codka</string>
-    <string name="sound_pending">Dansan · jawaab cod ah ayaa mar dambe imanaysa</string>
     <string name="version_details">Nooca %1$s · %2$s\nAkoon, xayaysiis iyo raad-raac midna ma leh. App-ku wuxuu shaqeeyaa internet la\'aan.</string>
     <string name="practice_failed">Tababarka lama furi karin</string>
     <string name="practice_no_questions">Su\'aalo kuma jiraan fadhigan</string>
@@ -444,4 +442,16 @@
     <string name="hard_note">Su\'aalo adigu aad dooratay. Ka saar su\'aasha liiska marka ay kuu fududaato.</string>
     <string name="hard_practice">Ku tababaro kuwa adag · %1$s</string>
     <string name="error_save_mark">Calaamadda lama kaydin karin. Isku day mar kale.</string>
+    <string name="read_aloud">Kor u akhri</string>
+    <string name="read_aloud_stop">Jooji akhrinta</string>
+    <string name="voice_missing_title">Cod lama helin</string>
+    <string name="voice_missing_fi">Taleefankan ma laha cod Finnish ah oo shaqeeya iyada oo aan internet lahayn. Waxaad ku rakibi kartaa dejinta qoraal-ilaa-hadal ee Android.</string>
+    <string name="voice_missing_sv">Taleefankan ma laha cod Swedish ah oo shaqeeya iyada oo aan internet lahayn. Waxaad ku rakibi kartaa dejinta qoraal-ilaa-hadal ee Android.</string>
+    <string name="voice_no_engine">Taleefankan ma laha adeegga qoraal-ilaa-hadal, sidaa darteed kor u akhrintu ma shaqeyso.</string>
+    <string name="voice_install">Rakib codka</string>
+    <string name="voice_close">Xir</string>
+    <string name="read_aloud_setting">Kor u akhrin</string>
+    <string name="read_aloud_note">Badhanka sameecaddu wuxuu kor ugu akhriyaa su\'aasha iyo sharaxaadda codka taleefanka ee Finnish ama Swedish. Wax lama diro internetka.</string>
+    <string name="slow_speech_setting">Hadal tartiib ah</string>
+    <string name="slow_speech_note">Ku akhri xawaare deggan.</string>
 </resources>

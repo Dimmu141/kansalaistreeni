@@ -69,8 +69,6 @@
     <string name="language_english">English · англійська</string>
     <string name="study_language">Мова навчання</string>
     <string name="explanation_language">Мова пояснень</string>
-    <string name="sound_title">Звук</string>
-    <string name="sound_pending">Вимкнено · звукові сигнали з\'являться пізніше</string>
     <string name="version_details">Версія %1$s · %2$s\nБез облікового запису, реклами й відстеження. Застосунок працює офлайн.</string>
     <string name="practice_failed">Не вдалося відкрити практику</string>
     <string name="practice_no_questions">У цьому занятті немає питань</string>
@@ -468,4 +466,16 @@
     <string name="hard_note">Питання, які ви обрали самі. Приберіть питання зі списку, коли воно стане легким.</string>
     <string name="hard_practice">Тренувати складні · %1$s</string>
     <string name="error_save_mark">Не вдалося зберегти позначку. Спробуйте ще раз.</string>
+    <string name="read_aloud">Прочитати вголос</string>
+    <string name="read_aloud_stop">Зупинити читання</string>
+    <string name="voice_missing_title">Голос не знайдено</string>
+    <string name="voice_missing_fi">На телефоні немає фінського голосу, що працює без інтернету. Його можна встановити в налаштуваннях синтезу мовлення Android.</string>
+    <string name="voice_missing_sv">На телефоні немає шведського голосу, що працює без інтернету. Його можна встановити в налаштуваннях синтезу мовлення Android.</string>
+    <string name="voice_no_engine">На телефоні немає служби синтезу мовлення, тому читання вголос недоступне.</string>
+    <string name="voice_install">Встановити голос</string>
+    <string name="voice_close">Закрити</string>
+    <string name="read_aloud_setting">Читання вголос</string>
+    <string name="read_aloud_note">Кнопка динаміка читає питання й пояснення вголос голосом самого телефона фінською або шведською. Нічого не надсилається в мережу.</string>
+    <string name="slow_speech_setting">Повільніше мовлення</string>
+    <string name="slow_speech_note">Читати в спокійнішому темпі.</string>
 </resources>

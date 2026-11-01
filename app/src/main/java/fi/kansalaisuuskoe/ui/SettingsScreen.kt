@@ -95,7 +95,8 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
         item { HorizontalDivider() }
         item { ReminderSetting(state.settings.reminder, state.settings.reminderMinuteOfDay, model::reminder, model::reminderTime) }
         item { HorizontalDivider() }
-        item { FutureSetting(stringResource(R.string.sound_title), stringResource(R.string.sound_pending)) }
+        item { SwitchSetting(stringResource(R.string.read_aloud_setting), stringResource(R.string.read_aloud_note), state.settings.readAloud, model::readAloud) }
+        if (state.settings.readAloud) item { SwitchSetting(stringResource(R.string.slow_speech_setting), stringResource(R.string.slow_speech_note), state.settings.slowSpeech, model::slowSpeech) }
         item { HorizontalDivider() }
         item { OutlinedButton(onClick = openMaterial, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.material_title)) } }
         item { OutlinedButton(onClick = openBackup, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.backup_title)) } }
@@ -211,10 +212,15 @@ private fun ReminderSetting(enabled: Boolean, minuteOfDay: Int, setEnabled: (Boo
     }
 }
 
+/** A titled switch row with a short explanation; the switch is labelled with the title for screen readers. */
 @Composable
-private fun FutureSetting(title: String, detail: String) {
-    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        Text(title, style = MaterialTheme.typography.titleSmall)
-        Text(detail, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+private fun SwitchSetting(title: String, note: String, checked: Boolean, change: (Boolean) -> Unit) {
+    Row(Modifier.fillMaxWidth(), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+        Column(Modifier.weight(1f)) {
+            Text(title, style = MaterialTheme.typography.titleMedium)
+            Text(note, style = MaterialTheme.typography.bodySmall)
+        }
+        Spacer(Modifier.width(8.dp))
+        Switch(checked = checked, onCheckedChange = change, modifier = Modifier.semanticsLabel(title))
     }
 }

@@ -31,7 +31,8 @@ enum class ExplanationPreference(val tag: String?) {
     }
 }
 data class StudySettings(val easyFinnish: Boolean = true, val theme: ThemePreference = ThemePreference.SYSTEM, val interfaceLanguage: InterfaceLanguage = InterfaceLanguage.FINNISH, val studyLanguage: StudyLanguage = StudyLanguage.FINNISH, val explanation: ExplanationPreference = ExplanationPreference.STUDY_LANGUAGE, val onboardingSeen: Boolean = true,
-    val reminder: Boolean = false, val reminderMinuteOfDay: Int = StudyReminder.DEFAULT_MINUTE_OF_DAY)
+    val reminder: Boolean = false, val reminderMinuteOfDay: Int = StudyReminder.DEFAULT_MINUTE_OF_DAY,
+    val readAloud: Boolean = true, val slowSpeech: Boolean = false)
 class SettingsRepository(context: Context) {
     private val store = context.settingsStore
     private val easyKey = booleanPreferencesKey("easy_finnish")
@@ -42,6 +43,8 @@ class SettingsRepository(context: Context) {
     private val onboardingKey = booleanPreferencesKey("onboarding_seen")
     private val reminderKey = booleanPreferencesKey("reminder")
     private val reminderTimeKey = intPreferencesKey("reminder_minute_of_day")
+    private val readAloudKey = booleanPreferencesKey("read_aloud")
+    private val slowSpeechKey = booleanPreferencesKey("slow_speech")
     val settings = store.data.catch { error -> if (error is IOException) emit(emptyPreferences()) else throw error }.map { prefs ->
         val study = StudyLanguage.entries.firstOrNull { it.tag == prefs[studyLanguageKey] } ?: StudyLanguage.FINNISH
         StudySettings(prefs[easyKey] ?: true, ThemePreference.entries.firstOrNull { it.name == prefs[themeKey] } ?: ThemePreference.SYSTEM,
@@ -50,7 +53,9 @@ class SettingsRepository(context: Context) {
             ExplanationPreference.entries.firstOrNull { it.name == prefs[explanationKey] } ?: ExplanationPreference.STUDY_LANGUAGE,
             prefs[onboardingKey] ?: false,
             prefs[reminderKey] ?: false,
-            prefs[reminderTimeKey]?.takeIf { it in 0 until 24 * 60 } ?: StudyReminder.DEFAULT_MINUTE_OF_DAY)
+            prefs[reminderTimeKey]?.takeIf { it in 0 until 24 * 60 } ?: StudyReminder.DEFAULT_MINUTE_OF_DAY,
+            prefs[readAloudKey] ?: true,
+            prefs[slowSpeechKey] ?: false)
     }
     suspend fun setEasyFinnish(value: Boolean) { store.edit { it[easyKey] = value } }
     suspend fun setTheme(value: ThemePreference) { store.edit { it[themeKey] = value.name } }
@@ -60,4 +65,6 @@ class SettingsRepository(context: Context) {
     suspend fun setOnboardingSeen(value: Boolean) { store.edit { it[onboardingKey] = value } }
     suspend fun setReminder(value: Boolean) { store.edit { it[reminderKey] = value } }
     suspend fun setReminderTime(minuteOfDay: Int) { store.edit { it[reminderTimeKey] = minuteOfDay } }
+    suspend fun setReadAloud(value: Boolean) { store.edit { it[readAloudKey] = value } }
+    suspend fun setSlowSpeech(value: Boolean) { store.edit { it[slowSpeechKey] = value } }
 }

@@ -69,8 +69,6 @@
     <string name="language_english">English · ภาษาอังกฤษ</string>
     <string name="study_language">ภาษาที่เรียน</string>
     <string name="explanation_language">ภาษาของคำอธิบาย</string>
-    <string name="sound_title">เสียง</string>
-    <string name="sound_pending">ปิด · เสียงตอบสนองจะมาในภายหลัง</string>
     <string name="version_details">เวอร์ชัน %1$s · %2$s\nไม่มีบัญชี โฆษณา หรือการติดตาม แอปทำงานแบบออฟไลน์</string>
     <string name="practice_failed">เปิดแบบฝึกหัดไม่ได้</string>
     <string name="practice_no_questions">ไม่มีคำถามในรอบนี้</string>
@@ -432,4 +430,16 @@
     <string name="hard_note">คำถามที่คุณเลือกเอง นำคำถามออกจากรายการเมื่อทำได้แล้ว</string>
     <string name="hard_practice">ฝึกข้อยาก · %1$s</string>
     <string name="error_save_mark">บันทึกเครื่องหมายไม่ได้ โปรดลองอีกครั้ง</string>
+    <string name="read_aloud">อ่านออกเสียง</string>
+    <string name="read_aloud_stop">หยุดอ่าน</string>
+    <string name="voice_missing_title">ไม่พบเสียงพูด</string>
+    <string name="voice_missing_fi">โทรศัพท์นี้ไม่มีเสียงภาษาฟินแลนด์ที่ใช้งานได้โดยไม่ต้องเชื่อมต่อเครือข่าย คุณติดตั้งได้ในการตั้งค่าการอ่านออกเสียงข้อความของ Android</string>
+    <string name="voice_missing_sv">โทรศัพท์นี้ไม่มีเสียงภาษาสวีเดนที่ใช้งานได้โดยไม่ต้องเชื่อมต่อเครือข่าย คุณติดตั้งได้ในการตั้งค่าการอ่านออกเสียงข้อความของ Android</string>
+    <string name="voice_no_engine">โทรศัพท์นี้ไม่มีบริการอ่านออกเสียงข้อความ จึงใช้การอ่านออกเสียงไม่ได้</string>
+    <string name="voice_install">ติดตั้งเสียง</string>
+    <string name="voice_close">ปิด</string>
+    <string name="read_aloud_setting">การอ่านออกเสียง</string>
+    <string name="read_aloud_note">ปุ่มลำโพงจะอ่านคำถามและคำอธิบายด้วยเสียงภาษาฟินแลนด์หรือสวีเดนของโทรศัพท์เอง ไม่มีการส่งข้อมูลผ่านเครือข่าย</string>
+    <string name="slow_speech_setting">พูดช้าลง</string>
+    <string name="slow_speech_note">อ่านด้วยจังหวะที่ช้าลง</string>
 </resources>

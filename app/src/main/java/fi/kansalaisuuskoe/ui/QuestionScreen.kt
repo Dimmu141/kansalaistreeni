@@ -76,7 +76,12 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
                 QuestionHeader(topics.find { it.id == q.topicId }?.titleFor(topicLanguage(q.language)).orEmpty(), state.position, state.total,
                     segments, (state.position - 1 + if (state.answered) 1 else 0).toFloat() / state.total, chips)
             }
-            item { StudyText(q.text, q.language, KsType.question, Modifier.semantics { heading() }) }
+            item {
+                Row(verticalAlignment = Alignment.Top) {
+                    StudyText(q.text, q.language, KsType.question, Modifier.weight(1f).semantics { heading() })
+                    SpeakButton("question-${q.id}", q.spokenText(), q.language)
+                }
+            }
             // Only before answering: afterwards the explanation already shows the translation, and the indices below stay put.
             val translation = explanation.tag?.let { tag -> q.translations[tag]?.let { tag to it } }
             if (!state.answered && translation != null) item { QuestionTranslationToggle(q, translation.first, translation.second) }

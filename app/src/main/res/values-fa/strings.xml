@@ -69,8 +69,6 @@
     <string name="language_english">English · انگلیسی</string>
     <string name="study_language">زبان مطالعه</string>
     <string name="explanation_language">زبان توضیح</string>
-    <string name="sound_title">صدا</string>
-    <string name="sound_pending">خاموش · بازخورد صوتی بعداً می‌آید</string>
     <string name="version_details">نسخه %1$s · %2$s\nبدون حساب کاربری، تبلیغ یا ردیابی. برنامه بدون اینترنت کار می‌کند.</string>
     <string name="practice_failed">تمرین باز نشد</string>
     <string name="practice_no_questions">در این جلسه سؤالی نیست</string>
@@ -444,4 +442,16 @@
     <string name="hard_note">سؤال‌هایی که خودتان انتخاب کرده‌اید. وقتی سؤالی را یاد گرفتید، آن را از فهرست حذف کنید.</string>
     <string name="hard_practice">تمرین سؤال‌های سخت · %1$s</string>
     <string name="error_save_mark">علامت ذخیره نشد. دوباره تلاش کنید.</string>
+    <string name="read_aloud">خواندن با صدا</string>
+    <string name="read_aloud_stop">توقف خواندن</string>
+    <string name="voice_missing_title">صدایی پیدا نشد</string>
+    <string name="voice_missing_fi">این گوشی صدای فنلاندی ندارد که بدون اینترنت کار کند. می‌توانید آن را از تنظیمات تبدیل متن به گفتار Android نصب کنید.</string>
+    <string name="voice_missing_sv">این گوشی صدای سوئدی ندارد که بدون اینترنت کار کند. می‌توانید آن را از تنظیمات تبدیل متن به گفتار Android نصب کنید.</string>
+    <string name="voice_no_engine">این گوشی سرویس تبدیل متن به گفتار ندارد، بنابراین خواندن با صدا در دسترس نیست.</string>
+    <string name="voice_install">نصب صدا</string>
+    <string name="voice_close">بستن</string>
+    <string name="read_aloud_setting">خواندن با صدا</string>
+    <string name="read_aloud_note">دکمهٔ بلندگو سؤال و توضیح را با صدای خود گوشی به فنلاندی یا سوئدی می‌خواند. چیزی به اینترنت فرستاده نمی‌شود.</string>
+    <string name="slow_speech_setting">گفتار آهسته‌تر</string>
+    <string name="slow_speech_note">با سرعتی آرام‌تر بخوان.</string>
 </resources>

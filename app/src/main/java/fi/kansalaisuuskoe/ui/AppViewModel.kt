@@ -78,6 +78,8 @@ class AppViewModel(
     fun finishOnboarding() = save { preferences.setOnboardingSeen(true) }
     fun reminder(value: Boolean) = save { preferences.setReminder(value) }
     fun reminderTime(minuteOfDay: Int) = save { preferences.setReminderTime(minuteOfDay) }
+    fun readAloud(value: Boolean) = save { preferences.setReadAloud(value) }
+    fun slowSpeech(value: Boolean) = save { preferences.setSlowSpeech(value) }
     private fun save(action: suspend () -> Unit) {
         viewModelScope.launch {
             try { action(); settingsError.value = null }
