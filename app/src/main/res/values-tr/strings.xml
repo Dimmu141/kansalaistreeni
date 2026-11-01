@@ -416,4 +416,21 @@
     <string name="translation_show">Çeviriyi göster</string>
     <string name="translation_hide">Çeviriyi gizle</string>
     <string name="translation_exam_note">Yalnızca anlamanız için. Gerçek sınav Fince veya İsveççedir; bu yüzden önce soruyu çalışma dilinizde okumaya çalışın.</string>
+    <string name="reminder_setting">Günlük hatırlatma</string>
+    <string name="reminder_note">O gün henüz çalışmadıysanız seçtiğiniz saatte bir bildirim. Hatırlatma bu cihazda oluşturulur ve hiçbir veri bir yere gönderilmez.</string>
+    <string name="reminder_time">Hatırlatma saati: %1$s</string>
+    <string name="reminder_time_title">Hatırlatma saatini seçin</string>
+    <string name="reminder_time_save">Kaydet</string>
+    <string name="reminder_time_cancel">İptal</string>
+    <string name="reminder_blocked">Bu uygulamanın bildirimleri engellenmiş. Hatırlatmayı görmek için Android ayarlarından izin verin.</string>
+    <string name="reminder_open_settings">Bildirim ayarlarını aç</string>
+    <string name="reminder_channel">Çalışma hatırlatması</string>
+    <string name="reminder_channel_description">Tekrar bekleyen sorular olduğunda veya henüz çalışmadığınızda günlük hatırlatma.</string>
+    <string name="reminder_due_title">Tekrar zamanı</string>
+    <string name="reminder_new_title">Bugünün çalışması</string>
+    <string name="reminder_new_body">Kısa bir ders hazır. Yalnızca birkaç dakika sürer.</string>
+    <plurals name="reminder_due_body">
+        <item quantity="one">%d soru tekrar bekliyor.</item>
+        <item quantity="other">%d soru tekrar bekliyor.</item>
+    </plurals>
 </resources>

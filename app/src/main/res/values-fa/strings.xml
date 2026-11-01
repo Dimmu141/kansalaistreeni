@@ -416,4 +416,21 @@
     <string name="translation_show">نمایش ترجمه</string>
     <string name="translation_hide">پنهان کردن ترجمه</string>
     <string name="translation_exam_note">فقط برای فهمیدن. امتحان واقعی به فنلندی یا سویدنی است، پس اول سعی کنید سؤال را به زبان مطالعه بخوانید.</string>
+    <string name="reminder_setting">یادآوری روزانه</string>
+    <string name="reminder_note">اعلانی در زمانی که انتخاب می‌کنید، اگر آن روز هنوز تمرین نکرده باشید. یادآوری روی همین دستگاه ساخته می‌شود و هیچ داده‌ای به جایی فرستاده نمی‌شود.</string>
+    <string name="reminder_time">زمان یادآوری: %1$s</string>
+    <string name="reminder_time_title">زمان یادآوری را انتخاب کنید</string>
+    <string name="reminder_time_save">ذخیره</string>
+    <string name="reminder_time_cancel">لغو</string>
+    <string name="reminder_blocked">اعلان‌ها برای این برنامه مسدود است. برای دیدن یادآوری، آن‌ها را در تنظیمات Android مجاز کنید.</string>
+    <string name="reminder_open_settings">باز کردن تنظیمات اعلان</string>
+    <string name="reminder_channel">یادآوری تمرین</string>
+    <string name="reminder_channel_description">یادآوری روزانه وقتی سؤال‌هایی برای مرور منتظرند یا هنوز تمرین نکرده‌اید.</string>
+    <string name="reminder_due_title">وقت مرور است</string>
+    <string name="reminder_new_title">تمرین امروز</string>
+    <string name="reminder_new_body">یک تمرین کوتاه آماده است. فقط چند دقیقه طول می‌کشد.</string>
+    <plurals name="reminder_due_body">
+        <item quantity="one">%d سؤال منتظر مرور است.</item>
+        <item quantity="other">%d سؤال منتظر مرور است.</item>
+    </plurals>
 </resources>

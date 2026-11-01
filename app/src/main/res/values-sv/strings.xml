@@ -416,4 +416,21 @@
     <string name="translation_show">Visa översättning</string>
     <string name="translation_hide">Dölj översättning</string>
     <string name="translation_exam_note">Bara som stöd för förståelsen. Det riktiga provet är på finska eller svenska, så försök först läsa frågan på ditt studiespråk.</string>
+    <string name="reminder_setting">Daglig påminnelse</string>
+    <string name="reminder_note">En avisering vid den tid du väljer, om du inte redan har övat den dagen. Påminnelsen skapas på enheten och inga uppgifter skickas någonstans.</string>
+    <string name="reminder_time">Tid för påminnelse: %1$s</string>
+    <string name="reminder_time_title">Välj tid för påminnelse</string>
+    <string name="reminder_time_save">Spara</string>
+    <string name="reminder_time_cancel">Avbryt</string>
+    <string name="reminder_blocked">Aviseringar är blockerade för appen. Tillåt dem i Androids inställningar för att se påminnelsen.</string>
+    <string name="reminder_open_settings">Öppna aviseringsinställningar</string>
+    <string name="reminder_channel">Övningspåminnelse</string>
+    <string name="reminder_channel_description">Daglig påminnelse när repetitioner väntar eller du inte har övat ännu.</string>
+    <string name="reminder_due_title">Repetition väntar</string>
+    <string name="reminder_new_title">Dagens övning</string>
+    <string name="reminder_new_body">En kort övning är klar. Den tar bara några minuter.</string>
+    <plurals name="reminder_due_body">
+        <item quantity="one">%d fråga väntar på repetition.</item>
+        <item quantity="other">%d frågor väntar på repetition.</item>
+    </plurals>
 </resources>

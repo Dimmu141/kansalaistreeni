@@ -460,4 +460,25 @@
     <string name="translation_show">إظهار الترجمة</string>
     <string name="translation_hide">إخفاء الترجمة</string>
     <string name="translation_exam_note">للفهم فقط. الامتحان الحقيقي بالفنلندية أو السويدية، لذا حاول قراءة السؤال بلغة الدراسة أولاً.</string>
+    <string name="reminder_setting">تذكير يومي</string>
+    <string name="reminder_note">إشعار في الوقت الذي تختاره إذا لم تتدرّب بعد في ذلك اليوم. يُنشأ التذكير على هذا الجهاز ولا تُرسل أي بيانات إلى أي مكان.</string>
+    <string name="reminder_time">وقت التذكير: %1$s</string>
+    <string name="reminder_time_title">اختر وقت التذكير</string>
+    <string name="reminder_time_save">حفظ</string>
+    <string name="reminder_time_cancel">إلغاء</string>
+    <string name="reminder_blocked">الإشعارات محظورة لهذا التطبيق. اسمح بها في إعدادات Android لرؤية التذكير.</string>
+    <string name="reminder_open_settings">فتح إعدادات الإشعارات</string>
+    <string name="reminder_channel">تذكير بالتدريب</string>
+    <string name="reminder_channel_description">تذكير يومي عندما تنتظرك أسئلة للمراجعة أو لم تتدرّب بعد.</string>
+    <string name="reminder_due_title">حان وقت المراجعة</string>
+    <string name="reminder_new_title">تدريب اليوم</string>
+    <string name="reminder_new_body">درس قصير جاهز. لن يستغرق سوى بضع دقائق.</string>
+    <plurals name="reminder_due_body">
+        <item quantity="zero">%d سؤال ينتظر المراجعة.</item>
+        <item quantity="one">سؤال واحد ينتظر المراجعة.</item>
+        <item quantity="two">سؤالان ينتظران المراجعة.</item>
+        <item quantity="few">%d أسئلة تنتظر المراجعة.</item>
+        <item quantity="many">%d سؤالاً ينتظر المراجعة.</item>
+        <item quantity="other">%d سؤال ينتظر المراجعة.</item>
+    </plurals>
 </resources>

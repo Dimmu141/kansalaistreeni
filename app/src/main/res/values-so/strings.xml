@@ -416,4 +416,21 @@
     <string name="translation_show">Muuji turjumaadda</string>
     <string name="translation_hide">Qari turjumaadda</string>
     <string name="translation_exam_note">Kaliya fahamka. Imtixaanka dhabta ah waa Finnish ama Iswiidhish, marka isku day inaad marka hore su\'aasha ku akhrido luqadda waxbarashada.</string>
+    <string name="reminder_setting">Xusuusin maalinle ah</string>
+    <string name="reminder_note">Ogeysiis waqtiga aad doorato, haddii aadan weli maalintaas ku tababaran. Xusuusinta waxaa lagu sameeyaa qalabkan, xog lama diro meelna.</string>
+    <string name="reminder_time">Waqtiga xusuusinta: %1$s</string>
+    <string name="reminder_time_title">Dooro waqtiga xusuusinta</string>
+    <string name="reminder_time_save">Kaydi</string>
+    <string name="reminder_time_cancel">Jooji</string>
+    <string name="reminder_blocked">Ogeysiisyada waa laga xannibay app-kan. U oggolow dejinta Android si aad u aragto xusuusinta.</string>
+    <string name="reminder_open_settings">Fur dejinta ogeysiisyada</string>
+    <string name="reminder_channel">Xusuusinta tababarka</string>
+    <string name="reminder_channel_description">Xusuusin maalinle ah marka su\'aalo dib-u-eegis sugayaan ama aadan weli tababaran.</string>
+    <string name="reminder_due_title">Dib-u-eegis ayaa sugaysa</string>
+    <string name="reminder_new_title">Tababarka maanta</string>
+    <string name="reminder_new_body">Cashar gaaban ayaa diyaar ah. Wuxuu qaadanayaa dhowr daqiiqo oo keliya.</string>
+    <plurals name="reminder_due_body">
+        <item quantity="one">%d su\'aal ayaa sugaysa dib-u-eegis.</item>
+        <item quantity="other">%d su\'aalood ayaa sugaya dib-u-eegis.</item>
+    </plurals>
 </resources>

@@ -7,6 +7,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
@@ -17,6 +21,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         val container = (application as CitizenshipApplication).container
+        // Realign the reminder from the stored settings, not the UI state, which starts from defaults.
+        lifecycleScope.launch {
+            container.settings.settings.map { it.reminder to it.reminderMinuteOfDay }.distinctUntilChanged()
+                .collect { (enabled, minute) -> ReviewReminder.schedule(applicationContext, enabled, minute) }
+        }
         setContent {
             val model: AppViewModel = viewModel(factory = viewModelFactory {
                 initializer { AppViewModel(container.learning, container.settings) { container.learning.initialize(applicationContext) } }
@@ -28,5 +37,9 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+    override fun onResume() {
+        super.onResume()
+        ReviewReminder.dismiss(this)
     }
 }

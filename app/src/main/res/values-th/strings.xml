@@ -405,4 +405,20 @@
     <string name="translation_show">แสดงคำแปล</string>
     <string name="translation_hide">ซ่อนคำแปล</string>
     <string name="translation_exam_note">ใช้เพื่อความเข้าใจเท่านั้น การสอบจริงเป็นภาษาฟินแลนด์หรือภาษาสวีเดน โปรดลองอ่านคำถามในภาษาที่เรียนก่อน</string>
+    <string name="reminder_setting">การแจ้งเตือนรายวัน</string>
+    <string name="reminder_note">แจ้งเตือนตามเวลาที่คุณเลือก หากวันนั้นคุณยังไม่ได้ฝึก การแจ้งเตือนสร้างขึ้นบนอุปกรณ์นี้และไม่มีการส่งข้อมูลไปที่ใด</string>
+    <string name="reminder_time">เวลาแจ้งเตือน: %1$s</string>
+    <string name="reminder_time_title">เลือกเวลาแจ้งเตือน</string>
+    <string name="reminder_time_save">บันทึก</string>
+    <string name="reminder_time_cancel">ยกเลิก</string>
+    <string name="reminder_blocked">การแจ้งเตือนของแอปนี้ถูกปิดกั้น อนุญาตในการตั้งค่า Android เพื่อดูการแจ้งเตือน</string>
+    <string name="reminder_open_settings">เปิดการตั้งค่าการแจ้งเตือน</string>
+    <string name="reminder_channel">การแจ้งเตือนการฝึก</string>
+    <string name="reminder_channel_description">การแจ้งเตือนรายวันเมื่อมีคำถามรอทบทวนหรือคุณยังไม่ได้ฝึก</string>
+    <string name="reminder_due_title">ถึงเวลาทบทวน</string>
+    <string name="reminder_new_title">การฝึกวันนี้</string>
+    <string name="reminder_new_body">บทเรียนสั้นพร้อมแล้ว ใช้เวลาเพียงไม่กี่นาที</string>
+    <plurals name="reminder_due_body">
+        <item quantity="other">มี %d คำถามรอการทบทวน</item>
+    </plurals>
 </resources>

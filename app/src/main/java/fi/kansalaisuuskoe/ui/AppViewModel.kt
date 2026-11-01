@@ -74,6 +74,8 @@ class AppViewModel(
         preferences.setInterfaceLanguage(value); preferences.setExplanation(ExplanationPreference.matching(value))
     }
     fun finishOnboarding() = save { preferences.setOnboardingSeen(true) }
+    fun reminder(value: Boolean) = save { preferences.setReminder(value) }
+    fun reminderTime(minuteOfDay: Int) = save { preferences.setReminderTime(minuteOfDay) }
     private fun save(action: suspend () -> Unit) {
         viewModelScope.launch {
             try { action(); settingsError.value = null }

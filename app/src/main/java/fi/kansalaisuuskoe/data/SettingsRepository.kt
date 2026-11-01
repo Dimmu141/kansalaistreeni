@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import java.io.IOException
 import fi.kansalaisuuskoe.domain.StudyLanguage
+import fi.kansalaisuuskoe.domain.StudyReminder
 
 private val Context.settingsStore by preferencesDataStore("settings")
 enum class ThemePreference { SYSTEM, LIGHT, DARK }
@@ -29,7 +30,8 @@ enum class ExplanationPreference(val tag: String?) {
         fun matching(language: InterfaceLanguage) = entries.firstOrNull { it.tag == language.tag } ?: STUDY_LANGUAGE
     }
 }
-data class StudySettings(val easyFinnish: Boolean = true, val theme: ThemePreference = ThemePreference.SYSTEM, val interfaceLanguage: InterfaceLanguage = InterfaceLanguage.FINNISH, val studyLanguage: StudyLanguage = StudyLanguage.FINNISH, val explanation: ExplanationPreference = ExplanationPreference.STUDY_LANGUAGE, val onboardingSeen: Boolean = true)
+data class StudySettings(val easyFinnish: Boolean = true, val theme: ThemePreference = ThemePreference.SYSTEM, val interfaceLanguage: InterfaceLanguage = InterfaceLanguage.FINNISH, val studyLanguage: StudyLanguage = StudyLanguage.FINNISH, val explanation: ExplanationPreference = ExplanationPreference.STUDY_LANGUAGE, val onboardingSeen: Boolean = true,
+    val reminder: Boolean = false, val reminderMinuteOfDay: Int = StudyReminder.DEFAULT_MINUTE_OF_DAY)
 class SettingsRepository(context: Context) {
     private val store = context.settingsStore
     private val easyKey = booleanPreferencesKey("easy_finnish")
@@ -38,13 +40,17 @@ class SettingsRepository(context: Context) {
     private val studyLanguageKey = stringPreferencesKey("study_language")
     private val explanationKey = stringPreferencesKey("explanation")
     private val onboardingKey = booleanPreferencesKey("onboarding_seen")
+    private val reminderKey = booleanPreferencesKey("reminder")
+    private val reminderTimeKey = intPreferencesKey("reminder_minute_of_day")
     val settings = store.data.catch { error -> if (error is IOException) emit(emptyPreferences()) else throw error }.map { prefs ->
         val study = StudyLanguage.entries.firstOrNull { it.tag == prefs[studyLanguageKey] } ?: StudyLanguage.FINNISH
         StudySettings(prefs[easyKey] ?: true, ThemePreference.entries.firstOrNull { it.name == prefs[themeKey] } ?: ThemePreference.SYSTEM,
             InterfaceLanguage.entries.firstOrNull { it.tag == prefs[languageKey] } ?: InterfaceLanguage.defaultFor(study),
             study,
             ExplanationPreference.entries.firstOrNull { it.name == prefs[explanationKey] } ?: ExplanationPreference.STUDY_LANGUAGE,
-            prefs[onboardingKey] ?: false)
+            prefs[onboardingKey] ?: false,
+            prefs[reminderKey] ?: false,
+            prefs[reminderTimeKey]?.takeIf { it in 0 until 24 * 60 } ?: StudyReminder.DEFAULT_MINUTE_OF_DAY)
     }
     suspend fun setEasyFinnish(value: Boolean) { store.edit { it[easyKey] = value } }
     suspend fun setTheme(value: ThemePreference) { store.edit { it[themeKey] = value.name } }
@@ -52,4 +58,6 @@ class SettingsRepository(context: Context) {
     suspend fun setStudyLanguage(value: StudyLanguage) { store.edit { it[studyLanguageKey] = value.tag } }
     suspend fun setExplanation(value: ExplanationPreference) { store.edit { it[explanationKey] = value.name } }
     suspend fun setOnboardingSeen(value: Boolean) { store.edit { it[onboardingKey] = value } }
+    suspend fun setReminder(value: Boolean) { store.edit { it[reminderKey] = value } }
+    suspend fun setReminderTime(minuteOfDay: Int) { store.edit { it[reminderTimeKey] = minuteOfDay } }
 }

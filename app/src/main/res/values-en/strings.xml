@@ -416,4 +416,21 @@
     <string name="translation_show">Show translation</string>
     <string name="translation_hide">Hide translation</string>
     <string name="translation_exam_note">For understanding only. The real test is in Finnish or Swedish, so try reading the question in your study language first.</string>
+    <string name="reminder_setting">Daily reminder</string>
+    <string name="reminder_note">A notification at the time you choose, if you haven\'t practised yet that day. The reminder is made on this device and nothing is sent anywhere.</string>
+    <string name="reminder_time">Reminder time: %1$s</string>
+    <string name="reminder_time_title">Choose reminder time</string>
+    <string name="reminder_time_save">Save</string>
+    <string name="reminder_time_cancel">Cancel</string>
+    <string name="reminder_blocked">Notifications are blocked for this app. Allow them in Android settings to see the reminder.</string>
+    <string name="reminder_open_settings">Open notification settings</string>
+    <string name="reminder_channel">Practice reminder</string>
+    <string name="reminder_channel_description">A daily reminder when reviews are waiting or you haven\'t practised yet.</string>
+    <string name="reminder_due_title">Reviews waiting</string>
+    <string name="reminder_new_title">Today\'s practice</string>
+    <string name="reminder_new_body">A short lesson is ready. It only takes a few minutes.</string>
+    <plurals name="reminder_due_body">
+        <item quantity="one">%d question is waiting for review.</item>
+        <item quantity="other">%d questions are waiting for review.</item>
+    </plurals>
 </resources>

@@ -420,4 +420,21 @@
     <string name="translation_show">Näytä käännös</string>
     <string name="translation_hide">Piilota käännös</string>
     <string name="translation_exam_note">Vain ymmärtämisen tueksi. Oikea koe on suomeksi tai ruotsiksi, joten yritä lukea kysymys ensin opiskelukielellä.</string>
+    <string name="reminder_setting">Päivittäinen muistutus</string>
+    <string name="reminder_note">Ilmoitus valitsemanasi aikana, jos et ole vielä harjoitellut sinä päivänä. Muistutus tehdään laitteella, eikä tietoja lähetetä minnekään.</string>
+    <string name="reminder_time">Muistutusaika: %1$s</string>
+    <string name="reminder_time_title">Valitse muistutusaika</string>
+    <string name="reminder_time_save">Tallenna</string>
+    <string name="reminder_time_cancel">Peruuta</string>
+    <string name="reminder_blocked">Ilmoitukset on estetty tältä sovellukselta. Salli ne Androidin asetuksista, jotta muistutus näkyy.</string>
+    <string name="reminder_open_settings">Avaa ilmoitusasetukset</string>
+    <string name="reminder_channel">Harjoitusmuistutus</string>
+    <string name="reminder_channel_description">Päivittäinen muistutus, kun kertauksia odottaa tai et ole vielä harjoitellut.</string>
+    <string name="reminder_due_title">Kertaus odottaa</string>
+    <string name="reminder_new_title">Päivän harjoitus</string>
+    <string name="reminder_new_body">Lyhyt harjoitus on valmiina. Se vie vain muutaman minuutin.</string>
+    <plurals name="reminder_due_body">
+        <item quantity="one">%d kysymys odottaa kertausta.</item>
+        <item quantity="other">%d kysymystä odottaa kertausta.</item>
+    </plurals>
 </resources>

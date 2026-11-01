@@ -438,4 +438,23 @@
     <string name="translation_show">Показать перевод</string>
     <string name="translation_hide">Скрыть перевод</string>
     <string name="translation_exam_note">Только для понимания. Настоящий экзамен — на финском или шведском, поэтому сначала попробуйте прочитать вопрос на языке обучения.</string>
+    <string name="reminder_setting">Ежедневное напоминание</string>
+    <string name="reminder_note">Уведомление в выбранное время, если вы ещё не занимались в этот день. Напоминание создаётся на устройстве, данные никуда не отправляются.</string>
+    <string name="reminder_time">Время напоминания: %1$s</string>
+    <string name="reminder_time_title">Выберите время напоминания</string>
+    <string name="reminder_time_save">Сохранить</string>
+    <string name="reminder_time_cancel">Отмена</string>
+    <string name="reminder_blocked">Уведомления для приложения заблокированы. Разрешите их в настройках Android, чтобы видеть напоминание.</string>
+    <string name="reminder_open_settings">Открыть настройки уведомлений</string>
+    <string name="reminder_channel">Напоминание о занятиях</string>
+    <string name="reminder_channel_description">Ежедневное напоминание, когда есть вопросы для повторения или вы ещё не занимались.</string>
+    <string name="reminder_due_title">Пора повторить</string>
+    <string name="reminder_new_title">Занятие на сегодня</string>
+    <string name="reminder_new_body">Короткое занятие готово. Это займёт всего несколько минут.</string>
+    <plurals name="reminder_due_body">
+        <item quantity="one">%d вопрос ждёт повторения.</item>
+        <item quantity="few">%d вопроса ждут повторения.</item>
+        <item quantity="many">%d вопросов ждут повторения.</item>
+        <item quantity="other">%d вопроса ждут повторения.</item>
+    </plurals>
 </resources>
