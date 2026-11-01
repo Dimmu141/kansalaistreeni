@@ -13,6 +13,14 @@ class AssessmentBackupTest {
     private fun rejected(value: LearningBackup, problem: BackupProblem = BackupProblem.INVALID) {
         try { BackupCodec.validate(value); fail("Invalid assessment backup accepted") } catch (e: BackupException) { assertEquals(problem, e.problem) }
     }
+    @Test fun `hard-question marks roundtrip and older backups leave them out`() {
+        val marked = backup().copy(markedQuestions = listOf(BackupMark("q", 1500), BackupMark("removed-question", 1600)))
+        assertEquals(marked, BackupCodec.parse(BackupCodec.encode(marked)))
+        assertNull(BackupCodec.parse(BackupCodec.encode(backup())).markedQuestions)
+        rejected(backup().copy(markedQuestions = listOf(BackupMark("q", 1500), BackupMark("q", 1600))))
+        rejected(backup().copy(markedQuestions = listOf(BackupMark(" ", 1500))))
+        rejected(backup().copy(markedQuestions = listOf(BackupMark("q", -1))))
+    }
     @Test fun `old original snapshots preserve result independently of installed answer key`() {
         val restored = BackupCodec.parse(BackupCodec.encode(backup())).assessments!!.single()
         assertEquals(session, restored)

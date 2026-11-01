@@ -458,4 +458,14 @@
         <item quantity="many">%d питань чекають на повторення.</item>
         <item quantity="other">%d питання чекають на повторення.</item>
     </plurals>
+    <string name="recap_practise_again">Повторити помилки · %1$s</string>
+    <string name="hard_mark">Додати до складних</string>
+    <string name="hard_unmark">Прибрати зі складних</string>
+    <string name="hard_marked">У складних</string>
+    <string name="hard_not_marked">Не в складних</string>
+    <string name="hard_title">Складні питання</string>
+    <string name="hard_empty">Відповівши на питання, ви можете додати його до складних. Вони збираються тут, щоб ви могли тренувати їх окремо.</string>
+    <string name="hard_note">Питання, які ви обрали самі. Приберіть питання зі списку, коли воно стане легким.</string>
+    <string name="hard_practice">Тренувати складні · %1$s</string>
+    <string name="error_save_mark">Не вдалося зберегти позначку. Спробуйте ще раз.</string>
 </resources>

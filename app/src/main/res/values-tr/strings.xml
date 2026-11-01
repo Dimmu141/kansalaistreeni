@@ -434,4 +434,14 @@
         <item quantity="one">%d soru tekrar bekliyor.</item>
         <item quantity="other">%d soru tekrar bekliyor.</item>
     </plurals>
+    <string name="recap_practise_again">Hataları yeniden çalış · %1$s</string>
+    <string name="hard_mark">Zorlara ekle</string>
+    <string name="hard_unmark">Zorlardan çıkar</string>
+    <string name="hard_marked">Zorlarda</string>
+    <string name="hard_not_marked">Zorlarda değil</string>
+    <string name="hard_title">Zor sorular</string>
+    <string name="hard_empty">Bir soruyu cevapladıktan sonra zorlara ekleyebilirsiniz. Ayrıca çalışabilmeniz için burada toplanırlar.</string>
+    <string name="hard_note">Kendi seçtiğiniz sorular. Bir soruyu öğrendiğinizde listeden çıkarın.</string>
+    <string name="hard_practice">Zor soruları çalış · %1$s</string>
+    <string name="error_save_mark">İşaret kaydedilemedi. Lütfen tekrar deneyin.</string>
 </resources>

@@ -434,4 +434,14 @@
         <item quantity="one">%d سؤال منتظر مرور است.</item>
         <item quantity="other">%d سؤال منتظر مرور است.</item>
     </plurals>
+    <string name="recap_practise_again">تمرین دوبارهٔ اشتباه‌ها · %1$s</string>
+    <string name="hard_mark">افزودن به سخت‌ها</string>
+    <string name="hard_unmark">حذف از سخت‌ها</string>
+    <string name="hard_marked">در سخت‌ها</string>
+    <string name="hard_not_marked">نه در سخت‌ها</string>
+    <string name="hard_title">سؤال‌های سخت</string>
+    <string name="hard_empty">پس از پاسخ دادن به یک سؤال، می‌توانید آن را به سؤال‌های سخت اضافه کنید. آن‌ها اینجا جمع می‌شوند تا جداگانه تمرین کنید.</string>
+    <string name="hard_note">سؤال‌هایی که خودتان انتخاب کرده‌اید. وقتی سؤالی را یاد گرفتید، آن را از فهرست حذف کنید.</string>
+    <string name="hard_practice">تمرین سؤال‌های سخت · %1$s</string>
+    <string name="error_save_mark">علامت ذخیره نشد. دوباره تلاش کنید.</string>
 </resources>

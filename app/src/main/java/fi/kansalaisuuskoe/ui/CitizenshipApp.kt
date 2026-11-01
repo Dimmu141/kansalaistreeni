@@ -128,7 +128,7 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                         val wordState by wordModel.state.collectAsStateWithLifecycle()
                         WordPracticeScreen(wordState, wordModel::reveal, wordModel::next) { nav.popBackStack() }
                     }
-                    composable("review") { ReviewScreen(state, { nav.navigate("study/review") }, { tab("topics") }) }
+                    composable("review") { ReviewScreen(state, { nav.navigate("study/review") }, { tab("topics") }) { nav.navigate("study/marked") } }
                     composable("progress") { ProgressScreen(state) }
                     composable("settings") { SettingsScreen(state, model, { nav.navigate("backup") { launchSingleTop = true } }) { nav.navigate("material") { launchSingleTop = true } } }
                     composable("backup") {
@@ -146,9 +146,10 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                         val importState by importModel.state.collectAsStateWithLifecycle()
                         CoverageScreen(importState, importModel::refresh)
                     }
-                    composable("study/{mode}?assessmentId={assessmentId}&topicId={topicId}", arguments = listOf(
+                    composable("study/{mode}?assessmentId={assessmentId}&topicId={topicId}&questionIds={questionIds}", arguments = listOf(
                         navArgument("assessmentId") { type = NavType.StringType; nullable = true; defaultValue = null },
                         navArgument("topicId") { type = NavType.StringType; nullable = true; defaultValue = null },
+                        navArgument("questionIds") { type = NavType.StringType; nullable = true; defaultValue = null },
                     )) { backStack ->
                         val questionModel: QuestionViewModel = viewModel(viewModelStoreOwner = backStack, factory = viewModelFactory {
                             initializer { QuestionViewModel(container.learning, createSavedStateHandle(), state.settings.studyLanguage, container.assessments) }
@@ -156,7 +157,11 @@ fun CitizenshipApp(state: AppUiState, model: AppViewModel, container: AppContain
                         val questionState by questionModel.state.collectAsStateWithLifecycle()
                         QuestionScreen(questionState, state.snapshot.topics, state.settings.easyFinnish,
                             questionModel::select, questionModel::submit, questionModel::next,
-                            { nav.navigate("home") { popUpTo("home") { inclusive = false }; launchSingleTop = true } }, questionModel::load, state.settings.explanation)
+                            { nav.navigate("home") { popUpTo("home") { inclusive = false }; launchSingleTop = true } }, questionModel::load, state.settings.explanation,
+                            questionModel::toggleMark) { ids ->
+                            // The retry replaces the finished session, so Back returns to where that session started.
+                            nav.navigate("study/retry?questionIds=${Uri.encode(PracticeRequest.retryArgument(ids))}") { popUpTo(backStack.destination.id) { inclusive = true } }
+                        }
                     }
                 }
             }

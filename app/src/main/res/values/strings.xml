@@ -438,4 +438,14 @@
         <item quantity="one">%d kysymys odottaa kertausta.</item>
         <item quantity="other">%d kysymystä odottaa kertausta.</item>
     </plurals>
+    <string name="recap_practise_again">Harjoittele virheet uudelleen · %1$s</string>
+    <string name="hard_mark">Lisää vaikeisiin</string>
+    <string name="hard_unmark">Poista vaikeista</string>
+    <string name="hard_marked">Vaikeissa</string>
+    <string name="hard_not_marked">Ei vaikeissa</string>
+    <string name="hard_title">Vaikeat kysymykset</string>
+    <string name="hard_empty">Kun olet vastannut kysymykseen, voit lisätä sen vaikeisiin. Ne kootaan tähän, jotta voit harjoitella niitä erikseen.</string>
+    <string name="hard_note">Itse valitsemasi kysymykset. Poista kysymys listalta, kun se sujuu.</string>
+    <string name="hard_practice">Harjoittele vaikeita · %1$s</string>
+    <string name="error_save_mark">Merkintää ei voitu tallentaa. Yritä uudelleen.</string>
 </resources>

@@ -434,4 +434,14 @@
         <item quantity="one">%d su\'aal ayaa sugaysa dib-u-eegis.</item>
         <item quantity="other">%d su\'aalood ayaa sugaya dib-u-eegis.</item>
     </plurals>
+    <string name="recap_practise_again">Ku celi khaladaadka · %1$s</string>
+    <string name="hard_mark">Ku dar kuwa adag</string>
+    <string name="hard_unmark">Ka saar kuwa adag</string>
+    <string name="hard_marked">Waa kuwa adag</string>
+    <string name="hard_not_marked">Ma aha kuwa adag</string>
+    <string name="hard_title">Su\'aalaha adag</string>
+    <string name="hard_empty">Markaad su\'aal ka jawaabto, waxaad ku dari kartaa kuwa adag. Halkan ayaa lagu ururiyaa si aad gooni ugu tababarato.</string>
+    <string name="hard_note">Su\'aalo adigu aad dooratay. Ka saar su\'aasha liiska marka ay kuu fududaato.</string>
+    <string name="hard_practice">Ku tababaro kuwa adag · %1$s</string>
+    <string name="error_save_mark">Calaamadda lama kaydin karin. Isku day mar kale.</string>
 </resources>

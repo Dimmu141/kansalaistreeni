@@ -62,7 +62,7 @@ fun TopicsScreen(state: AppUiState, onVocabulary: () -> Unit, onTopic: (String) 
     }
 }
 @Composable
-fun ReviewScreen(state: AppUiState, onReview: () -> Unit, onLearn: () -> Unit) {
+fun ReviewScreen(state: AppUiState, onReview: () -> Unit, onLearn: () -> Unit, onHard: () -> Unit) {
     val language = topicLanguage()
     val due = LearningEngine.due(state.studySnapshot, state.now)
     val next = LearningEngine.nextReviewAt(state.studySnapshot, state.now)
@@ -81,6 +81,7 @@ fun ReviewScreen(state: AppUiState, onReview: () -> Unit, onLearn: () -> Unit) {
                 }
             }
         }
+        if (state.summary.totalQuestions > 0) item { HardQuestionsCard(state.studySnapshot.questions.count { it.id in state.marked }, onHard) }
         item {
             Text(stringResource(R.string.review_rules), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
@@ -123,5 +124,18 @@ fun ProgressScreen(state: AppUiState) {
         item {
             Text(stringResource(R.string.mastery_rules), style = MaterialTheme.typography.bodySmall)
         }
+    }
+}
+
+/** The learner's own list, separate from scheduled reviews: questions they chose to keep practising. */
+@Composable
+private fun HardQuestionsCard(count: Int, onPractice: () -> Unit) {
+    KsCard {
+        Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            Icon(KsIcons.Bookmark, null, Modifier.size(20.dp), tint = Ks.colors.brand)
+            Text(stringResource(R.string.hard_title), style = KsType.title)
+        }
+        Text(if (count == 0) stringResource(R.string.hard_empty) else stringResource(R.string.hard_note), style = KsType.body, color = Ks.colors.inkMuted)
+        if (count > 0) KsButton(stringResource(R.string.hard_practice, pluralStringResource(R.plurals.question_count, count, count)), onPractice, Modifier.fillMaxWidth(), tone = KsTone.Tonal)
     }
 }

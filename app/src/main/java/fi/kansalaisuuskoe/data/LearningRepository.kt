@@ -32,6 +32,14 @@ class LearningRepository(private val database: LearningDatabase) {
                 rows.progress.map { it.model() }, rows.attempts.map { it.model() })
         }.flowOn(Dispatchers.Default)
 
+    /** The learner's hard-questions list, oldest mark first. Separate from [snapshot] so a toggle does not reread all content. */
+    val marked = database.invalidationTracker.createFlow("marked_questions").conflate()
+        .map { dao.marked().map { it.questionId } }.flowOn(Dispatchers.IO)
+
+    suspend fun setMarked(questionId: String, marked: Boolean, now: Long = System.currentTimeMillis()) = withContext(Dispatchers.IO) {
+        if (marked) dao.mark(MarkedQuestionEntity(questionId, now)) else dao.unmark(questionId)
+    }
+
     private data class SnapshotRows(val topics: List<TopicEntity>, val questions: List<QuestionEntity>,
         val progress: List<ProgressEntity>, val attempts: List<AttemptEntity>)
 
@@ -77,7 +85,7 @@ class LearningRepository(private val database: LearningDatabase) {
             val status = ContentCodec.envelopeStatus(material.topics, material.questions)
             val content = ContentPackageDto(ContentCodec.SCHEMA_VERSION, metadata.packageId, metadata.version, status, material.topics, material.questions, material.objectives)
             BackupCodec.encode(LearningBackup(BackupCodec.FORMAT, BackupCodec.CURRENT_SCHEMA, now, content,
-                dao.attempts().map(BackupAttempt::from), database.assessmentDao().all().map(BackupAssessment::from)))
+                dao.attempts().map(BackupAttempt::from), database.assessmentDao().all().map(BackupAssessment::from), dao.marked().map(BackupMark::from)))
         }
     }
 
@@ -111,6 +119,10 @@ class LearningRepository(private val database: LearningDatabase) {
                 database.assessmentDao().deleteAll()
                 backup.assessments.orEmpty().forEach { database.assessmentDao().save(it.entity()) }
             }
+            backup.markedQuestions?.let { marks ->
+                dao.deleteMarks()
+                dao.insertMarks(marks.map { it.entity() })
+            }
         }
     }
 
@@ -124,7 +136,8 @@ class LearningRepository(private val database: LearningDatabase) {
                 com.squareup.moshi.Types.newParameterizedType(List::class.java, BackupAssessment::class.java))
             assessmentAdapter.toJson(database.assessmentDao().all().map(BackupAssessment::from))
         } else ""
-        return ContentFile.hash("$metadata\n${adapter.toJson(history)}\n$assessments")
+        val marks = dao.marked().joinToString(",") { "${it.questionId}@${it.markedAt}" }
+        return ContentFile.hash("$metadata\n${adapter.toJson(history)}\n$assessments\n$marks")
     }
 
     /** Read/validate only. The preview never changes content or progress. */

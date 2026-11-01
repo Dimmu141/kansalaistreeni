@@ -482,4 +482,14 @@
         <item quantity="many">%d سؤالاً ينتظر المراجعة.</item>
         <item quantity="other">%d سؤال ينتظر المراجعة.</item>
     </plurals>
+    <string name="recap_practise_again">تدرّب على الأخطاء مجدداً · %1$s</string>
+    <string name="hard_mark">أضف إلى الصعبة</string>
+    <string name="hard_unmark">أزل من الصعبة</string>
+    <string name="hard_marked">ضمن الصعبة</string>
+    <string name="hard_not_marked">ليس ضمن الصعبة</string>
+    <string name="hard_title">الأسئلة الصعبة</string>
+    <string name="hard_empty">بعد الإجابة عن سؤال، يمكنك إضافته إلى الأسئلة الصعبة. تُجمع هنا لتتدرّب عليها بشكل منفصل.</string>
+    <string name="hard_note">أسئلة اخترتها بنفسك. أزل السؤال من القائمة عندما تتقنه.</string>
+    <string name="hard_practice">تدرّب على الأسئلة الصعبة · %1$s</string>
+    <string name="error_save_mark">تعذّر حفظ العلامة. حاول مرة أخرى.</string>
 </resources>

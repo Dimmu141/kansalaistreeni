@@ -434,4 +434,14 @@
         <item quantity="one">%d fråga väntar på repetition.</item>
         <item quantity="other">%d frågor väntar på repetition.</item>
     </plurals>
+    <string name="recap_practise_again">Öva på misstagen igen · %1$s</string>
+    <string name="hard_mark">Lägg till i svåra</string>
+    <string name="hard_unmark">Ta bort från svåra</string>
+    <string name="hard_marked">Bland svåra</string>
+    <string name="hard_not_marked">Inte bland svåra</string>
+    <string name="hard_title">Svåra frågor</string>
+    <string name="hard_empty">När du har svarat på en fråga kan du lägga till den bland svåra. De samlas här så att du kan öva på dem separat.</string>
+    <string name="hard_note">Frågor som du själv har valt. Ta bort en fråga från listan när den går bra.</string>
+    <string name="hard_practice">Öva på svåra · %1$s</string>
+    <string name="error_save_mark">Markeringen kunde inte sparas. Försök igen.</string>
 </resources>

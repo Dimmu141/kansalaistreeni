@@ -29,19 +29,30 @@ data class QuestionUiState(
     val nextReview: Long? = null,
     val recap: SessionRecap = SessionRecap(),
     val dailyReason: DailyQuestionReason? = null,
+    /** Question IDs on the learner's hard-questions list. */
+    val marked: Set<String> = emptySet(),
 )
 class QuestionViewModel(private val repository: LearningRepository, private val saved: SavedStateHandle, private val studyLanguage: StudyLanguage = StudyLanguage.FINNISH, private val assessments: AssessmentRepository? = null) : ViewModel() {
     private val mutable = MutableStateFlow(QuestionUiState())
     val state = mutable.asStateFlow()
     private var questions: List<Question> = emptyList()
     private var snapshot = LearningSnapshot()
-    init { load() }
+    private var marked: Set<String> = emptySet()
+    init {
+        load()
+        viewModelScope.launch {
+            repository.marked.catch { e -> Diagnostics.error("Reading hard questions", e) }.collect { ids ->
+                marked = ids.toSet()
+                mutable.value = mutable.value.copy(marked = marked)
+            }
+        }
+    }
 
     fun load() {
         viewModelScope.launch {
             try {
                 mutable.value = QuestionUiState()
-                val request = PracticeRequest.fromArguments(saved["mode"], saved["topicId"], saved["assessmentId"])
+                val request = PracticeRequest.fromArguments(saved["mode"], saved["topicId"], saved["assessmentId"], saved["questionIds"])
                 val assessment = (request as? PracticeRequest.Mistakes)?.let { requireNotNull(assessments?.get(it.assessmentId)) }
                 val language = StudyLanguage.entries.firstOrNull { it.tag == (saved.get<String>("study_language") ?: assessment?.language) } ?: studyLanguage
                 saved["study_language"] = language.tag
@@ -54,6 +65,9 @@ class QuestionViewModel(private val repository: LearningRepository, private val 
                         PracticeRequest.Review -> LearningEngine.due(snapshot, now)
                         PracticeRequest.Daily -> requireNotNull(plan).items.map { it.question }
                         is PracticeRequest.Topic -> LearningEngine.learningQueue(snapshot, now, request.id)
+                        // Removed or other-language IDs are skipped; the order is the learner's own.
+                        PracticeRequest.Marked -> repository.marked.first().mapNotNull { id -> snapshot.questions.find { it.id == id } }
+                        is PracticeRequest.Retry -> request.questionIds.distinct().mapNotNull { id -> snapshot.questions.find { it.id == id } }
                     }).map { it.id },
                 ).also {
                     saved["question_ids"] = it
@@ -84,6 +98,7 @@ class QuestionViewModel(private val repository: LearningRepository, private val 
             extraPractice = saved["extra_practice"] ?: false, nextReview = saved["next_review"],
             recap = SessionRecaps.summarize(questions, snapshot.attempts, saved.get<ArrayList<String>>("session_attempt_ids").orEmpty(), snapshot.progress),
             dailyReason = saved.get<ArrayList<String>>("daily_reasons")?.getOrNull(index)?.let { name -> DailyQuestionReason.entries.find { it.name == name } },
+            marked = marked,
         )
     }
     fun select(option: String) {
@@ -124,6 +139,19 @@ class QuestionViewModel(private val repository: LearningRepository, private val 
                 if (e is CancellationException) throw e
                 Diagnostics.error("Saving an answer", e)
                 mutable.value = mutable.value.copy(saving = false, retryPending = true, error = R.string.error_save_answer)
+            }
+        }
+    }
+    /** Adds or removes the current question from the hard-questions list; never changes scores. */
+    fun toggleMark() {
+        val question = mutable.value.question ?: return
+        val add = question.id !in marked
+        viewModelScope.launch {
+            try { repository.setMarked(question.id, add) }
+            catch (e: Exception) {
+                if (e is CancellationException) throw e
+                Diagnostics.error("Saving a hard-question mark", e)
+                mutable.value = mutable.value.copy(error = R.string.error_save_mark)
             }
         }
     }

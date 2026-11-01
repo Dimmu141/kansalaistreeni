@@ -92,7 +92,7 @@ class LearningMigrationTest {
     private fun verifyUpgrade(packageId: String, schemaVersion: Int = 1, language: String = "fi") = runBlocking {
         val questionId = createLegacyDatabase(packageId, schemaVersion, language)
         val opened = Room.databaseBuilder(context, LearningDatabase::class.java, name)
-            .addMigrations(LearningDatabase.MIGRATION_1_2, LearningDatabase.MIGRATION_2_3, LearningDatabase.MIGRATION_3_4, LearningDatabase.MIGRATION_4_5, LearningDatabase.MIGRATION_5_6, LearningDatabase.MIGRATION_6_7).build().also { database = it }
+            .addMigrations(LearningDatabase.MIGRATION_1_2, LearningDatabase.MIGRATION_2_3, LearningDatabase.MIGRATION_3_4, LearningDatabase.MIGRATION_4_5, LearningDatabase.MIGRATION_5_6, LearningDatabase.MIGRATION_6_7, LearningDatabase.MIGRATION_7_8).build().also { database = it }
         val repository = LearningRepository(opened)
         repository.initialize(context)
         val snapshot = repository.snapshot.first()
@@ -129,7 +129,7 @@ class LearningMigrationTest {
         repository.initialize(context)
         assertEquals(5, repository.snapshot.first().attempts.size)
         assertEquals(reviewed.progress, repository.snapshot.first().progress.single { it.revision == q.revision })
-        assertEquals(7, opened.openHelper.readableDatabase.version)
+        assertEquals(8, opened.openHelper.readableDatabase.version)
     }
 
     @Test fun bundledContentUpgradeRecalculatesWithoutLosingHistory() {
@@ -157,6 +157,15 @@ class LearningMigrationTest {
         val bundled = ContentCodec.parse(context.assets.open("demo-content.json").bufferedReader().use { it.readText() })
         assertEquals(bundled.objectives.map { it.id }, opened.learningDao().objectives().map { it.dto().id })
         assertEquals(bundled.objectives, LearningRepository(opened).installedContent().objectives)
+    }
+    @Test fun schemaSevenPreservesLearningAndAssessmentsWhileAddingHardQuestions() = runBlocking {
+        verifyUpgrade("fi-civics-demo", 7)
+        val opened = requireNotNull(database)
+        assertEquals(1, AssessmentRepository(opened).get("legacy-assessment")!!.answeredCount)
+        val repository = LearningRepository(opened)
+        assertTrue(repository.marked.first().isEmpty())
+        repository.setMarked("demo-parliament", true, 5000)
+        assertEquals(listOf("demo-parliament"), repository.marked.first())
     }
     @Test fun schemaFivePreservesSavedAssessmentWhileAddingAuthoredLessons() = runBlocking {
         verifyUpgrade("fi-civics-demo", 5)

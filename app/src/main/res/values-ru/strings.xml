@@ -458,4 +458,14 @@
         <item quantity="many">%d вопросов ждут повторения.</item>
         <item quantity="other">%d вопроса ждут повторения.</item>
     </plurals>
+    <string name="recap_practise_again">Повторить ошибки · %1$s</string>
+    <string name="hard_mark">Добавить в трудные</string>
+    <string name="hard_unmark">Убрать из трудных</string>
+    <string name="hard_marked">В трудных</string>
+    <string name="hard_not_marked">Не в трудных</string>
+    <string name="hard_title">Трудные вопросы</string>
+    <string name="hard_empty">Ответив на вопрос, вы можете добавить его в трудные. Они собираются здесь, чтобы вы могли тренировать их отдельно.</string>
+    <string name="hard_note">Вопросы, которые вы выбрали сами. Уберите вопрос из списка, когда он станет лёгким.</string>
+    <string name="hard_practice">Тренировать трудные · %1$s</string>
+    <string name="error_save_mark">Не удалось сохранить отметку. Попробуйте ещё раз.</string>
 </resources>

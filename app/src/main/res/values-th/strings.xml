@@ -422,4 +422,14 @@
     <plurals name="reminder_due_body">
         <item quantity="other">มี %d คำถามรอการทบทวน</item>
     </plurals>
+    <string name="recap_practise_again">ฝึกข้อที่ผิดอีกครั้ง · %1$s</string>
+    <string name="hard_mark">เพิ่มในข้อยาก</string>
+    <string name="hard_unmark">นำออกจากข้อยาก</string>
+    <string name="hard_marked">อยู่ในข้อยาก</string>
+    <string name="hard_not_marked">ไม่อยู่ในข้อยาก</string>
+    <string name="hard_title">คำถามที่ยาก</string>
+    <string name="hard_empty">หลังตอบคำถามแล้ว คุณสามารถเพิ่มคำถามนั้นในข้อยากได้ คำถามเหล่านั้นจะรวมไว้ที่นี่เพื่อให้ฝึกแยกต่างหาก</string>
+    <string name="hard_note">คำถามที่คุณเลือกเอง นำคำถามออกจากรายการเมื่อทำได้แล้ว</string>
+    <string name="hard_practice">ฝึกข้อยาก · %1$s</string>
+    <string name="error_save_mark">บันทึกเครื่องหมายไม่ได้ โปรดลองอีกครั้ง</string>
 </resources>

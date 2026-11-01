@@ -38,6 +38,14 @@ data class BackupAssessment(
 }
 
 @JsonClass(generateAdapter = true)
+data class BackupMark(val questionId: String, val markedAt: Long) {
+    fun entity() = MarkedQuestionEntity(questionId, markedAt)
+    companion object {
+        fun from(mark: MarkedQuestionEntity) = BackupMark(mark.questionId, mark.markedAt)
+    }
+}
+
+@JsonClass(generateAdapter = true)
 data class LearningBackup(
     val format: String,
     val schemaVersion: Int,
@@ -46,6 +54,8 @@ data class LearningBackup(
     val attempts: List<BackupAttempt>,
     // Null means a legacy backup that cannot replace assessment history; [] deliberately clears it.
     val assessments: List<BackupAssessment>? = null,
+    // Null (a backup from before the hard-questions list) leaves the current list alone; [] clears it.
+    val markedQuestions: List<BackupMark>? = null,
 )
 
 class PreparedBackup internal constructor(
@@ -97,6 +107,10 @@ object BackupCodec {
             require(assessments.map { it.id }.toSet().size == assessments.size)
             require(assessments.filter { it.finishedAt == null }.groupBy { it.language }.values.all { it.size <= 1 })
             assessments.forEach(::validateAssessment)
+            val marks = backup.markedQuestions.orEmpty()
+            if (marks.size > MAX_ATTEMPTS) throw BackupException(BackupProblem.TOO_LARGE)
+            require(marks.all { it.questionId.isNotBlank() && it.markedAt in 0..MAX_TIMESTAMP })
+            require(marks.map { it.questionId }.toSet().size == marks.size)
             ContentCodec.validate(backup.content)
             require(backup.attempts.map { it.id }.toSet().size == backup.attempts.size)
             val questions = backup.content.questions.associateBy { it.id }

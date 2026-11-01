@@ -18,6 +18,8 @@ data class AppUiState(
     val settings: StudySettings = StudySettings(),
     val now: Long = System.currentTimeMillis(),
     val settingsError: Int? = null,
+    /** Question IDs on the learner's hard-questions list, in every language. */
+    val marked: List<String> = emptyList(),
 ) {
     val studySnapshot get() = snapshot.forLanguage(settings.studyLanguage)
     val summary get() = LearningEngine.summarize(studySnapshot, now)
@@ -36,8 +38,8 @@ class AppViewModel(
     private val reload = MutableStateFlow(0)
     private val ticks = flow { while (true) { emit(System.currentTimeMillis()); delay(30_000) } }
     private val content = reload.flatMapLatest {
-        combine(learning.snapshot, preferences.settings, ticks) { snapshot, settings, now ->
-            AppUiState(loading = false, snapshot = snapshot, settings = settings, now = now)
+        combine(learning.snapshot, preferences.settings, ticks, learning.marked) { snapshot, settings, now, marked ->
+            AppUiState(loading = false, snapshot = snapshot, settings = settings, now = now, marked = marked)
         }.catch { e ->
             if (e is CancellationException) throw e
             Diagnostics.error("Reading learning data", e)

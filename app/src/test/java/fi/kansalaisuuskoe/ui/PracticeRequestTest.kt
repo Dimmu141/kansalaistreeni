@@ -17,6 +17,14 @@ class PracticeRequestTest {
         assertEquals(PracticeRequest.Topic("democracy"), PracticeRequest.fromArguments("democracy", null, null))
     }
 
+    @Test fun hardQuestionsAndRetriesAreTheirOwnCommands() {
+        assertEquals(PracticeRequest.Marked, PracticeRequest.fromArguments("marked", null, null))
+        // An explicit topic ID never becomes a command, even one called "marked".
+        assertEquals(PracticeRequest.Topic("marked"), PracticeRequest.fromArguments("topic", "marked", null))
+        val ids = listOf("demo-parliament", "imported,with comma", "ääkköset-sv")
+        assertEquals(PracticeRequest.Retry(ids), PracticeRequest.fromArguments("retry", null, null, PracticeRequest.retryArgument(ids)))
+    }
+
     @Test fun assessmentMistakesKeepTheSavedAssessmentIdentity() {
         assertEquals(PracticeRequest.Mistakes("saved-assessment"), PracticeRequest.fromArguments("assessment", null, "saved-assessment"))
     }

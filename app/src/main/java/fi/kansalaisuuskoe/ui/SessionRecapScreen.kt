@@ -84,7 +84,7 @@ internal fun VocabularyList(question: Question) {
 }
 
 @Composable
-internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, explanation: ExplanationPreference, finish: () -> Unit) {
+internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, explanation: ExplanationPreference, finish: () -> Unit, practiseAgain: (List<String>) -> Unit = {}) {
     Page {
         item { Heading(stringResource(if (state.total == 0) R.string.practice_no_questions else R.string.practice_complete)) }
         if (state.total > 0) item { RecapScore(state) }
@@ -96,8 +96,16 @@ internal fun SessionRecapScreen(state: QuestionUiState, easyFinnish: Boolean, ex
             }
             state.recap.reviewAt?.let { date -> item { Text(stringResource(R.string.recap_review_at, formatReviewTime(date)), style = MaterialTheme.typography.bodyMedium) } }
         }
-        // Keep the onward action reachable before the optional longer explanations.
-        item { KsButton(stringResource(R.string.return_home), finish, Modifier.fillMaxWidth()) }
+        // Keep the onward actions reachable before the optional longer explanations. Missed questions can be tried
+        // again at once; that records attempts but, by the learning rules, cannot lift mastery before the review is due.
+        val missed = state.recap.mistakes.map { it.question.id }.distinct()
+        if (missed.isNotEmpty()) item {
+            KsButton(stringResource(R.string.recap_practise_again, pluralStringResource(R.plurals.question_count, missed.size, missed.size)), { practiseAgain(missed) }, Modifier.fillMaxWidth())
+        }
+        item {
+            if (missed.isEmpty()) KsButton(stringResource(R.string.return_home), finish, Modifier.fillMaxWidth())
+            else OutlinedButton(finish, Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.return_home)) }
+        }
         if (state.recap.unavailableCount > 0 || (state.total > 0 && state.recap.answers.size < state.total)) {
             item { Text(stringResource(R.string.recap_unavailable), style = MaterialTheme.typography.bodyMedium) }
         }

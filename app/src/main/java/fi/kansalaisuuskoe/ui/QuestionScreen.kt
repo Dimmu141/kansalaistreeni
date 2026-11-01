@@ -16,6 +16,7 @@ import androidx.compose.ui.res.stringResource
 import fi.kansalaisuuskoe.R
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.*
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
@@ -32,13 +33,14 @@ import fi.kansalaisuuskoe.data.ExplanationPreference
 fun Modifier.semanticsLabel(label: String) = semantics { contentDescription = label }
 
 @Composable
-fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boolean, select: (String) -> Unit, submit: () -> Unit, next: () -> Unit, finish: () -> Unit, retry: () -> Unit, explanation: ExplanationPreference = ExplanationPreference.STUDY_LANGUAGE) {
+fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boolean, select: (String) -> Unit, submit: () -> Unit, next: () -> Unit, finish: () -> Unit, retry: () -> Unit, explanation: ExplanationPreference = ExplanationPreference.STUDY_LANGUAGE,
+    toggleMark: () -> Unit = {}, practiseAgain: (List<String>) -> Unit = {}) {
     if (state.loading) { Box(Modifier.fillMaxSize(), contentAlignment = androidx.compose.ui.Alignment.Center) { CircularProgressIndicator(Modifier.semanticsLabel(stringResource(R.string.loading_practice))) }; return }
     if (state.question == null && !state.finished) {
         Page { item { EmptyState(stringResource(R.string.practice_failed), state.error?.let { stringResource(it) }.orEmpty(), stringResource(R.string.retry), retry) } }; return
     }
     if (state.finished) {
-        key("session-recap") { SessionRecapScreen(state, easyFinnish, explanation, finish) }
+        key("session-recap") { SessionRecapScreen(state, easyFinnish, explanation, finish, practiseAgain) }
         return
     }
     val q = requireNotNull(state.question)
@@ -112,6 +114,8 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
                         nextLabel = if (state.position == state.total) stringResource(R.string.show_summary) else stringResource(R.string.next_question),
                         next = next,
                         why = { scope.launch { listState.animateScrollToItem(explanationIndex) } },
+                        marked = q.id in state.marked,
+                        toggleMark = toggleMark,
                     )
                 }
             }
@@ -168,7 +172,8 @@ private fun QuestionHeader(topic: String, position: Int, total: Int, segments: L
 
 /** The verdict panel that rises into the Check button's slot: result, the right answer, the next review and Next. */
 @Composable
-private fun FeedbackSheet(correct: Boolean, answer: String?, extraPractice: Boolean, nextReview: String?, nextLabel: String, next: () -> Unit, why: () -> Unit) {
+private fun FeedbackSheet(correct: Boolean, answer: String?, extraPractice: Boolean, nextReview: String?, nextLabel: String, next: () -> Unit, why: () -> Unit,
+    marked: Boolean, toggleMark: () -> Unit) {
     val c = Ks.colors
     Surface(color = if (correct) c.correctSoft else c.missSoft, contentColor = if (correct) c.onCorrectSoft else c.onMissSoft,
         shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp), shadowElevation = 8.dp) {
@@ -198,8 +203,18 @@ private fun FeedbackSheet(correct: Boolean, answer: String?, extraPractice: Bool
                 }
             }
             KsButton(nextLabel, next, Modifier.fillMaxWidth(), tone = if (correct) KsTone.Correct else KsTone.Miss)
-            TextButton(why, Modifier.fillMaxWidth().heightIn(min = 44.dp), colors = ButtonDefaults.textButtonColors(contentColor = LocalContentColor.current)) {
-                Text(stringResource(R.string.why_read), style = KsType.label)
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                val colors = ButtonDefaults.textButtonColors(contentColor = LocalContentColor.current)
+                TextButton(why, Modifier.weight(1f).heightIn(min = 48.dp), colors = colors) {
+                    Text(stringResource(R.string.why_read), style = KsType.label, textAlign = TextAlign.Center)
+                }
+                // The label names the action; the icon shows the state, so both are read out.
+                val markState = stringResource(if (marked) R.string.hard_marked else R.string.hard_not_marked)
+                TextButton(toggleMark, Modifier.weight(1f).heightIn(min = 48.dp).semantics { stateDescription = markState }, colors = colors) {
+                    Icon(if (marked) KsIcons.BookmarkFilled else KsIcons.Bookmark, null, Modifier.size(18.dp))
+                    Spacer(Modifier.width(6.dp))
+                    Text(stringResource(if (marked) R.string.hard_unmark else R.string.hard_mark), style = KsType.label, textAlign = TextAlign.Center)
+                }
             }
         }
     }

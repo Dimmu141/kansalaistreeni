@@ -434,4 +434,14 @@
         <item quantity="one">%d question is waiting for review.</item>
         <item quantity="other">%d questions are waiting for review.</item>
     </plurals>
+    <string name="recap_practise_again">Practise mistakes again · %1$s</string>
+    <string name="hard_mark">Add to hard</string>
+    <string name="hard_unmark">Remove from hard</string>
+    <string name="hard_marked">In hard questions</string>
+    <string name="hard_not_marked">Not in hard questions</string>
+    <string name="hard_title">Hard questions</string>
+    <string name="hard_empty">After answering a question, you can add it to your hard questions. They are collected here so you can practise them separately.</string>
+    <string name="hard_note">Questions you chose yourself. Remove a question from the list once you know it.</string>
+    <string name="hard_practice">Practise hard questions · %1$s</string>
+    <string name="error_save_mark">The mark could not be saved. Please try again.</string>
 </resources>

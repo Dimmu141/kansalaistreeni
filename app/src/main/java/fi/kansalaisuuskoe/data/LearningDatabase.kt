@@ -45,8 +45,16 @@ data class ProgressEntity(
         fun from(p: UserQuestionProgress) = ProgressEntity(p.questionId, p.revision, p.attempts, p.correctAnswers, p.consecutiveCorrect, p.mastery, p.lastAnswered, p.nextReview)
     }
 }
+/** A question the learner put on their own "hard questions" list. Kept by ID across revisions. */
+@Entity(tableName = "marked_questions")
+data class MarkedQuestionEntity(@PrimaryKey val questionId: String, val markedAt: Long)
 @Dao
 interface LearningDao {
+    @Query("SELECT * FROM marked_questions ORDER BY markedAt, questionId") suspend fun marked(): List<MarkedQuestionEntity>
+    @Insert(onConflict = OnConflictStrategy.REPLACE) suspend fun mark(mark: MarkedQuestionEntity)
+    @Insert suspend fun insertMarks(marks: List<MarkedQuestionEntity>)
+    @Query("DELETE FROM marked_questions WHERE questionId = :id") suspend fun unmark(id: String)
+    @Query("DELETE FROM marked_questions") suspend fun deleteMarks()
     @Query("SELECT * FROM topics ORDER BY sortOrder, rowid") suspend fun topics(): List<TopicEntity>
     @Query("SELECT * FROM objectives ORDER BY sortOrder") suspend fun objectives(): List<ObjectiveEntity>
     @Insert suspend fun insertObjectives(objectives: List<ObjectiveEntity>)
@@ -72,11 +80,17 @@ interface LearningDao {
     @Query("DELETE FROM question_progress") suspend fun deleteProgress()
     @Query("DELETE FROM attempts") suspend fun deleteAttempts()
 }
-@Database(entities = [TopicEntity::class, QuestionEntity::class, ContentMetadata::class, AttemptEntity::class, ProgressEntity::class, LearningRulesEntity::class, AssessmentEntity::class, ObjectiveEntity::class], version = 7, exportSchema = true)
+@Database(entities = [TopicEntity::class, QuestionEntity::class, ContentMetadata::class, AttemptEntity::class, ProgressEntity::class, LearningRulesEntity::class, AssessmentEntity::class, ObjectiveEntity::class, MarkedQuestionEntity::class], version = 8, exportSchema = true)
 abstract class LearningDatabase : RoomDatabase() {
     abstract fun learningDao(): LearningDao
     abstract fun assessmentDao(): AssessmentDao
     companion object {
+        // Adds the learner's hard-questions list only; nothing existing is rewritten.
+        val MIGRATION_7_8 = object : Migration(7, 8) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("CREATE TABLE IF NOT EXISTS `marked_questions` (`questionId` TEXT NOT NULL, `markedAt` INTEGER NOT NULL, PRIMARY KEY(`questionId`))")
+            }
+        }
         // Adds the learning-objective table only; existing content, history and assessments are untouched.
         val MIGRATION_6_7 = object : Migration(6, 7) {
             override fun migrate(db: SupportSQLiteDatabase) {

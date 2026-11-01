@@ -79,6 +79,8 @@ internal object KsIcons {
     val Clock = strokeIcon("Clock", 2f, "M12 3.5a8.5 8.5 0 1 1 0 17a8.5 8.5 0 1 1 0-17z", "M12 7.5V12l3 2")
     val Flame = strokeIcon("Flame", 1.6f, "M12 3c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-3.5 2-5.5 1 1 1.5 2 1.5 3C12 8 12 5.5 12 3z", filled = true)
     val Star = strokeIcon("Star", 1.6f, "M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z", filled = true)
+    val Bookmark = strokeIcon("Bookmark", 2f, "M7 3.5h10v17l-5-3.6-5 3.6z")
+    val BookmarkFilled = strokeIcon("BookmarkFilled", 2f, "M7 3.5h10v17l-5-3.6-5 3.6z", filled = true)
     val Document = strokeIcon("Document", 2f, "M7 3.5h7l4 4v13H7z", "M14 3.5v4h4", "M10 12h5M10 15.5h5")
 }
 
