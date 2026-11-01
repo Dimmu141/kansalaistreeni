@@ -1,0 +1,17 @@
+KANSALAISTREENI — TRANSLATION REVIEW
+
+Thank you for helping! Kansalaistreeni is a free Android app without ads for practising basic facts about Finnish society, for example before the citizenship test. It is unofficial: it is not a government service. The questions are always in Finnish or Swedish, as in the test. Your language helps learners understand the explanations, words and menus.
+
+These translations were made by machine translation, and no native speaker has checked them yet. The app tells learners this until a person has checked the text.
+
+WHAT TO DO
+1. Open 1-study-content.csv in Excel or Google Sheets ({CONTENT} rows). Each row shows the Finnish original, the English version and the translation in your language. Rows are grouped by topic, so you can do one topic at a time or share topics with a friend.
+2. Read the translation. Is it correct, natural and easy to understand (simple everyday language, about B1)? Does it say the same as the Finnish text?
+3. In the column "OK / Fix" write OK, or write Fix and put your corrected text or a comment in the last column.
+4. Do the same for 2-app-interface.csv ({INTERFACE} menu and button texts) and read 3-store-listing.txt (the app's description in Google Play). Keep codes such as %1$s and %d unchanged: the app replaces them with numbers or words.
+5. For official names, use the words in 4-glossary.csv. Where the glossary says so, keep the Finnish word in brackets after the translation, because learners will see the Finnish word in the test.
+
+You do not need to check the Finnish facts, but if something looks wrong, add a comment. You can stop at any time and send what you have done: even one topic helps.
+
+WHEN YOU ARE DONE
+Send the files back to {CONTACT}. Please tell us whether we may mention your name as the reviewer. The project is open source, so the name would be public. If you prefer, we write only "native-speaker reviewer".

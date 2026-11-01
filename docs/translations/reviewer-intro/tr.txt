@@ -1,0 +1,17 @@
+KANSALAISTREENI — ÇEVİRİ KONTROLÜ
+
+Yardımınız için teşekkürler! Kansalaistreeni, örneğin vatandaşlık sınavından önce Fin toplumunun temellerini çalışmak için ücretsiz ve reklamsız bir Android uygulamasıdır. Uygulama resmî değildir ve bir devlet hizmeti değildir. Sorular sınavda olduğu gibi her zaman Fince veya İsveççedir. Sizin diliniz, öğrencilerin açıklamaları, kelimeleri ve menüleri anlamasına yardımcı olur.
+
+Bu çeviriler makine çevirisiyle yapıldı ve henüz hiçbir anadil konuşuru tarafından kontrol edilmedi. Uygulama, bir kişi metni kontrol edene kadar bunu öğrencilere belirtir.
+
+NE YAPILACAK
+1. 1-study-content.csv dosyasını Excel veya Google E-Tablolar'da açın ({CONTENT} satır). Her satırda Fince asıl metin, İngilizce sürüm ve Türkçe çeviri vardır. Satırlar konulara göre gruplandırılmıştır; her seferinde bir konu yapabilir veya konuları bir arkadaşınızla paylaşabilirsiniz.
+2. Çeviriyi okuyun: Doğru, doğal ve kolay anlaşılır mı (sade dil, yaklaşık B1 seviyesi)? Fince metinle aynı şeyi mi söylüyor?
+3. "OK / Fix" sütununa OK yazın ya da Fix yazıp düzeltilmiş metni veya yorumunuzu son sütuna ekleyin.
+4. Aynısını 2-app-interface.csv için de yapın ({INTERFACE} menü ve düğme metni) ve 3-store-listing.txt dosyasını (uygulamanın Google Play açıklaması) okuyun.
+5. Resmî adlar için 4-glossary.csv'deki kelimeleri kullanın. Sözlükte belirtilen yerlerde Fince kelimeyi çevirinin ardından parantez içinde bırakın; öğrenci bu kelimeyi sınavda görecek.
+
+Fince bilgileri kontrol etmeniz gerekmez, ama yanlış görünen bir şey olursa yorum ekleyin. İstediğiniz zaman durup yaptığınız kısmı gönderebilirsiniz: tek bir konu bile yardımcı olur.
+
+BİTİRDİĞİNİZDE
+Dosyaları {CONTACT} adresine gönderin. Adınızı kontrol eden kişi olarak anabilir miyiz, lütfen bildirin. Proje açık kaynaklıdır, bu yüzden ad herkese açık olur. İsterseniz yalnızca "anadili Türkçe olan kontrolcü" yazarız.

@@ -1,0 +1,17 @@
+KANSALAISTREENI — DIB-U-EEGISTA TARJUMAADDA
+
+Waad ku mahadsan tahay caawimaaddaada! Kansalaistreeni waa app Android oo bilaash ah oo aan xayeysiis lahayn, kaas oo lagu barto aasaaska bulshada Finland, tusaale ahaan ka hor imtixaanka dhalashada. App-ku ma aha mid rasmi ah, mana aha adeeg dowladeed. Su'aaluhu had iyo jeer waa Finnish ama Swedish, sida imtixaanka. Luqaddaadu waxay ka caawisaa ardayda inay fahmaan sharaxaadaha, ereyada iyo liisaska.
+
+Tarjumaadahan waxaa sameeyay mashiin, wali ma hubin qof Soomaali ku hadla. App-ku wuu u sheegaa ardayda ilaa qof uu hubiyo.
+
+WAXA LA SAMEYNAYO
+1. Ku fur 1-study-content.csv Excel ama Google Sheets ({CONTENT} saf). Saf kastaa wuxuu leeyahay qoraalka asalka ah ee Finnish, nuqulka Ingiriisiga iyo tarjumaadda Soomaaliga. Safafka waxaa loo kala soocay mawduuc, markaa waxaad samayn kartaa hal mawduuc mar kasta ama la qaybsan kartaa saaxiib.
+2. Akhri tarjumaadda: ma sax baa, ma dabiici baa, mase fudud tahay in la fahmo (luqad fudud, qiyaastii heerka B1)? Ma waxay sheegaysaa wixii qoraalka Finnish-ku sheegayo?
+3. Tiirka "OK / Fix" ku qor OK, ama ku qor Fix oo tiirka ugu dambeeya geli qoraalka la saxay ama faallo.
+4. Sidaas oo kale samee 2-app-interface.csv ({INTERFACE} qoraal liis iyo badhan), kana akhri 3-store-listing.txt (sharaxaadda app-ka ee Google Play).
+5. Magacyada rasmiga ah u isticmaal ereyada ku jira 4-glossary.csv. Meesha qaamuusku sheego, ereyga Finnish ku hay bilaha gudahooda tarjumaadda kadib, maxaa yeelay ardaygu wuxuu ku arki doonaa imtixaanka.
+
+Uma baahnid inaad hubiso xaqiiqooyinka Finnish, laakiin haddii wax khaldan kuu muuqdaan, faallo ku dar. Waad joojin kartaa wakhti kasta oo soo dir wixii aad samaysay: xitaa hal mawduuc waa caawimaad.
+
+MARKAAD DHAMAYSATO
+Faylasha u soo dir {CONTACT}. Noo sheeg haddii aan magacaaga u sheegi karno inaad dib-u-eegay. Mashruucu waa il furan, markaa magacu wuxuu noqonayaa mid dadweyne. Haddii aad doorbidayso, waxaan qori doonnaa oo keliya "dib-u-eege afka hooyo ku hadla".
