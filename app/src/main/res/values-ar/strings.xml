@@ -86,6 +86,7 @@
     <string name="saving">جارٍ الحفظ…</string>
     <string name="check_answer">تحقّق من الإجابة</string>
     <string name="choose_answer_note">اختر إجابة واحدة. تحقّق منها ليظهر الشرح.</string>
+    <string name="choose_answer_first">اختر إجابة من الخيارات أعلاه أولاً.</string>
     <string name="answer_correct">صحيح</string>
     <string name="answer_incorrect">ليس تماماً — لنتعلّم من ذلك</string>
     <string name="correct_answer_value">الإجابة الصحيحة: %1$s</string>

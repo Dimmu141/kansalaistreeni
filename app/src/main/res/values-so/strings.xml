@@ -86,6 +86,7 @@
     <string name="saving">Waa la kaydinayaa…</string>
     <string name="check_answer">Hubi jawaabta</string>
     <string name="choose_answer_note">Dooro hal jawaab. Hubi si aad u aragto sharaxaadda.</string>
+    <string name="choose_answer_first">Marka hore ka dooro jawaab xulashooyinka kore.</string>
     <string name="answer_correct">Sax</string>
     <string name="answer_incorrect">Si buuxda ma aha — aan ka barano</string>
     <string name="correct_answer_value">Jawaabta saxda ah: %1$s</string>

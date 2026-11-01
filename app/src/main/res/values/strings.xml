@@ -86,6 +86,7 @@
     <string name="saving">Tallennetaan…</string>
     <string name="check_answer">Tarkista vastaus</string>
     <string name="choose_answer_note">Valitse yksi vastaus. Selitys avautuu, kun tarkistat vastauksen.</string>
+    <string name="choose_answer_first">Valitse ensin vastaus yllä olevista vaihtoehdoista.</string>
     <string name="answer_correct">Oikein</string>
     <string name="answer_incorrect">Ei aivan – opitaan tästä</string>
     <string name="correct_answer_value">Oikea vastaus: %1$s</string>

@@ -86,6 +86,7 @@
     <string name="saving">Kaydediliyor…</string>
     <string name="check_answer">Cevabı kontrol et</string>
     <string name="choose_answer_note">Bir cevap seçin. Açıklamayı görmek için kontrol edin.</string>
+    <string name="choose_answer_first">Önce yukarıdaki seçeneklerden bir cevap seçin.</string>
     <string name="answer_correct">Doğru</string>
     <string name="answer_incorrect">Tam değil — bundan öğrenelim</string>
     <string name="correct_answer_value">Doğru cevap: %1$s</string>

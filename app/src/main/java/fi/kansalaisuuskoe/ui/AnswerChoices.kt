@@ -172,3 +172,8 @@ private fun RadioMark(selected: Boolean) {
         Box(Modifier.size(dot).background(c.brand, CircleShape))
     }
 }
+
+/** Shown beside a disabled Check/Next button so it does not look broken before an answer is chosen. */
+@Composable
+internal fun ChooseAnswerFirst() = Text(stringResource(R.string.choose_answer_first), style = KsType.body, color = Ks.colors.inkMuted,
+    textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))

@@ -174,6 +174,7 @@ internal fun AssessmentScreen(state: AssessmentUiState, sessionId: String, app: 
         item { StudyText(question.text, question.language, KsType.question, Modifier.semantics { heading() }) }
         item { AnswerChoices(question, selected, !state.busy, { model.select(session.id, question.id, it) }) }
         item { AssessmentStatus(state, model::retry) }
+        if (selected == null) item { ChooseAnswerFirst() }
         if (session.position == session.questions.lastIndex) {
             item { KsButton(stringResource(R.string.assessment_finish), { model.finish(session.id) }, Modifier.fillMaxWidth(), enabled = !state.busy && session.answeredCount == session.questions.size) }
         } else {

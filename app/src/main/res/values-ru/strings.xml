@@ -86,6 +86,7 @@
     <string name="saving">Сохранение…</string>
     <string name="check_answer">Проверить ответ</string>
     <string name="choose_answer_note">Выберите один ответ. После проверки появится объяснение.</string>
+    <string name="choose_answer_first">Сначала выберите ответ выше.</string>
     <string name="answer_correct">Верно</string>
     <string name="answer_incorrect">Не совсем — разберёмся</string>
     <string name="correct_answer_value">Правильный ответ: %1$s</string>

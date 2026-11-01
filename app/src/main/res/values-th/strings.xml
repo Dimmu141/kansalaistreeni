@@ -86,6 +86,7 @@
     <string name="saving">กำลังบันทึก…</string>
     <string name="check_answer">ตรวจคำตอบ</string>
     <string name="choose_answer_note">เลือกหนึ่งคำตอบ แล้วตรวจเพื่อดูคำอธิบาย</string>
+    <string name="choose_answer_first">เลือกคำตอบจากตัวเลือกด้านบนก่อน</string>
     <string name="answer_correct">ถูกต้อง</string>
     <string name="answer_incorrect">ยังไม่ถูก — มาเรียนรู้จากข้อนี้กัน</string>
     <string name="correct_answer_value">คำตอบที่ถูก: %1$s</string>

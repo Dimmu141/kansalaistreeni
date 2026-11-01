@@ -86,6 +86,7 @@
     <string name="saving">در حال ذخیره…</string>
     <string name="check_answer">بررسی پاسخ</string>
     <string name="choose_answer_note">یک پاسخ را انتخاب کنید. با بررسی آن توضیح نمایش داده می‌شود.</string>
+    <string name="choose_answer_first">ابتدا یکی از گزینه‌های بالا را انتخاب کنید.</string>
     <string name="answer_correct">درست</string>
     <string name="answer_incorrect">نه کاملاً — از آن یاد بگیریم</string>
     <string name="correct_answer_value">پاسخ درست: %1$s</string>

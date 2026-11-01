@@ -86,6 +86,7 @@
     <string name="saving">Saving…</string>
     <string name="check_answer">Check answer</string>
     <string name="choose_answer_note">Choose one answer. Check it to reveal the explanation.</string>
+    <string name="choose_answer_first">Choose an answer above first.</string>
     <string name="answer_correct">Correct</string>
     <string name="answer_incorrect">Not quite — let’s learn from it</string>
     <string name="correct_answer_value">Correct answer: %1$s</string>

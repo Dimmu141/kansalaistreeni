@@ -94,7 +94,8 @@ fun QuestionScreen(state: QuestionUiState, topics: List<Topic>, easyFinnish: Boo
             if (!state.answered) {
                 Column {
                     Box(Modifier.fillMaxWidth().height(24.dp).background(Brush.verticalGradient(listOf(c.surface0.copy(alpha = 0f), c.surface0))))
-                    Box(Modifier.fillMaxWidth().background(c.surface0).navigationBarsPadding().padding(start = 20.dp, end = 20.dp, bottom = 16.dp)) {
+                    Column(Modifier.fillMaxWidth().background(c.surface0).navigationBarsPadding().padding(start = 20.dp, end = 20.dp, bottom = 16.dp)) {
+                        if (state.selected == null) ChooseAnswerFirst()
                         KsButton(if (state.saving) stringResource(R.string.saving) else stringResource(R.string.check_answer), submit,
                             Modifier.fillMaxWidth(), enabled = state.selected != null && !state.saving)
                     }

@@ -47,7 +47,10 @@ class LearningFlowTest {
         click("Yhteiskunta ja demokratia"); click("Harjoittele tätä aihetta")
         await("Kuka käyttää Suomessa lainsäädäntövaltaa?")
         text("Tarkista vastaus").assertIsNotEnabled()
+        // The disabled button explains itself until an answer is chosen.
+        text("Valitse ensin vastaus yllä olevista vaihtoehdoista.").assertIsDisplayed()
         text("Eduskunta").performClick()
+        rule.onAllNodesWithText("Valitse ensin vastaus yllä olevista vaihtoehdoista.").assertCountEquals(0)
         click("Tarkista vastaus")
         await("Oikein")
         text("Oikein").assertIsDisplayed()

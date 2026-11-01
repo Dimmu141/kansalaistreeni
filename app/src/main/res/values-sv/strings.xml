@@ -86,6 +86,7 @@
     <string name="saving">Sparar…</string>
     <string name="check_answer">Kontrollera svaret</string>
     <string name="choose_answer_note">Välj ett svar. Kontrollera det så visas förklaringen.</string>
+    <string name="choose_answer_first">Välj först ett svar bland alternativen ovan.</string>
     <string name="answer_correct">Rätt</string>
     <string name="answer_incorrect">Inte riktigt – vi lär oss av det</string>
     <string name="correct_answer_value">Rätt svar: %1$s</string>
