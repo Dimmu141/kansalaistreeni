@@ -370,6 +370,7 @@
     <string name="review_tomorrow">завтра</string>
     <plurals name="review_in_days"><item quantity="one">через %d день</item><item quantity="few">через %d дня</item><item quantity="many">через %d дней</item><item quantity="other">через %d дня</item></plurals>
     <string name="feedback_send">Отправить отзыв</string>
+    <string name="privacy_policy_link">Политика конфиденциальности</string>
     <string name="why_read">Почему? Прочитать объяснение</string>
     <string name="mastery_title_start">Начнём!</string>
     <string name="mastery_title_early">Хорошее начало</string>

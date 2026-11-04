@@ -348,6 +348,7 @@
     <string name="review_tomorrow">yarın</string>
     <plurals name="review_in_days"><item quantity="one">%d gün sonra</item><item quantity="other">%d gün sonra</item></plurals>
     <string name="feedback_send">Geri bildirim gönder</string>
+    <string name="privacy_policy_link">Gizlilik politikası</string>
     <string name="why_read">Neden? Açıklamayı oku</string>
     <string name="mastery_title_start">Haydi başlayalım!</string>
     <string name="mastery_title_early">İyi bir başlangıç</string>

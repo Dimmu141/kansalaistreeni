@@ -350,6 +350,8 @@
     <string name="review_tomorrow">huomenna</string>
     <plurals name="review_in_days"><item quantity="one">%d päivän päästä</item><item quantity="other">%d päivän päästä</item></plurals>
     <string name="feedback_send">Anna palautetta</string>
+    <string name="privacy_policy_link">Tietosuojaseloste</string>
+    <string name="privacy_policy_url" translatable="false">https://kansalaistreeni.vercel.app/tietosuoja</string>
     <string name="feedback_url" translatable="false"></string>
     <string name="question_counter" translatable="false">%1$d / %2$d</string>
     <string name="why_read">Miksi? Lue selitys</string>

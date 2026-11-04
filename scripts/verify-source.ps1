@@ -20,18 +20,18 @@ foreach ($language in 'en', 'sv') {
     $translations[$language] = [xml](Get-Content (Join-Path $workspace "app/src/main/res/values-$language/strings.xml"))
 }
 foreach ($resources in @($finnish) + @($translations.Values)) {
-    $keys = @($resources.resources.ChildNodes | ForEach-Object { $_.GetAttribute('name') })
+    $keys = @($resources.resources.SelectNodes('*') | ForEach-Object { $_.GetAttribute('name') })
     if (($keys | Select-Object -Unique).Count -ne $keys.Count) { throw 'Duplicate resource key' }
 }
 # Resources marked translatable="false" (such as the FI/SV switch labels) live only in the base file.
-$translatable = @($finnish.resources.ChildNodes | Where-Object { $_.GetAttribute('translatable') -ne 'false' })
+$translatable = @($finnish.resources.SelectNodes('*') | Where-Object { $_.GetAttribute('translatable') -ne 'false' })
 $baseKeys = @($translatable | ForEach-Object { $_.GetAttribute('name') })
 foreach ($language in $translations.Keys) {
     $translation = $translations[$language]
-    $translatedKeys = @($translation.resources.ChildNodes | ForEach-Object { $_.GetAttribute('name') })
+    $translatedKeys = @($translation.resources.SelectNodes('*') | ForEach-Object { $_.GetAttribute('name') })
     if (Compare-Object $baseKeys $translatedKeys) { throw "Finnish/$language resource keys differ" }
     foreach ($resource in $translatable) {
-        $translated = $translation.resources.ChildNodes | Where-Object { $_.GetAttribute('name') -eq $resource.GetAttribute('name') }
+        $translated = $translation.resources.SelectNodes('*') | Where-Object { $_.GetAttribute('name') -eq $resource.GetAttribute('name') }
         $baseFormats = @([regex]::Matches($resource.InnerText, '%(?:\d+\$)?[ds]') | ForEach-Object Value)
         $translatedFormats = @([regex]::Matches($translated.InnerText, '%(?:\d+\$)?[ds]') | ForEach-Object Value)
         if (Compare-Object $baseFormats $translatedFormats) { throw "Format arguments differ for $($resource.GetAttribute('name')) in $language" }

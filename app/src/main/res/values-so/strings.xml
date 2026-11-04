@@ -348,6 +348,7 @@
     <string name="review_tomorrow">berri</string>
     <plurals name="review_in_days"><item quantity="one">%d maalin kadib</item><item quantity="other">%d maalmood kadib</item></plurals>
     <string name="feedback_send">Dir faallo</string>
+    <string name="privacy_policy_link">Siyaasadda asturnaanta</string>
     <string name="why_read">Waayo? Akhri sharaxaadda</string>
     <string name="mastery_title_start">Aan bilowno!</string>
     <string name="mastery_title_early">Bilow wanaagsan</string>

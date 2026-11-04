@@ -337,6 +337,7 @@
     <string name="review_tomorrow">พรุ่งนี้</string>
     <plurals name="review_in_days"><item quantity="other">ในอีก %d วัน</item></plurals>
     <string name="feedback_send">ส่งความคิดเห็น</string>
+    <string name="privacy_policy_link">นโยบายความเป็นส่วนตัว</string>
     <string name="why_read">ทำไม อ่านคำอธิบาย</string>
     <string name="mastery_title_start">มาเริ่มกันเลย!</string>
     <string name="mastery_title_early">เริ่มต้นได้ดี</string>

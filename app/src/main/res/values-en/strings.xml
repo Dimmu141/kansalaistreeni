@@ -348,6 +348,7 @@
     <string name="review_tomorrow">tomorrow</string>
     <plurals name="review_in_days"><item quantity="one">in %d day</item><item quantity="other">in %d days</item></plurals>
     <string name="feedback_send">Send feedback</string>
+    <string name="privacy_policy_link">Privacy policy</string>
     <string name="why_read">Why? Read the explanation</string>
     <string name="mastery_title_start">Let’s begin!</string>
     <string name="mastery_title_early">A good start</string>

@@ -392,6 +392,7 @@
     <string name="review_tomorrow">غداً</string>
     <plurals name="review_in_days"><item quantity="zero">بعد %d يوم</item><item quantity="one">بعد يوم واحد</item><item quantity="two">بعد يومين</item><item quantity="few">بعد %d أيام</item><item quantity="many">بعد %d يوماً</item><item quantity="other">بعد %d يوم</item></plurals>
     <string name="feedback_send">إرسال ملاحظات</string>
+    <string name="privacy_policy_link">سياسة الخصوصية</string>
     <string name="why_read">لماذا؟ اقرأ الشرح</string>
     <string name="mastery_title_start">لنبدأ!</string>
     <string name="mastery_title_early">بداية جيدة</string>

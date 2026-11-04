@@ -348,6 +348,7 @@
     <string name="review_tomorrow">فردا</string>
     <plurals name="review_in_days"><item quantity="one">%d روز دیگر</item><item quantity="other">%d روز دیگر</item></plurals>
     <string name="feedback_send">فرستادن نظر</string>
+    <string name="privacy_policy_link">سیاست حفظ حریم خصوصی</string>
     <string name="why_read">چرا؟ توضیح را بخوانید</string>
     <string name="mastery_title_start">شروع کنیم!</string>
     <string name="mastery_title_early">شروع خوبی است</string>

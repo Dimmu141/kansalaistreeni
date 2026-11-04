@@ -348,6 +348,7 @@
     <string name="review_tomorrow">i morgon</string>
     <plurals name="review_in_days"><item quantity="one">om %d dag</item><item quantity="other">om %d dagar</item></plurals>
     <string name="feedback_send">Ge respons</string>
+    <string name="privacy_policy_link">Integritetspolicy</string>
     <string name="why_read">Varför? Läs förklaringen</string>
     <string name="mastery_title_start">Nu börjar vi!</string>
     <string name="mastery_title_early">En bra start</string>

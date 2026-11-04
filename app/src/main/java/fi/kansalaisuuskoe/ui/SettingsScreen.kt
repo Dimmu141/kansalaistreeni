@@ -110,6 +110,12 @@ fun SettingsScreen(state: AppUiState, model: AppViewModel, openBackup: () -> Uni
                 OutlinedButton(onClick = { uri.openUri(url) }, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.feedback_send)) }
             }
         }
+        item {
+            val uri = LocalUriHandler.current
+            val privacyUrl = stringResource(R.string.privacy_policy_url)
+            // Google Play requires a policy link inside the app. A device without a browser must not crash.
+            OutlinedButton(onClick = { runCatching { uri.openUri(privacyUrl) } }, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Text(stringResource(R.string.privacy_policy_link)) }
+        }
         item { Text(stringResource(R.string.version_details, BuildConfig.VERSION_NAME, pluralStringResource(R.plurals.question_count, state.snapshot.questions.size, state.snapshot.questions.size)), style = MaterialTheme.typography.bodySmall) }
     }
 }

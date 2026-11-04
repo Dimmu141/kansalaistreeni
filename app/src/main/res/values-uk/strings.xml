@@ -370,6 +370,7 @@
     <string name="review_tomorrow">завтра</string>
     <plurals name="review_in_days"><item quantity="one">через %d день</item><item quantity="few">через %d дні</item><item quantity="many">через %d днів</item><item quantity="other">через %d дня</item></plurals>
     <string name="feedback_send">Надіслати відгук</string>
+    <string name="privacy_policy_link">Політика конфіденційності</string>
     <string name="why_read">Чому? Прочитати пояснення</string>
     <string name="mastery_title_start">Почнімо!</string>
     <string name="mastery_title_early">Добрий початок</string>
