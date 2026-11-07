@@ -1,6 +1,8 @@
 # Play store listing — Kansalaistreeni
 
-App name (all languages): **Kansalaistreeni** (15/30)
+App name: set per language in Play Console (≤ 30 characters), see each section below. The launcher name inside the app stays **Kansalaistreeni**.
+
+Search keywords (Nov 2026): people search for the test by its official name, which is Migri's term: **kansalaisuuskoe** (fi), **medborgarskapsprov** (sv), **citizenship test** (en). Use it in the title, the short description and 3–5 times in the full description, always next to a practice word (harjoittele / öva / practice / prep) and never in a way that suggests the app is the official test. Do not add facts about the law (dates, who must take the test) to the description unless their source is added to the source list too.
 
 Category: Education · Tags: education, language learning · Contains ads: no · In-app purchases: no
 
@@ -8,13 +10,15 @@ Keep the "unofficial" disclaimer at the very top of every full description and l
 
 ## Suomi (fi-FI)
 
-**Lyhyt kuvaus** (≤ 80): Opi Suomen yhteiskunta muutamassa minuutissa päivässä. Ilmainen, epävirallinen.
+**Sovelluksen nimi** (≤ 30): Kansalaisuuskoe – harjoittele
+
+**Lyhyt kuvaus** (≤ 80): Harjoittele kansalaisuuskoetta varten muutama minuutti päivässä. Ilmainen.
 
 **Kuvaus:**
 
-EPÄVIRALLINEN HARJOITUSSOVELLUS. Kansalaistreeni ei ole viranomaispalvelu eikä edusta mitään viranomaista. Se ei liity Maahanmuuttovirastoon tai muihin viranomaisiin. Kysymykset ovat sovellusta varten laadittuja harjoituksia, eivät virallisia koekysymyksiä.
+EPÄVIRALLINEN HARJOITUSSOVELLUS. Kansalaistreeni ei ole viranomaispalvelu eikä edusta mitään viranomaista. Se ei liity Maahanmuuttovirastoon tai muihin viranomaisiin. Kysymykset ovat sovellusta varten laadittuja harjoituksia, eivät virallisen kansalaisuuskokeen kysymyksiä.
 
-Miten eduskunta säätää lait? Mitä oikeuksia sinulla on Suomessa? Mihin soitat hätätilanteessa? Kansalaistreeni tekee Suomen yhteiskunnan perusasioista lyhyitä harjoituksia, joita on helppo tehdä muutama minuutti päivässä. Ilmainen, ilman mainoksia ja ilman verkkoyhteyttä.
+Valmistaudutko kansalaisuuskokeeseen tai haluatko vain tuntea Suomen yhteiskunnan paremmin? Miten eduskunta säätää lait? Mitä oikeuksia sinulla on Suomessa? Mihin soitat hätätilanteessa? Kansalaistreeni tekee Suomen yhteiskunnan perusasioista lyhyitä harjoituksia, joita on helppo tehdä muutama minuutti päivässä. Ilmainen, ilman mainoksia ja ilman verkkoyhteyttä.
 
 ETENE AIHEPOLKUA
 Kahdeksan aihetta muodostaa polun: demokratia ja päätöksenteko, perus- ja ihmisoikeudet, yhdenvertaisuus ja tasa-arvo, lait arjessa, Suomen historia, kulttuuri ja kielet, turvallisuus sekä digitaaliset palvelut. Jokaisessa aiheessa on lyhyt lukuteksti ja 25 kysymystä suomeksi ja ruotsiksi. Näet yhdellä silmäyksellä, mitkä aiheet ovat jo hallussa ja mikä on seuraavana.
@@ -27,7 +31,7 @@ OPI VIRHEISTÄSI
 • Putki, viikkonäkymä ja halutessasi päivittäinen muistutus pitävät tahdin yllä
 
 TESTAA ITSESI
-Harjoituskokeessa on 20, 30 tai 40 kysymystä, ja voit halutessasi lisätä aikarajan. Tulos ja selitykset näytetään lopuksi. Koe on oma harjoituksesi: se ei ennusta virallisen kokeen läpäisyä.
+Harjoituskokeessa on 20, 30 tai 40 kysymystä, ja voit halutessasi lisätä aikarajan. Tulos ja selitykset näytetään lopuksi. Näin harjoittelet kansalaisuuskoetta varten omassa tahdissasi. Koe on oma harjoituksesi: se ei ole virallinen kansalaisuuskoe eikä ennusta sen läpäisyä.
 
 OMALLA KIELELLÄSI
 Harjoittelet suomeksi tai ruotsiksi, mutta valikot ja selitykset saa myös englanniksi, venäjäksi, arabiaksi, persiaksi (dari), somaliksi, ukrainaksi, turkiksi ja thaiksi. Venäjänkieliset tekstit on tarkistanut ihminen; muut tukikielet ovat konekäännöksiä, ja sovellus merkitsee ne sellaisiksi.
@@ -62,13 +66,15 @@ Tarkista ajankohtaiset tiedot aina virallisista lähteistä. Sovellus ei ennusta
 
 ## Svenska (sv-SE)
 
-**Kort beskrivning** (≤ 80): Lär dig det finländska samhället på några minuter om dagen. Gratis, inofficiell.
+**Appens namn** (≤ 30): Medborgarskapsprov – öva
+
+**Kort beskrivning** (≤ 80): Öva inför medborgarskapsprovet några minuter om dagen. Gratis och inofficiell.
 
 **Beskrivning:**
 
-INOFFICIELL ÖVNINGSAPP. Kansalaistreeni är inte en myndighetstjänst och företräder ingen myndighet. Den har ingen koppling till Migrationsverket eller andra myndigheter. Frågorna är övningar som skrivits för appen, inte officiella provfrågor.
+INOFFICIELL ÖVNINGSAPP. Kansalaistreeni är inte en myndighetstjänst och företräder ingen myndighet. Den har ingen koppling till Migrationsverket eller andra myndigheter. Frågorna är övningar som skrivits för appen, inte frågor från det officiella medborgarskapsprovet.
 
-Hur stiftar riksdagen lagar? Vilka rättigheter har du i Finland? Vart ringer du i en nödsituation? Kansalaistreeni gör grunderna om det finländska samhället till korta övningar som är lätta att göra några minuter om dagen. Gratis, utan reklam och utan nätverk.
+Förbereder du dig för medborgarskapsprovet eller vill du bara lära känna det finländska samhället bättre? Hur stiftar riksdagen lagar? Vilka rättigheter har du i Finland? Vart ringer du i en nödsituation? Kansalaistreeni gör grunderna om det finländska samhället till korta övningar som är lätta att göra några minuter om dagen. Gratis, utan reklam och utan nätverk.
 
 FÖLJ ÄMNESSTIGEN
 Åtta ämnen bildar en stig: demokrati och beslutsfattande, grundläggande och mänskliga rättigheter, jämlikhet och jämställdhet, lagar i vardagen, Finlands historia, kultur och språk, säkerhet samt digitala tjänster. Varje ämne har en kort lästext och 25 frågor på svenska och finska. Du ser direkt vilka ämnen du redan behärskar och vad som står på tur.
@@ -81,7 +87,7 @@ LÄR DIG AV MISSTAGEN
 • Svit, veckovy och en daglig påminnelse om du vill håller tempot uppe
 
 TESTA DIG SJÄLV
-Övningsprovet har 20, 30 eller 40 frågor, och du kan lägga till en tidsgräns om du vill. Resultatet och förklaringarna visas på slutet. Provet är din egen övning: det förutsäger inte om du klarar det officiella provet.
+Övningsprovet har 20, 30 eller 40 frågor, och du kan lägga till en tidsgräns om du vill. Resultatet och förklaringarna visas på slutet. Så övar du inför medborgarskapsprovet i din egen takt. Provet är din egen övning: det är inte det officiella medborgarskapsprovet och förutsäger inte om du klarar det.
 
 PÅ DITT EGET SPRÅK
 Du övar på svenska eller finska, men menyer och förklaringar finns också på engelska, ryska, arabiska, persiska (dari), somaliska, ukrainska, turkiska och thai. De ryska texterna är granskade av en människa; de andra stödspråken är maskinöversättningar, och appen märker dem som sådana.
@@ -116,13 +122,15 @@ Kontrollera alltid aktuell information i officiella källor. Appen förutsäger 
 
 ## English (en-US)
 
-**Short description** (≤ 80): Learn how Finland works in a few minutes a day. Free and unofficial.
+**App name** (≤ 30): Finnish Citizenship Test Prep
+
+**Short description** (≤ 80): Practise for the Finnish citizenship test in a few minutes a day. Free.
 
 **Description:**
 
-UNOFFICIAL PRACTICE APP. Kansalaistreeni is not a government service and does not represent any government entity. It is not affiliated with the Finnish Immigration Service (Migri) or any other authority. The questions are practice material written for the app, not official test questions.
+UNOFFICIAL PRACTICE APP. Kansalaistreeni is not a government service and does not represent any government entity. It is not affiliated with the Finnish Immigration Service (Migri) or any other authority. The questions are practice material written for the app, not questions from the official citizenship test.
 
-How does Parliament pass laws? What rights do you have in Finland? Who do you call in an emergency? Kansalaistreeni turns the basics of Finnish society into short exercises that are easy to fit into a few minutes a day. Free, with no ads, and it works offline.
+Preparing for the Finnish citizenship test (kansalaisuuskoe), or just want to understand Finnish society better? How does Parliament pass laws? What rights do you have in Finland? Who do you call in an emergency? Kansalaistreeni turns the basics of Finnish society into short exercises that are easy to fit into a few minutes a day. Free, with no ads, and it works offline.
 
 FOLLOW THE TOPIC PATH
 Eight topics form a path: democracy and decision-making, fundamental and human rights, equality, laws in everyday life, Finnish history, culture and languages, safety, and digital services. Each topic has a short reading text and 25 questions in Finnish and in Swedish. You see at a glance which topics you have mastered and what comes next.
@@ -135,7 +143,7 @@ LEARN FROM YOUR MISTAKES
 • A streak, a weekly view and an optional daily reminder keep you going
 
 TEST YOURSELF
-The practice test has 20, 30 or 40 questions, with an optional time limit. You see your result and the explanations at the end. It is your own practice: it does not predict whether you will pass the official test.
+The practice test has 20, 30 or 40 questions, with an optional time limit. You see your result and the explanations at the end, so you can practise for the citizenship test at your own pace. It is your own practice: it is not the official citizenship test and does not predict whether you will pass it.
 
 IN YOUR OWN LANGUAGE
 You practise in Finnish or Swedish, and menus and explanations are also available in English, Russian, Arabic, Persian (Dari), Somali, Ukrainian, Turkish and Thai. The Russian texts have been checked by a person; the other support languages are machine translations, and the app labels them as such.
